@@ -1,0 +1,77 @@
+import sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 02:59: extensions ----------------
+def rep(c, path, old, new):
+    o = c
+    for k in path[:-1]: o = o[k]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+@ext('1022-lipetsk-moscow-drone-attack', [15444, 15455, 15500, 15502, 15477, 15450, 15501, 15482, 15446, 15487, 15456, 15460])
+def _(c):
+    rep(c, ['ru', 'summary'], 'По данным мэра Москвы Сергея Собянина, которые суммирует «Интерфакс», на подлете к столице к утру сбиты 56 беспилотников.',
+        'По данным мэра Москвы Сергея Собянина, которые суммирует «Интерфакс», число сбитых на подлете к столице беспилотников за ночь выросло сначала до 56, затем до 90. В Ярославской области губернатор Михаил Евраев объявил ракетную опасность и перекрыл выезд из Ярославля в сторону Москвы; в аэропортах Ярославля и московского авиаузла введены ограничения, «Аэрофлот» переносит и отменяет часть рейсов.')
+    rep(c, ['uk', 'ru'], 'За даними мера Москви Сергія Собяніна, які підсумовує «Інтерфакс», на підльоті до столиці до ранку збито 56 безпілотників.',
+        'За даними мера Москви Сергія Собяніна, які підсумовує «Інтерфакс», кількість збитих на підльоті до столиці безпілотників за ніч зросла спершу до 56, потім до 90. У Ярославській області губернатор Михайло Євраєв оголосив ракетну небезпеку й перекрив виїзд з Ярославля в бік Москви; в аеропортах Ярославля та московського авіавузла запроваджено обмеження, «Аерофлот» переносить і скасовує частину рейсів.')
+    rep(c, ['en', 'ru'], 'According to Moscow Mayor Sergei Sobyanin, as totalled by Interfax, 56 drones heading for the capital were downed by the morning.',
+        'According to Moscow Mayor Sergei Sobyanin, as totalled by Interfax, the number of drones downed on their way to the capital rose during the night first to 56 and then to 90. In Yaroslavl region, Governor Mikhail Yevrayev declared a missile threat and closed the road out of Yaroslavl towards Moscow; restrictions were imposed at Yaroslavl airport and the Moscow airports, and Aeroflot is rescheduling and cancelling some flights.')
+    c['ru']['quotes'] += [q(15502, 'Таким образом, их общее количество увеличилось до 90.'),
+                          q(15450, 'В Ярославской области объявлена ракетная опасность.'),
+                          q(15460, '"Аэрофлот" вынужденно корректирует расписание путем переноса времени вылета, а также отмены некоторых рейсов')]
+    setd(c, c['diverge'] + ' Ракетную опасность в Ярославской области и ограничения в аэропортах упоминают только российские источники.',
+         c['uk']['d'] + ' Ракетну небезпеку в Ярославській області та обмеження в аеропортах згадують лише російські джерела.',
+         c['en']['d'] + ' Only Russian sources mention the missile threat in Yaroslavl region and the airport restrictions.')
+
+@ext('1021-kyiv-ballistic-evening-strike', [15447, 15448, 15495, 15494])
+def _(c):
+    add(c, 'ru', 'Позже РИА Новости написало о «двух сериях взрывов» за ночь и добавило стандартную формулировку о том, что армия России бьет по «центрам принятия решений» и объектам, которые ВСУ используют «совместно с натовскими специалистами».',
+        'Пізніше РИА Новости написало про «дві серії вибухів» за ніч і додало стандартне формулювання про те, що армія Росії б\u2019є по «центрах ухвалення рішень» і об\u2019єктах, які ЗСУ використовують «спільно з натовськими фахівцями».',
+        'Later RIA Novosti wrote of "two series of explosions" during the night and added its standard wording that the Russian army is striking "decision-making centres" and sites the Ukrainian army uses "together with NATO specialists".',
+        [(15448, 'В Киеве прогремели две серии взрывов за ночь, передает телеканал "Общественное".')])
+    add(c, 'ua', '«Украинская правда» со ссылкой на КГВА и КГГА подтвердила, что в ночь на 22 октября Киев атаковали баллистическими ракетами, в городе прогремела серия взрывов.',
+        '«Українська правда» з посиланням на КМВА і КМДА підтвердила, що в ніч на 22 жовтня Київ атакували балістичними ракетами, у місті пролунала серія вибухів.',
+        'Ukrainska Pravda, citing the Kyiv city military and civil administrations, confirmed that on the night of 22 October Kyiv was attacked with ballistic missiles and a series of explosions was heard in the city.',
+        [(15495, 'Вночі 22 жовтня росіяни атакували Київ балістичними ракетами, у місті пролунала серія вибухів.')])
+    setd(c, c['diverge'] + ' РИА Новости сопровождает сообщение о взрывах формулировкой об ударах по «центрам принятия решений», не называя целей.',
+         c['uk']['d'] + ' РИА Новости супроводжує повідомлення про вибухи формулюванням про удари по «центрах ухвалення рішень», не називаючи цілей.',
+         c['en']['d'] + ' RIA Novosti accompanies its report of explosions with wording about strikes on "decision-making centres" without naming any targets.')
+
+@ext('1021-su30-crash-kaliningrad', [15496])
+def _(c):
+    add(c, 'ind', 'DW позже сообщила, что Россия за сутки, возможно, потеряла два Су-30: провоенный блогер Кирилл Федоров и связанные с ВКС каналы Fighterbomber и «Воевода вещает» написали о крушении второго истребителя, официального сообщения Минобороны об этом не было; украинский портал «Милитарный» предположил, что речь идет о Су-30СМ.',
+        'DW пізніше повідомила, що Росія за добу, можливо, втратила два Су-30: провоєнний блогер Кирило Федоров і пов\u2019язані з ВКС канали Fighterbomber і «Воевода вещает» написали про катастрофу другого винищувача, офіційного повідомлення Міноборони про це не було; український портал «Мілітарний» припустив, що йдеться про Су-30СМ.',
+        'DW later reported that Russia may have lost two Su-30s in one day: pro-war blogger Kirill Fedorov and the air force-linked channels Fighterbomber and Voevoda Veshchaet wrote about the crash of a second fighter, with no official statement from the Defence Ministry; the Ukrainian portal Militarnyi suggested it was an Su-30SM.',
+        [(15496, 'Россия в среду, 21 октября, возможно, лишилась двух истребителей Су-30.'),
+         (15496, 'которого, впрочем, пока не последовало')])
+    setd(c, c['diverge'] + ' О возможной потере второго Су-30 в тот же день пишет только DW со ссылкой на провоенных блогеров; Минобороны России ее не подтверждало.',
+         c['uk']['d'] + ' Про можливу втрату другого Су-30 того ж дня пише лише DW з посиланням на провоєнних блогерів; Міноборони Росії її не підтверджувало.',
+         c['en']['d'] + ' Only DW, citing pro-war bloggers, reports the possible loss of a second Su-30 the same day; the Russian Defence Ministry has not confirmed it.')
+    c['uncertainty_reason'] += ' Возможная потеря второго истребителя известна только из провоенных телеграм-каналов.'
+
+@ext('1021-witkoff-kushner-technical-talks', [15498, 15490, 15472, 15337])
+def _(c):
+    add(c, 'ru', 'Глава РФПИ Кирилл Дмитриев, как пишут РИА Новости и ТАСС, высоко оценил «миротворческие усилия» Уиткоффа и Кушнера и написал им в X: «Спасибо, миротворцы».',
+        'Голова РФПІ Кирило Дмитрієв, як пишуть РИА Новости і ТАСС, високо оцінив «миротворчі зусилля» Віткоффа і Кушнера і написав їм у X: «Дякую, миротворці».',
+        'RDIF head Kirill Dmitriev, as RIA Novosti and TASS report, praised Witkoff\'s and Kushner\'s "peacemaking efforts" and wrote to them on X: "Thank you, Peacemakers".',
+        [(15337, 'высоко оценил миротворческие усилия спецпосланника президента США Дональда Трампа Стива Уиткоффа и зятя американского лидера Джареда Кушнера'),
+         (15490, 'Thank you, Peacemakers')])
+    add(c, 'ind', 'Al Jazeera со ссылкой на американского чиновника пишет, что Уиткофф и Кушнер предложили «трехстороннюю встречу на техническом уровне», посвященную гарантиям безопасности Украины и России после окончания войны; украинцы приняли предложение во вторник в Осло. По данным Reuters, на которые ссылается издание, Кремль назвал возможным местом переговоров Абу-Даби, начаться они могут уже в следующем месяце; предыдущие переговоры при посредничестве США прошли в феврале.',
+        'Al Jazeera з посиланням на американського посадовця пише, що Віткофф і Кушнер запропонували «тристоронню зустріч на технічному рівні», присвячену гарантіям безпеки України та Росії після закінчення війни; українці прийняли пропозицію у вівторок в Осло. За даними Reuters, на які посилається видання, Кремль назвав можливим місцем переговорів Абу-Дабі, розпочатися вони можуть уже наступного місяця; попередні переговори за посередництва США відбулися в лютому.',
+        'Al Jazeera, citing a US official, writes that Witkoff and Kushner proposed a "trilateral meeting at the technical level" focused on security guarantees for Ukraine and Russia after the war; the Ukrainians accepted the proposal on Tuesday in Oslo. According to Reuters, cited by the outlet, the Kremlin named Abu Dhabi as a possible venue and said talks could start as soon as next month; the previous US-mediated talks took place in February.',
+        [(15498, 'A US official told Al Jazeera that Witkoff and Kushner proposed a “trilateral meeting at the technical level” that would focus on guaranteeing the security of Ukraine and Russia once the war had ended.'),
+         (15498, 'The Ukrainians accepted the meeting when they met with the Americans on Tuesday in Oslo, Norway.')])
+    d = c['diverge'].replace('обе группы пишут', 'российские и украинские источники пишут').replace(
+        'Независимые издания в подборке о технических переговорах отдельно не пишут.',
+        'Al Jazeera со ссылкой на американского чиновника уточняет, что техническая встреча должна быть посвящена гарантиям безопасности после войны; благодарность Дмитриева «миротворцам» приводят только российские источники.')
+    ud = c['uk']['d'].replace('обидві групи пишуть', 'російські та українські джерела пишуть').replace(
+        'Незалежні видання в добірці про технічні переговори окремо не пишуть.',
+        'Al Jazeera з посиланням на американського посадовця уточнює, що технічна зустріч має бути присвячена гарантіям безпеки після війни; подяку Дмитрієва «миротворцям» наводять лише російські джерела.')
+    ed = c['en']['d'].replace('Both groups report', 'Russian and Ukrainian sources report').replace(
+        'Independent outlets in the selection do not write separately about the technical talks.',
+        'Al Jazeera, citing a US official, specifies that the technical meeting is to focus on post-war security guarantees; only Russian sources quote Dmitriev\'s thanks to the "peacemakers".')
+    assert d != c['diverge'] and ud != c['uk']['d'] and ed != c['en']['d']
+    setd(c, d, ud, ed)
+    c['tags'] = [t for t in c['tags'] if t != 'одна из групп не освещает']
+
+apply(['c21a.json', 'c21b.json', 'c21d.json', 'c22a.json'])

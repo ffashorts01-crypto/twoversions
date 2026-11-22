@@ -1,0 +1,34 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+# ---------------- hourly run 22 Oct 07:02 (backlog Oct 20/21) ----------------
+c20 = []
+c20.append(C('1020-odesa-tcc-stones', [13530, 14449, 14994],
+ 'В Одессе группа людей забросала камнями здание ТЦК, куда доставили мужчину, разыскиваемого за уклонение от мобилизации; двое задержаны',
+ 'Одесса, Пересыпский район', 'odesa',
+ ['расхождение: формулировки', 'умолчание', 'одна из групп не освещает'],
+ S("РИА Новости со ссылкой на Telegram-канал украинского агентства УНИАН сообщает, что цыгане в Одессе забросали здание военкомата камнями из-за задержания их барона; на видео около десяти человек бросают камни в сторону здания, рядом стоит полицейская машина. Агентство вписывает эпизод в рассказ о нехватке личного состава ВСУ и «силовой мобилизации»: мужчины призывного возраста, по его словам, «всеми силами отбиваются от призыва».",
+   (13530, 'Цыгане в Одессе забросали здание военкомата камнями из-за задержания их барона, передает украинское агентство УНИАН'),
+   (13530, 'Киевский режим в последнее время столкнулся с нехваткой личного состава в ВСУ')),
+ S("«Украинская правда» и РБК-Украина со ссылкой на полицию Одесской области пишут, что в Пересыпский районный ТЦК доставили мужчину, который находился в розыске за уклонение от мобилизации; в его поддержку к ТЦК пришла группа людей и начала бросать камни во двор и здание. Двоих самых активных участников задержали, открыто уголовное производство о хулиганстве. РБК-Украина добавляет со ссылкой на ТЦК, что мужчину выявили 20 октября во время оповещения, он прошел военно-врачебную комиссию и мобилизован, а действия собравшихся в центре назвали провокацией.",
+   (14449, 'На його підтримку до воріт районного територіального центру комплектування прибула група людей, які почали жбурляти каміння у двір та будівлю ТЦК'),
+   (14994, 'Двох найактивніших учасників затримали та доставили до відділу поліції.'),
+   (14994, 'У ТЦК їхні дії назвали спробою провокації та перешкоджання роботі установи.')),
+ None,
+ "Обе стороны описывают один эпизод, но по-разному. РИА Новости со ссылкой на УНИАН называет участников цыганами, а задержанного — их бароном и подает случай как пример протестов против принудительной мобилизации; украинские источники со ссылкой на полицию и ТЦК не упоминают ни национальность, ни «барона», говорят о разыскиваемом уклонисте, задержании двоих и деле о хулиганстве. Независимые источники в выборке об эпизоде не сообщают.",
+ 'medium', 'Подробности о личности задержанного и участниках известны только из пересказов; независимой проверки нет.', False,
+ ('В Одесі група людей закидала камінням будівлю ТЦК, куди доставили чоловіка, якого розшукували за ухилення від мобілізації; двох затримано',
+  'Одеса, Пересипський район',
+  'Обидві сторони описують один епізод, але по-різному. РИА Новости з посиланням на УНІАН називає учасників ромами, а затриманого — їхнім бароном і подає випадок як приклад протестів проти примусової мобілізації; українські джерела з посиланням на поліцію і ТЦК не згадують ні національності, ні «барона», говорять про розшукуваного ухилянта, затримання двох і справу про хуліганство. Незалежні джерела в добірці про епізод не повідомляють.',
+  'РИА Новости з посиланням на Telegram-канал українського агентства УНІАН повідомляє, що роми в Одесі закидали будівлю військкомату камінням через затримання їхнього барона; на відео близько десяти людей кидають каміння в бік будівлі, поруч стоїть поліцейська машина. Агентство вписує епізод у розповідь про брак особового складу ЗСУ і «силову мобілізацію»: чоловіки призовного віку, за його словами, «всіма силами відбиваються від призову».',
+  '«Українська правда» і РБК-Україна з посиланням на поліцію Одеської області пишуть, що до Пересипського районного ТЦК доставили чоловіка, який перебував у розшуку за ухилення від мобілізації; на його підтримку до ТЦК прийшла група людей і почала кидати каміння у двір та будівлю. Двох найактивніших учасників затримали, відкрито кримінальне провадження про хуліганство. РБК-Україна додає з посиланням на ТЦК, що чоловіка виявили 20 жовтня під час оповіщення, він пройшов військово-лікарську комісію і мобілізований, а дії тих, хто зібрався, у центрі назвали провокацією.',
+  None),
+ ('In Odesa a group of people threw stones at a recruitment centre building where a man wanted for draft evasion had been brought; two detained',
+  'Odesa, Peresypskyi district',
+  'Both sides describe the same incident, but differently. RIA Novosti, citing UNIAN, calls the participants Roma and the detained man their "baron" and presents the case as an example of protests against forced mobilisation; Ukrainian sources, citing the police and the recruitment centre, mention neither ethnicity nor a "baron" and speak of a wanted draft evader, two detentions and a hooliganism case. Independent sources in the selection do not report the incident.',
+  'RIA Novosti, citing the Telegram channel of the Ukrainian agency UNIAN, reports that Roma in Odesa threw stones at a military enlistment office building over the detention of their "baron"; a video shows about ten people throwing stones towards the building, with a police car nearby. The agency places the episode in a story about the Ukrainian army\'s manpower shortage and "forced mobilisation": men of draft age, it says, "fight off the draft with all their might".',
+  'Ukrainska Pravda and RBC-Ukraine, citing the Odesa regional police, write that a man wanted for evading mobilisation was brought to the Peresypskyi district recruitment centre; a group of people came to the centre in his support and began throwing stones into the yard and at the building. The two most active participants were detained and a criminal case for hooliganism was opened. RBC-Ukraine adds, citing the recruitment centre, that the man was found on 20 October during a notification round, passed a military medical board and was mobilised, and the centre called the actions of those gathered a provocation.',
+  None)))
+json.dump(c20, open(OUT + 'c20b.json', 'w'), ensure_ascii=False, indent=1)
+print('c20b', len(c20))

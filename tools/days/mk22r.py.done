@@ -1,0 +1,41 @@
+# post-patch of mk22q (22 Oct 10:04 run): compact the ru text of 1022-mod-massive-strike-vpk-energy under 1400 chars
+import json
+P = '/workspace/compare-site-v2/tools/days/out/c22b.json'
+a = json.load(open(P))
+R = [
+ ('ТАСС со ссылкой на главу Винницкой ОВА Наталью Заболотную сообщает о повреждении промышленных и энергетических объектов в области.',
+  'ТАСС со ссылкой на Винницкую ОВА сообщает о повреждении промышленных и энергетических объектов.',
+  'ТАСС із посиланням на очільницю Вінницької ОВА Наталю Заболотну повідомляє про пошкодження промислових та енергетичних об’єктів в області.',
+  'ТАСС із посиланням на Вінницьку ОВА повідомляє про пошкодження промислових та енергетичних об’єктів.',
+  'TASS, citing the head of the Vinnytsia regional administration Nataliia Zabolotna, reports damage to industrial and energy facilities in the region.',
+  'TASS, citing the Vinnytsia regional administration, reports damage to industrial and energy facilities.'),
+ ('ТАСС выносит в заголовок, что в Генштабе ВСУ «признали», что не смогли перехватить ни одной ракеты. РИА Новости пишет, что ВВС Украины «признали», что не сбили ни одной баллистической и противокорабельной ракеты; ТАСС — что в Киеве и восьми областях частично нет света из-за повреждения энергообъектов.',
+  'ТАСС и РИА Новости выносят в заголовки, что украинские военные «признали», что не смогли перехватить ни одной ракеты; ТАСС также пишет, что в Киеве и восьми областях частично нет света из-за повреждения энергообъектов.',
+  'ТАСС виносить у заголовок, що в Генштабі ЗСУ «визнали», що не змогли перехопити жодної ракети. РИА Новости пише, що ВПС України «визнали», що не збили жодної балістичної та протикорабельної ракети; ТАСС — що в Києві та восьми областях частково немає світла через пошкодження енергооб’єктів.',
+  'ТАСС і РИА Новости виносять у заголовки, що українські військові «визнали», що не змогли перехопити жодної ракети; ТАСС також пише, що в Києві та восьми областях частково немає світла через пошкодження енергооб’єктів.',
+  'TASS headlines that the Ukrainian General Staff "admitted" it could not intercept a single missile. RIA Novosti writes that the Ukrainian Air Force "admitted" it did not shoot down a single ballistic or anti-ship missile; TASS that Kyiv and eight regions are partly without power because of damaged energy facilities.',
+  'TASS and RIA Novosti headline that the Ukrainian military "admitted" it could not intercept a single missile; TASS also writes that Kyiv and eight regions are partly without power because of damaged energy facilities.'),
+ ('по данным ведомства выпускающее дроны, крылатые ракеты FP-5 «Фламинго» и ракеты FP-9,', 'по данным ведомства выпускающее дроны и ракеты FP-5 «Фламинго» и FP-9,',
+  'яке, за даними відомства, випускає дрони, крилаті ракети FP-5 «Фламінго» та ракети FP-9,', 'яке, за даними відомства, випускає дрони та ракети FP-5 «Фламінго» і FP-9,',
+  'which it says makes drones, FP-5 Flamingo cruise missiles and FP-9 missiles,', 'which it says makes drones and FP-5 Flamingo and FP-9 missiles,'),
+]
+for c in a:
+    if c['key'] == '1022-mod-massive-strike-vpk-energy':
+        for r0, r1, u0, u1, e0, e1 in R:
+            if r0 in c['ru']['summary']:
+                c['ru']['summary'] = c['ru']['summary'].replace(r0, r1)
+                assert u0 in c['uk']['ru'] and e0 in c['en']['ru'], r0[:30]
+                c['uk']['ru'] = c['uk']['ru'].replace(u0, u1); c['en']['ru'] = c['en']['ru'].replace(e0, e1)
+        print(len(c['ru']['summary']), len(c['uk']['ru']), len(c['en']['ru']))
+json.dump(a, open(P, 'w'), ensure_ascii=False, indent=1)
+# 2nd post-patch: UPA card ru '22' ungrounded -> 'Позже'
+P2 = '/workspace/compare-site-v2/tools/days/out/c21a.json'
+b = json.load(open(P2))
+for c in b:
+    if c['key'] == '1021-poland-upa-year-dispute':
+        for side, o, n in (('ru', 'Утром 22 октября ТАСС передал', 'Позже ТАСС передал'), ('uk', 'Уранці 22 жовтня ТАСС передав', 'Пізніше ТАСС передав'), ('en', 'On the morning of 22 October TASS relayed', 'Later TASS relayed')):
+            if side == 'ru':
+                c['ru']['summary'] = c['ru']['summary'].replace(o, n)
+            else:
+                c[side]['ru'] = c[side]['ru'].replace(o, n)
+json.dump(b, open(P2, 'w'), ensure_ascii=False, indent=1)

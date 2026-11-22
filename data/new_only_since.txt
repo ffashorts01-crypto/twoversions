@@ -1,0 +1,3 @@
+2026-11-10T14:30:00+00:00
+# NEW-NEWS-ONLY cutoff (UTC; = 2026-11-10 15:30 Europe/Berlin). Decision 2026-11-10: the Oct 22 - Nov 10 backlog is NOT caught up.
+# Nothing published before this moment is collected, clustered, judged or written into cards (pipeline/common.py NEW_ONLY_SINCE; env NEW_ONLY_SINCE overrides).

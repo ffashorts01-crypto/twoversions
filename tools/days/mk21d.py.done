@@ -1,0 +1,79 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+from extlib import ext, add, setd, apply
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+cards = []
+card = lambda *a: cards.append(C(*a))
+# ---------------- backlog run 22 Oct 01:00, second batch ----------------
+card('1021-witkoff-kushner-technical-talks', [15279, 13842, 13580, 15283, 14470, 14473, 15050],
+ 'Уиткофф: переговоры продолжатся в трехстороннем формате на техническом уровне; Axios — Киев и Москва приняли предложение',
+ 'Осло — Санкт-Петербург', 'ukraine-wide',
+ ['расхождение: формулировки', 'одна из групп не освещает'],
+ S("«Интерфакс» со ссылкой на Axios сообщает, что Москва и Киев согласились с предложением Уиткоффа и Кушнера провести трехстороннюю встречу России, США и Украины на техническом уровне: украинцы приняли идею в Осло, россияне — в Санкт-Петербурге. ТАСС на английском приводит пост Уиткоффа в X: встреча с Путиным была «конструктивной», обсуждение продолжится в трехстороннем формате на техническом уровне. РИА Новости и «Интерфакс» передают слова Кушнера об «обнадеживающем прогрессе» за последние дни и благодарность украинским, европейским и российским коллегам.",
+   (15279, 'Эту идею приняли украинцы в Осло вчера и россияне сегодня в Санкт-Петербурге'),
+   (13842, 'These discussions were constructive, and will continue with trilateral talks between the United States, Russia, and Ukraine at the technical level'),
+   (13580, 'За последние несколько дней достигнут обнадеживающий прогресс.')),
+ S("«Украинская правда» со ссылкой на «Европейскую правду» и Axios пишет, что обе стороны приняли предложение о трехсторонних переговорах на техническом уровне, и приводит заявление Ушакова о том, что возобновление переговоров якобы сорвали украинские удары в день выборов в России. Издание и РБК-Украина передают пост Уиткоффа: в Петербурге обсуждались рамки мирного урегулирования, Трамп остается привержен завершению войны; РБК-Украина добавляет слова Кушнера о «реальной возможности» оставить войну позади и напоминает, что Уиткофф назвал Путина «гуманистом».",
+   (14470, 'Цю пропозицію вчора в Осло підтримали українці, а сьогодні в Санкт-Петербурзі'),
+   (15050, 'Переговори США, України та Росії продовжаться у тристоронньому форматі на технічному рівні.'),
+   (14473, 'обговорити рамки мирного врегулювання')),
+ None,
+ "Об согласии сторон на техническую трехстороннюю встречу обе группы пишут со ссылкой на Axios и пост Уиткоффа. Российские источники делают акцент на «конструктивности» встречи с Путиным и «прогрессе», о котором говорит Кушнер; украинские добавляют, что обсуждались рамки мирного урегулирования, ставят под сомнение версию Ушакова о сорванных переговорах («якобы») и напоминают о словах Уиткоффа о Путине-«гуманисте». Независимые издания в подборке о технических переговорах отдельно не пишут.",
+ 'low', '', False,
+ ('Віткофф: переговори продовжаться в тристоронньому форматі на технічному рівні; Axios — Київ і Москва прийняли пропозицію',
+  'Осло — Санкт-Петербург',
+  'Про згоду сторін на технічну тристоронню зустріч обидві групи пишуть із посиланням на Axios і допис Віткоффа. Російські джерела наголошують на «конструктивності» зустрічі з Путіним і «прогресі», про який говорить Кушнер; українські додають, що обговорювалися рамки мирного врегулювання, ставлять під сумнів версію Ушакова про зірвані переговори («нібито») і нагадують про слова Віткоффа про Путіна-«гуманіста». Незалежні видання в добірці про технічні переговори окремо не пишуть.',
+  '«Интерфакс» з посиланням на Axios повідомляє, що Москва і Київ погодилися з пропозицією Віткоффа і Кушнера провести тристоронню зустріч Росії, США і України на технічному рівні: українці прийняли ідею в Осло, росіяни — в Санкт-Петербурзі. ТАСС англійською наводить допис Віткоффа в X: зустріч із Путіним була «конструктивною», обговорення продовжиться в тристоронньому форматі на технічному рівні. РИА Новости і «Интерфакс» передають слова Кушнера про «обнадійливий прогрес» за останні дні і подяку українським, європейським і російським колегам.',
+  '«Українська правда» з посиланням на «Європейську правду» і Axios пише, що обидві сторони прийняли пропозицію про тристоронні переговори на технічному рівні, і наводить заяву Ушакова про те, що відновлення переговорів нібито зірвали українські удари в день виборів у Росії. Видання і РБК-Україна передають допис Віткоффа: у Петербурзі обговорювалися рамки мирного врегулювання, Трамп залишається відданим завершенню війни; РБК-Україна додає слова Кушнера про «реальну можливість» залишити війну позаду і нагадує, що Віткофф назвав Путіна «гуманістом».',
+  None),
+ ('Witkoff: talks to continue in a trilateral format at the technical level; Axios says Kyiv and Moscow accepted the proposal',
+  'Oslo — St Petersburg',
+  'Both groups report the sides\' agreement to a technical-level trilateral meeting citing Axios and Witkoff\'s post. Russian sources stress the "constructive" meeting with Putin and the "progress" Kushner speaks of; Ukrainian sources add that a framework for a peace settlement was discussed, cast doubt on Ushakov\'s version of the derailed talks ("allegedly") and recall Witkoff calling Putin a "humanitarian". Independent outlets in the selection do not write separately about the technical talks.',
+  'Interfax, citing Axios, reports that Moscow and Kyiv agreed to Witkoff\'s and Kushner\'s proposal to hold a trilateral meeting of Russia, the US and Ukraine at the technical level: the Ukrainians accepted the idea in Oslo, the Russians in St Petersburg. TASS in English quotes Witkoff\'s post on X: the meeting with Putin was "constructive" and discussions will continue in a trilateral format at the technical level. RIA Novosti and Interfax relay Kushner\'s words about "encouraging progress" in recent days and his thanks to Ukrainian, European and Russian counterparts.',
+  'Ukrainska Pravda, citing Yevropeiska Pravda and Axios, writes that both sides accepted the proposal for technical-level trilateral talks and quotes Ushakov\'s claim that the resumption of talks was allegedly derailed by Ukrainian strikes on Russia\'s election day. The outlet and RBC-Ukraine relay Witkoff\'s post: the framework for a peace settlement was discussed in St Petersburg and Trump remains committed to ending the war; RBC-Ukraine adds Kushner\'s words about a "real opportunity" to move beyond the war and recalls that Witkoff called Putin a "humanitarian".',
+  None))
+
+card('1021-kyiv-sviatoshynskyi-drone-morning', [14431, 14434, 14956, 14599],
+ 'Утренняя атака дронов на Киев: попадание в 24-этажный дом в Святошинском районе, двое погибших',
+ 'Киев', 'kyiv',
+ ['одна из групп не освещает', 'умолчание'],
+ None,
+ S("РБК-Украина и «Украинская правда» со ссылкой на мэра Виталия Кличко, КГВА и ГСЧС сообщают, что утром 21 октября российский удар пришелся на 24-этажный жилой дом в Святошинском районе Киева на уровне 20-го этажа: возник пожар, конструкции квартиры частично разрушены, при разборе завалов спасатели нашли тела двух человек, еще двое ранены. Сначала КГВА сообщала об одном погибшем, позже Кличко подтвердил двоих.",
+   (14956, 'У Святошинському районі влучання в 24-поверховий житловий будинок на рівні 20 поверху.'),
+   (14434, 'Під час розбору завалів рятувальники виявили тіла людей.')),
+ S("The Kyiv Independent со ссылкой на Кличко пишет, что дрон попал в 24-этажный дом в Святошинском районе, на 20-м этаже начался пожар, не менее двух человек погибли и двое госпитализированы; издание приводит рассказы соседей. Издание отмечает, что столица этой осенью подвергается непрекращающимся атакам дронов.",
+   (14599, 'A Russian drone attack on Kyiv killed at least two people and injured two others on the morning of Oct. 21, local authorities said.'),
+   (14599, 'which has faced an unrelenting barrage of Russian drone attacks this fall')),
+ "Российские источники в подборке утреннюю атаку на Киев не освещают. Украинские и независимые издания совпадают в данных о двух погибших и двух раненых; украинские показывают, как число погибших уточнялось в течение утра, Kyiv Independent приводит рассказы очевидцев.",
+ 'low', '', False,
+ ('Ранкова атака дронів на Київ: влучання в 24-поверховий будинок у Святошинському районі, двоє загиблих',
+  'Київ',
+  'Російські джерела в добірці ранкову атаку на Київ не висвітлюють. Українські та незалежні видання збігаються в даних про двох загиблих і двох поранених; українські показують, як кількість загиблих уточнювалася впродовж ранку, Kyiv Independent наводить розповіді очевидців.',
+  None,
+  'РБК-Україна і «Українська правда» з посиланням на мера Віталія Кличка, КМВА і ДСНС повідомляють, що вранці 21 жовтня російський удар припав на 24-поверховий житловий будинок у Святошинському районі Києва на рівні 20-го поверху: виникла пожежа, конструкції квартири частково зруйновані, під час розбору завалів рятувальники знайшли тіла двох людей, ще двоє поранені. Спочатку КМВА повідомляла про одного загиблого, пізніше Кличко підтвердив двох.',
+  'The Kyiv Independent з посиланням на Кличка пише, що дрон влучив у 24-поверховий будинок у Святошинському районі, на 20-му поверсі почалася пожежа, щонайменше двоє людей загинули і двоє госпіталізовані; видання наводить розповіді сусідів. Видання зазначає, що столиця цієї осені зазнає безперервних атак дронів.'),
+ ('Morning drone attack on Kyiv: a 24-storey building in Sviatoshynskyi district hit, two killed',
+  'Kyiv',
+  'Russian sources in the selection do not cover the morning attack on Kyiv. Ukrainian and independent outlets agree on two killed and two injured; Ukrainian outlets show how the death toll was updated during the morning, the Kyiv Independent quotes eyewitnesses.',
+  None,
+  'RBC-Ukraine and Ukrainska Pravda, citing Mayor Vitali Klitschko, the Kyiv City Military Administration and the State Emergency Service, report that on the morning of 21 October a Russian strike hit a 24-storey residential building in Kyiv\'s Sviatoshynskyi district at the level of the 20th floor: a fire broke out, the flat\'s structures were partly destroyed, and rescuers clearing the rubble found the bodies of two people, two more were injured. The city administration first reported one dead, later Klitschko confirmed two.',
+  'The Kyiv Independent, citing Klitschko, writes that a drone hit a 24-storey building in Sviatoshynskyi district, a fire started on the 20th floor, at least two people were killed and two hospitalised; the outlet quotes neighbours. The outlet notes that the capital has faced an unrelenting barrage of Russian drone attacks this autumn.'))
+
+json.dump(cards, open(OUT + 'c21d.json', 'w'), ensure_ascii=False, indent=1)
+print('c21d', len(cards))
+
+# ---- extension of an earlier Oct 21 card (new articles 15365, 15366 collected at 01:00) ----
+@ext('1021-kyiv-ballistic-evening-strike', [15365, 15366])
+def _(c):
+    add(c, 'ind',
+        "DW со ссылкой на Кличко сообщает о шести пострадавших, четверо госпитализированы, и по предварительным данным называет число ракет — 10, в том числе «Искандер-М», «Циркон» и С-400. The Kyiv Independent приводит рассказ жителя, который вместе с соседями вытащил из горящего дома мужчину и его жену.",
+        "DW з посиланням на Кличка повідомляє про шістьох постраждалих, четверо госпіталізовані, і за попередніми даними називає кількість ракет — 10, зокрема «Іскандер-М», «Циркон» і С-400. The Kyiv Independent наводить розповідь мешканця, який разом із сусідами витягнув із палаючого будинку чоловіка та його дружину.",
+        "DW, citing Klitschko, reports six injured, four of them hospitalised, and, citing preliminary data, puts the number of missiles at 10, including Iskander-M, Zircon and S-400. The Kyiv Independent quotes a resident who, together with neighbours, pulled a man and his wife out of a burning house.",
+        [(15366, 'по городу было выпущено 10 ракет, в том числе Искандер-М, Циркон и С-400'),
+         (15365, 'Fortunately, we managed to rescue a man and his wife who were inside the burning house.')])
+    setd(c,
+        c['diverge'] + " Число и типы ракет по предварительным данным называет только DW.",
+        c['uk']['d'] + " Кількість і типи ракет за попередніми даними називає лише DW.",
+        c['en']['d'] + " Only DW gives the number and types of missiles, citing preliminary data.")
+apply(['c21b.json'])

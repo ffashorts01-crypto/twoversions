@@ -1,0 +1,36 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+# ---------------- hourly run 22 Oct 12:00: new Oct 21 backlog card ----------------
+c21 = []
+c21.append(C('1021-evening-explosions-kharkiv-dnipro-kropyvnytskyi', [13853, 13868, 13872, 13873, 13882, 14239, 14289, 14322],
+ 'Вечер среды: ТАСС сообщает о взрывах в Харькове, Днепре, Кропивницком и Виннице; власти Кировоградской области — об ударе по складам',
+ 'Харьков, Днепр, Кропивницкий, Винница', 'ukraine-wide',
+ ['одна из групп не освещает', 'расхождение: формулировки'],
+ S("ТАСС вечером в среду короткими сообщениями фиксирует взрывы на фоне воздушной тревоги: сначала в Харьковской области, затем снова в Харькове, «новую серию взрывов» в Днепропетровске, взрыв в Елизаветграде (так агентство называет Кропивницкий) и взрывы в Виннице. О целях, причинах и последствиях в сообщениях не говорится.",
+   (13873, 'В Днепропетровске произошла новая серия взрывов.'),
+   (13868, 'В Елизаветграде произошел взрыв.'),
+   (13882, 'В Виннице произошли взрывы.')),
+ S("«Общественное» со ссылкой на главу Кировоградской ОВА Андрея Райковича сообщает об «очередной вражеской атаке» на складские помещения в Кропивницком районе; данных о пострадавших нет, Райкович просит соблюдать информационную тишину. Позже корреспонденты «Общественного» слышали взрыв в Кропивницком во время тревоги, а Воздушные силы предупреждали о российских реактивных беспилотниках южнее Днепра и севернее Кропивницкого. Днем глава Днепропетровской ОВА Александр Ганжа сообщил об обстрелах Днепра и области: повреждены инфраструктура, частный дом и предприятие.",
+   (14289, 'Чергова ворожа атака по складських приміщеннях у Кропивницькому районі.'),
+   (14322, 'попередили про російські реактивні БпЛА на півдні від Дніпра та півночі від Кропивницького'),
+   (14239, 'У Дніпрі через обстріли понівечена інфраструктура')),
+ None,
+ "ТАСС лишь фиксирует взрывы и использует названия Елизаветград и Днепропетровск, не называя целей и последствий. Украинские власти называют целью в Кропивницком районе склады и о пострадавших не сообщают; о взрывах в Харькове и Виннице этим вечером украинские источники выборки отдельно не пишут. Независимые издания эти сообщения не освещают.",
+ 'medium', 'Известны только факты взрывов и общее описание цели в Кропивницком районе; результаты ударов не раскрываются.', False,
+ ('Вечір середи: ТАСС повідомляє про вибухи в Харкові, Дніпрі, Кропивницькому та Вінниці; влада Кіровоградщини — про удар по складах',
+  'Харків, Дніпро, Кропивницький, Вінниця',
+  "ТАСС лише фіксує вибухи й використовує назви Єлизаветград і Днепропетровськ, не називаючи цілей і наслідків. Українська влада називає ціллю в Кропивницькому районі склади і про постраждалих не повідомляє; про вибухи в Харкові та Вінниці цього вечора українські джерела вибірки окремо не пишуть. Незалежні видання ці повідомлення не висвітлюють.",
+  "ТАСС увечері в середу короткими повідомленнями фіксує вибухи на тлі повітряної тривоги: спершу в Харківській області, потім знову в Харкові, «нову серію вибухів» у Днепропетровську, вибух в Єлизаветграді (так агентство називає Кропивницький) і вибухи у Вінниці. Про цілі, причини та наслідки в повідомленнях не йдеться.",
+  "«Суспільне» з посиланням на начальника Кіровоградської ОВА Андрія Райковича повідомляє про «чергову ворожу атаку» на складські приміщення в Кропивницькому районі; інформації про постраждалих немає, Райкович просить дотримуватися інформаційної тиші. Пізніше кореспонденти «Суспільного» чули вибух у Кропивницькому під час тривоги, а Повітряні сили попереджали про російські реактивні безпілотники на південь від Дніпра та на північ від Кропивницького. Удень начальник Дніпропетровської ОВА Олександр Ганжа повідомив про обстріли Дніпра та області: пошкоджено інфраструктуру, приватний будинок і підприємство.",
+  None),
+ ('Wednesday evening: TASS reports explosions in Kharkiv, Dnipro, Kropyvnytskyi and Vinnytsia; Kirovohrad regional authorities report a strike on warehouses',
+  'Kharkiv, Dnipro, Kropyvnytskyi, Vinnytsia',
+  "TASS only records explosions and uses the names Yelizavetgrad and Dnepropetrovsk, without naming targets or consequences. Ukrainian authorities name warehouses in Kropyvnytskyi district as the target and report no casualties; Ukrainian sources in the selection do not report separately on that evening's explosions in Kharkiv and Vinnytsia. Independent outlets do not cover these reports.",
+  "On Wednesday evening TASS recorded explosions during air-raid alerts in brief reports: first in Kharkiv region, then again in Kharkiv, a \"new series of explosions\" in Dnepropetrovsk, an explosion in Yelizavetgrad (the agency's name for Kropyvnytskyi) and explosions in Vinnytsia. The reports say nothing about targets, causes or consequences.",
+  "Suspilne, citing Kirovohrad regional military administration head Andriy Raikovych, reports \"another enemy attack\" on warehouse premises in Kropyvnytskyi district; there is no information on casualties, and Raikovych asks people to observe information silence. Later Suspilne correspondents heard an explosion in Kropyvnytskyi during an alert, and the Air Force warned of Russian jet-powered drones south of Dnipro and north of Kropyvnytskyi. During the day Dnipropetrovsk regional head Oleksandr Hanzha reported shelling of Dnipro and the region, damaging infrastructure, a private house and an enterprise.",
+  None)))
+
+json.dump(c21, open(OUT + 'c21c.json', 'w'), ensure_ascii=False, indent=1)
+print('c21c', len(c21))

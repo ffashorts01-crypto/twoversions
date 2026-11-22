@@ -1,0 +1,7 @@
+import sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, apply
+# hourly run 22 Oct 07:02: id-only backlog extension
+@ext('1021-korotych-kremenchuk-drone-strikes', [14951, 14618])
+def _(c): pass
+apply(['c21a.json'])

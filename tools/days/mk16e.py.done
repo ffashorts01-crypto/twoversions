@@ -1,0 +1,35 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+card('1016-trump-newsmax-zelensky', [10875, 10881, 6099, 6098, 10934, 6114, 6128, 4921, 8854, 8856, 8154, 8163, 8866, 8194, 8871, 7233, 7230, 8623, 8683, 8734, 8318, 8639],
+ 'Трамп: Зеленский «не тот человек, с кем стоит иметь дело», удары по НПЗ — «позор»; Кремль согласен, Зеленский защищает удары и предупреждает о «газовых сделках»', 'Вашингтон, Брюссель, Москва', 'ukraine-wide',
+ ['расхождение: оценка ситуации'],
+ S('Интерфакс и ТАСС цитируют интервью Трампа Newsmax: конфликт решится, но «без него», потому что Зеленский не хочет урегулирования, а удары по НПЗ лишь поднимают мировые цены на нефть и являются «позором». Дмитрий Песков заявил, что Кремль полностью согласен с Трампом в том, что Зеленский не хочет мирного урегулирования. ТАСС со ссылкой на NYT пишет, что Венс, Уиткофф и Кушнер просили Зеленского не бить по российским НПЗ.',
+   (10875, 'Но это будет без него, так как он не хочет урегулирования'),
+   (6099, 'Well, I think that\'s a disgrace.'),
+   (10934, 'И здесь мы полностью сходимся в этой точке зрения с президентом Трампом')),
+ S('Украинские СМИ подробно пересказывают интервью, в том числе слова Трампа о том, что с Путиным договариваться проще, и его рассуждения о Крыме, «омываемом океаном с четырех сторон». Зеленский в Брюсселе заявил, что сделка по дизелю стала для Киева сюрпризом, а Украина была готова прекратить удары по НПЗ, если США дадут противобаллистические системы для защиты энергетики, но не получила их; по его словам, Россия восприняла сигналы об ослаблении санкций как зеленый свет.',
+   (8194, 'Угода щодо дизеля стала для нас сюрпризом'),
+   (8194, 'Але я не отримав це. Дивно!'),
+   (7230, 'Очевидно, що Росія сприйняла сигнали щодо послаблення санкцій як зелене світло')),
+ S('BBC, Guardian, Meduza и Kyiv Independent приводят слова Трампа о том, что с Зеленским труднее иметь дело, чем с Путиным; Зеленский ответил, что лишь отстаивает интересы Украины, и предупредил, что за дизельной сделкой последуют газовые и снятие других санкций.',
+   (8683, 'I find Zelenskyy to be more difficult to deal with than Putin'),
+   (8639, 'In my view, we cannot accept these agreements. Because gas deals will follow.')),
+ 'Российские источники акцентируют совпадение позиций Кремля и Трампа и тезис о нежелании Зеленского мира; украинские и независимые источники — несогласованность американо-российских договоренностей с Киевом и условие Зеленского о защите энергетики.',
+ 'low', '', False,
+ ['Трамп: Зеленський «не та людина, з якою варто мати справу», удари по НПЗ — «ганьба»; Кремль згоден, Зеленський захищає удари і попереджає про «газові угоди»', 'Вашингтон, Брюссель, Москва',
+  'Російські джерела акцентують збіг позицій Кремля і Трампа та тезу про небажання Зеленського миру; українські та незалежні джерела — неузгодженість американсько-російських домовленостей із Києвом і умову Зеленського щодо захисту енергетики.',
+  'Інтерфакс і ТАСС цитують інтерв’ю Трампа Newsmax: конфлікт вирішиться, але «без нього», бо Зеленський не хоче врегулювання, а удари по НПЗ лише піднімають світові ціни на нафту і є «ганьбою». Дмитро Пєсков заявив, що Кремль повністю згоден із Трампом у тому, що Зеленський не хоче мирного врегулювання. ТАСС із посиланням на NYT пише, що Венс, Віткофф і Кушнер просили Зеленського не бити по російських НПЗ.',
+  'Українські ЗМІ докладно переказують інтерв’ю, зокрема слова Трампа про те, що з Путіним домовлятися простіше, і його міркування про Крим, «омитий океаном з чотирьох боків». Зеленський у Брюсселі заявив, що угода щодо дизеля стала для Києва сюрпризом, а Україна була готова припинити удари по НПЗ, якщо США дадуть протибалістичні системи для захисту енергетики, але не отримала їх; за його словами, Росія сприйняла сигнали щодо послаблення санкцій як зелене світло.',
+  'BBC, Guardian, Meduza і Kyiv Independent наводять слова Трампа про те, що із Зеленським важче мати справу, ніж із Путіним; Зеленський відповів, що лише обстоює інтереси України, і попередив, що за дизельною угодою підуть газові та зняття інших санкцій.'],
+ ['Trump: Zelensky "not a good guy to deal with", refinery strikes a "disgrace"; Kremlin agrees, Zelensky defends strikes and warns of "gas deals"', 'Washington, Brussels, Moscow',
+  'Russian sources stress the convergence of the Kremlin\'s and Trump\'s positions and the claim that Zelensky does not want peace; Ukrainian and independent sources stress that US-Russian arrangements were not agreed with Kyiv and Zelensky\'s condition on protecting energy.',
+  'Interfax and TASS quote Trump\'s Newsmax interview: the conflict will be settled, but "without him", because Zelensky does not want a settlement, and refinery strikes only push up world oil prices and are "a disgrace". Dmitry Peskov said the Kremlin fully agrees with Trump that Zelensky does not want a peaceful settlement. TASS, citing the NYT, writes that Vance, Witkoff and Kushner asked Zelensky not to strike Russian refineries.',
+  'Ukrainian media relay the interview in detail, including Trump\'s remark that it is easier to deal with Putin and his comments on Crimea having "ocean on four sides". In Brussels Zelensky said the diesel deal had come as a surprise to Kyiv and that Ukraine had been ready to stop refinery strikes if the US provided anti-ballistic systems to protect its energy, but did not get them; he said Russia had taken signals about sanctions relief as a green light.',
+  'The BBC, Guardian, Meduza and Kyiv Independent quote Trump as saying Zelensky is harder to deal with than Putin; Zelensky replied that he is only standing up for Ukraine\'s interests and warned that gas deals and the lifting of other sanctions would follow the diesel deal.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c16e.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

@@ -1,0 +1,20 @@
+import json, glob
+# post-patch: keep Oct 21 cards' start date — move Oct 20 ids out of Oct 21 cards (back to backlog / to the Oct 20 Oslo card)
+MOVE = {'1021-hubbard-released': [13516, 15169],
+        '1021-kremlin-trilateral-summit-china': [14374, 14872, 14417, 14076, 14705],
+        '1021-putin-witkoff-trilateral-talks': [13493, 13494, 14887, 15125, 15310, 14931, 13539, 15172],
+        '1021-musk-starlink-wsj': [14366],
+        # keep Oct 22 cards' start date: Oct 21 evening airport/Vinnytsia items back to backlog
+        '1022-lipetsk-moscow-drone-attack': [13672, 13953, 13599, 13859, 13883],
+        '1022-mod-massive-strike-vpk-energy': [13882]}
+TO_OSLO = [13493, 13494, 14887, 15125, 15310, 14931, 13539, 15172]
+for p in sorted(glob.glob('/workspace/compare-site-v2/tools/days/out/c*.json')):
+    a = json.load(open(p)); ch = False
+    for c in a:
+        if c['key'] in MOVE:
+            n = len(c['ids']); c['ids'] = [i for i in c['ids'] if i not in MOVE[c['key']]]; ch |= n != len(c['ids'])
+            for s in ('ru', 'ua', 'ind'):
+                if c[s]: assert not any(q['id'] in MOVE[c['key']] for q in c[s]['quotes'])
+        if c['key'] == '1020-oslo-zelensky-witkoff-talks':
+            c['ids'] += [i for i in TO_OSLO if i not in c['ids']]; ch = True
+    if ch: json.dump(a, open(p, 'w'), ensure_ascii=False, indent=1); print('patched', p[-9:])

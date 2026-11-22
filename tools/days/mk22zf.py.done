@@ -1,0 +1,33 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+# ---------------- hourly run 22 Oct 12:00: new Oct 21 backlog card ----------------
+c21 = json.load(open(OUT + 'c21c.json')) if False else []
+c21.append(C('1021-mikhailov-komi-detained-justifying-terrorism', [13916, 14662, 14665],
+ 'Бывшего депутата Госдумы от КПРФ Олега Михайлова задержали в Москве по обвинению в «оправдании терроризма»',
+ 'Москва', 'russia-other',
+ ['умолчание', 'одна из групп не освещает'],
+ S("ТАСС коротко сообщает, что бывшего депутата Госдумы от КПРФ Олега Михайлова задержали по обвинению в оправдании терроризма и он находится в изоляторе временного содержания. За что именно его обвиняют и какую позицию он занимал, агентство не пишет.",
+   (13916, 'Олег Михайлов находится в изоляторе временного содержания')),
+ None,
+ S("«Медуза» со ссылкой на телеграм-канал «Новая республика» и агентство БНК пишет, что поводом стала публикация 2024 года о социологе Борисе Кагарлицком, осужденном по той же статье; Михайлову грозит штраф или до семи лет лишения свободы, мера пресечения будет выбрана на следующий день. Михайлов возглавляет отделение КПРФ в Коми; после начала полномасштабного вторжения он попал под санкции ЕС, США, Украины и других стран. На выборах в Госдуму 2026 года он занял второе место в Сыктывкарском округе, уступив участнику войны, и был единственным кандидатом от Коми, призывавшим к миру.",
+   (14662, 'Михайлова обвинили в «оправдании терроризма» из-за публикации 2024 года о социологе Борисе Кагарлицком'),
+   (14665, 'During the campaign, Mikhailov was the only candidate from Komi to call for peace.')),
+ "ТАСС сообщает только о задержании и статье обвинения. «Медуза» объясняет, что поводом стал пост о Борисе Кагарлицком, и подчеркивает, что Михайлов был единственным кандидатом от Коми, призывавшим к миру на выборах в Госдуму; об этом ТАСС не упоминает. Украинские издания в подборке задержание не освещают.",
+ 'medium', 'Подробности обвинения известны со слов «Новой республики» и БНК; официальной позиции следствия в подборке нет.', False,
+ ('Колишнього депутата Держдуми від КПРФ Олега Михайлова затримали в Москві за звинуваченням у «виправданні тероризму»',
+  'Москва',
+  "ТАСС повідомляє лише про затримання і статтю звинувачення. «Медуза» пояснює, що приводом став допис про Бориса Кагарлицького, і наголошує, що Михайлов був єдиним кандидатом від Комі, який закликав до миру на виборах до Держдуми; про це ТАСС не згадує. Українські видання в добірці затримання не висвітлюють.",
+  "ТАСС коротко повідомляє, що колишнього депутата Держдуми від КПРФ Олега Михайлова затримали за звинуваченням у виправданні тероризму і він перебуває в ізоляторі тимчасового тримання. За що саме його звинувачують і яку позицію він обіймав, агентство не пише.",
+  None,
+  "«Медуза» з посиланням на телеграм-канал «Новая республика» та агентство БНК пише, що приводом став допис 2024 року про соціолога Бориса Кагарлицького, засудженого за тією ж статтею; Михайлову загрожує штраф або до семи років позбавлення волі, запобіжний захід оберуть наступного дня. Михайлов очолює відділення КПРФ у Комі; після початку повномасштабного вторгнення він потрапив під санкції ЄС, США, України та інших країн. На виборах до Держдуми 2026 року він посів друге місце в Сиктивкарському окрузі, поступившись учасникові війни, і був єдиним кандидатом від Комі, який закликав до миру."),
+ ('Former Communist State Duma deputy Oleg Mikhailov detained in Moscow on charges of "justifying terrorism"',
+  'Moscow',
+  "TASS reports only the detention and the charge. Meduza explains that the reason was a post about Boris Kagarlitsky and stresses that Mikhailov was the only candidate from Komi to call for peace in the State Duma election, which TASS does not mention. Ukrainian outlets in the selection do not cover the detention.",
+  "TASS briefly reports that former Communist State Duma deputy Oleg Mikhailov has been detained on charges of justifying terrorism and is being held in a temporary detention facility. The agency does not say what exactly he is accused of or what positions he held.",
+  None,
+  "Meduza, citing the Telegram channel Novaya Respublika and the BNK agency, writes that the reason was a 2024 post about sociologist Boris Kagarlitsky, convicted under the same article; Mikhailov faces a fine or up to seven years in prison, and a measure of restraint is to be chosen the next day. Mikhailov heads the Communist Party branch in Komi; after the full-scale invasion began he was sanctioned by the EU, the US, Ukraine and other countries. In the 2026 State Duma election he finished second in the Syktyvkar district, losing to a war veteran, and was the only candidate from Komi to call for peace.")))
+
+json.dump(c21, open(OUT + 'c21d.json', 'w'), ensure_ascii=False, indent=1)
+print('c21d', len(c21))

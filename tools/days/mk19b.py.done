@@ -1,0 +1,87 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from extlib import add, setd, ext, apply
+
+# ---------------- hourly run 04:01 Oct 19 (ids 11949-11992): no new cards, extensions only ----------------
+# Izhevsk / Perm airport restrictions and lifted restrictions (Kazan, Kaluga, Saransk, Ulyanovsk) stay Russian-only (SKIPPED.md).
+
+def rep(c, path, old, new):
+    """replace text in a field; path = ('ru','summary') | ('uk','ua') | ('diverge',)"""
+    o = c
+    for p in path[:-1]: o = o[p]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+@ext('1019-kyiv-ballistic-night', [11975, 11991])
+def _(c):
+    add(c, 'ru', 'Позже ТАСС сообщило, что в большинстве областей Украины воздушную тревогу отменили, но сирены продолжали звучать в Харькове.',
+        'Пізніше ТАСС повідомило, що в більшості областей України повітряну тривогу скасували, але сирени продовжували звучати в Харкові.',
+        'Later TASS reported that the air-raid alert had been lifted in most Ukrainian regions, but sirens were still sounding in Kharkiv.',
+        [(11975, 'В большинстве областей Украины отменили воздушную тревогу. Сирены продолжают работать в Харькове')])
+    rep(c, ('ua', 'summary'), 'Какую станцию повредило, Кличко не уточнил, изменится ли движение метро, пока неизвестно.',
+        'Какую станцию повредило, Кличко не уточнил; позже РБК-Украина со ссылкой на КГГА сообщила, что наземные станции «Черниговская» и «Лесная» на красной линии временно закрыты на вход и выход: повреждены наземная станция, пути и кабельная сеть, а утром поезда будут ходить от «Академгородка» до «Дарницы» по обычному графику.')
+    rep(c, ('uk', 'ua'), 'Яку саме станцію пошкоджено, Кличко не уточнив, чи зміниться рух метро, поки невідомо.',
+        'Яку саме станцію пошкоджено, Кличко не уточнив; пізніше РБК-Україна з посиланням на КМДА повідомила, що наземні станції «Чернігівська» і «Лісова» на червоній гілці тимчасово закрили на вхід і вихід: пошкоджено наземну станцію, колії та кабельну мережу, а вранці поїзди курсуватимуть від «Академмістечка» до «Дарниці» за звичайним графіком.')
+    rep(c, ('en', 'ua'), 'Klitschko did not specify which station was damaged, and it is not yet known whether metro service will change.',
+        'Klitschko did not specify which station was damaged; later RBC-Ukraine, citing the Kyiv City Administration, reported that the above-ground stations Chernihivska and Lisova on the red line had been temporarily closed for entry and exit: an above-ground station, tracks and the cable network were damaged, and in the morning trains would run from Akademmistechko to Darnytsia on the usual schedule.')
+    rep(c, ('ua', 'summary'), 'при первой атаке поздно вечером 18 октября погиб один человек',
+        'при первой атаке поздно вечером 18 октября, по предварительным данным, пострадало здание медицинского центра в Деснянском районе и погиб один человек')
+    rep(c, ('uk', 'ua'), 'під час першої атаки пізно ввечері 18 жовтня загинула одна людина',
+        'під час першої атаки пізно ввечері 18 жовтня, попередньо, постраждала будівля медичного центру в Деснянському районі та загинула одна людина')
+    rep(c, ('en', 'ua'), 'one person was killed in the first attack late on the evening of 18 October',
+        'in the first attack late on the evening of 18 October a medical centre building in the Desnianskyi district was preliminarily reported damaged and one person was killed')
+    c['ua']['quotes'] += [{'id': 11991, 'text': t} for t in [
+        'наземні станції метро "Чернігівська" і "Лісова" на червоній гілці тимчасово закрили на вхід і вихід',
+        'Поїзди вранці курсуватимуть від "Академмістечка" до "Дарниці".',
+        'Через масований обстріл пошкоджено наземну станцію метро, колії та кабельну мережу.',
+        'постраждала будівля медичного центру в Деснянському районі, загинула одна людина']]
+    rep(c, ('diverge',), 'РБК-Украина сообщает о баллистических ракетах и повреждении станции метро.',
+        'РБК-Украина сообщает о баллистических ракетах и повреждении наземной станции метро, из-за которого закрыты «Черниговская» и «Лесная».')
+    rep(c, ('uk', 'd'), 'РБК-Україна повідомляє про балістичні ракети і пошкодження станції метро.',
+        'РБК-Україна повідомляє про балістичні ракети і пошкодження наземної станції метро, через яке закрито «Чернігівську» і «Лісову».')
+    rep(c, ('en', 'd'), 'while RBC-Ukraine reports ballistic missiles and damage to a metro station.',
+        'while RBC-Ukraine reports ballistic missiles and damage to an above-ground metro station that closed Chernihivska and Lisova.')
+    c['uncertainty_reason'] = 'Данные предварительные: о пострадавших при второй атаке сведений нет, масштабы разрушений уточняются, о взрывах в Луцке и Ровно известно только из пересказа российских агентств.'
+
+@ext('1018-lithuania-drone-from-poland', [11952])
+def _(c):
+    add(c, 'ru', 'Ночью РИА Новости в заметке под заголовком о том, что литовский министр «попытался оправдаться», передало слова Каунаса из интервью LRT: объект видели литовские радары и радары истребителей, но пилоты не смогли визуально опознать его из-за тумана и облачности, поэтому решение о его уничтожении не принималось.',
+        'Уночі РИА Новости в замітці із заголовком про те, що литовський міністр «спробував виправдатися», передало слова Каунаса з інтерв’ю LRT: об’єкт бачили литовські радари і радари винищувачів, але пілоти не змогли візуально ідентифікувати його через туман і хмарність, тому рішення про його знищення не ухвалювали.',
+        'Overnight RIA Novosti, in an item headlined that the Lithuanian minister had "tried to justify himself", relayed Kaunas\'s words to LRT: the object was seen by Lithuanian radars and fighter radars, but the pilots could not identify it visually because of fog and clouds, so no decision to destroy it was taken.',
+        [(11952, 'Объект был обнаружен как литовскими радарами, так и радарами истребителей'),
+         (11952, 'пилоты истребителей не смогли этого сделать из-за тумана и облачности'),
+         (11952, 'именно поэтому решение об уничтожении объекта принято не было')])
+    c['diverge'] += ' Объяснение, почему дрон не сбили (истребители не смогли опознать его из-за облачности), Kyiv Independent излагает нейтрально, а РИА — как попытку министра «оправдаться».'
+    c['uk']['d'] += ' Пояснення, чому дрон не збили (винищувачі не змогли ідентифікувати його через хмарність), Kyiv Independent викладає нейтрально, а РИА — як спробу міністра «виправдатися».'
+    c['en']['d'] += ' The explanation of why the drone was not shot down (the fighters could not identify it because of clouds) is given neutrally by the Kyiv Independent, while RIA presents it as the minister trying to "justify himself".'
+
+@ext('1018-us-sanctions-wright-bessent', [11987])
+def _(c):
+    add(c, 'ua', 'Суспильне со ссылкой на Reuters приводит слова министра энергетики Турции Алпарслана Байрактара на телеканале Kanal 7: «Благодаря переговорам, которые мы провели, часть этого дизеля мы завезем в Турцию»; подробностей он не привел и назвал соглашение России и США важным для энергетической безопасности Турции.',
+        'Суспільне з посиланням на Reuters наводить слова міністра енергетики Туреччини Алпарслана Байрактара в етері телеканалу Kanal 7: «Завдяки переговорам, які ми провели, частину цього дизелю ми завеземо до Туреччини»; подробиць він не навів і назвав угоду Росії та США важливою для енергетичної безпеки Туреччини.',
+        'Suspilne, citing Reuters, quotes Turkish Energy Minister Alparslan Bayraktar on the Kanal 7 TV channel: "Thanks to the negotiations we have held, we will bring part of this diesel to Turkey"; he gave no details and called the Russia–US deal important for Turkey\'s energy security.',
+        [(11987, 'Завдяки переговорам, які ми провели, частину цього дизелю ми завеземо до Туреччини'),
+         (11987, 'Байрактар назвав угоду між Росією та США важливою для енергетичної безпеки Туреччини.')])
+
+@ext('1018-zelensky-bloomberg-capitulation', [11990])
+def _(c):
+    rep(c, ('ua', 'summary'), 'В отдельной заметке РБК-Украина цитирует:', 'РБК-Украина также цитирует:')
+    rep(c, ('uk', 'ua'), 'В окремій замітці РБК-Україна цитує:', 'РБК-Україна також цитує:')
+    rep(c, ('en', 'ua'), 'In a separate item RBC-Ukraine quotes him:', 'RBC-Ukraine also quotes him:')
+    rep(c, ('en', 'ua'), 'although some of them are about to expire', 'though some are about to expire')
+    add(c, 'ua', 'Из того же интервью РБК-Украина передает, что Украина ведет переговоры с Турцией, Египтом и Индией о безопасном проходе судов под их флагами для экспорта зерна, но Россия, по словам Зеленского, против.',
+        'З того ж інтерв’ю РБК-Україна передає, що Україна веде переговори з Туреччиною, Єгиптом та Індією про безпечний прохід суден під їхніми прапорами для експорту зерна, але Росія, за словами Зеленського, проти.',
+        'In the same interview, RBC-Ukraine reports, Ukraine is negotiating with Turkey, Egypt and India on safe passage for ships under their flags to export grain, but Russia, according to Zelensky, is against it.',
+        [(11990, 'Україна веде переговори з Туреччиною, Єгиптом та Індією про відновлення цивільного судноплавства в Чорному морі.'),
+         (11990, 'Одне судно йде до нашого порту, інше - до російського, і ми погоджуємося не атакувати жодне з них'),
+         (11990, 'Однак Росія, за його словами, проти цього плану')])
+
+@ext('1018-front-claims', [11961])
+def _(c):
+    pass   # TASSr 11961: headline-only repeat of Stepanyan on clearing the Dobropillia mines; extra coverage id only (en near 1400)
+
+@ext('1018-russian-side-casualties', [11968])
+def _(c):
+    pass   # TASS EN 11968: same DPR daily report as RIA 11749 (1 civilian killed, truck, car, two facilities); extra coverage id only (en.ru 1390)
+
+apply(['c18b.json', 'c18c.json', 'c18d.json', 'c19a.json'])

@@ -1,0 +1,44 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+from extlib import ext, apply
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+cards = []
+card = lambda *a: cards.append(C(*a))
+# ---------------- backlog run 22 Oct 01:00, third batch ----------------
+card('1021-korotych-kremenchuk-drone-strikes', [14430, 14435, 14185, 14596, 14716],
+ 'Ночные удары дронов: двое пожилых людей погибли в Коротыче Харьковской области, поврежден корпус университета в Кременчуге',
+ 'Коротыч, Харьковская область — Кременчуг', 'kharkiv',
+ ['одна из групп не освещает', 'расхождение: числа пострадавших'],
+ None,
+ S("«Украинская правда» со ссылкой на главу Харьковской ОВА Олега Синегубова сообщает, что ночью 21 октября российские беспилотники атаковали поселок Коротыч Харьковского района: погибли 81-летняя женщина и 83-летний мужчина, еще 11 человек, среди них 2-месячный мальчик и 8-летняя девочка, получили острую реакцию на стресс, повреждены 13 частных домов. В Кременчуге дрон попал в учебный корпус Кременчугского национального университета: по данным ГСЧС, травмированы двое и госпитализирована 16-летняя девушка, глава Полтавской ОВА говорит о двух травмированных. Ректор Денис Загирняк в интервью «Общественному» сказал, что при ударе «Герани» никто не пострадал, сильно испугалась только вахтерша.",
+   (14430, 'Внаслідок атаки загинули 81-річна жінка та 83-річний чоловік'),
+   (14435, 'Також постраждала 16-річна дитина, яку госпіталізували'),
+   (14185, 'пощастило нам, тому що ніхто не постраждав, лише дуже сильно злякалася вахтерка')),
+ S("The Kyiv Independent со ссылкой на Синегубова пишет о двух погибших пожилых жителях Коротыча и 11 людях с острой реакцией на стресс, а также о попадании дрона в корпус университета в Кременчуге поздно вечером 20 октября: пожар, двое пострадавших, в том числе 16-летняя, госпитализированная с контузией. DW в обзоре ночной атаки пишет, что в Коротыче «пострадали еще 11 человек, в том числе двое детей», не уточняя, что речь идет о реакции на стресс.",
+   (14596, 'An 81-year-old woman and an 83-year-old man were killed when Russian drones attacked the village of Korotych'),
+   (14716, 'погибли двое пожилых людей и пострадали еще 11 человек, в том числе двое детей')),
+ "Российские источники в подборке эти удары не освещают. Данные о погибших в Коротыче совпадают, но DW называет 11 человек пострадавшими, тогда как глава ОВА, «Украинская правда» и Kyiv Independent говорят об острой реакции на стресс. О пострадавших в Кременчуге сведения расходятся: ГСЧС — двое травмированных и госпитализированная 16-летняя, глава области — двое травмированных, ректор университета — никто не пострадал.",
+ 'medium', 'Число пострадавших в Кременчуге различается у ГСЧС, главы области и ректора университета.', False,
+ ('Нічні удари дронів: двоє літніх людей загинули в Коротичі на Харківщині, пошкоджено корпус університету в Кременчуці',
+  'Коротич, Харківська область — Кременчук',
+  'Російські джерела в добірці ці удари не висвітлюють. Дані про загиблих у Коротичі збігаються, але DW називає 11 людей постраждалими, тоді як голова ОВА, «Українська правда» і Kyiv Independent говорять про гостру реакцію на стрес. Відомості про постраждалих у Кременчуці розходяться: ДСНС — двоє травмованих і госпіталізована 16-річна, голова області — двоє травмованих, ректор університету — ніхто не постраждав.',
+  None,
+  '«Українська правда» з посиланням на голову Харківської ОВА Олега Синєгубова повідомляє, що вночі 21 жовтня російські безпілотники атакували селище Коротич Харківського району: загинули 81-річна жінка та 83-річний чоловік, ще 11 людей, серед них 2-місячний хлопчик і 8-річна дівчинка, зазнали гострої реакції на стрес, пошкоджено 13 приватних будинків. У Кременчуці дрон влучив у навчальний корпус Кременчуцького національного університету: за даними ДСНС, травмовані двоє і госпіталізована 16-річна дівчина, голова Полтавської ОВА говорить про двох травмованих. Ректор Денис Загірняк в інтерв’ю «Суспільному» сказав, що під час удару «Герані» ніхто не постраждав, дуже злякалася лише вахтерка.',
+  'The Kyiv Independent з посиланням на Синєгубова пише про двох загиблих літніх мешканців Коротича і 11 людей із гострою реакцією на стрес, а також про влучання дрона в корпус університету в Кременчуці пізно ввечері 20 жовтня: пожежа, двоє постраждалих, зокрема 16-річна, госпіталізована з контузією. DW в огляді нічної атаки пише, що в Коротичі «постраждали ще 11 людей, зокрема двоє дітей», не уточнюючи, що йдеться про реакцію на стрес.'),
+ ('Overnight drone strikes: two elderly people killed in Korotych, Kharkiv region, university building damaged in Kremenchuk',
+  'Korotych, Kharkiv region — Kremenchuk',
+  'Russian sources in the selection do not cover these strikes. The figures for those killed in Korotych agree, but DW calls 11 people injured, while the regional governor, Ukrainska Pravda and the Kyiv Independent speak of acute stress reactions. Accounts of the injured in Kremenchuk differ: the emergency service reports two injured and a hospitalised 16-year-old, the regional governor two injured, the university rector no one hurt.',
+  None,
+  'Ukrainska Pravda, citing Kharkiv regional governor Oleh Syniehubov, reports that on the night of 21 October Russian drones attacked the village of Korotych in Kharkiv district: an 81-year-old woman and an 83-year-old man were killed, another 11 people, among them a 2-month-old boy and an 8-year-old girl, suffered acute stress reactions, and 13 private houses were damaged. In Kremenchuk a drone hit an academic building of Kremenchuk National University: according to the emergency service, two people were injured and a 16-year-old girl was hospitalised, while the Poltava regional governor speaks of two injured. Rector Denys Zahirniak told Suspilne that no one was hurt in the Geran strike, only the doorkeeper was badly frightened.',
+  'The Kyiv Independent, citing Syniehubov, writes about two elderly residents of Korotych killed and 11 people with acute stress reactions, and about a drone hitting a university building in Kremenchuk late on 20 October: a fire, two injured, including a 16-year-old hospitalised with a concussion. DW, in its round-up of the overnight attack, writes that in Korotych "another 11 people were injured, including two children", without specifying that these were stress reactions.'))
+
+json.dump(cards, open(OUT + 'c21e.json', 'w'), ensure_ascii=False, indent=1)
+print('c21e', len(cards))
+
+# ---- id-only extensions of Oct 19 cards (backlog ids, same events) ----
+@ext('1019-energy-strikes-west-centre', [13699, 14027, 14797])
+def _(c): pass
+@ext('1019-nova-vodolaha-park-strike', [14355])
+def _(c): pass
+apply(['c19f.json', 'c19k.json'])

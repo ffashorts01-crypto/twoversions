@@ -1,0 +1,48 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from extlib import add, setd, ext, apply
+
+# ---------------- hourly run 02:00 Oct 19 (ids 11882-11915): no new cards, extensions of Oct 18 cards ----------------
+# Articles dated Oct 19 00:41-01:54 (Berlin) are follow-ups of Oct 18 events; no new Oct 19 event covered by 2+ groups. See SKIPPED.md
+
+@ext('1018-kyiv-ballistic-evening', [11910])
+def _(c):
+    add(c, 'ind', 'Позже DW со ссылкой на Telegram Кличко сообщила, что погибла 21-летняя девушка, а ранены трое жителей; по данным DW, медцентр находится в Деснянском районе, нежилое здание — в Днепровском.',
+        'Пізніше DW з посиланням на Telegram Кличка повідомила, що загинула 21-річна дівчина, а поранено трьох мешканців; за даними DW, медцентр розташований у Деснянському районі, нежитлова будівля — у Дніпровському.',
+        'Later DW, citing Klitschko\'s Telegram, reported that a 21-year-old woman was killed and three residents injured; according to DW, the medical centre is in Desnianskyi district and the non-residential building in Dniprovskyi.',
+        [(11910, 'Погибла 21-летняя девушка, трое жителей ранены, сообщил в Telegram мэр столицы Виталий Кличко'),
+         (11910, 'в Деснянском районе Киева произошло попадание, предварительно, в здание медицинского центра, в Днепровском районе - в нежилое здание')])
+    c['uncertainty_reason'] = 'Данные предварительные: число раненых в сообщениях расходится (двое по данным КГВА в пересказе РБК-Украина, трое по словам Кличко в пересказе DW), масштабы разрушений неизвестны.'
+    setd(c, 'Российские источники сообщают только о взрывах и тревоге, украинские и независимые — о баллистической атаке и попаданиях в медцентр и нежилое здание. Районы указываются по-разному: «Украинская правда», РБК-Украина, Kyiv Independent и DW относят медцентр к Деснянскому району, Суспильне — к Днепровскому. Данные о пострадавших расходятся: РБК-Украина со ссылкой на КГВА пишет о погибшем и двух пострадавших, DW со ссылкой на Кличко — о погибшей 21-летней девушке и троих раненых. Российские источники в выборке о жертвах не пишут.',
+         'Російські джерела повідомляють лише про вибухи й тривогу, українські та незалежні — про балістичну атаку і влучання в медцентр та нежитлову будівлю. Райони вказують по-різному: «Українська правда», РБК-Україна, Kyiv Independent і DW відносять медцентр до Деснянського району, Суспільне — до Дніпровського. Дані про постраждалих різняться: РБК-Україна з посиланням на КМВА пише про загиблу людину і двох постраждалих, DW з посиланням на Кличка — про загиблу 21-річну дівчину і трьох поранених. Російські джерела у вибірці про жертви не пишуть.',
+         'Russian sources report only explosions and the alert, Ukrainian and independent ones a ballistic missile attack and hits on a medical centre and a non-residential building. The districts are named differently: Ukrainska Pravda, RBC-Ukraine, the Kyiv Independent and DW place the medical centre in Desnianskyi district, Suspilne in Dniprovskyi. Casualty figures differ: RBC-Ukraine, citing the Kyiv City Military Administration, reports one person killed and two injured, DW, citing Klitschko, a 21-year-old woman killed and three injured. Russian sources in the sample do not mention casualties.')
+
+@ext('1018-zelensky-bloomberg-capitulation', [11887, 11904])
+def _(c):
+    add(c, 'ru', 'Позже РИА со ссылкой на Economist написало, что ответные удары Зеленского и открытая критика Трампа могут ускорить окончательное отдаление от Америки и ослабить позиции Украины на поле боя.',
+        'Пізніше РИА з посиланням на Economist написало, що відповідні удари Зеленського і відкрита критика Трампа можуть прискорити остаточне віддалення від Америки та послабити позиції України на полі бою.',
+        'RIA later wrote, citing the Economist, that Zelensky\'s counterpunches and open criticism of Trump could hasten a final estrangement from America and weaken Ukraine\'s position on the battlefield.',
+        [(11887, 'открытая критика в адрес Трампа могут ускорить окончательное отдаление от Америки и в конечном итоге ослабить позиции Украины на поле боя')])
+    add(c, 'ua', 'Суспильне добавляет, что на вопрос, кто отдал приказ замедлить Starlink, Зеленский ответил: «власть, Белый дом», сославшись на неназванные источники; по его словам, в Украине терминал перестает работать при движении быстрее 161 км/ч, а за границей такого ограничения нет.',
+        'Суспільне додає, що на запитання, хто віддав наказ сповільнити Starlink, Зеленський відповів: «влада, Білий дім», пославшись на неназвані джерела; за його словами, в Україні термінал перестає працювати під час руху швидше за 161 км/год, а за кордоном такого обмеження немає.',
+        'Suspilne adds that when asked who ordered Starlink to be slowed down, Zelensky answered "the authorities, the White House", citing unnamed sources; according to him, in Ukraine a terminal stops working when moving faster than 161 km/h, while there is no such restriction abroad.',
+        [(11904, 'На запитання, хто віддав такий наказ, Зеленський відповів, що це «влада, Білий дім».'),
+         (11904, 'Зеленський стверджує, що в Україні Starlink перестає працювати, якщо термінал рухається швидше за 161 кілометр на годину, тоді як за кордоном такого обмеження немає.')])
+
+@ext('1018-trump-truth-social-zelensky', [11893, 11909, 11915])
+def _(c):
+    add(c, 'ind', 'The Guardian в утренней сводке приводит пост Трампа о том, что его решение по России «очень простое», и напоминает, что в пятницу он подписал указ, приостановивший новый масштабный пакет санкций против российской экономики.',
+        'The Guardian у ранковому зведенні наводить допис Трампа про те, що його рішення щодо Росії «дуже просте», і нагадує, що в п’ятницю він підписав указ, який призупинив новий масштабний пакет санкцій проти російської економіки.',
+        'In its morning briefing the Guardian quotes Trump\'s post that his decision on Russia is "a very simple one" and recalls that on Friday he signed an executive order putting on hold a sweeping new sanctions package targeting the Russian economy.',
+        [(11909, 'My decision on Russia is a very simple one.'),
+         (11909, 'signed an executive order on Friday putting on hold a sweeping new sanctions package targeting the Russian economy')])
+
+@ext('1018-front-claims', [11894, 11898])
+def _(c):
+    add(c, 'ru', 'Позже Степанян заявил ТАСС, что морпехи рассекли гарнизон ВСУ перед штурмом и тайно закрепились не только на окраинах, но и в центре Доброполья, а их разведка действовала в форме ВСУ; по его словам, уничтожена существенная часть добропольской группировки украинских сил.',
+        'Пізніше Степанян заявив ТАСС, що морпіхи розсікли гарнізон ЗСУ перед штурмом і таємно закріпилися не лише на околицях, а й у центрі Добропілля, а їхня розвідка діяла у формі ЗСУ; за його словами, знищено значну частину добропільського угруповання українських сил.',
+        'Stepanyan later told TASS that the marines had split the Ukrainian garrison before the assault and secretly dug in not only on the outskirts but also in the centre of Dobropillia, with their reconnaissance operating in Ukrainian uniforms; according to him, a significant part of the Ukrainian Dobropillia grouping has been destroyed.',
+        [(11894, 'Российские бойцы тайно закрепились не только на окраинах, но также в центре города'),
+         (11898, 'Российские военные в процессе уничтожили существенную часть добропольской группировки украинских сил')])
+
+apply(['c18b.json', 'c18d.json'])

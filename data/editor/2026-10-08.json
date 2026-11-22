@@ -1,0 +1,1548 @@
+[
+ {
+  "key": "1008-kramatorsk-buses",
+  "ids": [
+   9836,
+   7703,
+   7707,
+   7713,
+   7728,
+   6878,
+   9531,
+   9536,
+   9246,
+   9250,
+   8436,
+   8449,
+   9120
+  ],
+  "title": "Удар по рейсовым автобусам в Краматорске: более 30 погибших",
+  "place": "Краматорск, Донецкая область",
+  "region": "donetsk",
+  "tags": [
+   "одна из групп не освещает",
+   "расхождение: числа погибших"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Донецкая областная прокуратура, по данным Українська правда, сообщила, что 8 октября в 10:00 российские войска нанесли удар по Краматорску и в эпицентре оказались два рейсовых автобуса; число погибших выросло с 12 до 30, пострадали 18. Глава Донецкой ОВА Вадим Филашкин (РБК-Украина) позже сообщил о 33 погибших. Еще три человека погибли в поселке Беленькое, а вечером, по данным горсовета, дрон убил двоих в автомобиле — всего за день в Краматорске погибли 32 человека. Еврокомиссия заявила, что исполнители и соучастники должны понести ответственность.",
+   "quotes": [
+    {
+     "id": 7703,
+     "text": "8 жовтня 2026 року о 10:00 російські війська завдали удару по Краматорську. В епіцентрі ураження опинились два рейсових автобуса"
+    },
+    {
+     "id": 9836,
+     "text": "33 человека погибли, еще 18 получили ранения в результате российского удара по рейсовому автобусу в Краматорске"
+    },
+    {
+     "id": 7713,
+     "text": "Європейська комісія засудила російську атаку на цивільних у Краматорську"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW, Al Jazeera и The Guardian со ссылкой на прокуратуру пишут как минимум о 30 погибших и 18 раненых; DW уточняет, что автобусы, по данным прокуратуры, вероятно, были поражены управляемыми авиабомбами УМПБ Д-30СН. Kyiv Independent со ссылкой на ГСЧС пишет о 33 погибших и 22 раненых. The Guardian называет удар одним из самых тяжелых для мирных жителей в этом году.",
+   "quotes": [
+    {
+     "id": 9250,
+     "text": "автобусы, вероятно, были атакованы управляемыми авиабомбами УМПБ Д-30 СН"
+    },
+    {
+     "id": 8436,
+     "text": "A Russian glide bomb strike on two minibuses in Kramatorsk killed 33 people on the morning of Oct. 8"
+    },
+    {
+     "id": 9120,
+     "text": "in one of the worst attacks by Moscow on Ukrainian civilians this year"
+    }
+   ]
+  },
+  "diverge": "Число жертв различается в зависимости от источника и времени: 30 погибших и 18 раненых (прокуратура), 33 погибших (ГСЧС и Филашкин), 22 раненых (Kyiv Independent), 32 погибших в городе за день (горсовет, с учетом других ударов). Оружие описано по-разному: управляемые авиабомбы (прокуратура, DW, Kyiv Independent) и «ракетный удар» (The Guardian). Российские источники в выборке удар по Краматорску не упоминают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Удар по рейсових автобусах у Краматорську: понад 30 загиблих",
+   "p": "Краматорськ, Донецька область",
+   "d": "Кількість жертв різниться залежно від джерела і часу: 30 загиблих і 18 поранених (прокуратура), 33 загиблих (ДСНС і Філашкін), 22 поранених (Kyiv Independent), 32 загиблих у місті за день (міськрада, з урахуванням інших ударів). Зброю описано по-різному: керовані авіабомби (прокуратура, DW, Kyiv Independent) і «ракетний удар» (The Guardian). Російські джерела у вибірці удар по Краматорську не згадують.",
+   "ru": null,
+   "ua": "Донецька обласна прокуратура, за даними Української правди, повідомила, що 8 жовтня о 10:00 російські війська завдали удару по Краматорську і в епіцентрі опинилися два рейсові автобуси; кількість загиблих зросла з 12 до 30, постраждали 18. Голова Донецької ОВА Вадим Філашкін (РБК-Україна) пізніше повідомив про 33 загиблих. Ще троє людей загинули в селищі Біленьке, а ввечері, за даними міськради, дрон убив двох людей в автомобілі — загалом за день у Краматорську загинули 32 людини. Єврокомісія заявила, що виконавці та співучасники мають понести відповідальність.",
+   "ind": "DW, Al Jazeera і The Guardian з посиланням на прокуратуру пишуть щонайменше про 30 загиблих і 18 поранених; DW уточнює, що автобуси, за даними прокуратури, ймовірно, уражено керованими авіабомбами УМПБ Д-30СН. Kyiv Independent з посиланням на ДСНС пише про 33 загиблих і 22 поранених. The Guardian називає удар одним із найважчих для цивільних цього року."
+  },
+  "en": {
+   "t": "Strike on passenger buses in Kramatorsk: more than 30 killed",
+   "p": "Kramatorsk, Donetsk Oblast",
+   "d": "Casualty figures vary by source and time: 30 dead and 18 injured (prosecutors), 33 dead (State Emergency Service and Filashkin), 22 injured (Kyiv Independent), 32 dead in the city over the day (city council, including other strikes). The weapon is described differently: guided aerial bombs (prosecutors, DW, Kyiv Independent) and a \"missile strike\" (The Guardian). Russian sources in the sample do not mention the strike on Kramatorsk.",
+   "ru": null,
+   "ua": "The Donetsk regional prosecutor's office, according to Ukrainska Pravda, said that on 8 October at 10:00 Russian forces struck Kramatorsk and two passenger buses were at the epicentre; the death toll rose from 12 to 30, with 18 injured. Donetsk governor Vadym Filashkin (RBC-Ukraine) later reported 33 dead. Three more people were killed in the village of Bilenke, and in the evening, according to the city council, a drone killed two people in a car, bringing the day's toll in Kramatorsk to 32. The European Commission said perpetrators and accomplices must be held accountable.",
+   "ind": "DW, Al Jazeera and The Guardian, citing prosecutors, report at least 30 dead and 18 injured; DW adds that, according to prosecutors, the buses were probably hit by UMPB D-30SN guided bombs. Kyiv Independent, citing the State Emergency Service, reports 33 dead and 22 injured. The Guardian calls it one of the worst attacks on civilians this year."
+  }
+ },
+ {
+  "key": "1008-kyiv-drone-attacks",
+  "ids": [
+   9825,
+   7698,
+   9828,
+   7699,
+   7725,
+   8438
+  ],
+  "title": "Атаки дронов на Киев 8 октября: четверо погибших, попадание в магазин",
+  "place": "Киев: Соломенский, Голосеевский и Шевченковский районы",
+  "region": "kyiv",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Мэр Киева Виталий Кличко сообщил, что утром 8 октября обломки дронов упали в Голосеевском районе, а в Соломенском районе беспилотник попал в 4-этажное здание магазина: погибли двое, двое пострадали; в Шевченковском районе горели автомобили. К вечеру, по данным Кличко и КГВА (Українська правда), число погибших за сутки достигло 4, пострадавших — 19.",
+   "quotes": [
+    {
+     "id": 7699,
+     "text": "У Соломʼянському районі влучання БпЛА в 4-поверхову будівлю магазину."
+    },
+    {
+     "id": 7725,
+     "text": "У столиці від початку доби 8 жовтня внаслідок російських атак загинули 4 людей, ще 19 постраждали."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent со ссылкой на городские власти пишет о четырех погибших и не менее чем 19 раненых, о попадании дрона в четырехэтажное коммерческое здание в Соломенском районе и о перебоях со светом и водой.",
+   "quotes": [
+    {
+     "id": 8438,
+     "text": "Russian drone strikes on Oct. 8 have killed four people and injured at least 19 in Kyiv, the city's authorities said."
+    }
+   ]
+  },
+  "diverge": "Украинские и независимые источники совпадают в итоговых цифрах (4 погибших, 19 пострадавших), промежуточные данные в течение дня росли. Российские источники в выборке об ударах по Киеву в этот день пишут только в связи с энергетикой.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Атаки дронів на Київ 8 жовтня: четверо загиблих, влучання в магазин",
+   "p": "Київ: Солом’янський, Голосіївський і Шевченківський райони",
+   "d": "Українські та незалежні джерела збігаються в підсумкових цифрах (4 загиблих, 19 постраждалих), проміжні дані протягом дня зростали. Російські джерела у вибірці про удари по Києву цього дня пишуть лише у зв’язку з енергетикою.",
+   "ru": null,
+   "ua": "Мер Києва Віталій Кличко повідомив, що вранці 8 жовтня уламки дронів упали в Голосіївському районі, а в Солом’янському районі безпілотник влучив у 4-поверхову будівлю магазину: двоє загинули, двоє постраждали; у Шевченківському районі горіли автомобілі. До вечора, за даними Кличка і КМВА (Українська правда), кількість загиблих за добу сягнула 4, постраждалих — 19.",
+   "ind": "Kyiv Independent з посиланням на міську владу пише про чотирьох загиблих і щонайменше 19 поранених, про влучання дрона в чотириповерхову комерційну будівлю в Солом’янському районі та про перебої зі світлом і водою."
+  },
+  "en": {
+   "t": "Drone attacks on Kyiv on 8 October: four killed, shop hit",
+   "p": "Kyiv: Solomianskyi, Holosiivskyi and Shevchenkivskyi districts",
+   "d": "Ukrainian and independent sources agree on the final figures (4 dead, 19 injured); interim figures rose through the day. Russian sources in the sample mention strikes on Kyiv that day only in connection with energy.",
+   "ru": null,
+   "ua": "Kyiv Mayor Vitali Klitschko said that on the morning of 8 October drone debris fell in Holosiivskyi district, and in Solomianskyi district a drone hit a 4-storey shop building, killing two and injuring two; cars were burning in Shevchenkivskyi district. By evening, according to Klitschko and the city military administration (Ukrainska Pravda), the day's toll had reached 4 dead and 19 injured.",
+   "ind": "Kyiv Independent, citing city authorities, reports four dead and at least 19 injured, a drone hitting a four-storey commercial building in Solomianskyi district, and disruptions to power and water."
+  }
+ },
+ {
+  "key": "1008-kyiv-energy-blackout",
+  "ids": [
+   4456,
+   4462,
+   4449,
+   9857,
+   9855,
+   9824,
+   9837,
+   8448
+  ],
+  "title": "Удар по энергообъекту, важному для Киева: отключения света, остановка метро",
+  "place": "Киев",
+  "region": "kyiv",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "РИА Новости цитирует министра энергетики Украины Дениса Шмыгаля о «повреждении» важного для Киева энергообъекта и сообщает со ссылкой на «Киевводоканал» о снижении давления воды в нескольких районах правобережья. Со ссылкой на AFP агентство пишет, что Кличко призвал жителей временно выехать из города, хотя, по его словам, речи об эвакуации нет.",
+   "quotes": [
+    {
+     "id": 4456,
+     "text": "Произошла атака на один из важных для Киева энергообъектов"
+    },
+    {
+     "id": 4449,
+     "text": "Мэр Киева Виталий Кличко призвал жителей украинской столицы временно выехать из города, сообщает агентство AFP."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина со ссылкой на Шмыгаля и «Укрэнерго» пишет, что Россия ударила по важному для Киева энергообъекту и в части районов начались перебои со светом; атака российских дронов продолжалась. Из-за снижения напряжения в метрополитене остановили поезда и эскалаторы, на правом берегу начались перебои с водой.",
+   "quotes": [
+    {
+     "id": 9857,
+     "text": "Российские оккупанты в четверг, 8 октября, ударили по важному для Киева энергетическому объекту."
+    },
+    {
+     "id": 9855,
+     "text": "Киевский метрополитен остановил все поезда и работу эскалаторов из-за снижения напряжения."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пишет, что атака на энергетику погрузила Киев, где живут более 3 млн человек, почти в полную темноту и нарушила работу метро и водоснабжения.",
+   "quotes": [
+    {
+     "id": 8448,
+     "text": "The Russian attack on Ukrainian energy infrastructure on Oct. 8 has caused widespread power outages across the Ukrainian capital, Kyiv, home to over 3 million people."
+    }
+   ]
+  },
+  "diverge": "Все группы цитируют Шмыгаля; РИА Новости при этом говорит о «повреждении» объекта, не называя, кто его атаковал, а украинские и независимые СМИ прямо пишут о российском ударе. Слова Кличко о временном выезде РИА приводит со ссылкой на AFP; в украинских материалах выборки этот призыв не упоминается.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Удар по енергооб’єкту, важливому для Києва: відключення світла, зупинка метро",
+   "p": "Київ",
+   "d": "Усі групи цитують Шмигаля; РІА Новини при цьому говорить про «пошкодження» об’єкта, не називаючи, хто його атакував, а українські й незалежні ЗМІ прямо пишуть про російський удар. Слова Кличка про тимчасовий виїзд РІА наводить із посиланням на AFP; в українських матеріалах вибірки цей заклик не згадується.",
+   "ru": "РІА Новини цитує міністра енергетики України Дениса Шмигаля про «пошкодження» важливого для Києва енергооб’єкта і повідомляє з посиланням на «Київводоканал» про зниження тиску води в кількох районах правобережжя. З посиланням на AFP агенція пише, що Кличко закликав мешканців тимчасово виїхати з міста, хоча, за його словами, про евакуацію не йдеться.",
+   "ua": "РБК-Україна з посиланням на Шмигаля та «Укренерго» пише, що Росія вдарила по важливому для Києва енергооб’єкту і в частині районів почалися перебої зі світлом; атака російських дронів тривала. Через зниження напруги в метрополітені зупинили поїзди та ескалатори, на правому березі почалися перебої з водою.",
+   "ind": "Kyiv Independent пише, що атака на енергетику занурила Київ, де живуть понад 3 млн людей, майже в повну темряву і порушила роботу метро та водопостачання."
+  },
+  "en": {
+   "t": "Strike on an energy facility key to Kyiv: power cuts, metro halted",
+   "p": "Kyiv",
+   "d": "All groups quote Shmyhal; RIA Novosti, however, speaks of \"damage\" to the facility without saying who attacked it, while Ukrainian and independent media explicitly report a Russian strike. RIA cites AFP for Klitschko's call to leave temporarily; the Ukrainian materials in the sample do not mention this call.",
+   "ru": "RIA Novosti quotes Ukrainian Energy Minister Denys Shmyhal on \"damage\" to an energy facility important for Kyiv and, citing Kyivvodokanal, reports lower water pressure in several right-bank districts. Citing AFP, the agency writes that Klitschko urged residents to leave the city temporarily, although, he said, there is no question of evacuating it.",
+   "ua": "RBC-Ukraine, citing Shmyhal and Ukrenergo, writes that Russia struck an energy facility important for Kyiv and power cuts began in some districts while the Russian drone attack continued. Because of a voltage drop, metro trains and escalators were stopped, and water supply was disrupted on the right bank.",
+   "ind": "Kyiv Independent writes that the attack on energy infrastructure plunged Kyiv, home to more than 3 million people, into near-total darkness and disrupted the metro and water supply."
+  }
+ },
+ {
+  "key": "1008-yandex-sasovo",
+  "ids": [
+   5447,
+   9809,
+   9819,
+   7686,
+   9850,
+   9862,
+   6876,
+   8431,
+   9263,
+   8453
+  ],
+  "title": "Удар дронов по дата-центру «Яндекса» в Сасово",
+  "place": "Сасово, Рязанская область",
+  "region": "russia-other",
+  "tags": [
+   "расхождение: характер объекта"
+  ],
+  "ru": {
+   "summary": "ТАСС со ссылкой на заявление «Яндекса» сообщает, что атака беспилотников вызвала пожар в дата-центре компании в Сасово Рязанской области; пострадавших нет, работа дата-центра полностью приостановлена, часть сервисов может быть недоступна.",
+   "quotes": [
+    {
+     "id": 5447,
+     "text": "The data center’s operations have been fully suspended and some Yandex services may be unavailable to users"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Українська правда и РБК-Украина со ссылкой на Astra и OSINT-каналы пишут, что пожар возник на территории станкостроительного завода «Саста», важного для ВПК России, где расположен дата-центр «Яндекса». Зеленский, по данным Суспільне, фактически подтвердил удар: «Мы всегда отвечаем зеркально… они били и бьют по нашим дата-центрам».",
+   "quotes": [
+    {
+     "id": 7686,
+     "text": "спалахнула пожежа на території заводу \"Саста\", де розташований дата-центр ТОВ \"Яндекс ДЦ\", і який є важливим для ВПК РФ"
+    },
+    {
+     "id": 6876,
+     "text": "Ми завжди відповідаємо дзеркально. Ви всі знаєте, вони били і б'ють по наших дата-центрах. Ми відповіли їм"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW пишет, что дата-центр полностью приостановил работу, а «Яндекс» пока не может подтвердить возможность восстановления оборудования. Kyiv Independent со ссылкой на The Moscow Times сообщает о масштабных сбоях в российском интернете и приводит слова Зеленского об ответе «зеркально».",
+   "quotes": [
+    {
+     "id": 9263,
+     "text": "Дата-центр \"Яндекса\" в Сасово Рязанской области полностью приостановил работу после атаки украинских беспилотников в ночь на 8 октября."
+    },
+    {
+     "id": 8453,
+     "text": "We always respond in kind."
+    }
+   ]
+  },
+  "diverge": "ТАСС и «Яндекс» описывают объект как дата-центр гражданской компании; украинские СМИ со ссылкой на OSINT подчеркивают, что он расположен на территории завода «Саста», важного для ВПК. Зеленский представляет удар как зеркальный ответ на российские атаки по украинским дата-центрам.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Удар дронів по дата-центру «Яндекса» в Сасові",
+   "p": "Сасово, Рязанська область",
+   "d": "ТАСС і «Яндекс» описують об’єкт як дата-центр цивільної компанії; українські ЗМІ з посиланням на OSINT наголошують, що він розташований на території заводу «Саста», важливого для ОПК. Зеленський подає удар як дзеркальну відповідь на російські атаки по українських дата-центрах.",
+   "ru": "ТАСС із посиланням на заяву «Яндекса» повідомляє, що атака безпілотників спричинила пожежу в дата-центрі компанії в Сасові Рязанської області; постраждалих немає, роботу дата-центру повністю призупинено, частина сервісів може бути недоступна.",
+   "ua": "Українська правда і РБК-Україна з посиланням на Astra та OSINT-канали пишуть, що пожежа виникла на території верстатобудівного заводу «Саста», важливого для ОПК Росії, де розташований дата-центр «Яндекса». Зеленський, за даними Суспільного, фактично підтвердив удар: «Ми завжди відповідаємо дзеркально… вони били і б’ють по наших дата-центрах».",
+   "ind": "DW пише, що дата-центр повністю призупинив роботу, а «Яндекс» поки не може підтвердити можливість відновлення обладнання. Kyiv Independent з посиланням на The Moscow Times повідомляє про масштабні збої в російському інтернеті й наводить слова Зеленського про «дзеркальну» відповідь."
+  },
+  "en": {
+   "t": "Drone strike on a Yandex data centre in Sasovo",
+   "p": "Sasovo, Ryazan Oblast",
+   "d": "TASS and Yandex describe the site as a civilian company's data centre; Ukrainian media, citing OSINT, stress that it is located on the grounds of the Sasta plant, which is important for the defence industry. Zelensky presents the strike as a mirror response to Russian attacks on Ukrainian data centres.",
+   "ru": "TASS, citing a Yandex statement, reports that a drone attack caused a fire at the company's data centre in Sasovo, Ryazan region; there were no casualties, the data centre's operations have been fully suspended and some services may be unavailable.",
+   "ua": "Ukrainska Pravda and RBC-Ukraine, citing Astra and OSINT channels, write that the fire broke out on the grounds of the Sasta machine-tool plant, important for Russia's defence industry, where the Yandex data centre is located. Zelensky, according to Suspilne, effectively confirmed the strike: \"We always respond in kind... they have struck and are striking our data centres.\"",
+   "ind": "DW writes that the data centre has fully suspended operations and that Yandex cannot yet confirm whether the equipment can be restored. Kyiv Independent, citing The Moscow Times, reports widespread outages in the Russian internet and quotes Zelensky on responding \"in kind\"."
+  }
+ },
+ {
+  "key": "1008-salavat-refinery",
+  "ids": [
+   10253,
+   6847,
+   7702,
+   7689,
+   6835,
+   9244,
+   8434
+  ],
+  "title": "Удар по нефтехимическому комплексу «Газпром нефтехим Салават»",
+  "place": "Салават, Башкортостан",
+  "region": "russia-other",
+  "tags": [
+   "расхождение: последствия"
+  ],
+  "ru": {
+   "summary": "Мэр Салавата Марат Загидуллин, по данным Интерфакса, сообщил, что утром атака беспилотников отражена: обломки нескольких дронов упали в промзоне, возникло возгорание, но «предприятие продолжает работать»; погибших и пострадавших нет.",
+   "quotes": [
+    {
+     "id": 10253,
+     "text": "Обломки нескольких беспилотников упали в промзоне, возникло возгорание"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Генштаб ВСУ, по данным Суспільне и Українська правда, подтвердил поражение комплекса «Газпром нефтехим Салават», который «обеспечивает потребности российского войска»; на территории предприятия возник пожар, масштабы повреждений не уточняются.",
+   "quotes": [
+    {
+     "id": 6847,
+     "text": "Зазначається, що Сили оборони уразили підприємство, яке забезпечує потреби російського війська, 8 жовтня."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW со ссылкой на мониторинговые каналы и анализ Astra пишет, что пожар, вероятнее всего, произошел на территории «Газпром нефтехим Салават». Kyiv Independent со ссылкой на Генштаб сообщает о крупном пожаре на заводе.",
+   "quotes": [
+    {
+     "id": 9244,
+     "text": "пожар, вероятнее всего, произошел на территории \"Газпром нефтехим Салават\""
+    },
+    {
+     "id": 8434,
+     "text": "An overnight Ukrainian strike on the Gazprom Neftekhim Salavat oil refinery in Russia's Bashkortostan region caused a large blaze at the plant"
+    }
+   ]
+  },
+  "diverge": "Российские власти говорят об отраженной атаке и упавших в промзоне обломках, не называя предприятие и подчеркивая, что оно продолжает работать; украинская сторона и независимые СМИ пишут о поражении конкретного нефтехимического комплекса и крупном пожаре. Масштаб ущерба никто не уточняет.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Масштаб ущерба не установлен.",
+  "uk": {
+   "t": "Удар по нафтохімічному комплексу «Газпром нафтохім Салават»",
+   "p": "Салават, Башкортостан",
+   "d": "Російська влада говорить про відбиту атаку та уламки, що впали в промзоні, не називаючи підприємства і наголошуючи, що воно продовжує працювати; українська сторона й незалежні ЗМІ пишуть про ураження конкретного нафтохімічного комплексу і велику пожежу. Масштабу шкоди ніхто не уточнює.",
+   "ru": "Мер Салавата Марат Загідуллін, за даними Інтерфаксу, повідомив, що вранці атаку безпілотників відбито: уламки кількох дронів упали в промзоні, виникло загоряння, але «підприємство продовжує працювати»; загиблих і постраждалих немає.",
+   "ua": "Генштаб ЗСУ, за даними Суспільного та Української правди, підтвердив ураження комплексу «Газпром нафтохім Салават», який «забезпечує потреби російського війська»; на території підприємства виникла пожежа, масштаби пошкоджень не уточнюються.",
+   "ind": "DW з посиланням на моніторингові канали та аналіз Astra пише, що пожежа, найімовірніше, сталася на території «Газпром нафтохім Салават». Kyiv Independent з посиланням на Генштаб повідомляє про велику пожежу на заводі."
+  },
+  "en": {
+   "t": "Strike on the Gazprom Neftekhim Salavat petrochemical complex",
+   "p": "Salavat, Bashkortostan",
+   "d": "Russian authorities speak of a repelled attack and debris falling in an industrial zone, without naming the plant and stressing that it keeps working; the Ukrainian side and independent media report a hit on a specific petrochemical complex and a large fire. No one specifies the extent of the damage.",
+   "ru": "Salavat Mayor Marat Zagidullin, according to Interfax, said a drone attack was repelled in the morning: debris from several drones fell in an industrial zone and a fire broke out, but \"the enterprise continues to operate\"; there were no dead or injured.",
+   "ua": "Ukraine's General Staff, according to Suspilne and Ukrainska Pravda, confirmed hitting the Gazprom Neftekhim Salavat complex, which \"supplies the needs of the Russian army\"; a fire broke out at the site and the extent of the damage was not specified.",
+   "ind": "DW, citing monitoring channels and Astra's analysis, writes that the fire most likely occurred at Gazprom Neftekhim Salavat. Kyiv Independent, citing the General Staff, reports a large blaze at the plant."
+  }
+ },
+ {
+  "key": "1008-omsk-refinery",
+  "ids": [
+   10297,
+   4421,
+   10278,
+   10301,
+   9845,
+   9261,
+   8446
+  ],
+  "title": "Удар дронов по Омскому НПЗ",
+  "place": "Омск",
+  "region": "russia-other",
+  "tags": [
+   "расхождение: последствия"
+  ],
+  "ru": {
+   "summary": "Губернатор Омской области Виталий Хоценко, по данным Интерфакса и РИА Новости, сообщил, что силы ПВО сбили большинство беспилотников, но один «достиг северного промышленного узла» Омска; позже беспилотная опасность была отменена. Название предприятия не приводится.",
+   "quotes": [
+    {
+     "id": 10297,
+     "text": "Один беспилотник достиг северного промышленного узла"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина со ссылкой на Генштаб ВСУ, компанию Fire Point и канал Exilenova+ пишет, что украинские дроны прорвали ПВО и поразили Омский НПЗ — крупнейший нефтеперерабатывающий завод России, который горит после удара.",
+   "quotes": [
+    {
+     "id": 9845,
+     "text": "Ударные БПЛА Сил Обороны поразили Омский НПЗ."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW со ссылкой на Генштаб ВСУ пишет об ударе по Омскому НПЗ в 2500 км от границы с Украиной мощностью более 21 млн тонн нефти в год. Kyiv Independent приводит заявление Генштаба о праве Украины на самооборону по статье 51 Устава ООН.",
+   "quotes": [
+    {
+     "id": 9261,
+     "text": "Украинские дроны нанесли удар по Омскому НПЗ - в 2500 км от границы РФ с Украиной."
+    },
+    {
+     "id": 8446,
+     "text": "Ukraine's General Staff confirmed that its forces struck Russia's Omsk oil refinery in Russia's Omsk Oblast on Oct. 8."
+    }
+   ]
+  },
+  "diverge": "Российские власти признают, что один беспилотник долетел до «северного промышленного узла», но не называют НПЗ; украинская сторона и независимые СМИ пишут о поражении Омского НПЗ, крупнейшего в России. Данных о масштабе повреждений нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Масштаб ущерба не установлен.",
+  "uk": {
+   "t": "Удар дронів по Омському НПЗ",
+   "p": "Омськ",
+   "d": "Російська влада визнає, що один безпілотник долетів до «північного промислового вузла», але не називає НПЗ; українська сторона й незалежні ЗМІ пишуть про ураження Омського НПЗ, найбільшого в Росії. Даних про масштаб пошкоджень немає.",
+   "ru": "Губернатор Омської області Віталій Хоценко, за даними Інтерфаксу і РІА Новини, повідомив, що сили ППО збили більшість безпілотників, але один «досяг північного промислового вузла» Омська; пізніше безпілотну небезпеку скасували. Назву підприємства не наведено.",
+   "ua": "РБК-Україна з посиланням на Генштаб ЗСУ, компанію Fire Point і канал Exilenova+ пише, що українські дрони прорвали ППО і уразили Омський НПЗ — найбільший нафтопереробний завод Росії, який горить після удару.",
+   "ind": "DW з посиланням на Генштаб ЗСУ пише про удар по Омському НПЗ за 2500 км від кордону з Україною потужністю понад 21 млн тонн нафти на рік. Kyiv Independent наводить заяву Генштабу про право України на самооборону за статтею 51 Статуту ООН."
+  },
+  "en": {
+   "t": "Drone strike on the Omsk oil refinery",
+   "p": "Omsk",
+   "d": "Russian authorities acknowledge that one drone reached the \"northern industrial hub\" but do not name the refinery; the Ukrainian side and independent media report a hit on the Omsk refinery, Russia's largest. There is no information on the extent of the damage.",
+   "ru": "Omsk governor Vitaly Khotsenko, according to Interfax and RIA Novosti, said air defences shot down most of the drones, but one \"reached the northern industrial hub\" of Omsk; the drone alert was later lifted. The enterprise is not named.",
+   "ua": "RBC-Ukraine, citing Ukraine's General Staff, the company Fire Point and the Exilenova+ channel, writes that Ukrainian drones broke through air defences and hit the Omsk refinery, Russia's largest, which is burning after the strike.",
+   "ind": "DW, citing the General Staff, reports a strike on the Omsk refinery 2500 km from the border with Ukraine, with a capacity of over 21 million tonnes of oil a year. Kyiv Independent quotes the General Staff on Ukraine's right to self-defence under Article 51 of the UN Charter."
+  }
+ },
+ {
+  "key": "1008-drones-over-russia",
+  "ids": [
+   6440,
+   10250,
+   5456,
+   4429,
+   6452,
+   10316,
+   9818
+  ],
+  "title": "Минобороны РФ: 399 украинских беспилотников сбиты за ночь",
+  "place": "Регионы России и Черное море",
+  "region": "russia-other",
+  "tags": [
+   "единственный источник"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ сообщило, что с 20.00 мск 7 октября до 8.00 мск 8 октября силы ПВО перехватили и уничтожили 399 украинских беспилотников самолетного типа над Белгородской, Брянской, Рязанской, Самарской и многими другими областями, а днем — еще 113. ТАСС добавляет, что атака вызвала пожар в дата-центре «Яндекса» в Сасово.",
+   "quotes": [
+    {
+     "id": 6440,
+     "text": "дежурными силами ПВО перехвачены и уничтожены 399 украинских беспилотных летательных аппаратов самолетного типа"
+    },
+    {
+     "id": 4429,
+     "text": "Силы и средства ПВО за день перехватили и уничтожили 113 украинских БПЛА над российскими регионами"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина, пересказывая данные Минобороны РФ, пишет о новой массированной атаке Сил обороны Украины, начавшейся в 20:00 7 октября по московскому времени, и о взрывах в десятках российских областей и в оккупированном Крыму.",
+   "quotes": [
+    {
+     "id": 9818,
+     "text": "Минувшей ночью мощные взрывы гремели в десятках российских областей и в оккупированном Крыму"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Число сбитых дронов известно только из сводок Минобороны РФ; украинская сторона отдельно сообщает о поражении конкретных объектов (дата-центр в Сасово, заводы в Салавате и Омске), которые российские сводки не называют.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Данные о числе дронов исходят только от Минобороны РФ.",
+  "uk": {
+   "t": "Міноборони РФ: 399 українських безпілотників збито за ніч",
+   "p": "Регіони Росії та Чорне море",
+   "d": "Кількість збитих дронів відома лише зі зведень Міноборони РФ; українська сторона окремо повідомляє про ураження конкретних об’єктів (дата-центр у Сасові, заводи в Салаваті та Омську), яких російські зведення не називають.",
+   "ru": "Міноборони РФ повідомило, що з 20.00 за московським часом 7 жовтня до 8.00 8 жовтня сили ППО перехопили і знищили 399 українських безпілотників літакового типу над Бєлгородською, Брянською, Рязанською, Самарською та багатьма іншими областями, а вдень — ще 113. ТАСС додає, що атака спричинила пожежу в дата-центрі «Яндекса» в Сасові.",
+   "ua": "РБК-Україна, переказуючи дані Міноборони РФ, пише про нову масовану атаку Сил оборони України, що почалася о 20:00 7 жовтня за московським часом, і про вибухи в десятках російських областей та в окупованому Криму.",
+   "ind": null
+  },
+  "en": {
+   "t": "Russian Defence Ministry: 399 Ukrainian drones shot down overnight",
+   "p": "Russian regions and the Black Sea",
+   "d": "The number of drones shot down is known only from Russian Defence Ministry reports; the Ukrainian side separately reports hits on specific sites (the data centre in Sasovo, plants in Salavat and Omsk) that the Russian reports do not name.",
+   "ru": "The Russian Defence Ministry said that from 20.00 Moscow time on 7 October to 8.00 on 8 October air defences intercepted and destroyed 399 Ukrainian fixed-wing drones over Belgorod, Bryansk, Ryazan, Samara and many other regions, and another 113 during the day. TASS adds that the attack caused a fire at a Yandex data centre in Sasovo.",
+   "ua": "RBC-Ukraine, relaying Russian Defence Ministry data, writes of a new massive attack by Ukraine's Defence Forces that began at 20:00 Moscow time on 7 October and of explosions in dozens of Russian regions and occupied Crimea.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1008-night-attack-energy",
+  "ids": [
+   5509,
+   10268,
+   9823,
+   7696,
+   6838,
+   6842,
+   9821,
+   9829,
+   9817,
+   7693
+  ],
+  "title": "Ночная атака 142 дронов и аварийные отключения света в Украине",
+  "place": "Украина: Киев и области, Ровенская область",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает",
+   "расхождение: атрибуция"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ заявило, что за сутки авиация, ударные беспилотники, ракетные войска и артиллерия поразили цеха производства украинских дронов и места их хранения, склады вооружения и боеприпасов ВСУ. ТАСС приводит видео министерства: «Герани» подразделения «Варяг», по его словам, поразили логистический центр, подстанции энергосети и мобильный комплекс ПВО в глубине Украины.",
+   "quotes": [
+    {
+     "id": 10268,
+     "text": "нанесли поражение цехам производства украинских дронов и местам их хранения, складам ракетно-артиллерийского вооружения и боеприпасов ВСУ"
+    },
+    {
+     "id": 5509,
+     "text": "Russian forces used the Geran drones to strike a logistics center, power grid substations, and a mobile air defense system deep inside Ukrainian territory"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Воздушные силы ВСУ сообщили, что в ночь на 8 октября (с 18:00 7 октября) Россия атаковала 142 ударными дронами, 82 из них — реактивные; сбиты или подавлены 126. «Укрэнерго» и Минэнерго сообщили об обесточиваниях в 4 областях и аварийных отключениях, в том числе в Киеве; первый замминистра энергетики Артем Некрасов объяснил это повреждениями оборудования и падением напряжения. Глава Ровенской ОВА Александр Коваль сообщил о повреждении гражданского предприятия, люди не пострадали.",
+   "quotes": [
+    {
+     "id": 7696,
+     "text": "У ніч на 8 жовтня росіяни атакували Україну 142 ударними БпЛА, зокрема 82 реактивними, попередньо Повітряні сили ЗСУ збили 126 безпілотників."
+    },
+    {
+     "id": 6842,
+     "text": "Через російські обстріли енергосистемі не вистачає можливості передавати електроенергію через пошкоджені мережі."
+    },
+    {
+     "id": 7693,
+     "text": "Одне з цивільних підприємств зазнало ушкоджень під час ранкової атаки на Рівненщину."
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Минобороны РФ описывает цели как военные и «стратегически важные» (цеха дронов, склады, логистический центр, подстанции); украинская сторона сообщает о повреждении гражданского предприятия на Ровенщине и аварийных отключениях света. Независимые источники в выборке ночную атаку отдельно не описывают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Нічна атака 142 дронів і аварійні відключення світла в Україні",
+   "p": "Україна: Київ та області, Рівненська область",
+   "d": "Міноборони РФ описує цілі як військові та «стратегічно важливі» (цехи дронів, склади, логістичний центр, підстанції); українська сторона повідомляє про пошкодження цивільного підприємства на Рівненщині й аварійні відключення світла. Незалежні джерела у вибірці нічну атаку окремо не описують.",
+   "ru": "Міноборони РФ заявило, що за добу авіація, ударні безпілотники, ракетні війська й артилерія уразили цехи виробництва українських дронів і місця їх зберігання, склади озброєння та боєприпасів ЗСУ. ТАСС наводить відео міністерства: «Герані» підрозділу «Варяг», за його словами, уразили логістичний центр, підстанції енергомережі та мобільний комплекс ППО в глибині України.",
+   "ua": "Повітряні сили ЗСУ повідомили, що в ніч на 8 жовтня (з 18:00 7 жовтня) Росія атакувала 142 ударними дронами, 82 з них — реактивні; збито або подавлено 126. «Укренерго» і Міненерго повідомили про знеструмлення в 4 областях і аварійні відключення, зокрема в Києві; перший заступник міністра енергетики Артем Некрасов пояснив це пошкодженнями обладнання та падінням напруги. Голова Рівненської ОВА Олександр Коваль повідомив про пошкодження цивільного підприємства, люди не постраждали.",
+   "ind": null
+  },
+  "en": {
+   "t": "Overnight attack by 142 drones and emergency power cuts in Ukraine",
+   "p": "Ukraine: Kyiv and regions, Rivne Oblast",
+   "d": "The Russian Defence Ministry describes the targets as military and \"strategically important\" (drone workshops, depots, a logistics centre, substations); the Ukrainian side reports damage to a civilian enterprise in Rivne region and emergency power cuts. Independent sources in the sample do not describe the overnight attack separately.",
+   "ru": "The Russian Defence Ministry said that over the day aircraft, attack drones, missile troops and artillery hit Ukrainian drone production workshops and storage sites and Ukrainian army weapons and ammunition depots. TASS cites the ministry's video: Geran drones of the Varyag unit, it says, hit a logistics centre, power grid substations and a mobile air defence system deep inside Ukraine.",
+   "ua": "Ukraine's Air Force said that on the night of 8 October (from 18:00 on 7 October) Russia attacked with 142 strike drones, 82 of them jet-powered; 126 were shot down or suppressed. Ukrenergo and the Energy Ministry reported outages in 4 regions and emergency cuts, including in Kyiv; First Deputy Energy Minister Artem Nekrasov attributed them to equipment damage and a voltage drop. Rivne governor Oleksandr Koval reported damage to a civilian enterprise, with no one hurt.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1008-kyiv-region-warehouses-school",
+  "ids": [
+   9846,
+   9853,
+   9860,
+   7715
+  ],
+  "title": "Удары по Киевской области: склады АТБ, школа и детсад",
+  "place": "Бучанский и Фастовский районы, Киевская область",
+  "region": "kyiv",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Глава Киевской ОВА Тимур Ткаченко сообщил, что в Бучанском районе Россия атаковала складские помещения — пострадали три человека, один госпитализирован; сеть супермаркетов АТБ подтвердила РБК-Украина попадание в свои склады. Позже Ткаченко сообщил об ударах по школе в Бучанском районе и учебным заведениям в Фастовском районе; в момент удара по школе дети и учителя были в укрытии.",
+   "quotes": [
+    {
+     "id": 9846,
+     "text": "В Бучанском районе враг атаковал складские помещения. В результате вражеской атаки пострадали три человека"
+    },
+    {
+     "id": 9853,
+     "text": "Мы подтверждаем попадание"
+    },
+    {
+     "id": 9860,
+     "text": "Оккупанты сознательно обстреляли учебные заведения в Фастовском и Бучанском районах Киевской области."
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Событие освещают только украинские источники; российские и независимые источники в выборке удары по Киевской области не упоминают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Удари по Київській області: склади АТБ, школа і садок",
+   "p": "Бучанський і Фастівський райони, Київська область",
+   "d": "Подію висвітлюють лише українські джерела; російські та незалежні джерела у вибірці удари по Київській області не згадують.",
+   "ru": null,
+   "ua": "Голова Київської ОВА Тимур Ткаченко повідомив, що в Бучанському районі Росія атакувала складські приміщення — постраждали троє людей, одного госпіталізовано; мережа супермаркетів АТБ підтвердила РБК-Україна влучання у свої склади. Пізніше Ткаченко повідомив про удари по школі в Бучанському районі та навчальних закладах у Фастівському районі; у момент удару по школі діти й учителі були в укритті.",
+   "ind": null
+  },
+  "en": {
+   "t": "Strikes on Kyiv region: ATB warehouses, a school and a kindergarten",
+   "p": "Bucha and Fastiv districts, Kyiv Oblast",
+   "d": "Only Ukrainian sources cover the event; Russian and independent sources in the sample do not mention the strikes on Kyiv region.",
+   "ru": null,
+   "ua": "Kyiv regional governor Tymur Tkachenko said Russia attacked warehouses in Bucha district, injuring three people, one of whom was hospitalised; the ATB supermarket chain confirmed to RBC-Ukraine that its warehouses were hit. Tkachenko later reported strikes on a school in Bucha district and educational facilities in Fastiv district; children and teachers were in a shelter when the school was hit.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1008-ivano-frankivsk",
+  "ids": [
+   9865,
+   7736
+  ],
+  "title": "Ивано-Франковск: при падении обломков дрона погиб сторож",
+  "place": "Ивано-Франковск",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Мэр Ивано-Франковска Руслан Марцинкив и глава ОВА Светлана Онищук сообщили, что вечером 8 октября обломки сбитого беспилотника упали на административное здание, возник пожар, погиб мужчина — по словам мэра, сторож. РБК-Украина со ссылкой на Воздушные силы пишет, что реактивный дрон двигался в сторону области из Хмельницкой.",
+   "quotes": [
+    {
+     "id": 7736,
+     "text": "Увечері 8 жовтня внаслідок падіння уламків безпілотника на адміністративну будвлю в Івано-Франківську загинув чоловік."
+    },
+    {
+     "id": 9865,
+     "text": "в Хмельницкой области был зафиксирован реактивный дрон, который двигался в направлении Ивано-Франковской области"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Событие освещают только украинские источники.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Івано-Франківськ: внаслідок падіння уламків дрона загинув сторож",
+   "p": "Івано-Франківськ",
+   "d": "Подію висвітлюють лише українські джерела.",
+   "ru": null,
+   "ua": "Мер Івано-Франківська Руслан Марцінків і голова ОВА Світлана Онищук повідомили, що ввечері 8 жовтня уламки збитого безпілотника впали на адміністративну будівлю, виникла пожежа, загинув чоловік — за словами мера, сторож. РБК-Україна з посиланням на Повітряні сили пише, що реактивний дрон рухався в бік області з Хмельницької.",
+   "ind": null
+  },
+  "en": {
+   "t": "Ivano-Frankivsk: watchman killed by falling drone debris",
+   "p": "Ivano-Frankivsk",
+   "d": "Only Ukrainian sources cover the event.",
+   "ru": null,
+   "ua": "Ivano-Frankivsk Mayor Ruslan Martsinkiv and regional governor Svitlana Onyshchuk said that on the evening of 8 October debris from a downed drone fell on an administrative building, starting a fire and killing a man, a watchman according to the mayor. RBC-Ukraine, citing the Air Force, writes that a jet-powered drone was heading towards the region from Khmelnytskyi region.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1008-poland-jets",
+  "ids": [
+   4431,
+   4451,
+   7737
+  ],
+  "title": "Польша поднимала военную авиацию из-за российских ударов по Украине",
+  "place": "Польша",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "РИА Новости пишет, что польские военные подняли авиацию «якобы» из-за действий ВС России на Украине, приводя сообщение оперативного командования об ударах «по целям в центральной части Украины»; позже авиация вернулась на аэродромы.",
+   "quotes": [
+    {
+     "id": 4431,
+     "text": "Польские военные подняли в воздух авиацию якобы из-за действий Вооруженных сил России на Украине"
+    },
+    {
+     "id": 4451,
+     "text": "Польша вернула на аэродромы авиацию, поднятую якобы из-за действий российской авиации на Украине"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Українська правда со ссылкой на оперативное командование Польши сообщает, что в ночь на 9 октября в польском воздушном пространстве снова действовала военная авиация из-за российских ударов по целям в западной части Украины.",
+   "quotes": [
+    {
+     "id": 7737,
+     "text": "У зв'язку з ударами Російської Федерації по цілях у західній частині України"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "РИА Новости ставит под сомнение причину подъема авиации словом «якобы», хотя цитирует польское командование, прямо называющее российские удары. В вечернем сообщении, по РИА, говорилось о целях в центральной части Украины, в ночном (Українська правда) — в западной.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Польща піднімала військову авіацію через російські удари по Україні",
+   "p": "Польща",
+   "d": "РІА Новини ставить під сумнів причину підйому авіації словом «нібито», хоча цитує польське командування, яке прямо називає російські удари. У вечірньому повідомленні, за РІА, йшлося про цілі в центральній частині України, у нічному (Українська правда) — у західній.",
+   "ru": "РІА Новини пише, що польські військові підняли авіацію «нібито» через дії ЗС Росії в Україні, наводячи повідомлення оперативного командування про удари «по цілях у центральній частині України»; пізніше авіація повернулася на аеродроми.",
+   "ua": "Українська правда з посиланням на оперативне командування Польщі повідомляє, що в ніч проти 9 жовтня в польському повітряному просторі знову діяла військова авіація через російські удари по цілях у західній частині України.",
+   "ind": null
+  },
+  "en": {
+   "t": "Poland scrambles military aircraft over Russian strikes on Ukraine",
+   "p": "Poland",
+   "d": "RIA Novosti casts doubt on the reason for the scramble with the word \"allegedly\", although it quotes the Polish command, which explicitly cites Russian strikes. According to RIA, the evening message mentioned targets in central Ukraine; the overnight one (Ukrainska Pravda) mentioned western Ukraine.",
+   "ru": "RIA Novosti writes that Polish forces scrambled aircraft \"allegedly\" because of the Russian armed forces' actions in Ukraine, quoting the operational command's statement about strikes \"on targets in the central part of Ukraine\"; the aircraft later returned to their bases.",
+   "ua": "Ukrainska Pravda, citing Poland's operational command, reports that on the night of 9 October military aircraft were again operating in Polish airspace because of Russian strikes on targets in western Ukraine.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1008-south-korea-recalls-envoy",
+  "ids": [
+   10269,
+   6845,
+   9534,
+   8439
+  ],
+  "title": "Южная Корея отзывает посла из Украины из-за спора о военнопленных",
+  "place": "Сеул — Киев",
+  "region": "ukraine-wide",
+  "tags": [],
+  "ru": {
+   "summary": "Интерфакс со ссылкой на «Ренхап» и МИД Южной Кореи сообщает, что Сеул решил отозвать посла из Украины; ранее Южная Корея потребовала от Украины официальных извинений и объяснений.",
+   "quotes": [
+    {
+     "id": 10269,
+     "text": "Власти приняли решение отозвать посла из Украины в Сеул"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Суспільне цитирует заявление МИД Южной Кореи: правительство надеется на беспрепятственное урегулирование всех нерешенных вопросов и продолжит консультации с украинской стороной; других подробностей министерство не дало.",
+   "quotes": [
+    {
+     "id": 6845,
+     "text": "Уряд сподівається на безперешкодне розв'язання всіх невирішених питань між двома країнами та продовжуватиме консультації з українською стороною з цією метою"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Al Jazeera связывает отзыв посла с раскрытием Украиной передачи в Южную Корею двух северокорейских военнопленных; президент Ли Чжэ Мён ранее грозил мерами, если Украина не извинится. Kyiv Independent называет посла — Пак Хи Чхан — и пишет об ухудшении отношений Киева и Сеула.",
+   "quotes": [
+    {
+     "id": 9534,
+     "text": "South Korea says it will recall its ambassador to Kyiv following a recent revelation by Ukraine of a transfer of two North Korean prisoners of war to South Korea."
+    },
+    {
+     "id": 8439,
+     "text": "amid ongoing deterioration in Kyiv-Seoul relations"
+    }
+   ]
+  },
+  "diverge": "Все группы сообщают об отзыве посла; причина конфликта (раскрытие Украиной передачи пленных) подробно описана в независимых СМИ, российская сторона упоминает требование извинений.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Південна Корея відкликає посла з України через суперечку щодо військовополонених",
+   "p": "Сеул — Київ",
+   "d": "Усі групи повідомляють про відкликання посла; причину конфлікту (розкриття Україною передачі полонених) докладно описують незалежні ЗМІ, російська сторона згадує вимогу вибачень.",
+   "ru": "Інтерфакс із посиланням на «Йонхап» і МЗС Південної Кореї повідомляє, що Сеул вирішив відкликати посла з України; раніше Південна Корея вимагала від України офіційних вибачень і пояснень.",
+   "ua": "Суспільне цитує заяву МЗС Південної Кореї: уряд сподівається на безперешкодне розв’язання всіх невирішених питань і продовжить консультації з українською стороною; інших подробиць міністерство не надало.",
+   "ind": "Al Jazeera пов’язує відкликання посла з розкриттям Україною передачі до Південної Кореї двох північнокорейських військовополонених; президент Лі Дже Мьон раніше погрожував заходами, якщо Україна не вибачиться. Kyiv Independent називає посла — Пак Хі Чхан — і пише про погіршення відносин Києва та Сеула."
+  },
+  "en": {
+   "t": "South Korea recalls its envoy from Ukraine over a POW dispute",
+   "p": "Seoul — Kyiv",
+   "d": "All groups report the recall; the cause of the dispute (Ukraine's disclosure of the prisoner transfer) is described in detail by independent media, while the Russian side mentions the demand for an apology.",
+   "ru": "Interfax, citing Yonhap and South Korea's Foreign Ministry, reports that Seoul decided to recall its ambassador from Ukraine; South Korea had earlier demanded an official apology and explanation from Ukraine.",
+   "ua": "Suspilne quotes the South Korean Foreign Ministry: the government hopes for a smooth resolution of all outstanding issues and will continue consultations with the Ukrainian side; the ministry gave no further details.",
+   "ind": "Al Jazeera links the recall to Ukraine's disclosure of the transfer of two North Korean prisoners of war to South Korea; President Lee Jae Myung had threatened measures if Ukraine did not apologise. Kyiv Independent names the ambassador, Park Hee-chang, and writes of deteriorating Kyiv-Seoul relations."
+  }
+ },
+ {
+  "key": "1008-polish-sim-cards",
+  "ids": [
+   9257,
+   8445,
+   6841
+  ],
+  "title": "В сбитых в Польше российских дронах нашли польские SIM-карты",
+  "place": "Польша",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Суспільне со ссылкой на RMF24 и окружную прокуратуру в Люблине пишет, что в сбитых российских дронах, нарушивших воздушное пространство Польши, нашли польские SIM-карты; расследование прекращено за неустановлением лица преступника, большая часть материалов засекречена.",
+   "quotes": [
+    {
+     "id": 6841,
+     "text": "Зрештою, слідство припинили за фактом невстановлення особи злочинця."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW пишет, что прокуратура в Люблине завершила расследование массированного вторжения российских дронов в ночь на 10 сентября 2025 года, поскольку не смогла установить виновных. Kyiv Independent со ссылкой на RMF24 уточняет, что власти не раскрыли, были ли три польские SIM-карты украдены или получены незаконно.",
+   "quotes": [
+    {
+     "id": 9257,
+     "text": "поскольку не смогла установить виновных"
+    },
+    {
+     "id": 8445,
+     "text": "Polish authorities didn't disclose whether three Polish SIM cards had been stolen or obtained illegaly"
+    }
+   ]
+  },
+  "diverge": "Украинские и независимые источники совпадают; российские источники в выборке эту новость не освещают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "У збитих у Польщі російських дронах знайшли польські SIM-картки",
+   "p": "Польща",
+   "d": "Українські та незалежні джерела збігаються; російські джерела у вибірці цю новину не висвітлюють.",
+   "ru": null,
+   "ua": "Суспільне з посиланням на RMF24 і окружну прокуратуру в Любліні пише, що в збитих російських дронах, які порушили повітряний простір Польщі, знайшли польські SIM-картки; розслідування припинено через невстановлення особи злочинця, більшість матеріалів засекречено.",
+   "ind": "DW пише, що прокуратура в Любліні завершила розслідування масованого вторгнення російських дронів у ніч на 10 вересня 2025 року, оскільки не змогла встановити винних. Kyiv Independent з посиланням на RMF24 уточнює, що влада не розкрила, чи три польські SIM-картки були вкрадені або отримані незаконно."
+  },
+  "en": {
+   "t": "Polish SIM cards found in Russian drones downed in Poland",
+   "p": "Poland",
+   "d": "Ukrainian and independent sources agree; Russian sources in the sample do not cover this story.",
+   "ru": null,
+   "ua": "Suspilne, citing RMF24 and the Lublin district prosecutor's office, writes that Polish SIM cards were found in downed Russian drones that violated Polish airspace; the investigation was closed because the perpetrator could not be identified, and most of the case files are classified.",
+   "ind": "DW writes that the Lublin prosecutors closed the investigation into the mass incursion of Russian drones on the night of 10 September 2025 because they could not identify those responsible. Kyiv Independent, citing RMF24, adds that the authorities did not disclose whether the three Polish SIM cards were stolen or obtained illegally."
+  }
+ },
+ {
+  "key": "1008-uk-sanctions",
+  "ids": [
+   9843,
+   6856,
+   8440
+  ],
+  "title": "Великобритания ввела новые санкции против теневого флота, криптобирж и нефтяных компаний России",
+  "place": "Лондон",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Суспільне со ссылкой на британское правительство пишет, что под санкции попали нефтяные компании «Зарубежнефть» и INK Capital, 12 нефтяных танкеров теневого флота, три криптобиржи и две платежные системы. РБК-Украина называет санкции «масштабными» и направленными на ослабление России.",
+   "quotes": [
+    {
+     "id": 6856,
+     "text": "Серед компаній, проти яких Британія запровадила санкції, — нафтові компанії «Зарубежнефть» та «INK Capital»; 12 нафтових танкерів тіньового флоту Росії; три криптовалютні біржі та дві платіжні системи."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пишет о 38 новых санкционных позициях против судов, помогающих России обходить санкции, и ряда компаний военно-промышленного комплекса.",
+   "quotes": [
+    {
+     "id": 8440,
+     "text": "The U.K. published 38 new sanctions listings on Oct. 8, targeting ships helping Russia evade existing sanctions"
+    }
+   ]
+  },
+  "diverge": "Украинские и независимые источники совпадают; российские источники в выборке британские санкции 8 октября не освещают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Велика Британія запровадила нові санкції проти тіньового флоту, криптобірж і нафтових компаній Росії",
+   "p": "Лондон",
+   "d": "Українські та незалежні джерела збігаються; російські джерела у вибірці британські санкції 8 жовтня не висвітлюють.",
+   "ru": null,
+   "ua": "Суспільне з посиланням на британський уряд пише, що під санкції потрапили нафтові компанії «Зарубежнефть» та INK Capital, 12 нафтових танкерів тіньового флоту, три криптобіржі та дві платіжні системи. РБК-Україна називає санкції «масштабними» і спрямованими на послаблення Росії.",
+   "ind": "Kyiv Independent пише про 38 нових санкційних позицій проти суден, які допомагають Росії обходити санкції, і низки компаній військово-промислового комплексу."
+  },
+  "en": {
+   "t": "UK imposes new sanctions on Russia's shadow fleet, crypto exchanges and oil companies",
+   "p": "London",
+   "d": "Ukrainian and independent sources agree; Russian sources in the sample do not cover the UK sanctions of 8 October.",
+   "ru": null,
+   "ua": "Suspilne, citing the British government, writes that the sanctions target the oil companies Zarubezhneft and INK Capital, 12 shadow-fleet oil tankers, three crypto exchanges and two payment systems. RBC-Ukraine calls the sanctions \"large-scale\" and aimed at weakening Russia.",
+   "ind": "Kyiv Independent writes of 38 new sanctions listings targeting ships that help Russia evade sanctions and a range of military-industrial companies."
+  }
+ },
+ {
+  "key": "1008-eu-hybrid-sanctions",
+  "ids": [
+   9259,
+   6857
+  ],
+  "title": "ЕС на год продлил санкции против России за гибридные атаки",
+  "place": "Брюссель",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Суспільне цитирует Совет ЕС: решение обусловлено длительной и усиленной гибридной деятельностью России, в том числе манипулированием информацией и вмешательством из-за рубежа (FIMI).",
+   "quotes": [
+    {
+     "id": 6857,
+     "text": "Це рішення зумовлене тривалою та посиленою гібридною діяльністю Росії"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW со ссылкой на Совет ЕС пишет, что санкции против лиц и организаций, ответственных за действия России по дестабилизации ситуации за рубежом, продлены на год.",
+   "quotes": [
+    {
+     "id": 9259,
+     "text": "Евросоюз продлил на год санкции против физических лиц и организаций, несущих ответственность за действия России по дестабилизации ситуации за рубежом."
+    }
+   ]
+  },
+  "diverge": "Украинские и независимые источники совпадают; российские источники в выборке это решение не освещают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "ЄС на рік продовжив санкції проти Росії за гібридні атаки",
+   "p": "Брюссель",
+   "d": "Українські та незалежні джерела збігаються; російські джерела у вибірці це рішення не висвітлюють.",
+   "ru": null,
+   "ua": "Суспільне цитує Раду ЄС: рішення зумовлене тривалою та посиленою гібридною діяльністю Росії, зокрема маніпулюванням інформацією та втручанням з-за кордону (FIMI).",
+   "ind": "DW з посиланням на Раду ЄС пише, що санкції проти осіб і організацій, відповідальних за дії Росії з дестабілізації ситуації за кордоном, продовжено на рік."
+  },
+  "en": {
+   "t": "EU extends sanctions over Russian hybrid attacks for a year",
+   "p": "Brussels",
+   "d": "Ukrainian and independent sources agree; Russian sources in the sample do not cover the decision.",
+   "ru": null,
+   "ua": "Suspilne quotes the EU Council: the decision is driven by Russia's prolonged and intensified hybrid activity, including foreign information manipulation and interference (FIMI).",
+   "ind": "DW, citing the EU Council, writes that sanctions on individuals and entities responsible for Russia's destabilising actions abroad have been extended for a year."
+  }
+ },
+ {
+  "key": "1008-quantum-interceptors",
+  "ids": [
+   5494,
+   6844
+  ],
+  "title": "Quantum Systems поставит Украине десятки тысяч дронов-перехватчиков SPYS",
+  "place": "Берлин",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": "ТАСС со ссылкой на Укринформ пишет, что немецкая Quantum Systems намерена до конца 2026 года передать Украине десятки тысяч перехватчиков SPYS; по словам вице-президента компании, на выходных подписано соглашение о намерениях.",
+   "quotes": [
+    {
+     "id": 5494,
+     "text": "German defense company Quantum Systems intends to send tens of thousands of SPYS interceptor drones to Ukraine by the end of 2026"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Суспільне со ссылкой на Укринформ сообщает, что SPYS — совместная разработка Quantum Systems и украинского партнера WIY в рамках совместного предприятия Quantum WIY Industries.",
+   "quotes": [
+    {
+     "id": 6844,
+     "text": "SPYS є спільною розробкою Quantum Systems та українського партнера WIY"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Российский и украинский источники пересказывают одно и то же сообщение Укринформа без расхождений по фактам.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Quantum Systems передасть Україні десятки тисяч дронів-перехоплювачів SPYS",
+   "p": "Берлін",
+   "d": "Російське й українське джерела переказують одне й те саме повідомлення Укрінформу без розбіжностей у фактах.",
+   "ru": "ТАСС із посиланням на Укрінформ пише, що німецька Quantum Systems має намір до кінця 2026 року передати Україні десятки тисяч перехоплювачів SPYS; за словами віцепрезидента компанії, на вихідних підписано угоду про наміри.",
+   "ua": "Суспільне з посиланням на Укрінформ повідомляє, що SPYS — спільна розробка Quantum Systems та українського партнера WIY у межах спільного підприємства Quantum WIY Industries.",
+   "ind": null
+  },
+  "en": {
+   "t": "Quantum Systems to supply Ukraine with tens of thousands of SPYS interceptor drones",
+   "p": "Berlin",
+   "d": "The Russian and Ukrainian sources relay the same Ukrinform report with no factual discrepancies.",
+   "ru": "TASS, citing Ukrinform, writes that Germany's Quantum Systems intends to send Ukraine tens of thousands of SPYS interceptors by the end of 2026; according to the company's vice-president, a letter of intent was signed over the weekend.",
+   "ua": "Suspilne, citing Ukrinform, reports that SPYS is a joint development of Quantum Systems and the Ukrainian partner WIY within the joint venture Quantum WIY Industries.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1008-front-claims",
+  "ids": [
+   6444,
+   5482,
+   10265,
+   4419,
+   6836,
+   9816
+  ],
+  "title": "Фронт: Минобороны РФ заявляет об Аннополье и продвижении в Доброполье, ISW — об успехе ВСУ у Александровки",
+  "place": "Харьковская и Донецкая области",
+  "region": "donetsk",
+  "tags": [
+   "расхождение: атрибуция",
+   "не проверено"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ заявило, что группировка «Север» взяла под контроль Аннополье в Харьковской области, а в Доброполье (ДНР) за сутки штурмовые группы установили контроль над 103 зданиями и продвигаются в центральной и северной частях города.",
+   "quotes": [
+    {
+     "id": 6444,
+     "text": "Подразделения группировки войск «Север» взяли под контроль населенный пункт Аннополье в Харьковской области."
+    },
+    {
+     "id": 10265,
+     "text": "Российские военные в течение суток в Доброполье (ДНР) установили контроль над 103 зданиями"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Генштаб ВСУ сообщил, что накануне российская армия нанесла 74 авиаудара с применением 223 управляемых авиабомб. РБК-Украина со ссылкой на ISW пишет, что Силы обороны продвинулись к востоку от Александровки Донецкой области.",
+   "quotes": [
+    {
+     "id": 6836,
+     "text": "Учора армія РФ завдала одного ракетного удару та 74 авіаційні удари із застосуванням 223 керованих авіабомб."
+    },
+    {
+     "id": 9816,
+     "text": "Силы обороны Украины смогли прорваться вперед к востоку от Александровки Донецкой области."
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Стороны сообщают о разных участках фронта и не комментируют заявления друг друга; заявления о взятии населенных пунктов и о потерях не проверены независимо.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Фронтовые заявления сторон не проверены независимо.",
+  "uk": {
+   "t": "Фронт: Міноборони РФ заявляє про Аннопілля і просування в Добропіллі, ISW — про успіх ЗСУ біля Олександрівки",
+   "p": "Харківська і Донецька області",
+   "d": "Сторони повідомляють про різні ділянки фронту і не коментують заяв одна одної; заяви про захоплення населених пунктів і втрати не перевірено незалежно.",
+   "ru": "Міноборони РФ заявило, що угруповання «Північ» узяло під контроль Аннопілля в Харківській області, а в Добропіллі (Донеччина) за добу штурмові групи встановили контроль над 103 будівлями і просуваються в центральній та північній частинах міста.",
+   "ua": "Генштаб ЗСУ повідомив, що напередодні російська армія завдала 74 авіаударів із застосуванням 223 керованих авіабомб. РБК-Україна з посиланням на ISW пише, що Сили оборони просунулися на схід від Олександрівки Донецької області.",
+   "ind": null
+  },
+  "en": {
+   "t": "Front line: Russia claims Annopillia and gains in Dobropillia; ISW reports Ukrainian advance near Oleksandrivka",
+   "p": "Kharkiv and Donetsk oblasts",
+   "d": "The sides report on different sectors and do not comment on each other's claims; claims of captured settlements and losses have not been independently verified.",
+   "ru": "The Russian Defence Ministry said its North group took control of Annopillia in Kharkiv region, and that in Dobropillia (Donetsk region) assault groups took control of 103 buildings over the day and are advancing in the centre and north of the town.",
+   "ua": "Ukraine's General Staff said that the previous day the Russian army carried out 74 air strikes using 223 guided aerial bombs. RBC-Ukraine, citing ISW, writes that Ukraine's Defence Forces advanced east of Oleksandrivka in Donetsk region.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1008-kyiv-bridges-outlook",
+  "ids": [
+   5444,
+   9835,
+   6877,
+   9252
+  ],
+  "title": "Удары по мостам Киева: оценки последствий и планы переправ",
+  "place": "Киев",
+  "region": "kyiv",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "ТАСС со ссылкой на «пророссийское подполье» утверждает, что удары по мостам Киева создали проблемы для украинских силовиков, хотя «это не значит, что армия» парализована.",
+   "quotes": [
+    {
+     "id": 5444,
+     "text": "Russian military strikes on bridges in Kiev have disrupted the operations of the Ukrainian security forces, pro-Russian underground resistance told TASS."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина пересказывает The Telegraph: Путин может зимой сменить тактику и сосредоточиться на мостах Киева, к чему привлечен генерал Суровикин. Министр инфраструктуры в интервью Суспільне заявил, что мосты Киева «имеют запас прочности»; с 1 октября Россия начала прицельно атаковать мосты.",
+   "quotes": [
+    {
+     "id": 9835,
+     "text": "Зимой российский диктатор может изменить тактику войны и заняться мостами Киева."
+    },
+    {
+     "id": 6877,
+     "text": "Із 1 жовтня Росія почала прицільно атакувати мости в Києві."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW пишет, что Украина ищет альтернативные способы сообщения между берегами столицы: помимо понтонных переправ, в долгосрочной перспективе рассматривается тоннель под Днепром.",
+   "quotes": [
+    {
+     "id": 9252,
+     "text": "Помимо понтонных переправ, в долгосрочной перспективе рассматривается и строительство тоннеля под Днепром"
+    }
+   ]
+  },
+  "diverge": "ТАСС опирается на анонимное «подполье» и подчеркивает военный эффект ударов; украинские источники говорят о запасе прочности мостов, а DW — о поиске альтернативных переправ. Утверждение The Telegraph о роли Суровикина не подтверждено другими источниками в выборке.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Ключевые утверждения опираются на анонимные источники.",
+  "uk": {
+   "t": "Удари по мостах Києва: оцінки наслідків і плани переправ",
+   "p": "Київ",
+   "d": "ТАСС спирається на анонімне «підпілля» і наголошує на військовому ефекті ударів; українські джерела говорять про запас міцності мостів, а DW — про пошук альтернативних переправ. Твердження The Telegraph про роль Суровікіна не підтверджене іншими джерелами у вибірці.",
+   "ru": "ТАСС із посиланням на «проросійське підпілля» стверджує, що удари по мостах Києва створили проблеми для українських силовиків, хоча «це не означає, що армія» паралізована.",
+   "ua": "РБК-Україна переказує The Telegraph: Путін може взимку змінити тактику і зосередитися на мостах Києва, до чого залучено генерала Суровікіна. Міністр інфраструктури в інтерв’ю Суспільному заявив, що мости Києва «мають запас міцності»; з 1 жовтня Росія почала прицільно атакувати мости.",
+   "ind": "DW пише, що Україна шукає альтернативні способи сполучення між берегами столиці: крім понтонних переправ, у довгостроковій перспективі розглядається тунель під Дніпром."
+  },
+  "en": {
+   "t": "Strikes on Kyiv's bridges: assessments and crossing plans",
+   "p": "Kyiv",
+   "d": "TASS relies on an anonymous \"underground\" and stresses the military effect of the strikes; Ukrainian sources speak of the bridges' safety margin, and DW of the search for alternative crossings. The Telegraph's claim about Surovikin's role is not confirmed by other sources in the sample.",
+   "ru": "TASS, citing the \"pro-Russian underground\", claims that the strikes on Kyiv's bridges have caused problems for Ukrainian security forces, though \"this does not mean the army\" is paralysed.",
+   "ua": "RBC-Ukraine relays The Telegraph: Putin may change tactics in winter and focus on Kyiv's bridges, with General Surovikin brought in. The infrastructure minister told Suspilne that Kyiv's bridges \"have a safety margin\"; since 1 October Russia has been deliberately attacking the bridges.",
+   "ind": "DW writes that Ukraine is looking for alternative ways to connect the two banks of the capital: besides pontoon crossings, a tunnel under the Dnipro is being considered in the long term."
+  }
+ },
+ {
+  "key": "1008-belarus-bryansk",
+  "ids": [
+   5504,
+   10298
+  ],
+  "title": "Минск: атака дрона на белорусский грузовик в Брянской области — попытка втянуть Белоруссию в конфликт",
+  "place": "Брянская область",
+  "region": "russia-other",
+  "tags": [
+   "единственный источник"
+  ],
+  "ru": {
+   "summary": "МИД Белоруссии, по данным ТАСС и Интерфакса, заявил, что 8 октября при атаке беспилотника на грузовик с белорусской регистрацией в Брянской области тяжело ранена гражданка Белоруссии, и рассматривает инцидент в контексте попыток втянуть республику в конфликт.",
+   "quotes": [
+    {
+     "id": 10298,
+     "text": "Ранение гражданки Белоруссии при атаке БПЛА на грузовой автомобиль с белорусской регистрацией в Брянской области рассматривают в Минске в контексте попыток втягивания республики в конфликт"
+    }
+   ]
+  },
+  "ua": null,
+  "ind": null,
+  "diverge": "Сообщают только российские источники со ссылкой на МИД Белоруссии; украинская сторона в выборке инцидент не комментирует.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Одна группа источников, нет независимого подтверждения.",
+  "uk": {
+   "t": "Мінськ: атака дрона на білоруську вантажівку в Брянській області — спроба втягнути Білорусь у конфлікт",
+   "p": "Брянська область",
+   "d": "Повідомляють лише російські джерела з посиланням на МЗС Білорусі; українська сторона у вибірці інцидент не коментує.",
+   "ru": "МЗС Білорусі, за даними ТАСС та Інтерфаксу, заявило, що 8 жовтня під час атаки безпілотника на вантажівку з білоруською реєстрацією в Брянській області тяжко поранено громадянку Білорусі, і розглядає інцидент у контексті спроб втягнути республіку в конфлікт.",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Minsk: drone attack on a Belarusian truck in Bryansk region is an attempt to drag Belarus into the conflict",
+   "p": "Bryansk Oblast",
+   "d": "Only Russian sources report this, citing the Belarusian Foreign Ministry; the Ukrainian side in the sample does not comment on the incident.",
+   "ru": "Belarus's Foreign Ministry, according to TASS and Interfax, said that on 8 October a Belarusian woman was seriously injured when a drone attacked a Belarusian-registered truck in Bryansk region, and views the incident in the context of attempts to drag the republic into the conflict.",
+   "ua": null,
+   "ind": null
+  }
+ },
+ {
+  "key": "1008-opcw-chemical",
+  "ids": [
+   4432,
+   5531
+  ],
+  "title": "Россия на сессии ОЗХО отвергла обвинения Киева в применении химоружия",
+  "place": "Гаага",
+  "region": "ukraine-wide",
+  "tags": [
+   "единственный источник"
+  ],
+  "ru": {
+   "summary": "Постпред России при ОЗХО Владимир Тарабрин, по данным РИА Новости и ТАСС, отверг прозвучавшие на 113-й сессии исполсовета обвинения Киева в применении химических веществ, назвав достоверность украинских данных «ничтожной», и заявил, что западные страны участвуют в применении химоружия против россиян.",
+   "quotes": [
+    {
+     "id": 4432,
+     "text": "Россия отвергает прозвучавшие на площадке Организации по запрещению химического оружия обвинения в ее адрес в применении химических веществ"
+    },
+    {
+     "id": 5531,
+     "text": "Western countries coordinate and participate in the use of chemical weapons against Russian citizens"
+    }
+   ]
+  },
+  "ua": null,
+  "ind": null,
+  "diverge": "Позиция представлена только российскими источниками; сами украинские обвинения в выборке 8 октября не изложены.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Одна группа источников; встречные обвинения не проверены.",
+  "uk": {
+   "t": "Росія на сесії ОЗХЗ відкинула звинувачення Києва у застосуванні хімзброї",
+   "p": "Гаага",
+   "d": "Позицію представлено лише російськими джерелами; самі українські звинувачення у вибірці 8 жовтня не викладено.",
+   "ru": "Постпред Росії при ОЗХЗ Володимир Тарабрін, за даними РІА Новини і ТАСС, відкинув висловлені на 113-й сесії викорради звинувачення Києва у застосуванні хімічних речовин, назвавши достовірність українських даних «нікчемною», і заявив, що західні країни беруть участь у застосуванні хімзброї проти росіян.",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Russia rejects Kyiv's chemical weapons accusations at OPCW session",
+   "p": "The Hague",
+   "d": "The position is presented only by Russian sources; the Ukrainian accusations themselves are not set out in the sample for 8 October.",
+   "ru": "Russia's OPCW envoy Vladimir Tarabrin, according to RIA Novosti and TASS, rejected accusations made by Kyiv at the 113th session of the Executive Council that Russia used chemical substances, calling the reliability of Ukraine's data \"negligible\", and said Western countries take part in the use of chemical weapons against Russians.",
+   "ua": null,
+   "ind": null
+  }
+ },
+ {
+  "key": "1008-moldova-refugees",
+  "ids": [
+   6854,
+   8447
+  ],
+  "title": "Санду: Молдова готова этой зимой принять новых беженцев из Украины",
+  "place": "Кишинев",
+  "region": "moldova-romania",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Суспільне со ссылкой на NewsMaker пишет, что президент Молдовы Майя Санду на Moldova Security Forum заявила о готовности принять новый поток беженцев; с начала полномасштабного вторжения в Молдову приехали более 1 миллиона украинцев, около 100 тысяч остались жить в стране.",
+   "quotes": [
+    {
+     "id": 6854,
+     "text": "до Молдови приїхали понад 1 мільйон українців"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent приводит слова Санду: Молдова готова принять больше беженцев этой зимой, если Россия своими ударами вызовет новый гуманитарный кризис; с 2022 года прибыли более миллиона украинцев.",
+   "quotes": [
+    {
+     "id": 8447,
+     "text": "Moldova is ready to take in more Ukrainian refugees this winter if Russia inflicts another humanitarian crisis"
+    }
+   ]
+  },
+  "diverge": "Украинские и независимые источники совпадают; российские источники в выборке заявление не освещают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Санду: Молдова готова цієї зими прийняти нових біженців з України",
+   "p": "Кишинів",
+   "d": "Українські та незалежні джерела збігаються; російські джерела у вибірці заяву не висвітлюють.",
+   "ru": null,
+   "ua": "Суспільне з посиланням на NewsMaker пише, що президентка Молдови Мая Санду на Moldova Security Forum заявила про готовність прийняти новий потік біженців; від початку повномасштабного вторгнення до Молдови приїхали понад 1 мільйон українців, близько 100 тисяч залишилися жити в країні.",
+   "ind": "Kyiv Independent наводить слова Санду: Молдова готова прийняти більше біженців цієї зими, якщо Росія своїми ударами спричинить нову гуманітарну кризу; з 2022 року прибули понад мільйон українців."
+  },
+  "en": {
+   "t": "Sandu: Moldova ready to take in new refugees from Ukraine this winter",
+   "p": "Chișinău",
+   "d": "Ukrainian and independent sources agree; Russian sources in the sample do not cover the statement.",
+   "ru": null,
+   "ua": "Suspilne, citing NewsMaker, writes that Moldovan President Maia Sandu told the Moldova Security Forum the country is ready for a new flow of refugees; since the full-scale invasion more than 1 million Ukrainians have arrived in Moldova and about 100 thousand have stayed.",
+   "ind": "Kyiv Independent quotes Sandu: Moldova is ready to take in more refugees this winter if Russia causes a new humanitarian crisis with its strikes; more than a million Ukrainians have arrived since 2022."
+  }
+ },
+ {
+  "key": "1008-germany-protection",
+  "ids": [
+   9260,
+   6867
+  ],
+  "title": "Германия продлила временную защиту украинцев до марта 2028 года",
+  "place": "Берлин",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Суспільне со ссылкой на правительственный вестник Bundesgesetzblatt пишет, что МВД Германии внесло изменения в постановление о пребывании украинцев на условиях временной защиты.",
+   "quotes": [
+    {
+     "id": 6867,
+     "text": "Про це йдеться в документі, оприлюдненому в урядовому віснику країни (Bundesgesetzblatt)."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW сообщает, что временная защита продлена до 4 марта 2028 года в соответствии с решением ЕС, а прибывающие из Украины смогут до 4 декабря 2027 года въезжать в Германию.",
+   "quotes": [
+    {
+     "id": 9260,
+     "text": "Германия продлила временную защиту украинцев до 4 марта 2028 года"
+    }
+   ]
+  },
+  "diverge": "Украинские и независимые источники совпадают; российские источники в выборке решение не освещают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Німеччина продовжила тимчасовий захист українців до березня 2028 року",
+   "p": "Берлін",
+   "d": "Українські та незалежні джерела збігаються; російські джерела у вибірці рішення не висвітлюють.",
+   "ru": null,
+   "ua": "Суспільне з посиланням на урядовий вісник Bundesgesetzblatt пише, що МВС Німеччини внесло зміни до постанови про перебування українців на умовах тимчасового захисту.",
+   "ind": "DW повідомляє, що тимчасовий захист продовжено до 4 березня 2028 року відповідно до рішення ЄС, а ті, хто прибуває з України, зможуть до 4 грудня 2027 року в’їжджати до Німеччини."
+  },
+  "en": {
+   "t": "Germany extends temporary protection for Ukrainians to March 2028",
+   "p": "Berlin",
+   "d": "Ukrainian and independent sources agree; Russian sources in the sample do not cover the decision.",
+   "ru": null,
+   "ua": "Suspilne, citing the Bundesgesetzblatt government gazette, writes that Germany's Interior Ministry amended the regulation on Ukrainians' stay under temporary protection.",
+   "ind": "DW reports that temporary protection has been extended to 4 March 2028 in line with the EU decision, and that people arriving from Ukraine will be able to enter Germany until 4 December 2027."
+  }
+ },
+ {
+  "key": "1008-rubio-stalemate",
+  "ids": [
+   5450,
+   5497,
+   10322,
+   4433,
+   4434,
+   5530,
+   7712,
+   7732,
+   8442
+  ],
+  "title": "Рубио: урегулирование «ускользает»; Кремль соглашается, Зеленский возражает",
+  "place": "Афины, Мадрид, Москва, Прилуки",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "ТАСС цитирует госсекретаря США Марко Рубио: США готовы содействовать урегулированию, но оно «пока ускользает», а патовая ситуация опасна. Пресс-секретарь Кремля Дмитрий Песков, по данным РИА Новости и Интерфакса, заявил, что конфронтационные заявления Зеленского говорят о нежелании Украины выходить на мирные траектории, а угрозы о «40-дневной операции» теперь «аукаются» самой Украине.",
+   "quotes": [
+    {
+     "id": 5450,
+     "text": "We stand prepared to facilitate and continue to explore any opportunity for a negotiated settlement."
+    },
+    {
+     "id": 4433,
+     "text": "Конфронтационные заявления Владимира Зеленского свидетельствуют о нежелании Украины выходить на мирные траектории"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Зеленский в Прилуках возразил Рубио, по данным Українська правда: нельзя договариваться с Россией об экономических проектах и одновременно говорить о дипломатическом тупике, — и призвал США усилить экономическое давление на Россию и открыть Украине Starlink над российской территорией. Українська правда со ссылкой на РИА пишет, что Песков согласился со словами Рубио об отсутствии перспектив урегулирования.",
+   "quotes": [
+    {
+     "id": 7712,
+     "text": "Ми не в дипломатичному глухому куті. Закрийте їм (РФ – ред.) усю економіку."
+    },
+    {
+     "id": 7732,
+     "text": "Пєсков заявив, що Росія погоджується зі словами Рубіо про те, що наразі не видно жодних перспектив дипломатичного врегулювання."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пишет, что слова Рубио в интервью Kathimerini ставят под сомнение новую мирную инициативу Трампа.",
+   "quotes": [
+    {
+     "id": 8442,
+     "text": "casting further doubt on President Donald Trump's latest push to broker peace"
+    }
+   ]
+  },
+  "diverge": "Российские источники используют слова Рубио, чтобы возложить ответственность за отсутствие мира на Киев; Зеленский оспаривает тезис о тупике и требует от США большего давления на Москву. Kyiv Independent трактует заявления как признак провала инициативы Трампа.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Рубіо: врегулювання «вислизає»; Кремль погоджується, Зеленський заперечує",
+   "p": "Афіни, Мадрид, Москва, Прилуки",
+   "d": "Російські джерела використовують слова Рубіо, щоб покласти відповідальність за відсутність миру на Київ; Зеленський заперечує тезу про глухий кут і вимагає від США більшого тиску на Москву. Kyiv Independent трактує заяви як ознаку провалу ініціативи Трампа.",
+   "ru": "ТАСС цитує держсекретаря США Марко Рубіо: США готові сприяти врегулюванню, але воно «поки вислизає», а патова ситуація небезпечна. Речник Кремля Дмитро Пєсков, за даними РІА Новини та Інтерфаксу, заявив, що конфронаційні заяви Зеленського свідчать про небажання України виходити на мирні траєкторії, а погрози про «40-денну операцію» тепер «відгукуються» самій Україні.",
+   "ua": "Зеленський у Прилуках заперечив Рубіо, за даними Української правди: не можна домовлятися з Росією про економічні проєкти й водночас говорити про дипломатичний глухий кут, — і закликав США посилити економічний тиск на Росію та відкрити Україні Starlink над російською територією. Українська правда з посиланням на РІА пише, що Пєсков погодився зі словами Рубіо про відсутність перспектив врегулювання.",
+   "ind": "Kyiv Independent пише, що слова Рубіо в інтерв’ю Kathimerini ставлять під сумнів нову мирну ініціативу Трампа."
+  },
+  "en": {
+   "t": "Rubio: a settlement is \"elusive\"; the Kremlin agrees, Zelensky objects",
+   "p": "Athens, Madrid, Moscow, Pryluky",
+   "d": "Russian sources use Rubio's words to blame Kyiv for the absence of peace; Zelensky disputes the stalemate thesis and demands more US pressure on Moscow. Kyiv Independent reads the statements as a sign that Trump's initiative is failing.",
+   "ru": "TASS quotes US Secretary of State Marco Rubio: the US is ready to facilitate a settlement, but so far it is \"proving elusive\", and a stalemate is dangerous. Kremlin spokesman Dmitry Peskov, according to RIA Novosti and Interfax, said Zelensky's confrontational statements show Ukraine's unwillingness to pursue peace, and that his threats of a \"40-day operation\" are now backfiring on Ukraine itself.",
+   "ua": "Zelensky, speaking in Pryluky, pushed back against Rubio, according to Ukrainska Pravda: one cannot negotiate economic projects with Russia while speaking of a diplomatic deadlock; he urged the US to increase economic pressure on Russia and open Starlink for Ukraine over Russian territory. Ukrainska Pravda, citing RIA, writes that Peskov agreed with Rubio that there are no prospects for a settlement.",
+   "ind": "Kyiv Independent writes that Rubio's words in an interview with Kathimerini cast further doubt on Trump's latest peace push."
+  }
+ },
+ {
+  "key": "1008-miami-talks",
+  "ids": [
+   10330,
+   5533,
+   6858,
+   8452
+  ],
+  "title": "Уиткофф и Кушнер встретятся с украинской делегацией во Флориде",
+  "place": "Майами",
+  "region": "ukraine-wide",
+  "tags": [],
+  "ru": {
+   "summary": "Интерфакс со ссылкой на Axios и ТАСС со ссылкой на Reuters сообщают, что Стив Уиткофф и Джаред Кушнер в пятницу проведут во Флориде переговоры с украинской делегацией о новых предложениях; по данным Интерфакса, приглашены также советники по нацбезопасности Британии, Франции и ФРГ, представители ЕС и НАТО.",
+   "quotes": [
+    {
+     "id": 10330,
+     "text": "Американские переговорщики Стив Уиткофф и Джаред Кушнер проведут переговоры с представителями Украины в пятницу в штате Флорида"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Зеленский в Прилуках, по данным Суспільне, сообщил, что украинская переговорная группа работала в Европе, а «завтра-послезавтра» будет в США, и выразил надежду, что все сигналы будут донесены до американской стороны.",
+   "quotes": [
+    {
+     "id": 6858,
+     "text": "Наша команда (українська переговорна група — ред.) сьогодні переговорювала в Європі, завтра-післязавтра буде в Сполучених Штатах Америки"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пишет, что делегация встретится с посланниками Трампа 9 октября, чтобы обсудить предложения о перемирии в энергетике и на Черном море.",
+   "quotes": [
+    {
+     "id": 8452,
+     "text": "to discuss proposals for an energy and Black Sea ceasefire"
+    }
+   ]
+  },
+  "diverge": "Источники совпадают в главном; темы переговоров (энергетическое и черноморское перемирие) называет только Kyiv Independent со слов Зеленского, а состав участников — Интерфакс со ссылкой на Axios.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Віткофф і Кушнер зустрінуться з українською делегацією у Флориді",
+   "p": "Маямі",
+   "d": "Джерела збігаються в головному; теми переговорів (енергетичне і чорноморське перемир’я) називає лише Kyiv Independent зі слів Зеленського, а склад учасників — Інтерфакс із посиланням на Axios.",
+   "ru": "Інтерфакс із посиланням на Axios і ТАСС із посиланням на Reuters повідомляють, що Стів Віткофф і Джаред Кушнер у п’ятницю проведуть у Флориді переговори з українською делегацією щодо нових пропозицій; за даними Інтерфаксу, запрошено також радників з нацбезпеки Британії, Франції та ФРН, представників ЄС і НАТО.",
+   "ua": "Зеленський у Прилуках, за даними Суспільного, повідомив, що українська переговорна група працювала в Європі, а «завтра-післязавтра» буде у США, і висловив сподівання, що всі сигнали буде донесено до американської сторони.",
+   "ind": "Kyiv Independent пише, що делегація зустрінеться з посланцями Трампа 9 жовтня, щоб обговорити пропозиції про перемир’я в енергетиці та на Чорному морі."
+  },
+  "en": {
+   "t": "Witkoff and Kushner to meet a Ukrainian delegation in Florida",
+   "p": "Miami",
+   "d": "Sources agree on the essentials; only Kyiv Independent, citing Zelensky, names the topics (an energy and Black Sea ceasefire), and only Interfax, citing Axios, lists the participants.",
+   "ru": "Interfax, citing Axios, and TASS, citing Reuters, report that Steve Witkoff and Jared Kushner will hold talks with a Ukrainian delegation in Florida on Friday on new proposals; according to Interfax, national security advisers from Britain, France and Germany and EU and NATO representatives have also been invited.",
+   "ua": "Zelensky, speaking in Pryluky, said according to Suspilne that the Ukrainian negotiating team had been working in Europe and would be in the US \"tomorrow or the day after\", and hoped that all signals would be conveyed to the American side.",
+   "ind": "Kyiv Independent writes that the delegation will meet Trump's envoys on 9 October to discuss proposals for an energy and Black Sea ceasefire."
+  }
+ },
+ {
+  "key": "1008-india-turkey-proposals",
+  "ids": [
+   4438,
+   5536,
+   9864,
+   9533
+  ],
+  "title": "Мирные предложения Индии и Турции: реакция Кремля и Анкары",
+  "place": "Москва, Анкара, Нью-Дели",
+  "region": "ukraine-wide",
+  "tags": [],
+  "ru": {
+   "summary": "Песков, по данным РИА Новости и ТАСС, заявил, что предложения Индии касаются лишь определенного сектора урегулирования; ранее Hindustan Times сообщила о трехпунктном плане перемирия с сокращением ударов по энергетике.",
+   "quotes": [
+    {
+     "id": 4438,
+     "text": "Предложения Индии касаются только определенного сектора урегулирования на Украине"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина со ссылкой на министра иностранных дел Турции Хакана Фидана пишет, что турецкое предложение о судоходстве в Черном море остается актуальным и направлено на безопасную доставку зерна.",
+   "quotes": [
+    {
+     "id": 9864,
+     "text": "Мирное предложение Турции для Украины и России по судоходству в Черном море до сих пор актуально."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Al Jazeera пишет, что Украина получила предложения о посредничестве от Индии, Турции, Египта и США на фоне эскалации ударов по энергетике и портам.",
+   "quotes": [
+    {
+     "id": 9533,
+     "text": "Ukraine says it has received proposals from India, Turkiye, Egypt and the United States to broker talks with Russia."
+    }
+   ]
+  },
+  "diverge": "Кремль принижает значение индийского плана как частичного; украинские и независимые источники описывают несколько параллельных посреднических инициатив.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Мирні пропозиції Індії та Туреччини: реакція Кремля та Анкари",
+   "p": "Москва, Анкара, Нью-Делі",
+   "d": "Кремль применшує значення індійського плану як часткового; українські й незалежні джерела описують кілька паралельних посередницьких ініціатив.",
+   "ru": "Пєсков, за даними РІА Новини і ТАСС, заявив, що пропозиції Індії стосуються лише певного сектору врегулювання; раніше Hindustan Times повідомила про трипунктний план перемир’я зі скороченням ударів по енергетиці.",
+   "ua": "РБК-Україна з посиланням на міністра закордонних справ Туреччини Хакана Фідана пише, що турецька пропозиція щодо судноплавства в Чорному морі залишається актуальною і спрямована на безпечне постачання зерна.",
+   "ind": "Al Jazeera пише, що Україна отримала пропозиції щодо посередництва від Індії, Туреччини, Єгипту та США на тлі ескалації ударів по енергетиці й портах."
+  },
+  "en": {
+   "t": "Peace proposals from India and Turkey: the Kremlin's and Ankara's responses",
+   "p": "Moscow, Ankara, New Delhi",
+   "d": "The Kremlin plays down the Indian plan as partial; Ukrainian and independent sources describe several parallel mediation initiatives.",
+   "ru": "Peskov, according to RIA Novosti and TASS, said India's proposals cover only a certain sector of the settlement; Hindustan Times had earlier reported a three-point truce plan including fewer strikes on energy infrastructure.",
+   "ua": "RBC-Ukraine, citing Turkish Foreign Minister Hakan Fidan, writes that Turkey's proposal on Black Sea shipping remains relevant and is aimed at the safe delivery of grain.",
+   "ind": "Al Jazeera writes that Ukraine has received mediation proposals from India, Turkey, Egypt and the United States amid escalating strikes on energy and port infrastructure."
+  }
+ }
+]

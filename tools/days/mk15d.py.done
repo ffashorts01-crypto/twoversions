@@ -1,0 +1,95 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import OUT, add, setd, ext, apply
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- new card (Moscow Times backfill 18:59 + earlier unassigned DW/Interfax/TASS/Suspilne items) ----------------
+card('1015-russian-diesel-exports', [10820, 6039, 6040, 9422, 11455, 7191],
+ 'Кремль: российский дизель начал поступать на мировые рынки после сделки с Трампом; Новак — интерес проявляют и другие страны, лидеры ЕС сделку критикуют', 'Москва, Приморск, Брюссель', 'russia-other',
+ ['расхождение: формулировки'],
+ S('Песков заявил, что высвобождаются большие объемы дизеля, он начал поступать на мировые рынки и окажет определенный позитивный эффект, хотя полностью рынки не стабилизирует; при этом он упрекнул европейские страны в «деструктивной позиции» и назвал Европу «партией войны». Вице-премьер Александр Новак сказал, что российский дизель востребован во всем мире, нефтяные компании готовы начать поставки в любой момент, а ежемесячные поставки впоследствии могут достичь 3 млн тонн.',
+   (10820, 'Этот дизель начал поступать на мировые рынки, и это будет иметь определенный позитивный эффект для стабилизации нефтяных рынков, хотя и не сможет полностью их стабилизировать'),
+   (10820, 'Европа традиционно за последний период проявляет себя как партия войны'),
+   (6040, 'Russian diesel is demanded all over the world.')),
+ S('Суспильне передает реакцию лидеров ЕС на полях саммита: премьер Нидерландов Роб Йеттен призвал Трампа отказаться от сделки, которая наполняет бюджет России, премьер Швеции Ульф Кристерссон назвал ее шагом в неверном направлении, а премьер Чехии Андрей Бабиш — «плохими новостями».',
+   (7191, 'Він закликав президента Трампа відмовитися від цієї угоди.'),
+   (7191, 'Це крок у хибному напрямку.')),
+ S('DW со ссылкой на Reuters и данные LSEG пишет, что 13 октября в порту Приморск на танкер загрузили около 40 000 тонн малосернистого дизельного топлива, после чего он направился в Марокко; Россия 10 октября отменила собственный частичный запрет на вывоз дизеля. The Moscow Times отмечает, что первые 300 000 тонн — меньше суточного потребления транспортного сектора США, а лицензия Минфина США действует до 7 апреля 2027 года.',
+   (9422, 'После достижения договоренности с США Россия возобновила экспорт дизельного топлива.'),
+   (11455, 'is less than a day\'s supply for the U.S. transportation sector alone')),
+ 'Кремль представляет поставки дизеля как вклад в стабилизацию рынков и обвиняет Европу в «деструктивной позиции»; лидеры ЕС, которых цитирует Суспильне, считают, что сделка наполняет бюджет России. Фактических расхождений о начале экспорта нет; объемы поставок известны со слов российских официальных лиц и по данным LSEG.',
+ 'low', '', False,
+ ['Кремль: російський дизель почав надходити на світові ринки після угоди з Трампом; Новак — інтерес виявляють і інші країни, лідери ЄС угоду критикують', 'Москва, Приморськ, Брюссель',
+  'Кремль подає постачання дизеля як внесок у стабілізацію ринків і звинувачує Європу в «деструктивній позиції»; лідери ЄС, яких цитує Суспільне, вважають, що угода наповнює бюджет Росії. Фактичних розбіжностей щодо початку експорту немає; обсяги постачань відомі зі слів російських посадовців і за даними LSEG.',
+  'Пєсков заявив, що вивільняються великі обсяги дизеля, він почав надходити на світові ринки й матиме певний позитивний ефект, хоча повністю ринки не стабілізує; водночас він дорікнув європейським країнам «деструктивною позицією» і назвав Європу «партією війни». Віцепрем’єр Олександр Новак сказав, що російський дизель затребуваний у всьому світі, нафтові компанії готові почати постачання будь-якої миті, а щомісячні постачання згодом можуть сягнути 3 млн тонн.',
+  'Суспільне передає реакцію лідерів ЄС на полях саміту: прем’єр Нідерландів Роб Єттен закликав Трампа відмовитися від угоди, яка наповнює бюджет Росії, прем’єр Швеції Ульф Крістерссон назвав її кроком у хибному напрямку, а прем’єр Чехії Андрій Бабіш — «поганими новинами».',
+  'DW із посиланням на Reuters і дані LSEG пише, що 13 жовтня в порту Приморськ на танкер завантажили близько 40 000 тонн малосірчистого дизельного палива, після чого він вирушив до Марокко; Росія 10 жовтня скасувала власну часткову заборону на вивезення дизеля. The Moscow Times зазначає, що перші 300 000 тонн — менше за добове споживання транспортного сектору США, а ліцензія Мінфіну США діє до 7 квітня 2027 року.'],
+ ['Kremlin: Russian diesel has begun reaching world markets after the deal with Trump; Novak says other countries are interested too, EU leaders criticise the deal', 'Moscow, Primorsk, Brussels',
+  'The Kremlin presents the diesel supplies as a contribution to stabilising markets and accuses Europe of a "destructive position"; EU leaders quoted by Suspilne say the deal fills Russia\'s budget. There are no factual discrepancies about the start of exports; supply volumes are known from Russian officials and LSEG data.',
+  'Peskov said large volumes of diesel are being released, it has begun reaching world markets and will have a certain positive effect, although it will not fully stabilise the markets; at the same time he reproached European countries for their "destructive position" and called Europe "the party of war". Deputy Prime Minister Alexander Novak said Russian diesel is in demand all over the world, oil companies are ready to start supplies at any moment, and monthly supplies could later reach 3 million tonnes.',
+  'Suspilne relays the reaction of EU leaders on the sidelines of the summit: Dutch Prime Minister Rob Jetten urged Trump to abandon the deal, which fills Russia\'s budget, Swedish Prime Minister Ulf Kristersson called it a step in the wrong direction, and Czech Prime Minister Andrej Babis called it "bad news".',
+  'DW, citing Reuters and LSEG data, writes that on October 13 about 40 000 tonnes of ultra-low sulphur diesel were loaded onto a tanker at the port of Primorsk, which then headed for Morocco; on October 10 Russia lifted its own partial ban on diesel exports. The Moscow Times notes that the first 300 000 tonnes are less than a day\'s consumption of the US transport sector, and the US Treasury licence runs until April 7, 2027.'])
+
+json.dump(cards, open(OUT + 'c15d.json', 'w'), ensure_ascii=False, indent=1)
+print('new cards', len(cards))
+
+# ---------------- extensions of earlier 2026-10-15 cards (Moscow Times / France 24 backfill) ----------------
+@ext('1015-refinery-pause-lifted-ryazan', [11452])
+def _(c):
+    add(c, 'ind', 'The Moscow Times напоминает, что Рязанский НПЗ «Роснефти» снабжает топливом Москву и обеспечивает 5% нефтепереработки России; Кремль, по данным издания, заявил, что не считает, будто Киев вообще соблюдал перемирие. Зеленский, по словам MT, согласился бы прекратить удары по энергетике лишь в обмен на дополнительные ракеты Patriot.',
+        'The Moscow Times нагадує, що Рязанський НПЗ «Роснєфті» постачає паливо до Москви і забезпечує 5% нафтопереробки Росії; Кремль, за даними видання, заявив, що не вважає, ніби Київ узагалі дотримувався перемир’я. Зеленський, за словами MT, погодився б припинити удари по енергетиці лише в обмін на додаткові ракети Patriot.',
+        'The Moscow Times recalls that Rosneft\'s Ryazan refinery supplies fuel to Moscow and accounts for 5% of Russia\'s refining; the Kremlin, according to the outlet, said it did not believe Kyiv had ever complied with the ceasefire. Zelensky, according to MT, would agree to stop strikes on energy only in exchange for more Patriot missiles.',
+        [(11452, 'The Kremlin said Thursday that Moscow did not perceive that Kyiv had ever complied with the ceasefire'),
+         (11452, 'he could only agree if in return he was given more U.S.-made Patriot interceptors')])
+
+@ext('1015-swede-detained-pskov', [11453])
+def _(c):
+    add(c, 'ind', 'The Moscow Times со ссылкой на видео ФСБ пишет, что задержанный назвался 35-летним Фредди Линдхольмом и рассказал о контракте с батальоном «Айдар», подписанном в Тернополе; МИД Швеции сообщил, что знает о сообщениях СМИ, но делом не занимается.',
+        'The Moscow Times із посиланням на відео ФСБ пише, що затриманий назвався 35-річним Фредді Ліндгольмом і розповів про контракт із батальйоном «Айдар», підписаний у Тернополі; МЗС Швеції повідомило, що знає про повідомлення ЗМІ, але справою не займається.',
+        'The Moscow Times, citing an FSB video, writes that the detainee identified himself as 35-year-old Freddy Lindholm and spoke of a contract with the Aidar battalion signed in Ternopil; the Swedish Foreign Ministry said it was aware of media reports but was not involved in the case.',
+        [(11453, 'In the interrogation video, Lindholm said he had signed a military contract with the Aidar battalion'),
+         (11453, 'The Swedish Foreign Ministry said it was aware of media reports about the detention, but was not currently involved in the case.')])
+
+@ext('1015-starshield-restored', [11456, 11486])
+def _(c):
+    add(c, 'ind', 'The Moscow Times со ссылкой на Укринформ пишет, что функции Starshield полностью восстановлены, а Зеленский в интервью FT заявил, что это была «не техническая проблема», а «воля». France 24 отмечает, что Маск возложил ответственность на Пентагон, Трамп отрицает изменение политики обмена разведданными, а сбой оживил в Киеве опасения, что США — необходимый, но все менее надежный союзник.',
+        'The Moscow Times із посиланням на Укрінформ пише, що функції Starshield повністю відновлено, а Зеленський в інтерв’ю FT заявив, що це була «не технічна проблема», а «воля». France 24 зазначає, що Маск поклав відповідальність на Пентагон, Трамп заперечує зміну політики обміну розвідданими, а збій пожвавив у Києві побоювання, що США — необхідний, але дедалі менш надійний союзник.',
+        'The Moscow Times, citing Ukrinform, writes that Starshield functionality has been fully restored, while Zelensky told the FT it was "not a technical problem" but "the will". France 24 notes that Musk blamed the Pentagon, Trump denies any change in intelligence-sharing policy, and the outage revived fears in Kyiv that the US is an essential but increasingly unreliable ally.',
+        [(11456, 'It was not a technical problem, it was the will'),
+         (11486, 'the restrictions revived fears in Kyiv that the US is an essential but increasingly unreliable ally')])
+
+@ext('1015-su34-borisoglebsk-neptune', [11460])
+def _(c):
+    add(c, 'ind', 'The Moscow Times отмечает, что уничтожение шести самолетов независимо не подтверждено, а российские власти удар по аэродрому не признали; губернатор Воронежской области Александр Гусев сообщил лишь о 33 перехваченных дронах и «нескольких реактивных воздушных целях».',
+        'The Moscow Times зазначає, що знищення шести літаків незалежно не підтверджено, а російська влада удару по аеродрому не визнала; губернатор Воронезької області Олександр Гусєв повідомив лише про 33 перехоплені дрони та «кілька реактивних повітряних цілей».',
+        'The Moscow Times notes that the destruction of the six aircraft has not been independently verified and that Russian authorities did not acknowledge a strike on the airfield; Voronezh region Governor Alexander Gusev reported only 33 drones intercepted and "several jet-powered aerial targets".',
+        [(11460, 'The reported destruction of the six warplanes could not be independently verified.'),
+         (11460, 'Russian authorities did not acknowledge a strike on the airfield.')])
+
+@ext('1015-black-sea-tankers-romania', [11485])
+def _(c):
+    add(c, 'ind', 'France 24 приводит слова Никушора Дана после встречи с болгарским лидером и Рютте: ситуация в Черном море серьезная, тенденция «неприемлема» и «должна прекратиться»; по данным Румынского морского ведомства, пятеро моряков Wine Trader спасены, судно шло без груза.',
+        'France 24 наводить слова Нікушора Дана після зустрічі з болгарським лідером і Рютте: ситуація в Чорному морі серйозна, тенденція «неприйнятна» і «має припинитися»; за даними Румунського морського відомства, п’ятьох моряків Wine Trader врятовано, судно йшло без вантажу.',
+        'France 24 quotes Nicusor Dan after a meeting with the Bulgarian leader and Rutte: the situation in the Black Sea is serious and the trend is "unacceptable" and "has to stop"; according to the Romanian Naval Authority, five sailors from the Wine Trader were rescued and the ship was carrying no cargo.',
+        [(11485, 'The situation in the Black Sea is serious. Commercial ships are being attacked and sunk.'),
+         (11485, 'adding that the ship was not carrying any cargo')])
+
+@ext('1015-refinery-strikes-reactions', [11475])
+def _(c):
+    add(c, 'ind', 'The Moscow Times называет слова Путина первым публичным признанием атак на дата-центры «Яндекса» и Сбербанка и отмечает, что они противоречат отчетам Минобороны РФ, начавшего удары по украинским дата-центрам еще в прошлом месяце; Путин также признал, что спецслужбы не предвидели атак на логистические хабы Wildberries и Ozon.',
+        'The Moscow Times називає слова Путіна першим публічним визнанням атак на дата-центри «Яндекса» і Сбербанку й зазначає, що вони суперечать звітам Міноборони РФ, яке почало удари по українських дата-центрах ще минулого місяця; Путін також визнав, що спецслужби не передбачили атак на логістичні хаби Wildberries та Ozon.',
+        'The Moscow Times calls Putin\'s remarks his first public acknowledgement of the attacks on Yandex and Sberbank data centres and notes that they contradict reports by the Russian Defence Ministry, which began striking Ukrainian data centres last month; Putin also admitted that the security services had not foreseen attacks on the Wildberries and Ozon logistics hubs.',
+        [(11475, 'They took the first step and we began to answer.'),
+         (11475, 'Putin also admitted that Russian security services failed to anticipate attacks targeting commercial logistics hubs like Wildberries and Ozon.')])
+
+@ext('1015-eu-summit-zelensky-brussels', [11466, 11487])
+def _(c):
+    add(c, 'ind', 'France 24 пишет, что Зеленский встретился в Брюсселе с Рютте и Макроном; Макрон назвал «крайне важным», чтобы Украина получила все средства для защиты, а Туск написал украинцам, что они не одни. The Moscow Times сообщает, что председатель Европарламента Роберта Мецола после саммита призвала продвигаться с целевыми визовыми ограничениями для россиян, а премьер Финляндии Петтери Орпо намерен предложить полностью прекратить выдачу им туристических виз.',
+        'France 24 пише, що Зеленський зустрівся в Брюсселі з Рютте й Макроном; Макрон назвав «вкрай важливим», щоб Україна отримала всі засоби для захисту, а Туск написав українцям, що вони не самі. The Moscow Times повідомляє, що голова Європарламенту Роберта Мецола після саміту закликала просуватися з цільовими візовими обмеженнями для росіян, а прем’єр Фінляндії Петтері Орпо має намір запропонувати повністю припинити видачу їм туристичних віз.',
+        'France 24 writes that Zelensky met Rutte and Macron in Brussels; Macron called it "crucial" that Ukraine receive all means to protect itself, and Tusk told Ukrainians they are not alone. The Moscow Times reports that European Parliament President Roberta Metsola called after the summit for progress on targeted visa restrictions for Russians, while Finnish Prime Minister Petteri Orpo plans to propose a complete halt to tourist visas for them.',
+        [(11487, 'I can reassure you, dear Ukrainian friends and President Zelensky: YOU ARE NOT ALONE'),
+         (11466, 'We must also increase pressure on Russia, notably by making progress on targeted visa restrictions')])
+
+apply(['c15a.json', 'c15b.json', 'c15c.json'])

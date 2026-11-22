@@ -1,0 +1,115 @@
+import sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 04:04: extensions ----------------
+def rep(c, path, old, new):
+    o = c
+    for k in path[:-1]: o = o[k]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+@ext('1022-lipetsk-moscow-drone-attack', [15504, 15530, 15587, 15588, 15585, 15505, 15543, 15511, 15547, 15590, 15515, 15554, 15591, 15557, 15518])
+def _(c):
+    c['title'] = 'Ночная атака беспилотников на Липецк и Москву: Собянин — 630 дронов летели на Московский регион, пострадавшие в Липецке и Новой Москве'
+    c['uk']['t'] = 'Нічна атака безпілотників на Липецьк і Москву: Собянін — 630 дронів летіли на Московський регіон, постраждалі в Липецьку та Новій Москві'
+    c['en']['t'] = 'Overnight drone attack on Lipetsk and Moscow: Sobyanin says 630 drones flew towards the Moscow region, people injured in Lipetsk and New Moscow'
+    rep(c, ['ru', 'summary'], 'выросло сначала до 56, затем до 90.',
+        'выросло сначала до 56, затем до 90 и 163. Под утро Собянин сообщил, что с вечера 21 октября до утра 22 октября в сторону Московского региона летели 630 беспилотников, большая часть уничтожена «на дальних рубежах», в районе Вороново в Новой Москве пострадали два человека; еще один беспилотник сбит над Ленинградской областью.')
+    rep(c, ['ru', 'summary'], '«Аэрофлот» переносит и отменяет часть рейсов.',
+        '«Аэрофлот» переносит и отменяет часть рейсов. Ракетная опасность в Ярославской области продлилась чуть более часа, движение на выезде к Москве восстановлено.')
+    rep(c, ['uk', 'ru'], 'зросла спершу до 56, потім до 90.',
+        'зросла спершу до 56, потім до 90 і 163. Під ранок Собянін повідомив, що з вечора 21 жовтня до ранку 22 жовтня в бік Московського регіону летіли 630 безпілотників, більшість знищено «на дальніх рубежах», у районі Вороново в Новій Москві постраждали двоє людей; ще один безпілотник збито над Ленінградською областю.')
+    rep(c, ['uk', 'ru'], '«Аерофлот» переносить і скасовує частину рейсів.',
+        '«Аерофлот» переносить і скасовує частину рейсів. Ракетна небезпека в Ярославській області тривала трохи більше години, рух на виїзді до Москви відновлено.')
+    rep(c, ['en', 'ru'], 'first to 56 and then to 90.',
+        'first to 56, then to 90 and 163. Towards morning Sobyanin said that from the evening of 21 October to the morning of 22 October 630 drones flew towards the Moscow region, most of them destroyed "at distant lines", and two people were injured in the Voronovo area of New Moscow; one more drone was downed over Leningrad region.')
+    rep(c, ['en', 'ru'], 'Aeroflot is rescheduling and cancelling some flights.',
+        'Aeroflot is rescheduling and cancelling some flights. The missile threat in Yaroslavl region lasted just over an hour, and the road out towards Moscow has reopened.')
+    c['ru']['quotes'] += [q(15588, 'Таким образом, их общее количество увеличилось до 163.'),
+                          q(15515, 'в сторону Московского региона летели 630 БПЛА'),
+                          q(15511, 'Два человека в районе Вороново ТиНАО пострадали, им оказывается вся необходимая помощь'),
+                          q(15518, 'Ракетная опасность продлилась на территории Ярославской области чуть более часа.')]
+    add(c, 'ua', 'РБК-Украина со ссылкой на OSINT-каналы и Собянина пишет о взрывах в Липецке, Туле, Курской и Белгородской областях и о том, что жители севера Москвы слышали громкий взрыв, после которого загорелась многоэтажка; данные Собянина о 90 сбитых на тот момент беспилотниках издание приводит со словом «якобы».',
+        'РБК-Україна з посиланням на OSINT-канали та Собяніна пише про вибухи в Липецьку, Тулі, Курській і Бєлгородській областях і про те, що мешканці півночі Москви чули гучний вибух, після якого спалахнула пожежа в багатоповерхівці; дані Собяніна про 90 збитих на той момент безпілотників видання наводить зі словом «нібито».',
+        'RBC-Ukraine, citing OSINT channels and Sobyanin, reports explosions in Lipetsk, Tula, Kursk and Belgorod regions and says residents of northern Moscow heard a loud explosion followed by a fire in a high-rise building; it gives Sobyanin\'s figure of 90 drones downed at that point with the word "allegedly".',
+        [(15585, 'Загалом він заявив про 90 безпілотників, які нібито летіли на Москву.'),
+         (15585, 'Місцеві жителі півночі Москви чули гучний вибух.')])
+    rep(c, ['diverge'], 'Атаку на Тулу упоминает только «Украинская правда», число сбитых над Москвой дронов — только российские источники.',
+        'Атаку на Тулу упоминают только украинские источники. Данные Собянина о сбитых над Москвой дронах РБК-Украина приводит со словом «якобы» и со ссылкой на OSINT-каналы пишет о пожаре в многоэтажке на севере Москвы, которого российские источники в выборке не упоминают; общее число в 630 беспилотников известно только со слов Собянина.')
+    rep(c, ['uk', 'd'], 'Атаку на Тулу згадує лише «Українська правда», кількість збитих над Москвою дронів — лише російські джерела.',
+        'Атаку на Тулу згадують лише українські джерела. Дані Собяніна про збиті над Москвою дрони РБК-Україна наводить зі словом «нібито» і з посиланням на OSINT-канали пише про пожежу в багатоповерхівці на півночі Москви, якої російські джерела в добірці не згадують; загальна кількість у 630 безпілотників відома лише зі слів Собяніна.')
+    rep(c, ['en', 'd'], 'Only Ukrainska Pravda mentions an attack on Tula, and only Russian sources give the number of drones downed near Moscow.',
+        'Only Ukrainian sources mention an attack on Tula. RBC-Ukraine gives Sobyanin\'s figures for drones downed near Moscow with the word "allegedly" and, citing OSINT channels, reports a fire in a high-rise in northern Moscow that Russian sources in the selection do not mention; the total of 630 drones is known only from Sobyanin.')
+
+@ext('1021-kyiv-ballistic-evening-strike', [15581, 15575, 15556])
+def _(c):
+    add(c, 'ru', 'Под утро 22 октября ТАСС снова сообщил о взрывах в Киеве и воздушной тревоге в столице и ряде областей.',
+        'Під ранок 22 жовтня ТАСС знову повідомив про вибухи в Києві та повітряну тривогу в столиці й низці областей.',
+        'Towards the morning of 22 October TASS again reported explosions in Kyiv and an air-raid alert in the capital and several regions.',
+        [(15556, 'В Киеве произошли новые взрывы.')])
+    add(c, 'ua', '«Общественное» со ссылкой на КГВА сообщило, что в результате удара в Киеве повреждено медицинское учреждение.',
+        '«Суспільне» з посиланням на КМВА повідомило, що внаслідок удару в Києві пошкоджено медичний заклад.',
+        'Suspilne, citing the Kyiv city military administration, reported that a medical facility in Kyiv was damaged in the strike.', [])
+    add(c, 'ind', 'По данным DW, в Печерском районе было повреждено медицинское учреждение.',
+        'За даними DW, у Печерському районі було пошкоджено медичний заклад.',
+        'According to DW, a medical facility in Pechersk district was damaged.',
+        [(15581, 'в Печерском районе было повреждено медицинское учреждение')])
+
+@ext('1021-putin-witkoff-trilateral-talks', [15592, 15514, 15519, 15534, 15507])
+def _(c):
+    add(c, 'ru', 'Ночью РИА Новости со ссылкой на источник в турецком кабмине написало, что Турция готова принять трехсторонние переговоры, если такое предложение поступит от сторон; РИА Новости и ТАСС со ссылкой на Politico пишут, что в ЕС обсуждают кандидатуру собственного переговорщика с Путиным, но консенсуса нет — называют президента Финляндии Александра Стубба и главу Евросовета Антониу Кошту.',
+        'Уночі РИА Новости з посиланням на джерело в турецькому уряді написало, що Туреччина готова прийняти тристоронні переговори, якщо така пропозиція надійде від сторін; РИА Новости і ТАСС з посиланням на Politico пишуть, що в ЄС обговорюють кандидатуру власного переговорника з Путіним, але консенсусу немає — називають президента Фінляндії Александра Стубба і голову Євроради Антоніу Кошту.',
+        'Overnight RIA Novosti, citing a source in the Turkish cabinet, wrote that Turkey is ready to host trilateral talks if the parties propose it; RIA Novosti and TASS, citing Politico, write that the EU is discussing a negotiator of its own to talk to Putin but has no consensus — Finnish President Alexander Stubb and European Council President António Costa are mentioned.',
+        [(15514, 'Турция готова принять трехсторонние переговоры по Украине, если такое предложение поступит от сторон'),
+         (15519, 'в ЕС пока нет консенсуса по возможной кандидатуре на роль переговорщика от блока')])
+    add(c, 'ind', 'France 24 приводит слова Уиткоффа, что переговоры с Путиным были «конструктивными», но «важная работа еще впереди», а обсуждение продолжится на техническом уровне, и сообщает, что ракеты били по Киеву всю ночь вскоре после того, как Россия заявила о готовности возобновить переговоры.',
+        'France 24 наводить слова Віткоффа, що переговори з Путіним були «конструктивними», але «важлива робота ще попереду», а обговорення триватиме на технічному рівні, і повідомляє, що ракети били по Києву всю ніч невдовзі після того, як Росія заявила про готовність відновити переговори.',
+        'France 24 quotes Witkoff as saying the talks with Putin were "constructive" but "there is still important work left to do", with discussions continuing at the technical level, and reports that missiles struck Kyiv throughout the night shortly after Russia signalled readiness to resume talks.',
+        [(15592, 'there is still important work left to do'),
+         (15592, 'Missiles struck Kyiv throughout the night')])
+    setd(c, c['diverge'] + ' О готовности Турции принять переговоры и о поиске Евросоюзом переговорщика пишут только российские агентства (со ссылкой на анонимный источник и Politico); France 24 ставит заявление Москвы о готовности к переговорам рядом с ночным ракетным ударом по Киеву.',
+         c['uk']['d'] + ' Про готовність Туреччини прийняти переговори та про пошук Євросоюзом переговорника пишуть лише російські агентства (з посиланням на анонімне джерело і Politico); France 24 ставить заяву Москви про готовність до переговорів поруч із нічним ракетним ударом по Києву.',
+         c['en']['d'] + ' Only Russian agencies report Turkey\'s readiness to host the talks and the EU\'s search for a negotiator (citing an anonymous source and Politico); France 24 places Moscow\'s statement of readiness for talks next to the overnight missile strike on Kyiv.')
+
+@ext('1021-russian-diesel-first-tanker-us', [15589])
+def _(c):
+    add(c, 'ru', '«Интерфакс» со ссылкой на корреспондента Politico пишет, что сенаторы-демократы из комитета по международным отношениям допускают будущее расследование сделки и попросят вовлеченные американские компании сохранить документы.',
+        '«Інтерфакс» з посиланням на кореспондента Politico пише, що сенатори-демократи з комітету з міжнародних відносин допускають майбутнє розслідування угоди й попросять залучені американські компанії зберегти документи.',
+        'Interfax, citing a Politico correspondent, writes that Democratic senators on the Foreign Relations Committee may investigate the deal in the future and will ask the US companies involved to preserve documents.',
+        [(15589, 'сохранить документы для потенциальных будущих расследований')])
+    setd(c, c['diverge'] + ' О возможном расследовании сделки в Сенате США в выборке пишет только «Интерфакс».',
+         c['uk']['d'] + ' Про можливе розслідування угоди в Сенаті США в добірці пише лише «Інтерфакс».',
+         c['en']['d'] + ' Only Interfax in the selection reports a possible US Senate investigation of the deal.')
+
+@ext('1021-musk-starlink-wsj', [15574])
+def _(c):
+    add(c, 'ua', '«Общественное» сообщает, что члены Палаты представителей во главе с Джо Уилсоном подписали письмо с призывом разрешить Украине применять Starlink против России; Маск, по данным издания, называет такой шаг «большой эскалацией».',
+        '«Суспільне» повідомляє, що члени Палати представників на чолі з Джо Вілсоном підписали лист із закликом дозволити Україні застосовувати Starlink проти Росії; Маск, за даними видання, називає такий крок «великою ескалацією».',
+        'Suspilne reports that members of the House of Representatives led by Joe Wilson signed a letter calling for Ukraine to be allowed to use Starlink against Russia; Musk, the outlet says, calls such a step a "major escalation".',
+        [(15574, 'Україна повинна мати змогу захищати себе, свій народ і Захід!'),
+         (15574, 'називаючи такий крок «великою ескалацією»')])
+
+@ext('1021-eu-70bn-financing-gap', [15576])
+def _(c):
+    add(c, 'ua', '«Украинская правда» со ссылкой на The Brussels Times пишет, что премьер Бельгии Барт де Вевер уверен: Еврокомиссия не вернется к дебатам об использовании замороженных российских активов в Euroclear для покрытия нужд Украины, хотя отдельные страны могут попытаться снова поднять этот вопрос.',
+        '«Українська правда» з посиланням на The Brussels Times пише, що прем\u2019єр Бельгії Барт де Вевер упевнений: Єврокомісія не повернеться до дебатів про використання заморожених російських активів у Euroclear для покриття потреб України, хоча окремі країни можуть спробувати знову порушити це питання.',
+        'Ukrainska Pravda, citing The Brussels Times, writes that Belgian Prime Minister Bart De Wever is confident the European Commission will not return to the debate on using frozen Russian assets at Euroclear to cover Ukraine\'s needs, although individual countries may try to raise the issue again.',
+        [(15576, 'Я впевнений у цьому, адже саме так і було сказано')])
+    setd(c, c['diverge'] + ' Слова премьера Бельгии о замороженных российских активах приводят только украинские источники.',
+         c['uk']['d'] + ' Слова прем\u2019єра Бельгії про заморожені російські активи наводять лише українські джерела.',
+         c['en']['d'] + ' Only Ukrainian sources quote the Belgian prime minister on frozen Russian assets.')
+
+@ext('1021-front-claims', [15525, 15570, 15571])
+def _(c): pass
+
+@ext('1021-poland-upa-year-dispute', [14667, 15047])
+def _(c): pass
+
+@ext('1020-patriot-purl-delay', [14604, 14749])
+def _(c):
+    add(c, 'ind', 'The Kyiv Independent 21 октября пишет о встрече министра обороны Евгения Хмары и главнокомандующего Михаила Драпатого с делегацией Lockheed Martin, производителя перехватчиков PAC-3, на фоне острой нехватки ракет Patriot; по словам украинских чиновников и военных, Хегсет до сих пор не одобрил передачу значительной партии ракет.',
+        'The Kyiv Independent 21 жовтня пише про зустріч міністра оборони Євгена Хмари та головнокомандувача Михайла Драпатого з делегацією Lockheed Martin, виробника перехоплювачів PAC-3, на тлі гострої нестачі ракет Patriot; за словами українських посадовців і військових, Гегсет досі не схвалив передачу значної партії ракет.',
+        'The Kyiv Independent reports on 21 October that Defence Minister Yevhen Khmara and Commander-in-Chief Mykhailo Drapatyi met a delegation from Lockheed Martin, the maker of PAC-3 interceptors, amid a severe shortage of Patriot missiles; according to Ukrainian officials and officers, Hegseth has still not approved the transfer of a significant batch of missiles.',
+        [(14604, 'U.S. Defense Secretary Pete Hegseth has yet to greenlight the transfer of a significant batch of Patriot missiles for Ukraine')])
+
+apply(['c20a.json', 'c21a.json', 'c21b.json', 'c21c.json', 'c21f.json', 'c22a.json'])

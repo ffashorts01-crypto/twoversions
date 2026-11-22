@@ -1,0 +1,105 @@
+import sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from extlib import add, setd, ext, apply
+
+# ---------------- hourly run 19:03 (ids 11441-11570): extensions of earlier 2026-10-18 cards; no new Oct 18 events with 2+ sources ----------------
+@ext('1018-st-petersburg-drone-attack', [11483, 11490, 11562, 11520])
+def _(c):
+    add(c, 'ru', 'ТАСС пишет, что психологи Российского Красного Креста помогают пострадавшим в пунктах временного размещения в Петербурге и Ленобласти.',
+        'ТАСС пише, що психологи Російського Червоного Хреста допомагають постраждалим у пунктах тимчасового розміщення в Петербурзі та Ленобласті.',
+        'TASS writes that Russian Red Cross psychologists are helping those affected at temporary accommodation centres in St Petersburg and Leningrad region.',
+        [(11520, 'Российский Красный крест работает в пунктах временного размещения')])
+    add(c, 'ind', 'The Moscow Times и France 24 передают данные Беглова об одном погибшем и пятерых пострадавших; France 24 со ссылкой на госСМИ называет атаку крупнейшей на город с начала войны в 2022 году и приводит данные Дрозденко о 144 сбитых над областью дронах, Kyiv Independent — о 127. Kyiv Independent пишет также об ударе по мосту и отмечает, что не смог независимо проверить цели и масштаб ущерба.',
+        'The Moscow Times і France 24 передають дані Беглова про одного загиблого й п’ятьох постраждалих; France 24 з посиланням на держЗМІ називає атаку наймасштабнішою на місто від початку війни у 2022 році й наводить дані Дрозденка про 144 збиті над областю дрони, Kyiv Independent — про 127. Kyiv Independent пише також про удар по мосту й зазначає, що не зміг незалежно перевірити цілі та масштаб збитків.',
+        'The Moscow Times and France 24 relay Beglov\'s figures of one dead and five injured; France 24, citing state media, calls it the largest attack on the city since the war began in 2022 and gives Drozdenko\'s figure of 144 drones downed over the region, Kyiv Independent his figure of 127. Kyiv Independent also writes about a strike on a bridge and notes that it could not independently verify the targets or the extent of the damage.',
+        [(11483, 'One person was killed and five injured in a Ukrainian drone attack on St. Petersburg, governor Alexander Beglov said on Sunday.'),
+         (11490, 'with state media saying this was the largest attack on the city since the start of the 2022 war'),
+         (11562, 'Aleksandr Drozdenko, governor of Leningrad Oblast, said 127 Ukrainian drones were shot down over the region.')])
+
+@ext('1018-zelensky-nbc-bessent-starlink', [11492])
+def _(c):
+    add(c, 'ru', 'Вечером РИА Новости вынесло в заголовок слова Зеленского «Мы не выстоим», назвав их «тяжелым признанием»: по тексту, речь шла о сценарии, при котором США поддержат Россию; он также выразил надежду, что Трамп изменит свои решения.',
+        'Увечері РИА Новости винесло в заголовок слова Зеленського «Ми не вистоїмо», назвавши їх «тяжким визнанням»: за текстом, ішлося про сценарій, за якого США підтримають Росію; він також висловив надію, що Трамп змінить свої рішення.',
+        'In the evening RIA Novosti headlined Zelensky\'s words "We will not hold out", calling them a "hard admission": according to the text, he was referring to a scenario in which the US backs Russia; he also expressed hope that Trump would change his decisions.',
+        [(11492, 'Украина не справится, если США решат поддержать Россию'),
+         (11492, 'изменит свои решения')])
+    setd(c, c['diverge'] + ' РИА Новости выносит в заголовок «Мы не выстоим» как «тяжелое признание» Зеленского; условие — поддержка России со стороны США — приводится только в тексте.',
+         c['uk']['d'] + ' РИА Новости виносить у заголовок «Ми не вистоїмо» як «тяжке визнання» Зеленського; умова — підтримка Росії з боку США — наводиться лише в тексті.',
+         c['en']['d'] + ' RIA Novosti headlines "We will not hold out" as Zelensky\'s "hard admission"; the condition, US support for Russia, appears only in the body text.')
+
+@ext('1018-lithuania-starlink-arson', [11559, 11565])
+def _(c):
+    add(c, 'ua', '«Украинская правда» со ссылкой на Reuters передает слова главы Национального центра управления кризисами Литвы Вилмантаса Виткаускаса: это была не обычная попытка поджога, а диверсия, связанная с прежними поджогами станций Starlink в Болгарии и Польше и направленная против Украины.',
+        '«Українська правда» з посиланням на Reuters передає слова керівника Національного центру управління кризами Литви Вілмантаса Віткаускаса: це був не звичайний підпал, а диверсія, пов’язана з попередніми підпалами станцій Starlink у Болгарії та Польщі й спрямована проти України.',
+        'Ukrainska Pravda, citing Reuters, quotes Vilmantas Vitkauskas, head of Lithuania\'s National Crisis Management Centre: it was not an ordinary arson attempt but sabotage linked to earlier arson attacks on Starlink stations in Bulgaria and Poland and aimed at Ukraine.',
+        [(11559, 'Ми розуміємо, що це був не звичайний підпал, а диверсійний акт'),
+         (11559, 'Це частина російських спроб зірвати роботу Starlink і вплинути на успіх українських операцій. Ціллю є Україна')])
+    add(c, 'ind', 'DW пишет, что на месте нашли канистры с горючим объемом от 3 до 10 литров, объект обслуживает девять антенн Starlink, используемых Украиной, а вероятным заказчиком Синкявичюс считает Россию; издание напоминает о поджогах наземных станций Starlink в Польше и Болгарии.',
+        'DW пише, що на місці знайшли каністри з пальним об’ємом від 3 до 10 літрів, об’єкт обслуговує дев’ять антен Starlink, які використовує Україна, а ймовірним замовником Сінкявічюс вважає Росію; видання нагадує про підпали наземних станцій Starlink у Польщі та Болгарії.',
+        'DW writes that canisters of flammable liquid of 3 to 10 litres were found at the scene, the facility serves nine Starlink antennas used by Ukraine, and Sinkevicius considers Russia the likely client; the outlet recalls arson attacks on Starlink ground stations in Poland and Bulgaria.',
+        [(11565, 'Вероятным заказчиком диверсии Синкявичюс считает Россию, выяснить это предстоит следственным органам.')])
+
+@ext('1018-lithuania-drone-from-poland', [11502, 11554])
+def _(c):
+    add(c, 'ru', 'Вечером РИА Новости сообщило, что Украина «признала» нарушение воздушного пространства Литвы своим дроном: представитель МИД Георгий Тихий принес извинения и не исключил влияние РЭБ; агентство напоминает, что страны Балтии отрицали предоставление Украине своего воздушного пространства для атак.',
+        'Увечері РИА Новости повідомило, що Україна «визнала» порушення повітряного простору Литви своїм дроном: речник МЗС Георгій Тихий перепросив і не виключив впливу РЕБ; агентство нагадує, що країни Балтії заперечували надання Україні свого повітряного простору для атак.',
+        'In the evening RIA Novosti reported that Ukraine had "admitted" that its drone violated Lithuanian airspace: foreign ministry spokesman Heorhii Tykhyi apologised and did not rule out the effect of electronic warfare; the agency recalls that the Baltic states denied giving Ukraine their airspace for attacks.',
+        [(11502, 'Мы сожалеем об инциденте, произошедшем сегодня утром в воздушном пространстве Литвы'),
+         (11502, 'Он не исключил, что отклонение могло быть связано с работой средств радиоэлектронной борьбы.')])
+    add(c, 'ua', 'Суспильне приводит слова Тихого полностью: он также поблагодарил Литву за поддержку и назвал российскую агрессию первопричиной угроз безопасности в регионе.',
+        'Суспільне наводить слова Тихого повністю: він також подякував Литві за підтримку й назвав російську агресію першопричиною загроз безпеці в регіоні.',
+        'Suspilne quotes Tykhyi in full: he also thanked Lithuania for its support and called Russian aggression the root cause of security threats in the region.',
+        [(11554, 'яка є першопричиною загроз безпеці в нашому регіоні')])
+    setd(c, 'Литва предполагала залет дрона из Польши, Польша это не подтверждает; МИД Украины, извинившись, фактически допустил, что дрон был украинским и сбился с курса из-за российской РЭБ, — РИА Новости подает это как «признание» Украиной нарушения воздушного пространства Литвы, а версию о РЭБ — лишь как допущение. РИА подает действия польских ВВС как реакцию «якобы» на активность России.',
+         'Литва припускала заліт дрона з Польщі, Польща цього не підтверджує; МЗС України, перепросивши, фактично припустило, що дрон був українським і збився з курсу через російське РЕБ, — РИА Новости подає це як «визнання» Україною порушення повітряного простору Литви, а версію про РЕБ — лише як припущення. РИА подає дії польських ВПС як реакцію «нібито» на активність Росії.',
+         'Lithuania suggested the drone came from Poland, which Poland does not confirm; Ukraine\'s foreign ministry, by apologising, effectively acknowledged the drone may have been Ukrainian and veered off course because of Russian jamming; RIA Novosti presents this as Ukraine\'s "admission" of violating Lithuanian airspace and the jamming version merely as a possibility. RIA presents the Polish air force\'s actions as a reaction "supposedly" to Russian activity.')
+
+@ext('1018-us-sanctions-wright-bessent', [11522, 11569, 11482])
+def _(c):
+    add(c, 'ru', 'ТАСС также приводит слова Райта о том, что Трамп ищет «инновационные» пути урегулирования: рациональные диалоги, по его словам, не сработали, а дизельная сделка дает России мотивацию.',
+        'ТАСС також наводить слова Райта про те, що Трамп шукає «інноваційні» шляхи врегулювання: раціональні діалоги, за його словами, не спрацювали, а дизельна угода дає Росії мотивацію.',
+        'TASS also quotes Wright as saying Trump is looking for "innovative" ways to a settlement: rational dialogues, he said, have not worked, and the diesel deal gives Russia a motivation.',
+        [(11522, 'Clearly, rational conversation dialogues have not worked.'),
+         (11522, 'This is quite innovative, actually.')])
+    add(c, 'ua', 'РБК-Украина со ссылкой на Reuters пишет, что Турция будет забирать часть российского дизеля в рамках сделки, и оценивает решение Вашингтона как игру на руку Кремлю, напоминая о приостановке «адских санкций».',
+        'РБК-Україна з посиланням на Reuters пише, що Туреччина забиратиме частину російського дизеля в межах угоди, й оцінює рішення Вашингтона як гру на руку Кремлю, нагадуючи про призупинення «пекельних санкцій».',
+        'RBC-Ukraine, citing Reuters, writes that Turkey will take part of the Russian diesel under the deal and describes Washington\'s decision as playing into the Kremlin\'s hands, recalling the suspension of the "hellish sanctions".',
+        [(11569, 'У рамках проведених нами переговорів ми будемо забирати частину цього дизельного палива до Туреччини'),
+         (11569, 'Однак така стратегія водночас грає на руку Кремлю.')])
+    add(c, 'ind', 'The Moscow Times со ссылкой на Рубио пишет, что Трамп возьмет до 60 дней, чтобы оценить экономические последствия санкций и пошлин; сенатор Дарлин Грэм, сестра покойного Линдси Грэма, с решением не согласна и выступает за сохранение давления на Россию.',
+        'The Moscow Times із посиланням на Рубіо пише, що Трамп візьме до 60 днів, щоб оцінити економічні наслідки санкцій і мит; сенаторка Дарлін Грем, сестра покійного Ліндсі Грема, із рішенням не згодна й виступає за збереження тиску на Росію.',
+        'The Moscow Times, citing Rubio, writes that Trump will take up to 60 days to assess the economic impact of the sanctions and tariffs; Senator Darline Graham, sister of the late Lindsey Graham, disagrees with the decision and favours keeping the pressure on Russia.',
+        [(11482, 'the president will use up to 60 days to assess the economic impact'),
+         (11482, 'Personally, I would choose to keep the pressure on Russia')])
+    setd(c, 'Американские министры подчеркивают, что основные санкции остаются в силе, а «закон Грэма» лишь приостановлен, и представляют дизельную сделку как способ мотивировать Россию; Рубио, по данным The Moscow Times, говорит о 60-дневной оценке. Украинские СМИ называют такую стратегию игрой на руку Кремлю, а сестра Линдси Грэма выступает за сохранение давления.',
+         'Американські міністри наголошують, що основні санкції залишаються в силі, а «закон Грема» лише призупинено, і подають дизельну угоду як спосіб мотивувати Росію; Рубіо, за даними The Moscow Times, говорить про 60-денну оцінку. Українські ЗМІ називають таку стратегію грою на руку Кремлю, а сестра Ліндсі Грема виступає за збереження тиску.',
+         'US ministers stress that the main sanctions remain in force and the "Graham law" is only suspended, and present the diesel deal as a way to motivate Russia; Rubio, according to The Moscow Times, speaks of a 60-day review. Ukrainian media call this strategy playing into the Kremlin\'s hands, and Lindsey Graham\'s sister favours keeping up the pressure.')
+    c['tags'] = ['расхождение: формулировки']
+
+@ext('1018-front-claims', [11545])
+def _(c):
+    add(c, 'ua', 'Суспильне приводит также слова Зеленского о результатах операций ДШВ и Третьего армейского корпуса: с начала осени, по его словам, освобождено больше территории, чем удалось захватить россиянам.',
+        'Суспільне наводить також слова Зеленського про результати операцій ДШВ і Третього армійського корпусу: з початку осені, за його словами, звільнено більше території, ніж вдалося захопити росіянам.',
+        'Suspilne also quotes Zelensky on the results of operations by the Air Assault Forces and the Third Army Corps: since the start of autumn, he said, more territory has been liberated than the Russians managed to capture.',
+        [(11545, 'наші воїни звільнили більше території з початку осені, ніж росіянам вдалося захопити')])
+
+@ext('1018-civilian-casualties-ukraine', [11543, 11496])
+def _(c):
+    add(c, 'ru', 'Вечером РИА со ссылкой на Суспильне сообщило о взрыве в пригороде Харькова.',
+        'Увечері РИА з посиланням на Суспільне повідомило про вибух у передмісті Харкова.',
+        'In the evening RIA, citing Suspilne, reported an explosion in a suburb of Kharkiv.',
+        [(11496, 'Взрыв прогремел в воскресенье в пригороде Харькова на фоне воздушной тревоги')])
+    add(c, 'ua', 'В Глуховской громаде на Сумщине дроны атаковали жилой сектор: спасатели тушили пожары в трех местах, во время работы произошло повторное попадание, пострадавших нет.',
+        'У Глухівській громаді на Сумщині дрони атакували житловий сектор: рятувальники гасили пожежі в трьох місцях, під час роботи сталося повторне влучання, постраждалих немає.',
+        'In the Hlukhiv community in Sumy region drones attacked a residential area: rescuers fought fires at three sites, a second hit occurred while they were working, and no one was hurt.',
+        [(11543, 'безпосередньо під час роботи працівників ДСНС відбулося повторне влучання безпілотника')])
+
+@ext('1018-strikes-west-ukraine-energy', [11547, 11552])
+def _(c):
+    add(c, 'ua', 'Вечером реактивный дрон ударил по энергообъекту Коростышевской громады на Житомирщине — часть города осталась без света, к 18:50 электроснабжение большинству потребителей вернули; в Здолбуновской громаде после удара остановилось предприятие, пострадавших нет.',
+        'Увечері реактивний дрон ударив по енергооб’єкту Коростишівської громади на Житомирщині — частина міста залишилася без світла, до 18:50 електропостачання більшості споживачів повернули; у Здолбунівській громаді після удару зупинилося підприємство, постраждалих немає.',
+        'In the evening a jet-powered drone struck an energy facility in the Korostyshiv community in Zhytomyr region, leaving part of the town without power; by 18:50 supply had been restored to most consumers; in the Zdolbuniv community an enterprise stopped work after a strike, with no one injured.',
+        [(11547, 'У результаті частина міста та населених пунктів громади одночасно залишилася без світла.'),
+         (11552, 'Підприємство через ураження припинило роботу.')])
+
+apply(['c18a.json', 'c18b.json', 'c18c.json'])

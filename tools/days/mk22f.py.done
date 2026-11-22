@@ -1,0 +1,63 @@
+import sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 05:04: extensions ----------------
+def appd(c, ru, uk, en): setd(c, c['diverge'] + ' ' + ru, c['uk']['d'] + ' ' + uk, c['en']['d'] + ' ' + en)
+
+@ext('1021-hubbard-released', [15252, 15281, 15240, 13797, 13820, 13876, 14989, 14127, 14138, 14140, 14742, 14728, 14717, 14778, 14627, 14633, 14646, 15321])
+def _(c):
+    add(c, 'ru', '«Интерфакс» сообщает, что Уиткофф и Кирилл Дмитриев встретились с Хаббардом в аэропорту Пулково, а затем приводит пост Трампа: освобождения следовало добиться еще при Байдене.',
+        '«Інтерфакс» повідомляє, що Віткофф і Кирило Дмитрієв зустрілися з Габбардом в аеропорту Пулково, а потім наводить допис Трампа: звільнення слід було домогтися ще за Байдена.',
+        'Interfax reports that Witkoff and Kirill Dmitriev met Hubbard at Pulkovo airport, and then quotes Trump\'s post saying the release should have been achieved under Biden.',
+        [(15252, 'встретились в аэропорту Пулково с освобожденным гражданином США Стивеном Хаббардом'),
+         (15281, 'Это следовало сделать давно, еще при сонном Джо Байдене и глупых демократах')])
+    add(c, 'ua', 'РБК-Украина, пересказывая сообщение РИА Новости, напоминает, что Хаббард с 2014 года жил в Изюме, по его словам, российские военные похитили его из собственного дома, а родственники называли его пацифистом, который никогда не взял бы в руки оружие.',
+        'РБК-Україна, переказуючи повідомлення РИА Новости, нагадує, що Габбард з 2014 року жив в Ізюмі, за його словами, російські військові викрали його з власного будинку, а родичі називали його пацифістом, який ніколи не взяв би до рук зброю.',
+        'RBC-Ukraine, retelling the RIA Novosti report, recalls that Hubbard had lived in Izium since 2014, that by his account Russian soldiers abducted him from his own home, and that his relatives called him a pacifist who would never have taken up arms.',
+        [(14989, 'За словами американця, російські військові викрали його з власного будинку.'),
+         (14989, 'родичі Габбарда називали його пацифістом і запевняли, що він ніколи не взяв би до рук зброю')])
+    add(c, 'ind', 'DW и Al Jazeera приводят слова Трампа, что США ничего не отдали взамен и обмена не потребовалось.',
+        'DW і Al Jazeera наводять слова Трампа, що США нічого не віддали натомість і обміну не знадобилося.',
+        'DW and Al Jazeera quote Trump as saying the US gave nothing in return and no exchange was needed.',
+        [(14778, 'the US was not required to give anything in return for the release of the 74-year-old former teacher from Michigan')])
+    appd(c, 'РБК-Украина, в отличие от российских агентств, пишет, что Хаббарда, по его словам, похитили из дома в Изюме, и называет его пацифистом со слов родственников.',
+         'РБК-Україна, на відміну від російських агентств, пише, що Габбарда, за його словами, викрали з дому в Ізюмі, і називає його пацифістом зі слів родичів.',
+         'Unlike the Russian agencies, RBC-Ukraine writes that Hubbard, by his account, was abducted from his home in Izium, and calls him a pacifist, citing his relatives.')
+
+@ext('1020-oslo-zelensky-witkoff-talks', [13506, 14933])
+def _(c):
+    add(c, 'ru', 'РИА Новости выносит в заголовок слова Стубба, что задача Европы — содействовать диалогу между США и Украиной, и ставит их в контекст напряженности между Трампом и Зеленским.',
+        'РИА Новости виносить у заголовок слова Стубба, що завдання Європи — сприяти діалогу між США та Україною, і ставить їх у контекст напруженості між Трампом і Зеленським.',
+        'RIA Novosti headlines Stubb\'s words that Europe\'s task is to facilitate dialogue between the US and Ukraine, and places them in the context of tension between Trump and Zelensky.',
+        [(13506, 'Наша задача - содействовать диалогу между, очевидно, Соединенными Штатами и Украиной')])
+
+@ext('1020-patriot-purl-delay', [14081, 14578])
+def _(c): pass
+
+@ext('1021-merz-capitulation-russia-influence', [15601])
+def _(c):
+    add(c, 'ru', 'Позже РИА Новости под заголовком «Мерца поставили на место» привело реакцию замглавы фракции АдГ Маркуса Фронмайера: немцы просто не хотят эскалации с Россией.',
+        'Пізніше РИА Новости під заголовком «Мерца поставили на місце» навело реакцію заступника голови фракції АдН Маркуса Фронмаєра: німці просто не хочуть ескалації з Росією.',
+        'Later RIA Novosti, under the headline "Merz put in his place", quoted AfD deputy group leader Markus Frohnmaier: Germans simply do not want escalation with Russia.',
+        [(15601, 'Господин Мерц, а не приходило ли вам в голову, что немцы просто не хотят эскалации в отношениях с Россией и не готовы жертвовать всем ради Украины?')])
+
+@ext('1021-kyiv-ballistic-evening-strike', [15666])
+def _(c):
+    add(c, 'ua', 'Утром 22 октября РБК-Украина со ссылкой на КГВА сообщила, что из-за атаки ограничено движение по Южному мосту в сторону левого берега; причину и сроки не уточняют.',
+        'Уранці 22 жовтня РБК-Україна з посиланням на КМВА повідомила, що через атаку обмежено рух Південним мостом у бік лівого берега; причину й терміни не уточнюють.',
+        'On the morning of 22 October RBC-Ukraine, citing the Kyiv City Military Administration, reported that traffic on the Southern Bridge towards the left bank was restricted because of the attack; the cause and duration were not given.',
+        [(15666, 'Обмеження діє лише в одному напрямку: на лівий берег.')])
+
+@ext('1022-lipetsk-moscow-drone-attack', [15632, 15607])
+def _(c): pass
+
+@ext('1021-putin-witkoff-trilateral-talks', [15672])
+def _(c): pass
+
+@ext('1021-eu-70bn-financing-gap', [15665])
+def _(c): pass
+
+@ext('1021-front-claims', [15615, 15617, 15618, 15620])
+def _(c): pass
+
+apply(['c20a.json', 'c21a.json', 'c21b.json', 'c21c.json', 'c21f.json', 'c21i.json', 'c22a.json'])

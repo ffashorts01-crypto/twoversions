@@ -1,0 +1,47 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+cards.append(C('1013-drones-over-russia-moscow', [10623, 10627, 4716, 5833, 5836, 10616, 10625, 10626, 10697, 7076, 8020, 8556],
+ 'Одна из крупнейших атак на Москву: 417 дронов летели к столичному региону; повреждения в Невинномысске и школа в Калужской области', 'Москва, Ставропольский край, Калужская и Ростовская области', 'russia-other',
+ ['не проверено независимо'],
+ S('Мэр Москвы Сергей Собянин сообщил, что с 20:30 12 октября до 07:00 13 октября к Московскому региону летели 417 беспилотников, 65 уничтожены на подлете к столице; ТАСС называет атаку одной из крупнейших в этом году. Минобороны РФ сообщило о 604 дронах за ночь и 883 за сутки. Губернатор Ставрополья сообщил о повреждениях в промзоне Невинномысска, калужский — о 73 сбитых дронах и поврежденной школе.',
+   (10623, 'В период с 20:30 12 октября по 07:00 13 октября в сторону Московского региона летели 417 БПЛА.'),
+   (10625, 'в Невинномысске зафиксированы повреждения в промышленной зоне')),
+ S('Суспільне пересказывает данные Собянина с оговоркой «якобы». Українська правда со ссылкой на Exilenova+ пишет о взрыве еще одного резервуара на нефтеналивном терминале Новошахтинского завода в Ростовской области, атакованном 10 октября.',
+   (8020, 'У Ростові вибухнув ще один резервуар на нафтоналивному терміналі Новошахтинського заводу.')),
+ S('Kyiv Independent со ссылкой на МЧС России пишет о крупном пожаре на складах завода «Аксайкардандеталь» под Ростовом площадью 9000 квадратных метров.',
+   (8556, 'spreading across 9,000 square meters')),
+ 'Данные о сбитых дронах приводят только российские власти; украинские СМИ пересказывают их с оговорками и добавляют сведения мониторинговых каналов о последствиях. Связь пожара в Аксае с атакой в источниках не установлена.',
+ 'medium', 'Данные о дронах — только от российской стороны.', False,
+ ['Одна з наймасованіших атак на Москву: 417 дронів летіли до столичного регіону; пошкодження в Невинномиську і школа в Калузькій області', 'Москва, Ставропольський край, Калузька і Ростовська області',
+  'Дані про збиті дрони наводить лише російська влада; українські ЗМІ переказують їх із застереженнями й додають відомості моніторингових каналів про наслідки. Зв’язок пожежі в Аксаї з атакою у джерелах не встановлено.',
+  'Мер Москви Сергій Собянін повідомив, що з 20:30 12 жовтня до 07:00 13 жовтня до Московського регіону летіли 417 безпілотників, 65 знищено на підльоті до столиці; ТАСС називає атаку однією з наймасованіших цього року. Міноборони РФ повідомило про 604 дрони за ніч і 883 за добу. Губернатор Ставропілля повідомив про пошкодження в промзоні Невинномиська, калузький — про 73 збиті дрони і пошкоджену школу.',
+  'Суспільне переказує дані Собяніна із застереженням «нібито». Українська правда з посиланням на Exilenova+ пише про вибух ще одного резервуара на нафтоналивному терміналі Новошахтинського заводу в Ростовській області, атакованому 10 жовтня.',
+  'Kyiv Independent з посиланням на МНС Росії пише про масштабну пожежу на складах заводу «Аксайкардандеталь» під Ростовом площею 9000 квадратних метрів.'],
+ ['One of the largest attacks on Moscow: 417 drones headed for the capital region; damage in Nevinnomyssk and a school in Kaluga region', 'Moscow, Stavropol, Kaluga and Rostov regions',
+  'Only Russian authorities give the drone figures; Ukrainian media relay them with caveats and add monitoring channels\' reports on the consequences. The sources do not establish a link between the Aksay fire and the attack.',
+  'Moscow Mayor Sergei Sobyanin said that between 20:30 on 12 October and 07:00 on 13 October 417 drones flew toward the Moscow region, 65 of them destroyed approaching the capital; TASS calls it one of the largest attacks this year. The Russian Defence Ministry reported 604 drones overnight and 883 over the day. The Stavropol governor reported damage in an industrial zone in Nevinnomyssk, the Kaluga governor 73 drones downed and a damaged school.',
+  'Suspilne relays Sobyanin\'s figures with the caveat "allegedly". Ukrainska Pravda, citing Exilenova+, reports another tank exploding at the oil terminal of the Novoshakhtinsk plant in Rostov region, attacked on 10 October.',
+  'Kyiv Independent, citing Russia\'s Emergencies Ministry, reports a major fire covering 9000 square metres at warehouses of the Aksaykardandetal plant near Rostov.']))
+
+cards.append(C('1013-russian-side-casualties', [10632, 10651, 10669, 10681, 10680, 10692, 5863, 4757, 10668],
+ 'Российские власти: погибший в Дятькове, раненые пожарные в Брянской области, пятеро пострадавших в Энергодаре; Мирошник — 52 погибших за неделю', 'Брянская и Белгородская области, Энергодар, ЛНР, ДНР', 'russia-other',
+ ['единственный источник', 'не проверено независимо'],
+ S('Губернатор Брянской области Егор Ковальчук сообщил о 55-летнем мужчине, погибшем в Дятькове от сброшенного с дрона взрывного устройства, и о трех пожарных, раненных при взрыве в Жуковке. Белгородский губернатор Александр Шуваев — о 137 атаках за сутки, оперштаб — о четырех раненых, включая 16-летнего подростка. Глава администрации Энергодара Максим Пухов — о пяти пострадавших при обстреле территории у спорткомплекса ЗАЭС; в ЛНР ранены шестеро, в том числе трое детей. Посол МИД РФ Родион Мирошник заявил ТАСС, что за неделю украинские удары убили 52 мирных жителя, в том числе пятерых детей.',
+   (10680, 'В Дятькове во дворе своего дома погиб 55-летний мужчина.'),
+   (10681, 'В Энергодаре число пострадавших в результате обстрела территории около спортивного комплекса Запорожской АЭС возросло до пяти'),
+   (5863, 'Attacks by Ukrainian forces over the past week claimed the lives of 52 Russian civilians, including five children')),
+ None, None,
+ 'Данные приводят только российские и назначенные Россией власти; украинская сторона и независимые СМИ в выборке их не освещают.',
+ 'medium', 'Данные — только от российской стороны.', False,
+ ['Російська влада: загиблий у Дятькові, поранені пожежники на Брянщині, п’ятеро постраждалих в Енергодарі; Мірошник — 52 загиблих за тиждень', 'Брянська і Бєлгородська області, Енергодар, «ЛНР», «ДНР»',
+  'Дані наводять лише російська та призначена Росією влада; українська сторона і незалежні ЗМІ у вибірці їх не висвітлюють.',
+  'Губернатор Брянської області Єгор Ковальчук повідомив про 55-річного чоловіка, загиблого в Дятькові від скинутого з дрона вибухового пристрою, і про трьох пожежників, поранених під час вибуху в Жуковці. Бєлгородський губернатор Олександр Шуваєв — про 137 атак за добу, оперштаб — про чотирьох поранених, зокрема 16-річного підлітка. Призначений Росією голова адміністрації Енергодара Максим Пухов — про п’ятьох постраждалих під час обстрілу території біля спорткомплексу ЗАЕС; у «ЛНР» поранено шістьох, зокрема трьох дітей. Посол МЗС РФ Родіон Мірошник заявив ТАСС, що за тиждень українські удари вбили 52 мирних жителів, зокрема п’ятьох дітей.',
+  None, None],
+ ['Russian authorities: man killed in Diatkovo, firefighters injured in Bryansk region, five hurt in Enerhodar; Miroshnik says 52 killed in a week', 'Bryansk and Belgorod regions, Enerhodar, occupied Luhansk and Donetsk',
+  'Only Russian and Russian-installed authorities give these figures; the Ukrainian side and independent media in the sample do not cover them.',
+  'Bryansk Governor Yegor Kovalchuk reported a 55-year-old man killed in Diatkovo by an explosive device dropped from a drone and three firefighters injured in an explosion in Zhukovka. Belgorod Governor Alexander Shuvayev reported 137 attacks over the day, and the emergency headquarters four injured, including a 16-year-old. Russian-installed Enerhodar administration head Maksim Pukhov reported five injured in shelling near the Zaporizhzhia nuclear plant\'s sports complex; in occupied Luhansk region six were injured, including three children. Russian Foreign Ministry envoy Rodion Miroshnik told TASS that over the week Ukrainian strikes killed 52 civilians, including five children.',
+  None, None]))
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c13c.json', 'w'), ensure_ascii=False)
+print(len(cards))

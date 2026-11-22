@@ -1,0 +1,60 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+NB = '\u00a0'
+
+card('1016-west-centre-drone-attack', [6614, 6627, 10960, 4949, 8166, 7243, 8860, 8159, 8927, 8162, 8921, 8883, 8174, 8199, 8868, 8867, 8211, 7284, 7247, 8164, 8931, 8687, 8636, 9443, 8633],
+ 'Удары реактивными «шахедами» по западу и центру Украины: в Ровно погиб человек, поврежден ТРЦ «Экватор»; Луцк и часть Ровенщины без света', 'Ровно, Луцк, Ковель, Умань, Чортков, Киев', 'ukraine-wide',
+ ['расхождение: характер цели'],
+ S('Минобороны РФ сообщило, что ночью и днем беспилотники поразили объекты портовой инфраструктуры и суда, а также логистические центры: «Блум» в Теплодаре Одесской области и «Экватор» в Ровно, который, по версии ведомства, использовался для хранения грузов в интересах ВСУ.',
+   (6627, 'В результате удара в н.п. Ровно поражен логистический центр «Экватор» , использовавшийся для хранения и распределения грузов в интересах ВСУ.'),
+   (6614, 'В результате удара в Одесской области поражен логистический центр «Блум» в населенном пункте Теплодар')),
+ S('По данным Воздушных сил, ночью Россия запустила 149 ударных дронов (108 реактивных), сбито или подавлено 114, попадания зафиксированы на 24 локациях; днем — еще 315 дронов, сбито 253. В Ровно поражены жилой сектор и крупный торговый центр (по данным местных каналов — ТРЦ «Экватор»), за помощью обратились 7 человек, днем погиб один человек и повреждена школа; Ровно и район массово обесточены. Луцк остался без света и частично без воды, в Ковеле горели грузовики и поврежден таможенный терминал, в Умани загорелась многоэтажка (5 пострадавших), в Чорткове уничтожено иностранное предприятие. «Укрэнерго» сообщило об обесточиваниях в Киеве и восьми областях.',
+   (8166, 'Зафіксовано влучання 27 засобів повітряного нападу противника на 24 локаціях'),
+   (8174, 'Місцеві Телеграм-канали пишуть, що пошкоджень зазнав місцевий ТРЦ " Екватор ".'),
+   (8199, 'У Рівному під час російської атаки пошкоджені об\'єкти цивільної інфраструктури, зокрема школа. Загинула людина.'),
+   (8860, 'В Умані внаслідок падіння БпЛА виникла пожежа в багатоповерхівці.')),
+ S('Kyiv Independent сообщает минимум о трех погибших и 52 раненых за сутки по стране и о 370' + NB + '000 жителях Волынской области без света; Meduza — о разрушенных ТРЦ «Экватор» и гипермаркете «Демакс» в Ровно; DW — об отключениях в Киеве после удара по энергообъекту.',
+   (8636, 'At least three people were killed and 52 others injured across Ukraine over the past day'),
+   (8687, 'Ukrainian media reported that drones hit the “Ekvator” shopping center and the “Demaks” home improvement hypermarket.')),
+ 'Минобороны РФ называет «Экватор» в Ровно логистическим центром ВСУ, тогда как украинские власти и СМИ говорят о торговом центре и ударах по жилому сектору и энергетике.',
+ 'low', '', False,
+ ['Удари реактивними «шахедами» по заходу і центру України: у Рівному загинула людина, пошкоджено ТРЦ «Екватор»; Луцьк і частина Рівненщини без світла', 'Рівне, Луцьк, Ковель, Умань, Чортків, Київ',
+  'Міноборони РФ називає «Екватор» у Рівному логістичним центром ЗСУ, тоді як українська влада і ЗМІ говорять про торговельний центр і удари по житловому сектору та енергетиці.',
+  'Міноборони РФ повідомило, що вночі та вдень безпілотники уразили об’єкти портової інфраструктури і судна, а також логістичні центри: «Блум» у Теплодарі на Одещині та «Екватор» у Рівному, який, за версією відомства, використовувався для зберігання вантажів в інтересах ЗСУ.',
+  'За даними Повітряних сил, уночі Росія запустила 149 ударних дронів (108 реактивних), збито або подавлено 114, влучання зафіксовано на 24 локаціях; удень — ще 315 дронів, збито 253. У Рівному уражено житловий сектор і великий торговельний центр (за даними місцевих каналів — ТРЦ «Екватор»), по допомогу звернулися 7 людей, удень загинула одна людина і пошкоджено школу; Рівне і район масово знеструмлені. Луцьк залишився без світла і частково без води, у Ковелі горіли вантажівки і пошкоджено митний термінал, в Умані зайнялася багатоповерхівка (5 постраждалих), у Чорткові знищено іноземне підприємство. «Укренерго» повідомило про знеструмлення в Києві та восьми областях.',
+  'Kyiv Independent повідомляє щонайменше про трьох загиблих і 52 поранених за добу по країні та про 370' + NB + '000 жителів Волинської області без світла; Meduza — про зруйновані ТРЦ «Екватор» і гіпермаркет «Демакс» у Рівному; DW — про відключення в Києві після удару по енергооб’єкту.'],
+ ['Jet-powered Shahed strikes on western and central Ukraine: one killed in Rivne, Ekvator mall damaged; Lutsk and part of Rivne region without power', 'Rivne, Lutsk, Kovel, Uman, Chortkiv, Kyiv',
+  'The Russian Defence Ministry calls Ekvator in Rivne a Ukrainian military logistics centre, while Ukrainian officials and media speak of a shopping centre and strikes on housing and energy.',
+  'The Russian Defence Ministry said drones struck port infrastructure and ships overnight and during the day, as well as logistics centres: Bloom in Teplodar, Odesa region, and Ekvator in Rivne, which it said was used to store cargo for the Ukrainian army.',
+  'According to the Air Force, Russia launched 149 attack drones overnight (108 jet-powered), 114 were downed or suppressed and hits were recorded at 24 locations; during the day another 315 drones were launched and 253 downed. In Rivne housing and a large shopping centre (Ekvator, according to local channels) were hit, 7 people sought medical help, one person was killed during the day and a school was damaged; Rivne and the surrounding district suffered mass outages. Lutsk lost power and partly water, trucks burned and a customs terminal was damaged in Kovel, an apartment block caught fire in Uman (5 injured) and a foreign-owned plant was destroyed in Chortkiv. Ukrenergo reported outages in Kyiv and eight regions.',
+  'Kyiv Independent reports at least three killed and 52 injured across the country over the day and 370' + NB + '000 people without power in Volyn region; Meduza reports the destroyed Ekvator mall and Demaks hypermarket in Rivne; DW reports outages in Kyiv after a strike on an energy facility.'])
+
+card('1016-kharkiv-sumy-dnipro-strikes', [10898, 8169, 8886, 8951, 8217, 8875, 8173, 8221, 8175, 8209, 9453],
+ 'Харьков: двое погибших при ударе «шахедов», 280 тысяч абонентов без света; удары по ТЦ в Сумах, по Бахмачу и Днепру', 'Харьков, Сумы, Бахмач, Днепр', 'kharkiv',
+ ['одна из групп не освещает'],
+ S('Минобороны РФ сообщило об ударах «Геранями» по трем складам беспилотников и складу ракетно-артиллерийского вооружения ВСУ в районе Запорожья, Эсхара и Морозовки Харьковской области; о жертвах среди мирных жителей российские источники не сообщают.',
+   (10898, 'Российские военнослужащие нанесли удар "Геранями" по трем складам БПЛА и по одному складу ракетно-артиллерийского вооружения ВСУ')),
+ S('Утром реактивные «шахеды» атаковали четыре района Харькова: в Шевченковском районе погибли 71-летняя женщина и 58-летний мужчина, пострадали 19 человек, без света остались 280 тысяч абонентов; вечером удары «Бандеролями» по Немышлянскому и Слободскому районам ранили или травмировали около десяти человек. В Сумах дрон «Молния» попал в торговый центр (трое пострадавших), вечером россияне повторно ударили по месту первой атаки во время помощи пострадавшим. «Бандероли» ударили по Бахмачу Черниговской области, в Днепре погиб мужчина и четверо ранены.',
+   (8886, 'Наразі відомо про двох загиблих - це 71-річна жінка і 58-річний чоловік.'),
+   (8221, 'Коли люди намагалися допомогти постраждалим від першої атаки, росіяни завдали повторного удару'),
+   (8209, 'Пізніше Ганжа повідомив, що через російську атаку на Дніпро загинув чоловік.')),
+ S('DW со ссылкой на Олега Синегубова и Игоря Терехова сообщает о двух погибших в Шевченковском районе Харькова и ударе по энергосистеме города.',
+   (9453, 'По данным Синегубова, жертвы - 71-летняя женщина и 58-летний мужчина.')),
+ 'Российские источники не сообщают о жертвах в Харькове, Сумах и Днепре и описывают удары как поражение военных складов; украинские источники — как удары по жилым кварталам, торговым центрам и энергетике.',
+ 'low', '', False,
+ ['Харків: двоє загиблих від удару «шахедів», 280 тисяч абонентів без світла; удари по ТЦ у Сумах, по Бахмачу і Дніпру', 'Харків, Суми, Бахмач, Дніпро',
+  'Російські джерела не повідомляють про жертв у Харкові, Сумах і Дніпрі та описують удари як ураження військових складів; українські джерела — як удари по житлових кварталах, торговельних центрах і енергетиці.',
+  'Міноборони РФ повідомило про удари «Геранями» по трьох складах безпілотників і складу ракетно-артилерійського озброєння ЗСУ в районі Запоріжжя, Есхара і Морозівки на Харківщині; про жертв серед цивільних російські джерела не повідомляють.',
+  'Вранці реактивні «шахеди» атакували чотири райони Харкова: у Шевченківському районі загинули 71-річна жінка і 58-річний чоловік, постраждали 19 людей, без світла залишилися 280 тисяч абонентів; увечері удари «Бандеролями» по Немишлянському і Слобідському районах поранили або травмували близько десяти людей. У Сумах дрон «Молнія» влучив у торговельний центр (троє постраждалих), увечері росіяни повторно вдарили по місцю першої атаки під час допомоги постраждалим. «Бандеролі» вдарили по Бахмачу на Чернігівщині, у Дніпрі загинув чоловік і четверо поранені.',
+  'DW з посиланням на Олега Синєгубова та Ігоря Терехова повідомляє про двох загиблих у Шевченківському районі Харкова і удар по енергосистемі міста.'],
+ ['Kharkiv: two killed in Shahed strike, 280 thousand customers without power; strikes on a Sumy mall, Bakhmach and Dnipro', 'Kharkiv, Sumy, Bakhmach, Dnipro',
+  'Russian sources report no civilian casualties in Kharkiv, Sumy or Dnipro and describe the strikes as hits on military depots; Ukrainian sources describe strikes on residential areas, shopping centres and energy.',
+  'The Russian Defence Ministry reported Geran strikes on three Ukrainian drone depots and a missile and artillery weapons depot near Zaporizhzhia, Eskhar and Morozivka in Kharkiv region; Russian sources do not report civilian casualties.',
+  'In the morning jet-powered Shaheds hit four districts of Kharkiv: a 71-year-old woman and a 58-year-old man were killed in Shevchenkivskyi district, 19 people were hurt and 280 thousand customers lost power; in the evening Banderol strikes on Nemyshlianskyi and Slobidskyi districts injured or traumatised about ten people. In Sumy a Molniya drone hit a shopping centre (three injured), and in the evening Russian forces struck again at the site of the first attack while people were helping the victims. Banderols hit Bakhmach in Chernihiv region, and in Dnipro a man was killed and four were injured.',
+  'DW, citing Oleh Syniehubov and Ihor Terekhov, reports two killed in Kharkiv\'s Shevchenkivskyi district and a strike on the city\'s power system.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c16b.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

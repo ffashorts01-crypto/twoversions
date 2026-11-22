@@ -1,0 +1,66 @@
+import sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 07:02: extensions (out/ rebuilt as one file per day: out/cDDa.json) ----------------
+def rep(c, path, old, new):
+    d = c
+    for k in path[:-1]: d = d[k]
+    assert old in d[path[-1]], (c['key'], path, old[:40]); d[path[-1]] = d[path[-1]].replace(old, new)
+
+@ext('1022-lipetsk-moscow-drone-attack', [15853, 15855, 15817, 15815, 15858, 15819, 15826, 15774, 15860, 15766, 15821, 15801, 15857, 15822, 15765])
+def _(c):
+    c['ru']['summary'] = ("ТАСС, РИА Новости и «Интерфакс» со ссылкой на губернатора Игоря Артамонова сообщают, что в ночь на 22 октября обломки беспилотника упали на многоквартирный дом в Липецке. "
+        "Сначала мэр Михаил Щербаков сообщал, что пострадавших нет, затем губернатор написал о пострадавшем мужчине 2001 года рождения и поврежденных домах и поликлинике; утром ТАСС сообщил, что ее филиал не будет работать из-за обломков на крыше. "
+        "Число сбитых на подлете к Москве беспилотников, по данным Собянина, росло за ночь с 56 до 90 и 163; всего с вечера 21 октября в сторону Московского региона летели 630, в районе Вороново в Новой Москве пострадали два человека, еще один беспилотник сбит над Ленинградской областью. "
+        "ТАСС называет эту попытку атаки на Москву одной из самых крупных с начала года. В Ярославской области чуть более часа действовала ракетная опасность; в аэропортах, в том числе во Внукове, введены ограничения, «Аэрофлот» переносит и отменяет часть рейсов. "
+        "Губернаторы сообщают о 70 сбитых беспилотниках над Тульской областью, 44 — над Воронежской и 17 — над Калужской; повреждены дома, в Воронежской и Калужской областях — также сети электроснабжения, пострадавших нет.")
+    c['uk']['ru'] = ("ТАСС, РИА Новости та «Інтерфакс» із посиланням на губернатора Ігоря Артамонова повідомляють, що в ніч на 22 жовтня уламки безпілотника впали на багатоквартирний будинок у Липецьку. "
+        "Спочатку мер Михайло Щербаков повідомляв, що постраждалих немає, потім губернатор написав про постраждалого чоловіка 2001 року народження та пошкоджені будинки й поліклініку; вранці ТАСС повідомив, що її філія не працюватиме через уламки на даху. "
+        "Кількість збитих на підльоті до Москви безпілотників, за даними Собяніна, зростала за ніч із 56 до 90 і 163; загалом із вечора 21 жовтня в бік Московського регіону летіли 630, у районі Вороново в Новій Москві постраждали двоє людей, ще один безпілотник збито над Ленінградською областю. "
+        "ТАСС називає цю спробу атаки на Москву однією з наймасштабніших від початку року. У Ярославській області трохи більше години діяла ракетна небезпека; в аеропортах, зокрема у Внуковому, запроваджено обмеження, «Аерофлот» переносить і скасовує частину рейсів. "
+        "Губернатори повідомляють про 70 збитих безпілотників над Тульською областю, 44 — над Воронезькою і 17 — над Калузькою; пошкоджено будинки, у Воронезькій і Калузькій областях — також мережі електропостачання, постраждалих немає.")
+    c['en']['ru'] = ("TASS, RIA Novosti and Interfax, citing Governor Igor Artamonov, report that on the night of 22 October drone debris fell on an apartment building in Lipetsk. "
+        "At first Mayor Mikhail Shcherbakov said no one was hurt; the governor then wrote about an injured man born in 2001 and damaged houses and a clinic; in the morning TASS reported that the clinic branch would not open because of debris on its roof. "
+        "According to Sobyanin, the number of drones downed on their way to Moscow rose during the night from 56 to 90 and 163; in total 630 flew towards the Moscow region from the evening of 21 October, two people were injured in the Voronovo area of New Moscow, and one more drone was downed over Leningrad region. "
+        "TASS calls this attempted attack on Moscow one of the largest since the start of the year. In Yaroslavl region a missile threat lasted just over an hour; airports, including Vnukovo, imposed restrictions, and Aeroflot is rescheduling and cancelling some flights. "
+        "Governors report 70 drones downed over Tula region, 44 over Voronezh region and 17 over Kaluga region; houses were damaged, and in Voronezh and Kaluga regions power lines as well, with no one hurt.")
+    c['ru']['quotes'] += [q(15817, 'попытка атаки БПЛА на Москву стала одной из самых крупных с начала года'),
+                          q(15858, 'Минувшей ночью в небе над Воронежем и четырьмя районами области были обнаружены и уничтожены 44 беспилотных летательных аппарата'),
+                          q(15774, 'Силы ПВО уничтожили 17 БПЛА над Калужской областью ночью, повреждены частные дома и линия электроснабжения'),
+                          q(15821, 'В Липецке филиал поликлиники не будет работать из-за обломков БПЛА на крыше')]
+    add(c, 'ua', "Утром РБК-Украина со ссылкой на мониторинговые Telegram-каналы пишет об атаке дронов на Серпухов: вероятно, под удар попал 75-й арсенал, ремонтирующий зенитные комплексы «Бук» и С-300В; официальных данных о последствиях нет.",
+        "Уранці РБК-Україна з посиланням на моніторингові Telegram-канали пише про атаку дронів на Серпухов: імовірно, під удар потрапив 75-й арсенал, що ремонтує зенітні комплекси «Бук» і С-300В; офіційних даних про наслідки немає.",
+        "In the morning RBC-Ukraine, citing monitoring Telegram channels, reports a drone attack on Serpukhov: the 75th Arsenal, which repairs Buk and S-300V air defence systems, was probably hit; there is no official information on the consequences.",
+        [(15855, 'Ймовірно, під удар потрапив 75-й арсенал, який ремонтує зенітні комплекси "Бук" і С-300В.'), (15855, 'Офіційних даних про наслідки поки немає.')])
+    add(c, 'ind', "DW со ссылкой на Собянина и Артамонова пишет о 630 беспилотниках, летевших на Московский регион, и о раненом в Липецке и ставит атаку в один ряд с ночным ракетным ударом по Киеву — «обмен ударами» вскоре после переговоров Уиткоффа с Путиным.",
+        "DW із посиланням на Собяніна й Артамонова пише про 630 безпілотників, що летіли на Московський регіон, і про пораненого в Липецьку та ставить атаку в один ряд із нічним ракетним ударом по Києву — «обмін ударами» невдовзі після переговорів Віткоффа з Путіним.",
+        "DW, citing Sobyanin and Artamonov, writes of 630 drones launched towards the Moscow region and a man injured in Lipetsk, and puts the attack alongside the night missile strike on Kyiv, an \"exchange of strikes\" shortly after Witkoff's talks with Putin.",
+        [(15853, "Moscow's mayor said that 630 drones were launched towards the region overnight, wounding at least two people.")])
+    rep(c, ['diverge'], 'Об ударе по арсеналу в Серпухове пишет только The Kyiv Independent со ссылкой на мониторинговые каналы; российские источники в выборке его не упоминают.',
+        'Об ударе по арсеналу в Серпухове пишут только The Kyiv Independent и РБК-Украина со ссылкой на мониторинговые каналы (РБК-Украина — как о предприятии по ремонту ПВО); российские источники в выборке его не упоминают. DW ставит атаку на Россию в один ряд с ударом по Киеву.')
+    rep(c, ['uk', 'd'], 'Про удар по арсеналу в Серпухові пише лише The Kyiv Independent з посиланням на моніторингові канали; російські джерела в добірці його не згадують.',
+        'Про удар по арсеналу в Серпухові пишуть лише The Kyiv Independent і РБК-Україна з посиланням на моніторингові канали (РБК-Україна — як про підприємство з ремонту ППО); російські джерела в добірці його не згадують. DW ставить атаку на Росію в один ряд з ударом по Києву.')
+    rep(c, ['en', 'd'], 'Only The Kyiv Independent reports the strike on the Serpukhov arsenal, citing monitoring channels; Russian sources in the selection do not mention it.',
+        'Only The Kyiv Independent and RBC-Ukraine report the strike on the Serpukhov arsenal, citing monitoring channels (RBC-Ukraine describes it as an air defence repair plant); Russian sources in the selection do not mention it. DW puts the attack on Russia alongside the strike on Kyiv.')
+
+@ext('1021-poland-upa-year-dispute', [15837, 15844])
+def _(c):
+    add(c, 'ua', "Утром 22 октября «Украинская правда» и «Общественное» со ссылкой на польский Fakt повторяют опровержение Сеймея; «Общественное» приводит и позицию МИД Украины: решение облсовета контрпродуктивно, депутаты не консультировались с центральной властью.",
+        "Уранці 22 жовтня «Українська правда» і «Суспільне» з посиланням на польський Fakt повторюють спростування Сеймея; «Суспільне» наводить і позицію МЗС України: рішення облради контрпродуктивне, депутати не консультувалися з центральною владою.",
+        "On the morning of 22 October Ukrainska Pravda and Suspilne, citing the Polish tabloid Fakt, repeat Sejmej's denial; Suspilne also gives the position of Ukraine's Foreign Ministry: the council's decision is counterproductive and the deputies did not consult the central authorities.",
+        [(15837, 'Політичні рішення регіональних органів місцевого самоврядування не мають шкодити національним інтересам України')])
+
+@ext('1021-hubbard-released', [15827])
+def _(c):
+    add(c, 'ru', "Позже ТАСС передает, что Трамп высоко оценил освобождение: по его словам, Путин «поступил очень хорошо» и ничего не просил взамен.",
+        "Пізніше ТАСС передає, що Трамп високо оцінив звільнення: за його словами, Путін «вчинив дуже добре» і нічого не просив натомість.",
+        "Later TASS reports that Trump praised the release: in his words, Putin \"did very well\" and asked for nothing in return.",
+        [(15827, 'Трамп высоко оценил освобождение Путиным Хаббарда')])
+
+@ext('1021-musk-starlink-wsj', [15845])
+def _(c): pass
+
+@ext('1021-kyiv-ballistic-evening-strike', [15846])
+def _(c): pass
+
+apply(['c21a.json', 'c22a.json'])

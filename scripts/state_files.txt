@@ -1,0 +1,14 @@
+data/articles.db
+data/cards_auto.json
+data/corrections.json
+data/editor/_keys.json
+data/page_hashes.json
+data/telegram_posted.json
+data/dedup_state.json
+data/hot_state.json
+data/divergence_cache.json
+data/weekly.json
+logs/cost.csv
+logs/auto_run.log
+logs/hot_check.log
+logs/telegram.log

@@ -1,0 +1,90 @@
+import sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 05:59: extensions ----------------
+def appd(c, ru, uk, en): setd(c, c['diverge'] + ' ' + ru, c['uk']['d'] + ' ' + uk, c['en']['d'] + ' ' + en)
+def rep(c, path, old, new):
+    d = c
+    for k in path[:-1]: d = d[k]
+    assert old in d[path[-1]], (c['key'], path, old[:40]); d[path[-1]] = d[path[-1]].replace(old, new)
+
+@ext('1021-kyiv-ballistic-evening-strike', [15704, 15736, 15743, 15744])
+def _(c):
+    c['title'] = 'Вечерний и ночной удары баллистическими ракетами по Киеву: 15 пострадавших за ночь, поврежден Южный мост'
+    c['uk']['t'] = 'Вечірній і нічний удари балістичними ракетами по Києву: 15 постраждалих за ніч, пошкоджено Південний міст'
+    c['en']['t'] = 'Evening and night ballistic missile strikes on Kyiv: 15 injured overnight, Southern Bridge damaged'
+    c['ua']['summary'] = ("РБК-Украина, «Украинская правда» и «Общественное» со ссылкой на Воздушные силы, КГВА и мэра Виталия Кличко пишут, что Россия атаковала Киев баллистическими ракетами. "
+        "В Днепровском районе попадания в здание СТО и частный дом, обломки попали еще в один дом, повреждена АЗС; позже Кличко сообщил о попадании на объект транспортной инфраструктуры в Дарницком районе; вечером пострадали шестеро, четверых госпитализировали. "
+        "«Общественное» подает удар в одном заголовке с согласием Украины на трехстороннюю встречу команд. Ночью, по данным РБК-Украина и «Украинской правды», Россия второй раз выпустила по Киеву баллистические ракеты, «Общественное» пишет о поврежденном медучреждении. "
+        "Утром 22 октября Кличко сообщил о 15 пострадавших в результате ночного обстрела, в том числе двух 15-летних подростках, восемь человек в больницах; РБК-Украина пишет о поврежденной станции скорой помощи в Печерском районе и о Южном мосте: движение на левый берег ограничено, зеленая линия метро работает двумя отдельными участками.")
+    c['uk']['ua'] = ("РБК-Україна, «Українська правда» і «Суспільне» з посиланням на Повітряні сили, КМВА та мера Віталія Кличка пишуть, що Росія атакувала Київ балістичними ракетами. "
+        "У Дніпровському районі влучання в будівлю СТО і приватний будинок, уламки влучили ще в один будинок, пошкоджено АЗС; пізніше Кличко повідомив про влучання на об’єкт транспортної інфраструктури в Дарницькому районі; увечері постраждали шестеро, чотирьох госпіталізували. "
+        "«Суспільне» подає удар в одному заголовку зі згодою України на тристоронню зустріч команд. Уночі, за даними РБК-Україна та «Української правди», Росія вдруге випустила по Києву балістичні ракети, «Суспільне» пише про пошкоджений медзаклад. "
+        "Уранці 22 жовтня Кличко повідомив про 15 постраждалих унаслідок нічного обстрілу, зокрема двох 15-річних підлітків, вісім людей у лікарнях; РБК-Україна пише про пошкоджену станцію швидкої допомоги в Печерському районі та про Південний міст: рух на лівий берег обмежено, зелена лінія метро працює двома окремими ділянками.")
+    c['en']['ua'] = ("RBC-Ukraine, Ukrainska Pravda and Suspilne, citing the Air Force, the Kyiv city military administration and Mayor Vitali Klitschko, write that Russia attacked Kyiv with ballistic missiles. "
+        "In Dniprovskyi district a car service building and a private house were hit, debris hit another house and a petrol station was damaged; Klitschko later reported a hit on a transport infrastructure facility in Darnytskyi district; six people were injured in the evening, four hospitalised. "
+        "Suspilne puts the strike in the same headline as Ukraine's agreement to a trilateral meeting of teams. During the night, according to RBC-Ukraine and Ukrainska Pravda, Russia launched ballistic missiles at Kyiv a second time, and Suspilne reports a damaged medical facility. "
+        "On the morning of 22 October Klitschko reported 15 injured in the night attack, including two 15-year-olds, with eight people in hospital; RBC-Ukraine reports a damaged ambulance station in Pechersk district and damage to the Southern Bridge: traffic to the left bank is restricted and the green metro line runs as two separate sections.")
+    c['ua']['quotes'] += [q(15736, 'Внаслідок ворожого обстрілу вночі 22 жовтня в столиці постраждали 15 людей. Зокрема, двоє дітей по 15 років'),
+                          q(15743, 'Атака пошкодила Південний міст, зокрема частину інфраструктури метрополітену на ньому.'),
+                          q(15744, 'Поїзди курсують двома окремими ділянками')]
+    add(c, 'ru', 'Утром ТАСС сообщил, что на Южном мосту в Киеве ограничено движение транспорта, а Кличко — о повреждении части инфраструктуры метрополитена; о пострадавших в сообщении не говорится.',
+        'Уранці ТАСС повідомив, що на Південному мосту в Києві обмежено рух транспорту, а Кличко — про пошкодження частини інфраструктури метрополітену; про постраждалих у повідомленні не йдеться.',
+        'In the morning TASS reported that traffic on the Southern Bridge in Kyiv was restricted and that Klitschko had reported damage to part of the metro infrastructure; the report does not mention casualties.',
+        [(15704, 'На Южном мосту в Киеве ограничили движение транспорта')])
+    appd(c, 'О 15 пострадавших за ночь пишут только украинские источники; ТАСС сообщает лишь об ограничении движения по Южному мосту и повреждении инфраструктуры метро.',
+         'Про 15 постраждалих за ніч пишуть лише українські джерела; ТАСС повідомляє тільки про обмеження руху Південним мостом і пошкодження інфраструктури метро.',
+         'Only Ukrainian sources report the 15 injured overnight; TASS reports only the traffic restriction on the Southern Bridge and damage to metro infrastructure.')
+    c['uncertainty_reason'] += ' Входят ли шестеро пострадавших вечером в число 15 за ночь, не уточняется.'
+
+@ext('1022-lipetsk-moscow-drone-attack', [15685, 15710, 15714, 15747, 15738])
+def _(c):
+    rep(c, ['ru', 'summary'], 'В Ярославской области губернатор Михаил Евраев объявил ракетную опасность и перекрыл выезд из Ярославля в сторону Москвы; в аэропортах Ярославля и московского авиаузла введены ограничения, «Аэрофлот» переносит и отменяет часть рейсов. Ракетная опасность в Ярославской области продлилась чуть более часа, движение на выезде к Москве восстановлено.',
+        'В Ярославской области чуть более часа действовала ракетная опасность, выезд к Москве перекрывали; в аэропортах введены ограничения, «Аэрофлот» переносит и отменяет часть рейсов. Губернатор Тульской области Дмитрий Миляев сообщил о 70 сбитых за ночь беспилотниках и повреждениях частных домов в Туле и Заокском районе, пострадавших нет.')
+    rep(c, ['uk', 'ru'], 'У Ярославській області губернатор Михайло Євраєв оголосив ракетну небезпеку й перекрив виїзд з Ярославля в бік Москви; в аеропортах Ярославля та московського авіавузла запроваджено обмеження, «Аерофлот» переносить і скасовує частину рейсів. Ракетна небезпека в Ярославській області тривала трохи більше години, рух на виїзді до Москви відновлено.',
+        'У Ярославській області трохи більше години діяла ракетна небезпека, виїзд до Москви перекривали; в аеропортах запроваджено обмеження, «Аерофлот» переносить і скасовує частину рейсів. Губернатор Тульської області Дмитро Міляєв повідомив про 70 збитих за ніч безпілотників і пошкодження приватних будинків у Тулі та Заокському районі, постраждалих немає.')
+    rep(c, ['en', 'ru'], 'In Yaroslavl region, Governor Mikhail Yevrayev declared a missile threat and closed the road out of Yaroslavl towards Moscow; restrictions were imposed at Yaroslavl airport and the Moscow airports, and Aeroflot is rescheduling and cancelling some flights. The missile threat in Yaroslavl region lasted just over an hour, and the road out towards Moscow has reopened.',
+        'In Yaroslavl region a missile threat lasted just over an hour and the road out towards Moscow was closed; airport restrictions were imposed, and Aeroflot is rescheduling and cancelling some flights. Tula Governor Dmitry Milyaev reported 70 drones downed overnight and damage to private houses in Tula and Zaoksky district, with no one hurt.')
+    c['ru']['quotes'] += [q(15685, 'Миляев уточнил, что пострадавших нет.'),
+                          q(15747, 'в результате атаки зафиксированы повреждения частных домовладений в Заокском районе и Туле')]
+    add(c, 'ind', 'Позже The Kyiv Independent со ссылкой на мониторинговые каналы и независимое издание Astra написал, что украинские силы ночью ударили по 75-му арсеналу в Серпухове Московской области, который производит и ремонтирует вооружение; по словам очевидцев, сначала были дроны, затем ракеты. Издание оговаривает, что сообщения не удалось сразу проверить.',
+        'Пізніше The Kyiv Independent з посиланням на моніторингові канали та незалежне видання Astra написав, що українські сили вночі вдарили по 75-му арсеналу в Серпухові Московської області, який виробляє та ремонтує озброєння; за словами очевидців, спершу були дрони, потім ракети. Видання застерігає, що повідомлення не вдалося одразу перевірити.',
+        'Later The Kyiv Independent, citing monitoring channels and the independent outlet Astra, wrote that Ukrainian forces struck the 75th Arsenal in Serpukhov, Moscow region, overnight, a site that produces and repairs weapons; eyewitnesses said drones were followed by missiles. The outlet cautions that the reports could not be immediately verified.',
+        [(15738, 'Eyewitnesses claimed that drones followed by missiles struck the site, known as the 75th Arsenal, according to independent Russian outlet Astra.'),
+         (15738, 'Reports could not be immediately verified by the Kyiv Independent.')])
+    rep(c, ['diverge'], 'Атаку на Тулу упоминают только украинские источники.', 'Об атаке на Тулу украинские источники пишут со ссылкой на мониторинговые каналы, губернатор Тульской области — о 70 сбитых дронах и поврежденных домах.')
+    rep(c, ['uk', 'd'], 'Атаку на Тулу згадують лише українські джерела.', 'Про атаку на Тулу українські джерела пишуть із посиланням на моніторингові канали, губернатор Тульської області — про 70 збитих дронів і пошкоджені будинки.')
+    rep(c, ['en', 'd'], 'Only Ukrainian sources mention an attack on Tula.', 'Ukrainian sources report the attack on Tula citing monitoring channels, while the Tula governor reports 70 drones downed and houses damaged.')
+    appd(c, 'Об ударе по арсеналу в Серпухове пишет только The Kyiv Independent со ссылкой на мониторинговые каналы; российские источники в выборке его не упоминают.',
+         'Про удар по арсеналу в Серпухові пише лише The Kyiv Independent з посиланням на моніторингові канали; російські джерела в добірці його не згадують.',
+         'Only The Kyiv Independent reports the strike on the Serpukhov arsenal, citing monitoring channels; Russian sources in the selection do not mention it.')
+
+@ext('1021-poland-upa-year-dispute', [15739])
+def _(c):
+    add(c, 'ind', 'DW пересказывает сообщения РБК-Украина и «Украинской правды» о приостановке пакета и приводит слова замглавы МИД Польши Марчина Босацкого в интервью Polsat News: с Киевом договорились, что решение не вступит в силу, резолюция исчезла с сайта облсовета.',
+        'DW переказує повідомлення РБК-Україна та «Української правди» про призупинення пакета й наводить слова заступника глави МЗС Польщі Марціна Босацького в інтерв’ю Polsat News: з Києвом домовилися, що рішення не набуде чинності, резолюція зникла із сайту облради.',
+        'DW retells the RBC-Ukraine and Ukrainska Pravda reports on the suspended package and quotes Polish Deputy Foreign Minister Marcin Bosacki on Polsat News: it was agreed with Kyiv that the decision will not take effect, and the resolution has disappeared from the regional council\'s website.',
+        [(15739, 'Мы верим украинским властям на слово и рассчитываем на выполнение этих обещаний')])
+    appd(c, 'Слова замглавы МИД Польши о договоренности с Киевом, что решение облсовета не вступит в силу, приводит только DW.',
+         'Слова заступника глави МЗС Польщі про домовленість із Києвом, що рішення облради не набуде чинності, наводить лише DW.',
+         'Only DW quotes the Polish deputy foreign minister on the agreement with Kyiv that the council\'s decision will not take effect.')
+
+@ext('1019-dobropillia-control-disputed', [14404, 14910, 14206, 14013])
+def _(c):
+    add(c, 'ru', 'Позже Минобороны РФ опубликовало рассказы военнослужащих 51-й армии об «освобождении Доброполья».',
+        'Пізніше Міноборони РФ опублікувало розповіді військовослужбовців 51-ї армії про «звільнення Доброполья».',
+        'Later the Russian Defence Ministry published accounts by soldiers of the 51st Army of the "liberation of Dobropillia".',
+        [(14013, 'Противник отчаянно огрызался, но мы смогли это сделать – освободить Доброполье')])
+    add(c, 'ua', 'Глава Офиса президента Кирилл Буданов, слова которого передают «Украинская правда» и РБК-Украина, заявил, что Доброполье под контролем Украины, а командующий группировкой «Центр» Андрей Иванаев сознательно дезинформирует Путина, уже доложив о взятии города. Позже «Общественное» передало заявление корпуса «Азов»: с начала года с должностей у Доброполья сняли как минимум трех российских командиров за ложные доклады об «успехах».',
+        'Керівник Офісу президента Кирило Буданов, слова якого передають «Українська правда» та РБК-Україна, заявив, що Добропілля під контролем України, а командувач угруповання «Центр» Андрій Іванаєв свідомо дезінформує Путіна, вже доповівши про захоплення міста. Пізніше «Суспільне» передало заяву корпусу «Азов»: від початку року з посад біля Добропілля зняли щонайменше трьох російських командирів за неправдиві доповіді про «успіхи».',
+        'Kyrylo Budanov, head of the Presidential Office, quoted by Ukrainska Pravda and RBC-Ukraine, said Dobropillia is under Ukrainian control and that the commander of the "Centre" group of forces, Andrei Ivanayev, is deliberately misinforming Putin, having already reported the town taken. Later Suspilne relayed a statement by the Azov corps: since the start of the year at least three Russian commanders near Dobropillia have been removed for false reports of "successes".',
+        [(14404, 'Об\'єктивний факт у тому, що Добропілля перебуває під контролем України, а тому про жодне "захоплення" цього українського міста російськими військами не йдеться'),
+         (14206, 'У російські армії прийнято доповідати про взяття населених пунктів у кредит, без встановлення реального контролю.')])
+    appd(c, 'Спор продолжился и позже: Буданов обвиняет российского командующего в ложном докладе Путину, а Минобороны РФ продолжает публиковать рассказы об «освобождении» города.',
+         'Суперечка тривала й пізніше: Буданов звинувачує російського командувача в неправдивій доповіді Путіну, а Міноборони РФ і далі публікує розповіді про «звільнення» міста.',
+         'The dispute continued later: Budanov accuses the Russian commander of a false report to Putin, while the Russian Defence Ministry keeps publishing accounts of the town\'s "liberation".')
+
+@ext('1021-front-claims', [15703])
+def _(c): pass
+
+apply(['c19g.json', 'c21b.json', 'c21c.json', 'c22a.json'])

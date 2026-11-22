@@ -1,0 +1,1122 @@
+[
+ {
+  "key": "1010-zaporizhzhia-five-storey",
+  "ids": [
+   9914,
+   9921,
+   9938,
+   7810,
+   7821,
+   7838,
+   7818,
+   9295,
+   8476,
+   9564,
+   8480,
+   7868
+  ],
+  "title": "Удар управляемыми авиабомбами по пятиэтажке в Запорожье: 20 погибших, среди них трое детей",
+  "place": "Запорожье",
+  "region": "zaporizhzhia",
+  "tags": [
+   "одна из групп не освещает",
+   "расхождение: числа пострадавших"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "И.о. главы Запорожской ОВА Михаил Семикин сообщил, что утром 10 октября российские войска ударили управляемыми авиабомбами по жилому пятиэтажному дому, часть подъезда разрушена. Число погибших росло в течение дня — 8, затем 17 и, по данным ГСЧС, 20, среди них трое детей; 18 пострадали, а по данным ОВА, ранены 32. Женщину спасли из-под завалов после более чем 8 часов поисков. Зеленский заявил, что Россия «поблагодарила» за снятие санкций США ударами по Запорожью. На следующее утро пресс-секретарь ГСЧС в Запорожской области Юлия Баришева сообщила об уточненном числе — 23 погибших; по данным Українська правда, среди них 4 ребенка.",
+   "quotes": [
+    {
+     "id": 7810,
+     "text": "Вранці 10 жовтня російські війська вдарили керованими авіабомбами по житловому п’ятиповерховому будинку в Запоріжжі."
+    },
+    {
+     "id": 7838,
+     "text": "Запоріжжя: до 20 людей зросла кількість загиблих через авіаудар росіян, з них 3 дитини."
+    },
+    {
+     "id": 7818,
+     "text": "Москва віддячила ударами по Запоріжжю"
+    },
+    {
+     "id": 7868,
+     "text": "За уточненими даними на ранок, на жаль, маємо уже 23 загиблих внаслідок цієї ворожої атаки"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW со ссылкой на ГСЧС пишет не менее чем о 20 погибших, среди них трое детей, и 18 раненых; Kyiv Independent со ссылкой на областную администрацию — о 32 раненых. Al Jazeera приводит слова Зеленского о пяти управляемых бомбах, сброшенных на жилые дома на следующий день после того, как Трамп объявил о снятии санкций с российского дизеля.",
+   "quotes": [
+    {
+     "id": 9295,
+     "text": "Число погибших в результате атаки возросло до 20 человек, среди жертв - три ребенка"
+    },
+    {
+     "id": 8476,
+     "text": "killing 20 people, including three children, and injuring 32"
+    },
+    {
+     "id": 9564,
+     "text": "the day after US President Donald Trump announced a deal to lift sanctions on Russian diesel"
+    }
+   ]
+  },
+  "diverge": "Источники совпадают в числе погибших (20, из них трое детей); число раненых расходится: 18 по данным ГСЧС, 32 по данным областной администрации. Российские источники в выборке удар по Запорожью не упоминают. На следующий день ГСЧС уточнила число погибших до 23, а число погибших детей в последней публикации — четыре.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Удар керованими авіабомбами по п’ятиповерхівці в Запоріжжі: 20 загиблих, серед них троє дітей",
+   "p": "Запоріжжя",
+   "d": "Джерела збігаються в кількості загиблих (20, з них троє дітей); кількість поранених розходиться: 18 за даними ДСНС, 32 за даними обласної адміністрації. Російські джерела у вибірці удар по Запоріжжю не згадують. Наступного дня ДСНС уточнила кількість загиблих до 23, а кількість загиблих дітей в останній публікації — чотири.",
+   "ru": null,
+   "ua": "Т.в.о. голови Запорізької ОВА Михайло Семікін повідомив, що вранці 10 жовтня російські війська вдарили керованими авіабомбами по житловому п’ятиповерховому будинку, частину під’їзду зруйновано. Кількість загиблих зростала протягом дня — 8, потім 17 і, за даними ДСНС, 20, серед них троє дітей; 18 постраждали, а за даними ОВА, поранено 32. Жінку врятували з-під завалів після понад 8 годин пошуків. Зеленський заявив, що Росія «віддячила» за зняття санкцій США ударами по Запоріжжю. Наступного ранку речниця ДСНС у Запорізькій області Юлія Баришева повідомила про уточнену кількість — 23 загиблих; за даними Української правди, серед них 4 дитини.",
+   "ind": "DW з посиланням на ДСНС пише щонайменше про 20 загиблих, серед них троє дітей, і 18 поранених; Kyiv Independent з посиланням на обласну адміністрацію — про 32 поранених. Al Jazeera наводить слова Зеленського про п’ять керованих бомб, скинутих на житлові будинки наступного дня після того, як Трамп оголосив про зняття санкцій з російського дизеля."
+  },
+  "en": {
+   "t": "Guided-bomb strike on a five-storey block in Zaporizhzhia: 20 killed, including three children",
+   "p": "Zaporizhzhia",
+   "d": "Sources agree on the death toll (20, including three children); the number injured differs: 18 according to the State Emergency Service, 32 according to the regional administration. Russian sources in the sample do not mention the strike on Zaporizhzhia. The next day the emergency service revised the toll to 23, and the latest report gives four children killed.",
+   "ru": null,
+   "ua": "Acting Zaporizhzhia governor Mykhailo Semikin said that on the morning of 10 October Russian forces struck a five-storey residential building with guided aerial bombs, partly destroying one entrance. The death toll rose through the day, to 8, then 17 and, according to the State Emergency Service, 20, including three children; 18 were injured, while the regional administration put the injured at 32. A woman was rescued from the rubble after more than 8 hours of searching. Zelensky said Russia had \"thanked\" the US for lifting sanctions with strikes on Zaporizhzhia. The next morning Yuliia Barysheva, spokeswoman for the emergency service in Zaporizhzhia region, gave an updated toll of 23 dead; according to Ukrainska Pravda, 4 of them were children.",
+   "ind": "DW, citing the State Emergency Service, reports at least 20 dead, including three children, and 18 injured; Kyiv Independent, citing the regional administration, reports 32 injured. Al Jazeera quotes Zelensky on five glide bombs dropped on residential buildings the day after Trump announced lifting sanctions on Russian diesel."
+  }
+ },
+ {
+  "key": "1010-kyiv-missile-day",
+  "ids": [
+   10466,
+   4546,
+   5654,
+   9924,
+   9925,
+   9928,
+   9930,
+   9934,
+   7817,
+   7831,
+   7834,
+   9939,
+   9303,
+   8479
+  ],
+  "title": "Ракетная атака на Киев днем 10 октября: попадание в ресторан на Оболони, отключения; Минобороны РФ заявляет об ударе по дата-центру",
+  "place": "Киев: Оболонский и Соломенский районы",
+  "region": "kyiv",
+  "tags": [
+   "расхождение: характер объекта",
+   "расхождение: атрибуция"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ, по данным Интерфакса, РИА Новости и ТАСС, заявило, что в Киеве поражен центр обработки данных «АТМ Укрсиббанка», который, по его словам, ВСУ использовали для сбора, обработки и хранения разведывательной информации.",
+   "quotes": [
+    {
+     "id": 10466,
+     "text": "В результате ударов в г. Киев поражен центр обработки данных \"АТМ Укрсиббанка\", используемый ВСУ для сбора, обработки и хранения разведывательной информации"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Мэр Киева Виталий Кличко сообщил, что около 14:00 во время ракетного удара было попадание в здание ресторана на Оболони — пострадали 8 человек, трое в тяжелом состоянии; ранее обломки дронов упали на 25-этажный жилой дом и офисное здание в Соломенском районе. Из-за исчезновения напряжения останавливались метро и электротранспорт, были перебои со светом и водой. По словам представителя Воздушных сил Юрия Игната, Россия применила «Цирконы» и около 100 дронов. КГГА призвала жителей запастись водой и едой; Кличко заявил, что к эвакуации не призывал.",
+   "quotes": [
+    {
+     "id": 7817,
+     "text": "а пізніше під час ракетного удару було влучання у ресторан"
+    },
+    {
+     "id": 9925,
+     "text": "Из-за исчезновения напряжения от внешних питающих центров в метрополитене временно приостановлено движение поездов и работа эскалаторов"
+    },
+    {
+     "id": 9930,
+     "text": "Ни в коем случае не призывал и не призываю к эвакуации."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW со ссылкой на Кличко пишет о попадании в здание ресторана в Оболонском районе и восьми пострадавших. Kyiv Independent сообщает о серии ракет по Киеву около 2 часов дня после утренней атаки дронов на энергетику.",
+   "quotes": [
+    {
+     "id": 9303,
+     "text": "По его информации, произошло попадание в здание ресторана ."
+    },
+    {
+     "id": 8479,
+     "text": "as Russia launched a series of missiles at the city following a morning drone attack on energy infrastructure"
+    }
+   ]
+  },
+  "diverge": "Минобороны РФ называет целью военный дата-центр банка; украинские власти и независимые СМИ сообщают о попадании в ресторан и пострадавших мирных жителях. Совпадают ли эти объекты, источники не уточняют, и утверждение о военном назначении дата-центра независимо не подтверждено.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Военное назначение заявленной цели не подтверждено.",
+  "uk": {
+   "t": "Ракетна атака на Київ удень 10 жовтня: влучання в ресторан на Оболоні, відключення; Міноборони РФ заявляє про удар по дата-центру",
+   "p": "Київ: Оболонський і Солом’янський райони",
+   "d": "Міноборони РФ називає ціллю військовий дата-центр банку; українська влада й незалежні ЗМІ повідомляють про влучання в ресторан і постраждалих цивільних. Чи йдеться про той самий об’єкт, джерела не уточнюють, і твердження про військове призначення дата-центру незалежно не підтверджене.",
+   "ru": "Міноборони РФ, за даними Інтерфаксу, РІА Новини і ТАСС, заявило, що в Києві уражено центр обробки даних «АТМ Укрсиббанку», який, за його словами, ЗСУ використовували для збору, обробки та зберігання розвідувальної інформації.",
+   "ua": "Мер Києва Віталій Кличко повідомив, що близько 14:00 під час ракетного удару було влучання в будівлю ресторану на Оболоні — постраждали 8 людей, троє у важкому стані; раніше уламки дронів упали на 25-поверховий житловий будинок і офісну будівлю в Солом’янському районі. Через зникнення напруги зупинялися метро й електротранспорт, були перебої зі світлом і водою. За словами речника Повітряних сил Юрія Ігната, Росія застосувала «Циркони» і близько 100 дронів. КМДА закликала мешканців запастися водою та їжею; Кличко заявив, що до евакуації не закликав.",
+   "ind": "DW з посиланням на Кличка пише про влучання в будівлю ресторану в Оболонському районі та вісьмох постраждалих. Kyiv Independent повідомляє про серію ракет по Києву близько 2 години дня після ранкової атаки дронів на енергетику."
+  },
+  "en": {
+   "t": "Daytime missile attack on Kyiv on 10 October: restaurant hit in Obolon, outages; Russia claims a strike on a data centre",
+   "p": "Kyiv: Obolonskyi and Solomianskyi districts",
+   "d": "The Russian Defence Ministry names a bank's military-used data centre as the target; Ukrainian authorities and independent media report a hit on a restaurant and injured civilians. The sources do not say whether these are the same site, and the claim about the data centre's military use has not been independently confirmed.",
+   "ru": "The Russian Defence Ministry, according to Interfax, RIA Novosti and TASS, said it hit Ukrsibbank's ATM data processing centre in Kyiv, which it says the Ukrainian army used to collect, process and store intelligence.",
+   "ua": "Kyiv Mayor Vitali Klitschko said that at about 14:00, during a missile strike, a restaurant building in Obolon was hit, injuring 8 people, three of them seriously; earlier drone debris fell on a 25-storey residential building and an office building in Solomianskyi district. Because of a loss of voltage the metro and electric transport were halted and there were power and water outages. According to Air Force spokesman Yurii Ihnat, Russia used Tsirkon missiles and about 100 drones. The city administration urged residents to stock up on water and food; Klitschko said he had not called for evacuation.",
+   "ind": "DW, citing Klitschko, reports a restaurant building hit in Obolonskyi district and eight people injured. Kyiv Independent reports a series of missiles fired at Kyiv around 2 p.m. after a morning drone attack on energy infrastructure."
+  }
+ },
+ {
+  "key": "1010-night-attack-west",
+  "ids": [
+   10447,
+   9916,
+   9920,
+   7806,
+   7808,
+   7809,
+   6947
+  ],
+  "title": "Ночная атака 160 дронов: реактивный дрон впервые долетел до Львова, удар по железной дороге на Житомирщине",
+  "place": "Украина: Львов, Ивано-Франковск, Житомирская область",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: атрибуция"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ, по данным Интерфакса, заявило, что за сутки поражены объекты энергетики Украины, «используемые в интересах ВПК», а также цеха производства беспилотников.",
+   "quotes": [
+    {
+     "id": 10447,
+     "text": "Минобороны РФ сообщило, что в течение суток поражены объекты энергетики Украины, используемые в интересах ВПК страны."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Воздушные силы ВСУ сообщили, что в ночь на 10 октября Россия атаковала 160 дронами, 110 из них — реактивные «Шахеды»; сбиты или подавлены 117, попадания зафиксированы на 14 локациях. Утром ПВО сбила под Львовом реактивный дрон, впервые залетевший на территорию города; взрывы были слышны и в Ивано-Франковске. Житомирская ОВА сообщила об ударе по железнодорожной инфраструктуре Коростенской громады, пострадал один человек.",
+   "quotes": [
+    {
+     "id": 7808,
+     "text": "Зафіксовані влучання на 14 локаціях."
+    },
+    {
+     "id": 7806,
+     "text": "протиповітряна оборона збила поблизу Львова російський реактивний безпілотник, який перед цим залетів на територію міста"
+    },
+    {
+     "id": 7809,
+     "text": "російські війська атакували безпілотниками залізничну інфраструктуру Коростенської громади на Житомирщині"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Минобороны РФ называет пораженные энергообъекты связанными с ВПК; украинская сторона пишет о попаданиях по железной дороге и атаке на запад страны. Независимые источники в выборке ночную атаку отдельно не описывают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Нічна атака 160 дронів: реактивний дрон уперше долетів до Львова, удар по залізниці на Житомирщині",
+   "p": "Україна: Львів, Івано-Франківськ, Житомирська область",
+   "d": "Міноборони РФ називає уражені енергооб’єкти пов’язаними з ОПК; українська сторона пише про влучання по залізниці та атаку на захід країни. Незалежні джерела у вибірці нічну атаку окремо не описують.",
+   "ru": "Міноборони РФ, за даними Інтерфаксу, заявило, що за добу уражено об’єкти енергетики України, «що використовуються в інтересах ОПК», а також цехи виробництва безпілотників.",
+   "ua": "Повітряні сили ЗСУ повідомили, що в ніч на 10 жовтня Росія атакувала 160 дронами, 110 з них — реактивні «Шахеди»; збито або подавлено 117, влучання зафіксовано на 14 локаціях. Вранці ППО збила під Львовом реактивний дрон, який уперше залетів на територію міста; вибухи було чути й в Івано-Франківську. Житомирська ОВА повідомила про удар по залізничній інфраструктурі Коростенської громади, постраждала одна людина.",
+   "ind": null
+  },
+  "en": {
+   "t": "Overnight attack by 160 drones: a jet drone reaches Lviv for the first time, railway hit in Zhytomyr region",
+   "p": "Ukraine: Lviv, Ivano-Frankivsk, Zhytomyr Oblast",
+   "d": "The Russian Defence Ministry describes the energy facilities it hit as linked to the defence industry; the Ukrainian side reports hits on the railway and an attack on the west of the country. Independent sources in the sample do not describe the overnight attack separately.",
+   "ru": "The Russian Defence Ministry, according to Interfax, said that over the day it hit Ukrainian energy facilities \"used in the interests of the defence industry\" as well as drone production workshops.",
+   "ua": "Ukraine's Air Force said that on the night of 10 October Russia attacked with 160 drones, 110 of them jet-powered Shaheds; 117 were shot down or suppressed, and hits were recorded at 14 locations. In the morning air defences shot down near Lviv a jet drone that had flown into the city for the first time; explosions were also heard in Ivano-Frankivsk. The Zhytomyr regional administration reported a strike on railway infrastructure in the Korosten community, injuring one person.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1010-rostov-oil-terminal",
+  "ids": [
+   10431,
+   10438,
+   10450,
+   10426,
+   9912,
+   6944,
+   7804,
+   9294,
+   8475
+  ],
+  "title": "Атака дронов на Ростов-на-Дону: пожар на нефтеналивном терминале, поврежден железнодорожный мост в Батайске",
+  "place": "Ростов-на-Дону, Батайск",
+  "region": "russia-other",
+  "tags": [
+   "расхождение: характер объекта"
+  ],
+  "ru": {
+   "summary": "Губернатор Ростовской области Юрий Слюсарь сообщил об отражении атаки более 50 беспилотников, повреждении нескольких многоквартирных и частных домов в Ростове, железнодорожного моста в Батайске и одном раненом; позже движение поездов по мосту восстановили. В части Ростова введен режим ЧС. Объект, на котором возник пожар, российские власти не называют.",
+   "quotes": [
+    {
+     "id": 10431,
+     "text": "В Ростовской области в результате воздушной атаки поврежден железнодорожный мост и многоквартирные дома, есть пострадавший"
+    },
+    {
+     "id": 10450,
+     "text": "Режим чрезвычайной ситуации введен в границах улиц Ростова-на-Дону"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Українська правда и Суспільне со ссылкой на ASTRA и Exilenova+ пишут, что дроны атаковали нефтеналивной терминал Новошахтинского завода нефтепродуктов в Ростове, где вспыхнул масштабный пожар; губернатор, по данным Суспільне, не уточнил, где возник пожар.",
+   "quotes": [
+    {
+     "id": 7804,
+     "text": "безпілотники атакували \"Нафтоналивний термінал НЗНП\" у Ростовській області РФ, унаслідок чого на об'єкті спалахнула масштабна пожежа"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW со ссылкой на OSINT-анализ Astra называет целью терминал НЗНП в Железнодорожном районе. Kyiv Independent со ссылкой на аналитика ASTRA называет горящий объект нефтеналивным терминалом «Юг Руси», связанным с Новошахтинским заводом.",
+   "quotes": [
+    {
+     "id": 9294,
+     "text": "Целью удара в ночь на субботу, 10 октября, был нефтеналивной терминал Новошахтинского завода нефтепродуктов ( НЗНП )"
+    },
+    {
+     "id": 8475,
+     "text": "identified the burning facility as the Yug Rusi oil-loading terminal in Rostov-on-Don"
+    }
+   ]
+  },
+  "diverge": "Российские власти говорят о повреждениях жилых домов и моста, не называя горящий объект; украинские и независимые СМИ со ссылкой на OSINT называют нефтеналивной терминал, при этом название терминала у Kyiv Independent («Юг Руси») отличается от других источников (НЗНП).",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Атака дронів на Ростов-на-Дону: пожежа на нафтоналивному терміналі, пошкоджено залізничний міст у Батайську",
+   "p": "Ростов-на-Дону, Батайськ",
+   "d": "Російська влада говорить про пошкодження житлових будинків і мосту, не називаючи об’єкта, що горить; українські й незалежні ЗМІ з посиланням на OSINT називають нафтоналивний термінал, при цьому назва термінала в Kyiv Independent («Юг Русі») відрізняється від інших джерел (НЗНП).",
+   "ru": "Губернатор Ростовської області Юрій Слюсар повідомив про відбиття атаки понад 50 безпілотників, пошкодження кількох багатоквартирних і приватних будинків у Ростові, залізничного мосту в Батайську та одного пораненого; пізніше рух поїздів мостом відновили. У частині Ростова запроваджено режим НС. Об’єкт, на якому виникла пожежа, російська влада не називає.",
+   "ua": "Українська правда і Суспільне з посиланням на ASTRA та Exilenova+ пишуть, що дрони атакували нафтоналивний термінал Новошахтинського заводу нафтопродуктів у Ростові, де спалахнула масштабна пожежа; губернатор, за даними Суспільного, не уточнив, де виникла пожежа.",
+   "ind": "DW з посиланням на OSINT-аналіз Astra називає ціллю термінал НЗНП у Залізничному районі. Kyiv Independent з посиланням на аналітика ASTRA називає об’єкт, що горить, нафтоналивним терміналом «Юг Русі», пов’язаним із Новошахтинським заводом."
+  },
+  "en": {
+   "t": "Drone attack on Rostov-on-Don: fire at an oil-loading terminal, railway bridge damaged in Bataysk",
+   "p": "Rostov-on-Don, Bataysk",
+   "d": "Russian authorities report damage to residential buildings and a bridge without naming the burning site; Ukrainian and independent media, citing OSINT, name an oil-loading terminal, although Kyiv Independent gives a different terminal name (Yug Rusi) from the other sources (NZNP).",
+   "ru": "Rostov governor Yuri Slyusar said more than 50 drones were repelled, several apartment blocks and private houses in Rostov and a railway bridge in Bataysk were damaged and one man was injured; train traffic over the bridge was later restored. A state of emergency was declared in part of Rostov. Russian authorities do not name the site where the fire broke out.",
+   "ua": "Ukrainska Pravda and Suspilne, citing ASTRA and Exilenova+, write that drones attacked the oil-loading terminal of the Novoshakhtinsk oil products plant in Rostov, where a large fire broke out; the governor, according to Suspilne, did not say where the fire was.",
+   "ind": "DW, citing Astra's OSINT analysis, names the NZNP terminal in Zheleznodorozhny district as the target. Kyiv Independent, citing an ASTRA analyst, identifies the burning site as the Yug Rusi oil-loading terminal linked to the Novoshakhtinsk plant."
+  }
+ },
+ {
+  "key": "1010-samara-lvds-general-staff",
+  "ids": [
+   6954,
+   7823,
+   9927,
+   9932
+  ],
+  "title": "Генштаб ВСУ: повторный удар по ЛПДС «Самара», пункты управления и станция РЭБ",
+  "place": "Самарская область; оккупированные территории",
+  "region": "russia-other",
+  "tags": [
+   "одна из групп не освещает",
+   "не проверено"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Генштаб ВСУ сообщил, что в ночь на 10 октября повторно поражена линейная производственно-диспетчерская станция «Самара» у поселка Просвет, и подтвердил уничтожение четырех резервуаров РВС-50000 при ударе 7 октября. По данным Генштаба, также поражены пункты управления российских подразделений, станция РЭБ, учебный центр сержантов и склады на оккупированных территориях и в Брянской области.",
+   "quotes": [
+    {
+     "id": 6954,
+     "text": "там підтвердили знищення чотирьох резервуарів РВС-50000"
+    },
+    {
+     "id": 9932,
+     "text": "Под поражение попали командные пункты, склады и ремонтная база."
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Сведения исходят только от Генштаба ВСУ; российские источники в выборке повторный удар по «Самаре» не комментируют, независимого подтверждения нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Одна сторона, без независимого подтверждения.",
+  "uk": {
+   "t": "Генштаб ЗСУ: повторний удар по ЛВДС «Самара», пункти управління і станція РЕБ",
+   "p": "Самарська область; окуповані території",
+   "d": "Відомості походять лише від Генштабу ЗСУ; російські джерела у вибірці повторний удар по «Самарі» не коментують, незалежного підтвердження немає.",
+   "ru": null,
+   "ua": "Генштаб ЗСУ повідомив, що в ніч на 10 жовтня повторно уражено лінійну виробничо-диспетчерську станцію «Самара» біля селища Просвєт, і підтвердив знищення чотирьох резервуарів РВС-50000 під час удару 7 жовтня. За даними Генштабу, також уражено пункти управління російських підрозділів, станцію РЕБ, навчальний центр сержантів і склади на окупованих територіях та в Брянській області.",
+   "ind": null
+  },
+  "en": {
+   "t": "Ukraine's General Staff: repeat strike on the Samara pumping station, command posts and an EW station",
+   "p": "Samara Oblast; occupied territories",
+   "d": "The information comes only from Ukraine's General Staff; Russian sources in the sample do not comment on the repeat strike on Samara, and there is no independent confirmation.",
+   "ru": null,
+   "ua": "Ukraine's General Staff said that on the night of 10 October the Samara linear production and dispatch station near the village of Prosvet was hit again, and confirmed that four RVS-50000 tanks were destroyed in the 7 October strike. According to the General Staff, command posts of Russian units, an electronic warfare station, a sergeant training centre and depots in occupied territories and Bryansk region were also hit.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1010-drones-over-russia",
+  "ids": [
+   10436,
+   10451,
+   10443,
+   4538,
+   10439
+  ],
+  "title": "Минобороны РФ: 560 дронов за ночь и 725 за сутки; 403 летели в сторону Москвы",
+  "place": "Россия",
+  "region": "russia-other",
+  "tags": [
+   "единственный источник"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ сообщило, что с 20:00 пятницы до 08:00 субботы перехвачены 560 украинских беспилотников, а за сутки — 725 беспилотников и два снаряда HIMARS. Мэр Москвы Сергей Собянин заявил, что в сторону Московского региона летели 403 БПЛА, большая часть нейтрализована на дальних подступах, 25 сбиты на подлете к столице.",
+   "quotes": [
+    {
+     "id": 10436,
+     "text": "дежурными силами ПВО перехвачены и уничтожены 560 украинских беспилотных летательных средств"
+    },
+    {
+     "id": 10451,
+     "text": "сбили два реактивных снаряда системы HIMARS и 725 беспилотных летательных аппаратов самолетного типа"
+    },
+    {
+     "id": 4538,
+     "text": "на Московий регион летело 403 БПЛА, большая часть нейтрализована на дальних подступах, 25 сбиты на подлете к столице"
+    }
+   ]
+  },
+  "ua": null,
+  "ind": null,
+  "diverge": "Цифры приводят только российские официальные источники; украинская сторона число запущенных дронов не сообщает.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Данные — только от Минобороны РФ и мэрии Москвы.",
+  "uk": {
+   "t": "Міноборони РФ: 560 дронів за ніч і 725 за добу; 403 летіли в бік Москви",
+   "p": "Росія",
+   "d": "Цифри наводять лише російські офіційні джерела; українська сторона кількості запущених дронів не повідомляє.",
+   "ru": "Міноборони РФ повідомило, що з 20:00 п’ятниці до 08:00 суботи перехоплено 560 українських безпілотників, а за добу — 725 безпілотників і два снаряди HIMARS. Мер Москви Сергій Собянін заявив, що в бік Московського регіону летіли 403 БПЛА, більшість нейтралізовано на дальніх підступах, 25 збито на підльоті до столиці.",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Russian Defence Ministry: 560 drones overnight and 725 over the day; 403 flew towards Moscow",
+   "p": "Russia",
+   "d": "Only Russian official sources give these figures; the Ukrainian side does not report the number of drones launched.",
+   "ru": "The Russian Defence Ministry said that from 20:00 on Friday to 08:00 on Saturday 560 Ukrainian drones were intercepted, and 725 drones and two HIMARS rockets over the day. Moscow Mayor Sergei Sobyanin said 403 drones flew towards the Moscow region, most were neutralised on distant approaches and 25 were shot down approaching the capital.",
+   "ua": null,
+   "ind": null
+  }
+ },
+ {
+  "key": "1010-kharkiv-medical",
+  "ids": [
+   9923,
+   7815,
+   7826
+  ],
+  "title": "Харьков: дрон попал в здание медучреждения, пятеро пострадавших",
+  "place": "Харьков: Слободской и Холодногорский районы",
+  "region": "kharkiv",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Мэр Харькова Игорь Терехов и глава ОВА Олег Синегубов сообщили, что 10 октября российские дроны атаковали Холодногорский и Слободской районы; в Слободском районе беспилотник попал в здание медицинского учреждения, возник пожар. По данным ГСЧС, пострадали 5 человек, среди них спасатель.",
+   "quotes": [
+    {
+     "id": 7815,
+     "text": "У Слобідському районі дрон влучив у будівлю медзакладу"
+    },
+    {
+     "id": 7826,
+     "text": "Харків: внаслідок російського удару по будівлі медичного закладу у Слобідському районі постраждали 5 людей."
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Событие освещают только украинские источники.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Харків: дрон влучив у будівлю медзакладу, п’ятеро постраждалих",
+   "p": "Харків: Слобідський і Холодногірський райони",
+   "d": "Подію висвітлюють лише українські джерела.",
+   "ru": null,
+   "ua": "Мер Харкова Ігор Терехов і голова ОВА Олег Синєгубов повідомили, що 10 жовтня російські дрони атакували Холодногірський і Слобідський райони; у Слобідському районі безпілотник влучив у будівлю медичного закладу, виникла пожежа. За даними ДСНС, постраждали 5 людей, серед них рятувальник.",
+   "ind": null
+  },
+  "en": {
+   "t": "Kharkiv: drone hits a medical facility, five injured",
+   "p": "Kharkiv: Slobidskyi and Kholodnohirskyi districts",
+   "d": "Only Ukrainian sources cover the event.",
+   "ru": null,
+   "ua": "Kharkiv Mayor Ihor Terekhov and regional governor Oleh Syniehubov said Russian drones attacked Kholodnohirskyi and Slobidskyi districts on 10 October; in Slobidskyi district a drone hit a medical facility building, starting a fire. According to the State Emergency Service, 5 people were injured, including a rescuer.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1010-nikopol-boy",
+  "ids": [
+   9936,
+   7824
+  ],
+  "title": "Никопольщина: сброс боеприпаса с дрона убил 11-летнего мальчика",
+  "place": "Покровская громада, Никопольский район",
+  "region": "dnipro",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Глава Днепропетровской ОВА Александр Ганжа сообщил, что в Покровской громаде Никопольского района россияне сбросили боеприпас с беспилотника: погиб 11-летний мальчик, еще двое детей ранены.",
+   "quotes": [
+    {
+     "id": 7824,
+     "text": "Росіяни скинули боєприпас з безпілотника у Покровській громаді."
+    },
+    {
+     "id": 9936,
+     "text": "Из-за вражеской атаки на Никопольщине погиб 11-летний мальчик"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Событие освещают только украинские источники.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Нікопольщина: скид боєприпасу з дрона вбив 11-річного хлопчика",
+   "p": "Покровська громада, Нікопольський район",
+   "d": "Подію висвітлюють лише українські джерела.",
+   "ru": null,
+   "ua": "Голова Дніпропетровської ОВА Олександр Ганжа повідомив, що в Покровській громаді Нікопольського району росіяни скинули боєприпас із безпілотника: загинув 11-річний хлопчик, ще двоє дітей поранені.",
+   "ind": null
+  },
+  "en": {
+   "t": "Nikopol district: drone-dropped munition kills an 11-year-old boy",
+   "p": "Pokrovske community, Nikopol district",
+   "d": "Only Ukrainian sources cover the event.",
+   "ru": null,
+   "ua": "Dnipropetrovsk governor Oleksandr Hanzha said Russian forces dropped a munition from a drone in the Pokrovske community of Nikopol district, killing an 11-year-old boy and injuring two other children.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1010-odesa-dnipro-evening",
+  "ids": [
+   7832,
+   9945,
+   7842,
+   4566
+  ],
+  "title": "Вечерние удары: административное здание и комплекс TENET в Одессе, девятиэтажка в Днепре",
+  "place": "Одесса, Днепр",
+  "region": "odesa",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "РИА Новости со ссылкой на Укринформ и Суспільне сообщает о взрывах в Днепре («Днепропетровске») на фоне воздушной тревоги, не уточняя последствий.",
+   "quotes": [
+    {
+     "id": 4566,
+     "text": "Взрыв вновь прогремел в субботу в Днепропетровске на Украине на фоне воздушной тревоги"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Глава Одесской ОВА Олег Кипер сообщил об ударе по административному зданию в Одессе — повреждены фасад, крыша и автомобили. Провайдер TENET сообщил РБК-Украина о попадании в свой технологический комплекс, пострадали энергооборудование и система охлаждения, возможны перебои интернета. Мэр Днепра Борис Филатов сообщил о попадании дрона в девятиэтажку, ранены трое.",
+   "quotes": [
+    {
+     "id": 7832,
+     "text": "Ворог завдав удару по адміністративній будівлі в Одесі."
+    },
+    {
+     "id": 9945,
+     "text": "в Одессе был нанесен удар по технологическому комплексу компании TENET"
+    },
+    {
+     "id": 7842,
+     "text": "російський ударний дрон поцілив у 9-поверхівку, внаслідок чого постраждали троє людей"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "РИА Новости пересказывает украинские СМИ только о взрывах, без сведений о пострадавших; украинские источники сообщают о попаданиях в гражданские объекты.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Вечірні удари: адмінбудівля і комплекс TENET в Одесі, дев’ятиповерхівка в Дніпрі",
+   "p": "Одеса, Дніпро",
+   "d": "РІА Новини переказує українські ЗМІ лише про вибухи, без відомостей про постраждалих; українські джерела повідомляють про влучання в цивільні об’єкти.",
+   "ru": "РІА Новини з посиланням на Укрінформ і Суспільне повідомляє про вибухи в Дніпрі («Дніпропетровську») на тлі повітряної тривоги, не уточнюючи наслідків.",
+   "ua": "Голова Одеської ОВА Олег Кіпер повідомив про удар по адміністративній будівлі в Одесі — пошкоджено фасад, дах і автомобілі. Провайдер TENET повідомив РБК-Україна про влучання у свій технологічний комплекс, постраждали енергообладнання і система охолодження, можливі перебої інтернету. Мер Дніпра Борис Філатов повідомив про влучання дрона в дев’ятиповерхівку, поранено трьох.",
+   "ind": null
+  },
+  "en": {
+   "t": "Evening strikes: an administrative building and the TENET complex in Odesa, a nine-storey block in Dnipro",
+   "p": "Odesa, Dnipro",
+   "d": "RIA Novosti relays Ukrainian media only about explosions, with no information on casualties; Ukrainian sources report hits on civilian sites.",
+   "ru": "RIA Novosti, citing Ukrinform and Suspilne, reports explosions in Dnipro (which it calls \"Dnepropetrovsk\") during an air-raid alert, without details of the consequences.",
+   "ua": "Odesa governor Oleh Kiper reported a strike on an administrative building in Odesa that damaged its facade, roof and parked cars. The provider TENET told RBC-Ukraine its technology complex was hit, damaging power equipment and the cooling system, with possible internet outages. Dnipro Mayor Borys Filatov reported a drone hitting a nine-storey building, injuring three.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1010-trump-refineries-intel",
+  "ids": [
+   10470,
+   10458,
+   5657,
+   7802,
+   7807,
+   6952,
+   9940,
+   9913,
+   9931,
+   7799,
+   9306,
+   8482
+  ],
+  "title": "Трамп требует от Киева прекратить удары по НПЗ; Axios: США пригрозили прекратить передачу разведданных",
+  "place": "Вашингтон — Киев",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "Интерфакс со ссылкой на Axios пишет, что Трамп пошел на сделку с Россией по дизелю после того, как Зеленский проигнорировал полдюжины просьб прекратить атаки на российские НПЗ. ТАСС и Интерфакс цитируют Трампа: США говорили Зеленскому «не трогайте НПЗ», но он «идет и бьет» по ним.",
+   "quotes": [
+    {
+     "id": 10458,
+     "text": "после того, как президент Украины Владимир Зеленский проигнорировал полдюжины просьб США прекратить нападения на российские нефтеперерабатывающие заводы"
+    },
+    {
+     "id": 10470,
+     "text": "Мы говорили ему: можете наносить любые удары в России, но не трогайте НПЗ"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Українська правда и Суспільне со ссылкой на Axios сообщают, что Уиткофф и Кушнер на переговорах угрожали прекратить передачу Украине разведданных из-за ударов по НПЗ. Зеленский, по данным Axios в пересказе РБК-Украина, поддержал бы ослабление санкций только в обмен на энергетическое перемирие; по данным FT, Украина продолжит удары по НПЗ.",
+   "quotes": [
+    {
+     "id": 7807,
+     "text": "погрожували припиненням надання Україні розвідданих через удари по російських НПЗ"
+    },
+    {
+     "id": 9913,
+     "text": "Украина бы поддержала ослабление санкций для РФ только в обмен на энергетическое перемирие."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW со ссылкой на высокопоставленного украинского чиновника подтверждает угрозу прекратить передачу разведданных. Kyiv Independent пишет, что Трамп потребовал прекратить удары по НПЗ и предложил украинцам сменить президента.",
+   "quotes": [
+    {
+     "id": 9306,
+     "text": "США пригрозили Украине прекращением передачи разведывательных данных, если украинская армия не перестанет бить по российским нефтеперерабатывающим заводам"
+    }
+   ]
+  },
+  "diverge": "Российские источники подчеркивают версию Трампа о том, что Киев сам спровоцировал сделку по дизелю; украинские и независимые акцентируют давление Вашингтона и угрозу разведданным. Факт угрозы основан на анонимных источниках Axios и DW.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Угроза разведданным известна только из анонимных источников.",
+  "uk": {
+   "t": "Трамп вимагає від Києва припинити удари по НПЗ; Axios: США пригрозили припинити передачу розвідданих",
+   "p": "Вашингтон — Київ",
+   "d": "Російські джерела наголошують на версії Трампа про те, що Київ сам спровокував угоду щодо дизеля; українські й незалежні акцентують тиск Вашингтона і загрозу розвідданим. Факт погрози ґрунтується на анонімних джерелах Axios і DW.",
+   "ru": "Інтерфакс із посиланням на Axios пише, що Трамп пішов на угоду з Росією щодо дизеля після того, як Зеленський проігнорував пів дюжини прохань припинити атаки на російські НПЗ. ТАСС та Інтерфакс цитують Трампа: США казали Зеленському «не чіпайте НПЗ», але він «іде і б’є» по них.",
+   "ua": "Українська правда і Суспільне з посиланням на Axios повідомляють, що Віткофф і Кушнер на переговорах погрожували припинити передачу Україні розвідданих через удари по НПЗ. Зеленський, за даними Axios у переказі РБК-Україна, підтримав би послаблення санкцій лише в обмін на енергетичне перемир’я; за даними FT, Україна продовжить удари по НПЗ.",
+   "ind": "DW з посиланням на високопосадовця України підтверджує погрозу припинити передачу розвідданих. Kyiv Independent пише, що Трамп вимагав припинити удари по НПЗ і запропонував українцям змінити президента."
+  },
+  "en": {
+   "t": "Trump demands Kyiv stop striking refineries; Axios: US threatened to cut off intelligence",
+   "p": "Washington — Kyiv",
+   "d": "Russian sources stress Trump's version that Kyiv itself provoked the diesel deal; Ukrainian and independent ones focus on Washington's pressure and the threat to intelligence sharing. The threat is based on anonymous sources cited by Axios and DW.",
+   "ru": "Interfax, citing Axios, writes that Trump struck the diesel deal with Russia after Zelensky ignored half a dozen US requests to stop attacking Russian refineries. TASS and Interfax quote Trump: the US told Zelensky \"don't hit the refineries\", but he \"goes and hits\" them.",
+   "ua": "Ukrainska Pravda and Suspilne, citing Axios, report that Witkoff and Kushner threatened during talks to stop sharing intelligence with Ukraine over the refinery strikes. Zelensky, according to Axios as relayed by RBC-Ukraine, would support easing sanctions only in exchange for an energy truce; according to the FT, Ukraine will continue striking refineries.",
+   "ind": "DW, citing a senior Ukrainian official, confirms the threat to stop sharing intelligence. Kyiv Independent writes that Trump demanded an end to refinery strikes and suggested Ukrainians replace their president."
+  }
+ },
+ {
+  "key": "1010-trump-new-president",
+  "ids": [
+   5655,
+   4557,
+   6964,
+   7811,
+   9305,
+   9569,
+   9129,
+   9308
+  ],
+  "title": "Трамп: Украине нужен новый президент; Сибига: Зеленский пользуется поддержкой народа",
+  "place": "Вашингтон — Киев",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "ТАСС цитирует Трампа: Зеленский «мог урегулировать эту войну много раз» и «пора Украине получить нового президента». Посол по особым поручениям МИД РФ Родион Мирошник, по данным РИА Новости, считает, что эти слова «шокировали элиты киевского режима».",
+   "quotes": [
+    {
+     "id": 5655,
+     "text": "I think it's time for Ukraine to get a new president"
+    },
+    {
+     "id": 4557,
+     "text": "Слова президента США Дональда Трампа о том, что Владимир Зеленский должен быть заменен, шокировали элиты киевского режима"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Отвечая на вопрос корреспондентки Суспільне, Трамп заявил, что Зеленский мог бы много раз завершить войну, но «выбирает этого не делать», и создает проблемы миру и американским фермерам атаками на заводы по производству дизеля. На слова о том, что Зеленский назвал его слабым, Трамп, по данным Українська правда, ответил «хорошо».",
+   "quotes": [
+    {
+     "id": 6964,
+     "text": "Зеленський міг би завершити цю війну багато разів. Але він обирає не робити цього."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW, Al Jazeera и The Guardian приводят слова Трампа: «Предлагаю им найти нового лидера, который сможет заключить сделку». DW сообщает, что глава МИД Украины Андрей Сибига ответил: Зеленский руководит страной в период войны за независимость и заслуживает поддержки.",
+   "quotes": [
+    {
+     "id": 9305,
+     "text": "I suggest they get a new leader who can make a [peace] deal"
+    },
+    {
+     "id": 9308,
+     "text": "и заслуживает поддержки"
+    }
+   ]
+  },
+  "diverge": "Все группы цитируют Трампа одинаково; российские источники добавляют злорадные комментарии МИД РФ, независимые — ответ Сибиги и связь заявления со сделкой по дизелю.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Трамп: Україні потрібен новий президент; Сибіга: Зеленський має підтримку народу",
+   "p": "Вашингтон — Київ",
+   "d": "Усі групи цитують Трампа однаково; російські джерела додають зловтішні коментарі МЗС РФ, незалежні — відповідь Сибіги та зв’язок заяви з угодою щодо дизеля.",
+   "ru": "ТАСС цитує Трампа: Зеленський «міг урегулювати цю війну багато разів» і «час Україні отримати нового президента». Посол з особливих доручень МЗС РФ Родіон Мірошник, за даними РІА Новини, вважає, що ці слова «шокували еліти київського режиму».",
+   "ua": "Відповідаючи на запитання кореспондентки Суспільного, Трамп заявив, що Зеленський міг би багато разів завершити війну, але «обирає цього не робити», і створює проблеми світу та американським фермерам атаками на заводи з виробництва дизеля. На слова про те, що Зеленський назвав його слабким, Трамп, за даними Української правди, відповів «добре».",
+   "ind": "DW, Al Jazeera і The Guardian наводять слова Трампа: «Пропоную їм знайти нового лідера, який зможе укласти угоду». DW повідомляє, що глава МЗС України Андрій Сибіга відповів: Зеленський керує країною в період війни за незалежність і заслуговує на підтримку."
+  },
+  "en": {
+   "t": "Trump: Ukraine needs a new president; Sybiha: Zelensky has the people's support",
+   "p": "Washington — Kyiv",
+   "d": "All groups quote Trump the same way; Russian sources add gloating comments from the Russian Foreign Ministry, independent ones add Sybiha's reply and the link to the diesel deal.",
+   "ru": "TASS quotes Trump: Zelensky \"could have settled this war many times\" and \"it's time for Ukraine to get a new president\". Russian Foreign Ministry ambassador-at-large Rodion Miroshnik, according to RIA Novosti, believes the words \"shocked the elites of the Kyiv regime\".",
+   "ua": "Answering a question from Suspilne's correspondent, Trump said Zelensky could have ended the war many times but \"chooses not to\", and creates problems for the world and American farmers by attacking diesel plants. Told that Zelensky had called him weak, Trump replied \"good\", according to Ukrainska Pravda.",
+   "ind": "DW, Al Jazeera and The Guardian quote Trump: \"I suggest they get a new leader who can make a deal.\" DW reports that Ukrainian Foreign Minister Andrii Sybiha replied that Zelensky leads the country during a war for independence and deserves support."
+  }
+ },
+ {
+  "key": "1010-europe-reacts-diesel",
+  "ids": [
+   10463,
+   9935,
+   7827,
+   9943,
+   7820,
+   9929,
+   6951,
+   9302,
+   9125,
+   8486
+  ],
+  "title": "Европа, Австралия и Конгресс США критикуют сделку Трампа о российском дизеле",
+  "place": "Брюссель, Таллин, Варшава, Лондон, Канберра, Вашингтон",
+  "region": "ukraine-wide",
+  "tags": [],
+  "ru": {
+   "summary": "Интерфакс цитирует главу дипломатии ЕС Каю Каллас: приостановка санкций США против российского дизеля дает Москве дополнительные доходы, «сейчас не время ослаблять давление на Россию, и Европа этого делать не будет».",
+   "quotes": [
+    {
+     "id": 10463,
+     "text": "Сейчас не время ослаблять давление на Россию, и Европа этого делать не будет"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина пишет, что, по словам Каллас, министры ЕС в понедельник одобрят крупнейший пакет санкций. Премьер Эстонии Кристен Михал призвал ЕС усилить Украину так, чтобы от российских НПЗ «остались только руины», премьер Финляндии Петтери Орпо — прекратить выдачу россиянам туристических виз, глава МИД Польши Радослав Сикорский заметил, что дефицит дизеля есть «даже в Москве». Лондон, по данным Суспільне, заявил, что продолжит давить на Россию санкциями.",
+   "quotes": [
+    {
+     "id": 9935,
+     "text": "Министры иностранных дел ЕС в понедельник одобрят самый большой пакет санкций против российской военной машины."
+    },
+    {
+     "id": 9943,
+     "text": "Евросоюз должен настолько усилить Украину и ее военную мощь, чтобы от российских нефтеперерабатывающих заводов остались только руины."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW приводит слова Каллас о «дополнительных доходах для ведения войны». The Guardian цитирует министра энергетики Австралии Криса Боуэна: страна «не нуждается и не хочет российского топлива». Kyiv Independent пишет о двухпартийной критике сделки в Конгрессе США.",
+   "quotes": [
+    {
+     "id": 9302,
+     "text": "Приостановка санкций США в отношении российского дизельного топлива предоставит РФ \"дополнительные доходы для ведения войны \""
+    },
+    {
+     "id": 9125,
+     "text": "Russia “should not be rewarded for their illegal and immoral invasion of Ukraine”"
+    },
+    {
+     "id": 8486,
+     "text": "drew sharp criticism on Oct. 10 from both Democrats and Republicans in Congress"
+    }
+   ]
+  },
+  "diverge": "Источники единодушно передают критику сделки; российские сообщают в основном позицию Каллас, украинские и независимые — более широкий круг реакций, включая Конгресс США.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Європа, Австралія і Конгрес США критикують угоду Трампа щодо російського дизеля",
+   "p": "Брюссель, Таллінн, Варшава, Лондон, Канберра, Вашингтон",
+   "d": "Джерела одностайно передають критику угоди; російські повідомляють переважно позицію Каллас, українські й незалежні — ширше коло реакцій, зокрема Конгресу США.",
+   "ru": "Інтерфакс цитує очільницю дипломатії ЄС Каю Каллас: призупинення санкцій США проти російського дизеля дає Москві додаткові доходи, «зараз не час послаблювати тиск на Росію, і Європа цього не робитиме».",
+   "ua": "РБК-Україна пише, що, за словами Каллас, міністри ЄС у понеділок схвалять найбільший пакет санкцій. Прем’єр Естонії Крістен Міхал закликав ЄС посилити Україну так, щоб від російських НПЗ «залишилися лише руїни», прем’єр Фінляндії Петтері Орпо — припинити видачу росіянам туристичних віз, глава МЗС Польщі Радослав Сікорський зауважив, що дефіцит дизеля є «навіть у Москві». Лондон, за даними Суспільного, заявив, що продовжить тиснути на Росію санкціями.",
+   "ind": "DW наводить слова Каллас про «додаткові доходи для ведення війни». The Guardian цитує міністра енергетики Австралії Кріса Боуена: країна «не потребує і не хоче російського пального». Kyiv Independent пише про двопартійну критику угоди в Конгресі США."
+  },
+  "en": {
+   "t": "Europe, Australia and the US Congress criticise Trump's Russian diesel deal",
+   "p": "Brussels, Tallinn, Warsaw, London, Canberra, Washington",
+   "d": "The sources uniformly report criticism of the deal; Russian ones mostly convey Kallas's position, Ukrainian and independent ones a wider range of reactions, including in the US Congress.",
+   "ru": "Interfax quotes EU foreign policy chief Kaja Kallas: suspending US sanctions on Russian diesel gives Moscow extra revenue, and \"now is not the time to ease pressure on Russia, and Europe will not do so\".",
+   "ua": "RBC-Ukraine writes that, according to Kallas, EU ministers will approve the largest sanctions package on Monday. Estonian Prime Minister Kristen Michal urged the EU to strengthen Ukraine so that only \"ruins\" remain of Russian refineries, Finnish Prime Minister Petteri Orpo called for ending tourist visas for Russians, and Polish Foreign Minister Radoslaw Sikorski noted a diesel shortage \"even in Moscow\". London, according to Suspilne, said it will keep up sanctions pressure on Russia.",
+   "ind": "DW quotes Kallas on \"additional revenue to wage war\". The Guardian quotes Australian Energy Minister Chris Bowen: the country does not \"need or want Russian fuel\". Kyiv Independent reports bipartisan criticism of the deal in the US Congress."
+  }
+ },
+ {
+  "key": "1010-miami-talks-outcome",
+  "ids": [
+   10425,
+   4547,
+   10474,
+   4577,
+   8474
+  ],
+  "title": "Итоги встречи в Майами: Уиткофф — «конструктивно», украинская делегация возвращается досрочно",
+  "place": "Майами",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": "Интерфакс цитирует Стива Уиткоффа: представители США, Франции, ФРГ, Великобритании, Еврокомиссии, Украины и НАТО провели «конструктивную встречу». РИА Новости со ссылкой на советника Зеленского Дмитрия Литвина пишет, что украинская делегация возвращается в Киев после досрочного прекращения переговоров. По данным NYT в пересказе Интерфакса, Уиткофф и Кушнер ранее предлагали России разморозить активы в обмен на ограниченное прекращение огня.",
+   "quotes": [
+    {
+     "id": 10425,
+     "text": "Переговоры США с представителями Украины и европейских стране в Майами прошли конструктивно"
+    },
+    {
+     "id": 4547,
+     "text": "Украинская делегация возвращается в Киев из США после досрочного прекращения переговоров"
+    }
+   ]
+  },
+  "ua": null,
+  "ind": {
+   "summary": "Kyiv Independent пишет, что встреча 9 октября, названная Уиткоффом «конструктивной», прошла в тот же день, когда Вашингтон ослабил ограничения на экспорт российского дизеля.",
+   "quotes": [
+    {
+     "id": 8474,
+     "text": "on the same day Washington moved to ease restrictions on Russian diesel exports"
+    }
+   ]
+  },
+  "diverge": "Американская сторона называет встречу конструктивной, тогда как, по данным российских источников со ссылкой на Литвина и FT, переговоры прекращены досрочно; независимые источники связывают это со сделкой о дизеле.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Підсумки зустрічі в Маямі: Віткофф — «конструктивно», українська делегація повертається достроково",
+   "p": "Маямі",
+   "d": "Американська сторона називає зустріч конструктивною, тоді як, за даними російських джерел із посиланням на Литвина і FT, переговори припинено достроково; незалежні джерела пов’язують це з угодою щодо дизеля.",
+   "ru": "Інтерфакс цитує Стіва Віткоффа: представники США, Франції, ФРН, Великої Британії, Єврокомісії, України і НАТО провели «конструктивну зустріч». РІА Новини з посиланням на радника Зеленського Дмитра Литвина пише, що українська делегація повертається до Києва після дострокового припинення переговорів. За даними NYT у переказі Інтерфаксу, Віткофф і Кушнер раніше пропонували Росії розморозити активи в обмін на обмежене припинення вогню.",
+   "ua": null,
+   "ind": "Kyiv Independent пише, що зустріч 9 жовтня, яку Віткофф назвав «конструктивною», відбулася того ж дня, коли Вашингтон послабив обмеження на експорт російського дизеля."
+  },
+  "en": {
+   "t": "Outcome of the Miami meeting: Witkoff says \"constructive\", Ukrainian delegation returns early",
+   "p": "Miami",
+   "d": "The US side calls the meeting constructive, while, according to Russian sources citing Lytvyn and the FT, the talks were cut short; independent sources link this to the diesel deal.",
+   "ru": "Interfax quotes Steve Witkoff: representatives of the US, France, Germany, the UK, the European Commission, Ukraine and NATO held a \"constructive meeting\". RIA Novosti, citing Zelensky adviser Dmytro Lytvyn, writes that the Ukrainian delegation is returning to Kyiv after the talks ended early. According to the NYT as relayed by Interfax, Witkoff and Kushner had earlier offered Russia unfrozen assets in exchange for a limited ceasefire.",
+   "ua": null,
+   "ind": "Kyiv Independent writes that the 9 October meeting, which Witkoff called \"constructive\", took place on the same day Washington eased restrictions on Russian diesel exports."
+  }
+ },
+ {
+  "key": "1010-oleshky-humanitarian",
+  "ids": [
+   10424,
+   4541,
+   5649,
+   8485
+  ],
+  "title": "Алешки: Москва говорит о гуманитарном кризисе по вине ВСУ, Kyiv Independent — о готовящейся дезинформации",
+  "place": "Алешки (Олешки), Херсонская область",
+  "region": "kherson",
+  "tags": [
+   "расхождение: кто виноват"
+  ],
+  "ru": {
+   "summary": "Помощник президента РФ Юрий Ушаков сообщил, что Путин и Трамп затронули гуманитарную ситуацию в Алешках, а омбудсмен Яна Лантратова будет на связи с аппаратом Мелании Трамп. Лантратова, по данным ТАСС, заявила, что кризис вызван блокадой, «умышленно» установленной ВСУ, и сообщила о сложных переговорах о доставке гуманитарных грузов и эвакуации.",
+   "quotes": [
+    {
+     "id": 10424,
+     "text": "Президенты РФ и США Владимир Путин и Дональд Трамп затронули гуманитарную ситуацию в городе Алешки Херсонской области"
+    },
+    {
+     "id": 5649,
+     "text": "The humanitarian crisis in Alyoshki was caused by a blockade deliberately imposed by the Ukrainian armed forces"
+    }
+   ]
+  },
+  "ua": null,
+  "ind": {
+   "summary": "Kyiv Independent пишет, что Россия готовит дезинформационную кампанию с постановочными интервью жителей оккупированных Олешек.",
+   "quotes": [
+    {
+     "id": 8485,
+     "text": "Russia prepares a disinformation campaign involving staged interviews with residents of the Russian-occu"
+    }
+   ]
+  },
+  "diverge": "Российская сторона возлагает ответственность за кризис на ВСУ и выводит тему на уровень Путина и Трампа; Kyiv Independent представляет это как подготовку дезинформационной кампании. Украинские официальные источники в выборке 10 октября тему не комментируют.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Противоположные версии, гуманитарная ситуация независимо не проверена.",
+  "uk": {
+   "t": "Олешки: Москва говорить про гуманітарну кризу з вини ЗСУ, Kyiv Independent — про підготовку дезінформації",
+   "p": "Олешки, Херсонська область",
+   "d": "Російська сторона покладає відповідальність за кризу на ЗСУ і виводить тему на рівень Путіна і Трампа; Kyiv Independent подає це як підготовку дезінформаційної кампанії. Українські офіційні джерела у вибірці 10 жовтня тему не коментують.",
+   "ru": "Помічник президента РФ Юрій Ушаков повідомив, що Путін і Трамп торкнулися гуманітарної ситуації в Олешках, а омбудсменка Яна Лантратова буде на зв’язку з апаратом Меланії Трамп. Лантратова, за даними ТАСС, заявила, що кризу спричинила блокада, «умисно» встановлена ЗСУ, і повідомила про складні переговори щодо доставки гуманітарних вантажів та евакуації.",
+   "ua": null,
+   "ind": "Kyiv Independent пише, що Росія готує дезінформаційну кампанію з постановочними інтерв’ю мешканців окупованих Олешок."
+  },
+  "en": {
+   "t": "Oleshky: Moscow blames Ukraine for a humanitarian crisis, Kyiv Independent reports a disinformation campaign in preparation",
+   "p": "Oleshky, Kherson Oblast",
+   "d": "The Russian side blames the crisis on the Ukrainian army and raises the topic to the level of Putin and Trump; Kyiv Independent presents it as preparation for a disinformation campaign. Ukrainian official sources in the sample do not comment on the topic on 10 October.",
+   "ru": "Presidential aide Yuri Ushakov said Putin and Trump discussed the humanitarian situation in Oleshky and that ombudswoman Yana Lantratova will be in contact with Melania Trump's office. Lantratova, according to TASS, said the crisis was caused by a blockade \"deliberately\" imposed by the Ukrainian army and reported difficult negotiations on delivering aid and evacuation.",
+   "ua": null,
+   "ind": "Kyiv Independent writes that Russia is preparing a disinformation campaign with staged interviews of residents of occupied Oleshky."
+  }
+ },
+ {
+  "key": "1010-front-claims",
+  "ids": [
+   10428,
+   10448,
+   4539,
+   6945,
+   7841
+  ],
+  "title": "Фронт: Минобороны РФ — Лукашово и Лобановка «в кольце окружения», продвижение в Доброполье; Генштаб ВСУ — около 200 боев за день",
+  "place": "Харьковская и Донецкая области",
+  "region": "donetsk",
+  "tags": [
+   "расхождение: атрибуция",
+   "не проверено"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ заявило, что группировка «Север» в «кольце окружения» взяла под контроль Лукашово и Лобановку в Харьковской области и пресекла попытки ВСУ деблокировать окруженные силы, а в Доброполье российские войска продвинулись в центре и на северо-западе, на территории шахты «Добропольская».",
+   "quotes": [
+    {
+     "id": 10448,
+     "text": "В кольце окружения в ходе активных боевых действий взяты под контроль населенные пункты Лукашово и Лобановка Харьковской области"
+    },
+    {
+     "id": 4539,
+     "text": "Российские войска продвинулись в центре и на северо-западе Доброполья"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Генштаб ВСУ сообщил, что накануне российские войска нанесли 88 авиаударов с 282 управляемыми бомбами, а за текущие сутки до 22:00 произошли 195 боевых столкновений, больше всего на Покровском, Гуляйпольском и Константиновском направлениях.",
+   "quotes": [
+    {
+     "id": 6945,
+     "text": "Вчора війська РФ завдали одного ракетного та 88 авіаційних ударів, зокрема скинули 282 керовані авіабомби."
+    },
+    {
+     "id": 7841,
+     "text": "На фронті від початку доби відбулося 195 бойових зіткнень"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Стороны описывают разные аспекты боев; украинская сводка не подтверждает и не опровергает заявленное Минобороны РФ окружение в Харьковской области. Независимой проверки нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Фронтовые заявления сторон не проверены независимо.",
+  "uk": {
+   "t": "Фронт: Міноборони РФ — Лукашове і Лобанівка «в кільці оточення», просування в Добропіллі; Генштаб ЗСУ — близько 200 боїв за день",
+   "p": "Харківська і Донецька області",
+   "d": "Сторони описують різні аспекти боїв; українське зведення не підтверджує і не спростовує заявленого Міноборони РФ оточення в Харківській області. Незалежної перевірки немає.",
+   "ru": "Міноборони РФ заявило, що угруповання «Північ» у «кільці оточення» взяло під контроль Лукашове і Лобанівку в Харківській області та припинило спроби ЗСУ деблокувати оточені сили, а в Добропіллі російські війська просунулися в центрі й на північному заході, на території шахти «Добропільська».",
+   "ua": "Генштаб ЗСУ повідомив, що напередодні російські війська завдали 88 авіаударів із 282 керованими бомбами, а за поточну добу до 22:00 відбулося 195 бойових зіткнень, найбільше на Покровському, Гуляйпільському і Костянтинівському напрямках.",
+   "ind": null
+  },
+  "en": {
+   "t": "Front line: Russia says Lukashove and Lobanivka taken \"inside an encirclement\", advance in Dobropillia; Ukraine reports about 200 clashes",
+   "p": "Kharkiv and Donetsk oblasts",
+   "d": "The sides describe different aspects of the fighting; the Ukrainian report neither confirms nor denies the encirclement in Kharkiv region claimed by Russia. There is no independent verification.",
+   "ru": "The Russian Defence Ministry said its North group took control of Lukashove and Lobanivka in Kharkiv region \"inside the encirclement\" and thwarted Ukrainian attempts to relieve the encircled forces, and that in Dobropillia Russian troops advanced in the centre and north-west, on the grounds of the Dobropilska mine.",
+   "ua": "Ukraine's General Staff said that the previous day Russian forces carried out 88 air strikes with 282 guided bombs, and that by 22:00 that day there had been 195 clashes, most of them in the Pokrovsk, Huliaipole and Kostiantynivka directions.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1010-russian-side-casualties",
+  "ids": [
+   10435,
+   10457,
+   4549,
+   10462,
+   10433,
+   10467,
+   10440
+  ],
+  "title": "Российские власти: обстрелы Белгородской области и ЛНР, удар по Запорожской ТЭС, поврежденные суда в Азове; Минобороны — сухогруз на пути в Одессу",
+  "place": "Белгородская область, оккупированные территории, Азов",
+  "region": "russia-other",
+  "tags": [
+   "единственный источник"
+  ],
+  "ru": {
+   "summary": "Губернатор Белгородской области Александр Шуваев сообщил о 106 атаках за сутки, есть погибшие и раненые; глава ЛНР Леонид Пасечник — о четырех погибших и пятерых раненых. Глава администрации Энергодара Максим Пухов заявил об артобстреле Запорожской ТЭС и здания медсанчасти. Губернатор Ростовской области сообщил о двух поврежденных судах в Азове. Минобороны РФ заявило о поражении сухогруза, доставлявшего в порт Одесса «грузы военного назначения».",
+   "quotes": [
+    {
+     "id": 10435,
+     "text": "За минувшие сутки ВСУ 106 раз атаковали территорию Белгородской области"
+    },
+    {
+     "id": 10457,
+     "text": "погибли четверо мирных жителей, еще пятеро получили ранения"
+    },
+    {
+     "id": 10462,
+     "text": "ВСУ атаковали Запорожскую ТЭС и здание медсанчасти в Энергодаре"
+    },
+    {
+     "id": 10433,
+     "text": "поражено морское судно типа \"сухогруз\", доставлявшее в порт Одесса грузы военного назначения"
+    }
+   ]
+  },
+  "ua": null,
+  "ind": null,
+  "diverge": "Данные исходят только от российских и назначенных Россией властей; украинские и независимые источники в выборке эти сообщения не комментируют.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Одна группа источников, нет независимого подтверждения.",
+  "uk": {
+   "t": "Російська влада: обстріли Бєлгородської області та «ЛНР», удар по Запорізькій ТЕС, пошкоджені судна в Азові; Міноборони — суховантаж на шляху до Одеси",
+   "p": "Бєлгородська область, окуповані території, Азов",
+   "d": "Дані походять лише від російської та призначеної Росією влади; українські й незалежні джерела у вибірці ці повідомлення не коментують.",
+   "ru": "Губернатор Бєлгородської області Олександр Шуваєв повідомив про 106 атак за добу, є загиблі й поранені; очільник «ЛНР» Леонід Пасічник — про чотирьох загиблих і п’ятьох поранених. Глава окупаційної адміністрації Енергодара Максим Пухов заявив про артобстріл Запорізької ТЕС і будівлі медсанчастини. Губернатор Ростовської області повідомив про два пошкоджені судна в Азові. Міноборони РФ заявило про ураження суховантажу, який доставляв до порту Одеса «вантажі військового призначення».",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Russian authorities: shelling of Belgorod region and occupied Luhansk, strike on Zaporizhzhia thermal plant, ships damaged in Azov; Defence Ministry claims a cargo ship bound for Odesa",
+   "p": "Belgorod Oblast, occupied territories, Azov",
+   "d": "The information comes only from Russian and Russian-installed authorities; Ukrainian and independent sources in the sample do not comment on these reports.",
+   "ru": "Belgorod governor Alexander Shuvayev reported 106 attacks over the day, with dead and injured; Russian-installed Luhansk head Leonid Pasechnik reported four civilians killed and five injured. Enerhodar's Russian-installed administrator Maxim Pukhov reported shelling of the Zaporizhzhia thermal power plant and a medical unit building. The Rostov governor reported two ships damaged in Azov. The Russian Defence Ministry said it hit a cargo ship carrying \"military cargo\" to the port of Odesa.",
+   "ua": null,
+   "ind": null
+  }
+ },
+ {
+  "key": "1010-zelensky-calls-missile-threat",
+  "ids": [
+   7825,
+   9933,
+   7835,
+   4556,
+   6950,
+   7814
+  ],
+  "title": "Зеленский после разговоров с Макроном и Бернемом предупреждает об угрозе ракетных ударов; смена командующего группировкой «Юг»",
+  "place": "Киев",
+  "region": "ukraine-wide",
+  "tags": [],
+  "ru": {
+   "summary": "РИА Новости пишет, что после призыва Трампа сменить лидера Украины Зеленский сообщил об «очень хорошем и своевременном» разговоре с премьером Великобритании Энди Бернемом и о подготовке скорой встречи.",
+   "quotes": [
+    {
+     "id": 4556,
+     "text": "Очень хороший и своевременный разговор"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Зеленский сообщил, что говорил с Эмманюэлем Макроном прямо во время баллистической атаки на Киев, и предупредил, что в эти дни сохраняется особая угроза ракетных ударов, поэтому Украине нужны дополнительные системы ПВО. После разговора с Бернемом он анонсировал «правильные совместные шаги». Отдельно пресс-офицер группировки «Юг» Максим Кравчук сообщил о плановой замене командующего: Михаила Сидоренко сменил Олег Гончарук.",
+   "quotes": [
+    {
+     "id": 9933,
+     "text": "В Украине сохраняется особая угроза новых ракетных ударов РФ, из-за чего Украина нуждается в дополнительных системах ПВО."
+    },
+    {
+     "id": 7814,
+     "text": "Так, відбулась планова заміна командувача угруповання військ (сил) \"Південь\"."
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "РИА Новости связывает разговор с Бернемом с «жестким требованием» Трампа; украинские источники акцентируют угрозу ракетных ударов и потребность в ПВО.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Зеленський після розмов із Макроном і Бернемом попереджає про загрозу ракетних ударів; зміна командувача угруповання «Південь»",
+   "p": "Київ",
+   "d": "РІА Новини пов’язує розмову з Бернемом із «жорсткою вимогою» Трампа; українські джерела акцентують загрозу ракетних ударів і потребу в ППО.",
+   "ru": "РІА Новини пише, що після заклику Трампа змінити лідера України Зеленський повідомив про «дуже хорошу і своєчасну» розмову з прем’єром Великої Британії Енді Бернемом і про підготовку скорої зустрічі.",
+   "ua": "Зеленський повідомив, що говорив з Емманюелем Макроном просто під час балістичної атаки на Київ, і попередив, що цими днями зберігається особлива загроза ракетних ударів, тому Україні потрібні додаткові системи ППО. Після розмови з Бернемом він анонсував «правильні спільні кроки». Окремо речник угруповання «Південь» Максим Кравчук повідомив про планову заміну командувача: Михайла Сидоренка змінив Олег Гончарук.",
+   "ind": null
+  },
+  "en": {
+   "t": "Zelensky warns of a missile strike threat after calls with Macron and Burnham; new commander of the South group",
+   "p": "Kyiv",
+   "d": "RIA Novosti links the call with Burnham to Trump's \"harsh demand\"; Ukrainian sources focus on the missile threat and the need for air defence.",
+   "ru": "RIA Novosti writes that after Trump's call to replace Ukraine's leader, Zelensky reported a \"very good and timely\" call with UK Prime Minister Andy Burnham and preparations for a meeting soon.",
+   "ua": "Zelensky said he spoke with Emmanuel Macron during the ballistic missile attack on Kyiv and warned of a particular threat of missile strikes in the coming days, which is why Ukraine needs more air defence systems. After his call with Burnham he announced \"the right joint steps\". Separately, South group spokesman Maksym Kravchuk reported a planned change of commander: Mykhailo Sydorenko was replaced by Oleh Honcharuk.",
+   "ind": null
+  }
+ }
+]

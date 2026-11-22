@@ -1,0 +1,104 @@
+import sys, glob, os
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 09:00: extensions ----------------
+def rep(c, path, old, new):
+    d = c
+    for k in path[:-1]: d = d[k]
+    assert old in d[path[-1]], (c['key'], path, old[:40]); d[path[-1]] = d[path[-1]].replace(old, new)
+def noop(c): pass
+
+@ext('1022-mod-massive-strike-vpk-energy', [16119, 16007, 16008, 16011, 16012, 16014, 16015, 16049, 16083, 16084, 16086, 16087, 16089, 16090, 16158, 16160, 16161, 16162, 16163, 16103, 15992, 16144, 16128, 16153, 16150, 16124, 16133, 16127, 16140])
+def _(c):
+    c['title'] = 'Минобороны РФ: удар по «Антонову», мосту «Южный» в Киеве и порту Килия; Сибига — удар по энергетике, больницам и жилью'
+    c['uk']['t'] = 'Міноборони РФ: удар по «Антонову», мосту «Південний» у Києві та порту Кілія; Сибіга — удар по енергетиці, лікарнях і житлу'
+    c['en']['t'] = 'Russian MoD: strike on Antonov, Kyiv\'s Southern Bridge and Kiliia port; Sybiha: strike on energy, hospitals and homes'
+    c['place'] = 'Киев, Винницкая и Полтавская области, Одесская область (Килия)'
+    c['uk']['p'] = 'Київ, Вінницька й Полтавська області, Одеська область (Кілія)'
+    c['en']['p'] = 'Kyiv, Vinnytsia and Poltava regions, Odesa region (Kiliia)'
+    add(c, 'ru',
+        'Позже Минобороны назвало цели в Киеве: сборочное предприятие ГП «Антонов», по данным ведомства выпускающее дроны, крылатые ракеты FP-5 «Фламинго» и ракеты FP-9, складской комплекс «Хладокомбинат №3» с производством дронов и боеприпасов «Хорнет» и мост «Южный», «используемый для транзитных перевозок военных грузов»; в Одесской области — объекты порта Килия и сухогруз, шедший в Черноморск. «Интерфакс» пишет о трех сухогрузах и контейнеровозе, пораженных «Геранями». ТАСС выносит в заголовок, что в Генштабе ВСУ «признали», что не смогли перехватить ни одной ракеты.',
+        'Пізніше Міноборони назвало цілі в Києві: складальне підприємство ДП «Антонов», яке, за даними відомства, випускає дрони, крилаті ракети FP-5 «Фламінго» та ракети FP-9, складський комплекс «Хладокомбінат №3» з виробництвом дронів і боєприпасів «Хорнет» та міст «Південний», «що використовується для транзитних перевезень військових вантажів»; в Одеській області — об’єкти порту Кілія та суховантаж, що йшов до Чорноморська. «Інтерфакс» пише про три суховантажі й контейнеровоз, уражені «Геранями». ТАСС виносить у заголовок, що в Генштабі ЗСУ «визнали», що не змогли перехопити жодної ракети.',
+        'The MoD later named targets in Kyiv: the Antonov state assembly plant, which it says makes drones, FP-5 Flamingo cruise missiles and FP-9 missiles, the "Khladokombinat №3" warehouse complex producing drones and Hornet munitions, and the Southern Bridge, "used for transit of military cargo"; in Odesa region, Kiliia port facilities and a dry cargo ship bound for Chornomorsk. Interfax writes of three dry cargo ships and a container ship hit by Geran drones. TASS headlines that the Ukrainian General Staff "admitted" it could not intercept a single missile.',
+        [(16008, 'сборочное предприятие авиационной промышленности (ГП "Антонов"), осуществляющее производство беспилотных летательных аппаратов большой и средней дальности, крылатых ракет FP-5 "Фламинго"'),
+         (16012, 'складской комплекс "Хладокомбинат №3"'),
+         (16014, 'автожелезнодорожный мост "Южный", используемый для транзитных перевозок военных грузов автомобильным и железнодорожным транспортом'),
+         (16015, 'объекты инфраструктуры порта "Килия", предназначенные для хранения поставляемого на Украину военного имущества'),
+         (16158, 'поражены три сухогруза и контейнеровоз с грузом военного назначения'),
+         (16103, 'В Генштабе ВСУ признали, что не смогли перехватить ни одной ракеты')])
+    c['ua']['summary'] = ("РБК-Украина приводит заявление министра иностранных дел Андрея Сибиги, который отсылает к словам Уиткоффа, назвавшего Путина «гуманистом»: этой ночью киевляне, по его словам, услышали, как на самом деле звучит российский «гуманизм» — жестокую атаку десятками баллистических ракет по энергетической инфраструктуре, медучреждениям, торговым центрам и жилым районам; мир, по словам министра, принесет только сила. "
+        "Воздушные силы сообщили, что атака началась в 18:00 21 октября: Россия применила ракеты «Искандер-М», С-400, «Циркон» и «Оникс» и 210 беспилотников, главным направлением был Киев; к 09:00 сбит или подавлен 181 дрон, попадания — на 32 локациях; о сбитых ракетах в сводке не говорится. "
+        "В Винницкой области, по словам Натальи Заболотной, повреждены промышленные объекты, энергетика и частные дома. В Кременчуге беспилотник попал в здание частной телерадиокомпании «Визит» среди жилой застройки: семеро работников не пострадали, работа остановлена. В Килии на Одесщине, по данным ГСЧС и местного издания, горело административное здание пищевого предприятия «Титан».")
+    c['uk']['ua'] = ("РБК-Україна наводить заяву міністра закордонних справ Андрія Сибіги, який відсилає до слів Віткоффа, що назвав Путіна «гуманістом»: цієї ночі кияни, за його словами, почули, як насправді звучить російський «гуманізм» — жорстоку атаку десятками балістичних ракет по енергетичній інфраструктурі, медзакладах, торговельних центрах і житлових районах; мир, за словами міністра, принесе лише сила. "
+        "Повітряні сили повідомили, що атака почалася о 18:00 21 жовтня: Росія застосувала ракети «Іскандер-М», С-400, «Циркон» і «Онікс» та 210 безпілотників, головним напрямком був Київ; до 09:00 збито або подавлено 181 дрон, влучання — на 32 локаціях; про збиті ракети у зведенні не йдеться. "
+        "На Вінниччині, за словами Наталі Заболотної, пошкоджено промислові об’єкти, енергетику та приватні будинки. У Кременчуці безпілотник влучив у будівлю приватної телерадіокомпанії «Візит» серед житлової забудови: семеро працівників не постраждали, роботу зупинено. У Кілії на Одещині, за даними ДСНС і місцевого видання, горіла адмінбудівля харчового підприємства «Титан».")
+    c['en']['ua'] = ("RBC-Ukraine quotes Foreign Minister Andrii Sybiha, who alludes to Witkoff calling Putin a \"humanist\": tonight, he says, Kyiv residents heard what Russian \"humanism\" really sounds like, a brutal attack with dozens of ballistic missiles aimed at energy infrastructure, medical facilities, shopping centres and residential areas; only strength, the minister says, will bring peace. "
+        "The Air Force said the attack began at 18:00 on 21 October: Russia used Iskander-M, S-400, Zircon and Oniks missiles and 210 drones, with Kyiv as the main target; by 09:00, 181 drones had been shot down or suppressed, with hits at 32 locations; the summary says nothing about missiles shot down. "
+        "In Vinnytsia region, according to Nataliia Zabolotna, industrial facilities, energy infrastructure and private houses were damaged. In Kremenchuk a drone hit the building of the private TV and radio company Vizit among residential buildings: seven employees were unhurt, but work has stopped. In Kiliia, Odesa region, according to the emergency service and a local outlet, the administrative building of the Titan food company caught fire.")
+    c['ua']['quotes'] += [q(16144, 'Росіяни запускали ракети "Іскандер-М", С-400, "Циркон" та "Онікс" із Курської, Брянської та Ростовської областей РФ.'),
+        q(16128, 'Зафіксовано влучання засобів повітряного нападу РФ на 32 локаціях'),
+        q(16150, 'Усі вони були в безпечних місцях, ніхто не постраждав.'),
+        q(16127, 'пошкоджено двоповерхову адміністративну будівлю підприємства')]
+    setd(c,
+        "Минобороны России называет целями предприятия ВПК, в том числе ГП «Антонов» и «Хладокомбинат №3» в Киеве, мост «Южный», порт Килия и суда; украинская сторона говорит об ударах по энергетике, медучреждениям, торговым центрам, жилым районам и частной телерадиокомпании, а в Килии — о пожаре на пищевом предприятии. Повреждение Южного моста украинские источники описывают как удар по инфраструктуре метро, вызвавший транспортный коллапс (см. карточку об ударах по Киеву), а не как удар по военному объекту. ТАСС пишет, что Генштаб ВСУ «признал», что ни одна ракета не перехвачена; в сводке Воздушных сил, которую приводят украинские СМИ, сбитые ракеты не упоминаются, речь идет только о дронах. Российские агентства о погибших и раненых не сообщают, украинские источники не комментируют названные Минобороны цели. Независимые источники в подборке заявление Минобороны не проверяли.",
+        "Міноборони Росії називає цілями підприємства ВПК, зокрема ДП «Антонов» і «Хладокомбінат №3» у Києві, міст «Південний», порт Кілія та судна; українська сторона говорить про удари по енергетиці, медзакладах, торговельних центрах, житлових районах і приватній телерадіокомпанії, а в Кілії — про пожежу на харчовому підприємстві. Пошкодження Південного мосту українські джерела описують як удар по інфраструктурі метро, що спричинив транспортний колапс (див. картку про удари по Києву), а не як удар по військовому об’єкту. ТАСС пише, що Генштаб ЗСУ «визнав», що жодної ракети не перехоплено; у зведенні Повітряних сил, яке наводять українські ЗМІ, збиті ракети не згадуються, йдеться лише про дрони. Російські агентства про загиблих і поранених не повідомляють, українські джерела не коментують названих Міноборони цілей. Незалежні джерела в добірці заяву Міноборони не перевіряли.",
+        "The Russian Defence Ministry names defence industry plants as targets, including Antonov and \"Khladokombinat №3\" in Kyiv, the Southern Bridge, Kiliia port and ships; the Ukrainian side speaks of strikes on energy, medical facilities, shopping centres, residential areas and a private TV company, and of a fire at a food company in Kiliia. Ukrainian sources describe the damage to the Southern Bridge as a hit on metro infrastructure that caused a traffic collapse (see the card on the strikes on Kyiv), not as a strike on a military target. TASS writes that the Ukrainian General Staff \"admitted\" no missile was intercepted; the Air Force summary relayed by Ukrainian media does not mention missiles shot down, only drones. Russian agencies do not report the dead and injured, and Ukrainian sources do not comment on the targets named by the MoD. Independent sources in the selection have not checked the MoD statement.")
+
+@ext('1021-kyiv-ballistic-evening-strike', [16041, 16026, 16154])
+def _(c):
+    add(c, 'ru', 'Утром ТАСС написал о транспортном коллапсе в Киеве из-за ограничения движения по Южному мосту, РИА Новости со ссылкой на «24-й канал» — о больших пробках и очередях на остановках.',
+        'Уранці ТАСС написав про транспортний колапс у Києві через обмеження руху Південним мостом, РИА Новости з посиланням на «24-й канал» — про великі затори та черги на зупинках.',
+        'In the morning TASS reported a traffic collapse in Kyiv due to restrictions on the Southern Bridge, and RIA Novosti, citing the 24 Kanal TV channel, reported heavy traffic jams and queues at stops.',
+        [(16041, 'В Киеве возник транспортный коллапс из-за ограничения движения по Южному мосту'),
+         (16026, 'А на остановках собираются огромные очереди на общественный транспорт')])
+    add(c, 'ua', 'РБК-Украина пишет, что метро с левого берега доезжает только до станции «Осокорки», где скопилось много людей, наземного транспорта не хватает, а службы такси подняли цены.',
+        'РБК-Україна пише, що метро з лівого берега доїжджає лише до станції «Осокорки», де утворилося величезне скупчення людей, наземного транспорту бракує, а служби таксі підняли ціни.',
+        'RBC-Ukraine writes that the metro from the left bank only runs as far as Osokorky station, where huge crowds gathered, surface transport is lacking and taxi services have raised prices.',
+        [(16154, 'Через те, що метро з лівого берега доїздить лише до станції "Осокорки", там утворилося величезне скупчення людей.')])
+
+@ext('1022-lipetsk-moscow-drone-attack', [15986, 16032, 16157, 16000, 16019, 16039, 16110, 15998, 16073, 16018, 16017, 16076, 16056, 16147, 15338, 15380, 15391, 15411, 15416])
+def _(c):
+    add(c, 'ru', 'РИА Новости подсчитало, что это одна из самых массированных атак беспилотников в октябре; рекорд по числу сбитых дронов был установлен 18 октября.',
+        'РИА Новости підрахувало, що це одна з наймасованіших атак безпілотників у жовтні; рекорд за кількістю збитих дронів було встановлено 18 жовтня.',
+        'RIA Novosti calculated that it was one of the most massive drone attacks in October; the record for drones shot down was set on 18 October.',
+        [(16019, 'Абсолютный рекорд по числу сбитых дронов был установлен 18 октября.')])
+
+@ext('1021-putin-witkoff-trilateral-talks', [16145, 16155, 14598, 14607, 14613, 14617, 14642, 14675, 14775, 14539, 15313])
+def _(c):
+    add(c, 'ua', '«Украинская правда» и РБК-Украина со ссылкой на Politico пишут, что в ЕС обсуждают, кто мог бы представлять Европу на возможных переговорах с Путиным, среди кандидатов называют президента Финляндии Александра Стубба; президент Чехии Петр Павел говорит, что Путин не признает Евросоюз авторитетом и не хочет разговаривать с Урсулой фон дер Ляйен и Каей Каллас.',
+        '«Українська правда» і РБК-Україна з посиланням на Politico пишуть, що в ЄС обговорюють, хто міг би представляти Європу на можливих переговорах із Путіним, серед кандидатів називають президента Фінляндії Александра Стубба; президент Чехії Петр Павел каже, що Путін не визнає Євросоюз авторитетом і не хоче розмовляти з Урсулою фон дер Ляєн та Каєю Каллас.',
+        'Ukrainska Pravda and RBC-Ukraine, citing Politico, write that the EU is discussing who could represent Europe in possible talks with Putin, with Finnish President Alexander Stubb among the names; Czech President Petr Pavel says Putin does not recognise the EU as an authority and does not want to talk to Ursula von der Leyen or Kaja Kallas.',
+        [(16145, 'Президент Путін не визнає Європейський Союз як авторитет.'),
+         (16155, 'Серед європейських урядів зростає усвідомлення того, що незабаром їм, можливо, доведеться висунути кандидатуру для ведення прямих переговорів із російським диктатором Володимиром Путіним')])
+    rep(c, ['diverge'], 'О готовности Турции принять переговоры и о поиске Евросоюзом переговорщика пишут только российские агентства (со ссылкой на анонимный источник и Politico)',
+        'О готовности Турции принять переговоры пишут только российские агентства со ссылкой на анонимный источник; о поиске Евросоюзом переговорщика со ссылкой на Politico сначала написали российские агентства, затем украинские издания, которые называют Путина «правителем» и «диктатором»')
+    rep(c, ['uk', 'd'], 'Про готовність Туреччини прийняти переговори та про пошук Євросоюзом переговорника пишуть лише російські агентства (з посиланням на анонімне джерело і Politico)',
+        'Про готовність Туреччини прийняти переговори пишуть лише російські агентства з посиланням на анонімне джерело; про пошук Євросоюзом переговорника з посиланням на Politico спершу написали російські агентства, потім українські видання, які називають Путіна «правителем» і «диктатором»')
+    rep(c, ['en', 'd'], "Only Russian agencies report Turkey's readiness to host the talks and the EU's search for a negotiator (citing an anonymous source and Politico)",
+        "Only Russian agencies report Turkey's readiness to host the talks, citing an anonymous source; the EU's search for a negotiator, citing Politico, was reported first by Russian agencies and then by Ukrainian outlets, which call Putin a \"ruler\" and a \"dictator\"")
+
+@ext('1021-denmark-fire-point-loan-guarantee', [16130])
+def _(c):
+    add(c, 'ua', '«Общественное» со ссылкой на министерство предпринимательства Дании уточняет, что речь идет примерно о 100 миллионах евро, а гарантию дают потому, что из-за войны в Украине компания не может получить кредиты других типов; почему именно, правительство не объяснило.',
+        '«Суспільне» з посиланням на міністерство бізнесу Данії уточнює, що йдеться приблизно про 100 мільйонів євро, а гарантію надають тому, що через війну в Україні компанія не може отримати інших типів кредитів; чому саме, уряд не пояснив.',
+        'Suspilne, citing the Danish business ministry, specifies that this is about 100 million euros and that the guarantee is given because the company cannot obtain other types of loans due to the war in Ukraine; the government did not explain why.',
+        [(16130, 'Уряд Данії виділить компанії 750 мільйонів датських крон — це близько 100 мільйонів євро.')])
+
+@ext('1021-witkoff-putin-humanitarian', [14677])
+def _(c):
+    add(c, 'ind', 'The Guardian в комментарии называет фразу Уиткоффа примером «необычайной лжи», на которой администрация Трампа строит путь к миру с Россией, сочетая максимальное давление на Киев с лестью Кремлю.',
+        'The Guardian у коментарі називає фразу Віткоффа прикладом «надзвичайної брехні», на якій адміністрація Трампа будує шлях до миру з Росією, поєднуючи максимальний тиск на Київ з лестощами Кремлю.',
+        'The Guardian, in a commentary, calls Witkoff\'s phrase an example of the "extraordinary lies" on which the Trump administration is building its road to peace with Russia, combining maximum pressure on Kyiv with flattery of the Kremlin.',
+        [(14677, 'the road to peace with Russia now encompasses some extraordinary lies')])
+
+ext('1021-hubbard-released', [14678])(noop)
+ext('1021-russian-diesel-first-tanker-us', [14744, 14650])(noop)
+ext('1021-nabu-searches-nbu-pyshnyi', [14725])(noop)
+ext('1020-trump-ukraine-must-want-deal', [14772])(noop)
+ext('1021-front-claims', [16143, 15412, 15465])(noop)
+ext('1021-merz-capitulation-russia-influence', [16009, 16013, 16108])(noop)
+ext('1021-eu-70bn-financing-gap', [16136, 16099])(noop)
+ext('1021-trump-closest-no-new-sanctions', [15483])(noop)
+
+files = sorted(os.path.basename(p) for p in glob.glob('/workspace/compare-site-v2/tools/days/out/c*.json'))
+apply(files)

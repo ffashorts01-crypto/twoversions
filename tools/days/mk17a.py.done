@@ -1,0 +1,35 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+card('1017-metallurgy-energy-strike', [6655, 11027, 11030, 4955, 6211, 6213, 8959, 8962, 8970, 7302, 8233, 7304, 8978, 8984, 7306, 8992, 8971, 8230, 8226, 9634, 8659, 8781, 9475, 8713],
+ 'Массированный удар: Минобороны РФ — по «Запорожстали», Кривому Рогу и Житомиру; Зеленский — один из крупнейших ударов по энергетике', 'Запорожье, Кривой Рог, Житомир, Винница', 'zaporizhzhia',
+ ['расхождение: характер цели'],
+ S('Минобороны РФ сообщило о массированном ударе высокоточным оружием наземного, воздушного и морского базирования и беспилотниками по металлургическим комбинатам в Кривом Роге и Запорожье («Запорожсталь»), предприятию «Запорожтрансформатор» и электроподстанции в Житомире; по версии ведомства, продукция комбинатов шла в основном для военной промышленности. ТАСС пересказывает слова Зеленского о том, что накануне атакованы более 15 крупных объектов генерации и передачи электроэнергии.',
+   (6655, 'по металлургическим комбинатам, трансформаторному предприятию и объекту энергетики Украины в городах Кривой Рог, Запорожье и Житомир'),
+   (11027, 'Продукция шла в основном для нужд военной промышленности'),
+   (6213, 'Over 15 major power generation and transmission facilities were attacked in various regions of Ukraine.')),
+ S('Воздушные силы сообщили, что ночью Россия запустила баллистические ракеты «Искандер-М/KN-23», крылатые ракеты Х-22/32, 4 «Калибра» и 332 ударных дрона, сбито или подавлено 293 цели, попадания зафиксированы на 22 локациях. «Метинвест» сообщил, что шесть баллистических ракет ударили по «Запорожстали» уже в пятый раз, обошлось без жертв; в Запорожье повреждены жилые дома, пострадали 5 человек, в том числе ребенок. Минэнерго — об ударах по энергообъектам в 10 областях, Винница обесточена. Зеленский назвал удар 16 октября одним из крупнейших по украинской энергетике.',
+   (8233, 'протиповітряною обороною збито та подавлено 293 цілі'),
+   (8992, 'Вдосвіта шість балістичних ракет уразили об’єкти внутрішньої енергетичної та логістичної інфраструктури "Запоріжсталь"'),
+   (7306, 'Напередодні росіяни завдали одного з найбільших ударів по українській енергетиці')),
+ S('Al Jazeera со ссылкой на украинских чиновников сообщает минимум о 8 погибших и 60 раненых в пятницу и отключении света у более чем миллиона человек; Kyiv Independent — что ПВО сбила 289 из 332 дронов. Meduza и DW приводят слова Зеленского о том, что Россия пытается устроить блэкаут перед зимой.',
+   (9634, 'Russian attacks killed at least eight people and injured 60 across Ukraine'),
+   (8713, 'Россия пытается устроить в Украине блэкаут прямо перед зимой.')),
+ 'Минобороны РФ представляет удар как поражение предприятий, работающих на ВПК; украинские и независимые источники — как часть кампании по отключению энергетики перед зимой с ударами по жилым кварталам.',
+ 'low', '', False,
+ ['Масований удар: Міноборони РФ — по «Запоріжсталі», Кривому Рогу і Житомиру; Зеленський — один із найбільших ударів по енергетиці', 'Запоріжжя, Кривий Ріг, Житомир, Вінниця',
+  'Міноборони РФ подає удар як ураження підприємств, що працюють на ВПК; українські та незалежні джерела — як частину кампанії з відключення енергетики перед зимою з ударами по житлових кварталах.',
+  'Міноборони РФ повідомило про масований удар високоточною зброєю наземного, повітряного і морського базування та безпілотниками по металургійних комбінатах у Кривому Розі та Запоріжжі («Запоріжсталь»), підприємству «Запоріжтрансформатор» і електропідстанції в Житомирі; за версією відомства, продукція комбінатів ішла переважно для військової промисловості. ТАСС переказує слова Зеленського про те, що напередодні атаковано понад 15 великих об’єктів генерації та передачі електроенергії.',
+  'Повітряні сили повідомили, що вночі Росія запустила балістичні ракети «Іскандер-М/KN-23», крилаті ракети Х-22/32, 4 «Калібри» і 332 ударні дрони, збито або подавлено 293 цілі, влучання зафіксовано на 22 локаціях. «Метінвест» повідомив, що шість балістичних ракет ударили по «Запоріжсталі» вже вп’яте, обійшлося без жертв; у Запоріжжі пошкоджено житлові будинки, постраждали 5 людей, зокрема дитина. Міненерго — про удари по енергооб’єктах у 10 областях, Вінниця знеструмлена. Зеленський назвав удар 16 жовтня одним із найбільших по українській енергетиці.',
+  'Al Jazeera з посиланням на українських посадовців повідомляє щонайменше про 8 загиблих і 60 поранених у п’ятницю та відключення світла в понад мільйона людей; Kyiv Independent — що ППО збила 289 із 332 дронів. Meduza і DW наводять слова Зеленського про те, що Росія намагається влаштувати блекаут перед зимою.'],
+ ['Massive strike: Russian MoD cites Zaporizhstal, Kryvyi Rih and Zhytomyr; Zelensky: one of the largest strikes on energy', 'Zaporizhzhia, Kryvyi Rih, Zhytomyr, Vinnytsia',
+  'The Russian Defence Ministry presents the strike as hitting enterprises working for the defence industry; Ukrainian and independent sources as part of a campaign to knock out energy before winter, with strikes on residential areas.',
+  'The Russian Defence Ministry reported a massive strike with ground-, air- and sea-launched precision weapons and drones on steel plants in Kryvyi Rih and Zaporizhzhia (Zaporizhstal), the Zaporizhtransformator plant and an electricity substation in Zhytomyr; it claimed the plants\' output went mainly to military industry. TASS relays Zelensky\'s statement that more than 15 major power generation and transmission sites were attacked the day before.',
+  'The Air Force said Russia launched Iskander-M/KN-23 ballistic missiles, Kh-22/32 cruise missiles, 4 Kalibrs and 332 attack drones overnight; 293 targets were downed or suppressed and hits were recorded at 22 locations. Metinvest said six ballistic missiles hit Zaporizhstal for the fifth time, without casualties; in Zaporizhzhia residential buildings were damaged and 5 people injured, including a child. The Energy Ministry reported strikes on energy facilities in 10 regions, and Vinnytsia lost power. Zelensky called the 16 October strike one of the largest on Ukrainian energy.',
+  'Al Jazeera, citing Ukrainian officials, reports at least 8 killed and 60 injured on Friday and power cut to more than a million people; Kyiv Independent reports that air defence downed 289 of 332 drones. Meduza and DW quote Zelensky as saying Russia is trying to cause a blackout before winter.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c17a.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

@@ -1,0 +1,38 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+cards = []
+card = lambda *a: cards.append(C(*a))
+# ---------------- hourly run 22 Oct 01:57 ----------------
+card('1022-lipetsk-moscow-drone-attack', [15354, 15336, 15370, 15360, 15404, 15376, 15377, 15433, 15415, 15409, 15378, 15432, 15435, 15389, 15394, 15396, 15437, 15438, 15419, 15429],
+ 'Ночная атака беспилотников на Липецк и Москву: в Липецке поврежены дома и поликлиника, один человек пострадал',
+ 'Липецк — Москва', 'russia-other',
+ ['расхождение: цели', 'расхождение: числа пострадавших'],
+ S("ТАСС, РИА Новости и «Интерфакс» со ссылкой на губернатора Игоря Артамонова сообщают, что в ночь на 22 октября обломки беспилотника упали на многоквартирный дом в Липецке, повреждено остекление. Сначала ТАСС и мэр Михаил Щербаков сообщали, что пострадавших нет, затем губернатор написал о пострадавшем мужчине 2001 года рождения, поврежденных фасадах частных и многоквартирных домов и здании поликлиники, закрытой в момент атаки. По данным мэра Москвы Сергея Собянина, которые суммирует «Интерфакс», на подлете к столице к утру сбиты 56 беспилотников.",
+   (15360, 'Погибших и пострадавших при падении обломков БПЛА на дом в Липецке нет'),
+   (15415, 'According to preliminary data, no one was hurt.'),
+   (15376, 'Пострадал мужчина 2001 года рождения'),
+   (15377, 'Также обломками беспилотника повреждено здание поликлиники на улице Меркулова'),
+   (15438, 'Таким образом, их общее количество увеличилось до 56.')),
+ S("«Украинская правда» со ссылкой на мониторинговые Telegram-каналы Exilenova+ и Supernova+ пишет о массированной атаке беспилотников на Липецк и Тулу: на видео видны дроны и взрывы. Издание упоминает и сообщение губернатора Липецкой области об атаке.",
+   (15419, 'російські міста Липецьк і Тула опинилися під масованою атакою безпілотників')),
+ S("The Kyiv Independent называет атаку ударом украинских сил по Липецку со ссылкой на мониторинговые каналы: по данным ExileNova+, дроны попали в многоэтажный дом, в городе были взрывы и пожары. Издание оговаривает, что не может проверить цели и масштаб ущерба, и напоминает, что в Липецке находится Новолипецкий металлургический комбинат — крупнейший в России, по которому украинские дроны уже били в июле. О повреждениях домов и поликлиники издание пишет со ссылкой на губернатора.",
+   (15429, 'Ukrainian forces struck the Russian city of Lipetsk in an overnight drone attack on Oct. 22, according to monitoring channels.'),
+   (15429, 'The Kyiv Independent cannot independently verify the targets and extent of the damage of the attacks at the time of publication.')),
+ "Российские источники пишут об «обломках» беспилотников и повреждениях жилых домов и поликлиники и не говорят, на что была направлена атака; данные о пострадавших менялись за ночь — от «пострадавших нет» до одного раненого. The Kyiv Independent называет атаку украинским ударом и упоминает металлургический комбинат как возможную цель, но оговаривает, что цели не проверены. Атаку на Тулу упоминает только «Украинская правда», число сбитых над Москвой дронов — только российские источники.",
+ 'medium', 'Цели атаки не подтверждены ни одной стороной, данные о пострадавших менялись в течение ночи.', False,
+ ('Нічна атака безпілотників на Липецьк і Москву: у Липецьку пошкоджено будинки й поліклініку, одна людина постраждала',
+  'Липецьк — Москва',
+  'Російські джерела пишуть про «уламки» безпілотників і пошкодження житлових будинків та поліклініки й не кажуть, на що була спрямована атака; дані про постраждалих змінювалися за ніч — від «постраждалих немає» до одного пораненого. The Kyiv Independent називає атаку українським ударом і згадує металургійний комбінат як можливу ціль, але застерігає, що цілі не перевірені. Атаку на Тулу згадує лише «Українська правда», кількість збитих над Москвою дронів — лише російські джерела.',
+  'ТАСС, РИА Новости та «Інтерфакс» з посиланням на губернатора Ігоря Артамонова повідомляють, що в ніч на 22 жовтня уламки безпілотника впали на багатоквартирний будинок у Липецьку, пошкоджено скління. Спочатку ТАСС і мер Михайло Щербаков повідомляли, що постраждалих немає, потім губернатор написав про постраждалого чоловіка 2001 року народження, пошкоджені фасади приватних і багатоквартирних будинків та будівлю поліклініки, зачиненої під час атаки. За даними мера Москви Сергія Собяніна, які підсумовує «Інтерфакс», на підльоті до столиці до ранку збито 56 безпілотників.',
+  '«Українська правда» з посиланням на моніторингові Telegram-канали Exilenova+ і Supernova+ пише про масовану атаку безпілотників на Липецьк і Тулу: на відео видно дрони й вибухи. Видання згадує й повідомлення губернатора Липецької області про атаку.',
+  'The Kyiv Independent називає атаку ударом українських сил по Липецьку з посиланням на моніторингові канали: за даними ExileNova+, дрони влучили в багатоповерховий будинок, у місті були вибухи й пожежі. Видання застерігає, що не може перевірити цілі та масштаб шкоди, і нагадує, що в Липецьку розташований Новолипецький металургійний комбінат — найбільший у Росії, по якому українські дрони вже били в липні. Про пошкодження будинків і поліклініки видання пише з посиланням на губернатора.'),
+ ('Overnight drone attack on Lipetsk and Moscow: houses and a clinic damaged in Lipetsk, one person injured',
+  'Lipetsk — Moscow',
+  'Russian sources write about drone "debris" and damage to residential buildings and a clinic and do not say what the attack was aimed at; the casualty information changed during the night, from "no one hurt" to one injured. The Kyiv Independent calls the attack a Ukrainian strike and mentions the steel plant as a possible target, but cautions that the targets are unverified. Only Ukrainska Pravda mentions an attack on Tula, and only Russian sources give the number of drones downed near Moscow.',
+  'TASS, RIA Novosti and Interfax, citing Governor Igor Artamonov, report that on the night of 22 October drone debris fell on an apartment building in Lipetsk, breaking windows. At first TASS and Mayor Mikhail Shcherbakov said no one was hurt; the governor then wrote about an injured man born in 2001, damaged facades of private and apartment houses and a clinic building that was closed at the time. According to Moscow Mayor Sergei Sobyanin, as totalled by Interfax, 56 drones heading for the capital were downed by the morning.',
+  'Ukrainska Pravda, citing the monitoring Telegram channels Exilenova+ and Supernova+, writes about a massive drone attack on Lipetsk and Tula: videos show drones and explosions. The outlet also mentions the Lipetsk governor\'s report of the attack.',
+  'The Kyiv Independent calls the attack a strike by Ukrainian forces on Lipetsk, citing monitoring channels: according to ExileNova+, drones hit a multi-storey building and there were explosions and fires in the city. The outlet cautions that it cannot verify the targets and extent of the damage, and notes that Lipetsk is home to the Novolipetsk Steel Plant, Russia\'s largest, which Ukrainian drones already hit in July. It reports the damage to houses and the clinic citing the governor.'))
+json.dump(cards, open(OUT + 'c22a.json', 'w'), ensure_ascii=False, indent=1)
+print('c22a', len(cards))

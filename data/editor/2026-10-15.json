@@ -1,0 +1,1491 @@
+[
+ {
+  "key": "1015-refinery-pause-lifted-ryazan",
+  "ids": [
+   10805,
+   10813,
+   4833,
+   6596,
+   6024,
+   10799,
+   6592,
+   4838,
+   7181,
+   8106,
+   8597,
+   9424,
+   9415,
+   9416,
+   8310,
+   9617,
+   9439,
+   11452
+  ],
+  "title": "Зеленский снял запрет на удары по российским НПЗ; ночью атакован Рязанский НПЗ — Минобороны РФ сообщает о сбитых ракетах «Фламинго»",
+  "place": "Рязань",
+  "region": "russia-other",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "Губернатор Рязанской области Павел Малков сообщил о массированной атаке дронов, пожаре на территории НПЗ и повреждениях на другом предприятии, пострадавших, по его данным, нет; в части Рязани отменены занятия в школах и детсадах. Минобороны РФ заявило, что с 4:00 до 7:00 Украина пыталась массированно атаковать завод, сбиты 4 крылатые ракеты «Фламинго» и 69 дронов, а пожар возник из-за падения обломков; всего за ночь ведомство сообщило о 166 сбитых беспилотниках, за сутки — о 342.",
+   "quotes": [
+    {
+     "id": 10805,
+     "text": "На территории нефтеперерабатывающего завода произошло возгорание."
+    },
+    {
+     "id": 10813,
+     "text": "перехвачены и уничтожены 4 крылатые ракеты большой дальности \"Фламинго\" и 69 БПЛА самолетного типа"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Зеленский в интервью Financial Times заявил, что снял ограничения на удары по российским НПЗ после того, как Россия вновь убила мирных жителей, в том числе в Луцке; по его словам, Украина три дня воздерживалась от таких атак ради объявленного Трампом перемирия.",
+   "quotes": [
+    {
+     "id": 7181,
+     "text": "Обмеження знято. Сьогодні ввечері я сказав своїм військовим."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "BBC, DW, Al Jazeera и Kyiv Independent приводят слова Зеленского «Запрет снят. С нас хватит»; DW со ссылкой на него пишет, что за последнюю неделю российские удары по энергетике убили более 100 мирных жителей, и сообщает о закрытии 14 школ и 25 детсадов в Рязани. The Moscow Times напоминает, что Рязанский НПЗ «Роснефти» снабжает топливом Москву и обеспечивает 5% нефтепереработки России; Кремль, по данным издания, заявил, что не считает, будто Киев вообще соблюдал перемирие. Зеленский, по словам MT, согласился бы прекратить удары по энергетике лишь в обмен на дополнительные ракеты Patriot.",
+   "quotes": [
+    {
+     "id": 8597,
+     "text": "The block (on attacking refineries) is out. We’re done"
+    },
+    {
+     "id": 9415,
+     "text": "в результате чего за последнюю неделю погибло более 100 мирных жителей"
+    },
+    {
+     "id": 11452,
+     "text": "The Kremlin said Thursday that Moscow did not perceive that Kyiv had ever complied with the ceasefire"
+    },
+    {
+     "id": 11452,
+     "text": "he could only agree if in return he was given more U.S.-made Patriot interceptors"
+    }
+   ]
+  },
+  "diverge": "Российская сторона говорит о попытке атаки, отраженной ПВО, с пожаром от обломков; украинская — о вынужденном возобновлении ударов в ответ на российские атаки на энергетику. Масштаб ущерба НПЗ независимо не установлен.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Зеленський зняв заборону на удари по російських НПЗ; вночі атаковано Рязанський НПЗ — Міноборони РФ повідомляє про збиті ракети «Фламінго»",
+   "p": "Рязань",
+   "d": "Російська сторона говорить про спробу атаки, відбиту ППО, з пожежею від уламків; українська — про вимушене відновлення ударів у відповідь на російські атаки на енергетику. Масштаб шкоди НПЗ незалежно не встановлено.",
+   "ru": "Губернатор Рязанської області Павло Малков повідомив про масовану атаку дронів, пожежу на території НПЗ і пошкодження на іншому підприємстві, постраждалих, за його даними, немає; у частині Рязані скасовано заняття в школах і садочках. Міноборони РФ заявило, що з 4:00 до 7:00 Україна намагалася масовано атакувати завод, збито 4 крилаті ракети «Фламінго» і 69 дронів, а пожежа виникла через падіння уламків; загалом за ніч відомство повідомило про 166 збитих безпілотників, за добу — про 342.",
+   "ua": "Зеленський в інтерв’ю Financial Times заявив, що зняв обмеження на удари по російських НПЗ після того, як Росія знову вбила мирних жителів, зокрема в Луцьку; за його словами, Україна три дні утримувалася від таких атак заради оголошеного Трампом перемир’я.",
+   "ind": "BBC, DW, Al Jazeera і Kyiv Independent наводять слова Зеленського «Заборону знято. З нас досить»; DW з посиланням на нього пише, що за останній тиждень російські удари по енергетиці вбили понад 100 мирних жителів, і повідомляє про закриття 14 шкіл і 25 садочків у Рязані. The Moscow Times нагадує, що Рязанський НПЗ «Роснєфті» постачає паливо до Москви і забезпечує 5% нафтопереробки Росії; Кремль, за даними видання, заявив, що не вважає, ніби Київ узагалі дотримувався перемир’я. Зеленський, за словами MT, погодився б припинити удари по енергетиці лише в обмін на додаткові ракети Patriot."
+  },
+  "en": {
+   "t": "Zelensky lifts ban on strikes on Russian refineries; Ryazan refinery attacked overnight, Russia reports downing Flamingo missiles",
+   "p": "Ryazan",
+   "d": "The Russian side speaks of an attempted attack repelled by air defence, with a fire caused by debris; the Ukrainian side of a forced resumption of strikes in response to Russian attacks on energy. The extent of damage to the refinery is not independently established.",
+   "ru": "Ryazan Governor Pavel Malkov reported a massive drone attack, a fire at the refinery and damage at another enterprise, with no casualties according to him; classes at schools and kindergartens in part of Ryazan were cancelled. The Russian Defence Ministry said that from 4:00 to 7:00 Ukraine tried to mount a massive attack on the plant, 4 Flamingo cruise missiles and 69 drones were downed, and the fire was caused by falling debris; overall it reported 166 drones downed overnight and 342 over the day.",
+   "ua": "Zelensky told the Financial Times he had lifted restrictions on strikes on Russian refineries after Russia again killed civilians, including in Lutsk; he said Ukraine had held off such attacks for three days for the sake of the truce announced by Trump.",
+   "ind": "The BBC, DW, Al Jazeera and Kyiv Independent quote Zelensky: \"The block is out. We're done\"; DW, citing him, writes that Russian strikes on energy killed more than 100 civilians over the past week, and reports 14 schools and 25 kindergartens closed in Ryazan. The Moscow Times recalls that Rosneft's Ryazan refinery supplies fuel to Moscow and accounts for 5% of Russia's refining; the Kremlin, according to the outlet, said it did not believe Kyiv had ever complied with the ceasefire. Zelensky, according to MT, would agree to stop strikes on energy only in exchange for more Patriot missiles."
+  }
+ },
+ {
+  "key": "1015-refinery-strikes-reactions",
+  "ids": [
+   10856,
+   6076,
+   10829,
+   6059,
+   6041,
+   10808,
+   6058,
+   8140,
+   7224,
+   8826,
+   8111,
+   8120,
+   9418,
+   11475
+  ],
+  "title": "Путин пригрозил ответом на удары по НПЗ («они это начали»), Лавров назвал позицию Зеленского «грубым вызовом» Трампу; Каллас: удары законны",
+  "place": "Москва, Брюссель",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "Путин заявил, что Киев «кое-куда попал» по НПЗ, но без существенного ущерба, и пригрозил ответом, сравнив удары с атаками на маркетплейсы: «они сделали первый шаг, мы начали отвечать». Лавров назвал заявления Зеленского о продолжении ударов прямым и грубым вызовом Трампу, поддержавшему дизельную сделку, и добавил, что Россия не приостановит СВО. Интерфакс и ТАСС со ссылкой на WSJ пишут, что с сентября США шесть раз просили Украину прекратить удары по энергетике и что Трампа раздражает их влияние на американских потребителей.",
+   "quotes": [
+    {
+     "id": 6076,
+     "text": "They took the first step. We began responding."
+    },
+    {
+     "id": 10829,
+     "text": "Это такой прямой вызов, причем грубый, в адрес президента Трампа"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Украинские СМИ пересказывают угрозы Путина как игнорирование объявленного Трампом перемирия. Глава дипломатии ЕС Кая Каллас поддержала возобновление ударов, заявив, что нефтяные доходы России финансируют войну, а премьер Эстонии Кристен Михал сказал, что чем быстрее российские НПЗ будут уничтожены, тем лучше.",
+   "quotes": [
+    {
+     "id": 8140,
+     "text": "Ось вони зробили перший крок."
+    },
+    {
+     "id": 8111,
+     "text": "чим швидше всі російські нафтопереробні заводи"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW приводит слова Каллас в интервью Euronews о том, что по международному праву такие удары являются для Украины формой обороны. The Moscow Times называет слова Путина первым публичным признанием атак на дата-центры «Яндекса» и Сбербанка и отмечает, что они противоречат отчетам Минобороны РФ, начавшего удары по украинским дата-центрам еще в прошлом месяце; Путин также признал, что спецслужбы не предвидели атак на логистические хабы Wildberries и Ozon.",
+   "quotes": [
+    {
+     "id": 9418,
+     "text": "Если обратиться к международному праву, очевидно, что для Украины это форма обороны"
+    },
+    {
+     "id": 11475,
+     "text": "They took the first step and we began to answer."
+    },
+    {
+     "id": 11475,
+     "text": "Putin also admitted that Russian security services failed to anticipate attacks targeting commercial logistics hubs like Wildberries and Ozon."
+    }
+   ]
+  },
+  "diverge": "Россия представляет свои удары как ответ на украинские атаки, Украина и ЕС — удары по НПЗ как законную самооборону и способ лишить Россию доходов. Сведения WSJ о давлении США основаны на анонимных источниках.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Сведения о позиции Трампа — из анонимных источников.",
+  "uk": {
+   "t": "Путін пригрозив відповіддю на удари по НПЗ («вони це почали»), Лавров назвав позицію Зеленського «грубим викликом» Трампу; Каллас: удари законні",
+   "p": "Москва, Брюссель",
+   "d": "Росія подає свої удари як відповідь на українські атаки, Україна та ЄС — удари по НПЗ як законну самооборону і спосіб позбавити Росію доходів. Відомості WSJ про тиск США ґрунтуються на анонімних джерелах.",
+   "ru": "Путін заявив, що Київ «де-не-де влучив» по НПЗ, але без суттєвої шкоди, і пригрозив відповіддю, порівнявши удари з атаками на маркетплейси: «вони зробили перший крок, ми почали відповідати». Лавров назвав заяви Зеленського про продовження ударів прямим і грубим викликом Трампу, який підтримав дизельну угоду, і додав, що Росія не призупинить війну. Інтерфакс і ТАСС з посиланням на WSJ пишуть, що з вересня США шість разів просили Україну припинити удари по енергетиці і що Трампа дратує їхній вплив на американських споживачів.",
+   "ua": "Українські ЗМІ переказують погрози Путіна як ігнорування оголошеного Трампом перемир’я. Очільниця дипломатії ЄС Кая Каллас підтримала відновлення ударів, заявивши, що нафтові доходи Росії фінансують війну, а прем’єр Естонії Крістен Міхал сказав, що чим швидше російські НПЗ будуть знищені, тим краще.",
+   "ind": "DW наводить слова Каллас в інтерв’ю Euronews про те, що за міжнародним правом такі удари є для України формою оборони. The Moscow Times називає слова Путіна першим публічним визнанням атак на дата-центри «Яндекса» і Сбербанку й зазначає, що вони суперечать звітам Міноборони РФ, яке почало удари по українських дата-центрах ще минулого місяця; Путін також визнав, що спецслужби не передбачили атак на логістичні хаби Wildberries та Ozon."
+  },
+  "en": {
+   "t": "Putin threatens a response to refinery strikes (\"they started it\"), Lavrov calls Zelensky's stance a \"crude challenge\" to Trump; Kallas says strikes are legal",
+   "p": "Moscow, Brussels",
+   "d": "Russia presents its strikes as a response to Ukrainian attacks; Ukraine and the EU present refinery strikes as lawful self-defence and a way to deprive Russia of revenue. The WSJ report on US pressure rests on anonymous sources.",
+   "ru": "Putin said Kyiv had \"hit some places\" at refineries, but without significant damage, and threatened a response, comparing the strikes to attacks on online marketplaces: \"they took the first step, we began responding\". Lavrov called Zelensky's statements about continuing strikes a direct and crude challenge to Trump, who backed the diesel deal, and added that Russia will not pause its military operation. Interfax and TASS, citing the WSJ, write that since September the US has asked Ukraine six times to stop strikes on energy and that Trump is irritated by their effect on American consumers.",
+   "ua": "Ukrainian media relay Putin's threats as ignoring the truce Trump announced. EU foreign policy chief Kaja Kallas backed the resumption of strikes, saying Russia's oil revenues fund the war, and Estonian Prime Minister Kristen Michal said the sooner Russian refineries are destroyed the better.",
+   "ind": "DW quotes Kallas telling Euronews that under international law such strikes are a form of defence for Ukraine. The Moscow Times calls Putin's remarks his first public acknowledgement of the attacks on Yandex and Sberbank data centres and notes that they contradict reports by the Russian Defence Ministry, which began striking Ukrainian data centres last month; Putin also admitted that the security services had not foreseen attacks on the Wildberries and Ozon logistics hubs."
+  }
+ },
+ {
+  "key": "1015-black-sea-tankers-romania",
+  "ids": [
+   10798,
+   10804,
+   10797,
+   6013,
+   4825,
+   10852,
+   10853,
+   6590,
+   6605,
+   10854,
+   7184,
+   7197,
+   8114,
+   8136,
+   8311,
+   8771,
+   8607,
+   8730,
+   9440,
+   11485
+  ],
+  "title": "Черное море: у Румынии горят два танкера, семь моряков пропали; НАТО созывает спецзаседание; Минобороны РФ — удары по Измаилу, Южному и сухогрузам",
+  "place": "Черное море, Сулина, Одесская область",
+  "region": "odesa",
+  "tags": [
+   "расхождение: кто виноват",
+   "расхождение: характер объектов"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ заявило, что дроны поразили портовую инфраструктуру Измаила, объект транспортной инфраструктуры в порту Южный, а также сухогрузы в акватории Бугского лимана, в порту Черноморск и в море, которые, по версии ведомства, везли в Одессу военные грузы. Интерфакс со ссылкой на Politico приводит слова президента Румынии Никушора Дана, что пока «слишком рано» утверждать, что за атаками на танкеры стоит Россия.",
+   "quotes": [
+    {
+     "id": 10797,
+     "text": "поражена портовая инфраструктура порта Измаил, используемая для разгрузки и хранения грузов военного и двойного назначения"
+    },
+    {
+     "id": 10804,
+     "text": "Расчетами БпЛА \"Герань-4\" были поражены два судна типа сухогруз в акватории Бугского Лимана и в порту Черноморск"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Дан и президент Болгарии Илияна Йотова договорились о сотрудничестве против дронов в Черном море. Премьер Болгарии Румен Радев предложил мораторий на атаки на гражданские суда и сказал, что твердых доказательств причастности России нет, хотя логика указывает на нее; глава МИД Румынии Оана Цою заявила, что Россия превращает Черное море в опасную зону.",
+   "quotes": [
+    {
+     "id": 8114,
+     "text": "Зрештою, це просто нелогічно, щоб Україна атакувала кораблі з власним зерном"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "BBC, DW, Guardian и Kyiv Independent сообщают, что химический танкер Wine Trader загорелся у Сулины и семь из 12 членов экипажа пропали, а накануне был поражен танкер Yara J; источник в НАТО сказал Reuters, что дроны были российского происхождения. Дан объявил о специальном заседании Совета НАТО. France 24 приводит слова Никушора Дана после встречи с болгарским лидером и Рютте: ситуация в Черном море серьезная, тенденция «неприемлема» и «должна прекратиться»; по данным Румынского морского ведомства, пятеро моряков Wine Trader спасены, судно шло без груза.",
+   "quotes": [
+    {
+     "id": 8730,
+     "text": "The drones that caused ⁠the fires on board two tankers inside Romanian territorial waters were of Russian origin"
+    },
+    {
+     "id": 11485,
+     "text": "The situation in the Black Sea is serious. Commercial ships are being attacked and sunk."
+    },
+    {
+     "id": 11485,
+     "text": "adding that the ship was not carrying any cargo"
+    }
+   ]
+  },
+  "diverge": "Российская сторона сообщает об ударах по судам с «военными грузами» и не комментирует танкеры у Румынии; источник в НАТО называет дроны российскими, румынский президент и болгарский премьер пока осторожны в оценках. Груз пораженных Россией судов независимо не подтвержден.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Принадлежность дронов официально не установлена.",
+  "uk": {
+   "t": "Чорне море: біля Румунії горять два танкери, сім моряків зникли; НАТО скликає спецзасідання; Міноборони РФ — удари по Ізмаїлу, Південному і суховантажах",
+   "p": "Чорне море, Суліна, Одещина",
+   "d": "Російська сторона повідомляє про удари по суднах із «військовими вантажами» і не коментує танкери біля Румунії; джерело в НАТО називає дрони російськими, румунський президент і болгарський прем’єр поки обережні в оцінках. Вантаж уражених Росією суден незалежно не підтверджено.",
+   "ru": "Міноборони РФ заявило, що дрони уразили портову інфраструктуру Ізмаїла, об’єкт транспортної інфраструктури в порту Південний, а також суховантажі в акваторії Бузького лиману, в порту Чорноморськ і в морі, які, за версією відомства, везли до Одеси військові вантажі. Інтерфакс із посиланням на Politico наводить слова президента Румунії Нікушора Дана, що поки «зарано» стверджувати, що за атаками на танкери стоїть Росія.",
+   "ua": "Дан і президентка Болгарії Іліяна Йотова домовилися про співпрацю проти дронів у Чорному морі. Прем’єр Болгарії Румен Радев запропонував мораторій на атаки на цивільні судна і сказав, що твердих доказів причетності Росії немає, хоча логіка вказує на неї; очільниця МЗС Румунії Оана Цою заявила, що Росія перетворює Чорне море на небезпечну зону.",
+   "ind": "BBC, DW, Guardian і Kyiv Independent повідомляють, що хімічний танкер Wine Trader загорівся біля Суліни і семеро з 12 членів екіпажу зникли, а напередодні було уражено танкер Yara J; джерело в НАТО сказало Reuters, що дрони були російського походження. Дан оголосив про спеціальне засідання Ради НАТО. France 24 наводить слова Нікушора Дана після зустрічі з болгарським лідером і Рютте: ситуація в Чорному морі серйозна, тенденція «неприйнятна» і «має припинитися»; за даними Румунського морського відомства, п’ятьох моряків Wine Trader врятовано, судно йшло без вантажу."
+  },
+  "en": {
+   "t": "Black Sea: two tankers ablaze off Romania, seven sailors missing; NATO calls a special meeting; Russia claims strikes on Izmail, Pivdennyi and cargo ships",
+   "p": "Black Sea, Sulina, Odesa region",
+   "d": "The Russian side reports strikes on ships with \"military cargo\" and does not comment on the tankers off Romania; a NATO source calls the drones Russian, while Romania's president and Bulgaria's prime minister remain cautious. The cargo of the ships Russia struck is not independently confirmed.",
+   "ru": "The Russian Defence Ministry said drones hit port infrastructure in Izmail, a transport facility in the port of Pivdennyi, and cargo ships in the Bug estuary, in the port of Chornomorsk and at sea that it says were carrying military cargo to Odesa. Interfax, citing Politico, quotes Romanian President Nicușor Dan as saying it is \"too early\" to assert that Russia is behind the tanker attacks.",
+   "ua": "Dan and Bulgarian President Iliana Iotova agreed to cooperate against drones in the Black Sea. Bulgarian Prime Minister Rumen Radev proposed a moratorium on attacks on civilian ships and said there is no firm evidence of Russian involvement, although logic points to it; Romanian Foreign Minister Oana Țoiu said Russia is turning the Black Sea into a danger zone.",
+   "ind": "The BBC, DW, the Guardian and Kyiv Independent report that the chemical tanker Wine Trader caught fire off Sulina and seven of its 12 crew are missing, while the tanker Yara J was hit the day before; a NATO source told Reuters the drones were of Russian origin. Dan announced a special meeting of the NATO Council. France 24 quotes Nicusor Dan after a meeting with the Bulgarian leader and Rutte: the situation in the Black Sea is serious and the trend is \"unacceptable\" and \"has to stop\"; according to the Romanian Naval Authority, five sailors from the Wine Trader were rescued and the ship was carrying no cargo."
+  }
+ },
+ {
+  "key": "1015-night-attack-580-drones",
+  "ids": [
+   6015,
+   4839,
+   8101,
+   7180,
+   8100,
+   8096,
+   8099,
+   8103,
+   8102,
+   7195,
+   7194,
+   8593,
+   9414,
+   8594,
+   8610
+  ],
+  "title": "Ночная атака 580 дронов и 2 ракет: в Кропивницком трое погибших, на Днепропетровщине двое; Минобороны РФ — удары по транспортной инфраструктуре",
+  "place": "Кировоградская, Днепропетровская, Полтавская, Тернопольская области",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: характер объектов"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ сообщило о поражении транспортной инфраструктуры, используемой ВСУ, цехов производства дронов и мест их хранения. ТАСС по сводкам Минобороны подсчитал, что с начала года российские войска поразили не менее десяти украинских ТЭС, ТЭЦ и ГЭС, «используемых в военных целях».",
+   "quotes": [
+    {
+     "id": 4839,
+     "text": "нанесено поражение транспортной инфраструктуре, используемой в интересах ВСУ"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Воздушные силы сообщили, что с вечера 14 октября Россия запустила 2 ракеты Х-59 и 580 дронов, 536 сбиты или подавлены, попадания на 31 локации. Кировоградская область больше 10 часов была под атакой: в Кропивницком трое погибших и шестеро раненых, удары по предприятиям, логистике и жилым домам; на Днепропетровщине погибли двое, в Чорткове пострадали 5 человек, на Полтавщине поражены два предприятия. Зеленский сказал, что за полтора суток Россия запустила более 850 «шахедов»; Укрэнерго сообщило о новых отключениях в пяти областях.",
+   "quotes": [
+    {
+     "id": 8101,
+     "text": "Зафіксовано влучання засобів повітряного нападу противника на 31 локації"
+    },
+    {
+     "id": 8100,
+     "text": "Кіровоградщина понад 10 годин перебувала під масованою атакою ворожих БпЛА: троє загиблих та шестеро травмованих"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пишет, что Кировоградская область пережила самую массированную атаку с начала вторжения, а за сутки по Украине погибли не менее 10 и ранены 66 человек; DW со ссылкой на главу ОВА Андрея Райковича — об ударах по логистике, транспортным и промышленным предприятиям.",
+   "quotes": [
+    {
+     "id": 8610,
+     "text": "At least 10 people were killed and 66 others injured across Ukraine over the past day"
+    }
+   ]
+  },
+  "diverge": "Россия заявляет о военных и транспортных целях, украинские власти — о погибших мирных жителях и попаданиях в жилые дома. Военное назначение пораженных объектов независимо не подтверждено.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Нічна атака 580 дронів і 2 ракет: у Кропивницькому троє загиблих, на Дніпропетровщині двоє; Міноборони РФ — удари по транспортній інфраструктурі",
+   "p": "Кіровоградська, Дніпропетровська, Полтавська, Тернопільська області",
+   "d": "Росія заявляє про військові й транспортні цілі, українська влада — про загиблих мирних жителів і влучання в житлові будинки. Військове призначення уражених об’єктів незалежно не підтверджено.",
+   "ru": "Міноборони РФ повідомило про ураження транспортної інфраструктури, що використовується ЗСУ, цехів виробництва дронів і місць їх зберігання. ТАСС за зведеннями Міноборони підрахував, що з початку року російські війська уразили щонайменше десять українських ТЕС, ТЕЦ і ГЕС, «що використовуються у військових цілях».",
+   "ua": "Повітряні сили повідомили, що з вечора 14 жовтня Росія запустила 2 ракети Х-59 і 580 дронів, 536 збито або подавлено, влучання на 31 локації. Кіровоградщина понад 10 годин була під атакою: у Кропивницькому троє загиблих і шестеро поранених, удари по підприємствах, логістиці та житлових будинках; на Дніпропетровщині загинули двоє, у Чорткові постраждали 5 людей, на Полтавщині уражено два підприємства. Зеленський сказав, що за півтори доби Росія запустила понад 850 «шахедів»; Укренерго повідомило про нові знеструмлення в п’яти областях.",
+   "ind": "Kyiv Independent пише, що Кіровоградщина пережила наймасованішу атаку від початку вторгнення, а за добу в Україні загинули щонайменше 10 і поранено 66 людей; DW з посиланням на голову ОВА Андрія Райковича — про удари по логістиці, транспортних і промислових підприємствах."
+  },
+  "en": {
+   "t": "Overnight attack with 580 drones and 2 missiles: three killed in Kropyvnytskyi, two in Dnipropetrovsk region; Russia claims transport infrastructure strikes",
+   "p": "Kirovohrad, Dnipropetrovsk, Poltava, Ternopil regions",
+   "d": "Russia claims military and transport targets; Ukrainian authorities report civilian deaths and hits on homes. The military purpose of the targets is not independently confirmed.",
+   "ru": "The Russian Defence Ministry reported strikes on transport infrastructure used by the Ukrainian army and on drone workshops and storage sites. TASS, based on ministry reports, calculated that since the start of the year Russian forces have hit at least ten Ukrainian thermal, combined heat and power and hydroelectric plants \"used for military purposes\".",
+   "ua": "The Air Force said that from the evening of 14 October Russia launched 2 Kh-59 missiles and 580 drones, 536 of which were downed or suppressed, with hits at 31 locations. Kirovohrad region was under attack for more than 10 hours: three killed and six injured in Kropyvnytskyi, with strikes on enterprises, logistics and homes; two were killed in Dnipropetrovsk region, 5 people hurt in Chortkiv, and two enterprises hit in Poltava region. Zelensky said Russia launched more than 850 Shaheds in a day and a half; Ukrenergo reported new outages in five regions.",
+   "ind": "Kyiv Independent writes that Kirovohrad region suffered its most massive attack since the invasion began, and that at least 10 people were killed and 66 injured across Ukraine over the day; DW, citing governor Andrii Raikovych, reports strikes on logistics, transport and industrial enterprises."
+  }
+ },
+ {
+  "key": "1015-kyiv-day-evening-strikes",
+  "ids": [
+   4864,
+   4868,
+   4875,
+   4861,
+   8108,
+   8125,
+   8147,
+   8841,
+   8844,
+   7216,
+   8135,
+   8820,
+   8832,
+   8145,
+   8842,
+   8148,
+   8838,
+   8603,
+   8619
+  ],
+  "title": "Дневные и вечерние удары: дрон упал в Печерском районе Киева, 7 раненых; вечером часть Киева, Луцка и области без света и воды",
+  "place": "Киев, Луцк, Хмельницкая область, Запорожье",
+  "region": "kyiv",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": "РИА Новости со ссылкой на украинские СМИ и Минэнерго сообщает о взрывах в Киеве, отключении электричества в части Киева и области, падении давления воды в четырех районах правобережья, а также о масштабных отключениях света и перебоях с водой в Луцке.",
+   "quotes": [
+    {
+     "id": 4868,
+     "text": "Часть Киева и Киевской области осталась без электроснабжения, сообщило министерство энергетики Украины."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Днем дрон упал между жилыми домами в Печерском районе Киева: по данным Виталия Кличко, пострадали 7 человек, трое госпитализированы. Воздушные силы сообщили, что с 7:30 до 18:00 Россия запустила 138 ударных дронов (90 реактивных), 125 сбиты или подавлены. Вечером, по данным Минэнерго, после атаки на объект критической энергоинфраструктуры часть потребителей Киева и области осталась без света; в Луцке обломки повредили ЛЭП, на Хмельнитчине горела нефтебаза в Шепетовском районе, в Запорожье — частное предприятие.",
+   "quotes": [
+    {
+     "id": 8125,
+     "text": "Уже 7 постраждалих, внаслідок падіння ворожого БпЛА між житловими будинками в Печерському районі"
+    },
+    {
+     "id": 8135,
+     "text": "протиповітряною обороною збито/подавлено 125 БпЛА (79 із них – реактивні)"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent сообщает о дроне, упавшем у пятиэтажного дома в Печерском районе, и о вечерних отключениях в Киеве после ударов по энергетике.",
+   "quotes": [
+    {
+     "id": 8619,
+     "text": "Widespread power outages have occurred in certain areas of Kyiv and the surrounding region"
+    }
+   ]
+  },
+  "diverge": "Российские источники пересказывают украинские сообщения без указания целей; Минобороны РФ эти удары отдельно не комментирует.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Денні та вечірні удари: дрон упав у Печерському районі Києва, 7 поранених; увечері частина Києва, Луцька та області без світла і води",
+   "p": "Київ, Луцьк, Хмельниччина, Запоріжжя",
+   "d": "Російські джерела переказують українські повідомлення без зазначення цілей; Міноборони РФ ці удари окремо не коментує.",
+   "ru": "РИА Новости з посиланням на українські ЗМІ і Міненерго повідомляє про вибухи в Києві, відключення електрики в частині Києва та області, падіння тиску води в чотирьох районах правобережжя, а також про масштабні відключення світла і перебої з водою в Луцьку.",
+   "ua": "Вдень дрон упав між житловими будинками в Печерському районі Києва: за даними Віталія Кличка, постраждали 7 людей, троє госпіталізовані. Повітряні сили повідомили, що з 7:30 до 18:00 Росія запустила 138 ударних дронів (90 реактивних), 125 збито або подавлено. Увечері, за даними Міненерго, після атаки на об’єкт критичної енергоінфраструктури частина споживачів Києва та області залишилася без світла; у Луцьку уламки пошкодили ЛЕП, на Хмельниччині горіла нафтобаза в Шепетівському районі, у Запоріжжі — приватне підприємство.",
+   "ind": "Kyiv Independent повідомляє про дрон, що впав біля п’ятиповерхівки в Печерському районі, і про вечірні відключення в Києві після ударів по енергетиці."
+  },
+  "en": {
+   "t": "Daytime and evening strikes: drone falls in Kyiv's Pechersk district, 7 injured; in the evening parts of Kyiv, Lutsk and the region lose power and water",
+   "p": "Kyiv, Lutsk, Khmelnytskyi region, Zaporizhzhia",
+   "d": "Russian sources relay Ukrainian reports without naming targets; the Russian Defence Ministry does not comment on these strikes separately.",
+   "ru": "RIA Novosti, citing Ukrainian media and the Energy Ministry, reports explosions in Kyiv, power cuts in parts of Kyiv and the region, a drop in water pressure in four right-bank districts, and large-scale power and water outages in Lutsk.",
+   "ua": "During the day a drone fell between apartment blocks in Kyiv's Pechersk district: according to Vitali Klitschko, 7 people were hurt and three hospitalised. The Air Force said that from 7:30 to 18:00 Russia launched 138 attack drones (90 jet-powered), of which 125 were downed or suppressed. In the evening, according to the Energy Ministry, an attack on a critical energy facility left some consumers in Kyiv and the region without power; in Lutsk debris damaged power lines, an oil depot burned in Shepetivka district of Khmelnytskyi region, and a private enterprise in Zaporizhzhia.",
+   "ind": "Kyiv Independent reports the drone that fell near a five-storey building in Pechersk and the evening outages in Kyiv after strikes on energy."
+  }
+ },
+ {
+  "key": "1015-su34-borisoglebsk-neptune",
+  "ids": [
+   7188,
+   8123,
+   8836,
+   7179,
+   8602,
+   11460
+  ],
+  "title": "ВМС Украины: ракетами «Нептун» поражены шесть Су-34 на аэродроме Борисоглебск",
+  "place": "Борисоглебск, Воронежская область",
+  "region": "russia-other",
+  "tags": [
+   "одна из групп не освещает",
+   "расхождение: числа"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "ВМС Украины сообщили, что ночью ракетами «Нептун» ударили по аэродрому «Борисоглебск» и уничтожили шесть бомбардировщиков Су-34М, зафиксированы детонации и пожар. Зеленский уточнил, что уничтожены четыре самолета и два поражены, назвав их готовыми к новым ударам по Украине; спикер ВМС Дмитрий Плетенчук назвал это полугодом работы российского ВПК.",
+   "quotes": [
+    {
+     "id": 8123,
+     "text": "Знищені чотири літаки Су-34, два літаки Су-34 уражені."
+    },
+    {
+     "id": 7188,
+     "text": "Унаслідок удару знищено шість бомбардувальників Су-34М"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пересказывает данные Зеленского: из шести пораженных Су-34М четыре уничтожены, два повреждены. The Moscow Times отмечает, что уничтожение шести самолетов независимо не подтверждено, а российские власти удар по аэродрому не признали; губернатор Воронежской области Александр Гусев сообщил лишь о 33 перехваченных дронах и «нескольких реактивных воздушных целях».",
+   "quotes": [
+    {
+     "id": 8602,
+     "text": "An overnight attack on the Borisoglebsk military airfield in Russia's Voronezh region hit six Su-34M bomber jets, destroying four and damaging two"
+    },
+    {
+     "id": 11460,
+     "text": "The reported destruction of the six warplanes could not be independently verified."
+    },
+    {
+     "id": 11460,
+     "text": "Russian authorities did not acknowledge a strike on the airfield."
+    }
+   ]
+  },
+  "diverge": "ВМС говорят о шести уничтоженных самолетах, Зеленский — о четырех уничтоженных и двух поврежденных. Российские источники в выборке удар не комментируют; независимого подтверждения нет.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Данные о потерях расходятся и не подтверждены независимо.",
+  "uk": {
+   "t": "ВМС України: ракетами «Нептун» уражено шість Су-34 на аеродромі Борисоглєбськ",
+   "p": "Борисоглєбськ, Воронезька область",
+   "d": "ВМС говорять про шість знищених літаків, Зеленський — про чотири знищені і два пошкоджені. Російські джерела у вибірці удар не коментують; незалежного підтвердження немає.",
+   "ru": null,
+   "ua": "ВМС України повідомили, що вночі ракетами «Нептун» ударили по аеродрому «Борисоглєбськ» і знищили шість бомбардувальників Су-34М, зафіксовано детонації і пожежу. Зеленський уточнив, що знищено чотири літаки і два уражено, назвавши їх готовими до нових ударів по Україні; речник ВМС Дмитро Плетенчук назвав це пів року роботи російського ВПК.",
+   "ind": "Kyiv Independent переказує дані Зеленського: із шести уражених Су-34М чотири знищено, два пошкоджено. The Moscow Times зазначає, що знищення шести літаків незалежно не підтверджено, а російська влада удару по аеродрому не визнала; губернатор Воронезької області Олександр Гусєв повідомив лише про 33 перехоплені дрони та «кілька реактивних повітряних цілей»."
+  },
+  "en": {
+   "t": "Ukraine's Navy: six Su-34s hit with Neptune missiles at Borisoglebsk airfield",
+   "p": "Borisoglebsk, Voronezh region",
+   "d": "The Navy speaks of six aircraft destroyed, Zelensky of four destroyed and two damaged. Russian sources in the sample do not comment; there is no independent confirmation.",
+   "ru": null,
+   "ua": "Ukraine's Navy said it struck Borisoglebsk airfield overnight with Neptune missiles and destroyed six Su-34M bombers, with detonations and a fire recorded. Zelensky specified that four aircraft were destroyed and two hit, calling them ready for new strikes on Ukraine; Navy spokesman Dmytro Pletenchuk called it half a year of Russian defence industry output.",
+   "ind": "Kyiv Independent relays Zelensky's figures: of the six Su-34Ms hit, four were destroyed and two damaged. The Moscow Times notes that the destruction of the six aircraft has not been independently verified and that Russian authorities did not acknowledge a strike on the airfield; Voronezh region Governor Alexander Gusev reported only 33 drones intercepted and \"several jet-powered aerial targets\"."
+  }
+ },
+ {
+  "key": "1015-starshield-restored",
+  "ids": [
+   4867,
+   6018,
+   10795,
+   6011,
+   7192,
+   8115,
+   8112,
+   7204,
+   8104,
+   9427,
+   8598,
+   8616,
+   9620,
+   9429,
+   11456,
+   11486
+  ],
+  "title": "Минобороны Украины: работа Starshield восстановлена; сенатор Тиллис инициирует расследование в отношении Пентагона; Маск: Зеленскому «пора уходить»",
+  "place": "Украина, Вашингтон",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "РИА Новости со ссылкой на Newsweek пишет, что Starshield возобновил работу с ограничением 160 км/ч, а ТАСС со ссылкой на Daily Telegraph — что ограничения сделали непригодной значительную часть дронов ВСУ. Интерфакс и ТАСС цитируют Илона Маска, написавшего в X, что Зеленскому пора уходить.",
+   "quotes": [
+    {
+     "id": 4867,
+     "text": "она по-прежнему ограничена 160 километрами в час"
+    },
+    {
+     "id": 10795,
+     "text": "И вот бойня продолжается. (...) Зеленскому пора уходить"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Источники в Минобороны Украины сообщили, что работа Starshield в движении восстановилась и продолжает улучшаться, ведомство выясняет причины ограничений. Сенатор-республиканец Том Тиллис инициировал расследование в отношении главы Пентагона Пита Хегсета, предположив, что сбой произошел на уровне систем Starshield Минобороны США; группа поддержки Украины в Конгрессе назвала ограничения недопустимыми.",
+   "quotes": [
+    {
+     "id": 8115,
+     "text": "станом на зараз робота Starshield у русі відновилася і продовжується (покращуватись), фіксуємо це по звітах від підрозділів"
+    },
+    {
+     "id": 7204,
+     "text": "Я не сподіваюся, що міністр оборони Гегсет продемонструє прозорість"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent отмечает, что спустя почти 48 часов ни Вашингтон, ни SpaceX не взяли на себя ответственность; DW сообщает, что ЕС предложил Украине подключение к спутниковой системе Govsatcom в начале 2027 года. The Moscow Times со ссылкой на Укринформ пишет, что функции Starshield полностью восстановлены, а Зеленский в интервью FT заявил, что это была «не техническая проблема», а «воля». France 24 отмечает, что Маск возложил ответственность на Пентагон, Трамп отрицает изменение политики обмена разведданными, а сбой оживил в Киеве опасения, что США — необходимый, но все менее надежный союзник.",
+   "quotes": [
+    {
+     "id": 8616,
+     "text": "nobody in Washington, nor at SpaceX, has taken responsibility for the apparent decision to hobble Ukrainian military communications"
+    },
+    {
+     "id": 11456,
+     "text": "It was not a technical problem, it was the will"
+    },
+    {
+     "id": 11486,
+     "text": "the restrictions revived fears in Kyiv that the US is an essential but increasingly unreliable ally"
+    }
+   ]
+  },
+  "diverge": "Украинская сторона и американские законодатели ищут ответственных в Пентагоне; российские источники подчеркивают ущерб для ВСУ и тиражируют призыв Маска к уходу Зеленского. Кто принял решение об ограничении, официально не известно.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Міноборони України: роботу Starshield відновлено; сенатор Тілліс ініціює розслідування щодо Пентагону; Маск: Зеленському «час іти»",
+   "p": "Україна, Вашингтон",
+   "d": "Українська сторона й американські законодавці шукають відповідальних у Пентагоні; російські джерела наголошують на шкоді для ЗСУ і тиражують заклик Маска до відставки Зеленського. Хто ухвалив рішення про обмеження, офіційно не відомо.",
+   "ru": "РИА Новости з посиланням на Newsweek пише, що Starshield відновив роботу з обмеженням 160 км/год, а ТАСС з посиланням на Daily Telegraph — що обмеження зробили непридатною значну частину дронів ЗСУ. Інтерфакс і ТАСС цитують Ілона Маска, який написав в X, що Зеленському час іти.",
+   "ua": "Джерела в Міноборони України повідомили, що робота Starshield у русі відновилася і продовжує покращуватися, відомство з’ясовує причини обмежень. Сенатор-республіканець Том Тілліс ініціював розслідування щодо очільника Пентагону Піта Гегсета, припустивши, що збій стався на рівні систем Starshield Міноборони США; група підтримки України в Конгресі назвала обмеження неприпустимими.",
+   "ind": "Kyiv Independent зазначає, що через майже 48 годин ні Вашингтон, ні SpaceX не взяли на себе відповідальність; DW повідомляє, що ЄС запропонував Україні підключення до супутникової системи Govsatcom на початку 2027 року. The Moscow Times із посиланням на Укрінформ пише, що функції Starshield повністю відновлено, а Зеленський в інтерв’ю FT заявив, що це була «не технічна проблема», а «воля». France 24 зазначає, що Маск поклав відповідальність на Пентагон, Трамп заперечує зміну політики обміну розвідданими, а збій пожвавив у Києві побоювання, що США — необхідний, але дедалі менш надійний союзник."
+  },
+  "en": {
+   "t": "Ukraine's Defence Ministry says Starshield service restored; Senator Tillis launches a probe into the Pentagon; Musk says it is \"time for Zelensky to go\"",
+   "p": "Ukraine, Washington",
+   "d": "The Ukrainian side and US lawmakers look for those responsible in the Pentagon; Russian sources stress the damage to Ukraine's forces and amplify Musk's call for Zelensky to go. Who decided on the restriction is not officially known.",
+   "ru": "RIA Novosti, citing Newsweek, writes that Starshield resumed with a 160 km/h limit, and TASS, citing the Daily Telegraph, that the restrictions rendered a large part of Ukraine's drones unusable. Interfax and TASS quote Elon Musk writing on X that it is time for Zelensky to go.",
+   "ua": "Sources in Ukraine's Defence Ministry said Starshield on the move has been restored and keeps improving, and the ministry is looking into the causes. Republican Senator Thom Tillis launched an investigation into Pentagon chief Pete Hegseth, suggesting the failure occurred at the level of the US Defense Department's Starshield systems; the Congressional Ukraine Caucus called the restrictions unacceptable.",
+   "ind": "Kyiv Independent notes that after nearly 48 hours neither Washington nor SpaceX has taken responsibility; DW reports that the EU offered Ukraine a connection to the Govsatcom satellite system in early 2027. The Moscow Times, citing Ukrinform, writes that Starshield functionality has been fully restored, while Zelensky told the FT it was \"not a technical problem\" but \"the will\". France 24 notes that Musk blamed the Pentagon, Trump denies any change in intelligence-sharing policy, and the outage revived fears in Kyiv that the US is an essential but increasingly unreliable ally."
+  }
+ },
+ {
+  "key": "1015-us-intel-patriot-shortage",
+  "ids": [
+   10811,
+   10849,
+   6084,
+   8092,
+   8819,
+   8142,
+   7211,
+   9618
+  ],
+  "title": "Washington Post: разведка США пригрозила прекратить обмен данными при новых ударах по НПЗ; CNN: у Украины закончились ракеты для Patriot",
+  "place": "Киев, Вашингтон",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "Интерфакс со ссылкой на CBS News пишет, что США могли намеренно не предупредить Киев о российских ударах на этой неделе, а официально ссылались на проблемы с системой обнаружения из-за погоды; по данным CNN, Украина израсходовала все ракеты для Patriot. ТАСС со ссылкой на The Economist отмечает, что по программе PURL Украина получает 95% ракет-перехватчиков для Patriot.",
+   "quotes": [
+    {
+     "id": 10811,
+     "text": "США могли целенаправленно воздержаться от того, что заблаговременно оповестить Украину о российских ударах"
+    },
+    {
+     "id": 6084,
+     "text": "Ukraine receives 95% of the interceptor missiles for the Patriot air defense systems"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Украинская правда со ссылкой на Washington Post сообщает, что американская разведка предупредила посольство Украины о немедленном прекращении обмена данными в случае новых ударов по российской энергетике. РБК-Украина и УП пересказывают данные CNN: почти все баллистические ракеты последнего удара не были перехвачены из-за нехватки перехватчиков. Глава МИД Франции Жан-Ноэль Барро заявил, что Европа предоставляет Украине две трети разведданных.",
+   "quotes": [
+    {
+     "id": 8092,
+     "text": "Попередження були настільки масовими, що телефонували всім, чиє прізвище звучить по-українськи"
+    },
+    {
+     "id": 8142,
+     "text": "майже всі балістичні ракети під час останнього удару не були перехоплені через брак ракет-перехоплювачів"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Al Jazeera пишет, что украинцы опасаются сокращения американской разведки: сирены на этой неделе звучали лишь за секунды до ударов, которые убили не менее 15 человек.",
+   "quotes": [
+    {
+     "id": 9618,
+     "text": "The air raid sirens began howling just seconds before or after yet another wave of missiles struck"
+    }
+   ]
+  },
+  "diverge": "Источники сходятся в фактах, но опираются на анонимные данные американских СМИ; официального подтверждения от правительства США нет. Россия подчеркивает зависимость Украины от США, Украина и Франция — роль европейской разведки.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Данные основаны на анонимных источниках СМИ.",
+  "uk": {
+   "t": "Washington Post: розвідка США пригрозила припинити обмін даними в разі нових ударів по НПЗ; CNN: в України закінчилися ракети для Patriot",
+   "p": "Київ, Вашингтон",
+   "d": "Джерела збігаються у фактах, але спираються на анонімні дані американських ЗМІ; офіційного підтвердження від уряду США немає. Росія наголошує на залежності України від США, Україна і Франція — на ролі європейської розвідки.",
+   "ru": "Інтерфакс із посиланням на CBS News пише, що США могли навмисно не попередити Київ про російські удари цього тижня, а офіційно посилалися на проблеми із системою виявлення через погоду; за даними CNN, Україна витратила всі ракети для Patriot. ТАСС із посиланням на The Economist зазначає, що за програмою PURL Україна отримує 95% ракет-перехоплювачів для Patriot.",
+   "ua": "Українська правда з посиланням на Washington Post повідомляє, що американська розвідка попередила посольство України про негайне припинення обміну даними в разі нових ударів по російській енергетиці. РБК-Україна та УП переказують дані CNN: майже всі балістичні ракети останнього удару не були перехоплені через брак перехоплювачів. Очільник МЗС Франції Жан-Ноель Барро заявив, що Європа надає Україні дві третини розвідданих.",
+   "ind": "Al Jazeera пише, що українці побоюються скорочення американської розвідки: сирени цього тижня лунали лише за секунди до ударів, які вбили щонайменше 15 людей."
+  },
+  "en": {
+   "t": "Washington Post: US intelligence threatened to halt data sharing if refinery strikes continue; CNN: Ukraine has run out of Patriot missiles",
+   "p": "Kyiv, Washington",
+   "d": "Sources agree on facts but rely on anonymous US media reports; there is no official confirmation from the US government. Russia stresses Ukraine's dependence on the US, Ukraine and France the role of European intelligence.",
+   "ru": "Interfax, citing CBS News, writes that the US may have deliberately not warned Kyiv of Russian strikes this week, while officially citing weather problems with the detection system; according to CNN, Ukraine has used up all its Patriot missiles. TASS, citing The Economist, notes that under PURL Ukraine receives 95% of its Patriot interceptors.",
+   "ua": "Ukrainska Pravda, citing the Washington Post, reports that US intelligence warned Ukraine's embassy that data sharing would stop immediately if strikes on Russian energy resumed. RBC-Ukraine and UP relay CNN: almost all ballistic missiles in the last strike were not intercepted because of a lack of interceptors. French Foreign Minister Jean-Noël Barrot said Europe provides Ukraine with two thirds of its intelligence.",
+   "ind": "Al Jazeera writes that Ukrainians fear US intelligence cuts: this week sirens sounded only seconds before strikes that killed at least 15 people."
+  }
+ },
+ {
+  "key": "1015-storm-shadow-uk-boats",
+  "ids": [
+   10855,
+   4855,
+   6082,
+   6089,
+   4862,
+   8824,
+   8134,
+   8618
+  ],
+  "title": "Bloomberg: Британия передаст Украине новую партию Storm Shadow; Times — Украина применяла британские безэкипажные катера K3 Scout",
+  "place": "Лондон",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: атрибуция"
+  ],
+  "ru": {
+   "summary": "Интерфакс, РИА Новости и ТАСС со ссылкой на Bloomberg пишут, что Бёрнем и Зеленский обсудили пополнение запасов Storm Shadow и поставка планируется до зимы; Даунинг-стрит от комментариев отказалась. РИА и ТАСС со ссылкой на The Times сообщают, что Украина использовала британские катера K3 Scout компании Kraken Technology, в том числе для ударов по Сочи; по данным газеты, Британия закупила 20 таких катеров.",
+   "quotes": [
+    {
+     "id": 4855,
+     "text": "Вопрос о пополнении запасов крылатых ракет британского производства обсуждался премьер-министром Энди Бернемом и Владимиром Зеленским"
+    },
+    {
+     "id": 4862,
+     "text": "Беспилотные катера британского производства использовались украинцами для нанесения ударов по Сочи"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Украинская правда и РБК-Украина со ссылкой на Bloomberg пишут, что Британия отправляет дополнительные ракеты, чтобы Украина могла сорвать российские операции против гражданской инфраструктуры до зимы.",
+   "quotes": [
+    {
+     "id": 8134,
+     "text": "Велика Британія надсилає Україні додаткові ракети великої дальності Storm Shadow"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent уточняет, что официального объявления о поставке не было.",
+   "quotes": [
+    {
+     "id": 8618,
+     "text": "No official public announcement of this resupply has been made."
+    }
+   ]
+  },
+  "diverge": "Факты совпадают; российские агентства дополнительно подчеркивают британское участие в ударах по российской территории. Официально поставка не подтверждена.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Bloomberg: Британія передасть Україні нову партію Storm Shadow; Times — Україна застосовувала британські безекіпажні катери K3 Scout",
+   "p": "Лондон",
+   "d": "Факти збігаються; російські агентства додатково наголошують на британській участі в ударах по російській території. Офіційно постачання не підтверджено.",
+   "ru": "Інтерфакс, РИА Новости і ТАСС з посиланням на Bloomberg пишуть, що Бернем і Зеленський обговорили поповнення запасів Storm Shadow і постачання планується до зими; Даунінг-стріт від коментарів відмовилася. РИА і ТАСС з посиланням на The Times повідомляють, що Україна використовувала британські катери K3 Scout компанії Kraken Technology, зокрема для ударів по Сочі; за даними газети, Британія закупила 20 таких катерів.",
+   "ua": "Українська правда і РБК-Україна з посиланням на Bloomberg пишуть, що Британія відправляє додаткові ракети, щоб Україна могла зірвати російські операції проти цивільної інфраструктури до зими.",
+   "ind": "Kyiv Independent уточнює, що офіційного оголошення про постачання не було."
+  },
+  "en": {
+   "t": "Bloomberg: UK to send Ukraine a new batch of Storm Shadows; The Times says Ukraine used British K3 Scout uncrewed boats",
+   "p": "London",
+   "d": "The facts agree; Russian agencies additionally stress British involvement in strikes on Russian territory. The delivery has not been officially confirmed.",
+   "ru": "Interfax, RIA Novosti and TASS, citing Bloomberg, write that Burnham and Zelensky discussed replenishing Storm Shadow stocks, with delivery planned before winter; Downing Street declined to comment. RIA and TASS, citing The Times, report that Ukraine used British K3 Scout boats made by Kraken Technology, including in strikes on Sochi; according to the paper, Britain bought 20 such boats.",
+   "ua": "Ukrainska Pravda and RBC-Ukraine, citing Bloomberg, write that Britain is sending additional missiles so Ukraine can disrupt Russian operations against civilian infrastructure before winter.",
+   "ind": "Kyiv Independent notes there has been no official announcement of the delivery."
+  }
+ },
+ {
+  "key": "1015-front-claims",
+  "ids": [
+   6598,
+   10835,
+   6043,
+   4837,
+   4835,
+   4836,
+   4856,
+   7183,
+   8146,
+   7200,
+   8807,
+   8128,
+   8596,
+   8609
+  ],
+  "title": "Фронт: Минобороны РФ — Нефедовка и Черное на Харьковщине, 31 здание в Доброполье; Генштаб ВСУ — 260 боев, удары по «Рубикону»",
+  "place": "Харьковская, Донецкая, Запорожская, Херсонская области",
+  "region": "donetsk",
+  "tags": [
+   "расхождение: формулировки",
+   "не проверено"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ заявило, что группировка «Север» «в кольце окружения» взяла Нефедовку и Черное в Харьковской области, а в Доброполье за сутки «освобождено» 31 здание; ВСУ, по данным ведомства, потеряли до 220 военных в зоне «Запада» и свыше 190 — «Востока». РИА Новости со ссылкой на силовые структуры сообщает о смене командующего 10-м армейским корпусом ВСУ после «скандалов в бригадах».",
+   "quotes": [
+    {
+     "id": 10835,
+     "text": "установлен контроль над населенными пунктами Нефедовка и Черное Харьковской области"
+    },
+    {
+     "id": 4837,
+     "text": "В течение суток освобождено 31 здание, уничтожено до 15-ти украинских военнослужащих"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Генштаб ВСУ сообщил о 260 боях за 14 октября, 85 авиаударах и 278 КАБ, а к 22:00 15 октября — о 244 боях; по его данным, потери России с начала 2026 года превысили 350 тысяч человек, максимум — в сентябре, 46 230. Силы обороны поразили скопление личного состава подразделения «Рубикон» у Новоконстантиновки в Запорожской области и место запуска дронов у Донецка.",
+   "quotes": [
+    {
+     "id": 7183,
+     "text": "Російські військові завдали одного ракетного удару та 85 авіаційних ударів, під час яких скинули 278 керованих авіабомб."
+    },
+    {
+     "id": 8128,
+     "text": "уразили місце зосередження особового складу підрозділу БпЛА \"Рубікон\" в районі Новокостянтинівки Запорізької області"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent со ссылкой на ГУР сообщает, что подразделение «Шаманбат» и 426-й полк беспилотных систем уничтожили центр подготовки операторов дронов 18-й армии РФ в Хорлах Херсонской области.",
+   "quotes": [
+    {
+     "id": 8609,
+     "text": "Ukrainian units destroyed a Russian training center for drone operators in Khorly, in occupied Kherson Oblast"
+    }
+   ]
+  },
+  "diverge": "Российская сторона сообщает о взятии населенных пунктов и «окружении» на Харьковщине, украинская — о числе боев, потерях противника и ударах по его дроновым подразделениям. Российские заявления о новых селах украинская сторона не подтверждает; данные обеих сторон независимо не проверены.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Фронтовые заявления сторон независимо не проверены.",
+  "uk": {
+   "t": "Фронт: Міноборони РФ — Нефедівка і Чорне на Харківщині, 31 будівля в Добропіллі; Генштаб ЗСУ — 260 боїв, удари по «Рубікону»",
+   "p": "Харківська, Донецька, Запорізька, Херсонська області",
+   "d": "Російська сторона повідомляє про захоплення населених пунктів і «оточення» на Харківщині, українська — про кількість боїв, втрати противника та удари по його дронових підрозділах. Російські заяви про нові села українська сторона не підтверджує; дані обох сторін незалежно не перевірені.",
+   "ru": "Міноборони РФ заявило, що угруповання «Північ» «у кільці оточення» захопило Нефедівку і Чорне на Харківщині, а в Добропіллі за добу «звільнено» 31 будівлю; ЗСУ, за даними відомства, втратили до 220 військових у зоні «Заходу» і понад 190 — «Сходу». РИА Новости з посиланням на силові структури повідомляє про зміну командувача 10-го армійського корпусу ЗСУ після «скандалів у бригадах».",
+   "ua": "Генштаб ЗСУ повідомив про 260 боїв за 14 жовтня, 85 авіаударів і 278 КАБ, а до 22:00 15 жовтня — про 244 бої; за його даними, втрати Росії з початку 2026 року перевищили 350 тисяч осіб, максимум — у вересні, 46 230. Сили оборони уразили скупчення особового складу підрозділу «Рубікон» біля Новокостянтинівки на Запоріжжі та місце запуску дронів біля Донецька.",
+   "ind": "Kyiv Independent з посиланням на ГУР повідомляє, що підрозділ «Шаманбат» і 426-й полк безпілотних систем знищили центр підготовки операторів дронів 18-ї армії РФ у Хорлах на Херсонщині."
+  },
+  "en": {
+   "t": "Front: Russia claims Nefedivka and Chorne in Kharkiv region and 31 buildings in Dobropillia; Ukraine's General Staff reports 260 clashes and strikes on Rubikon",
+   "p": "Kharkiv, Donetsk, Zaporizhzhia, Kherson regions",
+   "d": "The Russian side reports capturing villages and an \"encirclement\" in Kharkiv region; the Ukrainian side reports numbers of clashes, enemy losses and strikes on its drone units. Ukraine does not confirm the Russian claims of new villages; neither side's data is independently verified.",
+   "ru": "The Russian Defence Ministry said its North group took Nefedivka and Chorne in Kharkiv region \"in the encirclement\", and that 31 buildings in Dobropillia were \"liberated\" in a day; it said Ukraine lost up to 220 troops in the West group's zone and over 190 in the East's. RIA Novosti, citing security sources, reports the replacement of the commander of Ukraine's 10th Army Corps after \"scandals in the brigades\".",
+   "ua": "The General Staff reported 260 clashes on 14 October, 85 air strikes and 278 guided bombs, and by 22:00 on 15 October 244 clashes; it said Russian losses since the start of 2026 exceeded 350 thousand, peaking in September at 46 230. Ukrainian forces hit a concentration of Rubikon unit personnel near Novokostiantynivka in Zaporizhzhia region and a drone launch site near Donetsk.",
+   "ind": "Kyiv Independent, citing military intelligence (HUR), reports that the Shamanbat unit and the 426th Unmanned Systems Regiment destroyed a drone operator training centre of Russia's 18th Army in Khorly, Kherson region."
+  }
+ },
+ {
+  "key": "1015-kharkiv-shooting-suspect-charged",
+  "ids": [
+   8137,
+   8827,
+   8617
+  ],
+  "title": "СБУ предъявила подозрение российскому военному Леониду Рыжикову в расстреле пятерых безоружных военных ВСУ и гражданского",
+  "place": "Харьковская область",
+  "region": "kharkiv",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "СБУ и Харьковская областная прокуратура сообщили о подозрении 36-летнему жителю Санкт-Петербурга Леониду Рыжикову («Юла»), служившему во 2-м батальоне 1009-го мотострелкового полка: по версии следствия, 13 октября он расстрелял пятерых безоружных украинских военных и одного гражданского; по данным СБУ, в конце июля его мобилизовали в российскую армию.",
+   "quotes": [
+    {
+     "id": 8137,
+     "text": "Йдеться про 36-річного громадянина РФ, мешканця Санкт Петербурга Леоніда Рижикова."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пишет, что подозреваемому предъявлены обвинения в военных преступлениях и ему грозит пожизненное заключение.",
+   "quotes": [
+    {
+     "id": 8617,
+     "text": "has been charged with war crimes, Ukraine's Security Service (SBU) reported on Oct. 15"
+    }
+   ]
+  },
+  "diverge": "Украинская версия о российском военном противоречит заявлению РИА Новости от 14 октября о том, что стрелком был украинский мобилизованный; российские источники 15 октября дело не комментировали.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "СБУ повідомила про підозру російському військовому Леоніду Рижикову в розстрілі п’ятьох беззбройних військових ЗСУ і цивільного",
+   "p": "Харківська область",
+   "d": "Українська версія про російського військового суперечить заяві РИА Новости від 14 жовтня про те, що стрільцем був український мобілізований; російські джерела 15 жовтня справу не коментували.",
+   "ru": null,
+   "ua": "СБУ і Харківська обласна прокуратура повідомили про підозру 36-річному мешканцю Санкт-Петербурга Леоніду Рижикову («Юла»), який служив у 2-му батальйоні 1009-го мотострілецького полку: за версією слідства, 13 жовтня він розстріляв п’ятьох беззбройних українських військових і одного цивільного; за даними СБУ, наприкінці липня його мобілізували до російської армії.",
+   "ind": "Kyiv Independent пише, що підозрюваному висунуто звинувачення у воєнних злочинах і йому загрожує довічне ув’язнення."
+  },
+  "en": {
+   "t": "SBU charges Russian soldier Leonid Ryzhikov with shooting five unarmed Ukrainian soldiers and a civilian",
+   "p": "Kharkiv region",
+   "d": "The Ukrainian version naming a Russian soldier contradicts RIA Novosti's claim on 14 October that the gunman was a mobilised Ukrainian; Russian sources did not comment on the case on 15 October.",
+   "ru": null,
+   "ua": "The SBU and the Kharkiv regional prosecutor's office charged 36-year-old St Petersburg resident Leonid Ryzhikov (\"Yula\"), who served in the 2nd Battalion of the 1009th Motor Rifle Regiment: investigators say that on 13 October he shot five unarmed Ukrainian soldiers and one civilian; according to the SBU, he was mobilised into the Russian army at the end of July.",
+   "ind": "Kyiv Independent writes that the suspect has been charged with war crimes and faces life imprisonment."
+  }
+ },
+ {
+  "key": "1015-nyt-russian-energy-plan",
+  "ids": [
+   4829,
+   8816,
+   8143,
+   7210,
+   7227,
+   8595
+  ],
+  "title": "NYT: перехваченный план России — за месяц оставить Киев, Харьков и Одессу без света, воды и тепла",
+  "place": "Киев, Харьков, Одесса",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "РИА Новости в аналитическом материале пишет, что украинскую столицу «разминают» перед зимой и отопительным сезоном, а главными целями ночного удара были объекты энергетики; Минобороны, по данным агентства, сообщило о поражении всех намеченных целей.",
+   "quotes": [
+    {
+     "id": 4829,
+     "text": "Украинскую столицу активно \"разминают\" перед зимой и началом отопительного сезона."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Украинская правда и РБК-Украина со ссылкой на The New York Times пишут о перехваченном украинскими спецслужбами плане: по его оценкам, России нужно около 70 баллистических ракет, 720 дальних дронов и 150 управляемых бомб, чтобы за месяц отрезать Киев, Харьков и Одессу от электричества, воды и отопления, а при успехе города потеряют 90% мощностей. Энергоэксперт Александр Харченко в интервью Суспильному сказал, что не видит признаков того, что Киев не переживет зиму.",
+   "quotes": [
+    {
+     "id": 8143,
+     "text": "Росії знадобиться близько 70 балістичних ракет, 720 безпілотників дальнього радіусу дії та 150 керованих бомб"
+    },
+    {
+     "id": 7227,
+     "text": "З усим, що ми зараз проходимо, ми вже жили."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent описывает новую российскую тактику изоляции и отключения столицы ударами по питающим ее энергообъектам.",
+   "quotes": [
+    {
+     "id": 8595,
+     "text": "Russia targeted multiple energy facilities powering the embattled capital amid a new campaign to isolate and disconnect the city"
+    }
+   ]
+  },
+  "diverge": "Российские СМИ открыто описывают удары как подготовку к зиме против столицы, украинские и независимые — как кампанию против гражданского населения. Подлинность перехваченного плана подтверждена только украинской стороной через NYT.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "План известен из публикации NYT со ссылкой на украинские спецслужбы.",
+  "uk": {
+   "t": "NYT: перехоплений план Росії — за місяць залишити Київ, Харків і Одесу без світла, води та тепла",
+   "p": "Київ, Харків, Одеса",
+   "d": "Російські ЗМІ відкрито описують удари як підготовку до зими проти столиці, українські та незалежні — як кампанію проти цивільного населення. Справжність перехопленого плану підтверджена лише українською стороною через NYT.",
+   "ru": "РИА Новости в аналітичному матеріалі пише, що українську столицю «розминають» перед зимою та опалювальним сезоном, а головними цілями нічного удару були об’єкти енергетики; Міноборони, за даними агентства, повідомило про ураження всіх намічених цілей.",
+   "ua": "Українська правда і РБК-Україна з посиланням на The New York Times пишуть про перехоплений українськими спецслужбами план: за його оцінками, Росії потрібно близько 70 балістичних ракет, 720 далекобійних дронів і 150 керованих бомб, щоб за місяць відрізати Київ, Харків і Одесу від електрики, води та опалення, а в разі успіху міста втратять 90% потужностей. Енергоексперт Олександр Харченко в інтерв’ю Суспільному сказав, що не бачить ознак того, що Київ не пройде зиму.",
+   "ind": "Kyiv Independent описує нову російську тактику ізоляції та відключення столиці ударами по енергооб’єктах, що її живлять."
+  },
+  "en": {
+   "t": "NYT: intercepted Russian plan aims to cut Kyiv, Kharkiv and Odesa off from power, water and heat within a month",
+   "p": "Kyiv, Kharkiv, Odesa",
+   "d": "Russian media openly describe the strikes as pre-winter pressure on the capital; Ukrainian and independent media as a campaign against civilians. The authenticity of the intercepted plan is vouched for only by the Ukrainian side via the NYT.",
+   "ru": "RIA Novosti writes in an analysis that the Ukrainian capital is being \"softened up\" before winter and the heating season, and that energy facilities were the main targets of the overnight strike; it says the Defence Ministry reported all intended targets hit.",
+   "ua": "Ukrainska Pravda and RBC-Ukraine, citing The New York Times, report a plan intercepted by Ukrainian intelligence: by its estimates Russia needs about 70 ballistic missiles, 720 long-range drones and 150 guided bombs to cut Kyiv, Kharkiv and Odesa off from electricity, water and heating within a month, and if successful the cities would lose 90% of capacity. Energy expert Oleksandr Kharchenko told Suspilne he sees no signs that Kyiv will not get through the winter.",
+   "ind": "Kyiv Independent describes a new Russian tactic of isolating and disconnecting the capital by striking the energy facilities that supply it."
+  }
+ },
+ {
+  "key": "1015-eu-summit-zelensky-brussels",
+  "ids": [
+   10851,
+   10830,
+   8846,
+   7201,
+   8837,
+   8141,
+   8608,
+   8620,
+   8605,
+   9431,
+   9435,
+   11466,
+   11487
+  ],
+  "title": "Зеленский в Брюсселе на саммите ЕС: встречи с Де Вевером, Туском и Рютте; Мерц призывает увеличить помощь, Радев поддержал дизельную сделку",
+  "place": "Брюссель",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "Генсек НАТО Марк Рютте сообщил, что обсудил с Зеленским реализацию энергетического перемирия и поддержку через механизм PURL. Интерфакс со ссылкой на FT пишет, что лидеры ЕС собираются в частных беседах убеждать Зеленского смягчить публичную критику Трампа.",
+   "quotes": [
+    {
+     "id": 10851,
+     "text": "Мы обсудили важность воплощения в жизнь энергетического перемирия, а также продолжающуюся поддержку Украины союзниками по НАТО, в том числе при помощи механизма PURL"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Зеленский после аудиенции у короля Филиппа сказал, что рассчитывает на поставки бельгийских F-16 против реактивных «шахедов»; после встречи с Дональдом Туском сообщил о польском пакете помощи для защиты Киева с непубличными элементами. Канцлер Фридрих Мерц заявил, что замороженные российские активы должны оставаться под европейской юрисдикцией.",
+   "quotes": [
+    {
+     "id": 8141,
+     "text": "Я хотів би запевнити Україну, ваш народ і вас особисто"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пишет, что 20-минутная встреча с Бартом Де Вевером не принесла прорыва по 200 млрд евро российских активов в Euroclear, а лидеры ЕС на саммите критиковали «пророссийский поворот» Трампа; DW — что Мерц призвал снова увеличить финансирование Украины, а премьер Болгарии Румен Радев, напротив, поддержал дизельную сделку из-за высоких цен на топливо. France 24 пишет, что Зеленский встретился в Брюсселе с Рютте и Макроном; Макрон назвал «крайне важным», чтобы Украина получила все средства для защиты, а Туск написал украинцам, что они не одни. The Moscow Times сообщает, что председатель Европарламента Роберта Мецола после саммита призвала продвигаться с целевыми визовыми ограничениями для россиян, а премьер Финляндии Петтери Орпо намерен предложить полностью прекратить выдачу им туристических виз.",
+   "quotes": [
+    {
+     "id": 9431,
+     "text": "Нам придется снова увеличить объем средств, чтобы действительно оказывать Украине долгосрочную помощь"
+    },
+    {
+     "id": 8620,
+     "text": "the talks apparently failed to yield a breakthrough on the fate of €200 billion ($227 billion) in Russian assets"
+    },
+    {
+     "id": 11487,
+     "text": "I can reassure you, dear Ukrainian friends and President Zelensky: YOU ARE NOT ALONE"
+    },
+    {
+     "id": 11466,
+     "text": "We must also increase pressure on Russia, notably by making progress on targeted visa restrictions"
+    }
+   ]
+  },
+  "diverge": "Российские источники акцентируют давление на Зеленского ради примирения с Трампом, украинские — новые пакеты помощи, независимые — разногласия в ЕС по активам и дизельной сделке.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Зеленський у Брюсселі на саміті ЄС: зустрічі з Де Вевером, Туском і Рютте; Мерц закликає збільшити допомогу, Радев підтримав дизельну угоду",
+   "p": "Брюссель",
+   "d": "Російські джерела наголошують на тиску на Зеленського заради примирення з Трампом, українські — на нових пакетах допомоги, незалежні — на розбіжностях у ЄС щодо активів і дизельної угоди.",
+   "ru": "Генсек НАТО Марк Рютте повідомив, що обговорив із Зеленським реалізацію енергетичного перемир’я і підтримку через механізм PURL. Інтерфакс із посиланням на FT пише, що лідери ЄС збираються в приватних розмовах переконувати Зеленського пом’якшити публічну критику Трампа.",
+   "ua": "Зеленський після аудієнції в короля Філіпа сказав, що розраховує на постачання бельгійських F-16 проти реактивних «шахедів»; після зустрічі з Дональдом Туском повідомив про польський пакет допомоги для захисту Києва з непублічними елементами. Канцлер Фрідріх Мерц заявив, що заморожені російські активи мають залишатися під європейською юрисдикцією.",
+   "ind": "Kyiv Independent пише, що 20-хвилинна зустріч із Бартом Де Вевером не принесла прориву щодо 200 млрд євро російських активів у Euroclear, а лідери ЄС на саміті критикували «проросійський поворот» Трампа; DW — що Мерц закликав знову збільшити фінансування України, а прем’єр Болгарії Румен Радев, навпаки, підтримав дизельну угоду через високі ціни на пальне. France 24 пише, що Зеленський зустрівся в Брюсселі з Рютте й Макроном; Макрон назвав «вкрай важливим», щоб Україна отримала всі засоби для захисту, а Туск написав українцям, що вони не самі. The Moscow Times повідомляє, що голова Європарламенту Роберта Мецола після саміту закликала просуватися з цільовими візовими обмеженнями для росіян, а прем’єр Фінляндії Петтері Орпо має намір запропонувати повністю припинити видачу їм туристичних віз."
+  },
+  "en": {
+   "t": "Zelensky in Brussels for the EU summit: meetings with De Wever, Tusk and Rutte; Merz urges more aid, Radev backs the diesel deal",
+   "p": "Brussels",
+   "d": "Russian sources stress pressure on Zelensky to reconcile with Trump, Ukrainian sources new aid packages, independent ones EU divisions over the assets and the diesel deal.",
+   "ru": "NATO Secretary General Mark Rutte said he discussed implementing the energy truce and support via PURL with Zelensky. Interfax, citing the FT, writes that EU leaders plan to urge Zelensky privately to tone down public criticism of Trump.",
+   "ua": "After an audience with King Philippe, Zelensky said he is counting on Belgian F-16s against jet-powered Shaheds; after meeting Donald Tusk he announced a Polish aid package to protect Kyiv with non-public elements. Chancellor Friedrich Merz said frozen Russian assets must remain under European jurisdiction.",
+   "ind": "Kyiv Independent writes that a 20-minute meeting with Bart De Wever brought no breakthrough on 200 billion euros of Russian assets at Euroclear, while EU leaders at the summit criticised Trump's \"pro-Russian turn\"; DW reports that Merz called for funding for Ukraine to be increased again, while Bulgarian Prime Minister Rumen Radev, by contrast, backed the diesel deal because of high fuel prices. France 24 writes that Zelensky met Rutte and Macron in Brussels; Macron called it \"crucial\" that Ukraine receive all means to protect itself, and Tusk told Ukrainians they are not alone. The Moscow Times reports that European Parliament President Roberta Metsola called after the summit for progress on targeted visa restrictions for Russians, while Finnish Prime Minister Petteri Orpo plans to propose a complete halt to tourist visas for them."
+  }
+ },
+ {
+  "key": "1015-swede-detained-pskov",
+  "ids": [
+   10806,
+   10815,
+   9434,
+   11453
+  ],
+  "title": "ФСБ задержала в Псковской области гражданина Швеции, обвинив его в участии в боях за ВСУ и подготовке диверсий",
+  "place": "Псковская область",
+  "region": "russia-other",
+  "tags": [
+   "расхождение: атрибуция",
+   "не проверено"
+  ],
+  "ru": {
+   "summary": "ФСБ сообщила, что задержанный пересек границу с территории сопредельного государства, ранее по контракту служил в ВСУ и прибыл для совершения диверсий. Интерфакс передает, что правительство Швеции через посольство в Москве расследует инцидент, а МИД Швеции этим делом пока не занимается.",
+   "quotes": [
+    {
+     "id": 10815,
+     "text": "Правительство Швеции через посольство в Москве проведет расследование инцидента с задержанием в России гражданина этой страны"
+    }
+   ]
+  },
+  "ua": null,
+  "ind": {
+   "summary": "DW пишет, что 35-летнему шведу предъявлено обвинение в незаконном пересечении границы и ему могут предъявить обвинение в терроризме; российская сторона утверждает, что у нее есть документы о его командовании подразделением ВСУ. The Moscow Times со ссылкой на видео ФСБ пишет, что задержанный назвался 35-летним Фредди Линдхольмом и рассказал о контракте с батальоном «Айдар», подписанном в Тернополе; МИД Швеции сообщил, что знает о сообщениях СМИ, но делом не занимается.",
+   "quotes": [
+    {
+     "id": 9434,
+     "text": "has been charged with illegally entering the country and may face additional terrorism charges"
+    },
+    {
+     "id": 11453,
+     "text": "In the interrogation video, Lindholm said he had signed a military contract with the Aidar battalion"
+    },
+    {
+     "id": 11453,
+     "text": "The Swedish Foreign Ministry said it was aware of media reports about the detention, but was not currently involved in the case."
+    }
+   ]
+  },
+  "diverge": "Обвинения исходят от ФСБ; украинская сторона в выборке их не комментирует, независимого подтверждения нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Версия ФСБ не проверена независимо.",
+  "uk": {
+   "t": "ФСБ затримала в Псковській області громадянина Швеції, звинувативши його в участі в боях за ЗСУ та підготовці диверсій",
+   "p": "Псковська область",
+   "d": "Звинувачення походять від ФСБ; українська сторона у вибірці їх не коментує, незалежного підтвердження немає.",
+   "ru": "ФСБ повідомила, що затриманий перетнув кордон із території сусідньої держави, раніше за контрактом служив у ЗСУ і прибув для здійснення диверсій. Інтерфакс передає, що уряд Швеції через посольство в Москві розслідує інцидент, а МЗС Швеції цією справою поки не займається.",
+   "ua": null,
+   "ind": "DW пише, що 35-річному шведу висунуто звинувачення в незаконному перетині кордону і йому можуть висунути звинувачення в тероризмі; російська сторона стверджує, що має документи про його командування підрозділом ЗСУ. The Moscow Times із посиланням на відео ФСБ пише, що затриманий назвався 35-річним Фредді Ліндгольмом і розповів про контракт із батальйоном «Айдар», підписаний у Тернополі; МЗС Швеції повідомило, що знає про повідомлення ЗМІ, але справою не займається."
+  },
+  "en": {
+   "t": "FSB detains a Swedish citizen in Pskov region, accusing him of fighting for Ukraine and planning sabotage",
+   "p": "Pskov region",
+   "d": "The accusations come from the FSB; the Ukrainian side does not comment in the sample, and there is no independent confirmation.",
+   "ru": "The FSB said the detainee crossed the border from a neighbouring state, had served under contract in the Ukrainian army and came to commit sabotage. Interfax reports that the Swedish government will look into the incident via its embassy in Moscow, while the Swedish foreign ministry is not currently handling the case.",
+   "ua": null,
+   "ind": "DW writes that the 35-year-old Swede has been charged with illegally entering the country and may face terrorism charges; Russia claims it has documents showing he commanded a Ukrainian unit. The Moscow Times, citing an FSB video, writes that the detainee identified himself as 35-year-old Freddy Lindholm and spoke of a contract with the Aidar battalion signed in Ternopil; the Swedish Foreign Ministry said it was aware of media reports but was not involved in the case."
+  }
+ },
+ {
+  "key": "1015-poland-moldova-airspace",
+  "ids": [
+   4863,
+   8144,
+   7209
+  ],
+  "title": "Польша поднимала авиацию из-за российских ударов по западу Украины; Молдова сообщила о пролете «неизвестного дрона»",
+  "place": "Польша, Молдова",
+  "region": "moldova-romania",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "РИА Новости сообщает, что польские военные поднимали авиацию «якобы из-за действий» российских войск на Украине, ссылаясь на оперативное командование Польши.",
+   "quotes": [
+    {
+     "id": 4863,
+     "text": "Польские военные поднимали в воздух авиацию якобы из-за действий Вооруженных сил России на Украине"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Оперативное командование ВС Польши заявило, что авиация действовала превентивно для защиты воздушного пространства вблизи районов угрозы из-за атак России на западе Украины. Минобороны Молдовы сообщило, что ночью дрон на восемь минут пересек границу со стороны Одесской области у Градениц и ушел в сторону Староказачьего.",
+   "quotes": [
+    {
+     "id": 7209,
+     "text": "Через 8 хвилин, о 01:51, він залишив повітряний простір Молдови"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "РИА подает сообщение польских военных с оговоркой «якобы», украинские СМИ — как реакцию на российскую угрозу. Происхождение дрона над Молдовой официально не установлено.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Польща піднімала авіацію через російські удари по заходу України; Молдова повідомила про проліт «невідомого дрона»",
+   "p": "Польща, Молдова",
+   "d": "РИА подає повідомлення польських військових із застереженням «нібито», українські ЗМІ — як реакцію на російську загрозу. Походження дрона над Молдовою офіційно не встановлено.",
+   "ru": "РИА Новости повідомляє, що польські військові піднімали авіацію «нібито через дії» російських військ в Україні, посилаючись на оперативне командування Польщі.",
+   "ua": "Оперативне командування ЗС Польщі заявило, що авіація діяла превентивно для захисту повітряного простору поблизу районів загрози через атаки Росії на заході України. Міноборони Молдови повідомило, що вночі дрон на вісім хвилин перетнув кордон з боку Одещини біля Градениць і пішов у бік Старокозачого.",
+   "ind": null
+  },
+  "en": {
+   "t": "Poland scrambles aircraft over Russian strikes on western Ukraine; Moldova reports an \"unknown drone\" overflight",
+   "p": "Poland, Moldova",
+   "d": "RIA presents the Polish military statement with the qualifier \"allegedly\", Ukrainian media as a reaction to a Russian threat. The origin of the drone over Moldova has not been officially established.",
+   "ru": "RIA Novosti reports that the Polish military scrambled aircraft \"allegedly because of the actions\" of Russian forces in Ukraine, citing Poland's Operational Command.",
+   "ua": "Poland's Operational Command said aircraft operated preventively to protect airspace near threatened areas because of Russian attacks in western Ukraine. Moldova's Defence Ministry said a drone crossed the border from Odesa region near Hradenytsi overnight for eight minutes and left towards Starokozache.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1015-czech-chief-nato-test",
+  "ids": [
+   7214,
+   8129,
+   8130
+  ],
+  "title": "Глава Генштаба Чехии: Россия может проверить единство НАТО «частичным» нападением; передача Украине L-159 снята с повестки",
+  "place": "Прага",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Начальник Генштаба армии Чехии Мирослав Главач в интервью ČTK сказал, что Россия, ведущая против Европы гибридную войну на грани открытой, может проверить сплоченность государства — члена НАТО частичным нападением на его территорию; вопрос передачи Украине чешских самолетов L-159 он считает закрытым.",
+   "quotes": [
+    {
+     "id": 8129,
+     "text": "Росія може перевірити згуртованість держави-члена НАТО, здійснивши частковий напад на її територію"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Заявление пересказывают только украинские СМИ; российские источники в выборке его не комментируют.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Начальник Генштабу Чехії: Росія може перевірити єдність НАТО «частковим» нападом; передача Україні L-159 знята з порядку денного",
+   "p": "Прага",
+   "d": "Заяву переказують лише українські ЗМІ; російські джерела у вибірці її не коментують.",
+   "ru": null,
+   "ua": "Начальник Генштабу армії Чехії Мірослав Главач в інтерв’ю ČTK сказав, що Росія, яка веде проти Європи гібридну війну на межі відкритої, може перевірити згуртованість держави — члена НАТО частковим нападом на її територію; питання передачі Україні чеських літаків L-159 він вважає закритим.",
+   "ind": null
+  },
+  "en": {
+   "t": "Czech chief of staff: Russia may test NATO unity with a \"partial\" attack; transfer of L-159s to Ukraine is off the table",
+   "p": "Prague",
+   "d": "Only Ukrainian media relay the statement; Russian sources in the sample do not comment.",
+   "ru": null,
+   "ua": "Czech Chief of General Staff Miroslav Hlaváč told ČTK that Russia, waging a hybrid war against Europe on the verge of open conflict, may test the cohesion of a NATO member with a partial attack on its territory; he considers the question of handing Czech L-159 aircraft to Ukraine closed.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1015-allied-aid-announcements",
+  "ids": [
+   10842,
+   7206,
+   7212,
+   7203
+  ],
+  "title": "Союзники: Эстония — еще 10 млн евро по PURL, Италия анонсировала тринадцатый пакет, Литва и Украина создают совместное производство РЭБ и компонентов дронов",
+  "place": "Таллин, Рим, Вильнюс",
+  "region": "ukraine-wide",
+  "tags": [],
+  "ru": {
+   "summary": "Интерфакс со ссылкой на Минобороны Литвы сообщает, что литовская компания Pekkla и украинская December One RND подписали меморандум о совместном предприятии в Литве по производству средств РЭБ и компонентов беспилотников.",
+   "quotes": [
+    {
+     "id": 10842,
+     "text": "Целью данного соглашения является создание совместного предприятия в Литве."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Правительство Эстонии сообщило, что страна выделит еще 10 млн евро на американское оружие для Украины через PURL; спикер Рады Руслан Стефанчук после встречи с главой Сената Италии объявил о тринадцатом пакете помощи, а премьер Латвии призвал ЕС усилить поддержку Украины.",
+   "quotes": [
+    {
+     "id": 7206,
+     "text": "Естонія продовжить допомагати Україні, зокрема через механізм PURL"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Расхождений в фактах нет; российские источники упоминают только литовско-украинский проект, о помощи Эстонии и Италии сообщают украинские СМИ.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Союзники: Естонія — ще 10 млн євро через PURL, Італія анонсувала тринадцятий пакет, Литва та Україна створюють спільне виробництво РЕБ і компонентів дронів",
+   "p": "Таллінн, Рим, Вільнюс",
+   "d": "Розбіжностей у фактах немає; російські джерела згадують лише литовсько-український проєкт, про допомогу Естонії та Італії повідомляють українські ЗМІ.",
+   "ru": "Інтерфакс із посиланням на Міноборони Литви повідомляє, що литовська компанія Pekkla та українська December One RND підписали меморандум про спільне підприємство в Литві з виробництва засобів РЕБ і компонентів безпілотників.",
+   "ua": "Уряд Естонії повідомив, що країна виділить ще 10 млн євро на американську зброю для України через PURL; спікер Ради Руслан Стефанчук після зустрічі з головою Сенату Італії оголосив про тринадцятий пакет допомоги, а прем’єр Латвії закликав ЄС посилити підтримку України.",
+   "ind": null
+  },
+  "en": {
+   "t": "Allies: Estonia adds 10 million euros via PURL, Italy announces a thirteenth package, Lithuania and Ukraine set up joint EW and drone component production",
+   "p": "Tallinn, Rome, Vilnius",
+   "d": "There are no factual discrepancies; Russian sources mention only the Lithuanian-Ukrainian project, while Ukrainian media report the Estonian and Italian aid.",
+   "ru": "Interfax, citing Lithuania's Defence Ministry, reports that Lithuanian company Pekkla and Ukraine's December One RND signed a memorandum on a joint venture in Lithuania to produce electronic warfare equipment and drone components.",
+   "ua": "Estonia's government said it will allocate another 10 million euros for US weapons for Ukraine via PURL; Rada Speaker Ruslan Stefanchuk announced a thirteenth aid package after meeting the head of the Italian Senate, and Latvia's prime minister urged the EU to step up support for Ukraine.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1015-oleshky-occupied-crisis",
+  "ids": [
+   4865,
+   8606
+  ],
+  "title": "Гуманитарный кризис в оккупированных Алешках: Kyiv Independent — ухудшение по всей оккупированной территории; посольство РФ — «антироссийский фейк»",
+  "place": "Алешки, Херсонская область",
+  "region": "kherson",
+  "tags": [
+   "расхождение: кто виноват"
+  ],
+  "ru": {
+   "summary": "Посольство России в Польше назвало публикацию Gazeta Wyborcza о гуманитарной ситуации в Алешках «антироссийским фейком», основанным на словах Зеленского и «не заслуживающих доверия» правозащитных организаций, возложив ответственность на украинскую сторону.",
+   "quotes": [
+    {
+     "id": 4865,
+     "text": "Не могли обойти вниманием очередной антироссийский фейк, который был опубликован в \"Газете Выборчей\"."
+    }
+   ]
+  },
+  "ua": null,
+  "ind": {
+   "summary": "Kyiv Independent пишет, что гуманитарный кризис в прифронтовых Алешках — лишь часть ухудшения ситуации на всех оккупированных территориях по вине российских оккупационных властей.",
+   "quotes": [
+    {
+     "id": 8606,
+     "text": "all regions of occupied Ukraine face worsening humanitarian issues at the hands of Russia's occupation authorities"
+    }
+   ]
+  },
+  "diverge": "Стороны возлагают ответственность друг на друга; независимый доступ в оккупированные Алешки отсутствует.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Нет независимого доступа к месту событий.",
+  "uk": {
+   "t": "Гуманітарна криза в окупованих Олешках: Kyiv Independent — погіршення на всій окупованій території; посольство РФ — «антиросійський фейк»",
+   "p": "Олешки, Херсонщина",
+   "d": "Сторони покладають відповідальність одна на одну; незалежного доступу до окупованих Олешок немає.",
+   "ru": "Посольство Росії в Польщі назвало публікацію Gazeta Wyborcza про гуманітарну ситуацію в Олешках «антиросійським фейком», що ґрунтується на словах Зеленського і «не вартих довіри» правозахисних організаціях, поклавши відповідальність на українську сторону.",
+   "ua": null,
+   "ind": "Kyiv Independent пише, що гуманітарна криза в прифронтових Олешках — лише частина погіршення ситуації на всіх окупованих територіях з вини російської окупаційної влади."
+  },
+  "en": {
+   "t": "Humanitarian crisis in occupied Oleshky: Kyiv Independent says conditions are worsening across occupied territory; Russian embassy calls it \"anti-Russian fake\"",
+   "p": "Oleshky, Kherson region",
+   "d": "Each side blames the other; there is no independent access to occupied Oleshky.",
+   "ru": "Russia's embassy in Poland called a Gazeta Wyborcza report on the humanitarian situation in Oleshky an \"anti-Russian fake\" based on Zelensky's words and \"untrustworthy\" human rights groups, blaming the Ukrainian side.",
+   "ua": null,
+   "ind": "Kyiv Independent writes that the humanitarian crisis in frontline Oleshky is only part of a worsening situation across all occupied territories caused by Russian occupation authorities."
+  }
+ },
+ {
+  "key": "1015-russian-side-casualties",
+  "ids": [
+   10801,
+   10802,
+   10839,
+   10841,
+   4852
+  ],
+  "title": "Российская сторона: 59 атак на Белгородскую область за сутки, в ЛНР ранены двое",
+  "place": "Белгородская область, ЛНР",
+  "region": "russia-other",
+  "tags": [
+   "единственный источник",
+   "не проверено"
+  ],
+  "ru": {
+   "summary": "Губернатор Белгородской области Александр Шуваев сообщил о 59 атаках на 14 округов за сутки, пострадали два человека; оперштаб — о поврежденных предприятии и объектах инфраструктуры в Шебекине, Борисовке и Красной Яруге. Глава ЛНР Леонид Пасечник сообщил о двух раненых мирных жителях, в том числе велосипедистке в Троицком округе.",
+   "quotes": [
+    {
+     "id": 10801,
+     "text": "За минувшие сутки ВСУ 59 раз атаковали территорию Белгородской области"
+    },
+    {
+     "id": 4852,
+     "text": "Два человека ранены в ЛНР от атак ВСУ за сутки"
+    }
+   ]
+  },
+  "ua": null,
+  "ind": null,
+  "diverge": "Сведения исходят только от российских и назначенных Россией властей; украинские и независимые источники их не освещают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Данные одной стороны.",
+  "uk": {
+   "t": "Російська сторона: 59 атак на Бєлгородщину за добу, в «ЛНР» поранено двох",
+   "p": "Бєлгородська область, «ЛНР»",
+   "d": "Відомості походять лише від російської та призначеної Росією влади; українські та незалежні джерела їх не висвітлюють.",
+   "ru": "Губернатор Бєлгородської області Олександр Шуваєв повідомив про 59 атак на 14 округів за добу, постраждали двоє людей; оперштаб — про пошкоджені підприємство й об’єкти інфраструктури в Шебекіному, Борисівці та Красній Ярузі. Очільник «ЛНР» Леонід Пасічник повідомив про двох поранених мирних жителів, зокрема велосипедистку в Троїцькому окрузі.",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Russian side: 59 attacks on Belgorod region in a day, two injured in \"LPR\"",
+   "p": "Belgorod region, \"LPR\"",
+   "d": "The information comes only from Russian and Russian-installed authorities; Ukrainian and independent sources do not cover it.",
+   "ru": "Belgorod Governor Alexander Shuvaev reported 59 attacks on 14 districts over the day, with two people hurt; the regional HQ reported damage to an enterprise and infrastructure in Shebekino, Borisovka and Krasnaya Yaruga. \"LPR\" head Leonid Pasechnik reported two civilians injured, including a cyclist in Troitske district.",
+   "ua": null,
+   "ind": null
+  }
+ },
+ {
+  "key": "1015-russian-diplomats-claims",
+  "ids": [
+   4853,
+   4874,
+   6074,
+   6020,
+   6073,
+   5996,
+   6038
+  ],
+  "title": "Российские дипломаты в ООН и ОБСЕ: обвинения Киева в ударах по мирным жителям и «секретных тюрьмах»",
+  "place": "Нью-Йорк, Вена, Москва",
+  "region": "ukraine-wide",
+  "tags": [
+   "единственный источник",
+   "не проверено"
+  ],
+  "ru": {
+   "summary": "Посол по особым поручениям МИД РФ Родион Мирошник заявил в ООН, что с начала года от украинских атак пострадали не менее 10 253 мирных жителей России, и призвал Комитет ООН против пыток разобраться с «секретными тюрьмами» на Украине; РИА утверждает, что украинские представители покинули заседание перед его выступлением. Постпред при ОБСЕ Дмитрий Полянский обвинил западных «спонсоров» Киева в игнорировании ударов по НПЗ, замминистра Михаил Галузин заявил, что России не о чем договариваться с западноевропейцами, Кирилл Дмитриев — что визит Зеленского в Лондон вредит миру, а Александр Грушко предостерег НАТО и ЕС от попыток изолировать Калининград.",
+   "quotes": [
+    {
+     "id": 6074,
+     "text": "At least 10,253 Russian civilians have been affected by Ukrainian attacks since early 2026"
+    },
+    {
+     "id": 5996,
+     "text": "As a matter of fact, we do not intend to engage in any negotiations with Western Europeans."
+    }
+   ]
+  },
+  "ua": null,
+  "ind": null,
+  "diverge": "Заявления приводят только российские агентства; украинская сторона и независимые источники в выборке их не комментируют, данные не проверены.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Позиция одной стороны, данные не проверены.",
+  "uk": {
+   "t": "Російські дипломати в ООН і ОБСЄ: звинувачення Києва в ударах по мирних жителях і «таємних в’язницях»",
+   "p": "Нью-Йорк, Відень, Москва",
+   "d": "Заяви наводять лише російські агентства; українська сторона і незалежні джерела у вибірці їх не коментують, дані не перевірені.",
+   "ru": "Посол з особливих доручень МЗС РФ Родіон Мірошник заявив в ООН, що з початку року від українських атак постраждали щонайменше 10 253 мирних жителі Росії, і закликав Комітет ООН проти катувань розібратися з «таємними в’язницями» в Україні; РИА стверджує, що українські представники залишили засідання перед його виступом. Постпред при ОБСЄ Дмитро Полянський звинуватив західних «спонсорів» Києва в ігноруванні ударів по НПЗ, заступник міністра Михайло Галузін заявив, що Росії нема про що домовлятися із західноєвропейцями, Кирило Дмитрієв — що візит Зеленського до Лондона шкодить миру, а Олександр Грушко застеріг НАТО і ЄС від спроб ізолювати Калінінград.",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Russian diplomats at the UN and OSCE accuse Kyiv of strikes on civilians and \"secret prisons\"",
+   "p": "New York, Vienna, Moscow",
+   "d": "Only Russian agencies carry the statements; the Ukrainian side and independent sources in the sample do not comment, and the figures are unverified.",
+   "ru": "Russian Foreign Ministry ambassador-at-large Rodion Miroshnik told the UN that at least 10 253 Russian civilians had been harmed by Ukrainian attacks since the start of the year and urged the UN Committee against Torture to look into \"secret prisons\" in Ukraine; RIA claims Ukrainian representatives left the session before his speech. OSCE envoy Dmitry Polyansky accused Kyiv's Western \"sponsors\" of ignoring refinery strikes, Deputy Minister Mikhail Galuzin said Russia has nothing to negotiate with Western Europeans, Kirill Dmitriev said Zelensky's London visit harms peace, and Alexander Grushko warned NATO and the EU against trying to isolate Kaliningrad.",
+   "ua": null,
+   "ind": null
+  }
+ },
+ {
+  "key": "1015-russian-diesel-exports",
+  "ids": [
+   10820,
+   6039,
+   6040,
+   9422,
+   11455,
+   7191
+  ],
+  "title": "Кремль: российский дизель начал поступать на мировые рынки после сделки с Трампом; Новак — интерес проявляют и другие страны, лидеры ЕС сделку критикуют",
+  "place": "Москва, Приморск, Брюссель",
+  "region": "russia-other",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "Песков заявил, что высвобождаются большие объемы дизеля, он начал поступать на мировые рынки и окажет определенный позитивный эффект, хотя полностью рынки не стабилизирует; при этом он упрекнул европейские страны в «деструктивной позиции» и назвал Европу «партией войны». Вице-премьер Александр Новак сказал, что российский дизель востребован во всем мире, нефтяные компании готовы начать поставки в любой момент, а ежемесячные поставки впоследствии могут достичь 3 млн тонн.",
+   "quotes": [
+    {
+     "id": 10820,
+     "text": "Этот дизель начал поступать на мировые рынки, и это будет иметь определенный позитивный эффект для стабилизации нефтяных рынков, хотя и не сможет полностью их стабилизировать"
+    },
+    {
+     "id": 10820,
+     "text": "Европа традиционно за последний период проявляет себя как партия войны"
+    },
+    {
+     "id": 6040,
+     "text": "Russian diesel is demanded all over the world."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Суспильне передает реакцию лидеров ЕС на полях саммита: премьер Нидерландов Роб Йеттен призвал Трампа отказаться от сделки, которая наполняет бюджет России, премьер Швеции Ульф Кристерссон назвал ее шагом в неверном направлении, а премьер Чехии Андрей Бабиш — «плохими новостями».",
+   "quotes": [
+    {
+     "id": 7191,
+     "text": "Він закликав президента Трампа відмовитися від цієї угоди."
+    },
+    {
+     "id": 7191,
+     "text": "Це крок у хибному напрямку."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW со ссылкой на Reuters и данные LSEG пишет, что 13 октября в порту Приморск на танкер загрузили около 40 000 тонн малосернистого дизельного топлива, после чего он направился в Марокко; Россия 10 октября отменила собственный частичный запрет на вывоз дизеля. The Moscow Times отмечает, что первые 300 000 тонн — меньше суточного потребления транспортного сектора США, а лицензия Минфина США действует до 7 апреля 2027 года.",
+   "quotes": [
+    {
+     "id": 9422,
+     "text": "После достижения договоренности с США Россия возобновила экспорт дизельного топлива."
+    },
+    {
+     "id": 11455,
+     "text": "is less than a day's supply for the U.S. transportation sector alone"
+    }
+   ]
+  },
+  "diverge": "Кремль представляет поставки дизеля как вклад в стабилизацию рынков и обвиняет Европу в «деструктивной позиции»; лидеры ЕС, которых цитирует Суспильне, считают, что сделка наполняет бюджет России. Фактических расхождений о начале экспорта нет; объемы поставок известны со слов российских официальных лиц и по данным LSEG.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Кремль: російський дизель почав надходити на світові ринки після угоди з Трампом; Новак — інтерес виявляють і інші країни, лідери ЄС угоду критикують",
+   "p": "Москва, Приморськ, Брюссель",
+   "d": "Кремль подає постачання дизеля як внесок у стабілізацію ринків і звинувачує Європу в «деструктивній позиції»; лідери ЄС, яких цитує Суспільне, вважають, що угода наповнює бюджет Росії. Фактичних розбіжностей щодо початку експорту немає; обсяги постачань відомі зі слів російських посадовців і за даними LSEG.",
+   "ru": "Пєсков заявив, що вивільняються великі обсяги дизеля, він почав надходити на світові ринки й матиме певний позитивний ефект, хоча повністю ринки не стабілізує; водночас він дорікнув європейським країнам «деструктивною позицією» і назвав Європу «партією війни». Віцепрем’єр Олександр Новак сказав, що російський дизель затребуваний у всьому світі, нафтові компанії готові почати постачання будь-якої миті, а щомісячні постачання згодом можуть сягнути 3 млн тонн.",
+   "ua": "Суспільне передає реакцію лідерів ЄС на полях саміту: прем’єр Нідерландів Роб Єттен закликав Трампа відмовитися від угоди, яка наповнює бюджет Росії, прем’єр Швеції Ульф Крістерссон назвав її кроком у хибному напрямку, а прем’єр Чехії Андрій Бабіш — «поганими новинами».",
+   "ind": "DW із посиланням на Reuters і дані LSEG пише, що 13 жовтня в порту Приморськ на танкер завантажили близько 40 000 тонн малосірчистого дизельного палива, після чого він вирушив до Марокко; Росія 10 жовтня скасувала власну часткову заборону на вивезення дизеля. The Moscow Times зазначає, що перші 300 000 тонн — менше за добове споживання транспортного сектору США, а ліцензія Мінфіну США діє до 7 квітня 2027 року."
+  },
+  "en": {
+   "t": "Kremlin: Russian diesel has begun reaching world markets after the deal with Trump; Novak says other countries are interested too, EU leaders criticise the deal",
+   "p": "Moscow, Primorsk, Brussels",
+   "d": "The Kremlin presents the diesel supplies as a contribution to stabilising markets and accuses Europe of a \"destructive position\"; EU leaders quoted by Suspilne say the deal fills Russia's budget. There are no factual discrepancies about the start of exports; supply volumes are known from Russian officials and LSEG data.",
+   "ru": "Peskov said large volumes of diesel are being released, it has begun reaching world markets and will have a certain positive effect, although it will not fully stabilise the markets; at the same time he reproached European countries for their \"destructive position\" and called Europe \"the party of war\". Deputy Prime Minister Alexander Novak said Russian diesel is in demand all over the world, oil companies are ready to start supplies at any moment, and monthly supplies could later reach 3 million tonnes.",
+   "ua": "Suspilne relays the reaction of EU leaders on the sidelines of the summit: Dutch Prime Minister Rob Jetten urged Trump to abandon the deal, which fills Russia's budget, Swedish Prime Minister Ulf Kristersson called it a step in the wrong direction, and Czech Prime Minister Andrej Babis called it \"bad news\".",
+   "ind": "DW, citing Reuters and LSEG data, writes that on October 13 about 40 000 tonnes of ultra-low sulphur diesel were loaded onto a tanker at the port of Primorsk, which then headed for Morocco; on October 10 Russia lifted its own partial ban on diesel exports. The Moscow Times notes that the first 300 000 tonnes are less than a day's consumption of the US transport sector, and the US Treasury licence runs until April 7, 2027."
+  }
+ }
+]

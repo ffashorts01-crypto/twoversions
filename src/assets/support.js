@@ -1,0 +1,2 @@
+(function(){document.querySelectorAll('button[data-copy]').forEach(function(b){b.hidden=false;b.addEventListener('click',function(){var u=b.getAttribute('data-copy'),l=b.getAttribute('data-done'),o=b.textContent;function ok(){b.textContent=l;setTimeout(function(){b.textContent=o},2000)}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(ok,function(){prompt('',u)})}else{prompt('',u)}})})})();

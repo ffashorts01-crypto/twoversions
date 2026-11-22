@@ -1,0 +1,225 @@
+import json, sys, sqlite3, re
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import add, setd, ext, apply, EXT, NEW, q
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- hourly run 13:57 Oct 19 (ids 13268-13430): 2 new Oct 19 cards + extensions ----------------
+
+def rep(c, path, old, new):
+    o = c
+    for p in path[:-1]: o = o[p]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+def dropq(c, side, i, start):
+    n0 = len(c[side]['quotes'])
+    c[side]['quotes'] = [x for x in c[side]['quotes'] if not (x['id'] == i and x['text'].startswith(start))]
+    assert len(c[side]['quotes']) == n0 - 1, (c['key'], i, start)
+
+card('1019-us-gas-proposal-eu-rejects', [12854, 13321],
+ 'NYT: посланники Трампа предлагали ЕС вернуться к закупкам российского газа, а Украине — возобновить транзит; Еврокомиссия предложение отвергла',
+ 'Брюссель', 'ukraine-wide',
+ ['одна из групп не освещает', 'умолчание'],
+ S('ТАСС сообщает, что Еврокомиссия отказалась от предложения США возобновить закупки газа из России: представитель ЕК Паула Пинью напомнила о позиции председателя Еврокомиссии Урсулы фон дер Ляйен, которая заявляла, что не отменит ни одной рестрикции против России до конца конфликта на Украине. Кто именно и в какой форме сделал предложение, в доступном тексте ТАСС не уточняется.',
+   (13321, 'ЕК отказалась от предложения США возобновить закупки газа из России'),
+   (13321, 'не отменит ни одной рестрикции против РФ до конца конфликта на Украине')),
+ None,
+ S('Meduza со ссылкой на источники The New York Times пишет, что спецпосланники президента США Стив Уиткофф и Джаред Кушнер предложили представителям Евросоюза вернуться к более крупным закупкам российского газа, сократившимся после вторжения России в Украину, а Украине — возобновить транзит российского газа. Посланники считают восстановление экспорта российского газа в Европу частью мирного урегулирования: по их мнению, это выгодно и Украине, которая вернула бы доходы от транзита, и европейским политикам, чьи избиратели недовольны ростом цен на энергию. Европейцы предложение отвергли; часть европейских и украинских чиновников, по данным источников газеты, считает, что США хотят вернуть российский газ в Европу отчасти потому, что рассчитывают на долю в этом экспорте. Издание напоминает, что Украина с 2025 года остановила транзит и теряет около миллиарда долларов в год.',
+   (12854, 'proposed to European Union officials that they resume larger purchases of Russian gas'),
+   (12854, 'Witkoff and Kushner also proposed that Ukraine resume transit of Russian gas.'),
+   (12854, 'The envoys see restoring Russian gas exports to Europe as part of a peace settlement.'),
+   (12854, 'Europeans rejected the proposal'),
+   (12854, 'wants Russian gas to return to Europe partly because it wants a stake in the exports')),
+ 'Независимый источник (Meduza со ссылкой на The New York Times) пишет, что с предложением выступили спецпосланники Трампа Уиткофф и Кушнер, что оно касалось и возобновления транзита через Украину и что посланники считают его частью мирного урегулирования. ТАСС в доступном тексте сообщает только об отказе Еврокомиссии со ссылкой на ее представителя и на позицию фон дер Ляйен не отменять ограничений против России до конца конфликта; о транзите через Украину и о том, кто сделал предложение, агентство не пишет. Украинских сообщений в выборке нет.',
+ 'medium', 'Детали предложения известны только от анонимных источников The New York Times в пересказе Meduza; позиции США и Украины в выборке нет.', False,
+ ('NYT: посланці Трампа пропонували ЄС повернутися до закупівель російського газу, а Україні — відновити транзит; Єврокомісія пропозицію відхилила',
+  'Брюссель',
+  'Незалежне джерело (Meduza з посиланням на The New York Times) пише, що з пропозицією виступили спецпосланці Трампа Віткофф і Кушнер, що вона стосувалася і відновлення транзиту через Україну і що посланці вважають її частиною мирного врегулювання. ТАСС у доступному тексті повідомляє лише про відмову Єврокомісії з посиланням на її представницю та на позицію фон дер Ляєн не скасовувати обмежень проти Росії до кінця конфлікту; про транзит через Україну і про те, хто зробив пропозицію, агентство не пише. Українських повідомлень у вибірці немає.',
+  'ТАСС повідомляє, що Єврокомісія відмовилася від пропозиції США відновити закупівлі газу з Росії: представниця ЄК Паула Пінью нагадала про позицію голови Єврокомісії Урсули фон дер Ляєн, яка заявляла, що не скасує жодного обмеження проти Росії до кінця конфлікту в Україні. Хто саме і в якій формі зробив пропозицію, у доступному тексті ТАСС не уточнюється.',
+  None,
+  'Meduza з посиланням на джерела The New York Times пише, що спецпосланці президента США Стів Віткофф і Джаред Кушнер запропонували представникам Євросоюзу повернутися до більших закупівель російського газу, які скоротилися після вторгнення Росії в Україну, а Україні — відновити транзит російського газу. Посланці вважають відновлення експорту російського газу до Європи частиною мирного врегулювання: на їхню думку, це вигідно і Україні, яка повернула б доходи від транзиту, і європейським політикам, чиї виборці незадоволені зростанням цін на енергію. Європейці пропозицію відхилили; частина європейських і українських посадовців, за даними джерел газети, вважає, що США хочуть повернути російський газ до Європи почасти тому, що розраховують на частку в цьому експорті. Видання нагадує, що Україна з 2025 року зупинила транзит і втрачає близько мільярда доларів на рік.'),
+ ('NYT: Trump\'s envoys proposed that the EU return to buying Russian gas and that Ukraine resume transit; the European Commission rejected the proposal',
+  'Brussels',
+  'The independent source (Meduza, citing The New York Times) writes that the proposal came from Trump\'s special envoys Witkoff and Kushner, that it also covered resuming transit through Ukraine and that the envoys see it as part of a peace settlement. TASS, in the available text, reports only the European Commission\'s refusal, citing its spokeswoman and von der Leyen\'s position of not lifting restrictions on Russia until the end of the conflict; the agency does not mention transit through Ukraine or who made the proposal. There are no Ukrainian reports in the sample.',
+  'TASS reports that the European Commission turned down a US proposal to resume purchases of gas from Russia: Commission spokeswoman Paula Pinho recalled the position of Commission President Ursula von der Leyen, who had said she would not lift a single restriction on Russia until the end of the conflict in Ukraine. Who made the proposal and in what form is not specified in the available TASS text.',
+  None,
+  'Meduza, citing sources of The New York Times, writes that US President Donald Trump\'s special envoys Steve Witkoff and Jared Kushner proposed to European Union officials that they return to larger purchases of Russian gas, which had declined after Russia\'s invasion of Ukraine, and that Ukraine resume the transit of Russian gas. The envoys see restoring Russian gas exports to Europe as part of a peace settlement: in their view, it would benefit both Ukraine, which would recover lost transit revenue, and European politicians whose voters are unhappy about rising energy prices. The Europeans rejected the proposal; some European and Ukrainian officials, according to the paper\'s sources, believe the US wants Russian gas back in Europe partly because it hopes for a stake in those exports. The outlet recalls that Ukraine halted transit in 2025 and loses about a billion dollars a year.'))
+
+card('1019-koretskyi-water-energy-damage', [13330, 13340, 13366, 13422],
+ 'Премьер Украины Корецкий: удары РФ сосредоточены на водоснабжении Киева, ущерб от взрывов в 2026 году — $7,7 млрд; ТАСС выделяет слова о бронировании',
+ 'Киев', 'ukraine-wide',
+ ['расхождение: формулировки', 'умолчание', 'одна из групп не освещает'],
+ S('ТАСС в серии коротких сообщений передает заявления премьер-министра Украины Сергея Корецкого: ущерб «от взрывов» в 2026 году составил $7,7 млрд, за три месяца на энергообъектах Украины произошло более 2 тыс. взрывов, а говоря о ситуации в энергетике в целом, «исходить надо из наихудшего сценария развития событий». Отдельной новостью агентство вынесло в заголовок слова Корецкого о том, что на Украине больше людей с бронью от мобилизации, чем военных, и что при оформлении броней фиксируется много злоупотреблений. Где прозвучали эти заявления, в доступных текстах ТАСС не указано.',
+   (13330, 'Он составил $7,7 млрд, сообщил премьер-министр страны Сергей Корецкий'),
+   (13340, 'За три месяца на энергообъектах Украины произошло более 2 тыс. взрывов'),
+   (13340, 'исходить надо из наихудшего сценария развития событий'),
+   (13366, 'на Украине больше людей с бронью, чем военных'),
+   (13366, 'в сфере оформления броней от мобилизации фиксируется много злоупотреблений')),
+ S('РБК-Украина со ссылкой на интервью Корецкого Би-би-си Украина пишет, что, по словам премьера, российские войска сосредоточили особое внимание на объектах водоснабжения Киева: «Свет и тепло — мы уже проходили, а вот на водоснабжение в Киеве сейчас у россиян очень активный фокус». Корецкий призвал не рассчитывать на то, что сложные сценарии не реализуются: тактика российских атак существенно изменилась, и этой зимой ситуация может быть еще сложнее. Правительство готовит резервные источники питания, насосные станции и альтернативные способы подачи воды, но, как признал премьер, полностью сохранить привычный бытовой комфорт при новых атаках эти меры не позволят.',
+   (13422, 'Світло і тепло - ми вже проходили, а от на водозабезпечення у Києві зараз у росіян дуже активний фокус'),
+   (13422, 'не варто розраховувати, що складні сценарії не реалізуються'),
+   (13422, 'уряд готує резервні джерела живлення, насосні станції та альтернативні способи постачання води')),
+ None,
+ 'Обе стороны передают заявления одного и того же премьер-министра, но выбирают из них разное. ТАСС выносит в заголовки цифры ущерба, число взрывов на энергообъектах и слова о злоупотреблениях с бронированием от мобилизации, а о водоснабжении Киева в доступных текстах не пишет. РБК-Украина делает главной темой перенос фокуса российских ударов на водоснабжение столицы и подготовку к зиме и не приводит ни цифр ущерба, ни слов о бронировании. Источник заявлений (интервью Би-би-си Украина) называет только РБК-Украина. Независимых сообщений в выборке нет.',
+ 'low', 'Заявления Корецкого обе стороны передают лишь частично; полного текста интервью в выборке нет, и не установлено, что все сообщения ТАСС взяты из того же интервью.', False,
+ ('Прем’єр України Корецький: удари РФ зосереджено на водопостачанні Києва, збитки від вибухів у 2026 році — $7,7 млрд; ТАСС виокремлює слова про бронювання',
+  'Київ',
+  'Обидві сторони передають заяви одного й того самого прем’єр-міністра, але обирають із них різне. ТАСС виносить у заголовки цифри збитків, кількість вибухів на енергооб’єктах і слова про зловживання з бронюванням від мобілізації, а про водопостачання Києва в доступних текстах не пише. РБК-Україна робить головною темою перенесення фокуса російських ударів на водопостачання столиці та підготовку до зими і не наводить ні цифр збитків, ні слів про бронювання. Джерело заяв (інтерв’ю ВВС Україна) називає лише РБК-Україна. Незалежних повідомлень у вибірці немає.',
+  'ТАСС у серії коротких повідомлень передає заяви прем’єр-міністра України Сергія Корецького: збитки «від вибухів» у 2026 році становили $7,7 млрд, за три місяці на енергооб’єктах України сталося понад 2 тис. вибухів, а говорячи про ситуацію в енергетиці загалом, «виходити треба з найгіршого сценарію розвитку подій». Окремою новиною агентство винесло в заголовок слова Корецького про те, що в Україні більше людей із бронюванням від мобілізації, ніж військових, і що під час оформлення бронювань фіксується багато зловживань. Де прозвучали ці заяви, у доступних текстах ТАСС не зазначено.',
+  'РБК-Україна з посиланням на інтерв’ю Корецького ВВС Україна пише, що, за словами прем’єра, російські війська зосередили особливу увагу на об’єктах водопостачання Києва: «Світло і тепло — ми вже проходили, а от на водозабезпечення у Києві зараз у росіян дуже активний фокус». Корецький закликав не розраховувати на те, що складні сценарії не реалізуються: тактика російських атак суттєво змінилася, і цієї зими ситуація може бути ще складнішою. Уряд готує резервні джерела живлення, насосні станції та альтернативні способи постачання води, але, як визнав прем’єр, повністю зберегти звичний побутовий комфорт у разі нових атак ці заходи не дозволять.',
+  None),
+ ('Ukrainian PM Koretskyi: Russian strikes focus on Kyiv\'s water supply, damage from explosions in 2026 is $7.7 billion; TASS highlights his words on draft exemptions',
+  'Kyiv',
+  'Both sides relay statements by the same prime minister but pick different parts of them. TASS puts the damage figures, the number of explosions at energy facilities and the remarks on abuses of draft exemptions in its headlines, and does not mention Kyiv\'s water supply in the available texts. RBC-Ukraine makes the shift of Russian strikes towards the capital\'s water supply and preparations for winter its main topic and gives neither the damage figures nor the remarks on exemptions. Only RBC-Ukraine names the source of the statements (an interview with BBC Ukrainian). There are no independent reports in the sample.',
+  'TASS, in a series of short reports, relays statements by Ukrainian Prime Minister Serhii Koretskyi: damage "from explosions" in 2026 amounted to $7.7 billion, more than 2 thousand explosions occurred at Ukrainian energy facilities in three months, and, speaking of the energy situation in general, "one must proceed from the worst-case scenario". In a separate item the agency headlined Koretskyi\'s words that Ukraine has more people with exemptions from mobilisation than military personnel and that many abuses are recorded in the granting of exemptions. Where the statements were made is not given in the available TASS texts.',
+  'RBC-Ukraine, citing Koretskyi\'s interview with BBC Ukrainian, writes that, according to the prime minister, Russian forces have focused particular attention on Kyiv\'s water supply facilities: "Electricity and heating we have already been through, but now the Russians have a very active focus on the water supply in Kyiv." Koretskyi urged people not to count on difficult scenarios failing to materialise: the tactics of Russian attacks have changed significantly and the situation this winter may be even harder. The government is preparing backup power sources, pumping stations and alternative ways of supplying water, but, the prime minister admitted, these measures will not fully preserve normal everyday comfort in the event of new attacks.',
+  None))
+
+@ext('1019-strikes-regions-rivne-dnipro', [13411])
+def _(c):
+    for path, old, new in [
+        (('ua', 'summary'), 'по промышленному предприятию, повреждены многоэтажные дома; глава ОВА Александр Ганжа сообщил о двух раненых.',
+         'по промышленному предприятию в Покровском районе; к 12:30, по данным «Украинской правды», погибли двое мужчин, семеро ранены, в том числе 15-летний подросток, повреждены 17 многоэтажных домов, почта, банк, колледж и магазины.'),
+        (('uk', 'ua'), 'по промисловому підприємству, пошкоджено багатоповерхові будинки; начальник ОВА Олександр Ганжа повідомив про двох поранених.',
+         'по промисловому підприємству в Покровському районі; станом на 12:30, за даними «Української правди», загинули двоє чоловіків, семеро поранені, зокрема 15-річний хлопець, пошкоджено 17 багатоповерхових будинків, пошту, банк, коледж і магазини.'),
+        (('en', 'ua'), 'the Russian army hit an industrial enterprise with a "Banderol" loitering munition, damaging apartment blocks; regional head Oleksandr Hanzha reported two people injured.',
+         'the Russian army hit an industrial enterprise in the Pokrovskyi district with a "Banderol" loitering munition; by 12:30, Ukrainska Pravda reports, two men had been killed and seven people injured, including a 15-year-old boy, and 17 apartment blocks, a post office, a bank, a college and shops were damaged.'),
+        (('ua', 'summary'), 'выросло до четырех: в больницу доставили трех женщин и мужчину, мужчину госпитализировали;', 'выросло до четырех;'),
+        (('uk', 'ua'), 'зросла до чотирьох: до лікарні доправили трьох жінок і чоловіка, чоловіка госпіталізували;', 'зросла до чотирьох;'),
+        (('en', 'ua'), 'had risen to four: three women and a man were taken to hospital and the man was admitted;', 'had risen to four;'),
+        (('diverge',), 'в Кривом Роге с двумя ранеными', 'в Кривом Роге, где погибли двое и ранены семеро'),
+        (('uk', 'd'), 'в Кривому Розі з двома пораненими', 'в Кривому Розі, де загинули двоє і поранено сімох'),
+        (('en', 'd'), 'in Kryvyi Rih that injured two', 'in Kryvyi Rih that killed two and injured seven'),
+        (('title',), 'есть раненые', 'есть погибшие и раненые'),
+        (('uk', 't'), 'є поранені', 'є загиблі та поранені'),
+        (('en', 't'), 'people injured', 'people killed and injured'),
+        (('uncertainty_reason',), 'В заголовке «Общественного» о Кривом Роге говорится о двух погибших, в тексте — о двух раненых.',
+         'Число пострадавших в Кривом Роге в течение дня росло: сначала сообщалось о двух раненых, к 12:30, по словам Вилкула, — о двух погибших и семи раненых.')]:
+        rep(c, path, old, new)
+    dropq(c, 'ua', 12640, 'внаслідок удару поранення')
+    c['ua']['quotes'] += [q(13411, 'На жаль, 2 чоловіка загинули від ворожого удару "Бандеролі" по Покровському району. Ще семеро людей отримали поранення, у тому числі хлопець 15 років.'),
+                          q(13411, 'Також унаслідок атаки пошкоджено 17 багатоповерхових будинків')]
+
+@ext('1017-kherson-air-strikes', [13397])
+def _(c):
+    for path, old, new in [
+        (('ua', 'summary'), 'после авиаудара по жилому кварталу 17 октября. В тот же день областная военная администрация сообщила, что после авиаудара по Херсону к врачам обратились еще пятеро в возрасте от 57 до 84 лет с контузиями и взрывными травмами; о каком именно ударе речь, в сообщении не уточняется.',
+         'после удара. В тот же день областная военная администрация сообщила, что к врачам обратились еще пятеро, а затем еще трое пострадавших при авиаударе по Корабельному району 17 октября в возрасте от 52 до 84 лет с контузиями и взрывными травмами; по данным «Общественного», число раненых при этом ударе выросло до 44.'),
+        (('uk', 'ua'), 'після авіаудару по житловому кварталу 17 жовтня. Того ж дня обласна військова адміністрація повідомила, що після авіаудару по Херсону до лікарів звернулися ще п’ятеро людей віком від 57 до 84 років з контузіями та вибуховими травмами; про який саме удар ідеться, у повідомленні не уточнюється.',
+         'після удару. Того ж дня обласна військова адміністрація повідомила, що до лікарів звернулися ще п’ятеро, а згодом ще троє постраждалих від авіаудару по Корабельному району 17 жовтня віком від 52 до 84 років з контузіями та вибуховими травмами; за даними «Суспільного», кількість поранених унаслідок цього удару зросла до 44.'),
+        (('en', 'ua'), 'On 19 October the health department of the Kherson regional administration named', 'On 19 October the regional health department named'),
+        (('en', 'ua'), 'victims of the 17 October air strike on a residential quarter. The same day the regional military administration said five more people aged 57 to 84 had sought medical help after an air strike on Kherson with concussions and blast injuries; the statement does not specify which strike.',
+         'victims of the strike. The same day the regional military administration said five and then three more people injured in the 17 October air strike on the Korabelnyi district, aged 52 to 84, had sought medical help with concussions and blast injuries; according to Suspilne, the number injured in that strike has risen to 44.')]:
+        rep(c, path, old, new)
+    c['ua']['quotes'] += [q(13397, 'За допомогою до лікарів звернулися ще троє людей — 52-річна жінка та двоє чоловіків віком 57 років.'),
+                          q(13397, 'поранених під час авіаудару по Корабельному району 17 жовтня')]
+
+@ext('1019-peskov-settlement-without-kyiv', [13421, 13417])
+def _(c):
+    # DWr 13418 = 13417 (same DW article twice) - skipped as duplicate
+    add(c, 'ua', 'РБК-Украина со ссылкой на ТАСС приводит ту же цитату, но в заголовке пишет, что в Кремле «вдруг открестились» от идеи мирных переговоров без участия Украины; издание отмечает, что Песков не уточнил, кого Москва хотела бы видеть представителем Украины, и напоминает о сообщении WSJ о предложенном Россией саммите с США и Китаем без Зеленского и о критике этой идеи Сибигой.',
+        'РБК-Україна з посиланням на ТАСС наводить ту саму цитату, але в заголовку пише, що в Кремлі «раптом відхрестилися» від ідеї мирних переговорів без участі України; видання зазначає, що Пєсков не уточнив, кого Москва хотіла б бачити представником України, і нагадує про повідомлення WSJ щодо запропонованого Росією саміту зі США та Китаєм без Зеленського і про критику цієї ідеї Сибігою.',
+        'RBC-Ukraine, citing TASS, gives the same quote but headlines that the Kremlin "suddenly disavowed" the idea of peace talks without Ukraine; it notes that Peskov did not specify whom Moscow would like to see representing Ukraine and recalls the WSJ report on a summit with the US and China proposed by Russia without Zelensky and Sybiha\'s criticism of the idea.',
+        [(13421, 'Остаточного врегулювання українського конфлікту без участі когось із Києва, хто готовий взяти на себе відповідальність, неможливо'),
+         (13421, 'При цьому Пєсков не уточнив, кого саме Москва хотіла б бачити представником України на переговорах.')])
+    add(c, 'ind', 'DW в материале о реакции Киева на идею встречи Путина, Трампа и Си приводит со ссылкой на «Интерфакс» слова Пескова о том, что окончательное урегулирование невозможно без «участия кого-то из Киева, кто готов взять на себя ответственность», — как ответ на вопрос, считают ли в Москве возможным урегулирование без представителей украинского руководства. Рядом издание ставит заявление главы МИД Украины Андрея Сибиги: Путину «нет места за одним столом» с Трампом и Си, а заслужить его он мог бы лишь шагом к миру, например предварительным прекращением огня.',
+        'DW у матеріалі про реакцію Києва на ідею зустрічі Путіна, Трампа і Сі з посиланням на «Интерфакс» наводить слова Пєскова про те, що остаточне врегулювання неможливе без «участі когось із Києва, хто готовий взяти на себе відповідальність», — як відповідь на запитання, чи вважають у Москві можливим врегулювання без представників українського керівництва. Поруч видання ставить заяву глави МЗС України Андрія Сибіги: Путіну «немає місця за одним столом» із Трампом і Сі, а заслужити його він міг би лише кроком до миру, наприклад попереднім припиненням вогню.',
+        'DW, in a piece on Kyiv\'s reaction to the idea of a Putin–Trump–Xi meeting, cites Interfax for Peskov\'s words that a final settlement is impossible without "the participation of someone from Kyiv who is ready to take responsibility", given in answer to whether Moscow considers a settlement possible without representatives of the Ukrainian leadership. Alongside it the outlet places a statement by Ukrainian Foreign Minister Andrii Sybiha: Putin has "no place at the same table" with Trump and Xi and could earn it only by a step towards peace, such as a prior ceasefire.',
+        [(13417, 'окончательное урегулирование в Украине невозможно без "участия кого-то из Киева, кто готов взять на себя ответственность"'),
+         (13417, 'По любым прагматическим или моральным меркам Путину нет места за одним столом с президентами Трампом и Си')])
+    for path, old, new in [
+        (('diverge',), 'Независимых сообщений в выборке нет.',
+         'РБК-Украина подает те же слова в заголовке как неожиданный отказ Кремля от идеи переговоров без Украины. Независимый источник (DW) передает цитату так же и ставит ее рядом с критикой Сибигой идеи встречи Путина, Трампа и Си.'),
+        (('uk', 'd'), 'Незалежних повідомлень у вибірці немає.',
+         'РБК-Україна подає ті самі слова в заголовку як несподівану відмову Кремля від ідеї переговорів без України. Незалежне джерело (DW) передає цитату так само і ставить її поруч із критикою Сибігою ідеї зустрічі Путіна, Трампа і Сі.'),
+        (('en', 'd'), 'There are no independent reports in the sample.',
+         'RBC-Ukraine headlines the same words as an unexpected Kremlin retreat from the idea of talks without Ukraine. The independent source (DW) relays the quote in the same way and places it next to Sybiha\'s criticism of the idea of a Putin–Trump–Xi meeting.')]:
+        rep(c, path, old, new)
+    c['tags'] = [t for t in c['tags'] if t != 'одна из групп не освещает']
+
+@ext('1019-kyiv-ballistic-night', [13399, 13410, 13424])
+def _(c):
+    # SUS 13399 (Cosmo Multimall marketing head: passage between blocks A and B badly damaged, cinema and ice arena work, contact-zoo animals evacuated; Cosmo already in the card) and
+    # UP 13410 (acting KMVA head Tkachov: restoration time of Chernihivska cannot be predicted, tracks very badly damaged) - ids only, card at the length limit
+    for path, old, new in [
+        (('ua', 'summary'), 'РБК-Украина со ссылкой на Воздушные силы и Киевскую городскую администрацию пишет', 'РБК-Украина пишет'),
+        (('uk', 'ua'), 'РБК-Україна з посиланням на Повітряні сили та Київську міську державну адміністрацію пише', 'РБК-Україна пише'),
+        (('en', 'ua'), 'RBC-Ukraine, citing the Air Force and the Kyiv City Administration, writes', 'RBC-Ukraine writes'),
+        (('en', 'ua'), 'According to Mayor Vitali Klitschko, a metro station on the Left Bank was damaged and debris tore the rails next to it; according to the city administration, the above-ground',
+         'Mayor Vitali Klitschko says debris tore the rails next to a damaged Left Bank metro station; per the city administration, the above-ground'),
+        (('en', 'ua'), 'RBC-Ukraine writes that in the repeated attack, which it dates to the morning, the Cosmo Multimall shopping centre in the Solomianskyi district was badly damaged, with ceilings partly collapsed;',
+         'In the repeated attack, which RBC-Ukraine dates to the morning, the Cosmo Multimall shopping centre in Solomianskyi district was badly damaged, ceilings partly collapsing;')]:
+        rep(c, path, old, new)
+    add(c, 'ua', 'Ночной атакой, по данным РБК-Украина, повреждено и здание энергорегулятора НКРЭКУ, сотрудники не пострадали.',
+        'Нічною атакою, за даними РБК-Україна, пошкоджено і будівлю енергорегулятора НКРЕКП, працівники не постраждали.',
+        'The night attack also damaged the building of the energy regulator NEURC; no staff were hurt (RBC-Ukraine).',
+        [(13424, 'Унаслідок нічної атаки на Київ пошкоджено будівлю НКРЕКП'),
+         (13424, 'На щастя, ніхто з працівників Регулятора не постраждав')])
+
+@ext('1016-pope-putin-oleshky', [13426])
+def _(c):
+    add(c, 'ua', 'РБК-Украина со ссылкой на эфир телеканала «Эспрессо» добавляет: российская сторона, по словам Лубинца, взяла в работу все украинские предложения по организации эвакуации, переговоры идут ежедневно, хотя сложные вопросы остаются.',
+        'РБК-Україна з посиланням на ефір телеканалу «Еспресо» додає: російська сторона, за словами Лубінця, взяла в роботу всі українські пропозиції щодо організації евакуації, переговори тривають щодня, хоча складні питання залишаються.',
+        'RBC-Ukraine, citing his interview on the Espreso TV channel, adds that according to Lubinets the Russian side has taken up all Ukrainian proposals on organising the evacuation and talks are held daily, though difficult issues remain.',
+        [(13426, 'російська сторона взяла в роботу всі пропозиції, які Україна раніше передала щодо організації евакуації'),
+         (13426, 'Омбудсман наголосив, що переговори з російською стороною тривають щодня.')])
+
+@ext('1019-mod-targets-kyiv-irpin', [13367])
+def _(c):
+    # TASS EN 13367 (Datagroup: data centre completely destroyed, = TASSr 12586) - id only
+    pass
+
+@ext('1019-front-claims', [13268, 13325])
+def _(c):
+    # RIA 13268 (daily map: Omelnyk, MoD daily summary), TASS EN 13325 (Marochko ~100 sq km, = TASSr 12240) - ids only, card near the limit
+    pass
+
+@ext('1018-strikes-west-ukraine-energy', [13401])
+def _(c):
+    # SUS 13401 (Kremenets district head: power not yet restored everywhere after the Oct 18 hit) - id only, card at the limit
+    pass
+
+
+# ---- quote pre-check against the DB
+db = sqlite3.connect('/workspace/compare-site-v2/data/articles.db')
+n = lambda s: re.sub(r'\s+', ' ', s or '')
+def chk(i, t):
+    r = db.execute('select text from articles where id=?', (i,)).fetchone()
+    if not r or n(t) not in n(r[0]): print('QUOTE BAD', i, t[:70])
+FILES = ['c16h.json', 'c17b.json', 'c18a.json', 'c19a.json', 'c19d.json', 'c19e.json', 'c19f.json', 'c19i.json']
+def lens(c):
+    return [len(c[s]['summary']) for s in ('ru', 'ua', 'ind') if c[s]] + [len(c[l][k]) for l in ('uk', 'en') for k in ('ru', 'ua', 'ind', 'd') if c[l][k]] + [len(c['diverge'])]
+if '--dry' in sys.argv:
+    import copy
+    for c in cards:
+        for s in ('ru', 'ua', 'ind'):
+            if c[s]:
+                for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+        print('NEW', c['key'], max(lens(c)), len(c['title']), len(c['uk']['t']), len(c['en']['t']))
+    for f in FILES:
+        for c in json.load(open(OUT + f)):
+            if c['key'] in EXT:
+                c = copy.deepcopy(c); EXT[c['key']](c)
+                for s in ('ru', 'ua', 'ind'):
+                    if c[s]:
+                        for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+                L = lens(c)
+                print('DRY', c['key'], max(L), len(c['title']), len(c['uk']['t']), len(c['en']['t']))
+    sys.exit()
+
+apply(FILES)
+json.dump(cards, open(OUT + 'c19j.json', 'w'), ensure_ascii=False, indent=1)
+touched = set(EXT)
+for f in FILES + ['c19j.json']:
+    for c in json.load(open(OUT + f)):
+        if c['key'] not in touched and f != 'c19j.json': continue
+        for s in ('ru', 'ua', 'ind'):
+            if c[s]:
+                for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+        L = lens(c)
+        print(c['key'], max(L))
+        if max(L) > 1400: print('TOO LONG', f, c['key'], max(L))
+        if len(c['title']) > 160: print('TITLE LONG', c['key'], len(c['title']))

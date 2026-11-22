@@ -1,0 +1,36 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+cards = []
+card = lambda *a: cards.append(C(*a))
+# ---------------- backlog run 22 Oct 01:00 ----------------
+card('1019-kyiv-tcc-shooting', [14353, 14817, 14410, 14930, 14560],
+ 'Стрельба в Печерском ТЦК в Киеве: доставленный за нарушение правил мобилизации мужчина ранил шестерых',
+ 'Киев', 'kyiv',
+ ['одна из групп не освещает', 'умолчание'],
+ None,
+ S("«Украинская правда» и РБК-Украина со ссылкой на полицию сообщают, что вечером в помещении Печерского районного ТЦК в Киеве стрельбу открыл мужчина, доставленный туда за нарушение законодательства о мобилизации: ранены трое полицейских и трое военнослужащих, стрелок задержан. На следующий день полиция уточнила, что 41-летний киевлянин достал спрятанный под одеждой пистолет и сделал не менее семи прицельных выстрелов, двое пострадавших в тяжелом состоянии; ему объявили подозрение, грозит пожизненное заключение.",
+   (14353, 'Поранено трьох поліцейських та трьох військовослужбовців.'),
+   (14410, 'здійснив щонайменше сім прицільних пострілів у бік поліцейських та військовослужбовців'),
+   (14930, 'Чоловіку, який вчинив стрілянину у ТЦК у Печерському районі Києва, оголосили підозру.')),
+ S("The Kyiv Independent сообщает о тех же шести раненых и называет инцидент очередной вспышкой насилия на фоне углубляющегося кризиса мобилизации: принудительная мобилизация остается одним из главных источников социальной и политической напряженности в Украине, нападений на сотрудников ТЦК в 2026 году становится больше. Издание напоминает об убийстве сотрудника ТЦК во Львове и о стрельбе в Одессе в августе.",
+   (14560, 'remains one of the greatest sources of social and political tension in Ukraine'),
+   (14560, 'with incidents rising in 2026')),
+ "Российские источники в подборке инцидент не освещают. Украинские издания сообщают о пострадавших и ходе расследования со ссылкой на полицию; независимое издание добавляет контекст о напряженности вокруг принудительной мобилизации и росте числа нападений на сотрудников ТЦК.",
+ 'low', '', False,
+ ('Стрілянина в Печерському ТЦК у Києві: доставлений за порушення правил мобілізації чоловік поранив шістьох',
+  'Київ',
+  'Російські джерела в добірці інцидент не висвітлюють. Українські видання повідомляють про постраждалих і хід розслідування з посиланням на поліцію; незалежне видання додає контекст про напруження навколо примусової мобілізації та зростання кількості нападів на працівників ТЦК.',
+  None,
+  '«Українська правда» і РБК-Україна з посиланням на поліцію повідомляють, що ввечері в приміщенні Печерського районного ТЦК у Києві стрілянину відкрив чоловік, доставлений туди за порушення законодавства про мобілізацію: поранені троє поліцейських і троє військовослужбовців, стрільця затримано. Наступного дня поліція уточнила, що 41-річний киянин дістав схований під одягом пістолет і зробив щонайменше сім прицільних пострілів, двоє постраждалих у тяжкому стані; йому оголосили підозру, загрожує довічне ув’язнення.',
+  'The Kyiv Independent повідомляє про тих самих шістьох поранених і називає інцидент черговим спалахом насильства на тлі поглиблення кризи мобілізації: примусова мобілізація залишається одним із головних джерел соціального і політичного напруження в Україні, нападів на працівників ТЦК у 2026 році стає більше. Видання нагадує про вбивство працівника ТЦК у Львові та про стрілянину в Одесі в серпні.'),
+ ('Shooting at the Pechersk draft office in Kyiv: a man brought in for breaking mobilisation rules injures six',
+  'Kyiv',
+  'Russian sources in the selection do not cover the incident. Ukrainian outlets report the injured and the course of the investigation, citing the police; the independent outlet adds context about tensions over forced mobilisation and the rising number of attacks on draft officers.',
+  None,
+  'Ukrainska Pravda and RBC-Ukraine, citing the police, report that in the evening a man who had been brought to the Pechersk district draft office (TCC) in Kyiv for violating mobilisation law opened fire inside the building: three police officers and three servicemen were injured and the shooter was detained. The next day the police said the 41-year-old Kyiv resident had pulled a pistol hidden under his clothes and fired at least seven aimed shots, two of the injured are in a serious condition; he has been served a notice of suspicion and faces life imprisonment.',
+  'The Kyiv Independent reports the same six injured and calls the incident another outbreak of violence amid a deepening mobilisation crisis: forced mobilisation remains one of the greatest sources of social and political tension in Ukraine, and attacks on draft officers are rising in 2026. The outlet recalls the killing of a draft officer in Lviv and a shooting in Odesa in August.'))
+
+json.dump(cards, open(OUT + 'c19m.json', 'w'), ensure_ascii=False, indent=1)
+print('c19m', len(cards))

@@ -1,0 +1,68 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+from extlib import ext, apply
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+cards = []
+card = lambda *a: cards.append(C(*a))
+# ---------------- backlog run 22 Oct 01:57, second batch ----------------
+card('1021-fsb-german-detained-mercenary', [15194, 13552, 14620, 14624, 14726, 14736, 15311],
+ 'ФСБ заявила о задержании гражданина Германии, служившего в ВСУ, и обвиняет его в наемничестве',
+ 'Россия', 'russia-other',
+ ['расхождение: формулировки', 'одна из групп не освещает'],
+ S("«Интерфакс» со ссылкой на ЦОС ФСБ сообщает о задержании гражданина Германии, который в ноябре 2025 года заключил трехлетний контракт с ВСУ, но дезертировал, не получив обещанных денег; решается вопрос о возбуждении дела по статье о наемничестве. РИА Новости называет его «немецким наемником» и приводит его слова из видео ФСБ: ему обещали 100 тысяч гривен, и он был вынужден бежать из ВСУ; в 2016–2018 годах он служил снайпером в батальоне теробороны.",
+   (15194, 'Задержан гражданин Германии, являвшийся действующим военнослужащим Вооруженных сил Украины'),
+   (13552, 'Однако данные деньги я не получил, был вынужден бежать из рядов вооруженных сил Украины')),
+ None,
+ S("«Медуза», DW и The Moscow Times пересказывают заявление ФСБ с оговорками: спецслужба не уточняет, как и где мужчина оказался в России и когда его задержали; The Moscow Times отмечает, что не может проверить, не сделано ли признание под давлением. DW пишет, что правительство Германии лишь подтвердило, что видело сообщения, и напоминает, что в тот же день Россия освободила американца Стивена Хаббарда, осужденного по похожему обвинению, которое он отрицал.",
+   (14624, 'The FSB did not say how he ended up in Russia.'),
+   (15311, 'The Moscow Times could not independently verify whether the confession was made under duress.'),
+   (14736, "There was no immediate comment from Germany's government, besides acknowledging that it had seen the reports and was pursuing them.")),
+ "Российские агентства передают версию ФСБ как факт и называют задержанного «наемником». Независимые источники подчеркивают, что это утверждения ФСБ, что неизвестно, как и где он был задержан, и что признание на видео не проверено. Украинские источники в подборке задержание не освещают.",
+ 'medium', 'Все сведения исходят от ФСБ; обстоятельства задержания не раскрыты.', False,
+ ('ФСБ заявила про затримання громадянина Німеччини, який служив у ЗСУ, і звинувачує його в найманстві',
+  'Росія',
+  'Російські агентства передають версію ФСБ як факт і називають затриманого «найманцем». Незалежні джерела наголошують, що це твердження ФСБ, що невідомо, як і де його затримали, і що зізнання на відео не перевірене. Українські джерела в добірці затримання не висвітлюють.',
+  '«Інтерфакс» з посиланням на ЦГЗ ФСБ повідомляє про затримання громадянина Німеччини, який у листопаді 2025 року уклав трирічний контракт із ЗСУ, але дезертирував, не отримавши обіцяних грошей; вирішується питання про порушення справи за статтею про найманство. РИА Новости називає його «німецьким найманцем» і наводить його слова з відео ФСБ: йому обіцяли 100 тисяч гривень, і він був змушений тікати із ЗСУ; у 2016–2018 роках він служив снайпером у батальйоні тероборони.',
+  None,
+  '«Медуза», DW і The Moscow Times переказують заяву ФСБ із застереженнями: спецслужба не уточнює, як і де чоловік опинився в Росії і коли його затримали; The Moscow Times зазначає, що не може перевірити, чи не зроблено зізнання під тиском. DW пише, що уряд Німеччини лише підтвердив, що бачив повідомлення, і нагадує, що того ж дня Росія звільнила американця Стівена Габбарда, засудженого за схожим звинуваченням, яке він заперечував.'),
+ ('FSB says it detained a German citizen who served in the Ukrainian army and accuses him of mercenary activity',
+  'Russia',
+  'Russian agencies present the FSB version as fact and call the detainee a "mercenary". Independent sources stress that these are FSB claims, that it is unknown how and where he was detained, and that the video confession is unverified. Ukrainian sources in the selection do not cover the detention.',
+  'Interfax, citing the FSB press office, reports the detention of a German citizen who in November 2025 signed a three-year contract with the Ukrainian army but deserted after not receiving the promised money; a decision on opening a mercenary case is being taken. RIA Novosti calls him a "German mercenary" and quotes him from an FSB video: he was promised 100 thousand hryvnias and was forced to flee the Ukrainian army; in 2016–2018 he served as a sniper in a territorial defence battalion.',
+  None,
+  'Meduza, DW and The Moscow Times relay the FSB statement with caveats: the agency does not say how and where the man ended up in Russia or when he was detained; The Moscow Times notes it cannot verify whether the confession was made under duress. DW writes that the German government only acknowledged it had seen the reports, and recalls that on the same day Russia released American Stephen Hubbard, convicted on a similar charge that he denied.'))
+
+card('1021-naftogaz-kharkiv-dnipro-strikes', [15005, 14612],
+ 'Удары по газодобывающему объекту «Нафтогаза» в Харьковской области и инфраструктуре Днепра: 30 тысяч потребителей без света',
+ 'Харьковская область — Днепр', 'kharkiv',
+ ['одна из групп не освещает'],
+ None,
+ S("РБК-Украина со ссылкой на «Нафтогаз» сообщает, что утром 21 октября российский дрон попал в одну из установок на производственной площадке в Харьковской области; оценить последствия из-за ситуации с безопасностью пока невозможно. И.о. главы правления Сергей Федоренко говорит, что с начала года объекты группы атаковали более 400 раз — вдвое чаще, чем в прошлом году.",
+   (15005, 'ворожий дрон влучив в одну з установок на виробничому майданчику'),
+   (15005, 'З початку року ворог понад 400 разів завдавав ударів по об’єктах "Групи Нафтогаз"')),
+ S("The Kyiv Independent приводит те же данные «Нафтогаза» и добавляет, что днем Россия ударила по критической инфраструктуре Днепра: по словам главы области Александра Ганжи, без света остались 30 тысяч потребителей в Синельниковском и Павлоградском районах и в Самаре; какой объект поражен, он не уточнил.",
+   (14612, 'An enemy drone hit one of the installations at a production site'),
+   (14612, 'leaving 30,000 consumers without power in the Synelnykove and Pavlohrad districts')),
+ "Украинский и независимый источники передают данные «Нафтогаза» одинаково; об ударе по Днепру и отключениях пишет только The Kyiv Independent. Российские источники в подборке эти удары не освещают.",
+ 'low', None, False,
+ ('Удари по газовидобувному об’єкту «Нафтогазу» на Харківщині та інфраструктурі Дніпра: 30 тисяч споживачів без світла',
+  'Харківська область — Дніпро',
+  'Український і незалежний джерела передають дані «Нафтогазу» однаково; про удар по Дніпру й відключення пише лише The Kyiv Independent. Російські джерела в добірці ці удари не висвітлюють.',
+  None,
+  'РБК-Україна з посиланням на «Нафтогаз» повідомляє, що вранці 21 жовтня російський дрон влучив в одну з установок на виробничому майданчику в Харківській області; оцінити наслідки через безпекову ситуацію поки неможливо. В.о. голови правління Сергій Федоренко каже, що з початку року об’єкти групи атакували понад 400 разів — удвічі частіше, ніж торік.',
+  'The Kyiv Independent наводить ті самі дані «Нафтогазу» і додає, що вдень Росія вдарила по критичній інфраструктурі Дніпра: за словами голови області Олександра Ганжі, без світла залишилися 30 тисяч споживачів у Синельниківському і Павлоградському районах та в Самарі; який об’єкт уражено, він не уточнив.'),
+ ('Strikes on a Naftogaz gas production facility in Kharkiv region and on Dnipro infrastructure: 30 thousand consumers without power',
+  'Kharkiv region — Dnipro',
+  'The Ukrainian and independent sources convey Naftogaz\'s information in the same way; only The Kyiv Independent reports the strike on Dnipro and the outages. Russian sources in the selection do not cover these strikes.',
+  None,
+  'RBC-Ukraine, citing Naftogaz, reports that on the morning of 21 October a Russian drone hit one of the installations at a production site in Kharkiv region; the consequences cannot yet be assessed because of the security situation. Acting CEO Serhii Fedorenko says the group\'s facilities have been attacked more than 400 times since the start of the year, twice as often as last year.',
+  'The Kyiv Independent gives the same Naftogaz information and adds that in the afternoon Russia struck critical infrastructure in Dnipro: according to regional governor Oleksandr Hanzha, 30 thousand consumers in the Synelnykove and Pavlohrad districts and in Samar were left without power; he did not specify which facility was hit.'))
+
+json.dump(cards, open(OUT + 'c21g.json', 'w'), ensure_ascii=False, indent=1)
+print('c21g', len(cards))
+
+# ---- id-only: Oct 21 reports of the NATO Black Sea decision ----
+@ext('1020-black-sea-ships-reni-nato', [14595, 14773, 14949])
+def _(c): pass
+apply(['c20d.json'])

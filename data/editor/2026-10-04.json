@@ -1,0 +1,187 @@
+[
+ {
+  "key": "1004-un-civilian-casualties",
+  "ids": [
+   2601,
+   3420,
+   3784,
+   3941
+  ],
+  "title": "ООН: число погибших и раненых мирных жителей Украины за восемь месяцев 2026 года",
+  "place": "Женева / Украина",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": null,
+   "quotes": []
+  },
+  "ua": {
+   "summary": "Суспільне, Українська правда и РБК-Україна пересказывают выступление верховного комиссара ООН по правам человека Фолькера Тюрка в Женеве 2 октября: его управление подтвердило 15 280 убитых и раненых мирных жителей за первые восемь месяцев 2026 года, в среднем более 400 человек в неделю, что на 55% больше, чем годом ранее. РБК-Україна уточняет, что среди них не менее 2 222 погибших и 13 058 раненых; по данным ООН, самыми смертоносными месяцами стали июль и август.",
+   "quotes": [
+    {
+     "id": 3420,
+     "text": "Управління ООН з прав людини, яке він очолює, за перші вісім місяців 2026 року підтвердило 15280 загиблих і поранених цивільних в Україні."
+    },
+    {
+     "id": 2601,
+     "text": "За перші вісім місяців 2026 року в Україні внаслідок війни загинули щонайменше 2 222 цивільних, ще 13 058 людей дістали поранення."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent приводит те же данные Управления ООН: 15 280 убитых и раненых мирных жителей за восемь месяцев и рост на 55% к 2025 году. Издание добавляет, что почти 2 500 мирных жителей пострадали от российских управляемых авиабомб, что на 62% больше, чем годом ранее.",
+   "quotes": [
+    {
+     "id": 3941,
+     "text": "Turk’s office documented 15,280 civilians killed or injured during the first eight months of the year, as Russia has intensified attacks on civilian infrastructure in recent months."
+    }
+   ]
+  },
+  "diverge": "Украинская и независимая группы одинаково передают главные цифры доклада ООН: 15 280 пострадавших мирных жителей и рост на 55%. Разбивку на погибших и раненых (2 222 и 13 058) приводит только РБК-Україна, а данные о пострадавших от авиабомб (почти 2 500, рост на 62%) — Kyiv Independent и Українська правда. Материалов российской группы об этом докладе в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Все тексты ссылаются на один доклад ООН и совпадают в цифрах.",
+  "uk": {
+   "t": "ООН: кількість загиблих і поранених мирних жителів України за вісім місяців 2026 року",
+   "p": "Женева / Україна",
+   "d": "Українська і незалежна групи однаково передають головні цифри доповіді ООН: 15 280 постраждалих мирних жителів і зростання на 55%. Розбивку на загиблих і поранених (2 222 і 13 058) наводить лише РБК-Україна, а дані про постраждалих від авіабомб (майже 2 500, зростання на 62%) — Kyiv Independent і Українська правда. Матеріалів російської групи про цю доповідь у добірці немає.",
+   "ru": null,
+   "ua": "Суспільне, Українська правда і РБК-Україна переказують виступ верховного комісара ООН з прав людини Фолькера Тюрка в Женеві 2 жовтня: його управління підтвердило 15 280 убитих і поранених мирних жителів за перші вісім місяців 2026 року, в середньому понад 400 людей на тиждень, що на 55% більше, ніж роком раніше. РБК-Україна уточнює, що серед них щонайменше 2 222 загиблих і 13 058 поранених; за даними ООН, найсмертоноснішими місяцями стали липень і серпень.",
+   "ind": "Kyiv Independent наводить ті самі дані Управління ООН: 15 280 убитих і поранених мирних жителів за вісім місяців і зростання на 55% до 2025 року. Видання додає, що майже 2 500 мирних жителів постраждали від російських керованих авіабомб, що на 62% більше, ніж роком раніше."
+  },
+  "en": {
+   "t": "UN: civilians killed and injured in Ukraine in the first eight months of 2026",
+   "p": "Geneva / Ukraine",
+   "d": "The Ukrainian and independent groups give the same headline figures from the UN report: 15 280 civilian casualties and a 55% increase. Only RBC-Ukraine gives the split into killed and injured (2 222 and 13 058), while the figures on casualties from glide bombs (almost 2 500, up 62%) appear in Kyiv Independent and Ukrainska Pravda. There are no materials from the Russian group about this report in the selection.",
+   "ru": null,
+   "ua": "Suspilne, Ukrainska Pravda and RBC-Ukraine report on the speech by UN High Commissioner for Human Rights Volker Türk in Geneva on 2 October: his office verified 15 280 civilians killed or injured in the first eight months of 2026, on average more than 400 people a week, 55% more than a year earlier. RBC-Ukraine specifies that this includes at least 2 222 killed and 13 058 injured; according to the UN, July and August were the deadliest months.",
+   "ind": "Kyiv Independent cites the same UN Human Rights Office data: 15 280 civilians killed or injured in eight months and a 55% rise compared with 2025. It adds that almost 2 500 civilians were killed or injured by Russian glide bombs, 62% more than a year earlier."
+  }
+ },
+ {
+  "key": "1004-belgorod-attacks",
+  "ids": [
+   3038,
+   2665,
+   3031,
+   9986,
+   9998
+  ],
+  "title": "Сообщения об атаках на Белгород и Белгородскую область 3–4 октября",
+  "place": "Белгород, Шебекино, Грайворон",
+  "region": "russia-other",
+  "tags": [
+   "одна сторона освещает",
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ, по данным ТАСС, заявило, что ночью украинская армия нанесла «преднамеренный террористический удар» по жилым кварталам Белгорода, где нет военных объектов; есть погибшие и раненые мирные жители. Губернатор Александр Шуваев сообщил о 141 атаке на семнадцать муниципалитетов за сутки и об одном погибшем в Грайворонском районе. По данным оперштаба, которые приводит Интерфакс, в поселке Маслова Пристань Шебекинского округа погиб водитель грузовика после удара FPV-дрона, ранены мужчина в Грайвороне и трое человек в Шебекино.",
+   "quotes": [
+    {
+     "id": 3038,
+     "text": "The Ukrainian army carried out a deliberate terrorist strike overnight on residential areas of Belgorod where there are no military facilities, the Russian Defense Ministry said."
+    },
+    {
+     "id": 2665,
+     "text": "\"В Шебекинском округе в поселке Маслова Пристань от удара FPV-дрона по грузовому автомобилю мужчина получил тяжёлые травмы и скончался на месте\""
+    }
+   ]
+  },
+  "ua": {
+   "summary": null,
+   "quotes": []
+  },
+  "ind": {
+   "summary": null,
+   "quotes": []
+  },
+  "diverge": "Все материалы — российские (Минобороны РФ, губернатор, оперштаб), и они согласуются между собой. Минобороны называет удар по Белгороду «террористическим» и утверждает, что военных объектов там нет; независимого подтверждения этой оценки в подборке нет. Материалов украинской и независимой групп об этих атаках в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Три российских сообщения согласуются по местам и последствиям.",
+  "uk": {
+   "t": "Повідомлення про атаки на Бєлгород і Бєлгородську область 3–4 жовтня",
+   "p": "Бєлгород, Шебекине, Грайворон",
+   "d": "Усі матеріали — російські (Міноборони РФ, губернатор, оперативний штаб), і вони узгоджуються між собою. Міноборони називає удар по Бєлгороду «терористичним» і стверджує, що військових об’єктів там немає; незалежного підтвердження цієї оцінки в добірці немає. Матеріалів української і незалежної груп про ці атаки в добірці немає.",
+   "ru": "Міноборони РФ, за даними ТАСС, заявило, що вночі українська армія завдала «навмисного терористичного удару» по житлових кварталах Бєлгорода, де немає військових об’єктів; є загиблі та поранені мирні жителі. Губернатор Олександр Шуваєв повідомив про 141 атаку на сімнадцять муніципалітетів за добу і про одного загиблого в Грайворонському районі. За даними оперативного штабу, які наводить Інтерфакс, у селищі Маслова Пристань Шебекинського округу загинув водій вантажівки після удару FPV-дрона, поранено чоловіка в Грайвороні та трьох людей у Шебекиному.",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Reports of attacks on Belgorod and Belgorod region on 3–4 October",
+   "p": "Belgorod, Shebekino, Graivoron",
+   "d": "All materials are Russian (the Defense Ministry, the governor, the regional operational HQ), and they are consistent with each other. The Defense Ministry calls the strike on Belgorod a \"terrorist\" one and says there are no military facilities there; the selection contains no independent confirmation of this assessment. There are no materials from the Ukrainian or independent groups about these attacks in the selection.",
+   "ru": "According to TASS, the Russian Defense Ministry said the Ukrainian army carried out a \"deliberate terrorist strike\" overnight on residential areas of Belgorod where there are no military facilities, killing and wounding civilians. Governor Alexander Shuvayev reported 141 attacks on seventeen municipalities over the past day and one person killed in Graivoron district. According to the regional operational HQ, cited by Interfax, a truck driver was killed by an FPV drone strike in the village of Maslova Pristan in Shebekino district, a man was wounded in Graivoron and three people in Shebekino.",
+   "ua": null,
+   "ind": null
+  }
+ },
+ {
+  "key": "1004-drones-over-russia",
+  "ids": [
+   4151,
+   2670,
+   3793,
+   2662,
+   9984,
+   10005
+  ],
+  "title": "Минобороны РФ заявило о сотнях украинских беспилотников над регионами России 4 октября",
+  "place": "Регионы России",
+  "region": "russia-other",
+  "tags": [
+   "российская сторона заявляет, украинская не комментирует"
+  ],
+  "ru": {
+   "summary": "По данным Минобороны РФ, которые приводят РИА Новости и Интерфакс, в ночь на 4 октября силы ПВО перехватили и уничтожили 559 украинских беспилотников самолетного типа над многими областями России, Московским регионом, Крымом и акваториями Азовского и Черного морей, а днем 4 октября — еще 280.",
+   "quotes": [
+    {
+     "id": 4151,
+     "text": "Силы ПВО за ночь уничтожили 559 украинских беспилотников над российскими регионами, сообщило в воскресенье Минобороны России."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Українська правда и РБК-Україна пересказывают те же заявления Минобороны РФ — 559 беспилотников ночью и 280 днем — с оговорками «нибито» и «как утверждают россияне». РБК-Україна пишет, что из отчета видно, что речь идет о более чем 300 дронах за день, и называет атаку новой массированной атакой Сил обороны Украины.",
+   "quotes": [
+    {
+     "id": 3793,
+     "text": "Міністерство оборони Росії заявило, що в ніч на 4 жовтня російська ППО нібито перехопила та знищила 559 українських безпілотників."
+    },
+    {
+     "id": 2662,
+     "text": "Міноборони РФ заявило, що їхня ППО нібито змогла перехопити та знищити 280 українських безпілотних літальних апаратів літакового типу."
+    }
+   ]
+  },
+  "ind": {
+   "summary": null,
+   "quotes": []
+  },
+  "diverge": "Единственный источник цифр в обеих группах — Минобороны РФ: 559 беспилотников ночью и 280 днем. Российские издания передают заявление без оговорок, украинские — с пометкой «нибито», а РБК-Україна дает собственную оценку о более чем 300 дронах за день. Украинские военные в этих материалах число запущенных дронов и цели не комментируют; материалов независимой группы в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Обе группы передают одно и то же заявление Минобороны РФ.",
+  "uk": {
+   "t": "Міноборони РФ заявило про сотні українських безпілотників над регіонами Росії 4 жовтня",
+   "p": "Регіони Росії",
+   "d": "Єдине джерело цифр в обох групах — Міноборони РФ: 559 безпілотників уночі та 280 удень. Російські видання передають заяву без застережень, українські — з позначкою «нібито», а РБК-Україна дає власну оцінку про понад 300 дронів за день. Українські військові в цих матеріалах кількість запущених дронів і цілі не коментують; матеріалів незалежної групи в добірці немає.",
+   "ru": "За даними Міноборони РФ, які наводять РІА Новини та Інтерфакс, у ніч на 4 жовтня сили ППО перехопили та знищили 559 українських безпілотників літакового типу над багатьма областями Росії, Московським регіоном, Кримом і акваторіями Азовського та Чорного морів, а вдень 4 жовтня — ще 280.",
+   "ua": "Українська правда і РБК-Україна переказують ті самі заяви Міноборони РФ — 559 безпілотників уночі та 280 удень — із застереженнями «нібито» і «як стверджують росіяни». РБК-Україна пише, що зі звіту видно, що йдеться про понад 300 дронів за день, і називає атаку новою масованою атакою Сил оборони України.",
+   "ind": null
+  },
+  "en": {
+   "t": "Russian Defense Ministry claims hundreds of Ukrainian drones over Russian regions on 4 October",
+   "p": "Regions of Russia",
+   "d": "The only source of the figures in both groups is the Russian Defense Ministry: 559 drones overnight and 280 during the day. Russian outlets report the statement without caveats, Ukrainian ones with the word \"allegedly\", and RBC-Ukraine gives its own estimate of more than 300 drones during the day. Ukrainian military officials do not comment on the number of drones launched or the targets in these materials; there are no materials from the independent group in the selection.",
+   "ru": "According to the Russian Defense Ministry, cited by RIA Novosti and Interfax, air defences intercepted and destroyed 559 Ukrainian fixed-wing drones overnight into 4 October over many Russian regions, the Moscow region, Crimea and the Sea of Azov and the Black Sea, and another 280 during the day on 4 October.",
+   "ua": "Ukrainska Pravda and RBC-Ukraine relay the same Russian Defense Ministry statements — 559 drones overnight and 280 during the day — with the caveats \"allegedly\" and \"as the Russians claim\". RBC-Ukraine writes that the report implies more than 300 drones during the day and calls it a new massive attack by the Ukrainian Defence Forces.",
+   "ind": null
+  }
+ }
+]

@@ -1,0 +1,122 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import add, setd, ext, apply
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- hourly run 07:03 Oct 19 (ids 12123-12206): 1 new Oct 19 card + extensions ----------------
+# Oct 19 drones over Russia (Chelyabinsk, Rostov) and Oct 19 front claims stay Russian-only (SKIPPED.md).
+
+def rep(c, path, old, new):
+    o = c
+    for p in path[:-1]: o = o[p]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+card('1019-strikes-regions-rivne-dnipro', [12143, 12179, 12187, 12190, 12192, 12193, 12194],
+ 'Ночь и утро 19 октября: удары по Ровенщине, Днепру и Николаевщине, есть раненые; Польша поднимала авиацию', 'Ровенская, Днепропетровская, Николаевская, Черкасская области', 'ukraine-wide',
+ ['умолчание', 'расхождение: формулировки', 'одна из групп не освещает'],
+ S('ТАСС утром 19 октября сообщило о взрыве в Ровно, не приводя подробностей. РИА Новости со ссылкой на Оперативное командование Вооруженных сил Польши пишет, что польская военная авиация превентивно поднята в воздух «в связи с ударами» России беспилотниками по целям на западе Украины; в заголовке агентство называет это «якобы» действиями России, напоминает, что Польша прибегает к таким мерам регулярно, и приводит данные портала NaTemat о дороговизне вылетов истребителей. О целях, последствиях ударов и пострадавших российские источники в выборке не пишут.',
+   (12179, 'В Ровно произошел взрыв. Подробности не приводятся'),
+   (12143, 'Польские военные подняли в воздух авиацию якобы из-за действий Вооруженных сил России на Украине'),
+   (12143, 'В связи с ударами, наносимыми Российской Федерацией с использованием беспилотных средств по целям в западной части Украины'),
+   (12143, 'В последние дни Польша прибегает к таким мерам регулярно.')),
+ S('«Общественное» со ссылкой на начальника Ровенской ОВА Александра Коваля пишет, что всю ночь на 19 октября ПВО отражала удар по Ровенщине и было «немало сбитий», но противник поразил несколько объектов гражданской инфраструктуры; по предварительным данным, ранены две женщины. По Днепру, по данным главы Днепропетровской ОВА Александра Ганжи и председателя облсовета Николая Лукашука, около 5:00 российская армия ударила управляемыми авиабомбами: повреждены частные дома, в которых могли оказаться заблокированы люди, ранена 84-летняя женщина, ее доставили в больницу; за ночь над областью сбит 21 беспилотник. На Черкасщине, по словам главы ОВА Игоря Табурца, обезврежены ракета и два беспилотника, ударов и пострадавших нет. Николаевская ОВА сообщает об атаках «шахедов» по энергетике области и ракетой «Бандероль» по промышленному объекту в Николаеве, пострадавших нет.',
+   (12194, 'Упродовж ночі сили ППО тримають удар по Рівненщині.'),
+   (12194, 'За попередньою інформацією, двоє жінок поранені'),
+   (12187, 'внаслідок атаки пошкоджені приватні будинки. За попередньою інформацією, у них можуть бути заблоковані люди.'),
+   (12187, 'поранення дістала 84-річна жінка. Медики доправили її до лікарні.'),
+   (12193, 'Голова Дніпропетровської облради Микола Лукашук підтвердив атаку керованими авіаційними бомбами.'),
+   (12192, 'Ударів по області вдалося уникнути. Звернень про потерпілих чи пошкодження майна не надходило'),
+   (12190, 'Під ударом була енергетична інфраструктура. Постраждалих немає'),
+   (12190, 'Також російські війська атакували Миколаїв ракетою «Бандероль».')),
+ None,
+ 'Российские источники сообщают лишь о взрыве в Ровно и о том, что Польша подняла авиацию из-за ударов российских беспилотников по западу Украины; РИА Новости в заголовке называет это «якобы» действиями России, хотя в тексте приводит формулировку польского командования без оговорок. Украинские источники описывают последствия: попадания в объекты гражданской инфраструктуры и двое раненых на Ровенщине, удар управляемыми авиабомбами по Днепру с раненой 84-летней женщиной, атаки на энергетику Николаевщины. О пострадавших и поврежденных объектах российские источники не пишут; независимых сообщений в выборке нет.',
+ 'medium', 'Данные предварительные: сведения о раненых и пораженных объектах есть только от украинских региональных властей, российские источники последствий не описывают, независимых сообщений нет.', False,
+ ['Ніч і ранок 19 жовтня: удари по Рівненщині, Дніпру та Миколаївщині, є поранені; Польща піднімала авіацію', 'Рівненська, Дніпропетровська, Миколаївська, Черкаська області',
+  'Російські джерела повідомляють лише про вибух у Рівному і про те, що Польща підняла авіацію через удари російських безпілотників по заходу України; РИА Новости в заголовку називає це «нібито» діями Росії, хоча в тексті наводить формулювання польського командування без застережень. Українські джерела описують наслідки: влучання в об’єкти цивільної інфраструктури і двоє поранених на Рівненщині, удар керованими авіабомбами по Дніпру з пораненою 84-річною жінкою, атаки на енергетику Миколаївщини. Про постраждалих і пошкоджені об’єкти російські джерела не пишуть; незалежних повідомлень у вибірці немає.',
+  'ТАСС уранці 19 жовтня повідомило про вибух у Рівному, не наводячи подробиць. РИА Новости з посиланням на Оперативне командування Збройних сил Польщі пише, що польську військову авіацію превентивно піднято в повітря «у зв’язку з ударами» Росії безпілотниками по цілях на заході України; у заголовку агентство називає це «нібито» діями Росії, нагадує, що Польща вдається до таких заходів регулярно, і наводить дані порталу NaTemat про дорожнечу вильотів винищувачів. Про цілі, наслідки ударів і постраждалих російські джерела у вибірці не пишуть.',
+  '«Суспільне» з посиланням на начальника Рівненської ОВА Олександра Коваля пише, що всю ніч на 19 жовтня ППО відбивала удар по Рівненщині і було «чимало збиттів», але противник уразив кілька об’єктів цивільної інфраструктури; за попередньою інформацією, поранено двох жінок. По Дніпру, за даними очільника Дніпропетровської ОВА Олександра Ганжі та голови облради Миколи Лукашука, близько 5:00 російська армія вдарила керованими авіабомбами: пошкоджено приватні будинки, в яких могли опинитися заблоковані люди, поранено 84-річну жінку, її доправили до лікарні; за ніч над областю збито 21 безпілотник. На Черкащині, за словами голови ОВА Ігоря Табурця, знешкоджено ракету і два безпілотники, ударів і постраждалих немає. Миколаївська ОВА повідомляє про атаки «шахедів» по енергетиці області та ракетою «Бандероль» по промисловому об’єкту в Миколаєві, постраждалих немає.',
+  None],
+ ['Night and morning of 19 October: strikes on the Rivne region, Dnipro and the Mykolaiv region, people injured; Poland scrambled aircraft', 'Rivne, Dnipropetrovsk, Mykolaiv, Cherkasy regions',
+  'Russian sources report only an explosion in Rivne and that Poland scrambled aircraft because of Russian drone strikes on western Ukraine; RIA Novosti\'s headline calls these "alleged" Russian actions, although the text quotes the Polish command\'s wording without caveats. Ukrainian sources describe the consequences: hits on civilian infrastructure and two injured in the Rivne region, a guided-bomb strike on Dnipro that injured an 84-year-old woman, attacks on energy facilities in the Mykolaiv region. Russian sources do not write about casualties or damaged facilities; there are no independent reports in the sample.',
+  'On the morning of 19 October TASS reported an explosion in Rivne without giving details. RIA Novosti, citing the Operational Command of the Polish Armed Forces, writes that Polish military aircraft were scrambled as a precaution "in connection with strikes" by Russian drones on targets in western Ukraine; in its headline the agency calls these "alleged" Russian actions, notes that Poland resorts to such measures regularly and cites the NaTemat portal on how expensive fighter sorties are. Russian sources in the sample do not write about targets, consequences of the strikes or casualties.',
+  'Suspilne, citing the head of the Rivne regional military administration Oleksandr Koval, writes that air defences repelled a strike on the Rivne region throughout the night of 19 October and there were "quite a few shoot-downs", but the enemy hit several civilian infrastructure facilities; according to preliminary information, two women were injured. In Dnipro, according to the head of the Dnipropetrovsk regional military administration Oleksandr Hanzha and regional council chairman Mykola Lukashuk, the Russian army struck with guided aerial bombs at around 5:00: private houses were damaged and people may have been trapped in them, and an 84-year-old woman was injured and taken to hospital; 21 drones were shot down over the region during the night. In the Cherkasy region, according to the head of the regional military administration Ihor Taburets, a missile and two drones were neutralised, with no hits or casualties. The Mykolaiv regional military administration reports Shahed attacks on the region\'s energy facilities and a "Banderol" missile strike on an industrial facility in Mykolaiv, with no casualties.',
+  None])
+
+# ---- extensions
+
+@ext('1019-kyiv-ballistic-night', [12195])
+def _(c):
+    add(c, 'ua', 'В утренней сводке «Общественное» добавляет, что взрывы также звучали в Луцке, Ровно, Кропивницком и Днепре.',
+        'У ранковому огляді «Суспільне» додає, що вибухи також лунали в Луцьку, Рівному, Кропивницькому та Дніпрі.',
+        'In its morning round-up Suspilne adds that explosions were also heard in Lutsk, Rivne, Kropyvnytskyi and Dnipro.',
+        [(12195, 'Вибухи також лунали в Луцьку, Рівному, Кропивницькому та Дніпрі.')])
+    for path, old, new in [
+        (('diverge',), 'О взрывах в Луцке, Ровно и Днепре в выборке пишут только российские агентства со ссылкой на «Общественное»; украинские источники выборки о западе страны пока не сообщают.',
+         'О взрывах в Луцке, Ровно и Днепре российские агентства пишут со ссылкой на «Общественное»; само «Общественное» в утренней сводке подтверждает взрывы в этих городах и называет также Кропивницкий, о котором российские источники выборки не сообщают.'),
+        (('uk', 'd'), 'Про вибухи в Луцьку, Рівному і Дніпрі у вибірці пишуть лише російські агентства з посиланням на «Суспільне»; українські джерела вибірки про захід країни поки не повідомляють.',
+         'Про вибухи в Луцьку, Рівному і Дніпрі російські агентства пишуть з посиланням на «Суспільне»; саме «Суспільне» в ранковому огляді підтверджує вибухи в цих містах і називає також Кропивницький, про який російські джерела вибірки не повідомляють.'),
+        (('en', 'd'), 'Explosions in Lutsk, Rivne and Dnipro are reported in the sample only by Russian agencies citing Suspilne; Ukrainian sources in the sample do not yet report on the west of the country.',
+         'Russian agencies report explosions in Lutsk, Rivne and Dnipro citing Suspilne; Suspilne itself confirms explosions in these cities in its morning round-up and also names Kropyvnytskyi, which Russian sources in the sample do not mention.')]:
+        rep(c, path, old, new)
+    c['uncertainty_reason'] = 'Данные предварительные: о пострадавших при второй атаке известно только из «Общественного», Al Jazeera не разделяет последствия вечерней и ночной атак, о последствиях взрывов в Луцке и Кропивницком в выборке данных нет.'
+
+@ext('1019-kyiv-cruise-missiles-morning', [12151, 12204])
+def _(c):
+    add(c, 'ru', 'ТАСС также сообщило о взрывах в Киеве на фоне воздушной тревоги.',
+        'ТАСС також повідомило про вибухи в Києві на тлі повітряної тривоги.',
+        'TASS also reported explosions in Kyiv amid an air-raid alert.',
+        [(12151, 'В Киеве произошли взрывы. В городе действует воздушная тревога')])
+    add(c, 'ua', 'В другом материале РБК-Украина со ссылкой на журналиста Алекса Рауфоглу и украинские источники пишет, что утром Россия ударила по Киеву баллистикой и Украина снова не получила раннего предупреждения об атаке, которое раньше поступало от США в рамках обмена разведданными; по данным The Washington Post, американская разведка предупреждала, что обмен остановят, если Украина продолжит бить по российским НПЗ.',
+        'В іншому матеріалі РБК-Україна з посиланням на журналіста Алекса Рауфоглу та українські джерела пише, що вранці Росія вдарила по Києву балістикою і Україна знову не отримала раннього попередження про атаку, яке раніше надходило від США в межах обміну розвідданими; за даними The Washington Post, американська розвідка попереджала, що обмін зупинять, якщо Україна продовжить бити по російських НПЗ.',
+        'In another piece RBC-Ukraine, citing journalist Alex Raufoglu and Ukrainian sources, writes that in the morning Russia struck Kyiv with ballistic missiles and Ukraine again did not receive an early warning of the attack, which used to come from the US as part of intelligence sharing; according to The Washington Post, US intelligence had warned that the sharing would be stopped if Ukraine kept striking Russian refineries.',
+        [(12204, 'Уранці 19 жовтня Росія вдарила по Києву балістикою, і Україна знову не отримала раннього попередження про атаку.'),
+         (12204, 'Знову не було раннього попередження про балістичну атаку на Київ'),
+         (12204, 'американська розвідка попередила посольство України, що обмін даними зупинять, якщо Україна продовжить бити по російських НПЗ')])
+    c['diverge'] += ' РБК-Украина в разных материалах называет утреннюю атаку то ударом крылатых ракет, то баллистическим ударом и пишет, что раннего предупреждения от партнеров снова не было; российские источники в выборке об этом не пишут.'
+    c['uk']['d'] += ' РБК-Україна в різних матеріалах називає ранкову атаку то ударом крилатих ракет, то балістичним ударом і пише, що раннього попередження від партнерів знову не було; російські джерела у вибірці про це не пишуть.'
+    c['en']['d'] += ' In different pieces RBC-Ukraine calls the morning attack either a cruise missile strike or a ballistic strike and writes that there was again no early warning from partners; Russian sources in the sample do not mention this.'
+    c['uncertainty_reason'] = 'Данные предварительные: сведений о последствиях и пострадавших нет, РБК-Украина в разных материалах называет разный тип ракет, независимых сообщений нет.'
+
+@ext('1019-peskov-trilateral-meeting', [12196])
+def _(c):
+    add(c, 'ua', '«Общественное» со ссылкой на WSJ и ее источники пишет, что Путин выдвинул эту идею в телефонном разговоре с Трампом 9 октября, когда договорились о дизельном топливе; американский высокопоставленный чиновник заявил газете, что Трамп согласия на такой саммит не давал, но может отнестись к идее положительно. По данным WSJ, Москва видит в трехстороннем формате способ закрепить статус великой державы, а сам формат исключает Европу, которую Кремль считает главным препятствием на пути к победе в Украине.',
+        '«Суспільне» з посиланням на WSJ та її джерела пише, що Путін висунув цю ідею під час телефонної розмови з Трампом 9 жовтня, коли домовилися про дизельне паливо; американський високопосадовець заявив газеті, що Трамп згоди на такий саміт не давав, але може поставитися до ідеї позитивно. За даними WSJ, Москва бачить у тристоронньому форматі спосіб закріпити статус великої держави, а сам формат виключає Європу, яку Кремль вважає головною перешкодою на шляху до перемоги в Україні.',
+        'Suspilne, citing the WSJ and its sources, writes that Putin floated the idea in a phone call with Trump on 9 October, when the diesel deal was agreed; a senior US official told the paper that Trump had not agreed to such a summit but might view the idea favourably. According to the WSJ, Moscow sees the three-way format as a way to cement its great-power status, and the format leaves out Europe, which the Kremlin regards as the main obstacle to victory in Ukraine.',
+        [(12196, 'Путін висунув цю ідею під час телефонної розмови з Трампом 9 жовтня'),
+         (12196, 'американський високопосадовець заявив, що Трамп не давав згоди на такий саміт'),
+         (12196, 'Цей формат також виключає з картини Європу, яку Кремль вважає головною перешкодою на шляху до перемоги в Україні')])
+    c['diverge'] += ' «Общественное», пересказывая WSJ, добавляет, что идею выдвинул сам Путин в разговоре с Трампом и что Трамп согласия на саммит не давал; в российских сообщениях выборки этих деталей нет.'
+    c['uk']['d'] += ' «Суспільне», переказуючи WSJ, додає, що ідею висунув сам Путін у розмові з Трампом і що Трамп згоди на саміт не давав; у російських повідомленнях вибірки цих деталей немає.'
+    c['en']['d'] += ' Suspilne, retelling the WSJ, adds that Putin himself floated the idea in his conversation with Trump and that Trump has not agreed to the summit; these details are absent from the Russian reports in the sample.'
+
+@ext('1018-zelensky-bloomberg-capitulation', [12129])
+def _(c):
+    add(c, 'ru', 'Утром 19 октября РИА привело мнение украинского политолога Руслана Бортника: Зеленскому «нужна стратегия выхода из конфликта», а нагнетать эскалацию резкими заявлениями пора перестать; интервью Bloomberg агентство описывает как жалобу на то, что Вашингтон «якобы» склоняет Украину к капитуляции.',
+        'Уранці 19 жовтня РИА навело думку українського політолога Руслана Бортника: Зеленському «потрібна стратегія виходу з конфлікту», а нагнітати ескалацію різкими заявами час припинити; інтерв’ю Bloomberg агентство описує як скаргу на те, що Вашингтон «нібито» схиляє Україну до капітуляції.',
+        'On the morning of 19 October RIA quoted Ukrainian political analyst Ruslan Bortnik: Zelensky "needs a strategy for exiting the conflict" and should stop escalating with harsh statements; the agency describes the Bloomberg interview as a complaint that Washington is "allegedly" pushing Ukraine to capitulate.',
+        [(12129, 'Зеленскому нужна стратегия выхода из конфликта.'),
+         (12129, 'Сам Зеленский в интервью Bloomberg пожаловался, что Вашингтон во главе с Трампом якобы пытается склонить Украину к капитуляции.')])
+
+@ext('1018-us-sanctions-wright-bessent', [12133, 12205])
+def _(c):
+    # RBC-Ukraine 12205: Reuters / Bayraktar on Turkey getting Russian diesel, same as RBC and Suspilne 11987 already in the card; id only
+    add(c, 'ru', 'РИА Новости приводит мнение доцента Университета Южной Флориды Роба Меллена: 30-дневный срок для части мер по сентябрьскому закону о санкциях истек 18 октября, и без решения конгресса администрация, по его словам, вряд ли сможет применить эту норму; агентство напоминает слова Райта о том, что главные американские санкции остаются в силе.',
+        'РИА Новости наводить думку доцента Університету Південної Флориди Роба Меллена: 30-денний строк для частини заходів за вересневим законом про санкції сплив 18 жовтня, і без рішення конгресу адміністрація, за його словами, навряд чи зможе застосувати цю норму; агентство нагадує слова Райта про те, що головні американські санкції залишаються в силі.',
+        'RIA Novosti quotes Rob Mellen, an associate professor at the University of South Florida: the 30-day deadline for some measures under the September sanctions law expired on 18 October, and without a decision by Congress the administration is unlikely, he says, to be able to apply that provision; the agency recalls Wright\'s words that the main US sanctions remain in force.',
+        [(12133, 'Требование о 30 днях означало, что, если президент решил бы действовать после их истечения, это могли бы оспорить в судебном порядке.'),
+         (12133, 'Главные американские санкции в отношении России остаются в силе, заявил ранее министр энергетики Крис Райт.')])
+
+@ext('1018-st-petersburg-drone-attack', [12202])
+def _(c):
+    add(c, 'ind', 'В фотообзоре последствий Meduza перечисляет среди поврежденных объектов также подстанцию «Восточная», вантовый мост через Корабельный фарватер и наркологическую больницу на Васильевском острове.',
+        'У фотоогляді наслідків Meduza серед пошкоджених об’єктів також називає підстанцію «Восточная», вантовий міст через Корабельний фарватер і наркологічну лікарню на Васильєвському острові.',
+        'In a photo review of the aftermath Meduza also lists the Vostochnaya substation, a cable-stayed bridge over the Korabelny shipping channel and an addiction treatment hospital on Vasilyevsky Island among the damaged sites.',
+        [(12202, 'a cable-stayed bridge over the Korabelny shipping channel, and an addiction treatment hospital on Vasilyevsky Island')])
+
+apply(['c18a.json', 'c18c.json', 'c18d.json', 'c19a.json', 'c19b.json', 'c19c.json'])
+json.dump(cards, open(OUT + 'c19d.json', 'w'), ensure_ascii=False, indent=1)
+print('new cards', len(cards))

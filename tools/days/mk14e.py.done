@@ -1,0 +1,62 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import OUT, add, setd, ext, apply
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- new card (Moscow Times backfill 18:59 + Interfax items not used before) ----------------
+card('1014-novorossiysk-oil-spill', [10751, 10974, 11442],
+ 'Нефтепродукты на побережье Новороссийска: власти отрицают связь с атакованным в октябре танкером, Transparent World связывает пятно с ним', 'Новороссийск, Геленджик', 'krasnodar',
+ ['расхождение: атрибуция', 'одна из групп не освещает'],
+ S('Интерфакс со ссылкой на оперштаб Краснодарского края сообщает, что при мониторинге береговой линии в Новороссийске обнаружены незначительные выбросы нефтепродуктов, которые, по данным регионального министерства ГО и ЧС, не являются нефтепродуктами с танкера, пострадавшего в октябре; к уборке привлечены 42 человека. Накануне губернатор Вениамин Кондратьев ввел режим повышенной готовности в Геленджике и Новороссийске из-за угрозы разлива после атак безэкипажных катеров на суда 6 октября. 16 октября горадминистрация сообщила, что очищены около 300 метров береговой линии.',
+   (10751, 'выбросы, зафиксированные в ходе мониторинга береговой линии в Новороссийске, не являются нефтепродуктами, перевозимыми танкером, пострадавшим в октябре'),
+   (10751, 'В результате атак безэкипажными катерами 6 октября 2026 года на морские суда в акватории Черного моря произошли аварии.'),
+   (10974, 'Работы по ликвидации нефтепродуктов с прибрежной зоны завершены.')),
+ None,
+ S('The Moscow Times пишет, что губернатор связал разлив с «авариями» судов, атакованных украинскими морскими дронами 6 октября; мазут обнаружен примерно на 500 метрах побережья у Новороссийска, в Геленджике и Архипо-Осиповке находят птиц с химическими ожогами. Проект спутникового мониторинга Transparent World связал загрязнение с атакой на танкер Aframax Rio у Сочи, груз которого независимо не подтвержден.',
+   (11442, 'He attributed the spill to “accidents” involving vessels targeted by Ukrainian naval drones on Oct. 6.'),
+   (11442, 'Transparent World linked the pollution to the Oct. 6 naval drone attack on the tanker Aframax Rio off Sochi.')),
+ 'Оперштаб Кубани утверждает, что найденные в Новороссийске нефтепродукты не с танкера, пострадавшего в октябре, хотя распоряжение губернатора прямо связывает угрозу разлива с атаками катеров 6 октября; Transparent World по спутниковым снимкам связывает пятно с атакой на танкер у Сочи. Украинские источники в выборке тему не освещают; происхождение нефтепродуктов независимо не установлено.',
+ 'medium', 'Происхождение нефтепродуктов независимо не установлено.', True,
+ ['Нафтопродукти на узбережжі Новоросійська: влада заперечує зв’язок з атакованим у жовтні танкером, Transparent World пов’язує пляму з ним', 'Новоросійськ, Геленджик',
+  'Оперштаб Кубані стверджує, що знайдені в Новоросійську нафтопродукти не з танкера, який постраждав у жовтні, хоча розпорядження губернатора прямо пов’язує загрозу розливу з атаками катерів 6 жовтня; Transparent World за супутниковими знімками пов’язує пляму з атакою на танкер біля Сочі. Українські джерела у вибірці тему не висвітлюють; походження нафтопродуктів незалежно не встановлено.',
+  'Інтерфакс із посиланням на оперштаб Краснодарського краю повідомляє, що під час моніторингу берегової лінії в Новоросійську виявлено незначні викиди нафтопродуктів, які, за даними регіонального міністерства ЦО і НС, не є нафтопродуктами з танкера, що постраждав у жовтні; до прибирання залучено 42 людини. Напередодні губернатор Веніамін Кондратьєв запровадив режим підвищеної готовності в Геленджику й Новоросійську через загрозу розливу після атак безекіпажних катерів на судна 6 жовтня. 16 жовтня міськадміністрація повідомила, що очищено близько 300 метрів берегової лінії.',
+  None,
+  'The Moscow Times пише, що губернатор пов’язав розлив з «аваріями» суден, атакованих українськими морськими дронами 6 жовтня; мазут виявлено приблизно на 500 метрах узбережжя біля Новоросійська, у Геленджику та Архіпо-Осиповці знаходять птахів із хімічними опіками. Проєкт супутникового моніторингу Transparent World пов’язав забруднення з атакою на танкер Aframax Rio біля Сочі, вантаж якого незалежно не підтверджено.'],
+ ['Oil products on the Novorossiysk coast: authorities deny a link to the tanker attacked in October, Transparent World links the slick to it', 'Novorossiysk, Gelendzhik',
+  'The Kuban emergency headquarters says the oil products found in Novorossiysk did not come from the tanker damaged in October, although the governor\'s order directly links the spill threat to the boat attacks of October 6; Transparent World, based on satellite images, links the slick to the attack on the tanker off Sochi. Ukrainian sources in the sample do not cover the story; the origin of the oil products has not been independently established.',
+  'Interfax, citing the Krasnodar region emergency headquarters, reports that minor discharges of oil products were found during monitoring of the Novorossiysk shoreline which, according to the regional civil defence ministry, are not oil products from the tanker damaged in October; 42 people were deployed for the clean-up. The day before, Governor Veniamin Kondratyev declared a heightened alert in Gelendzhik and Novorossiysk because of the threat of a spill after uncrewed boat attacks on vessels on October 6. On October 16 the city administration said about 300 metres of shoreline had been cleaned.',
+  None,
+  'The Moscow Times writes that the governor attributed the spill to "accidents" involving vessels targeted by Ukrainian naval drones on October 6; fuel oil was found along roughly 500 metres of coast near Novorossiysk, and birds with chemical burns are being found in Gelendzhik and Arkhipo-Osipovka. The satellite monitoring project Transparent World linked the pollution to the attack on the tanker Aframax Rio off Sochi, whose cargo has not been independently confirmed.'])
+
+json.dump(cards, open(OUT + 'c14e.json', 'w'), ensure_ascii=False, indent=1)
+print('new cards', len(cards))
+
+# ---------------- extensions of earlier 2026-10-14 cards (Moscow Times backfill) ----------------
+@ext('1014-starlink-speed-limit', [11443])
+def _(c):
+    add(c, 'ind', 'The Moscow Times со ссылкой на Reuters приводит слова Бескрестнова о сорванных миссиях и реакцию главы МИД Польши, которая оплачивает подписки Starlink для Украины: Радослав Сикорский спросил Маска в X, не играет ли тот снова в политику, и напомнил, что европейские клиенты за ним наблюдают.',
+        'The Moscow Times із посиланням на Reuters наводить слова Бескрестнова про зірвані місії та реакцію глави МЗС Польщі, яка оплачує підписки Starlink для України: Радослав Сікорський запитав Маска в X, чи не грається той знову в політику, і нагадав, що європейські клієнти за ним стежать.',
+        'The Moscow Times, citing Reuters, quotes Beskrestnov on the disrupted missions and the reaction of the foreign minister of Poland, which pays for Ukraine\'s Starlink subscriptions: Radoslaw Sikorski asked Musk on X whether he was playing politics again and reminded him that his European customers are watching.',
+        [(11443, 'Our defense forces did not receive a warning about this limitation, and this led to the disruption of several missions'),
+         (11443, 'As your European customers, we are watching you.')])
+
+@ext('1014-drones-moscow-sber', [11441, 11448, 11450])
+def _(c):
+    add(c, 'ind', 'The Moscow Times пишет, что пользователи по всей России жаловались на сбои Сбербанка и GigaChat, хотя связь с атакой не установлена, а Песков заявил, что совещание Путина по кибербезопасности не связано с ударами по дата-центрам «Яндекса» и Сбербанка. По данным издания, губернатор Ростовской области Юрий Слюсарь сообщил о более чем 160 сбитых над регионом дронах, а пожар на нефтеналивном терминале в Ростове-на-Дону шел четвертые сутки и охватил восемь из 12 резервуаров.',
+        'The Moscow Times пише, що користувачі по всій Росії скаржилися на збої Сбербанку й GigaChat, хоча зв’язок з атакою не встановлено, а Пєсков заявив, що нарада Путіна з кібербезпеки не пов’язана з ударами по дата-центрах «Яндекса» і Сбербанку. За даними видання, губернатор Ростовської області Юрій Слюсар повідомив про понад 160 збитих над регіоном дронів, а пожежа на нафтоналивному терміналі в Ростові-на-Дону тривала четверту добу й охопила вісім із 12 резервуарів.',
+        'The Moscow Times writes that users across Russia complained of outages at Sberbank and GigaChat, although no link to the attack has been established, and Peskov said Putin\'s cybersecurity meeting was not connected to the strikes on Yandex and Sberbank data centres. According to the outlet, Rostov region Governor Yury Slyusar reported more than 160 drones downed over the region, while the fire at the oil terminal in Rostov-on-Don was burning for a fourth day and had spread to eight of its 12 tanks.',
+        [(11441, 'The reports did not establish a link between the disruptions and the drone attacks.'),
+         (11448, 'It is not connected to those specific, isolated attacks'),
+         (11450, 'More than 160 drones were shot down over the city of Kamensk-Shakhtinsky and eight districts')])
+
+@ext('1014-nord-stream-trial-opens', [11451])
+def _(c):
+    add(c, 'ind', 'The Moscow Times приводит довод адвоката Николы Канестрини о том, что газопровод был «российским оружием», а инфраструктура агрессора могла быть законной целью; Киев свою причастность отрицает.',
+        'The Moscow Times наводить аргумент адвоката Ніколи Канестріні про те, що газопровід був «російською зброєю», а інфраструктура агресора могла бути законною ціллю; Київ свою причетність заперечує.',
+        'The Moscow Times quotes lawyer Nicola Canestrini\'s argument that the pipeline was a "Russian weapon" and that an aggressor\'s infrastructure may have been a lawful target; Kyiv denies any involvement.',
+        [(11451, 'Is it unlawful to destroy an aggressor\'s infrastructure without harming any human beings?'),
+         (11451, 'The government in Kyiv has also denied any involvement')])
+
+apply(['c14a.json', 'c14b.json'])

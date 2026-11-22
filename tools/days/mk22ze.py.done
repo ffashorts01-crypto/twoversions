@@ -1,0 +1,40 @@
+import sys, glob, os
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 12:00: backlog extensions (Oct 21 ids) ----------------
+def noop(c): pass
+
+@ext('1020-oslo-zelensky-witkoff-talks', [13774, 15195, 15249, 13784])
+def _(c):
+    add(c, 'ru', 'На следующий день Дмитрий Песков сказал, что в Кремле посмотрят, внесут ли Норвегия и Финляндия конструктивный вклад: если Стубб лишь повторяет общеевропейскую позицию, вкладом это не будет. ТАСС на английском приводит слова Рубио о том, что переговоры в Осло прошли позитивно и «без сюрпризов».',
+        'Наступного дня Дмитро Пєсков сказав, що в Кремлі подивляться, чи зроблять Норвегія і Фінляндія конструктивний внесок: якщо Стубб лише повторює загальноєвропейську позицію, внеском це не буде. ТАСС англійською наводить слова Рубіо про те, що переговори в Осло пройшли позитивно і «без сюрпризів».',
+        'The next day Dmitry Peskov said the Kremlin would see whether Norway and Finland made a constructive contribution: if Stubb merely repeated the common European position, it would not count as one. TASS in English quotes Rubio as saying the Oslo talks were positive, with "nothing surprising".',
+        [(13774, 'We will see to what extent Mr. Stubb can make a constructive contribution.'),
+         (13784, 'Nothing unexpected, nothing surprising')])
+
+@ext('1021-russian-diesel-first-tanker-us', [14967, 14107, 13940])
+def _(c):
+    add(c, 'ua', 'РБК-Украина со ссылкой на Axios пишет, что в Вашингтоне надеются: снятие санкций с российского дизеля склонит Путина к компромиссу по Украине, хотя повлияет ли это на его позицию, неизвестно.',
+        'РБК-Україна з посиланням на Axios пише, що у Вашингтоні сподіваються: скасування санкцій щодо російського дизеля схилить Путіна до компромісу щодо України, хоча чи вплине це на його позицію, невідомо.',
+        'RBC-Ukraine, citing Axios, writes that Washington hopes lifting sanctions on Russian diesel will incline Putin towards a compromise on Ukraine, although it is unknown whether this will affect his position.',
+        [(14967, 'Водночас поки невідомо, чи справді ці кроки вплинуть на позицію Путіна щодо завершення війни.')])
+
+@ext('1021-drones-over-russia-373', [15198, 15186, 15187, 15258])
+def _(c):
+    add(c, 'ru', '«Интерфакс» со ссылкой на губернатора Александра Хинштейна сообщает о 217 нейтрализованных за сутки беспилотниках над Курской областью и пяти пострадавших, оперштаб Кубани — о падении обломков на территорию санатория в Туапсинском округе.',
+        '«Интерфакс» з посиланням на губернатора Олександра Хінштейна повідомляє про 217 нейтралізованих за добу безпілотників над Курською областю і п’ятьох постраждалих, оперштаб Кубані — про падіння уламків на територію санаторію в Туапсинському окрузі.',
+        'Interfax, citing governor Alexander Khinshtein, reports 217 drones neutralised over Kursk region in a day and five people injured; the Kuban operational HQ reports debris falling on the grounds of a sanatorium in Tuapse district.',
+        [(15198, 'в результате атак пострадали пять человек'),
+         (15186, 'обломки беспилотников упали на территорию санатория')])
+
+ext('1021-eu-70bn-financing-gap', [14173])(noop)
+ext('1020-front-claims-timoshevka', [13756])(noop)
+ext('1020-dubno-epicentr-strike', [14229, 14293])(noop)
+ext('1019-nova-vodolaha-park-strike', [14219, 14265])(noop)
+ext('1021-front-claims', [14335])(noop)
+ext('1021-kyiv-sviatoshynskyi-drone-morning', [14944, 15027])(noop)
+ext('1021-mod-night-targets-poltava-nyvky-uman', [14960, 14443])(noop)
+ext('1020-kyiv-strazhesko-institute-drone', [14999])(noop)
+
+files = sorted(os.path.basename(p) for p in glob.glob('/workspace/compare-site-v2/tools/days/out/c*.json'))
+apply(files)

@@ -1,0 +1,74 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from extlib import add, setd, ext, apply
+
+# ---------------- hourly run 00:05 Oct 19 (ids 11819-11856): no new cards, extensions of Oct 18 cards ----------------
+# Not used: 11846 (Suspilne digest, same text as 11847), 11828 (RIA insinuation about Zelensky on NBC, unverifiable personal claim), see SKIPPED.md
+
+@ext('1018-trump-truth-social-zelensky', [11820, 11822, 11824, 11830, 11835, 11838, 11842, 11849, 11850, 11851, 11847, 11852])
+def _(c):
+    c['tags'] = ['расхождение: формулировки']
+    add(c, 'ru', '«Интерфакс» приводит пост подробнее: Трамп не стал вводить дополнительные санкции, чтобы не отпугнуть Россию от переговоров, и может подписать документ «в любой момент»; Россия, по его словам, несмотря на удары, поставляет на мировые рынки миллионы баррелей дизтоплива по низкой цене. РИА Новости и ТАСС вынесли в отдельные заметки слова о том, что Россия «очень мало» помогает Ирану и пусть так и остается, а также ответ Трампа, что санкции он утвердит, когда сам пожелает. Глава РФПИ Кирилл Дмитриев написал, что Трамп «разоблачает истинные мотивы Зеленского».',
+        '«Інтерфакс» наводить допис докладніше: Трамп не став запроваджувати додаткові санкції, щоб не відлякати Росію від переговорів, і може підписати документ «будь-коли»; Росія, за його словами, попри удари, постачає на світові ринки мільйони барелів дизпалива за низькою ціною. РИА Новости і ТАСС винесли в окремі замітки слова про те, що Росія «дуже мало» допомагає Ірану і нехай так і залишається, а також відповідь Трампа, що санкції він затвердить, коли сам захоче. Голова РФПІ Кирило Дмитрієв написав, що Трамп «викриває справжні мотиви Зеленського».',
+        'Interfax relays the post in more detail: Trump did not impose additional sanctions so as not to scare Russia away from the talks and can sign the document "at any time"; Russia, he says, despite the strikes, is supplying millions of barrels of diesel to world markets at a low price. RIA Novosti and TASS ran separate items on his words that Russia is doing "very little" to help Iran and should keep it that way, and on Trump\'s answer that he will approve the sanctions when he wants to. RDIF head Kirill Dmitriev wrote that Trump "is exposing Zelensky\'s true motives".',
+        [(11849, 'Мы добиваемся отличного прогресса, в том числе - в проходящих сейчас переговорах по обмену заложниками'),
+         (11850, 'Россия, несмотря на это, отправляет на мировые рынки миллионы баррелей дизельного топлива по низкой цене'),
+         (11830, 'Россия делает очень мало, если вообще что-то делает, чтобы помочь Исламской Республике Иран'),
+         (11838, 'Президент США заявил, что сделает это, когда сам того пожелает'),
+         (11820, 'Президент Трамп разоблачает истинные мотивы Зеленского')])
+    add(c, 'ua', 'Суспильне подробно пересказывает пост и во вставке поправляет Трампа: у Украины нет выхода к океану, ее побережье омывают только Черное и Азовское моря. Издание напоминает хронологию: дизельная договоренность Трампа и Путина 9 октября, временная лицензия OFAC до 7 апреля 2027 года, «энергетическое перемирие» 11 октября и указ 16 октября об отказе от санкций по закону Грэма.',
+        'Суспільне докладно переказує допис і у вставці виправляє Трампа: Україна не має виходу до океану, її узбережжя омивають лише Чорне та Азовське моря. Видання нагадує хронологію: дизельна домовленість Трампа і Путіна 9 жовтня, тимчасова ліцензія OFAC до 7 квітня 2027 року, «енергетичне перемир’я» 11 жовтня та указ 16 жовтня про відмову від санкцій за законом Грема.',
+        'Suspilne relays the post in detail and corrects Trump in an insertion: Ukraine has no access to the ocean, its coast is washed only by the Black and Azov seas. The outlet recalls the timeline: the Trump–Putin diesel arrangement on October 9, a temporary OFAC licence until April 7, 2027, the "energy truce" on October 11 and the October 16 order waiving the Graham Act sanctions.',
+        [(11847, 'Україна не має виходу до океану. Її узбережжя омивають лише Чорне та Азовське моря.'),
+         (11847, 'Вона діятиме до 7 квітня 2027 року')])
+    add(c, 'ind', 'France 24 (AFP) отмечает, что неясно, какой документ имел в виду Трамп, — Белый дом на запрос не ответил. По данным издания, Трамп вновь обвинил Украину в том, что она бьет по НПЗ, чтобы навредить Республиканской партии на выборах 3 ноября; опросы предвещают его партии поражение на фоне роста цен на топливо после начала войны с Ираном в конце февраля.',
+        'France 24 (AFP) зазначає, що незрозуміло, який документ мав на увазі Трамп, — Білий дім на запит не відповів. За даними видання, Трамп знову звинуватив Україну в тому, що вона б’є по НПЗ, щоб зашкодити Республіканській партії на виборах 3 листопада; опитування віщують його партії поразку на тлі зростання цін на пальне після початку війни з Іраном наприкінці лютого.',
+        'France 24 (AFP) notes that it is unclear which document Trump meant, and the White House did not respond to a request. According to the outlet, Trump again accused Ukraine of striking refineries to hurt the Republican Party in the November 3 election; polls point to a likely defeat for his party amid fuel prices that have soared since the Iran war began in late February.',
+        [(11852, 'though it was unclear to what document he was referring'),
+         (11852, "Polling shows Trump's party heading for a likely drubbing in the election, with many voters deeply upset by fuel costs")])
+    setd(c, 'Содержание поста все группы передают одинаково. РИА Новости и ТАСС выносят в заголовки отдельные тезисы — «большой прогресс», нежелание Зеленского завершить конфликт, потерю территории, помощь Ирану; связь поста с отказом от санкций прямо объясняет «Интерфакс», а глава РФПИ Дмитриев подает пост как разоблачение «истинных мотивов» Зеленского. Украинские и независимые СМИ представляют его как защиту прокремлевских решений: Kyiv Independent оспаривает связь цен на дизель с ударами по НПЗ, Суспильне поправляет слова об «океанах», France 24 связывает обвинения с выборами в США 3 ноября.',
+         'Зміст допису всі групи передають однаково. РИА Новости і ТАСС виносять у заголовки окремі тези — «великий прогрес», небажання Зеленського завершити конфлікт, втрату території, допомогу Ірану; зв’язок допису з відмовою від санкцій прямо пояснює «Інтерфакс», а голова РФПІ Дмитрієв подає допис як викриття «справжніх мотивів» Зеленського. Українські та незалежні ЗМІ представляють його як захист прокремлівських рішень: Kyiv Independent заперечує зв’язок цін на дизель з ударами по НПЗ, Суспільне виправляє слова про «океани», France 24 пов’язує звинувачення з виборами в США 3 листопада.',
+         'All groups convey the content of the post in the same way. RIA Novosti and TASS headline individual points — "great progress", Zelensky\'s unwillingness to end the conflict, the loss of territory, help to Iran; Interfax explicitly links the post to the sanctions waiver, and RDIF head Dmitriev presents it as exposing Zelensky\'s "true motives". Ukrainian and independent media present it as a defence of pro-Kremlin decisions: the Kyiv Independent disputes the link between diesel prices and refinery strikes, Suspilne corrects the words about "oceans", and France 24 ties the accusations to the US election on November 3.')
+
+@ext('1018-zelensky-bloomberg-capitulation', [11825, 11856])
+def _(c):
+    c['tags'] = ['расхождение: формулировки', 'умолчание']
+    add(c, 'ru', 'РИА Новости пересказывает интервью под заголовком «"Это мучение": Зеленский выступил с резким обвинением в адрес Трампа». В лиде агентства США во главе с Трампом «пытаются склонить Украину к капитуляции», хотя сам Зеленский оговаривается, что не утверждает, будто такова цель партнеров. Зеленского РИА называет «главой киевского режима» и напоминает слова Трампа о том, что тот не хочет завершения конфликта; о задержке ракет к Patriot и ограничении Starlink агентство не пишет.',
+        'РИА Новости переказує інтерв’ю під заголовком «"Це мука": Зеленський виступив із різким звинуваченням на адресу Трампа». У ліді агентства США на чолі з Трампом «намагаються схилити Україну до капітуляції», хоча сам Зеленський застерігає, що не стверджує, ніби така мета партнерів. Зеленського РИА називає «главою київського режиму» і нагадує слова Трампа про те, що той не хоче завершення конфлікту; про затримку ракет до Patriot та обмеження Starlink агентство не пише.',
+        'RIA Novosti relays the interview under the headline "\'This is torment\': Zelensky makes a harsh accusation against Trump". In the agency\'s lead the US led by Trump is "trying to push Ukraine into capitulation", although Zelensky himself stresses that he does not claim this is his partners\' goal. RIA calls Zelensky the "head of the Kyiv regime" and recalls Trump\'s words that he does not want to end the conflict; the agency does not mention the delayed Patriot missiles or the Starlink restriction.',
+        [(11825, 'США во главе с президентом Дональдом Трампом пытаются склонить Украину к капитуляции, с таким утверждением выступил в интервью агентству Bloomberg Владимир Зеленский.'),
+         (11825, 'Думаю, сейчас это мучение, но после выборов жизнь продолжится')])
+    add(c, 'ua', 'В отдельной заметке РБК-Украина цитирует: «Мы заплатили за оружие» — и добавляет, что, по данным CNN, у Украины вновь закончились ракеты к Patriot, а Греция и Испания отказались передать свои, хотя у части из них истекает срок годности.',
+        'В окремій замітці РБК-Україна цитує: «Ми заплатили за зброю» — і додає, що, за даними CNN, в Україні знову закінчилися ракети до Patriot, а Греція та Іспанія відмовилися передати свої, хоча в частини з них спливає термін придатності.',
+        'In a separate item RBC-Ukraine quotes him: "We paid for the weapons", adding that according to CNN Ukraine has again run out of Patriot missiles, and that Greece and Spain refused to hand over theirs, although some of them are about to expire.',
+        [(11856, 'Ми заплатили за зброю. Частину постачань погодили, а решту - ні. І це не технічне питання'),
+         (11856, 'Греція та Іспанія відмовилися передати Україні ракети до Patriot')])
+    setd(c, 'Украинские СМИ и DW передают интервью одинаково; DW подробнее излагает предложение «дизель в обмен на Patriot», украинские издания — данные о поставках ракет по программе PURL. РИА Новости подает оговорку Зеленского как прямое обвинение: в лиде агентства США «пытаются склонить Украину к капитуляции», о задержке ракет и Starlink не сообщается. Американская сторона обвинения в намеренном ограничении Starlink отрицает.',
+         'Українські ЗМІ та DW передають інтерв’ю однаково; DW докладніше викладає пропозицію «дизель в обмін на Patriot», українські видання — дані про постачання ракет за програмою PURL. РИА Новости подає застереження Зеленського як пряме звинувачення: у ліді агентства США «намагаються схилити Україну до капітуляції», про затримку ракет і Starlink не повідомляється. Американська сторона звинувачення в навмисному обмеженні Starlink заперечує.',
+         'Ukrainian media and DW convey the interview in the same way; DW details the "diesel for Patriots" offer, Ukrainian outlets the data on missile deliveries under the PURL programme. RIA Novosti presents Zelensky\'s caveat as a direct accusation: in the agency\'s lead the US is "trying to push Ukraine into capitulation", with no mention of the delayed missiles or Starlink. The US side denies accusations of deliberately restricting Starlink.')
+
+@ext('1018-zelensky-nbc-bessent-starlink', [11848])
+def _(c):
+    add(c, 'ind', 'Kyiv Independent приводит слова Бессента в NBC: Зеленскому «следует быть очень осторожным» с неправдивыми заявлениями, а обвинять США в ограничении Starlink «безрассудно». По словам министра, снято только эмбарго на дизель; издание уточняет, что санкции по закону Грэма так и не вступили в силу — от них отказались, а не отменили их.',
+        'Kyiv Independent наводить слова Бессента в NBC: Зеленському «слід бути дуже обережним» з неправдивими заявами, а звинувачувати США в обмеженні Starlink «безрозсудно». За словами міністра, знято лише ембарго на дизель; видання уточнює, що санкції за законом Грема так і не набули чинності — від них відмовилися, а не скасували їх.',
+        'The Kyiv Independent quotes Bessent on NBC: Zelensky "should be very careful" about untrue statements, and accusing the US of restricting Starlink is "reckless". According to the secretary, only the diesel embargo has been lifted; the outlet clarifies that the Graham Act sanctions never took effect — they were waived rather than lifted.',
+        [(11848, "President Zelensky should be very careful about making statements like this that aren't true"),
+         (11848, 'the only thing that has been lifted is the diesel embargo'),
+         (11848, 'The new sanctions, which never went into effect, were waived rather than lifted.')])
+
+@ext('1018-drones-moscow-mod-totals', [11833, 11845, 11829])
+def _(c):
+    add(c, 'ru', 'Около полуночи ТАСС и РИА сообщили о приостановке работы аэропортов Саранска, Самары и Ульяновска.',
+        'Близько опівночі ТАСС і РИА повідомили про призупинення роботи аеропортів Саранська, Самари та Ульяновська.',
+        'Around midnight TASS and RIA reported that the airports of Saransk, Samara and Ulyanovsk had suspended flights.',
+        [(11833, 'Аэропорт Саранска приостановил прием и выпуск самолетов'),
+         (11829, 'Аэропорты Самара (" Курумоч "), Ульяновск ("Баратаевка"). Введены временные ограничения на прием и выпуск воздушных судов.')])
+
+@ext('1018-front-claims', [11855])
+def _(c):
+    add(c, 'ru', 'Офицер с позывным «Лотос» рассказал ТАСС, что российские морпехи три месяца находились в тылу ВСУ в Доброполье.',
+        'Офіцер з позивним «Лотос» розповів ТАСС, що російські морпіхи три місяці перебували в тилу ЗСУ в Добропіллі.',
+        'An officer with the call sign "Lotos" told TASS that Russian marines spent three months behind Ukrainian lines in Dobropillia.',
+        [(11855, 'Офицер Лотос рассказал, что морпехи РФ три месяца были в тылу ВСУ в Доброполье')])
+
+apply(['c18a.json', 'c18b.json', 'c18c.json', 'c18d.json'])

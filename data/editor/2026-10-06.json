@@ -1,0 +1,1140 @@
+[
+ {
+  "key": "1006-moscow-region-drone-attack",
+  "ids": [
+   5240,
+   5243,
+   5248,
+   4281,
+   6733,
+   7567,
+   9513,
+   9195,
+   8388,
+   10083,
+   10087,
+   10108,
+   10086,
+   10098,
+   10107,
+   10111,
+   10091,
+   10099,
+   10079,
+   10078,
+   10076,
+   10077,
+   10081,
+   10088,
+   10075,
+   9712
+  ],
+  "title": "Массированная атака беспилотников на Московский регион в ночь на 6 октября",
+  "place": "Москва и Московская область",
+  "region": "russia-other",
+  "tags": [
+   "расхождение: последствия",
+   "расхождение: цели"
+  ],
+  "ru": {
+   "summary": "По словам мэра Москвы Сергея Собянина, которые приводит ТАСС, с вечера 5 октября к Московскому региону летели 650 беспилотников, большинство уничтожено на дальних подступах, еще 105 — на подлете к столице; ТАСС называет атаку одной из крупнейших за два года. Губернатор Андрей Воробьев сообщил о двух погибших — в Барыбино и Радумле — и девяти пострадавших. Минобороны РФ, по данным РИА Новости, заявило об уничтожении за ночь 868 беспилотников над многими регионами России.",
+   "quotes": [
+    {
+     "id": 5240,
+     "text": "A total of 650 UAVs headed toward the Moscow Region from the evening of October 5, with most neutralized by air defenses at long range; 105 drones were destroyed on approach to Moscow, Mayor Sergey Sobyanin said."
+    },
+    {
+     "id": 5248,
+     "text": "The death toll from last night’s drone attack on the Moscow Region has risen to two, with nine others injured, Governor Andrey Vorobyov said."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Суспільне и Українська правда пересказывают заявления Собянина с оговоркой «якобы» и пишут, что, по данным OSINT-анализа Telegram-канала Astra и канала Exilenova+, дроны, вероятно, поразили нефтебазу ЛПДС «Володарская» у села Константиново; губернатор Воробьев попадание по нефтебазе не подтвердил. Українська правда также сообщает об ограничениях в работе московских аэропортов.",
+   "quotes": [
+    {
+     "id": 6733,
+     "text": "Губернатор Московської області Андрій Воробйов також прозвітував у Telegram про дронову атаку на регіон, але влучання по нафтобазі не підтвердив."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Al Jazeera и DW со ссылкой на российские власти сообщают о 650 беспилотниках, двух погибших и поврежденных частных домах. Kyiv Independent со ссылкой на Telegram-канал Exilenova+ пишет о пожаре на крупнейшем нефтяном объекте Подмосковья у Константиново и подчеркивает, что не смог сразу проверить эти сообщения.",
+   "quotes": [
+    {
+     "id": 9195,
+     "text": "Губернатор Московской области Андрей Воробьев отчитался о перехвате 185 БПЛА за ночь. В результате атаки, по его данным, погибли двое мужчин, еще девять человек пострадали."
+    },
+    {
+     "id": 8388,
+     "text": "The Kyiv Independent was not able to immediately verify the reports."
+    }
+   ]
+  },
+  "diverge": "Все группы опираются на одни и те же российские официальные цифры (650 беспилотников, 105 сбито на подлете к Москве, двое погибших). Главное различие — в последствиях: российские официальные лица говорят о повреждении жилых домов и автомобилей и не упоминают нефтебазу, тогда как украинские издания и Kyiv Independent со ссылкой на Telegram-каналы пишут о вероятном поражении нефтебазы «Володарская» без официального подтверждения. Минобороны РФ приводит отдельную цифру — 868 беспилотников за ночь над всей Россией.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Поражение нефтебазы известно только по Telegram-каналам.",
+  "uk": {
+   "t": "Масована атака безпілотників на Московський регіон у ніч на 6 жовтня",
+   "p": "Москва і Московська область",
+   "d": "Усі групи спираються на ті самі російські офіційні цифри (650 безпілотників, 105 збито на підльоті до Москви, двоє загиблих). Головна відмінність — у наслідках: російські посадовці говорять про пошкодження житлових будинків і автомобілів і не згадують нафтобазу, тоді як українські видання та Kyiv Independent із посиланням на Telegram-канали пишуть про ймовірне ураження нафтобази «Володарська» без офіційного підтвердження. Міноборони РФ наводить окрему цифру — 868 безпілотників за ніч над усією Росією.",
+   "ru": "За словами мера Москви Сергія Собяніна, які наводить ТАСС, із вечора 5 жовтня до Московського регіону летіли 650 безпілотників, більшість знищено на дальніх рубежах, ще 105 — на підльоті до столиці; ТАСС називає атаку однією з наймасштабніших за два роки. Губернатор Андрій Воробйов повідомив про двох загиблих — у Барибіному та Радумлі — і дев’ятьох постраждалих. Міноборони РФ, за даними РІА Новини, заявило про знищення за ніч 868 безпілотників над багатьма регіонами Росії.",
+   "ua": "Суспільне і Українська правда переказують заяви Собяніна із застереженням «буцімто» і пишуть, що, за даними OSINT-аналізу Telegram-каналу Astra і каналу Exilenova+, дрони, імовірно, уразили нафтобазу ЛВДС «Володарська» біля села Костянтинове; губернатор Воробйов влучання по нафтобазі не підтвердив. Українська правда також повідомляє про обмеження в роботі московських аеропортів.",
+   "ind": "Al Jazeera і DW із посиланням на російську владу повідомляють про 650 безпілотників, двох загиблих і пошкоджені приватні будинки. Kyiv Independent із посиланням на Telegram-канал Exilenova+ пише про пожежу на найбільшому нафтовому об’єкті Підмосков’я біля Костянтинового і наголошує, що не зміг одразу перевірити ці повідомлення."
+  },
+  "en": {
+   "t": "Massive drone attack on the Moscow region overnight into 6 October",
+   "p": "Moscow and Moscow region",
+   "d": "All groups rely on the same Russian official figures (650 drones, 105 shot down on approach to Moscow, two killed). The main difference concerns the consequences: Russian officials speak of damage to homes and cars and do not mention the oil depot, while Ukrainian outlets and Kyiv Independent, citing Telegram channels, report a likely hit on the Volodarskaya oil depot without official confirmation. The Russian Defense Ministry gives a separate figure — 868 drones overnight over the whole of Russia.",
+   "ru": "According to Moscow Mayor Sergei Sobyanin, quoted by TASS, 650 drones flew towards the Moscow region from the evening of 5 October; most were destroyed at long range and another 105 on approach to the capital; TASS calls it one of the largest attacks in two years. Governor Andrei Vorobyov reported two people killed — in Barybino and Radumlya — and nine injured. The Russian Defense Ministry, according to RIA Novosti, said 868 drones were destroyed overnight over many Russian regions.",
+   "ua": "Suspilne and Ukrainska Pravda relay Sobyanin's statements with the caveat \"allegedly\" and write that, according to OSINT analysis by the Telegram channel Astra and the channel Exilenova+, the drones probably hit the Volodarskaya oil pumping station near the village of Konstantinovo; Governor Vorobyov did not confirm a hit on the depot. Ukrainska Pravda also reports restrictions at Moscow airports.",
+   "ind": "Al Jazeera and DW, citing Russian officials, report 650 drones, two people killed and damaged private homes. Kyiv Independent, citing the Telegram channel Exilenova+, reports a fire at the largest oil facility in the Moscow region near Konstantinovo and stresses that it could not immediately verify these reports."
+  }
+ },
+ {
+  "key": "1006-bulgaria-ships-drones",
+  "ids": [
+   5255,
+   6754,
+   6770,
+   7614,
+   7615,
+   9514,
+   9200,
+   8398,
+   6797,
+   7653,
+   9522,
+   9735,
+   9745,
+   9749,
+   8408
+  ],
+  "title": "Удар беспилотников по двум торговым судам в исключительной экономической зоне Болгарии",
+  "place": "Черное море у побережья Болгарии",
+  "region": "moldova-romania",
+  "tags": [
+   "расхождение: кто виноват",
+   "расхождение: числа"
+  ],
+  "ru": {
+   "summary": "ТАСС со ссылкой на болгарский портал maritime.bg сообщает, что «неустановленные беспилотники» поразили два торговых судна примерно в 80 морских милях от побережья Болгарии: Alfa Watan под флагом Того затонуло, на судне Able под флагом Палау начался пожар, восемнадцать членов экипажа взяты на борт болгарского парома.",
+   "quotes": [
+    {
+     "id": 5255,
+     "text": "Unidentified drones struck two merchant vessels in the Black Sea, causing injuries, maritime. bg reported."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Суспільне пишет об атаке на Alfa Watan и Able в 80 милях от побережья Болгарии и о затоплении Alfa Watan. Зеленский, по данным Суспільне и Українська правда, заявил, что Силы обороны Украины никаких операций в этом районе не проводили и что атака — продолжение попыток России сделать западную часть Черного моря непригодной для судоходства. Українська правда также цитирует министра обороны Болгарии Димитра Стоянова: пока нельзя сказать, украинскими или российскими были дроны. На следующий день, по данным Суспільне, болгарский вице-адмирал Румен Николов сообщил о прекращении поисков: следов моряков с затонувшего судна нет. Українська правда пишет, что Еврокомиссия призвала Россию прекратить атаки на торговые суда в Черном море.",
+   "quotes": [
+    {
+     "id": 6770,
+     "text": "За його словами, Сили оборони України не проводили жодних операцій у цьому районі моря, а сама атака є черговою спробою РФ «перетворити західну частину Чорного моря на абсолютно непридатну для мореплавства»."
+    },
+    {
+     "id": 7615,
+     "text": "Міністр оборони Болгарії Дімітар Стоянов каже, що поки що не можна сказати, чи дрони, які вразили два кораблі, були українськими чи російськими."
+    },
+    {
+     "id": 6797,
+     "text": "Немає жодних слідів моряків з першого корабля і не буде."
+    },
+    {
+     "id": 7653,
+     "text": "Євросоюз закликав Росію припинити атаки на торговельні судна в Чорному морі"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Al Jazeera цитирует премьер-министра Болгарии Румена Радева, назвавшего атаку морскими и воздушными дронами около 3:00 в экономической зоне страны «абсолютно неприемлемой». DW со ссылкой на Радева пишет, что Alfa Watan затонуло, а его экипаж считается пропавшим без вести. Kyiv Independent добавляет, что в тот же день российский дрон, по словам главы Одесской ОВА Олега Кипера, поразил судно под флагом Маршалловых островов, погиб член экипажа. На следующий день Al Jazeera сообщила, что болгарские власти завершили поиски пропавших моряков, не найдя выживших.",
+   "quotes": [
+    {
+     "id": 9514,
+     "text": "“This is an unacceptable attack in Bulgaria’s exclusive economic zone."
+    },
+    {
+     "id": 9200,
+     "text": "В результате одно из судов затонуло, а его экипаж считается пропавшим без вести."
+    },
+    {
+     "id": 9522,
+     "text": "Bulgarian authorities have ended search operations after confirming no survivors were found following a drone strike that sank a ship off the country’s coast."
+    }
+   ]
+  },
+  "diverge": "Главное расхождение — в том, чьи были беспилотники: Зеленский обвиняет Россию и отрицает участие Украины, министр обороны Болгарии говорит, что принадлежность дронов не установлена, ТАСС называет их «неустановленными», а Еврокомиссия, по данным Українська правда, призывает прекратить атаки именно Россию. Расстояние от берега приводится по-разному: 80 морских миль (ТАСС, Суспільне), около 70 миль или 130 км (Al Jazeera) и 150 км от города Бяла (DW). В тексте Суспільне о двух погибших и 11 спасенных со ссылкой на МВД Румынии, по-видимому, смешаны данные с инцидентом 5 октября у побережья Румынии.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Принадлежность дронов не установлена; данные о расстоянии и экипаже различаются.",
+  "uk": {
+   "t": "Удар безпілотників по двох торговельних суднах у винятковій економічній зоні Болгарії",
+   "p": "Чорне море біля узбережжя Болгарії",
+   "d": "Головна розбіжність — у тому, чиї були безпілотники: Зеленський звинувачує Росію і заперечує участь України, міністр оборони Болгарії каже, що належність дронів не встановлено, ТАСС називає їх «невстановленими», а Єврокомісія, за даними Української правди, закликає припинити атаки саме Росію. Відстань від берега наводиться по-різному: 80 морських миль (ТАСС, Суспільне), близько 70 миль або 130 км (Al Jazeera) і 150 км від міста Бяла (DW). У тексті Суспільного про двох загиблих і 11 врятованих із посиланням на МВС Румунії, вочевидь, змішано дані з інцидентом 5 жовтня біля узбережжя Румунії.",
+   "ru": "ТАСС із посиланням на болгарський портал maritime.bg повідомляє, що «невстановлені безпілотники» уразили два торговельні судна приблизно за 80 морських миль від узбережжя Болгарії: Alfa Watan під прапором Того затонуло, на судні Able під прапором Палау почалася пожежа, вісімнадцять членів екіпажу взято на борт болгарського порома.",
+   "ua": "Суспільне пише про атаку на Alfa Watan і Able за 80 миль від узбережжя Болгарії та про затоплення Alfa Watan. Зеленський, за даними Суспільного та Української правди, заявив, що Сили оборони України жодних операцій у цьому районі не проводили і що атака — продовження спроб Росії зробити західну частину Чорного моря непридатною для судноплавства. Українська правда також цитує міністра оборони Болгарії Дімітара Стоянова: поки що не можна сказати, українськими чи російськими були дрони. Наступного дня, за даними Суспільного, болгарський віцеадмірал Румен Ніколов повідомив про припинення пошуків: слідів моряків із затонулого судна немає. Українська правда пише, що Єврокомісія закликала Росію припинити атаки на торговельні судна в Чорному морі.",
+   "ind": "Al Jazeera цитує прем’єр-міністра Болгарії Румена Радева, який назвав атаку морськими і повітряними дронами близько 3:00 в економічній зоні країни «абсолютно неприйнятною». DW із посиланням на Радева пише, що Alfa Watan затонуло, а його екіпаж вважається зниклим безвісти. Kyiv Independent додає, що того ж дня російський дрон, за словами голови Одеської ОВА Олега Кіпера, уразив судно під прапором Маршаллових Островів, загинув член екіпажу. Наступного дня Al Jazeera повідомила, що болгарська влада завершила пошуки зниклих моряків, не знайшовши тих, хто вижив."
+  },
+  "en": {
+   "t": "Drone strike on two merchant ships in Bulgaria's exclusive economic zone",
+   "p": "Black Sea off the Bulgarian coast",
+   "d": "The main discrepancy is over whose drones they were: Zelensky blames Russia and denies Ukrainian involvement, Bulgaria's defence minister says the drones' origin has not been established, TASS calls them \"unidentified\", and the European Commission, according to Ukrainska Pravda, calls specifically on Russia to stop the attacks. The distance from the shore is given differently: 80 nautical miles (TASS, Suspilne), about 70 miles or 130 km (Al Jazeera) and 150 km from the town of Byala (DW). Suspilne's text about two dead and 11 rescued, citing Romania's interior ministry, appears to mix in data from the 5 October incident off the Romanian coast.",
+   "ru": "TASS, citing the Bulgarian portal maritime.bg, reports that \"unidentified drones\" struck two merchant vessels about 80 nautical miles off the coast of Bulgaria: the Togo-flagged Alfa Watan sank, a fire broke out on the Palau-flagged Able, and eighteen crew members were taken aboard a Bulgarian ferry.",
+   "ua": "Suspilne reports the attack on the Alfa Watan and the Able 80 miles off the Bulgarian coast and the sinking of the Alfa Watan. Zelensky, according to Suspilne and Ukrainska Pravda, said Ukraine's Defence Forces had carried out no operations in that area and that the attack continues Russia's attempts to make the western Black Sea unfit for shipping. Ukrainska Pravda also quotes Bulgarian Defence Minister Dimitar Stoyanov: it is not yet possible to say whether the drones were Ukrainian or Russian. The next day, according to Suspilne, Bulgarian Vice Admiral Rumen Nikolov announced the end of the search: there is no trace of the sailors from the sunken ship. Ukrainska Pravda writes that the European Commission called on Russia to stop attacking merchant ships in the Black Sea.",
+   "ind": "Al Jazeera quotes Bulgarian Prime Minister Rumen Radev, who called the attack by sea and aerial drones at around 3:00 in the country's economic zone \"absolutely unacceptable\". DW, citing Radev, writes that the Alfa Watan sank and its crew are considered missing. Kyiv Independent adds that on the same day a Russian drone, according to Odesa governor Oleh Kiper, hit a Marshall Islands-flagged vessel, killing a crew member. The next day Al Jazeera reported that the Bulgarian authorities had ended the search for the missing sailors without finding survivors."
+  }
+ },
+ {
+  "key": "1006-sochi-tanker-fire",
+  "ids": [
+   5335,
+   5336,
+   9219,
+   8407,
+   10164,
+   10248,
+   10261,
+   10270
+  ],
+  "title": "Пожар на танкере Aframax Rio у побережья Сочи после атаки безэкипажных катеров",
+  "place": "Черное море у Сочи (Сириус)",
+  "region": "krasnodar",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "ТАСС со ссылкой на Минтранс РФ сообщает, что танкер Aframax Rio под флагом Либерии с грузом нефти атаковали безэкипажные катера у черноморского побережья; экипаж спасен, пострадавших нет, на судне горит нефть. Глава «Сириуса» Дмитрий Плишкин заявил, что концентрация загрязняющих веществ остается в пределах нормы. 8 октября, по данным Интерфакса, Песков сообщил, что Путину доложено о ситуации и «с ликвидацией последствий все хорошо», а власти Сириуса и Сочи открыли пляжи.",
+   "quotes": [
+    {
+     "id": 5335,
+     "text": "Crew of the Aframax Rio tanker was rescued, with no casualties, the Russian transport ministry said."
+    },
+    {
+     "id": 10248,
+     "text": "С ликвидацией последствий все хорошо"
+    }
+   ]
+  },
+  "ua": {
+   "summary": null,
+   "quotes": []
+  },
+  "ind": {
+   "summary": "DW называет судно танкером «теневого флота» России, приводит слова Минтранса об атаке безэкипажными катерами и сообщает о временном закрытии пляжей «Сириуса». Kyiv Independent со ссылкой на «Новую газету Европа» и Telegram-каналы писал о пожаре до официальных заявлений.",
+   "quotes": [
+    {
+     "id": 9219,
+     "text": "Судно с грузом нефти, идущее под флагом Либерии, подверглось атаке безэкипажными катерами, сообщило министерство транспорта РФ по итогам заседания штаба по ликвидации последствий атаки на танкер \"Афрамакс Рио\" у побережья Черного моря."
+    }
+   ]
+  },
+  "diverge": "Российская и независимая группы совпадают в фактах (танкер под флагом Либерии, атака безэкипажных катеров, пожар). DW и Kyiv Independent называют его судном «теневого флота», в российских материалах такой характеристики нет. Ни одна группа не называет, кто атаковал танкер; материалов украинской группы в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Официальное заявление Минтранса совпадает с независимыми сообщениями.",
+  "uk": {
+   "t": "Пожежа на танкері Aframax Rio біля узбережжя Сочі після атаки безекіпажних катерів",
+   "p": "Чорне море біля Сочі (Сіріус)",
+   "d": "Російська і незалежна групи збігаються у фактах (танкер під прапором Ліберії, атака безекіпажних катерів, пожежа). DW і Kyiv Independent називають його судном «тіньового флоту», у російських матеріалах такої характеристики немає. Жодна група не називає, хто атакував танкер; матеріалів української групи в добірці немає.",
+   "ru": "ТАСС із посиланням на Мінтранс РФ повідомляє, що танкер Aframax Rio під прапором Ліберії з вантажем нафти атакували безекіпажні катери біля чорноморського узбережжя; екіпаж врятовано, постраждалих немає, на судні горить нафта. Голова «Сіріуса» Дмитро Плішкін заявив, що концентрація забруднювальних речовин залишається в межах норми. 8 жовтня, за даними Інтерфаксу, Пєсков повідомив, що Путіну доповіли про ситуацію і «з ліквідацією наслідків усе добре», а влада Сіріуса і Сочі відкрила пляжі.",
+   "ua": null,
+   "ind": "DW називає судно танкером «тіньового флоту» Росії, наводить слова Мінтрансу про атаку безекіпажними катерами і повідомляє про тимчасове закриття пляжів «Сіріуса». Kyiv Independent із посиланням на «Нову газету Європа» і Telegram-канали писав про пожежу до офіційних заяв."
+  },
+  "en": {
+   "t": "Fire on the tanker Aframax Rio off Sochi after an attack by uncrewed boats",
+   "p": "Black Sea off Sochi (Sirius)",
+   "d": "The Russian and independent groups agree on the facts (a Liberia-flagged tanker, an attack by uncrewed surface vessels, a fire). DW and Kyiv Independent call it a \"shadow fleet\" vessel; the Russian materials contain no such description. Neither group says who attacked the tanker; there are no materials from the Ukrainian group in the selection.",
+   "ru": "TASS, citing Russia's transport ministry, reports that the Liberia-flagged tanker Aframax Rio carrying oil was attacked by uncrewed surface vessels off the Black Sea coast; the crew was rescued, there were no casualties, and oil is burning on board. Sirius head Dmitry Plishkin said pollutant concentrations remain within permissible limits. On 8 October, according to Interfax, Peskov said Putin had been briefed and \"the clean-up is going well\", and the authorities in Sirius and Sochi reopened the beaches.",
+   "ua": null,
+   "ind": "DW calls the ship a Russian \"shadow fleet\" tanker, cites the transport ministry on the attack by uncrewed boats and reports the temporary closure of Sirius beaches. Kyiv Independent, citing Novaya Gazeta Europe and Telegram channels, reported the fire before official statements."
+  }
+ },
+ {
+  "key": "1006-zaporizhzhia-bridge",
+  "ids": [
+   7571,
+   8390,
+   10208,
+   9713
+  ],
+  "title": "Удар беспилотника по мосту через Днепр в Запорожье",
+  "place": "Запорожье",
+  "region": "zaporizhzhia",
+  "tags": [
+   "расхождение: характер объекта",
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "Интерфакс в сообщении от 7 октября приводит заявление Минобороны РФ: российская авиация нанесла удар по вантовому мосту, соединяющему левый берег Днепра с островом Хортица, который, по утверждению ведомства, ВСУ «активно использовали для переброски военных грузов и личного состава»; мост получил существенные повреждения.",
+   "quotes": [
+    {
+     "id": 10208,
+     "text": "Результатом авиаудара стало существенное повреждение вантового моста, соединяющего левый берег Днепра с островом Хортица на территории города Запорожье, который активно использовался ВСУ для переброски военных грузов и личного состава подразделений"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Українська правда со ссылкой на и. о. главы Запорожской ОВА Михаила Семикина сообщает об ударе по мосту через Днепр в Запорожье; движение перекрыто, пострадали пять человек, двое из них — работники Красного Креста, ехавшие на работу.",
+   "quotes": [
+    {
+     "id": 7571,
+     "text": "У Запоріжжі російська окупаційна армія завдала удару по мосту через Дніпро у Запоріжжі, рух мостом перекрили, п'ятеро людей постраждали ."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пишет, что российский дрон ночью 6 октября попал в один из мостов через Днепр; горсовет закрыл мост и не уточнил, какой именно мост пострадал. В регионе ранены пять человек, в том числе двое сотрудников Красного Креста.",
+   "quotes": [
+    {
+     "id": 8390,
+     "text": "The exact bridge struck was not disclosed by the city council."
+    }
+   ]
+  },
+  "diverge": "Украинская и независимая группы совпадают: удар по мосту, перекрытие движения, пять пострадавших, двое из Красного Креста; Kyiv Independent уточняет, что власти не назвали конкретный мост. Минобороны РФ называет мост на Хортицу и описывает его как военный путь снабжения, говоря об авиаударе, тогда как украинские источники пишут о дроне и о пострадавших мирных жителях. Об одном ли ударе идет речь, по материалам установить нельзя.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Совпадающие сведения местных властей.",
+  "uk": {
+   "t": "Удар безпілотника по мосту через Дніпро в Запоріжжі",
+   "p": "Запоріжжя",
+   "d": "Українська та незалежна групи збігаються: удар по мосту, перекриття руху, п’ятеро постраждалих, двоє з Червоного Хреста; Kyiv Independent уточнює, що влада не назвала конкретного мосту. Міноборони РФ називає міст на Хортицю і описує його як військовий шлях постачання, говорячи про авіаудар, тоді як українські джерела пишуть про дрон і постраждалих цивільних. Чи йдеться про один удар, за матеріалами встановити неможливо.",
+   "ru": "Інтерфакс у повідомленні від 7 жовтня наводить заяву Міноборони РФ: російська авіація завдала удару по вантовому мосту, що з’єднує лівий берег Дніпра з островом Хортиця, який, за твердженням відомства, ЗСУ «активно використовували для перекидання військових вантажів і особового складу»; міст отримав суттєві пошкодження.",
+   "ua": "Українська правда з посиланням на в. о. голови Запорізької ОВА Михайла Семікіна повідомляє про удар по мосту через Дніпро в Запоріжжі; рух перекрито, постраждали п’ятеро людей, двоє з них — працівники Червоного Хреста, які їхали на роботу.",
+   "ind": "Kyiv Independent пише, що російський дрон уночі 6 жовтня влучив в один із мостів через Дніпро; міська рада закрила міст і не уточнила, який саме міст постраждав. У регіоні поранено п’ятьох людей, зокрема двох співробітників Червоного Хреста."
+  },
+  "en": {
+   "t": "Drone strike on a bridge over the Dnipro in Zaporizhzhia",
+   "p": "Zaporizhzhia",
+   "d": "The Ukrainian and independent groups agree: a strike on a bridge, traffic closed, five injured, two of them Red Cross staff; Kyiv Independent notes that the authorities did not name the bridge. The Russian Defence Ministry names the Khortytsia bridge and describes it as a military supply route, speaking of an air strike, while Ukrainian sources write of a drone and injured civilians. Whether this is the same strike cannot be established from the materials.",
+   "ru": "Interfax, in a report dated 7 October, cites the Russian Defence Ministry: Russian aircraft struck the cable-stayed bridge linking the left bank of the Dnipro with Khortytsia island, which, the ministry claims, the Ukrainian army \"actively used to move military cargo and personnel\"; the bridge was seriously damaged.",
+   "ua": "Ukrainska Pravda, citing acting Zaporizhzhia governor Mykhailo Semikin, reports a strike on a bridge over the Dnipro in Zaporizhzhia; traffic was closed and five people were injured, two of them Red Cross workers on their way to work.",
+   "ind": "Kyiv Independent writes that a Russian drone hit one of the bridges over the Dnipro overnight on 6 October; the city council closed the bridge and did not say which bridge was hit. Five people in the region were injured, including two Red Cross staff."
+  }
+ },
+ {
+  "key": "1006-night-attack-ukraine",
+  "ids": [
+   6391,
+   4280,
+   6734,
+   7576,
+   9196,
+   10102,
+   10103,
+   10119,
+   10150,
+   10151,
+   9714
+  ],
+  "title": "Ночная атака 6 октября: Минобороны РФ — удары по логистике и портам, ВСУ — 137 дронов",
+  "place": "Украина, Одесская область",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: характер объектов"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ, по данным РИА Новости, заявило, что ночью беспилотниками нанесены удары по логистическим центрам, транспортной и портовой инфраструктуре Украины и судам, «задействованным в интересах ВСУ»; в Одесской области, по словам ведомства, поражены склад ракетно-артиллерийского вооружения в Ильичевке и сухогруз в порту Черноморск. Интерфакс также приводит заявления Минобороны о поражении причальной инфраструктуры порта Измаил, а днем — танкера с горючим в порту Южный и стоянки грузовиков у села Маяки; за сутки, по данным ведомства, сбиты 17 крылатых ракет «Фламинго» и 1750 беспилотников.",
+   "quotes": [
+    {
+     "id": 4280,
+     "text": "Вооруженные силы РФ ночью нанесли удары беспилотниками по логистическим центрам, транспортной и портовой инфраструктуре Украины, а также морским судам, задействованным в интересах ВСУ, сообщили в Минобороны России."
+    },
+    {
+     "id": 10102,
+     "text": "В порту Измаил (поражены) объекты причальной инфраструктуры, используемой для разгрузки и хранения военных г"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Воздушные силы ВСУ, по данным Суспільне и Українська правда, сообщили, что в ночь на 6 октября Россия атаковала 137 ударными беспилотниками, 49 из них реактивные; 114 сбиты или подавлены, попадания зафиксированы на 17 локациях.",
+   "quotes": [
+    {
+     "id": 7576,
+     "text": "У ніч на 6 жовтня Росія атакувала 137 ударними БпЛА, протиповітряна оборона знешкодила 114 ворожих дронів."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW пересказывает данные Воздушных сил ВСУ: 137 беспилотников, в том числе Shahed, «Гербера», «Бандероль» и имитаторы «Пародия», 114 сбиты или подавлены, есть раненые и повреждения инфраструктуры в нескольких регионах.",
+   "quotes": [
+    {
+     "id": 9196,
+     "text": "По данным Воздушных сил ВСУ , всего Россия запустила 137 ударных БПЛА , в том числе беспилотники Shahed , \"Гербера\", \"Бандероль\"/\"Дань-Т\" и аппараты-имитаторы \"Пародия\"."
+    }
+   ]
+  },
+  "diverge": "Российская группа называет цели военными или используемыми ВСУ, но не приводит числа запущенных дронов; украинская и независимая группы приводят число дронов (137, сбито 114) и попаданий (17 локаций), но не перечисляют, какие объекты поражены. Независимого подтверждения характера целей нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Разная детализация одной ночи.",
+  "uk": {
+   "t": "Нічна атака 6 жовтня: Міноборони РФ — удари по логістиці та портах, ЗСУ — 137 дронів",
+   "p": "Україна, Одеська область",
+   "d": "Російська група називає цілі військовими або такими, що використовуються ЗСУ, але не наводить кількості запущених дронів; українська і незалежна групи наводять кількість дронів (137, збито 114) і влучань (17 локацій), але не перелічують, які об’єкти уражено. Незалежного підтвердження характеру цілей немає.",
+   "ru": "Міноборони РФ, за даними РІА Новини, заявило, що вночі безпілотниками завдано ударів по логістичних центрах, транспортній і портовій інфраструктурі України та суднах, «задіяних в інтересах ЗСУ»; в Одеській області, за словами відомства, уражено склад ракетно-артилерійського озброєння в Іллічівці та суховантаж у порту Чорноморськ. Інтерфакс також наводить заяви Міноборони про ураження причальної інфраструктури порту Ізмаїл, а вдень — танкера з пальним у порту Південний і стоянки вантажівок біля села Маяки; за добу, за даними відомства, збито 17 крилатих ракет «Фламінго» і 1750 безпілотників.",
+   "ua": "Повітряні сили ЗСУ, за даними Суспільного та Української правди, повідомили, що в ніч на 6 жовтня Росія атакувала 137 ударними безпілотниками, 49 із них реактивні; 114 збито або подавлено, влучання зафіксовано на 17 локаціях.",
+   "ind": "DW переказує дані Повітряних сил ЗСУ: 137 безпілотників, зокрема Shahed, «Гербера», «Бандероль» та імітатори «Пародія», 114 збито або подавлено, є поранені й пошкодження інфраструктури в кількох регіонах."
+  },
+  "en": {
+   "t": "Overnight attack of 6 October: Russian MoD cites strikes on logistics and ports, Ukraine reports 137 drones",
+   "p": "Ukraine, Odesa region",
+   "d": "The Russian group calls the targets military or used by the Ukrainian armed forces but gives no number of drones launched; the Ukrainian and independent groups give the number of drones (137, 114 downed) and hits (17 locations) but do not list which facilities were hit. There is no independent confirmation of the nature of the targets.",
+   "ru": "The Russian Defense Ministry, according to RIA Novosti, said drones struck logistics centres, transport and port infrastructure in Ukraine and vessels \"used in the interests of the Ukrainian armed forces\" overnight; in Odesa region, the ministry said, a missile and artillery weapons depot in Illichivka and a dry cargo ship in the port of Chornomorsk were hit. Interfax also cites Defence Ministry claims of hitting berth infrastructure in the port of Izmail and, during the day, a fuel tanker in the port of Pivdennyi and a lorry park near the village of Maiaky; according to the ministry, 17 Flamingo cruise missiles and 1750 drones were shot down in a day.",
+   "ua": "Ukraine's Air Force, according to Suspilne and Ukrainska Pravda, said Russia attacked with 137 attack drones overnight into 6 October, 49 of them jet-powered; 114 were shot down or suppressed and hits were recorded at 17 locations.",
+   "ind": "DW relays Ukrainian Air Force data: 137 drones, including Shahed, Gerbera, Banderol and Parodiya decoys, 114 shot down or suppressed, with people injured and infrastructure damaged in several regions."
+  }
+ },
+ {
+  "key": "1006-golubkovo-claim",
+  "ids": [
+   6395,
+   5278,
+   10118
+  ],
+  "title": "Минобороны РФ заявило о взятии Голубкова в Запорожской области",
+  "place": "Голубково",
+  "region": "zaporizhzhia",
+  "tags": [
+   "одна сторона освещает",
+   "расхождение: кто контролирует населённый пункт"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ в Telegram и в изложении ТАСС заявило, что подразделения группировки «Восток» «освободили» населенный пункт Голубково Запорожской области, продолжая «продвижение вглубь обороны противника».",
+   "quotes": [
+    {
+     "id": 6395,
+     "text": "Подразделения группировки войск «Восток» освободили населенный пункт Голубково Запорожской области."
+    }
+   ]
+  },
+  "ua": {
+   "summary": null,
+   "quotes": []
+  },
+  "ind": {
+   "summary": null,
+   "quotes": []
+  },
+  "diverge": "Заявление о взятии Голубкова исходит только от Минобороны РФ; подтверждения или опровержения украинской стороны и независимых источников в подборке нет, поэтому контроль над населенным пунктом не установлен.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Короткое официальное заявление.",
+  "uk": {
+   "t": "Міноборони РФ заявило про захоплення Голубкового в Запорізькій області",
+   "p": "Голубкове",
+   "d": "Заява про захоплення Голубкового походить лише від Міноборони РФ; підтвердження чи спростування української сторони та незалежних джерел у добірці немає, тому контроль над населеним пунктом не встановлено.",
+   "ru": "Міноборони РФ у Telegram і у викладі ТАСС заявило, що підрозділи угруповання «Восток» «звільнили» населений пункт Голубкове Запорізької області, продовжуючи «просування вглиб оборони противника».",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Russian Defense Ministry claims capture of Holubkove in Zaporizhzhia region",
+   "p": "Holubkove",
+   "d": "The claim that Holubkove has been taken comes only from the Russian Defense Ministry; the selection contains no confirmation or denial from the Ukrainian side or independent sources, so control of the settlement is not established.",
+   "ru": "The Russian Defense Ministry, on Telegram and as reported by TASS, said units of the East group of forces had \"liberated\" the settlement of Holubkove in Zaporizhzhia region while continuing to \"advance deep into the enemy's defences\".",
+   "ua": null,
+   "ind": null
+  }
+ },
+ {
+  "key": "1006-data-centers-strikes",
+  "ids": [
+   5247,
+   5251,
+   5259,
+   6393
+  ],
+  "title": "Минобороны РФ заявило об ударах по дата-центрам на Украине",
+  "place": "Киев и другие города",
+  "region": "kyiv",
+  "tags": [
+   "одна сторона освещает",
+   "не проверено"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ сообщило, что расчеты дронов «Герань» бригады «Варяг» поразили центры обработки данных «Парковый», Ukrtelecom, «Гига» и «Подольский», чтобы снизить коммуникационные возможности противника и нарушить управление войсками; ТАСС пишет о четырех дата-центрах. ТАСС также сообщает, что киевский дата-центр Omega Telecom объявил о прекращении работы из-за повреждений.",
+   "quotes": [
+    {
+     "id": 6393,
+     "text": "Под ударом оказались ЦОДы «Парковый», Ukrtelecom, «Гига» и «Подольский»."
+    },
+    {
+     "id": 5259,
+     "text": "The Omega Telecom data center in Kiev has suspended operations due to damage, the data center said on its Facebook page (banned in Russia; owned by Meta, designated as extremist in Russia)."
+    }
+   ]
+  },
+  "ua": {
+   "summary": null,
+   "quotes": []
+  },
+  "ind": {
+   "summary": null,
+   "quotes": []
+  },
+  "diverge": "Все сведения — из российских источников (Минобороны РФ и ТАСС, который ссылается также на заявление самого дата-центра Omega Telecom). Подтверждения ударов по названным дата-центрам и их военного значения от украинской стороны или независимых источников в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Согласованные российские сообщения.",
+  "uk": {
+   "t": "Міноборони РФ заявило про удари по дата-центрах в Україні",
+   "p": "Київ та інші міста",
+   "d": "Усі відомості — з російських джерел (Міноборони РФ і ТАСС, який посилається також на заяву самого дата-центру Omega Telecom). Підтвердження ударів по названих дата-центрах і їхнього військового значення від української сторони чи незалежних джерел у добірці немає.",
+   "ru": "Міноборони РФ повідомило, що розрахунки дронів «Герань» бригади «Варяг» уразили центри обробки даних «Парковий», Ukrtelecom, «Гіга» і «Подільський», щоб знизити комунікаційні можливості противника й порушити управління військами; ТАСС пише про чотири дата-центри. ТАСС також повідомляє, що київський дата-центр Omega Telecom оголосив про припинення роботи через пошкодження.",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Russian Defense Ministry claims strikes on data centres in Ukraine",
+   "p": "Kyiv and other cities",
+   "d": "All information comes from Russian sources (the Defense Ministry and TASS, which also cites a statement by the Omega Telecom data centre itself). The selection contains no confirmation of strikes on the named data centres or of their military significance from the Ukrainian side or independent sources.",
+   "ru": "The Russian Defense Ministry said Geran drone crews of the Varyag brigade hit the Parkovyi, Ukrtelecom, Giga and Podilskyi data centres in order to reduce the enemy's communications capabilities and disrupt troop control; TASS writes of four data centres. TASS also reports that the Kyiv data centre Omega Telecom announced it was ceasing operations because of damage.",
+   "ua": null,
+   "ind": null
+  }
+ },
+ {
+  "key": "1006-south-korea-pow-apology",
+  "ids": [
+   7585,
+   8396,
+   9202,
+   9720
+  ],
+  "title": "Южная Корея сочла недостаточными извинения Украины из-за раскрытия передачи пленных из КНДР",
+  "place": "Сеул / Киев",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": null,
+   "quotes": []
+  },
+  "ua": {
+   "summary": "Українська правда со ссылкой на Yonhap цитирует министра иностранных дел Южной Кореи Чо Хёна: Сеул получил от Украины сообщение с извинениями за обнародование информации о передаче двух северокорейских военнопленных, но извинения не оправдали ожиданий.",
+   "quotes": [
+    {
+     "id": 7585,
+     "text": "Міністр закордонних справ Південної Кореї Чо Хьон заявив, що його країна отримала від України повідомлення з вибаченнями за оприлюднення інформації про передачу Сеулу двох північнокорейських військовополонених, додавши, що ці вибачення не виправдали очікувань Сеула."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent и DW передают те же слова Чо Хёна о письме главы МИД Украины Андрея Сибиги; DW пишет, что Сеул обдумывает ответные меры вплоть до отзыва посла.",
+   "quotes": [
+    {
+     "id": 8396,
+     "text": "Cho said the apology was among the messages he received from Ukraine's Foreign Minister Andrii Sybiha."
+    }
+   ]
+  },
+  "diverge": "Украинская и независимая группы одинаково излагают заявление министра Южной Кореи; возможный отзыв посла выносят в заголовок DW и Kyiv Independent. Материалов российской группы в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Одно заявление, переданное одинаково.",
+  "uk": {
+   "t": "Південна Корея визнала недостатніми вибачення України через оприлюднення передачі полонених із КНДР",
+   "p": "Сеул / Київ",
+   "d": "Українська і незалежна групи однаково викладають заяву міністра Південної Кореї; можливе відкликання посла виносять у заголовок DW і Kyiv Independent. Матеріалів російської групи в добірці немає.",
+   "ru": null,
+   "ua": "Українська правда з посиланням на Yonhap цитує міністра закордонних справ Південної Кореї Чо Хьона: Сеул отримав від України повідомлення з вибаченнями за оприлюднення інформації про передачу двох північнокорейських військовополонених, але вибачення не виправдали очікувань.",
+   "ind": "Kyiv Independent і DW передають ті самі слова Чо Хьона про лист очільника МЗС України Андрія Сибіги; DW пише, що Сеул обмірковує відповідні заходи аж до відкликання посла."
+  },
+  "en": {
+   "t": "South Korea calls Ukraine's apology over disclosure of North Korean POW transfer insufficient",
+   "p": "Seoul / Kyiv",
+   "d": "The Ukrainian and independent groups present the South Korean minister's statement in the same way; DW and Kyiv Independent headline the possible recall of the ambassador. There are no materials from the Russian group in the selection.",
+   "ru": null,
+   "ua": "Ukrainska Pravda, citing Yonhap, quotes South Korean Foreign Minister Cho Hyun: Seoul received a message of apology from Ukraine for disclosing information about the transfer of two North Korean prisoners of war, but the apology fell short of expectations.",
+   "ind": "Kyiv Independent and DW relay the same remarks by Cho about the letter from Ukrainian Foreign Minister Andrii Sybiha; DW writes that Seoul is considering responses up to recalling its ambassador."
+  }
+ },
+ {
+  "key": "1006-sweden-patriot-poland",
+  "ids": [
+   6773,
+   9207,
+   10146
+  ],
+  "title": "Швеция разместит Patriot в Польше для защиты логистического узла помощи Украине",
+  "place": "Жешув, Польша",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": "Интерфакс со ссылкой на министра обороны Польши Владислава Косиняка-Камыша сообщает, что Швеция направит в Польшу комплексы Patriot и возьмет на себя защиту логистического центра НАТО в Жешуве; в заголовке агентство называет его хабом, «снабжающим ВСУ».",
+   "quotes": [
+    {
+     "id": 10146,
+     "text": "Шведы возьмут на себя защиту логистического центра НАТО в Жешуве"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Суспільне со ссылкой на пресс-релиз Вооруженных сил Швеции сообщает, что страна впервые развернет комплекс Patriot в рамках миссии НАТО — для защиты логистического центра на юго-востоке Польши, через который идет военная и гражданская помощь Украине.",
+   "quotes": [
+    {
+     "id": 6773,
+     "text": "Зазначається, що країна вперше розгорне зенітно-ракетну систему Patriot в рамках місії НАТО."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW со ссылкой на премьер-министра Швеции Ульфа Кристерссона уточняет, что речь идет о хабе в Жешуве и что Швеция направит туда около 100 военнослужащих подразделения ПВО из Хальмстада.",
+   "quotes": [
+    {
+     "id": 9207,
+     "text": "Кроме того, Швеция направит в Жешув около 100 военнослужащих из подразделения ПВО, дислоцированного в Хальмстаде."
+    }
+   ]
+  },
+  "diverge": "Все три группы совпадают в главном: Швеция направляет Patriot для защиты логистического хаба в Жешуве. DW добавляет численность контингента; Интерфакс в заголовке подчеркивает, что хаб снабжает ВСУ.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Официальные заявления Швеции.",
+  "uk": {
+   "t": "Швеція розмістить Patriot у Польщі для захисту логістичного вузла допомоги Україні",
+   "p": "Жешув, Польща",
+   "d": "Усі три групи збігаються в головному: Швеція направляє Patriot для захисту логістичного хабу в Жешуві. DW додає чисельність контингенту; Інтерфакс у заголовку наголошує, що хаб постачає ЗСУ.",
+   "ru": "Інтерфакс із посиланням на міністра оборони Польщі Владислава Косіняка-Камиша повідомляє, що Швеція направить до Польщі комплекси Patriot і візьме на себе захист логістичного центру НАТО в Жешуві; у заголовку агенція називає його хабом, що «постачає ЗСУ».",
+   "ua": "Суспільне з посиланням на пресреліз Збройних сил Швеції повідомляє, що країна вперше розгорне комплекс Patriot у межах місії НАТО — для захисту логістичного центру на південному сході Польщі, через який іде військова і цивільна допомога Україні.",
+   "ind": "DW із посиланням на прем’єр-міністра Швеції Ульфа Крістерссона уточнює, що йдеться про хаб у Жешуві і що Швеція направить туди близько 100 військовослужбовців підрозділу ППО з Гальмстада."
+  },
+  "en": {
+   "t": "Sweden to deploy Patriot in Poland to protect a logistics hub for aid to Ukraine",
+   "p": "Rzeszów, Poland",
+   "d": "All three groups agree on the main point: Sweden is sending Patriot systems to protect the logistics hub in Rzeszów. DW adds the size of the contingent; Interfax's headline stresses that the hub supplies the Ukrainian armed forces.",
+   "ru": "Interfax, citing Polish Defence Minister Władysław Kosiniak-Kamysz, reports that Sweden will send Patriot systems to Poland and take over protection of the NATO logistics centre in Rzeszów; in its headline the agency calls it a hub \"supplying the Ukrainian armed forces\".",
+   "ua": "Suspilne, citing a press release from the Swedish Armed Forces, reports that the country will for the first time deploy a Patriot system as part of a NATO mission — to protect a logistics centre in south-eastern Poland through which military and civilian aid flows to Ukraine.",
+   "ind": "DW, citing Swedish Prime Minister Ulf Kristersson, specifies that this is the hub in Rzeszów and that Sweden will send about 100 air-defence personnel from Halmstad."
+  }
+ },
+ {
+  "key": "1006-ex-bnd-chief-arrest",
+  "ids": [
+   6756,
+   9217
+  ],
+  "title": "В Германии задержан бывший глава BND Аугуст Ханнинг по подозрению в шпионаже",
+  "place": "Германия",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": null,
+   "quotes": []
+  },
+  "ua": {
+   "summary": "Суспільне со ссылкой на Федеральную прокуратуру ФРГ сообщает, что утром 6 октября в Нордвальде задержан 80-летний бывший глава внешней разведки Аугуст Ханнинг, а в Баварии — 64-летний бывший руководитель его бюро Манфред Д., работавший в ведомстве до весны 2026 года.",
+   "quotes": [
+    {
+     "id": 6756,
+     "text": "Зазначається, що слідчі Федерального управління кримінальної поліції (BKA) затримали 80-річного Ганнінга вранці 6 жовтня в його будинку в Нордвальді поблизу Мюнстера."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW называет арест беспрецедентным скандалом для BND: Ханнинг, возглавлявший службу с 1998 по 2005 год, задержан по подозрению в шпионаже и попытке госизмены; издание разбирает, что связывает его с Россией.",
+   "quotes": [
+    {
+     "id": 9217,
+     "text": "Федеральная прокуратура ФРГ сообщила во вторник, 6 октября, о задержании 80-летнего Аугуста Ханнинга (August Hanning), который возглавлял BND с 1998 по 2005 годы."
+    }
+   ]
+  },
+  "diverge": "Обе группы опираются на заявление Федеральной прокуратуры ФРГ и совпадают в фактах. Связь с Россией в подборке подробно разбирает только DW. Материалов российской группы в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Официальное заявление прокуратуры.",
+  "uk": {
+   "t": "У Німеччині затримано колишнього очільника BND Августа Ганнінга за підозрою у шпигунстві",
+   "p": "Німеччина",
+   "d": "Обидві групи спираються на заяву Федеральної прокуратури ФРН і збігаються у фактах. Зв’язок із Росією в добірці докладно розбирає лише DW. Матеріалів російської групи в добірці немає.",
+   "ru": null,
+   "ua": "Суспільне з посиланням на Федеральну прокуратуру ФРН повідомляє, що вранці 6 жовтня в Нордвальді затримано 80-річного колишнього очільника зовнішньої розвідки Августа Ганнінга, а в Баварії — 64-річного колишнього керівника його бюро Манфреда Д., який працював у відомстві до весни 2026 року.",
+   "ind": "DW називає арешт безпрецедентним скандалом для BND: Ганнінга, який очолював службу з 1998 по 2005 рік, затримано за підозрою у шпигунстві та спробі державної зради; видання розбирає, що пов’язує його з Росією."
+  },
+  "en": {
+   "t": "Former BND chief August Hanning detained in Germany on suspicion of espionage",
+   "p": "Germany",
+   "d": "Both groups rely on the statement by Germany's Federal Prosecutor and agree on the facts. Only DW examines the link to Russia in detail. There are no materials from the Russian group in the selection.",
+   "ru": null,
+   "ua": "Suspilne, citing Germany's Federal Prosecutor, reports that on the morning of 6 October the 80-year-old former head of foreign intelligence August Hanning was detained in Nordwalde, and in Bavaria the 64-year-old former head of his office, Manfred D., who worked at the agency until spring 2026.",
+   "ind": "DW calls the arrest an unprecedented scandal for the BND: Hanning, who headed the service from 1998 to 2005, was detained on suspicion of espionage and attempted treason; the outlet examines what links him to Russia."
+  }
+ },
+ {
+  "key": "1006-latvia-belarus-border",
+  "ids": [
+   6775,
+   8410
+  ],
+  "title": "Вооруженные сопровождающие мигрантов угрожали латвийским военным на границе с Беларусью",
+  "place": "Граница Латвии и Беларуси",
+  "region": "russia-other",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": null,
+   "quotes": []
+  },
+  "ua": {
+   "summary": "Суспільне со ссылкой на министра внутренних дел Латвии Яниса Домбраву пишет, что люди в масках проникли в Латвию из Беларуси и украли камеры видеонаблюдения; перед этим военные предотвратили попытку 20 мигрантов незаконно пересечь границу, а их сопровождающие на белорусской стороне были вооружены.",
+   "quotes": [
+    {
+     "id": 6775,
+     "text": "Міністр зауважив, що цей випадок перетину, на відміну від попередніх, був «особливо демонстративним та агресивним»."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent передает те же слова Домбравы: вооруженные сопровождающие 20 мигрантов угрожали латвийским солдатам, после чего другая группа ненадолго пересекла границу.",
+   "quotes": [
+    {
+     "id": 8410,
+     "text": "Armed individuals who escorted 20 migrants and attempted to help them illegally cross into Latvia from Belarus threatened Latvian soldiers before another group briefly crossed into the country, Latvian Interior Minister Janis Dombrava said Oct. 6."
+    }
+   ]
+  },
+  "diverge": "Обе группы опираются на одно заявление министра внутренних дел Латвии и совпадают. Белорусской или российской реакции, а также материалов российской группы в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Одно официальное заявление.",
+  "uk": {
+   "t": "Озброєні супровідники мігрантів погрожували латвійським військовим на кордоні з Білоруссю",
+   "p": "Кордон Латвії та Білорусі",
+   "d": "Обидві групи спираються на одну заяву міністра внутрішніх справ Латвії і збігаються. Білоруської чи російської реакції, а також матеріалів російської групи в добірці немає.",
+   "ru": null,
+   "ua": "Суспільне з посиланням на міністра внутрішніх справ Латвії Яніса Домбраву пише, що люди в масках проникли до Латвії з Білорусі та вкрали камери відеоспостереження; перед цим військові запобігли спробі 20 мігрантів незаконно перетнути кордон, а їхні супровідники на білоруському боці були озброєні.",
+   "ind": "Kyiv Independent передає ті самі слова Домбрави: озброєні супровідники 20 мігрантів погрожували латвійським солдатам, після чого інша група ненадовго перетнула кордон."
+  },
+  "en": {
+   "t": "Armed escorts of migrants threatened Latvian soldiers on the border with Belarus",
+   "p": "Latvia–Belarus border",
+   "d": "Both groups rely on a single statement by Latvia's interior minister and agree. There is no Belarusian or Russian reaction, and no materials from the Russian group, in the selection.",
+   "ru": null,
+   "ua": "Suspilne, citing Latvian Interior Minister Janis Dombrava, writes that masked people entered Latvia from Belarus and stole surveillance cameras; before that, soldiers had prevented an attempt by 20 migrants to cross the border illegally, and their escorts on the Belarusian side were armed.",
+   "ind": "Kyiv Independent relays the same remarks by Dombrava: armed escorts of 20 migrants threatened Latvian soldiers, after which another group briefly crossed the border."
+  }
+ },
+ {
+  "key": "1006-zelensky-mass-strike-warning",
+  "ids": [
+   6753,
+   7594,
+   8409,
+   9732,
+   9747
+  ],
+  "title": "Зеленский предупредил о подготовке Россией массированного удара",
+  "place": "Украина",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает",
+   "не проверено"
+  ],
+  "ru": {
+   "summary": null,
+   "quotes": []
+  },
+  "ua": {
+   "summary": "Суспільне и Українська правда цитируют Зеленского: по итогам селекторного совещания он сообщил, что разведка передала обновленную информацию о подготовке России к массированному удару, Украина готовит противодействие, а областные власти подготовили дополнительные логистические решения.",
+   "quotes": [
+    {
+     "id": 6753,
+     "text": "«Отримали сьогодні оновлену інформацію від розвідки щодо підготовки росіян до масованого удару. Готуємо протидію."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent передает предупреждение Зеленского и его призыв к гражданам реагировать на сигналы ракетной опасности.",
+   "quotes": [
+    {
+     "id": 8409,
+     "text": "\"Please, please, take care of yourself. Please respond to signals of missile danger,\" Zelensky wrote on Telegram."
+    }
+   ]
+  },
+  "diverge": "Все материалы передают одно заявление Зеленского со ссылкой на разведку; сроки и масштаб ожидаемого удара не называются, независимого подтверждения нет. Материалов российской группы в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Одно заявление.",
+  "uk": {
+   "t": "Зеленський попередив про підготовку Росією масованого удару",
+   "p": "Україна",
+   "d": "Усі матеріали передають одну заяву Зеленського з посиланням на розвідку; строки й масштаб очікуваного удару не називаються, незалежного підтвердження немає. Матеріалів російської групи в добірці немає.",
+   "ru": null,
+   "ua": "Суспільне і Українська правда цитують Зеленського: за підсумками селекторної наради він повідомив, що розвідка передала оновлену інформацію про підготовку Росії до масованого удару, Україна готує протидію, а обласна влада підготувала додаткові логістичні рішення.",
+   "ind": "Kyiv Independent передає попередження Зеленського і його заклик до громадян реагувати на сигнали ракетної небезпеки."
+  },
+  "en": {
+   "t": "Zelensky warns Russia is preparing a massive strike",
+   "p": "Ukraine",
+   "d": "All the materials relay a single statement by Zelensky citing intelligence; the timing and scale of the expected strike are not given and there is no independent confirmation. There are no materials from the Russian group in the selection.",
+   "ru": null,
+   "ua": "Suspilne and Ukrainska Pravda quote Zelensky: after a conference call he said intelligence had provided updated information about Russia preparing a massive strike, Ukraine is preparing countermeasures, and regional authorities have prepared additional logistics solutions.",
+   "ind": "Kyiv Independent relays Zelensky's warning and his call on citizens to respond to missile alerts."
+  }
+ },
+ {
+  "key": "1006-kryvyi-rih-hospital",
+  "ids": [
+   7582,
+   8393
+  ],
+  "title": "Удар по территории больницы в центре Кривого Рога",
+  "place": "Кривой Рог",
+  "region": "dnipro",
+  "tags": [
+   "расхождение: числа пострадавших",
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": null,
+   "quotes": []
+  },
+  "ua": {
+   "summary": "Українська правда со ссылкой на главу Днепропетровской ОВА Александра Ганжу и главу Совета обороны города Александра Вилкула сообщает, что 6 октября российские войска атаковали территорию больницы в центре Кривого Рога; ранены пять человек, в том числе двое работников больницы.",
+   "quotes": [
+    {
+     "id": 7582,
+     "text": "6 жовтня окупанти атакували територію лікарні в центрі Кривого Рогу, поранивши п'ятьох людей."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent со ссылкой на Вилкула пишет, что по больнице ударили ракетами «Бандероль», а Ганжа сообщил о четырех раненых, в том числе двух медиках.",
+   "quotes": [
+    {
+     "id": 8393,
+     "text": "In the city of Kryvyi Rih , Dnipropetrovsk Oblast, Russia attacked the hospital with Banderol missiles, chair of the City Defense Council, Oleksandr Vilkul, reported ."
+    }
+   ]
+  },
+  "diverge": "Группы расходятся в числе раненых: пять у Українська правда и четыре у Kyiv Independent (по более ранним данным Ганжи); оружие («Бандероль») называет только Kyiv Independent. Материалов российской группы об этом ударе в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Различие в числах, вероятно, из-за времени публикации.",
+  "uk": {
+   "t": "Удар по території лікарні в центрі Кривого Рогу",
+   "p": "Кривий Ріг",
+   "d": "Групи розходяться в кількості поранених: п’ятеро в Українській правді і четверо в Kyiv Independent (за ранішими даними Ганжі); зброю («Бандероль») називає лише Kyiv Independent. Матеріалів російської групи про цей удар у добірці немає.",
+   "ru": null,
+   "ua": "Українська правда з посиланням на голову Дніпропетровської ОВА Олександра Ганжу і голову Ради оборони міста Олександра Вілкула повідомляє, що 6 жовтня російські війська атакували територію лікарні в центрі Кривого Рогу; поранено п’ятьох людей, зокрема двох працівників лікарні.",
+   "ind": "Kyiv Independent із посиланням на Вілкула пише, що по лікарні вдарили ракетами «Бандероль», а Ганжа повідомив про чотирьох поранених, зокрема двох медиків."
+  },
+  "en": {
+   "t": "Strike on hospital grounds in central Kryvyi Rih",
+   "p": "Kryvyi Rih",
+   "d": "The groups differ on the number injured: five in Ukrainska Pravda and four in Kyiv Independent (based on earlier figures from Hanzha); only Kyiv Independent names the weapon (Banderol). There are no materials from the Russian group about this strike in the selection.",
+   "ru": null,
+   "ua": "Ukrainska Pravda, citing Dnipropetrovsk governor Oleksandr Hanzha and city defence council head Oleksandr Vilkul, reports that on 6 October Russian forces attacked the grounds of a hospital in central Kryvyi Rih; five people were injured, including two hospital workers.",
+   "ind": "Kyiv Independent, citing Vilkul, writes that the hospital was hit with Banderol missiles, while Hanzha reported four injured, including two medical workers."
+  }
+ },
+ {
+  "key": "1006-kyiv-northern-bridge-claim",
+  "ids": [
+   6400,
+   10137,
+   9201,
+   9779,
+   9790,
+   9742
+  ],
+  "title": "Минобороны РФ заявило о новом ударе по Северному мосту в Киеве; эксперты об уязвимости мостов",
+  "place": "Киев, Северный мост",
+  "region": "kyiv",
+  "tags": [
+   "расхождение: характер объекта"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ 6 октября опубликовало кадры и заявило, что расчеты ударных дронов бригады «Варяг» поразили Северный мост в Киеве, который, по утверждению ведомства, использовался «для переброски войск и снабжения ВСУ военными грузами». Интерфакс передает это заявление без комментариев.",
+   "quotes": [
+    {
+     "id": 6400,
+     "text": "Расчеты ударных БПЛА отдельной бригады «Варяг» поразили Северный мост в Киеве , использовавшийся для переброски войск и снабжения ВСУ военными грузами."
+    },
+    {
+     "id": 10137,
+     "text": "Минобороны России во вторник заявило о поражении ударными беспилотниками Северного моста в Киеве."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина на следующий день публикует интервью эксперта по транспортному планированию Дмитрия Беспалова: в Киеве на фоне регулярных атак, которые начали наносить ущерб мостам, рассматривают понтонные переправы; по словам эксперта, попасть в конкретное соединение моста «очень сложно даже для современного оружия». В тот же день РБК-Украина со ссылкой на КГГА сообщила, что участок Северного моста, поврежденный атакой 4 октября, полностью восстановлен.",
+   "quotes": [
+    {
+     "id": 9779,
+     "text": "На фоне регулярных вражеских атак, которые начали наносить ущерб мостам, в Киеве рассматривают возможность установки понтонных переправ."
+    },
+    {
+     "id": 9790,
+     "text": "попасть в конкретное соединение - где балка лежит на опоре - очень сложно даже для современного оружия"
+    },
+    {
+     "id": 9742,
+     "text": "В Киеве специалисты КП \"Киевавтодормост\" полностью восстановили участок Северного моста, который был поврежден в результате вражеской атаки 4 октября."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW пишет, что Россия несколько дней подряд атакует мосты через Днепр в Киеве и Запорожье — сначала Южный, затем Северный мост, — и приводит слова министра Николая Калашника о том, что по киевским мостам ежедневно проезжает около 600 тыс. автомобилей.",
+   "quotes": [
+    {
+     "id": 9201,
+     "text": "Россия несколько дней подряд атакует мосты через Днепр в Киеве и Запорожье."
+    }
+   ]
+  },
+  "diverge": "Минобороны РФ описывает Северный мост как военный путь снабжения; украинские и независимые источники говорят о нем как о ключевой части транспортной системы столицы, по которой ежедневно проезжают сотни тысяч машин. Когда именно был нанесен показанный Минобороны удар, в его сообщении не уточняется; об ударах по Северному мосту в предыдущие дни украинские СМИ сообщали ранее. Украинские власти в тот же день сообщили о полном восстановлении моста после атаки 4 октября.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Дата удара, показанного Минобороны РФ, не указана.",
+  "uk": {
+   "t": "Міноборони РФ заявило про новий удар по Північному мосту в Києві; експерти про вразливість мостів",
+   "p": "Київ, Північний міст",
+   "d": "Міноборони РФ описує Північний міст як військовий шлях постачання; українські та незалежні джерела говорять про нього як про ключову частину транспортної системи столиці, якою щодня проїжджають сотні тисяч машин. Коли саме було завдано показаного Міноборони удару, у його повідомленні не уточнюється; про удари по Північному мосту в попередні дні українські ЗМІ повідомляли раніше. Українська влада того ж дня повідомила про повне відновлення мосту після атаки 4 жовтня.",
+   "ru": "Міноборони РФ 6 жовтня оприлюднило кадри і заявило, що розрахунки ударних дронів бригади «Варяг» уразили Північний міст у Києві, який, за твердженням відомства, використовувався «для перекидання військ і постачання ЗСУ військовими вантажами». Інтерфакс передає цю заяву без коментарів.",
+   "ua": "РБК-Україна наступного дня публікує інтерв’ю експерта з транспортного планування Дмитра Беспалова: у Києві на тлі регулярних атак, які почали завдавати шкоди мостам, розглядають понтонні переправи; за словами експерта, влучити в конкретне з’єднання мосту «дуже складно навіть для сучасної зброї». Того ж дня РБК-Україна з посиланням на КМДА повідомила, що ділянку Північного мосту, пошкоджену атакою 4 жовтня, повністю відновлено.",
+   "ind": "DW пише, що Росія кілька днів поспіль атакує мости через Дніпро в Києві та Запоріжжі — спочатку Південний, потім Північний міст, — і наводить слова міністра Миколи Калашника про те, що київськими мостами щодня проїжджає близько 600 тис. автомобілів."
+  },
+  "en": {
+   "t": "Russian Defence Ministry claims new strike on Kyiv's Northern Bridge; experts on bridge vulnerability",
+   "p": "Kyiv, Northern Bridge",
+   "d": "The Russian Defence Ministry describes the Northern Bridge as a military supply route; Ukrainian and independent sources describe it as a key part of the capital's transport system used by hundreds of thousands of vehicles a day. The ministry's statement does not say when the strike it showed took place; Ukrainian media had earlier reported strikes on the Northern Bridge in the preceding days. Ukrainian authorities reported the same day that the bridge had been fully restored after the 4 October attack.",
+   "ru": "On 6 October the Russian Defence Ministry published footage and said strike-drone crews of the Varyag brigade had hit the Northern Bridge in Kyiv, which, it claims, was used \"to move troops and supply the Ukrainian armed forces with military cargo\". Interfax relays the statement without comment.",
+   "ua": "The next day RBC-Ukraine publishes an interview with transport planning expert Dmytro Bespalov: amid regular attacks that have started to damage bridges, Kyiv is considering pontoon crossings; according to the expert, hitting a specific joint of a bridge is \"very difficult even for modern weapons\". The same day RBC-Ukraine, citing the Kyiv city administration, reported that the section of the Northern Bridge damaged in the 4 October attack had been fully restored.",
+   "ind": "DW writes that Russia has been attacking bridges across the Dnipro in Kyiv and Zaporizhzhia for several days in a row, first the Southern and then the Northern Bridge, and quotes minister Mykola Kalashnyk as saying about 600 thousand vehicles cross Kyiv's bridges every day."
+  }
+ },
+ {
+  "key": "1006-sumy-drone-strikes",
+  "ids": [
+   9725,
+   7587,
+   9748,
+   7618
+  ],
+  "title": "Удары дронов по Сумам: попадание в многоэтажку и удар у торгового центра",
+  "place": "Сумы",
+  "region": "sumy",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Утром 6 октября, по данным ГСЧС Сумщины и главы городской военной администрации Сергея Кривошеенко, реактивный дрон попал в 10-этажный жилой дом в Заречном районе на уровне 4-го этажа; пострадали двое, среди них 16-летний подросток. Вечером, по словам Кривошеенко и мэра Артема Кобзаря, FPV-дрон на оптоволокне ударил возле торгового центра в Ковпаковском районе: один человек погиб, двое ранены.",
+   "quotes": [
+    {
+     "id": 7587,
+     "text": "Одне із влучань сталося на рівні 4-го поверху в 10-ти поверховому житловому будинку"
+    },
+    {
+     "id": 7618,
+     "text": "Удару російського FPV на оптоволокні завдано поблизу торговельного центру у Ковпаківському районі"
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Українські источники расходятся в типе оружия при вечернем ударе: Українська правда со ссылкой на Кривошеенко пишет об FPV-дроне на оптоволокне, РБК-Украина со ссылкой на Кобзаря — об «ударном дроне». Российские и независимые источники в выборке эти удары не освещают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Удари дронів по Сумах: влучання в багатоповерхівку та удар біля торговельного центру",
+   "p": "Суми",
+   "d": "Українські джерела розходяться щодо типу зброї під час вечірнього удару: Українська правда з посиланням на Кривошеєнка пише про FPV-дрон на оптоволокні, РБК-Україна з посиланням на Кобзаря — про «ударний дрон». Російські та незалежні джерела у вибірці ці удари не висвітлюють.",
+   "ru": null,
+   "ua": "Вранці 6 жовтня, за даними ДСНС Сумщини та начальника міської військової адміністрації Сергія Кривошеєнка, реактивний дрон влучив у 10-поверховий житловий будинок у Зарічному районі на рівні 4-го поверху; постраждали двоє, серед них 16-річний підліток. Увечері, за словами Кривошеєнка і мера Артема Кобзаря, FPV-дрон на оптоволокні вдарив біля торговельного центру в Ковпаківському районі: одна людина загинула, двоє поранені.",
+   "ind": null
+  },
+  "en": {
+   "t": "Drone strikes on Sumy: a high-rise hit and a strike near a shopping centre",
+   "p": "Sumy",
+   "d": "Ukrainian sources differ on the weapon used in the evening strike: Ukrainska Pravda, citing Kryvosheienko, writes of a fibre-optic FPV drone, RBC-Ukraine, citing Kobzar, of a \"strike drone\". Russian and independent sources in the sample do not cover these strikes.",
+   "ru": null,
+   "ua": "On the morning of 6 October, according to the Sumy emergency service and city military administration head Serhii Kryvosheienko, a jet-powered drone hit a 10-storey residential building in Zarichnyi district at the level of the 4th floor; two people were injured, including a 16-year-old. In the evening, according to Kryvosheienko and Mayor Artem Kobzar, a fibre-optic FPV drone struck near a shopping centre in Kovpakivskyi district, killing one person and injuring two.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1006-odesa-road-strike",
+  "ids": [
+   9734,
+   7597
+  ],
+  "title": "Удары по автодороге в Одесской области: пятеро пострадавших",
+  "place": "Одесская область",
+  "region": "odesa",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Глава Одесской ОВА Олег Кипер, по данным Українська правда и РБК-Украина, сообщил, что днем 6 октября Россия нанесла серию ударов по автодороге в области; повреждены грузовые и легковые автомобили, пострадали пять человек, двое госпитализированы, состояние одного крайне тяжелое.",
+   "quotes": [
+    {
+     "id": 7597,
+     "text": "Ворог завдав серію ударів по автодорозі на Одещині. Пошкоджено вантажні та легкові автомобілі."
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Оба украинских материала пересказывают одно сообщение Кипера; какая дорога пострадала, не уточняется. Минобороны РФ в тот же день, по данным Интерфакса, заявляло об ударе по стоянке грузовиков «с грузами для ВСУ» у села Маяки Одесской области, но связь этих сообщений в материалах не установлена.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Удари по автодорозі в Одеській області: п’ятеро постраждалих",
+   "p": "Одеська область",
+   "d": "Обидва українські матеріали переказують одне повідомлення Кіпера; яка дорога постраждала, не уточнюється. Міноборони РФ того ж дня, за даними Інтерфаксу, заявляло про удар по стоянці вантажівок «з вантажами для ЗСУ» біля села Маяки Одеської області, але зв’язок цих повідомлень у матеріалах не встановлено.",
+   "ru": null,
+   "ua": "Голова Одеської ОВА Олег Кіпер, за даними Української правди та РБК-Україна, повідомив, що вдень 6 жовтня Росія завдала серії ударів по автодорозі в області; пошкоджено вантажні й легкові автомобілі, постраждали п’ятеро людей, двоє госпіталізовані, стан одного вкрай важкий.",
+   "ind": null
+  },
+  "en": {
+   "t": "Strikes on a road in Odesa region: five injured",
+   "p": "Odesa Oblast",
+   "d": "Both Ukrainian reports retell a single statement by Kiper; which road was hit is not specified. The Russian Defence Ministry, according to Interfax, claimed the same day to have struck a lorry park \"with cargo for the Ukrainian armed forces\" near the village of Maiaky in Odesa region, but the materials do not establish a link between the reports.",
+   "ru": null,
+   "ua": "Odesa governor Oleh Kiper, according to Ukrainska Pravda and RBC-Ukraine, said that on the afternoon of 6 October Russia carried out a series of strikes on a road in the region, damaging lorries and cars; five people were injured, two were hospitalised, one in an extremely serious condition.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1006-poland-patriots-civil-defence",
+  "ids": [
+   6722,
+   7599,
+   8406
+  ],
+  "title": "Польша усиливает войска и ПВО у границы с Украиной и выделяет $26 млрд на гражданскую оборону",
+  "place": "Люблинское воеводство, Польша",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Суспільне со ссылкой на министра обороны Польши Владислава Косиняка-Камыша пишет, что Польша разворачивает Patriot и наращивает войска в Люблинском районе у границы с Украиной, в том числе создает 18-ю мотобригаду. Українська правда сообщает, что правительство Дональда Туска утверждает программу гражданской защиты на 2027–2031 годы на 102,4 млрд злотых (около $26 млрд).",
+   "quotes": [
+    {
+     "id": 6722,
+     "text": "Люблінський район перенасичений військами, але таких підрозділів буде більше"
+    },
+    {
+     "id": 7599,
+     "text": "Польський уряд 6 жовтня затвердить програму з фінансування цивільного захисту на суму 102,4 млрд злотих (близько $26 млрд) протягом 2027-2031 років"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent со ссылкой на Польское радио пишет, что батареи Patriot разместят в Люблинском регионе, граничащем с Украиной, чтобы успокоить жителей, а Туск объявил программу гражданской обороны стоимостью 102,4 млрд злотых ($26,4 млрд).",
+   "quotes": [
+    {
+     "id": 8406,
+     "text": "Poland will station Patriot air defense batteries in its Lublin region, bordering Ukraine, Defense Minister Wladyslaw Kosiniak-Kamysz announced on Oct. 5, according to Polish Radio."
+    }
+   ]
+  },
+  "diverge": "Украинские и независимые источники совпадают; Kyiv Independent приводит более точную сумму ($26,4 млрд). Российские источники в выборке эти решения не освещают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Польща посилює війська та ППО біля кордону з Україною і виділяє $26 млрд на цивільну оборону",
+   "p": "Люблінське воєводство, Польща",
+   "d": "Українські та незалежні джерела збігаються; Kyiv Independent наводить точнішу суму ($26,4 млрд). Російські джерела у вибірці ці рішення не висвітлюють.",
+   "ru": null,
+   "ua": "Суспільне з посиланням на міністра оборони Польщі Владислава Косіняка-Камиша пише, що Польща розгортає Patriot і нарощує війська в Люблінському районі біля кордону з Україною, зокрема створює 18-ту мотобригаду. Українська правда повідомляє, що уряд Дональда Туска затверджує програму цивільного захисту на 2027–2031 роки на 102,4 млрд злотих (близько $26 млрд).",
+   "ind": "Kyiv Independent з посиланням на Польське радіо пише, що батареї Patriot розмістять у Люблінському регіоні, який межує з Україною, щоб заспокоїти мешканців, а Туск оголосив програму цивільної оборони вартістю 102,4 млрд злотих ($26,4 млрд)."
+  },
+  "en": {
+   "t": "Poland boosts troops and air defence near the Ukrainian border and allocates $26 billion to civil defence",
+   "p": "Lublin Voivodeship, Poland",
+   "d": "Ukrainian and independent sources agree; Kyiv Independent gives a more precise figure ($26,4 billion). Russian sources in the sample do not cover these decisions.",
+   "ru": null,
+   "ua": "Suspilne, citing Polish Defence Minister Władysław Kosiniak-Kamysz, writes that Poland is deploying Patriot systems and building up troops in the Lublin area near the Ukrainian border, including forming the 18th motorised brigade. Ukrainska Pravda reports that Donald Tusk's government is approving a 2027–2031 civil protection programme worth 102,4 billion zlotys (about $26 billion).",
+   "ind": "Kyiv Independent, citing Polish Radio, writes that Patriot batteries will be stationed in the Lublin region bordering Ukraine to reassure residents, and that Tusk announced a civil defence programme worth 102,4 billion zlotys ($26,4 billion)."
+  }
+ },
+ {
+  "key": "1006-south-korea-fuel-russia",
+  "ids": [
+   9111,
+   6828
+  ],
+  "title": "The Guardian: топливо из Южной Кореи поставляется в Россию; Сеул это отрицает",
+  "place": "Южная Корея — Дальний Восток России",
+  "region": "russia-other",
+  "tags": [
+   "расхождение: формулировки",
+   "одна из групп не освещает"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "Суспільне со ссылкой на Yonhap цитирует представителя администрации президента Южной Кореи Кан Ю Чжон: попытка представителя Офиса президента Украины, сославшегося на статью The Guardian, изобразить Южную Корею помогающей смягчить топливный кризис в России «не соответствует действительности и неприемлема», поскольку ключевые детали сделок не проверены.",
+   "quotes": [
+    {
+     "id": 6828,
+     "text": "не відповідає дійсності та є неприйнятним"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "The Guardian по данным портовых записей и отслеживания судов пишет, что в июле и августе в южнокорейских портах на семь танкеров, совершивших 14 рейсов на Дальний Восток России, погрузили более 176 000 тонн топлива, в основном дизельного; три судна находятся под санкциями Великобритании и ЕС.",
+   "quotes": [
+    {
+     "id": 9111,
+     "text": "Fuel is being shipped from South Korea to Russia via sanctioned tankers as Moscow scrambles for supplies amid the war in Ukraine"
+    }
+   ]
+  },
+  "diverge": "The Guardian приводит данные о поставках; Сеул, отвечая украинскому чиновнику, сославшемуся на статью, называет такие выводы непроверенными и неприемлемыми. Российские источники в выборке тему не освещают.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Данные расследования и опровержение Сеула не сведены; происхождение топлива не проверено.",
+  "uk": {
+   "t": "The Guardian: пальне з Південної Кореї постачається до Росії; Сеул це заперечує",
+   "p": "Південна Корея — Далекий Схід Росії",
+   "d": "The Guardian наводить дані про постачання; Сеул, відповідаючи українському посадовцю, який послався на статтю, називає такі висновки неперевіреними й неприйнятними. Російські джерела у вибірці тему не висвітлюють.",
+   "ru": null,
+   "ua": "Суспільне з посиланням на Yonhap цитує речницю адміністрації президента Південної Кореї Кан Ю Чжон: спроба посадовця Офісу президента України, який послався на статтю The Guardian, зобразити Південну Корею такою, що допомагає пом’якшити паливну кризу в Росії, «не відповідає дійсності та є неприйнятною», оскільки ключові деталі угод не перевірено.",
+   "ind": "The Guardian за даними портових записів і відстеження суден пише, що в липні та серпні в південнокорейських портах на сім танкерів, які здійснили 14 рейсів на Далекий Схід Росії, завантажили понад 176 000 тонн пального, переважно дизельного; три судна перебувають під санкціями Великої Британії та ЄС."
+  },
+  "en": {
+   "t": "The Guardian: South Korean fuel is reaching Russia; Seoul denies it",
+   "p": "South Korea — Russian Far East",
+   "d": "The Guardian presents data on the shipments; Seoul, responding to a Ukrainian official who cited the article, calls such conclusions unverified and unacceptable. Russian sources in the sample do not cover the topic.",
+   "ru": null,
+   "ua": "Suspilne, citing Yonhap, quotes South Korean presidential spokeswoman Kang Yu-jung: the attempt by an official of Ukraine's Presidential Office, citing a Guardian article, to portray South Korea as helping ease Russia's fuel crisis \"is untrue and unacceptable\", since key details of the transactions have not been verified.",
+   "ind": "The Guardian, using port records and ship-tracking data, writes that in July and August more than 176 000 tonnes of fuel, mostly diesel, were loaded at South Korean ports onto seven tankers that made 14 voyages to Russia's Far East; three of the vessels are under UK and EU sanctions."
+  }
+ }
+]

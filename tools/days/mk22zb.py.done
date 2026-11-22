@@ -1,0 +1,56 @@
+import sys, glob, os
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 12:00: extensions with new ids 16597–16821 ----------------
+def noop(c): pass
+
+def rep(c, pairs):
+    for k, old, new in pairs:
+        d = c['diverge'] if k == 'ru' else c[k]['d']
+        assert old in d, (c['key'], k, old[:40])
+        if k == 'ru': c['diverge'] = d.replace(old, new)
+        else: c[k]['d'] = d.replace(old, new)
+
+def reps(c, side, pairs):
+    # pairs: (lang, old, new); lang 'ru' -> c[side]['summary'], 'uk'/'en' -> c[lang][side]
+    for lang, old, new in pairs:
+        s = c[side]['summary'] if lang == 'ru' else c[lang][side]
+        assert old in s, (c['key'], lang, old[:40])
+        if lang == 'ru': c[side]['summary'] = s.replace(old, new)
+        else: c[lang][side] = s.replace(old, new)
+
+@ext('1021-front-claims', [16760, 16602, 16627, 16807, 16684, 16690, 16812, 16654, 16604, 16605, 16606, 16608, 16609, 16611, 16808, 16655, 16623, 16696])
+def _(c):
+    add(c, 'ru', 'В сводке 22 октября Минобороны заявило, что группировка «Восток» «освободила» Мировку в Запорожской области: по данным ведомства, под контроль взят район обороны площадью более 10 квадратных километров, потери ВСУ составили до роты.',
+        'У зведенні 22 жовтня Міноборони заявило, що угруповання «Восток» «звільнило» Мирівку в Запорізькій області: за даними відомства, під контроль узято район оборони площею понад 10 квадратних кілометрів, втрати ЗСУ становили до роти.',
+        'In its 22 October summary the Defence Ministry claimed that the "Vostok" group had "liberated" Myrivka in Zaporizhzhia region: according to the ministry, a defence area of more than 10 square kilometres was taken and Ukrainian losses amounted to up to a company.',
+        [(16627, 'В ходе боев военнослужащие взяли под контроль район обороны общей площадью более 10 квадратных километров, включая территорию населенного пункта.')])
+    rep(c, [('ru', 'Российская сторона заявляет о взятии двух сел в Запорожской области; украинские сводки эти села не называют',
+                   'Российская сторона заявляет о взятии сел в Запорожской области, в том числе Мировки; украинские сводки эти села не называют'),
+            ('uk', 'Російська сторона заявляє про захоплення двох сіл у Запорізькій області; українські зведення ці села не називають',
+                   'Російська сторона заявляє про захоплення сіл у Запорізькій області, зокрема Мирівки; українські зведення ці села не називають')])
+    d = c['en']['d']
+    print('EN d:', d[:160])
+
+@ext('1017-kherson-air-strikes', [16766])
+def _(c):
+    reps(c, 'ua', [('ru', 'число раненых при этом ударе выросло до 44.', 'число раненых при этом ударе выросло до 44, а затем, по данным горадминистрации, — до 52.'),
+                   ('uk', 'кількість поранених унаслідок цього удару зросла до 44.', 'кількість поранених унаслідок цього удару зросла до 44, а згодом, за даними міськадміністрації, — до 52.'),
+                   ('en', 'the number injured in that strike has risen to 44.', 'the number injured in that strike rose to 44 and later, per the city administration, to 52.')])
+    c['ua']['quotes'].append(q(16766, 'кількість поранених через російський авіаудар по місту 17 жовтня зросла до 52'))
+
+@ext('1020-oslo-zelensky-witkoff-talks', [16799])
+def _(c):
+    add(c, 'ua', 'Позже РБК-Украина со ссылкой на The New York Times написало, что на закрытой встрече в Осло Уиткофф и Кушнер по поручению Трампа упрекнули Зеленского за ответы на критику американского президента; Зеленский, по данным источника газеты, возражал.',
+        'Пізніше РБК-Україна з посиланням на The New York Times написало, що на закритій зустрічі в Осло Віткофф і Кушнер за дорученням Трампа дорікнули Зеленському за відповіді на критику американського президента; Зеленський, за даними джерела газети, заперечував.',
+        'Later RBC-Ukraine, citing The New York Times, wrote that at the closed meeting in Oslo Witkoff and Kushner, on Trump\'s instructions, reproached Zelensky for his responses to the US president\'s criticism; according to the paper\'s source, Zelensky pushed back.',
+        [(16799, 'Спецпредставники Трампа не лише дорікнули Зеленському, а й заявили, що він, мовляв, розлютив главу Білого дому.')])
+
+ext('1021-putin-witkoff-trilateral-talks', [16603, 16624, 16806, 16814, 16757, 16656, 16813, 16618, 16704])(noop)
+ext('1022-mod-massive-strike-vpk-energy', [16821, 16804])(noop)
+ext('1022-nato-nspa-ukraine-procurement', [16792])(noop)
+ext('1021-poland-upa-year-dispute', [16795])(noop)
+ext('1022-lipetsk-moscow-drone-attack', [16725, 16643, 16819, 16667, 16691, 16699, 16650, 16820])(noop)
+
+files = sorted(os.path.basename(p) for p in glob.glob('/workspace/compare-site-v2/tools/days/out/c*.json'))
+apply(files)

@@ -1,0 +1,56 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+card('1016-patriot-shortage', [6134, 6160, 10909, 6150, 6186, 8155, 8906, 7265, 8191, 8624],
+ 'Washington Post: у Украины почти закончились ракеты Patriot; Зеленский: большинство PAC-2 и PAC-3 уходят на Ближний Восток', 'Украина, Вашингтон, Брюссель', 'ukraine-wide',
+ ['расхождение: оценка ситуации'],
+ S('ТАСС пересказывает Washington Post: на 7 октября у Украины оставалось лишь десять ракет Patriot, они израсходованы при отражении атак. Интерфакс со ссылкой на высокопоставленного офицера НАТО в той же газете пишет, что механизм PURL работает и перехватчики по-прежнему поставляются. ТАСС также цитирует CBS о нехватке противоракет у самих США до 2030 года и обозревателя The American Conservative, по мнению которого США не будут вооружать Украину в ущерб своей безопасности.',
+   (6134, 'As of October 7th, there were only ten missiles left; these were used up during the attacks.'),
+   (10909, 'Собеседник WP сказал, что PURL работает, боеприпасы для ПВО как ракет-перехватчиков для ЗРК Patriot по-прежнему поставляют.')),
+ S('Зеленский в Брюсселе подтвердил большой дефицит: большинство ракет PAC-2 и PAC-3 давно идет на Ближний Восток, Украина не в приоритете, но благодарна США за продажу и европейцам за финансирование через PURL. По его словам, у Европы есть ракеты, которых хватило бы Украине на зиму, и лидеры знают минимально необходимый «зимний пакет».',
+   (8906, 'Більшість ракет PAC-2 і PAC-3 уже тривалий час передається на Близький Схід.'),
+   (8191, 'Колеги з Європи зараз знають, яку кількість ракет до Patriot потрібно мінімально для зимового пакету')),
+ S('Kyiv Independent со ссылкой на Washington Post и CNN пишет, что запасы перехватчиков Patriot снова достигли критически низкого уровня на фоне усиления российских ударов по энергетике.',
+   (8624, 'Ukraine\'s supply of Patriot interceptor missiles has reached a critical low')),
+ 'Российские источники дополняют сообщение о дефиците тезисами о том, что США не будут вооружать Украину в ущерб себе; украинская сторона подчеркивает, что ракеты есть в Европе и вопрос в политическом решении.',
+ 'low', '', False,
+ ['Washington Post: в України майже закінчилися ракети Patriot; Зеленський: більшість PAC-2 і PAC-3 ідуть на Близький Схід', 'Україна, Вашингтон, Брюссель',
+  'Російські джерела доповнюють повідомлення про дефіцит тезами про те, що США не озброюватимуть Україну на шкоду собі; українська сторона наголошує, що ракети є в Європі і питання в політичному рішенні.',
+  'ТАСС переказує Washington Post: станом на 7 жовтня в України залишалося лише десять ракет Patriot, їх витрачено під час відбиття атак. Інтерфакс із посиланням на високопосадовця НАТО в тій самій газеті пише, що механізм PURL працює і перехоплювачі й далі постачаються. ТАСС також цитує CBS про нестачу протиракет у самих США до 2030 року і оглядача The American Conservative, на думку якого США не озброюватимуть Україну на шкоду своїй безпеці.',
+  'Зеленський у Брюсселі підтвердив великий дефіцит: більшість ракет PAC-2 і PAC-3 давно йде на Близький Схід, Україна не в пріоритеті, але вдячна США за продаж і європейцям за фінансування через PURL. За його словами, у Європи є ракети, яких Україні вистачило б на зиму, і лідери знають мінімально необхідний «зимовий пакет».',
+  'Kyiv Independent з посиланням на Washington Post і CNN пише, що запаси перехоплювачів Patriot знову досягли критично низького рівня на тлі посилення російських ударів по енергетиці.'],
+ ['Washington Post: Ukraine has almost run out of Patriot missiles; Zelensky: most PAC-2 and PAC-3 go to the Middle East', 'Ukraine, Washington, Brussels',
+  'Russian sources supplement the shortage report with claims that the US will not arm Ukraine at its own expense; the Ukrainian side stresses that the missiles exist in Europe and it is a matter of political will.',
+  'TASS relays the Washington Post: as of 7 October Ukraine had only ten Patriot missiles left, and they were used up repelling attacks. Interfax, citing a senior NATO officer in the same paper, writes that the PURL mechanism is working and interceptors are still being delivered. TASS also quotes CBS on the US\'s own interceptor shortage lasting until 2030 and a columnist for The American Conservative who says the US will not arm Ukraine at the expense of its own security.',
+  'In Brussels Zelensky confirmed a severe shortage: most PAC-2 and PAC-3 missiles have long been going to the Middle East and Ukraine is not a priority, but it is grateful to the US for selling them and to Europeans for funding them via PURL. He said Europe has enough missiles to get Ukraine through the winter and leaders know the minimum "winter package" needed.',
+  'Kyiv Independent, citing the Washington Post and CNN, writes that Patriot interceptor stocks have again reached critically low levels as Russia steps up strikes on energy.'])
+
+card('1016-jets-and-aid-pledges', [8644, 8950, 8946, 7280, 8208, 7282, 8210, 8621, 7231, 8629],
+ 'Бельгия обещает передать 10 F-16 в этом году, Зеленский ждет шведские Gripen; Швеция выделяет почти 45 млн евро, G7 — 260 млн евро на ремонт конфайнмента ЧАЭС', 'Брюссель', 'ukraine-wide',
+ ['одна из групп не освещает'],
+ None,
+ S('Премьер Бельгии Барт де Вевер пообещал передать Украине десять F-16 до конца года. Зеленский после встречи с Ульфом Кристерссоном заявил, что ожидает поставок Gripen в ближайшее время, они дополнят F-16 в борьбе с реактивными «шахедами». Швеция выделяет 500 млн крон, почти 45 млн евро, на энергетику и медицину, а страны G7 — 260 млн евро на срочный ремонт Нового безопасного конфайнмента Чернобыльской АЭС.',
+   (7280, 'Очікуємо на їхні поставки найближчим часом. Вони доповнять наші F-16, зокрема, у збитті реактивних шахедів'),
+   (8210, 'Швеція анонсувала новий пакет допомоги Україні на 500 млн крон – майже 45 млн євро.'),
+   (7231, 'Країни Великої сімки (G7) нададуть 260 мільйонів євро на терміновий ремонт Нового безпечного конфайнменту Чорнобильської АЕС')),
+ S('Kyiv Independent приводит слова де Вевера о десяти F-16 и сообщает, что польские боеприпасы для зенитных пушек помогли защищать Киев.',
+   (8644, 'Ukraine urgently needs operational fighter jets and we can make our contribution'),
+   (8629, 'Zelensky said Poland had provided ammunition used by Ukraine\'s anti-aircraft guns.')),
+ 'Российские источники в выборке эти обещания не освещают; украинские и независимые источники сообщают одни и те же цифры.',
+ 'low', '', False,
+ ['Бельгія обіцяє передати 10 F-16 цього року, Зеленський чекає на шведські Gripen; Швеція виділяє майже 45 млн євро, G7 — 260 млн євро на ремонт конфайнменту ЧАЕС', 'Брюссель',
+  'Російські джерела у вибірці ці обіцянки не висвітлюють; українські та незалежні джерела повідомляють ті самі цифри.',
+  None,
+  'Прем’єр Бельгії Барт де Вевер пообіцяв передати Україні десять F-16 до кінця року. Зеленський після зустрічі з Ульфом Крістерссоном заявив, що очікує на поставки Gripen найближчим часом, вони доповнять F-16 у боротьбі з реактивними «шахедами». Швеція виділяє 500 млн крон, майже 45 млн євро, на енергетику і медицину, а країни G7 — 260 млн євро на терміновий ремонт Нового безпечного конфайнменту Чорнобильської АЕС.',
+  'Kyiv Independent наводить слова де Вевера про десять F-16 і повідомляє, що польські боєприпаси для зенітних гармат допомогли захищати Київ.'],
+ ['Belgium promises 10 F-16s this year, Zelensky expects Swedish Gripens; Sweden allocates nearly 45 million euros, G7 260 million euros to repair Chornobyl confinement', 'Brussels',
+  'Russian sources in the sample do not cover these pledges; Ukrainian and independent sources report the same figures.',
+  None,
+  'Belgian Prime Minister Bart De Wever promised to hand Ukraine ten F-16s by the end of the year. After meeting Ulf Kristersson, Zelensky said he expects Gripen deliveries soon and that they will complement the F-16s against jet-powered Shaheds. Sweden is allocating 500 million kronor, nearly 45 million euros, for energy and healthcare, and the G7 countries 260 million euros for urgent repairs to the New Safe Confinement at the Chornobyl plant.',
+  'Kyiv Independent quotes De Wever on the ten F-16s and reports that Polish ammunition for anti-aircraft guns helped defend Kyiv.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c16g.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

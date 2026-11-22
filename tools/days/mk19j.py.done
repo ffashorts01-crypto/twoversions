@@ -1,0 +1,251 @@
+import json, sys, sqlite3, re
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import add, setd, ext, apply, EXT, NEW, q
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- hourly run 12:00 Oct 19 (ids 12872-13067): 1 new Oct 19 card + extensions ----------------
+
+def rep(c, path, old, new):
+    o = c
+    for p in path[:-1]: o = o[p]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+card('1019-poltava-tcc-mobilised-death', [12654, 12901, 12939],
+ 'На сборном пункте ТЦК в Полтавской области умер мужчина, ожидавший отправки в часть; ТЦК называет причиной острую сердечную недостаточность',
+ 'Полтавская область', 'ukraine-wide',
+ ['расхождение: формулировки', 'одна из групп не освещает'],
+ S('РИА Новости со ссылкой на Полтавский областной военкомат (ТЦК) сообщает, что на сборном пункте умер мужчина 1978 года рождения, ожидавший отправки в одну из воинских частей ВСУ: ему стало плохо, он потерял сознание; предварительная причина смерти — острая сердечная недостаточность. Мужчину доставили в военкомат, поскольку он находился в розыске; скорая, по данным военкомата, прибыла поздно, следов насилия на теле не обнаружено. К сообщению военкомата РИА добавляет собственный контекст: «киевский режим» столкнулся с нехваткой личного состава, а насильственные действия сотрудников военкоматов при задержании постоянно приводят к скандалам; агентство также пишет о распространенных в интернете видео силовой мобилизации. ТАСС коротко сообщает, что в сборном пункте ТЦК умер мобилизованный.',
+   (12901, 'На сборном пункте умер мужчина… Он ожидал отправки в одну из воинских частей ВСУ'),
+   (12901, 'Предварительно причина смерти – острая сердечная недостаточность'),
+   (12901, 'Киевский режим в последнее время столкнулся с нехваткой личного состава в ВСУ'),
+   (12901, 'насильственные действия сотрудников военкоматов по задержанию подлежащих мобилизации постоянно приводят к скандалам'),
+   (12939, 'В Полтавской области в сборном пункте ТЦК умер мобилизованный')),
+ S('«Общественное» со ссылкой на Полтавский областной ТЦК и СП сообщает, что мужчину доставили в центр комплектования, поскольку он находился в розыске; на сборном пункте он ожидал отправки в одну из воинских частей ВСУ, затем ему стало плохо, и он потерял сознание. Дежурный сразу вызвал скорую, но медики прибыли слишком поздно. По предварительным результатам осмотра, следов насилия на теле не обнаружено, предварительная причина смерти — острая сердечная недостаточность. Следствие продолжается; Полтавский областной и Кременчугский районный ТЦК заявили, что всесторонне содействуют правоохранителям.',
+   (12654, 'чоловіка доставили до територіального центру комплектування, оскільки він перебував у розшуку'),
+   (12654, 'Черговий одразу викликав бригаду екстреної медичної допомоги, однак медики прибули запізно.'),
+   (12654, 'слідів насильства на тілі померлого не виявили'),
+   (12654, 'Попередньою причиною смерті називають гостру серцеву недостатність.'),
+   (12654, 'Наразі слідство триває.')),
+ None,
+ 'Фактическая часть у обеих сторон совпадает и восходит к одному сообщению Полтавского областного ТЦК: мужчина, доставленный в военкомат как находившийся в розыске, умер на сборном пункте, предварительная причина — острая сердечная недостаточность, следов насилия не обнаружено. РИА Новости дополняет сообщение собственным контекстом о «киевском режиме», нехватке личного состава и силовой мобилизации, которого в сообщении ТЦК нет. «Общественное» передает сообщение ТЦК без оценок и добавляет, что следствие продолжается. Независимых сообщений в выборке нет.',
+ 'low', 'Причина смерти названа предварительно, следствие продолжается; все сведения об обстоятельствах исходят от самого ТЦК.', False,
+ ('На збірному пункті ТЦК на Полтавщині помер чоловік, який очікував відправлення до частини; ТЦК називає причиною гостру серцеву недостатність',
+  'Полтавська область',
+  'Фактична частина в обох сторін збігається і походить від одного повідомлення Полтавського обласного ТЦК: чоловік, якого доставили до військкомату як такого, що перебував у розшуку, помер на збірному пункті, попередня причина — гостра серцева недостатність, слідів насильства не виявлено. РИА Новости доповнює повідомлення власним контекстом про «київський режим», нестачу особового складу та силову мобілізацію, якого в повідомленні ТЦК немає. «Суспільне» передає повідомлення ТЦК без оцінок і додає, що слідство триває. Незалежних повідомлень у вибірці немає.',
+  'РИА Новости з посиланням на Полтавський обласний військкомат (ТЦК) повідомляє, що на збірному пункті помер чоловік 1978 року народження, який очікував відправлення до однієї з військових частин ЗСУ: йому стало зле, він знепритомнів; попередня причина смерті — гостра серцева недостатність. Чоловіка доставили до військкомату, оскільки він перебував у розшуку; швидка, за даними військкомату, прибула пізно, слідів насильства на тілі не виявлено. До повідомлення військкомату РИА додає власний контекст: «київський режим» зіткнувся з нестачею особового складу, а насильницькі дії працівників військкоматів під час затримання постійно призводять до скандалів; агентство також пише про поширені в інтернеті відео силової мобілізації. ТАСС коротко повідомляє, що на збірному пункті ТЦК помер мобілізований.',
+  '«Суспільне» з посиланням на Полтавський обласний ТЦК та СП повідомляє, що чоловіка доставили до центру комплектування, оскільки він перебував у розшуку; на збірному пункті він очікував відправлення до однієї з військових частин ЗСУ, згодом йому стало зле, і він знепритомнів. Черговий одразу викликав швидку, але медики прибули запізно. За попередніми результатами огляду, слідів насильства на тілі не виявлено, попередня причина смерті — гостра серцева недостатність. Слідство триває; Полтавський обласний і Кременчуцький районний ТЦК заявили, що всебічно сприяють правоохоронцям.',
+  None),
+ ('A man waiting to be sent to a unit died at a TCC assembly point in the Poltava region; the TCC cites acute heart failure',
+  'Poltava region',
+  'The factual part is the same on both sides and goes back to a single statement by the Poltava regional TCC: a man brought to the enlistment office because he was on a wanted list died at the assembly point; the preliminary cause is acute heart failure and no signs of violence were found. RIA Novosti adds its own context about the "Kyiv regime", personnel shortages and forced mobilisation, which is not in the TCC statement. Suspilne relays the TCC statement without comment and adds that the investigation is ongoing. There are no independent reports in the sample.',
+  'RIA Novosti, citing the Poltava regional enlistment office (TCC), reports that a man born in 1978 who was waiting to be sent to one of the units of the Ukrainian armed forces died at the assembly point: he felt unwell and lost consciousness; the preliminary cause of death is acute heart failure. The man was brought to the enlistment office because he was on a wanted list; according to the office, the ambulance arrived late, and no signs of violence were found on the body. RIA adds its own context to the office\'s statement: the "Kyiv regime" faces a shortage of personnel, and violent actions by enlistment officers during detentions constantly lead to scandals; the agency also writes about videos of forced mobilisation widely shared online. TASS briefly reports that a mobilised man died at a TCC assembly point.',
+  'Suspilne, citing the Poltava regional TCC, reports that the man was brought to the recruitment centre because he was on a wanted list; at the assembly point he was waiting to be sent to one of the units of the Armed Forces of Ukraine, then felt unwell and lost consciousness. The duty officer immediately called an ambulance, but the medics arrived too late. According to the preliminary examination, no signs of violence were found on the body, and the preliminary cause of death is acute heart failure. The investigation is ongoing; the Poltava regional and Kremenchuk district TCCs said they are fully assisting law enforcement.',
+  None))
+
+@ext('1019-energy-strikes-west-centre', [13053, 13054, 13029, 13005, 12885])
+def _(c):
+    # SUS 13005 (Khmelnytskyi weekly: 70 drones, Shepetivka windows = 12846), RIA 12885 (Zelensky "no warning again", = TASSr 12754) - ids only
+    add(c, 'ua', 'В Коростышеве на Житомирщине, по словам и. о. городского головы, энергообъекты второй день подряд под ударами дронов, вся громада без света.',
+        'У Коростишеві на Житомирщині, за словами в. о. міського голови, енергооб’єкти другий день поспіль під ударами дронів, уся громада без світла.',
+        'In Korostyshiv in the Zhytomyr region, according to the acting mayor, energy facilities have been under drone attack for a second day and the whole community is without power.',
+        [(13029, "Другий день поспіль об'єкти енергетики нашої громади перебувають під ударами ворожих дронів"),
+         (13029, 'Наразі вся громада без світла.')])
+    add(c, 'ind', 'DW со ссылкой на первого замминистра энергетики Украины Артема Некрасова пишет, что Россия ночью и утром ударила по энергообъектам в Винницкой, Волынской, Кировоградской, Киевской, Николаевской, Житомирской, Хмельницкой, Харьковской, Тернопольской, Одесской и Ровенской областях; по данным Минэнерго, за сутки Россия 87 раз целенаправленно атаковала энергетику и нефтегазовый сектор, зафиксировано 224 повреждения, без света остаются около 140 населенных пунктов, в Винницкой области ранен энергетик. The Guardian со ссылкой на представителя Воздушных сил Юрия Игната пишет, что перед вечерним ракетным ударом по электростанциям в Киеве предупреждения от США не было, а перед следующим, ночным ударом оно поступило; Зеленский назвал происходящее «отрицанием реальности» со стороны партнеров.',
+        'DW з посиланням на першого заступника міністра енергетики України Артема Некрасова пише, що Росія вночі та вранці вдарила по енергооб’єктах у Вінницькій, Волинській, Кіровоградській, Київській, Миколаївській, Житомирській, Хмельницькій, Харківській, Тернопільській, Одеській і Рівненській областях; за даними Міненерго, за добу Росія 87 разів цілеспрямовано атакувала енергетику та нафтогазовий сектор, зафіксовано 224 пошкодження, без світла залишаються близько 140 населених пунктів, на Вінниччині поранено енергетика. The Guardian з посиланням на речника Повітряних сил Юрія Ігната пише, що перед вечірнім ракетним ударом по електростанціях у Києві попередження від США не було, а перед наступним, нічним ударом воно надійшло; Зеленський назвав те, що відбувається, «запереченням реальності» з боку партнерів.',
+        'DW, citing First Deputy Energy Minister Artem Nekrasov, writes that overnight and in the morning Russia struck energy facilities in the Vinnytsia, Volyn, Kirovohrad, Kyiv, Mykolaiv, Zhytomyr, Khmelnytskyi, Kharkiv, Ternopil, Odesa and Rivne regions; according to the Energy Ministry, Russia deliberately attacked the energy and oil and gas sector 87 times in a day, 224 cases of damage were recorded, about 140 settlements remain without power and an energy worker was injured in the Vinnytsia region. The Guardian, citing Air Force spokesman Yurii Ihnat, writes that there was no US warning before the evening missile strike on power plants in Kyiv, while a warning did come before the next, overnight strike; Zelensky called this "a denial of reality" on the part of partners.',
+        [(13054, 'нанесла удары по энергетическим объектам в Винницкой, Волынской, Кировоградской, Киевской, Николаевской, Житомирской, Хмельницкой, Харьковской, Тернопольской, Одесской и Ровненской областях Украины'),
+         (13054, 'за сутки РФ 87 раз целенаправленно атаковала украинскую энергетику и нефтегазовый сектор, зафиксировано 224 повреждения'),
+         (13054, 'пока без электричества остаются около 140 населенных пунктов'),
+         (13054, 'В Винницкой области при атаке на энергетический объект был ранен один энергетик'),
+         (13053, 'Ukraine had not received a warning before a Russian missile barrage hit power plants in Kyiv'),
+         (13053, 'Ukraine did receive a warning before a successive strike'),
+         (13053, 'it is, unfortunately, a denial of reality on the part of our partners')])
+    rep(c, ('diverge',), 'Независимых сообщений в выборке нет.',
+        'DW со ссылкой на Минэнерго Украины подтверждает удары по энергетике в одиннадцати областях, включая Киевскую, и приводит данные о 87 атаках за сутки и 224 повреждениях. The Guardian пишет об ударе по электростанциям в Киеве; украинские источники в выборке говорят об энергообъектах Киевской области, не называя их.')
+    rep(c, ('uk', 'd'), 'Незалежних повідомлень у вибірці немає.',
+        'DW з посиланням на Міненерго України підтверджує удари по енергетиці в одинадцяти областях, зокрема Київській, і наводить дані про 87 атак за добу та 224 пошкодження. The Guardian пише про удар по електростанціях у Києві; українські джерела у вибірці говорять про енергооб’єкти Київської області, не називаючи їх.')
+    rep(c, ('en', 'd'), 'There are no independent reports in the sample.',
+        'DW, citing Ukraine\'s Energy Ministry, confirms strikes on energy facilities in eleven regions, including the Kyiv region, and gives figures of 87 attacks in a day and 224 cases of damage. The Guardian writes of a strike on power plants in Kyiv; Ukrainian sources in the sample speak of energy facilities in the Kyiv region without naming them.')
+    c['tags'] = [t for t in c['tags'] if t != 'одна из групп не освещает']
+
+@ext('1019-peskov-trilateral-meeting', [13044, 13050, 13051])
+def _(c):
+    # Meduza EN 13051 (= Meduza 12675, WSJ retelling) - id only
+    for path, old, new in [
+        (('ua', 'summary'), 'Издание приводит ту же цитату Пескова, называет Путина «российским диктатором» и пишет, что Трамп демонстративно избегает давления на Москву: он заморозил закон о санкциях против России и перекладывает ответственность за затягивание войны на Зеленского. Зеленский, по данным издания, считает, что шаги Вашингтона выглядят как попытка склонить Украину к капитуляции.',
+         'Издание приводит ту же цитату Пескова и пишет, что Трамп демонстративно избегает давления на Москву, а шаги Вашингтона, по мнению Зеленского, выглядят как попытка склонить Украину к капитуляции.'),
+        (('uk', 'ua'), 'Видання наводить ту саму цитату Пєскова, називає Путіна «російським диктатором» і пише, що Трамп демонстративно уникає тиску на Москву: він заморозив закон про санкції проти Росії і перекладає відповідальність за затягування війни на Зеленського. Зеленський, за даними видання, вважає, що кроки Вашингтона виглядають як спроба схилити Україну до капітуляції.',
+         'Видання наводить ту саму цитату Пєскова і пише, що Трамп демонстративно уникає тиску на Москву, а кроки Вашингтона, на думку Зеленського, виглядають як спроба схилити Україну до капітуляції.'),
+        (('en', 'ua'), 'The outlet quotes the same Peskov statement, calls Putin a "Russian dictator" and writes that Trump is pointedly avoiding pressure on Moscow: he has frozen the Russia sanctions bill and is shifting responsibility for prolonging the war onto Zelensky. Zelensky, according to the outlet, believes Washington\'s steps look like an attempt to push Ukraine towards capitulation.',
+         'The outlet quotes the same Peskov statement and writes that Trump is pointedly avoiding pressure on Moscow, while Washington\'s steps, in Zelensky\'s view, look like an attempt to push Ukraine towards capitulation.'),
+        (('ua', 'summary'), 'По данным WSJ, Москва видит в трехстороннем формате способ закрепить статус великой державы, а сам формат исключает Европу,',
+         'По данным WSJ, формат исключает и Европу,'),
+        (('uk', 'ua'), 'За даними WSJ, Москва бачить у тристоронньому форматі спосіб закріпити статус великої держави, а сам формат виключає Європу,',
+         'За даними WSJ, формат виключає і Європу,'),
+        (('en', 'ua'), 'According to the WSJ, Moscow sees the three-way format as a way to cement its great-power status, and the format leaves out Europe,',
+         'According to the WSJ, the format also leaves out Europe,')]:
+        rep(c, path, old, new)
+    add(c, 'ua', 'Глава МИД Украины Андрей Сибига написал в X, что трехсторонняя встреча лидеров России, Китая и США «лишь поощрит Путина продолжать эту войну», а приглашение Путина подпитало бы его «манию величия»: «Он не мировой лидер, а военный преступник» («Украинская правда»).',
+        'Міністр закордонних справ України Андрій Сибіга написав у X, що тристороння зустріч лідерів Росії, Китаю та США «лише заохотить Путіна продовжувати цю війну», а запрошення Путіна підживило б його «манію величі»: «Він не світовий лідер, а воєнний злочинець» («Українська правда»).',
+        'Ukrainian Foreign Minister Andrii Sybiha wrote on X that a trilateral meeting of the leaders of Russia, China and the US "would only encourage Putin to continue this war", and that inviting Putin would feed his "megalomania": "He is not a world leader but a war criminal" (Ukrainska Pravda).',
+        [(13044, 'Тристороння зустріч лідерів Росії, Китаю та США дасть лише протилежний результат: заохотить Путіна продовжувати цю війну.'),
+         (13044, 'лише підживило би його манію величі'),
+         (13044, 'Він не світовий лідер, а воєнний злочинець.')])
+    add(c, 'ind', 'Kyiv Independent приводит те же слова Сибиги и ответ госсекретаря США Марко Рубио журналистам: «разговоры о встрече были», но подробностей он не дал.',
+        'Kyiv Independent наводить ті самі слова Сибіги та відповідь держсекретаря США Марко Рубіо журналістам: «розмови про зустріч були», але подробиць він не навів.',
+        'The Kyiv Independent quotes the same remarks by Sybiha and US Secretary of State Marco Rubio\'s reply to reporters that "there\'s been talks of a meeting", without further details.',
+        [(13050, 'encourage (Russian President Vladimir) Putin to continue this war'),
+         (13050, 'He is not a global leader; he is a war criminal.'),
+         (13050, "there's been talks of a meeting")])
+    c['diverge'] += ' Резкую реакцию главы МИД Украины Сибиги передают украинские СМИ и Kyiv Independent; российские источники в выборке ее не приводят.'
+    c['uk']['d'] += ' Різку реакцію міністра закордонних справ України Сибіги передають українські ЗМІ та Kyiv Independent; російські джерела у вибірці її не наводять.'
+    c['en']['d'] += ' The sharp reaction of Ukrainian Foreign Minister Sybiha is relayed by Ukrainian media and the Kyiv Independent; Russian sources in the sample do not cite it.'
+
+@ext('1019-rubio-intel-sanctions-apec', [12948, 12981, 13056])
+def _(c):
+    # TASS EN 12948 (Breitbart: "negotiated settlement") - id only
+    for path, old, new in [
+        (('ru', 'summary'), ' Обсуждать на пресс-конференции использование Starshield Рубио, по данным РИА Новости, отказался: систему контролирует Пентагон.', ''),
+        (('uk', 'ru'), ' Обговорювати на пресконференції використання Starshield Рубіо, за даними РИА Новости, відмовився: систему контролює Пентагон.', ''),
+        (('en', 'ru'), ' According to RIA Novosti, Rubio declined to discuss the use of Starshield at the press conference: the system is controlled by the Pentagon.', '')]:
+        rep(c, path, old, new)
+    c['ru']['quotes'] = [x for x in c['ru']['quotes'] if x['id'] != 12318]
+    add(c, 'ru', 'ТАСС также пишет, что причиной продолжения конфликта Рубио назвал нежелание украинской стороны вывести войска из занимаемой ею части Донбасса.',
+        'ТАСС також пише, що причиною продовження конфлікту Рубіо назвав небажання української сторони вивести війська з частини Донбасу, яку вона займає.',
+        'TASS also writes that Rubio named the Ukrainian side\'s unwillingness to withdraw its troops from the part of Donbas it holds as the reason the conflict continues.',
+        [(12981, 'Речь идет о нежелании украинской стороны вывести войска из занимаемой ей части Донбасса')])
+    add(c, 'ind', 'Al Jazeera приводит слова Рубио в Узбекистане: «паузы не было», а Зеленскому, как и США, следует сосредоточиться на завершении войны.',
+        'Al Jazeera наводить слова Рубіо в Узбекистані: «паузи не було», а Зеленському, як і США, слід зосередитися на завершенні війни.',
+        'Al Jazeera quotes Rubio in Uzbekistan: "There has been no pause", and Zelensky, like the US, should focus on ending the war.',
+        [(13056, 'There has been no pause'),
+         (13056, 'What [Zelenskyy] should be focused on and what we want to be focused on is bringing an end to this war.')])
+    c['diverge'] += ' Слова о Донбассе как причине продолжения конфликта в выборке передает только ТАСС.'
+    c['uk']['d'] += ' Слова про Донбас як причину продовження конфлікту у вибірці передає лише ТАСС.'
+    c['en']['d'] += ' Only TASS in the sample relays the remark about Donbas as the reason the conflict continues.'
+
+@ext('1019-mod-targets-kyiv-irpin', [12880])
+def _(c):
+    rep(c, ('ru', 'summary'), 'Позже ТАСС сообщило, что дата-центр в Киеве уничтожен и не подлежит восстановлению.',
+        'Позже ТАСС сообщило, что дата-центр в Киеве уничтожен и не подлежит восстановлению, а РИА Новости привело подтверждение самой компании.')
+    rep(c, ('uk', 'ru'), 'Пізніше ТАСС повідомило, що дата-центр у Києві знищено і він не підлягає відновленню.',
+        'Пізніше ТАСС повідомило, що дата-центр у Києві знищено і він не підлягає відновленню, а РИА Новости навело підтвердження самої компанії.')
+    rep(c, ('en', 'ru'), 'TASS later reported that the data centre in Kyiv had been destroyed and cannot be restored.',
+        'TASS later reported that the data centre in Kyiv had been destroyed and cannot be restored, and RIA Novosti cited the company\'s own confirmation.')
+    c['ru']['quotes'].append(q(12880, 'Украинский дата-центр "Дата групп" подтвердил, что его оборудование и инфраструктура полностью выведены из строя'))
+
+@ext('1019-kyiv-ballistic-night', [13025, 13060, 13061, 13063])
+def _(c):
+    # RBC 13060 (Chernihivska photos), 13061 (Zviropolis contact zoo in Cosmo Multimall), 13063 (McDonald's, Incom business centre, polyclinic on Shuliavka) - ids only, card at the length limit
+    rep(c, ('ua', 'summary'), '«Общественное» сообщает о повреждении ледовой арены на улице Шалетт.',
+        '«Общественное» сообщает о повреждении ледовой арены «Шалетт» и трех учебных заведений в Днепровском районе.')
+    rep(c, ('uk', 'ua'), '«Суспільне» повідомляє про пошкодження льодової арени на вулиці Шалетт.',
+        '«Суспільне» повідомляє про пошкодження льодової арени «Шалетт» і трьох навчальних закладів у Дніпровському районі.')
+    rep(c, ('en', 'ua'), 'Suspilne reports damage to the ice arena on Chalet Street.',
+        'Suspilne reports damage to the Chalet ice arena and three educational institutions in Dniprovskyi district.')
+    rep(c, ('ua', 'summary'), 'Cosmo Multimall у станции «Шулявская», ', 'Cosmo Multimall, ')
+    rep(c, ('uk', 'ua'), 'Cosmo Multimall біля станції «Шулявська», ', 'Cosmo Multimall, ')
+    rep(c, ('en', 'ua'), 'shopping centre near Shuliavska station in the', 'shopping centre in the')
+    c['ua']['quotes'].append(q(13025, 'Серед іншого пошкоджено три навчальні заклади.'))
+
+@ext('1019-dobropillia-control-disputed', [12988, 12955])
+def _(c):
+    # TASS EN 12955 (= TASSr 11928, >100 Ukrainian servicemen in the mines) - id only
+    add(c, 'ru', 'ТАСС передает также слова комбата Гриши Степаняна: у Доброполья уничтожены шесть бронемашин ВСУ вместе со всем десантом.',
+        'ТАСС передає також слова комбата Гриші Степаняна: біля Добропілля знищено шість бронемашин ЗСУ разом з усім десантом.',
+        'TASS also quotes battalion commander Grisha Stepanyan: six Ukrainian armoured vehicles were destroyed near Dobropillia together with all the troops they carried.',
+        [(12988, 'ВС РФ уничтожили шесть бронированных машин ВСУ у Доброполья'),
+         (12988, 'Уничтожен в том числе весь десант')])
+
+@ext('1019-front-claims', [12892, 12944, 12946, 12976])
+def _(c):
+    # RIA 12892 (MoD daily: UAV assembly shops, 147 areas), TASSr 12946 (MoD daily summary), 12944 (Omelnyk: 27 sq km defence area), 12976 (MoD video of Omelnyk) - ids only, card near the limit
+    pass
+
+@ext('1019-strikes-regions-rivne-dnipro', [13027])
+def _(c):
+    # SUS 13027 (Rivne region: fire after the morning attack, extinguished) - id only
+    pass
+
+@ext('1018-moldova-border-guards-returned', [13021])
+def _(c):
+    add(c, 'ua', '«Общественное» со ссылкой на TVR Moldova выносит в заголовок, что украинец, которого ловили пограничники, просит убежища в Молдове; Пограничная полиция Молдовы подтверждает, что двух пограничников передали украинским властям по двустороннему соглашению. Спикер ГПСУ Андрей Демченко сказал, что служебное расследование продолжается, а пограничников наряда пока не привлекают к охране границы.',
+        '«Суспільне» з посиланням на TVR Moldova виносить у заголовок, що українець, якого ловили прикордонники, просить притулку в Молдові; Прикордонна поліція Молдови підтверджує, що двох прикордонників передали українській владі згідно з двосторонньою угодою. Речник ДПСУ Андрій Демченко сказав, що службове розслідування триває, а прикордонників наряду наразі не залучають до охорони кордону.',
+        'Suspilne, citing TVR Moldova, headlines that the Ukrainian man the border guards were chasing is seeking asylum in Moldova; the Moldovan Border Police confirms that the two border guards were handed over to the Ukrainian authorities under a bilateral agreement. State Border Guard Service spokesman Andrii Demchenko said the internal investigation is continuing and the guards of that patrol are not currently deployed to guard the border.',
+        [(13021, 'двох українських прикордонників, затриманих у Молдові, передали українській владі згідно з двосторонньою угодою'),
+         (13021, 'Службове розслідування, яке проводить прикордонний загін по даній ситуації, триває'),
+         (13021, 'Військовослужбовці зі складу прикордонного наряду на даний час до несення служби з охорони державного кордону не залучаються')])
+    rep(c, ('diverge',), 'О просьбе спасенного об убежище в выборке сообщает только РИА Новости.',
+        'О просьбе спасенного об убежище сообщает РИА Новости, позже — и «Общественное» (в заголовке).')
+    rep(c, ('uk', 'd'), 'Про прохання врятованого про притулок у вибірці повідомляє лише РИА Новости.',
+        'Про прохання врятованого про притулок повідомляє РИА Новости, пізніше — і «Суспільне» (у заголовку).')
+    rep(c, ('en', 'd'), "Only RIA Novosti in the sample reports the rescued man's asylum request.",
+        "RIA Novosti reports the rescued man's asylum request, and later so does Suspilne (in a headline).")
+
+@ext('1018-zelensky-nbc-bessent-starlink', [12908])
+def _(c):
+    add(c, 'ru', 'На следующий день РИА Новости написало, что, по словам Зеленского, президентские выборы могут пройти через полгода после завершения боевых действий.',
+        'Наступного дня РИА Новости написало, що, за словами Зеленського, президентські вибори можуть відбутися через пів року після завершення бойових дій.',
+        'The next day RIA Novosti wrote that, according to Zelensky, a presidential election could be held six months after the end of hostilities.',
+        [(12908, 'Президентские выборы на Украине могут пройти через полгода после завершения боевых действий')])
+    c['diverge'] += ' Слова о выборах через полгода после окончания боевых действий в выборке приводит только РИА Новости.'
+    c['uk']['d'] += ' Слова про вибори через пів року після закінчення бойових дій у вибірці наводить лише РИА Новости.'
+    c['en']['d'] += ' Only RIA Novosti in the sample cites the remark about an election six months after the end of hostilities.'
+
+@ext('1018-st-petersburg-drone-attack', [12971, 13004])
+def _(c):
+    add(c, 'ru', 'Позже ТАСС сообщило, что пострадавшую при атаке во Всеволожске семью выписали из больницы, а Пулково вернулся к штатному расписанию.',
+        'Пізніше ТАСС повідомило, що постраждалу під час атаки у Всеволожську родину виписали з лікарні, а Пулково повернувся до штатного розкладу.',
+        'TASS later reported that the family injured in the attack in Vsevolozhsk had been discharged from hospital and that Pulkovo airport had returned to its normal schedule.',
+        [(12971, 'Пострадавшую при атаке БПЛА во Всеволожске семью выписали из больницы'),
+         (13004, 'Пулково вернулся к штатному расписанию после атаки БПЛА на Петербург')])
+
+@ext('1018-lithuania-drone-from-poland', [12975])
+def _(c):
+    # TASSr 12975 (Ukraine "admitted" the violation, apologised) - id only, ru at the limit
+    pass
+
+
+# ---- quote pre-check against the DB
+db = sqlite3.connect('/workspace/compare-site-v2/data/articles.db')
+n = lambda s: re.sub(r'\s+', ' ', s or '')
+def chk(i, t):
+    r = db.execute('select text from articles where id=?', (i,)).fetchone()
+    if not r or n(t) not in n(r[0]): print('QUOTE BAD', i, t[:70])
+FILES = ['c18a.json', 'c18b.json', 'c18c.json', 'c19a.json', 'c19b.json', 'c19d.json', 'c19e.json', 'c19f.json', 'c19g.json']
+def lens(c):
+    return [len(c[s]['summary']) for s in ('ru', 'ua', 'ind') if c[s]] + [len(c[l][k]) for l in ('uk', 'en') for k in ('ru', 'ua', 'ind', 'd') if c[l][k]] + [len(c['diverge'])]
+if '--dry' in sys.argv:
+    import copy
+    for c in cards:
+        for s in ('ru', 'ua', 'ind'):
+            if c[s]:
+                for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+        print('NEW', c['key'], max(lens(c)), len(c['title']), len(c['uk']['t']), len(c['en']['t']))
+    for f in FILES:
+        for c in json.load(open(OUT + f)):
+            if c['key'] in EXT:
+                c = copy.deepcopy(c); EXT[c['key']](c)
+                for s in ('ru', 'ua', 'ind'):
+                    if c[s]:
+                        for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+                L = lens(c)
+                print('DRY', c['key'], max(L), len(c['title']), len(c['uk']['t']), len(c['en']['t']))
+    sys.exit()
+
+apply(FILES)
+json.dump(cards, open(OUT + 'c19h.json', 'w'), ensure_ascii=False, indent=1)
+touched = set(EXT)
+for f in FILES + ['c19h.json']:
+    for c in json.load(open(OUT + f)):
+        if c['key'] not in touched and f != 'c19h.json': continue
+        for s in ('ru', 'ua', 'ind'):
+            if c[s]:
+                for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+        L = lens(c)
+        print(c['key'], max(L))
+        if max(L) > 1400: print('TOO LONG', f, c['key'], max(L))
+        if len(c['title']) > 160: print('TITLE LONG', c['key'], len(c['title']))

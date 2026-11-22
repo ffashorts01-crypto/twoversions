@@ -1,0 +1,78 @@
+import sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from extlib import add, setd, ext, apply
+
+# ---------------- hourly run 20:03 (ids 11571-11652): extensions of earlier 2026-10-18 cards; no new Oct 18 events with 2+ groups ----------------
+@ext('1018-drones-moscow-mod-totals', [11624, 11577, 11602, 11613, 11651, 11598])
+def _(c):
+    add(c, 'ru', 'Вечером Минобороны сообщило еще о 41 беспилотнике самолетного типа, сбитом с 8:00 до 20:00 мск над Белгородской, Брянской, Курской, Орловской и Псковской областями; эти данные передали РИА Новости, ТАСС и «Интерфакс». ТАСС также сообщило, что аэропорт Калуги приостановил прием и выпуск самолетов для обеспечения безопасности полетов.',
+        'Увечері Міноборони повідомило ще про 41 безпілотник літакового типу, збитий з 8:00 до 20:00 мск над Бєлгородською, Брянською, Курською, Орловською та Псковською областями; ці дані передали РИА Новости, ТАСС та «Інтерфакс». ТАСС також повідомило, що аеропорт Калуги призупинив прийом і випуск літаків для забезпечення безпеки польотів.',
+        'In the evening the Defence Ministry reported another 41 fixed-wing drones downed between 8:00 and 20:00 Moscow time over the Belgorod, Bryansk, Kursk, Oryol and Pskov regions; the figures were relayed by RIA Novosti, TASS and Interfax. TASS also reported that Kaluga airport had suspended arrivals and departures to ensure flight safety.',
+        [(11624, 'перехвачен и уничтожен 41 украинский беспилотный летательный аппарат самолетного типа над территориями Белгородской, Брянской, Курской, Орловской и Псковской областей'),
+         (11598, 'Аэропорт Калуги приостановил прием и выпуск самолетов')])
+
+@ext('1018-russian-side-casualties', [11586, 11621])
+def _(c):
+    add(c, 'ru', 'Вечером оперштаб Белгородской области сообщил о семи пострадавших за день: на трассе Белгород — Шебекино дрон ударил по легковому автомобилю, ранены четверо мужчин; в Белгороде при повторной атаке на объект инфраструктуры пострадали двое, в селе Новая Таволжанка — один.',
+        'Увечері оперштаб Бєлгородської області повідомив про сімох постраждалих за день: на трасі Бєлгород — Шебекіно дрон ударив по легковому автомобілю, поранено чотирьох чоловіків; у Бєлгороді під час повторної атаки на об’єкт інфраструктури постраждали двоє, у селі Нова Таволжанка — один.',
+        'In the evening the Belgorod region operational headquarters reported seven people injured during the day: on the Belgorod–Shebekino road a drone hit a car, injuring four men; in Belgorod two people were hurt in a repeated attack on an infrastructure facility, and one in the village of Novaya Tavolzhanka.',
+        [(11586, 'Атаки со стороны ВСУ продолжаются. Пострадали семь человек'),
+         (11586, 'на автодороге Белгород — Шебекино дрон ударил по легковому автомобилю, в результате пострадали четверо мужчин')])
+
+@ext('1018-strikes-west-ukraine-energy', [11633, 11636, 11638, 11650])
+def _(c):
+    add(c, 'ua', 'Глава Кременецкой громады Андрей Смаглюк сообщил, что подстанция уничтожена, без света 13 населенных пунктов громады; по данным Тернопольской ОВА, без электричества 19 тысяч абонентов. На Винничине городской голова Геннадий Глухманюк сообщил о попадании в объект критической инфраструктуры. «Укрэнерго» ввело на 19 октября графики отключений.',
+        'Голова Кременецької громади Андрій Смаглюк повідомив, що підстанцію знищено, без світла 13 населених пунктів громади; за даними Тернопільської ОВА, без електрики 19 тисяч абонентів. На Вінниччині міський голова Геннадій Глухманюк повідомив про влучання в об’єкт критичної інфраструктури. «Укренерго» запровадило на 19 жовтня графіки відключень.',
+        'Andriy Smahliuk, head of the Kremenets community, said the substation was destroyed and 13 settlements of the community are without power; according to the Ternopil regional administration, 19 thousand customers are without electricity. In Vinnytsia region mayor Hennadiy Hlukhmaniuk reported a hit on a critical infrastructure facility. Ukrenergo introduced power outage schedules for 19 October.',
+        [(11633, 'Сьогодні після другого прильоту і прямого влучання, підстанція знищена.'),
+         (11636, 'За його словами, без світла 19 тисяч абонентів.'),
+         (11638, 'Про це повідомив міський голова Геннадій Глухманюк.'),
+         (11650, 'В Україні 19 жовтня діятимуть графіки відключення світла.')])
+
+@ext('1018-civilian-casualties-ukraine', [11634])
+def _(c):
+    add(c, 'ua', 'Вечером в Херсоне от ранений после авиаудара умер 58-летний мужчина, который в момент атаки находился в своей квартире.',
+        'Увечері в Херсоні від поранень після авіаудару помер 58-річний чоловік, який у момент атаки перебував у власній квартирі.',
+        'In the evening a 58-year-old man died in Kherson of injuries sustained in an air strike; he was in his own flat at the time of the attack.',
+        [(11634, 'У момент атаки він перебував у власній квартирі. Врятувати чоловіка не вдалось')])
+
+@ext('1018-lithuania-drone-from-poland', [11620, 11644, 11645])
+def _(c):
+    add(c, 'ru', 'Поздно вечером ТАСС сообщило, что дрон, вызвавший воздушную тревогу в Литве, участвовал в атаке Украины на Петербург: по данным агентства, министр обороны Литвы Робертас Каунас уточнил, что речь идет о БПЛА модели FPV-1.',
+        'Пізно ввечері ТАСС повідомило, що дрон, який спричинив повітряну тривогу в Литві, брав участь в атаці України на Петербург: за даними агентства, міністр оборони Литви Робертас Каунас уточнив, що йдеться про БПЛА моделі FPV-1.',
+        'Late in the evening TASS reported that the drone that triggered the air-raid alert in Lithuania had taken part in Ukraine\'s attack on St Petersburg: according to the agency, Lithuanian Defence Minister Robertas Kaunas specified that it was an FPV-1 drone.',
+        [(11620, 'Министр обороны балтийской республики Робертас Каунас уточнил, что речь идет о БПЛА модели FPV-1')])
+    add(c, 'ind', 'Kyiv Independent пишет, что поднятые истребители НАТО из-за облачности не смогли опознать объект и не пытались его сбить, и приводит извинения Тихого. DW добавляет, что Украина обещала передать Литве всю доступную информацию, а премьер Синкявичюс сказал, что у властей пока нет точных данных, нес ли дрон взрывчатку.',
+        'Kyiv Independent пише, що підняті винищувачі НАТО через хмарність не змогли розпізнати об’єкт і не намагалися його збити, та наводить перепрошення Тихого. DW додає, що Україна пообіцяла передати Литві всю доступну інформацію, а прем’єр Сінкявічюс сказав, що влада поки не має точних даних, чи ніс дрон вибухівку.',
+        'Kyiv Independent writes that the scrambled NATO fighter jets could not identify the object because of cloud cover and did not try to shoot it down, and quotes Tykhyi\'s apology. DW adds that Ukraine promised to give Lithuania all available information, and Prime Minister Sinkevicius said the authorities do not yet know for certain whether the drone carried explosives.',
+        [(11644, 'The jets were unable to identify the object because of cloudy weather and did not attempt to shoot it down.'),
+         (11644, 'We apologize for any disruption, risks, and concern this may have caused'),
+         (11645, 'власти Литвы пока не располагают точной информацией, нес ли упавший БПЛА взрывчатку')])
+    setd(c, c['diverge'] + ' Связь дрона с атакой на Петербург (модель FPV-1) со ссылкой на Каунаса приводит только ТАСС; украинские и независимые источники в выборке этого не сообщают.',
+         c['uk']['d'] + ' Зв’язок дрона з атакою на Петербург (модель FPV-1) з посиланням на Каунаса наводить лише ТАСС; українські та незалежні джерела у вибірці цього не повідомляють.',
+         c['en']['d'] + ' Only TASS, citing Kaunas, links the drone to the attack on St Petersburg (an FPV-1 model); Ukrainian and independent sources in the sample do not report this.')
+
+@ext('1018-zelensky-nbc-bessent-starlink', [11640, 11648])
+def _(c):
+    add(c, 'ua', '«Украинская правда» приводит слова Зеленского полностью: без поддержки США очень сложно, а если США официально встанут на сторону России, Украина не победит и не сможет выстоять; он надеется, что Трамп изменит отношение к Путину. РБК-Украина пишет, что в интервью Зеленский также сказал, что будет баллотироваться, если выборы пройдут во время войны.',
+        '«Українська правда» наводить слова Зеленського повністю: без підтримки США дуже складно, а якщо США офіційно стануть на бік Росії, Україна не переможе й не зможе вистояти; він сподівається, що Трамп змінить ставлення до Путіна. РБК-Україна пише, що в інтерв’ю Зеленський також сказав, що балотуватиметься, якщо вибори відбудуться під час війни.',
+        'Ukrainska Pravda quotes Zelensky in full: without US support it is very difficult, and if the US officially sides with Russia, Ukraine will not win and will not be able to hold out; he hopes Trump will change his attitude towards Putin. RBC-Ukraine writes that in the interview Zelensky also said he would run if elections were held during the war.',
+        [(11640, 'Якщо США офіційно стануть на бік Росії, якщо ці дві країни будуть разом'),
+         (11640, 'ми не переможемо і ми не зможемо вистояти'),
+         (11648, 'Якщо це відбудеться під час війни, звісно, це моя відповідальність.')])
+    setd(c, c['diverge'] + ' «Украинская правда» выносит это условие в заголовок.',
+         c['uk']['d'] + ' «Українська правда» виносить цю умову в заголовок.',
+         c['en']['d'] + ' Ukrainska Pravda puts this condition in its headline.')
+
+@ext('1018-front-claims', [11639])
+def _(c):
+    add(c, 'ua', 'Силы обороны Юга опровергли заявление Валерия Герасимова об оккупации Малокатериновки в Запорожской области: бойцы 128-й отдельной тяжелой механизированной бригады «Дикое поле» записали видео в центре села. По их данным, от линии боевого соприкосновения до южных окраин Запорожья около 25 км.',
+        'Сили оборони Півдня спростували заяву Валерія Герасимова про окупацію Малокатеринівки на Запоріжжі: бійці 128-ї окремої важкої механізованої бригади «Дике Поле» записали відео в центрі села. За їхніми даними, від лінії бойового зіткнення до південних околиць Запоріжжя близько 25 км.',
+        'The Southern Defence Forces refuted Valery Gerasimov\'s claim that Malokaterynivka in Zaporizhzhia region had been occupied: soldiers of the 128th Separate Heavy Mechanised Brigade "Dyke Pole" recorded a video in the centre of the village. According to them, the line of contact is about 25 km from the southern outskirts of Zaporizhzhia.',
+        [(11639, 'Малокатеринівка — це Україна.'),
+         (11639, 'нині від лінії бойового зіткнення до південних околиць обласного центру приблизно 25 кілометрів')])
+    setd(c, c['diverge'] + ' Силы обороны Юга опровергают и заявление о взятии Малокатериновки; расстояние до Запорожья они оценивают примерно в 25 км, Зеленский — в 20 км.',
+         c['uk']['d'] + ' Сили оборони Півдня спростовують і заяву про взяття Малокатеринівки; відстань до Запоріжжя вони оцінюють приблизно у 25 км, Зеленський — у 20 км.',
+         c['en']['d'] + ' The Southern Defence Forces also refute the claim that Malokaterynivka was taken; they put the distance to Zaporizhzhia at about 25 km, Zelensky at 20 km.')
+
+apply(['c18a.json', 'c18b.json', 'c18c.json'])

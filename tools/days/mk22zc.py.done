@@ -1,0 +1,11 @@
+import json
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+# post-patch 12:00 run: en diverge of 1021-front-claims (Myrivka)
+for f in ['c21a.json']:
+    a = json.load(open(OUT + f)); n = 0
+    for c in a:
+        if c['key'] == '1021-front-claims':
+            old = 'The Russian side claims the capture of two villages in Zaporizhzhia region;'
+            if old in c['en']['d']:
+                c['en']['d'] = c['en']['d'].replace(old, 'The Russian side claims the capture of villages in Zaporizhzhia region, including Myrivka;'); n += 1
+    json.dump(a, open(OUT + f, 'w'), ensure_ascii=False, indent=1); print(f, n)

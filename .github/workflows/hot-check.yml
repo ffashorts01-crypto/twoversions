@@ -1,0 +1,54 @@
+# Fast path for big events: every 30 min collect feeds (no LLM); if a big two-sided story appears, run auto_run.py right away
+# (max 1 Telegram post). The script itself skips near the regular runs and after a recent run.
+name: hot-check
+on:
+  schedule: [{cron: '5,35 * * * *'}]
+  workflow_dispatch: {}
+concurrency: {group: twoversions-state, cancel-in-progress: false}
+permissions: {contents: write}
+env:
+  TZ: Europe/Berlin
+  BASE_URL: https://twoversions.com
+  CF_PROJECT: twoversions-site
+  WRANGLER: npx --yes wrangler@3
+  LLM_PROVIDER: qwen
+  LLM_DAILY_BUDGET_USD: ${{ vars.LLM_DAILY_BUDGET_USD || '1' }}
+  LLM_RUN_BUDGET_USD: ${{ vars.LLM_RUN_BUDGET_USD || '0.45' }}
+  LLM_BUDGET_USD: '1000'
+jobs:
+  hot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12', cache: pip}
+      - uses: actions/setup-node@v4
+        with: {node-version: '20'}
+      - run: pip install -q -r requirements.txt
+      - uses: actions/cache/restore@v4
+        with: {path: data/og_cache, key: 'og-${{ github.run_id }}', restore-keys: 'og-'}
+      - name: restore state
+        env: {STATE_KEY: '${{ secrets.STATE_KEY }}'}
+        run: bash scripts/state_pull.sh
+      - name: hot check
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          set +e
+          python pipeline/hot_check.py
+          code=$?
+          tail -2 logs/hot_check.log
+          if [ $code -eq 0 ] || [ $code -eq 3 ]; then exit 0; else exit $code; fi
+      - name: save state
+        if: always()
+        env: {STATE_KEY: '${{ secrets.STATE_KEY }}', GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'}
+        run: bash scripts/state_push.sh
+      - name: notify owner on failure
+        if: failure()
+        env: {TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}', TELEGRAM_OWNER_CHAT_ID: '${{ secrets.TELEGRAM_OWNER_CHAT_ID }}'}
+        run: bash scripts/notify_fail.sh

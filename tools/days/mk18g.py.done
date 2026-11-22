@@ -1,0 +1,48 @@
+import sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from extlib import add, setd, ext, apply
+
+# 11741 (Al Jazeera) can belong to one card only -> witkoff-kushner-call
+# ---------------- hourly run 22:00 (ids 11705-11743): extensions of earlier Oct 18 cards; no new events with 2+ groups ----------------
+@ext('1018-zelensky-nbc-bessent-starlink', [11705])
+def _(c):
+    add(c, 'ru', 'Вечером РИА Новости передало слова Зеленского NBC о выборах, представив его как политика, «срок полномочий которого истек в 2024 году», и напомнив слова Трампа о «диктаторе без выборов» и рейтинге в 4%.',
+        'Увечері РИА Новости передало слова Зеленського NBC про вибори, представивши його як політика, «строк повноважень якого сплив у 2024 році», і нагадавши слова Трампа про «диктатора без виборів» та рейтинг у 4%.',
+        'In the evening RIA Novosti relayed Zelensky\'s words to NBC on elections, presenting him as a politician "whose term of office expired in 2024" and recalling Trump\'s words about a "dictator without elections" and a 4% rating.',
+        [(11705, 'Если они состоятся во время войны, то, конечно, это моя ответственность'),
+         (11705, 'Владимир Зеленский, срок полномочий которого истек в 2024 году')])
+    setd(c, c['diverge'] + ' Сообщая о готовности Зеленского участвовать в выборах, РИА Новости подчеркивает, что срок его полномочий истек; украинские СМИ приводят его условие — минимум 60 дней прекращения огня.',
+         c['uk']['d'] + ' Повідомляючи про готовність Зеленського брати участь у виборах, РИА Новости наголошує, що строк його повноважень сплив; українські ЗМІ наводять його умову — щонайменше 60 днів припинення вогню.',
+         c['en']['d'] + ' Reporting Zelensky\'s readiness to run in elections, RIA Novosti stresses that his term has expired; Ukrainian media cite his condition of at least 60 days of ceasefire.')
+
+@ext('1018-zelensky-witkoff-kushner-call', [11741])
+def _(c):
+    add(c, 'ind', 'Al Jazeera пишет, что заявление Зеленского о необходимости закончить войну и подготовке «следующих шагов» прозвучало на фоне серьезного дипломатического разлада с Трампом, который накануне отказался от ожидаемых энергетических санкций против России.',
+        'Al Jazeera пише, що заява Зеленського про необхідність завершити війну та підготовку «наступних кроків» пролунала на тлі серйозного дипломатичного розладу з Трампом, який напередодні відмовився від очікуваних енергетичних санкцій проти Росії.',
+        'Al Jazeera writes that Zelensky\'s statement on the need to end the war and on preparing "next steps" came amid a significant diplomatic fallout with Trump, who the day before waived expected energy sanctions against Russia.',
+        [(11741, 'the war with Russia “must be brought to an end”'),
+         (11741, 'amid a significant diplomatic fallout with US President Donald Trump, who on Saturday waived expected sanctions targeting Russia’s energy economy')])
+
+@ext('1018-us-sanctions-wright-bessent', [11742])
+def _(c):
+    add(c, 'ua', 'РБК-Украина со ссылкой на ABC News приводит слова Райта о том, что дизельная сделка — это «пряник», а не экономический спасательный круг для России: экспорт дизеля разрешат, если Россия снизит интенсивность войны или согласится на энергетическое перемирие; издание называет это заявление циничным.',
+        'РБК-Україна з посиланням на ABC News наводить слова Райта про те, що дизельна угода — це «пряник», а не економічний рятівний круг для Росії: експорт дизеля дозволять, якщо Росія знизить інтенсивність війни або погодиться на енергетичне перемир’я; видання називає цю заяву цинічною.',
+        'RBC-Ukraine, citing ABC News, quotes Wright as saying the diesel deal is "a carrot", not an economic lifeline for Russia: diesel exports would be allowed if Russia lowers the intensity of the war or agrees to an energy truce; the outlet calls the statement cynical.',
+        [(11742, 'Це пряник, щоб спробувати припинити війну. Це не економічний рятівний круг для Росії'),
+         (11742, 'Міністр цинічно заявив, що нова угода США та Росії не є економічною підтримкою Москви.')])
+
+@ext('1018-front-claims', [11738])
+def _(c):
+    add(c, 'ua', 'По вечерней сводке Генштаба на 22:00, за день произошло 173 боевых столкновения, больше всего атак — на Покровском (22) и Константиновском (16) направлениях.',
+        'За вечірнім зведенням Генштабу станом на 22:00, за день відбулося 173 бойові зіткнення, найбільше атак — на Покровському (22) та Костянтинівському (16) напрямках.',
+        'General Staff, 22:00: 173 clashes during the day, most attacks in the Pokrovsk (22) and Kostiantynivka (16) directions.',
+        [(11738, 'На фронті від початку доби відбулося 173 бойових зіткнення, зокрема на Покровському напрямку росіяни здійснили 22 атаки, на Костянтинівському – 16.')])
+
+@ext('1018-drones-moscow-mod-totals', [11733])
+def _(c):
+    add(c, 'ru', 'Поздно вечером ТАСС сообщило об ограничениях в аэропортах Пензы и Саратова.',
+        'Пізно ввечері ТАСС повідомило про обмеження в аеропортах Пензи та Саратова.',
+        'Late in the evening TASS reported restrictions at Penza and Saratov airports.',
+        [(11733, 'В аэропортах Пензы и Саратова ввели ограничения')])
+
+apply(['c18a.json', 'c18b.json', 'c18c.json'])

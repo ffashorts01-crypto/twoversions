@@ -1,0 +1,22 @@
+import sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from extlib import add, setd, ext, apply
+
+# ---------------- extensions of earlier 2026-10-17 cards (Moscow Times / France 24 backfill, collected 18:59) ----------------
+@ext('1017-graham-sanctions-waiver', [11480, 11488])
+def _(c):
+    add(c, 'ind', 'The Moscow Times пишет, что указ освобождает Россию от пошлин и санкций за покупку ее нефти и газа за несколько дней до их вступления в силу и действует, пока Белый дом не сочтет нужным иное; демократ Дон Бейер назвал это очередной капитуляцией Трампа перед Путиным. France 24 приводит слова Зеленского о том, что снятие санкций продолжится, а «дизельная сделка» — лишь первый шаг.',
+        'The Moscow Times пише, що указ звільняє Росію від мит і санкцій за купівлю її нафти й газу за кілька днів до набрання ними чинності й діє, доки Білий дім не вирішить інакше; демократ Дон Беєр назвав це черговою капітуляцією Трампа перед Путіним. France 24 наводить слова Зеленського про те, що зняття санкцій триватиме, а «дизельна угода» — лише перший крок.',
+        'The Moscow Times writes that the order exempts Russia from tariffs and sanctions for buying its oil and gas days before they were to take effect and remains in force until the White House decides otherwise; Democrat Don Beyer called it Trump\'s latest surrender to Putin. France 24 quotes Zelensky as saying the lifting of sanctions will continue and the "diesel deal" is just the first step.',
+        [(11480, 'latest surrender to Putin again betrays our Ukrainian partners'),
+         (11488, 'Unfortunately, the lifting of sanctions will continue.')])
+
+@ext('1017-front-claims-gerasimov-disputed', [11481])
+def _(c):
+    add(c, 'ind', 'The Moscow Times со ссылкой на Reuters приводит слова Ковалева о том, что российское военное руководство создает для политического руководства и внутренней аудитории иллюзию крупных побед; Reuters не смог независимо проверить заявления сторон.',
+        'The Moscow Times із посиланням на Reuters наводить слова Ковальова про те, що російське військове керівництво створює для політичного керівництва та внутрішньої аудиторії ілюзію великих перемог; Reuters не зміг незалежно перевірити заяви сторін.',
+        'The Moscow Times, citing Reuters, quotes Kovaliov as saying the Russian military leadership is creating an illusion of major victories for its political leadership and domestic audience; Reuters could not independently verify the claims of either side.',
+        [(11481, 'continues to create an illusion of major victories for its political leadership and domestic audience'),
+         (11481, 'Reuters could not independently verify the battlefield claims.')])
+
+apply(['c17d.json'])

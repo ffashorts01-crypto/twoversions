@@ -1,0 +1,61 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+cards = []
+card = lambda *a: cards.append(C(*a))
+# ---------------- backlog run 22 Oct 01:00 ----------------
+card('1020-hungary-blocks-eu-clusters', [14100, 14576],
+ 'Венгрия заблокировала открытие двух последних переговорных кластеров о вступлении Украины и Молдовы в ЕС',
+ 'Брюссель', 'ukraine-wide',
+ ['одна из групп не освещает', 'умолчание'],
+ None,
+ S("«Общественное» со ссылкой на анонимного чиновника ЕС сообщает, что Венгрия заблокировала открытие двух последних кластеров переговоров о вступлении Украины в ЕС — 4-го и 5-го, о «зеленой повестке» и о сельском хозяйстве: «одна страна-член» не дала зеленый свет на отправку писем с приглашением представить переговорную позицию. По данным издания, Польша хочет изменить общую позицию ЕС по 5-му кластеру о сельском хозяйстве.",
+   (14100, 'Одна країна-член не змогла дати зелене світло на відправку звичних листів'),
+   (14100, 'Польща хоче внести зміни до спільної переговорної позиції ЄС щодо кластера 5 про сільське господарство')),
+ S("The Kyiv Independent со ссылкой на трех дипломатов пишет, что Венгрия на встрече экспертов 27 стран ЕС заблокировала следующий шаг в процессе вступления Молдовы и Украины, хотя их прежние требования выполнены, и не объяснила свою позицию. Блокировка, по оценке издания, ожидается временной: венгерское правительство не хочет выглядеть в глазах оппозиции «мягким» по отношению к Украине; права венгерского меньшинства на образование причиной быть не могут, поскольку Киев уже принял закон об этом.",
+   (14576, 'Hungary blocked the next step in the EU membership process for Moldova and Ukraine, even though their previous demands had been met'),
+   (14576, 'the block is expected to be temporary')),
+ "Российские источники в подборке о блокировке не сообщают. Украинский источник ссылается на анонимного чиновника ЕС и упоминает также позицию Польши по сельскохозяйственному кластеру; независимое издание пишет о Молдове, об отсутствии объяснений со стороны Будапешта и о внутриполитическом мотиве венгерского правительства.",
+ 'low', '', False,
+ ('Угорщина заблокувала відкриття двох останніх переговорних кластерів щодо вступу України та Молдови до ЄС',
+  'Брюссель',
+  'Російські джерела в добірці про блокування не повідомляють. Українське джерело посилається на анонімного посадовця ЄС і згадує також позицію Польщі щодо сільськогосподарського кластера; незалежне видання пише про Молдову, про відсутність пояснень з боку Будапешта і про внутрішньополітичний мотив угорського уряду.',
+  None,
+  '«Суспільне» з посиланням на анонімного посадовця ЄС повідомляє, що Угорщина заблокувала відкриття двох останніх кластерів переговорів про вступ України до ЄС — 4-го і 5-го, про «зелений порядок денний» і про сільське господарство: «одна країна-член» не дала зеленого світла на відправлення листів із запрошенням представити переговорну позицію. За даними видання, Польща хоче змінити спільну позицію ЄС щодо 5-го кластера про сільське господарство.',
+  'The Kyiv Independent з посиланням на трьох дипломатів пише, що Угорщина на зустрічі експертів 27 країн ЄС заблокувала наступний крок у процесі вступу Молдови та України, хоча їхні попередні вимоги виконано, і не пояснила своєї позиції. Блокування, за оцінкою видання, очікується тимчасовим: угорський уряд не хоче виглядати в очах опозиції «м’яким» щодо України; права угорської меншини на освіту причиною бути не можуть, оскільки Київ уже ухвалив закон про це.'),
+ ('Hungary blocks the opening of the last two negotiating clusters on Ukraine\'s and Moldova\'s EU accession',
+  'Brussels',
+  'Russian sources in the selection do not report the block. The Ukrainian source cites an anonymous EU official and also mentions Poland\'s position on the agriculture cluster; the independent outlet writes about Moldova, the lack of any explanation from Budapest and the Hungarian government\'s domestic political motive.',
+  None,
+  'Suspilne, citing an anonymous EU official, reports that Hungary has blocked the opening of the last two clusters of Ukraine\'s EU accession talks, the 4th and 5th, on the "green agenda" and on agriculture: "one member state" did not give the green light to sending letters inviting the candidate to present its negotiating position. According to the outlet, Poland wants to change the EU\'s common position on the 5th cluster on agriculture.',
+  'The Kyiv Independent, citing three diplomats, writes that Hungary blocked the next step in the accession process of Moldova and Ukraine at a meeting of experts from the 27 EU countries, even though their previous demands had been met, and did not explain its position. The block is expected to be temporary, the outlet says: the Hungarian government does not want to look "soft" on Ukraine in the eyes of the opposition; education rights for the Hungarian minority cannot be the reason, as Kyiv has already passed a law on them.'))
+
+card('1020-chabany-highway-drone-strike', [14383, 14854, 14695],
+ 'Удар дрона по трассе Киев — Одесса в Чабанах: трое погибших, четверо раненых',
+ 'Чабаны, Киевская область', 'kyiv',
+ ['одна из групп не освещает', 'умолчание'],
+ None,
+ S("«Украинская правда» и РБК-Украина со ссылкой на главу Киевской ОВА Тимура Ткаченко и областную прокуратуру сообщают об ударе российского дрона утром 20 октября по автодороге Киев — Одесса в Фастовском районе: в поселке Чабаны, возле торгового центра, горели автомобили, трое человек погибли, еще четверо ранены, движение ограничено. Ткаченко назвал это очередным ударом по мирным людям, которые просто ехали на работу.",
+   (14383, 'ще четверо дістали поранення внаслідок російського удару безпілотником'),
+   (14854, 'Черговий удар ворога по мирних людях, які просто їхали на роботу')),
+ S("DW в обзоре ночной и утренней атаки пишет со ссылкой на Киевскую областную прокуратуру, что трое человек погибли при атаке беспилотника на поселок Чабаны у трассы Киев — Одесса, еще четверо ранены. Кроме того, в Обуховском районе той же области при ударе по производственно-складскому зданию погибли мужчина и две женщины, шестеро ранены.",
+   (14695, 'еще три человека погибли в результате атаки вражеского беспилотника на поселок Чабаны'),
+   (14695, 'погибли мужчина и две женщины, еще шесть человек были ранены')),
+ "Российские источники в подборке удар по Чабанам не упоминают. Украинские и независимые издания совпадают в данных о погибших и раненых; DW добавляет сведения о других погибших в Обуховском районе в ту же ночь.",
+ 'low', '', False,
+ ('Удар дрона по трасі Київ — Одеса в Чабанах: троє загиблих, четверо поранених',
+  'Чабани, Київська область',
+  'Російські джерела в добірці удар по Чабанах не згадують. Українські та незалежні видання збігаються в даних про загиблих і поранених; DW додає відомості про інших загиблих в Обухівському районі тієї ж ночі.',
+  None,
+  '«Українська правда» і РБК-Україна з посиланням на голову Київської ОВА Тимура Ткаченка та обласну прокуратуру повідомляють про удар російського дрона вранці 20 жовтня по автодорозі Київ — Одеса у Фастівському районі: у селищі Чабани, біля торговельного центру, горіли автомобілі, троє людей загинули, ще четверо поранені, рух обмежено. Ткаченко назвав це черговим ударом по мирних людях, які просто їхали на роботу.',
+  'DW в огляді нічної та ранкової атаки пише з посиланням на Київську обласну прокуратуру, що троє людей загинули під час атаки безпілотника на селище Чабани біля траси Київ — Одеса, ще четверо поранені. Крім того, в Обухівському районі тієї ж області під час удару по виробничо-складській будівлі загинули чоловік і дві жінки, шестеро поранені.'),
+ ('Drone strike on the Kyiv–Odesa highway at Chabany: three killed, four injured',
+  'Chabany, Kyiv region',
+  'Russian sources in the selection do not mention the strike on Chabany. Ukrainian and independent outlets agree on the numbers of killed and injured; DW adds other deaths in Obukhiv district the same night.',
+  None,
+  'Ukrainska Pravda and RBC-Ukraine, citing Kyiv regional governor Tymur Tkachenko and the regional prosecutor\'s office, report a Russian drone strike on the morning of 20 October on the Kyiv–Odesa highway in Fastiv district: in the village of Chabany, near a shopping centre, cars were on fire, three people were killed and four more injured, and traffic was restricted. Tkachenko called it another strike on civilians who were simply driving to work.',
+  'DW, in its round-up of the overnight and morning attack, writes, citing the Kyiv regional prosecutor\'s office, that three people were killed when a drone attacked the village of Chabany near the Kyiv–Odesa highway and four more were injured. In addition, in Obukhiv district of the same region a man and two women were killed and six people injured when a production and warehouse building was hit.'))
+
+json.dump(cards, open(OUT + 'c20c.json', 'w'), ensure_ascii=False, indent=1)
+print('c20c', len(cards))

@@ -1,0 +1,273 @@
+import json, sys, sqlite3, re
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import add, setd, ext, apply, EXT, NEW, q
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- hourly run 13:00 Oct 19 (ids 13068-13267): 3 new Oct 19 cards + extensions ----------------
+
+def rep(c, path, old, new):
+    o = c
+    for p in path[:-1]: o = o[p]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+def dropq(c, side, i, start):
+    n0 = len(c[side]['quotes'])
+    c[side]['quotes'] = [x for x in c[side]['quotes'] if not (x['id'] == i and x['text'].startswith(start))]
+    assert len(c[side]['quotes']) == n0 - 1, (c['key'], i, start)
+
+card('1019-peskov-settlement-without-kyiv', [13073, 13075, 13120, 13122, 13259, 13237],
+ 'Песков: окончательное урегулирование невозможно без участия кого-то из Киева, готового взять на себя ответственность; посредничество США Москва «высоко ценит»',
+ 'Москва', 'ukraine-wide',
+ ['расхождение: формулировки', 'одна из групп не освещает'],
+ S('Пресс-секретарь Кремля Дмитрий Песков, отвечая журналистам на вопрос, видит ли Москва возможность мирного урегулирования без непосредственного участия Украины в переговорах, сказал, что американская сторона продолжает посреднические и миротворческие усилия и Россия их «высоко ценит», но окончательное урегулирование «без участия кого-то из Киева, кто готов взять на себя ответственность, невозможно» (РИА Новости, ТАСС, «Интерфакс»). РИА Новости пересказывает это как невозможность урегулирования без участия представителя Киева, готового взять на себя ответственность, ТАСС — как то, что «кто-то на Украине должен взять на себя эту ответственность». Слова о посредничестве США РИА Новости и ТАСС выпустили отдельными сообщениями.',
+   (13073, 'американская сторона продолжает свои усилия посреднические, миротворческие. Мы высоко их ценим'),
+   (13259, 'окончательное урегулирование без участия кого-то из Киева, кто готов взять на себя ответственность, невозможно'),
+   (13075, 'Окончательное урегулирование конфликта на Украине невозможно без участия представителя Киева, готового взять на себя ответственность'),
+   (13122, 'Кто-то на Украине должен взять на себя эту ответственность'),
+   (13120, 'США продолжают посреднические усилия по урегулированию на Украине')),
+ S('«Украинская правда» со ссылкой на российские СМИ приводит слова Пескова полностью: американская сторона продолжает посреднические и миротворческие усилия, «которые мы высоко ценим», но окончательное урегулирование «без участия кого-то из Киева, кто готов взять на себя ответственность, невозможно». Это был ответ на вопрос, видит ли российская сторона возможность урегулирования без участия представителей Киева в переговорах. В заголовок издание выносит формулировку о «ком-то ответственном» из Киева.',
+   (13237, 'американська сторона продовжує свої посередницькі та миротворчі зусилля, які ми високо цінуємо'),
+   (13237, 'остаточне врегулювання без участі когось із Києва, хто готовий взяти на себе відповідальність, неможливе')),
+ None,
+ 'Цитату Пескова обе стороны передают одинаково. Различаются заголовки: РИА Новости выносит в заголовок, что урегулирование невозможно «без Киева», ТАСС — «без участия Киева», а оговорку о ком-то, кто готов взять на себя ответственность, приводят ниже; «Украинская правда», напротив, выносит в заголовок именно эту оговорку. Кого Песков имеет в виду, не уточняет ни он сам, ни источники в выборке. Слова о том, что Москва высоко ценит посредничество США, российские агентства подают отдельной новостью, украинское издание — в составе той же цитаты. Независимых сообщений в выборке нет.',
+ 'low', 'Цитата Пескова передана одинаково; кого именно в Киеве он считает готовым взять на себя ответственность, не уточняется.', False,
+ ('Пєсков: остаточне врегулювання неможливе без участі когось із Києва, хто готовий взяти на себе відповідальність; посередництво США Москва «високо цінує»',
+  'Москва',
+  'Цитату Пєскова обидві сторони передають однаково. Різняться заголовки: РИА Новости виносить у заголовок, що врегулювання неможливе «без Києва», ТАСС — «без участі Києва», а застереження про когось, хто готовий взяти на себе відповідальність, наводять нижче; «Українська правда», навпаки, виносить у заголовок саме це застереження. Кого Пєсков має на увазі, не уточнює ні він сам, ні джерела у вибірці. Слова про те, що Москва високо цінує посередництво США, російські агентства подають окремою новиною, українське видання — у складі тієї самої цитати. Незалежних повідомлень у вибірці немає.',
+  'Речник Кремля Дмитро Пєсков, відповідаючи журналістам на запитання, чи бачить Москва можливість мирного врегулювання без безпосередньої участі України в переговорах, сказав, що американська сторона продовжує посередницькі та миротворчі зусилля і Росія їх «високо цінує», але остаточне врегулювання «без участі когось із Києва, хто готовий взяти на себе відповідальність, неможливе» (РИА Новости, ТАСС, «Интерфакс»). РИА Новости переказує це як неможливість врегулювання без участі представника Києва, готового взяти на себе відповідальність, ТАСС — як те, що «хтось в Україні має взяти на себе цю відповідальність». Слова про посередництво США РИА Новости і ТАСС випустили окремими повідомленнями.',
+  '«Українська правда» з посиланням на російські ЗМІ наводить слова Пєскова повністю: американська сторона продовжує посередницькі та миротворчі зусилля, «які ми високо цінуємо», але остаточне врегулювання «без участі когось із Києва, хто готовий взяти на себе відповідальність, неможливе». Це була відповідь на запитання, чи бачить російська сторона можливість врегулювання без участі представників Києва в переговорах. У заголовок видання виносить формулювання про «когось відповідального» з Києва.',
+  None),
+ ('Peskov: a final settlement is impossible without someone from Kyiv who is ready to take responsibility; Moscow "highly values" US mediation',
+  'Moscow',
+  'Both sides relay Peskov\'s quote in the same way. The headlines differ: RIA Novosti headlines that a settlement is impossible "without Kyiv" and TASS "without Kyiv\'s participation", with the caveat about someone ready to take responsibility given further down; Ukrainska Pravda, by contrast, puts exactly that caveat in its headline. Neither Peskov himself nor the sources in the sample specify whom he means. The remark that Moscow highly values US mediation is presented by the Russian agencies as a separate news item and by the Ukrainian outlet as part of the same quote. There are no independent reports in the sample.',
+  'Kremlin spokesman Dmitry Peskov, answering reporters\' question whether Moscow sees a possibility of a peace settlement without Ukraine\'s direct participation in the talks, said the American side is continuing its mediation and peacemaking efforts and Russia "highly values" them, but a final settlement "without the participation of someone from Kyiv who is ready to take responsibility is impossible" (RIA Novosti, TASS, Interfax). RIA Novosti paraphrases this as a settlement being impossible without the participation of a representative of Kyiv ready to take responsibility, and TASS as "someone in Ukraine must take on this responsibility". RIA Novosti and TASS ran the remarks on US mediation as separate items.',
+  'Ukrainska Pravda, citing Russian media, quotes Peskov in full: the American side is continuing its mediation and peacemaking efforts, "which we highly value", but a final settlement "without the participation of someone from Kyiv who is ready to take responsibility is impossible". This was his answer to the question whether the Russian side sees a possibility of a settlement without representatives of Kyiv taking part in the talks. The outlet puts the wording about "someone responsible" from Kyiv in its headline.',
+  None))
+
+card('1019-crimea-woman-detained-air-defence', [12340, 12381, 12424, 12474, 12504, 12556, 13229],
+ 'ФСБ сообщила о задержании жительницы Крыма по делу о госизмене за съемку объектов ПВО для ГУР; «Общественное» приводит обвинение в кавычках',
+ 'Черноморское, Крым', 'ukraine-wide',
+ ['не проверено', 'расхождение: формулировки', 'одна из групп не освещает'],
+ S('ФСБ России сообщила, что жительница поселка Черноморское в Крыму (1963 года рождения, по данным «Интерфакса») через WhatsApp «инициативно установила контакт» с представителем ГУР Минобороны Украины и по заданию куратора фотографировала и снимала на видео объекты ПВО в регионе, а затем передавала материалы иностранной спецслужбе; по версии ФСБ, эти сведения могли использоваться ВСУ для планирования ракетно-артиллерийских ударов. Возбуждено уголовное дело о госизмене (статья 275 УК РФ), суд арестовал задержанную (РИА Новости, ТАСС, «Интерфакс»). ТАСС сообщило, что задержанная призналась в работе на спецслужбы Украины. РИА Новости описывает опубликованное ФСБ видео задержания в парке: на нем женщина говорит, что куратора интересовало «настроение людей», а затем бывший винзавод, где, по словам жителей, базируются российские военные, и что она сделала две фотографии этого объекта.',
+   (12340, 'инициативно установила контакт с представителем Главного управления разведки Министерства обороны Украины'),
+   (12340, 'Указанные сведения в дальнейшем могли быть использованы ВСУ для планирования нанесения ракетно-артиллерийских ударов.'),
+   (12474, 'жительница поселка Черноморское 1963 года рождения'),
+   (12424, 'Задержанная жительница Крыма призналась в работе на спецслужбы Украины'),
+   (12504, 'Я проезжала мимо на машине и сделала две фотографии этого объекта')),
+ S('«Общественное Крым» пересказывает сообщение пресс-службы ФСБ по «российской пропагандистской» агентуре «РИА Новости Крым»: «оккупанты» задержали жительницу поселка Черноморское, которая, как утверждает следствие, снимала объекты российской ПВО в Крыму и передавала их ГУР; обвинение издание приводит в кавычках. Издание добавляет правозащитный контекст: по словам главы Крымской правозащитной группы Ольги Скрипник, с начала 2026 года в оккупированном Крыму не менее 28 человек получили незаконные приговоры по статьям о госизмене, «террористической деятельности» и незаконном обращении со взрывчаткой; Зарема Бариева (КРЦ) говорит, что Россия системно преследует граждан Украины на временно оккупированных территориях, обвиняя их в «терроризме», «экстремизме», «шпионаже» и «госизмене».',
+   (13229, 'мешканка селища міського типу Чорноморського Республіки Крим за допомогою інтернет-месенджера WhatsApp ініціативно встановила контакт із представником Головного управління розвідки Міністерства оборони України'),
+   (13229, 'З початку 2026 року в окупованому Криму щонайменше 28 людей отримали незаконні вироки'),
+   (13229, 'Росія системно переслідує громадян України на ТОТ')),
+ None,
+ 'Все сведения о задержании исходят от ФСБ России. Российские агентства передают их как установленный факт, называют женщину «злоумышленницей» и «агентом Киева» и приводят ее признание на видео ФСБ. «Общественное» пересказывает то же сообщение ФСБ, но приводит обвинение в кавычках как утверждение следствия, называет российские власти «оккупантами» и помещает задержание в контекст преследования жителей оккупированного Крыма; о видео с признанием издание не пишет. Независимых сообщений в выборке нет.',
+ 'medium', 'Обвинение и признание известны только из сообщений и видео ФСБ; независимой проверки и позиции защиты в выборке нет.', False,
+ ('ФСБ повідомила про затримання мешканки Криму у справі про держзраду за зйомку об’єктів ППО для ГУР; «Суспільне» наводить звинувачення в лапках',
+  'Чорноморське, Крим',
+  'Усі відомості про затримання походять від ФСБ Росії. Російські агентства передають їх як встановлений факт, називають жінку «зловмисницею» та «агентом Києва» і наводять її зізнання на відео ФСБ. «Суспільне» переказує те саме повідомлення ФСБ, але наводить звинувачення в лапках як твердження слідства, називає російську владу «окупантами» і вміщує затримання в контекст переслідування мешканців окупованого Криму; про відео із зізнанням видання не пише. Незалежних повідомлень у вибірці немає.',
+  'ФСБ Росії повідомила, що мешканка селища Чорноморське в Криму (1963 року народження, за даними «Интерфакса») через WhatsApp «ініціативно встановила контакт» із представником ГУР Міноборони України і за завданням куратора фотографувала та знімала на відео об’єкти ППО в регіоні, а потім передавала матеріали іноземній спецслужбі; за версією ФСБ, ці відомості могли використовуватися ЗСУ для планування ракетно-артилерійських ударів. Порушено кримінальну справу про держзраду (стаття 275 КК РФ), суд заарештував затриману (РИА Новости, ТАСС, «Интерфакс»). ТАСС повідомило, що затримана зізналася в роботі на спецслужби України. РИА Новости описує оприлюднене ФСБ відео затримання в парку: на ньому жінка каже, що куратора цікавив «настрій людей», а потім колишній винзавод, де, за словами мешканців, базуються російські військові, і що вона зробила дві фотографії цього об’єкта.',
+  '«Суспільне Крим» переказує повідомлення пресслужби ФСБ за «російською пропагандистською» інформагенцією «РІА Новості Крим»: «окупанти» затримали мешканку селища Чорноморське, яка, як стверджує слідство, знімала об’єкти російської ППО в Криму і передавала їх ГУР; звинувачення видання наводить у лапках. Видання додає правозахисний контекст: за словами голови Кримської правозахисної групи Ольги Скрипник, з початку 2026 року в окупованому Криму щонайменше 28 людей отримали незаконні вироки за статтями про держзраду, «терористичну діяльність» і незаконне поводження з вибуховими речовинами; Зарема Барієва (КРЦ) каже, що Росія системно переслідує громадян України на тимчасово окупованих територіях, звинувачуючи їх у «тероризмі», «екстремізмі», «шпигунстві» та «держзраді».',
+  None),
+ ('FSB reports detaining a Crimean woman for treason over filming air defence sites for Ukrainian intelligence; Suspilne puts the charge in quotes',
+  'Chornomorske, Crimea',
+  'All information about the detention comes from Russia\'s FSB. Russian agencies relay it as established fact, call the woman an "offender" and an "agent of Kyiv" and cite her confession on the FSB video. Suspilne retells the same FSB statement but puts the charge in quotation marks as a claim by investigators, calls the Russian authorities "occupiers" and places the detention in the context of the persecution of residents of occupied Crimea; it does not mention the confession video. There are no independent reports in the sample.',
+  'Russia\'s FSB said that a resident of the township of Chornomorske in Crimea (born in 1963, according to Interfax) "on her own initiative established contact" via WhatsApp with a representative of the Main Intelligence Directorate (HUR) of Ukraine\'s Defence Ministry and, on her handler\'s instructions, photographed and filmed air defence sites in the region and passed the material to the foreign intelligence service; according to the FSB, the information could have been used by Ukraine\'s armed forces to plan missile and artillery strikes. A criminal case for high treason (Article 275 of the Russian Criminal Code) has been opened, and a court has remanded the woman in custody (RIA Novosti, TASS, Interfax). TASS reported that the detained woman confessed to working for Ukraine\'s intelligence services. RIA Novosti describes the FSB video of the arrest in a park: in it the woman says her handler was interested in "the mood of people" and later in a former winery where, according to residents, Russian military personnel are based, and that she took two photos of that site.',
+  'Suspilne Crimea retells the FSB press service statement as relayed by the "Russian propaganda" agency RIA Novosti Crimea: the "occupiers" detained a resident of Chornomorske who, investigators claim, filmed Russian air defence sites in Crimea and passed them to the HUR; the outlet puts the charge in quotation marks. It adds human-rights context: according to Olha Skrypnyk, head of the Crimean Human Rights Group, since the start of 2026 at least 28 people in occupied Crimea have received unlawful sentences under articles on treason, "terrorist activity" and illegal handling of explosives; Zarema Bariieva (KRC) says Russia systematically persecutes Ukrainian citizens in the temporarily occupied territories, accusing them of "terrorism", "extremism", "espionage" and "treason".',
+  None))
+
+card('1019-chuhuiv-sumy-daytime-strikes', [13154, 13231, 13098, 13141],
+ 'Днем 19 октября взрывы в Чугуеве и Сумах; в Чугуеве, по словам городского головы, удар пришелся по территории неработающего предприятия, пострадала женщина',
+ 'Чугуев, Сумы', 'kharkiv',
+ ['не проверено', 'одна из групп не освещает'],
+ S('ТАСС сообщает о взрывах в Чугуеве на востоке Украины со ссылкой на «Общественное», которое сообщило о попадании в предприятие. Незадолго до этого РИА Новости и ТАСС со ссылкой на Telegram-канал «Общественного» сообщили о взрыве в Сумах на фоне воздушной тревоги в Сумском районе. Чем нанесены удары и есть ли пострадавшие, российские сообщения не уточняют.',
+   (13154, 'Издание "Общественное. Новости" сообщило о попадании в предприятие'),
+   (13098, 'Взрыв прогремел в Сумах на северо-востоке Украины на фоне воздушной тревоги'),
+   (13141, 'В Сумах произошел взрыв')),
+ S('«Общественное» со ссылкой на городского голову Чугуева Галину Минаеву сообщает, что удары пришлись на территорию предприятия, которое не работает; на месте возник пожар, известно об одной пострадавшей женщине, медицинскую помощь ей оказали на месте, комиссия устанавливает число поврежденных домов. Взрывы в Чугуеве, по данным издания, были слышны с 13:00 по киевскому времени.',
+   (13231, 'влучання прийшлися на територію підприємства, що не працює'),
+   (13231, 'На місці влучань виникла пожежа.'),
+   (13231, 'Наразі маємо інформацію про одну постраждалу жінку, медичну допомогу якій надано на місці.'),
+   (13231, 'вибухи у Чугуєві чули з 13:00')),
+ None,
+ 'Российские агентства коротко сообщают о взрывах в Чугуеве и Сумах со ссылкой на «Общественное» и не приводят данных о пострадавших; ТАСС пишет о попадании «в предприятие», а городской голова Чугуева уточняет, что предприятие не работает, и сообщает о пострадавшей женщине и поврежденных домах. О взрыве в Сумах украинские источники в выборке отдельно не сообщают. Независимых сообщений в выборке нет.',
+ 'medium', 'Чем нанесены удары и что стало причиной взрыва в Сумах, источники в выборке не сообщают; данные о пострадавших и повреждениях предварительные.', False,
+ ('Удень 19 жовтня вибухи в Чугуєві та Сумах; у Чугуєві, за словами міської голови, удар припав на територію підприємства, що не працює, постраждала жінка',
+  'Чугуїв, Суми',
+  'Російські агентства коротко повідомляють про вибухи в Чугуєві та Сумах з посиланням на «Суспільне» і не наводять даних про постраждалих; ТАСС пише про влучання «в підприємство», а міська голова Чугуєва уточнює, що підприємство не працює, і повідомляє про постраждалу жінку та пошкоджені будинки. Про вибух у Сумах українські джерела у вибірці окремо не повідомляють. Незалежних повідомлень у вибірці немає.',
+  'ТАСС повідомляє про вибухи в Чугуєві на сході України з посиланням на «Суспільне», яке повідомило про влучання в підприємство. Незадовго до цього РИА Новости і ТАСС з посиланням на Telegram-канал «Суспільного» повідомили про вибух у Сумах на тлі повітряної тривоги в Сумському районі. Чим завдано ударів і чи є постраждалі, російські повідомлення не уточнюють.',
+  '«Суспільне» з посиланням на міську голову Чугуєва Галину Мінаєву повідомляє, що влучання припали на територію підприємства, яке не працює; на місці виникла пожежа, відомо про одну постраждалу жінку, медичну допомогу їй надали на місці, комісія встановлює кількість пошкоджених будинків. Вибухи в Чугуєві, за даними видання, було чути з 13:00 за київським часом.',
+  None),
+ ('Daytime explosions in Chuhuiv and Sumy on 19 October; in Chuhuiv, the mayor says, the grounds of an idle enterprise were hit and a woman injured',
+  'Chuhuiv, Sumy',
+  'Russian agencies briefly report explosions in Chuhuiv and Sumy, citing Suspilne, and give no information on casualties; TASS writes of a hit "on an enterprise", while the mayor of Chuhuiv specifies that the enterprise is not operating and reports an injured woman and damaged houses. Ukrainian sources in the sample do not report separately on the explosion in Sumy. There are no independent reports in the sample.',
+  'TASS reports explosions in Chuhuiv in eastern Ukraine, citing Suspilne, which reported a hit on an enterprise. Shortly before, RIA Novosti and TASS, citing Suspilne\'s Telegram channel, reported an explosion in Sumy during an air raid alert in the Sumy district. The Russian reports do not say what weapons were used or whether anyone was hurt.',
+  'Suspilne, citing Chuhuiv mayor Halyna Minaieva, reports that the strikes hit the grounds of an enterprise that is not operating; a fire broke out at the site, one injured woman is known of and received medical help on the spot, and a commission is establishing the number of damaged houses. According to the outlet, explosions were heard in Chuhuiv from 13:00 Kyiv time.',
+  None))
+
+@ext('1019-peskov-trilateral-meeting', [13077, 13116, 13125, 13258, 13236, 13218, 13251])
+def _(c):
+    # TASSr 13116, 13125 (same Peskov clarification, short) - ids only
+    for path, old, new in [
+        (('ua', 'summary'), ' По данным WSJ, формат исключает и Европу, которую Кремль считает главным препятствием на пути к победе в Украине.', ''),
+        (('uk', 'ua'), ' За даними WSJ, формат виключає і Європу, яку Кремль вважає головною перешкодою на шляху до перемоги в Україні.', ''),
+        (('en', 'ua'), ' According to the WSJ, the format also leaves out Europe, which the Kremlin regards as the main obstacle to victory in Ukraine.', ''),
+        (('ua', 'summary'), ' «Украинская правда», пересказывая WSJ, приводит оценку газеты: такой саммит без участия Зеленского «стал бы беспрецедентным» и вызвал бы тревогу в европейских столицах.', ''),
+        (('uk', 'ua'), ' «Українська правда», переказуючи WSJ, наводить оцінку газети: такий саміт без участі Зеленського «став би безпрецедентним» і викликав би тривогу в європейських столицях.', ''),
+        (('en', 'ua'), ' Ukrainska Pravda, retelling the WSJ, quotes the paper\'s assessment that such a summit without Zelensky "would be unprecedented" and would alarm European capitals.', '')]:
+        rep(c, path, old, new)
+    dropq(c, 'ua', 12196, 'Цей формат також виключає')
+    dropq(c, 'ua', 12663, 'без участі президента')
+    add(c, 'ru', 'На брифинге 19 октября Песков уточнил: поскольку все три лидера, возможно, будут на саммите в Китае, тема такой гипотетической встречи «упоминалась», но предметных предложений или договоренностей ни о самой встрече, ни о ее повестке «не обсуждалось и никем не высказывалось»; «Интерфакс» пишет, что тема упоминалась в общении Путина и Трампа.',
+        'На брифінгу 19 жовтня Пєсков уточнив: оскільки всі три лідери, можливо, будуть на саміті в Китаї, тема такої гіпотетичної зустрічі «згадувалася», але предметних пропозицій чи домовленостей ані щодо самої зустрічі, ані щодо її порядку денного «не обговорювалося і ніким не висловлювалося»; «Интерфакс» пише, що тема згадувалася в спілкуванні Путіна і Трампа.',
+        'At a briefing on 19 October Peskov clarified that since all three leaders may attend the summit in China, the topic of such a hypothetical meeting "was mentioned", but no concrete proposals or agreements on the meeting itself or its agenda "were discussed or put forward by anyone"; Interfax writes that the topic came up in contacts between Putin and Trump.',
+        [(13077, 'тема такой гипотетической встречи, она упоминалась'),
+         (13077, 'Предметных каких-либо предложений или договоренностей ни по самой встрече, ни по возможной повестке дня и содержанию этой встречи не обсуждалось и никем не высказывалось'),
+         (13258, 'Тема возможной встречи на высшем уровне РФ-США-КНР упоминалась в ходе общения президентов РФ и США')])
+    add(c, 'ua', 'Сибига, по данным «Общественного» и РБК-Украины, считает, что завершению войны могла бы способствовать встреча лидеров Украины, США и России, а место за одним столом с Трампом и Си Путин мог бы заслужить, лишь согласившись на прекращение огня еще до такой встречи.',
+        'Сибіга, за даними «Суспільного» та РБК-України, вважає, що завершенню війни могла б сприяти зустріч лідерів України, США та Росії, а місце за одним столом із Трампом і Сі Путін міг би заслужити, лише погодившись на припинення вогню ще до такої зустрічі.',
+        'Sybiha, according to Suspilne and RBC-Ukraine, believes a meeting of the leaders of Ukraine, the US and Russia could help end the war, and that Putin could earn a seat at the table with Trump and Xi only by agreeing to a ceasefire before such a meeting.',
+        [(13218, 'завершенню війни могла б сприяти тристороння зустріч лідерів України, США та Росії'),
+         (13251, 'Заслужити це місце він міг би лише серйозним кроком до миру – наприклад, погодившись на пропозицію про припинення вогню ще до такої зустрічі')])
+    c['diverge'] += ' На брифинге 19 октября Песков сказал, что тема встречи лишь упоминалась, а предметных предложений не было, — это передают и российские агентства, и «Украинская правда»; «Общественное» же пишет, что Песков подтвердил ведение переговоров о возможной встрече.'
+    c['uk']['d'] += ' На брифінгу 19 жовтня Пєсков сказав, що тема зустрічі лише згадувалася, а предметних пропозицій не було, — це передають і російські агентства, і «Українська правда»; «Суспільне» ж пише, що Пєсков підтвердив ведення переговорів про можливу зустріч.'
+    c['en']['d'] += ' At the 19 October briefing Peskov said the meeting had only been mentioned and no concrete proposals made, as Russian agencies and Ukrainska Pravda report; Suspilne writes that he confirmed talks on a possible meeting.'
+
+@ext('1019-rubio-intel-sanctions-apec', [13249, 13264, 13146])
+def _(c):
+    # Interfax 13264 (Breitbart: diesel decision "good for the US", = RIA 12692/12725), TASS EN 13146 (Donbas "11 percent", = TASSr 12981) - ids only
+    for path, old, new in [
+        (('ua', 'summary'), 'Рубио подчеркнул, что США не прекращали передавать Украине разведданные, удивился, откуда Зеленский берет такую информацию и зачем рассказывает о ней прессе, и сказал, что тому следует сосредоточиться на прекращении войны.',
+         'Рубио подчеркнул, что США не прекращали передавать Украине разведданные, а Зеленскому следует сосредоточиться на прекращении войны.'),
+        (('uk', 'ua'), 'Рубіо наголосив, що США не припиняли передавати Україні розвіддані, здивувався, звідки Зеленський бере таку інформацію і навіщо розповідає про неї пресі, і сказав, що тому слід зосередитися на припиненні війни.',
+         'Рубіо наголосив, що США не припиняли передавати Україні розвіддані, а Зеленському слід зосередитися на припиненні війни.'),
+        (('en', 'ua'), 'Rubio stressed that the US had not stopped sharing intelligence with Ukraine, wondered where Zelensky gets such information and why he tells the press about it, and said Zelensky should focus on ending the war.',
+         'Rubio stressed that the US had not stopped sharing intelligence with Ukraine and that Zelensky should focus on ending the war.'),
+        (('ua', 'summary'), '; специалисты вместе с партнерами разбираются в ситуации, поскольку такой случай не первый.', '.'),
+        (('uk', 'ua'), '; фахівці разом із партнерами розбираються в ситуації, бо такий випадок не перший.', '.'),
+        (('en', 'ua'), '; specialists and the partners are looking into the situation, as this is not the first such case.', '.')]:
+        rep(c, path, old, new)
+    rep(c, ('ua', 'summary'), '«Украинская правда» со ссылкой на Reuters приводит также', '«Украинская правда» (Reuters) приводит также')
+    rep(c, ('uk', 'ua'), '«Українська правда» з посиланням на Reuters наводить також', '«Українська правда» (Reuters) наводить також')
+    rep(c, ('en', 'ua'), 'Ukrainska Pravda, citing Reuters, also quotes', 'Ukrainska Pravda (Reuters) also quotes')
+    dropq(c, 'ua', 12469, 'Фахівці разом')
+    add(c, 'ua', 'РБК-Украина со ссылкой на Clash Report приводит и слова Рубио: президенту «не нравится видеть», как баллистическая ракета попадает в многоквартирный дом в Киеве, и поэтому урегулирования так трудно добиться.',
+        'РБК-Україна з посиланням на Clash Report наводить і слова Рубіо: президентові «не подобається бачити», як балістична ракета влучає в багатоквартирний будинок у Києві, і тому врегулювання так складно домогтися.',
+        'RBC-Ukraine, citing Clash Report, also quotes Rubio as saying the president "does not like to see" a ballistic missile hit an apartment building in Kyiv, which is why a settlement is so hard to achieve.',
+        [(13249, 'Президенту не подобається бачити, як балістична ракета влучає в багатоквартирний будинок у Києві'),
+         (13249, 'саме тому так складно домогтися вирішення цієї ситуації')])
+
+@ext('1019-mod-targets-kyiv-irpin', [13241, 13242, 13244])
+def _(c):
+    add(c, 'ind', 'Kyiv Independent со ссылкой на местные власти и сами компании пишет, что ночные удары сильно повредили промышленные объекты и критическую инфраструктуру. Производитель полиэтиленовых пленок, упаковки и труб для водо- и газоснабжения Planet Plastic («Планета пластик») подтвердил прямые попадания ракет по своим производственным мощностям; по местным данным, пострадал и производитель систем очистки воды Ecosoft в Ирпене, но неясно, о нем ли говорил мэр. По данным главы Киевской ОВА Тимура Ткаченко, которые приводит издание, в Ирпене ранены 17 человек, в том числе восемь детей. DW пишет, что Минобороны РФ подтвердило «массированные удары» и перечислило цели, но Украина эти цели не подтвердила, сообщив о попаданиях по медицинскому учреждению и станции метро в Киеве.',
+        'Kyiv Independent з посиланням на місцеву владу та самі компанії пише, що нічні удари сильно пошкодили промислові об’єкти та критичну інфраструктуру. Виробник поліетиленових плівок, пакування і труб для водо- та газопостачання Planet Plastic («Планета пластик») підтвердив прямі влучання ракет у свої виробничі потужності; за місцевими даними, постраждав і виробник систем очищення води Ecosoft в Ірпені, але незрозуміло, чи про нього говорив мер. За даними голови Київської ОВА Тимура Ткаченка, які наводить видання, в Ірпені поранено 17 людей, зокрема вісьмох дітей. DW пише, що Міноборони РФ підтвердило «масовані удари» і перелічило цілі, але Україна ці цілі не підтвердила, повідомивши про влучання в медичний заклад і станцію метро в Києві.',
+        'The Kyiv Independent, citing local authorities and the companies themselves, writes that the overnight strikes heavily damaged industrial facilities and critical infrastructure. Planet Plastic (Planeta Plastik), which makes polyethylene films, packaging and pipes for water and gas supply, confirmed that missiles directly hit its production facilities; according to local reports, the water filtration maker Ecosoft in Irpin was also damaged, though it is unclear whether this was the enterprise the mayor referred to. According to Kyiv regional governor Tymur Tkachenko, cited by the outlet, 17 people were injured in Irpin, including eight children. DW writes that the Russian Defence Ministry confirmed the "massive strikes" and listed its targets, but Ukraine did not confirm those targets, reporting hits on a medical facility and a metro station in Kyiv.',
+        [(13241, 'confirmed that missiles struck its production facilities directly, causing significant destruction'),
+         (13241, 'Ecosoft, a Ukrainian manufacturer of water filtration and purification systems, sustained damage in the overnight attack on Irpin, though it remains unclear whether this was the enterprise referenced by the mayor'),
+         (13242, 'injured 17 people, including eight children'),
+         (13244, 'Ukraine did not confirm those targets')])
+    for path, old, new in [
+        (('diverge',), ', которая предоставляет услуги связи бизнесу и абонентам в более чем 90 населенных пунктах;', ';'),
+        (('uk', 'd'), ', яка надає послуги зв’язку бізнесу та абонентам у понад 90 населених пунктах;', ';'),
+        (('en', 'd'), ', which provides communications services to businesses and customers in more than 90 localities;', ';'),
+        (('diverge',), 'Независимых сообщений в выборке нет.',
+         'Kyiv Independent пишет, что «Планета пластик» сама подтвердила прямые попадания ракет по своему производству, а DW — что Украина названные Минобороны цели не подтвердила. По данным Ткаченко в изложении Kyiv Independent, в Ирпене ранены 17 человек, в том числе восемь детей, — больше, чем в более ранних украинских сообщениях.'),
+        (('uk', 'd'), 'Незалежних повідомлень у вибірці немає.',
+         'Kyiv Independent пише, що «Планета пластик» сама підтвердила прямі влучання ракет у своє виробництво, а DW — що Україна названі Міноборони цілі не підтвердила. За даними Ткаченка у викладі Kyiv Independent, в Ірпені поранено 17 людей, зокрема вісьмох дітей, — більше, ніж у раніших українських повідомленнях.'),
+        (('en', 'd'), 'There are no independent reports in the sample.',
+         'The Kyiv Independent writes that Planeta Plastik itself confirmed direct missile hits on its production, and DW that Ukraine did not confirm the targets named by the ministry. According to Tkachenko as cited by the Kyiv Independent, 17 people were injured in Irpin, including eight children, more than in earlier Ukrainian reports.')]:
+        rep(c, path, old, new)
+    c['uncertainty_reason'] = 'Заявления Минобороны РФ о военном назначении пораженных объектов независимо не проверены; из названных объектов попадания подтвердили только «Датагруп» и, по данным Kyiv Independent, «Планета пластик»; данные о раненых в Ирпене предварительные и в течение дня выросли с шести до 17, трое числятся пропавшими без вести.'
+    c['tags'] = [t for t in c['tags'] if t != 'одна из групп не освещает']
+
+@ext('1019-dobropillia-control-disputed', [13113])
+def _(c):
+    add(c, 'ru', 'Комбат Степанян, по данным ТАСС, рассказал также, что для обмена данными в Доброполье российские военные использовали записки.',
+        'Комбат Степанян, за даними ТАСС, розповів також, що для обміну даними в Добропіллі російські військові використовували записки.',
+        'Battalion commander Stepanyan, according to TASS, also said Russian troops used handwritten notes to exchange information in Dobropillia.',
+        [(13113, 'ВС РФ использовали записки для обмена данными в Доброполье')])
+
+@ext('1017-kherson-air-strikes', [13219])
+def _(c):
+    for path, old, new in [
+        (('ua', 'summary'), 'экстренный медицинский техник Сергей Гончаров, работавший на «скорой» с 2014 года, сначала водителем; он погиб', 'экстренный медицинский техник Сергей Гончаров; он погиб'),
+        (('uk', 'ua'), 'екстрений медичний технік Сергій Гончаров, який працював на «швидкій» з 2014 року, спершу водієм; він загинув', 'екстрений медичний технік Сергій Гончаров; він загинув'),
+        (('en', 'ua'), 'emergency medical technician Serhii Honcharov, who had worked for the ambulance service since 2014, first as a driver; he was killed', 'emergency medical technician Serhii Honcharov; he was killed'),
+        (('ua', 'summary'), ' Херсонская организация Красного Креста сообщила о повреждении своего офиса.', ''),
+        (('uk', 'ua'), ' Херсонська організація Червоного Хреста повідомила про пошкодження свого офісу.', ''),
+        (('en', 'ua'), ' The Kherson branch of the Red Cross reported damage to its office.', '')]:
+        rep(c, path, old, new)
+    dropq(c, 'ua', 12827, 'Розпочав працювати')
+    add(c, 'ua', 'В тот же день областная военная администрация сообщила, что после авиаудара по Херсону к врачам обратились еще пятеро в возрасте от 57 до 84 лет с контузиями и взрывными травмами; о каком именно ударе речь, в сообщении не уточняется.',
+        'Того ж дня обласна військова адміністрація повідомила, що після авіаудару по Херсону до лікарів звернулися ще п’ятеро людей віком від 57 до 84 років з контузіями та вибуховими травмами; про який саме удар ідеться, у повідомленні не уточнюється.',
+        'The same day the regional military administration said five more people aged 57 to 84 had sought medical help after an air strike on Kherson with concussions and blast injuries; the statement does not specify which strike.',
+        [(13219, 'Всі вони отримали контузії, вибухові травми та гостру реакцію на стрес')])
+
+@ext('1019-front-claims', [13084, 13149, 13188])
+def _(c):
+    # RIA 13084, TASS EN 13149 (MoD: 27 sq km defence area at Omelnyk = TASSr 12944), TASS EN 13188 (Marochko 9,055 a week = TASSr 12240) - ids only, card near the limit
+    pass
+
+@ext('1017-front-claims-gerasimov-disputed', [13194])
+def _(c):
+    # MoD 13194 (Velykomykhailivka assault video, = RIA 11995) - id only
+    pass
+
+@ext('1019-energy-strikes-west-centre', [13216])
+def _(c):
+    # SUS 13216 (Zubra residents on the debris strike; Zubra already in the card) - id only, card at the limit
+    pass
+
+@ext('1019-strikes-regions-rivne-dnipro', [13222])
+def _(c):
+    # SUS 13222 (National Guard downed two drones over Rivne region Oct 18-19) - id only
+    pass
+
+@ext('1018-st-petersburg-drone-attack', [13257])
+def _(c):
+    # Interfax 13257 (Pulkovo back to normal schedule, = TASSr 13004) - id only
+    pass
+
+
+# ---- quote pre-check against the DB
+db = sqlite3.connect('/workspace/compare-site-v2/data/articles.db')
+n = lambda s: re.sub(r'\s+', ' ', s or '')
+def chk(i, t):
+    r = db.execute('select text from articles where id=?', (i,)).fetchone()
+    if not r or n(t) not in n(r[0]): print('QUOTE BAD', i, t[:70])
+FILES = ['c17b.json', 'c17d.json', 'c18a.json', 'c19b.json', 'c19d.json', 'c19e.json', 'c19f.json', 'c19g.json']
+def lens(c):
+    return [len(c[s]['summary']) for s in ('ru', 'ua', 'ind') if c[s]] + [len(c[l][k]) for l in ('uk', 'en') for k in ('ru', 'ua', 'ind', 'd') if c[l][k]] + [len(c['diverge'])]
+if '--dry' in sys.argv:
+    import copy
+    for c in cards:
+        for s in ('ru', 'ua', 'ind'):
+            if c[s]:
+                for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+        print('NEW', c['key'], max(lens(c)), len(c['title']), len(c['uk']['t']), len(c['en']['t']))
+    for f in FILES:
+        for c in json.load(open(OUT + f)):
+            if c['key'] in EXT:
+                c = copy.deepcopy(c); EXT[c['key']](c)
+                for s in ('ru', 'ua', 'ind'):
+                    if c[s]:
+                        for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+                L = lens(c)
+                print('DRY', c['key'], max(L), len(c['title']), len(c['uk']['t']), len(c['en']['t']))
+    sys.exit()
+
+apply(FILES)
+json.dump(cards, open(OUT + 'c19i.json', 'w'), ensure_ascii=False, indent=1)
+touched = set(EXT)
+for f in FILES + ['c19i.json']:
+    for c in json.load(open(OUT + f)):
+        if c['key'] not in touched and f != 'c19i.json': continue
+        for s in ('ru', 'ua', 'ind'):
+            if c[s]:
+                for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+        L = lens(c)
+        print(c['key'], max(L))
+        if max(L) > 1400: print('TOO LONG', f, c['key'], max(L))
+        if len(c['title']) > 160: print('TITLE LONG', c['key'], len(c['title']))

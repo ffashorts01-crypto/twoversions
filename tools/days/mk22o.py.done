@@ -1,0 +1,35 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+# ---------------- hourly run 22 Oct 09:00: new card (FT / NSPA) ----------------
+c22 = []
+c22.append(C('1022-nato-nspa-ukraine-procurement', [15867, 15904, 16093, 16151],
+ 'FT: НАТО позволит Украине закупать оружие и боеприпасы через свое агентство NSPA',
+ 'НАТО, Украина', 'ukraine-wide',
+ ['расхождение: формулировки', 'одна из групп не освещает'],
+ S("РИА Новости и ТАСС со ссылкой на Financial Times сообщают, что НАТО позволит Украине закупать оружие, боеприпасы и военное оборудование через свое агентство по обеспечению и закупкам (NSPA); газета ссылается на директора агентства по поддержке операций Жаклин Борсбом. ТАСС пишет, что это может позволить Киеву получать поставки быстрее и дешевле, а в англоязычной версии добавляет, что на прошлой неделе NSPA провело в Киеве мероприятие для 150 украинских компаний. РИА Новости отмечает, что такая схема рассматривается как альтернатива двусторонним инициативам, и приводит позицию России: поставки оружия Украине мешают урегулированию, напрямую вовлекают страны НАТО в конфликт и являются «игрой с огнем»; ТАСС — что они лишь затягивают конфликт.",
+   (15867, 'Издание пишет, что такая схема закупок рассматривается как альтернатива двусторонним инициативам.'),
+   (15904, 'По информации газеты, это может позволить Киеву получать поставки быстрее и по более низким ценам'),
+   (16093, 'last week NSPA held an event in Kiev for 150 Ukrainian companies'),
+   (15867, 'Россия считает, что поставки вооружений Украине мешают урегулированию, напрямую вовлекают страны НАТО в конфликт и являются "игрой с огнем".')),
+ S("РБК-Украина со ссылкой на Financial Times пишет, что Украине разрешили закупать оружие, боеприпасы и оборудование через Агентство поддержки и закупок НАТО (NSPA), которое помогает странам альянса закупать быстрее и дешевле; операционный директор агентства Жаклин Борсбом говорит, что Украина получит более структурированный механизм и доступ к уже налаженной промышленной базе. Издание добавляет со ссылкой на Reuters, что доступ к NSPA Украина получает на фоне ухудшения отношений с США, и напоминает о сообщении The Washington Post: администрация Трампа не одобрила передачу Украине ракет-перехватчиков Patriot.",
+   (16151, 'Це дає Україні можливість використовувати більш структурований механізм'),
+   (16151, 'Reuters додає, що доступ до NSPA Україна отримує на тлі погіршення відносин зі США.')),
+ None,
+ "Российские и украинский источники одинаково передают суть публикации FT. Российские агентства дополняют ее позицией Москвы о том, что поставки оружия затягивают конфликт и вовлекают в него НАТО; РБК-Украина — контекстом ухудшения отношений Киева с Вашингтоном и задержки поставок Patriot. РБК-Украина пишет, что Украине уже «разрешили» такие закупки, российские агентства — что НАТО «позволит». Независимые источники в подборке об этом не сообщают.",
+ 'low', 'Сведения основаны на публикации Financial Times и словах представителя NSPA; официального заявления НАТО в подборке нет.', False,
+ ('FT: НАТО дозволить Україні купувати зброю та боєприпаси через свою агенцію NSPA',
+  'НАТО, Україна',
+  'Російські та українське джерела однаково передають суть публікації FT. Російські агентства доповнюють її позицією Москви про те, що постачання зброї затягують конфлікт і втягують у нього НАТО; РБК-Україна — контекстом погіршення відносин Києва з Вашингтоном і затримки постачання Patriot. РБК-Україна пише, що Україні вже «дозволили» такі закупівлі, російські агентства — що НАТО «дозволить». Незалежні джерела в добірці про це не повідомляють.',
+  'РИА Новости і ТАСС із посиланням на Financial Times повідомляють, що НАТО дозволить Україні закуповувати зброю, боєприпаси та військове обладнання через свою агенцію із забезпечення та закупівель (NSPA); газета посилається на директорку агенції з підтримки операцій Жаклін Борсбум. ТАСС пише, що це може дозволити Києву отримувати постачання швидше й дешевше, а в англомовній версії додає, що минулого тижня NSPA провела в Києві захід для 150 українських компаній. РИА Новости зазначає, що таку схему розглядають як альтернативу двостороннім ініціативам, і наводить позицію Росії: постачання зброї Україні заважають урегулюванню, безпосередньо втягують країни НАТО в конфлікт і є «грою з вогнем»; ТАСС — що вони лише затягують конфлікт.',
+  'РБК-Україна з посиланням на Financial Times пише, що Україні дозволили купувати зброю, боєприпаси та обладнання через Агенцію підтримки й закупівель НАТО (NSPA), яка допомагає країнам Альянсу закуповувати швидше й дешевше; операційна директорка агенції Жаклін Борсбум каже, що Україна отримає більш структурований механізм і доступ до вже налагодженої промислової бази. Видання додає з посиланням на Reuters, що доступ до NSPA Україна отримує на тлі погіршення відносин зі США, і нагадує про повідомлення The Washington Post: адміністрація Трампа не схвалила передачу Україні ракет-перехоплювачів Patriot.',
+  None),
+ ('FT: NATO to let Ukraine buy weapons and ammunition through its NSPA agency',
+  'NATO, Ukraine',
+  'Russian and Ukrainian sources convey the substance of the FT report in the same way. Russian agencies add Moscow\'s position that arms supplies prolong the conflict and drag NATO into it; RBC-Ukraine adds the context of worsening relations between Kyiv and Washington and the delay of Patriot deliveries. RBC-Ukraine writes that Ukraine has already been "allowed" to make such purchases, Russian agencies that NATO "will allow" it. Independent sources in the selection do not report it.',
+  'RIA Novosti and TASS, citing the Financial Times, report that NATO will allow Ukraine to buy weapons, ammunition and military equipment through its Support and Procurement Agency (NSPA); the paper cites the agency\'s director of support to operations Jacqueline Borsboom. TASS writes that this could let Kyiv receive supplies faster and more cheaply, and its English-language version adds that last week the NSPA held an event in Kyiv for 150 Ukrainian companies. RIA Novosti notes that the scheme is seen as an alternative to bilateral initiatives and gives Russia\'s position: arms supplies to Ukraine hinder a settlement, directly involve NATO countries in the conflict and are "playing with fire"; TASS says they only prolong the conflict.',
+  'RBC-Ukraine, citing the Financial Times, writes that Ukraine has been allowed to buy weapons, ammunition and equipment through the NATO Support and Procurement Agency (NSPA), which helps alliance members buy faster and more cheaply; the agency\'s chief operating officer Jacqueline Borsboom says Ukraine will get a more structured mechanism and access to an already established industrial base. Citing Reuters, the outlet adds that Ukraine gains access to the NSPA amid worsening relations with the US, and recalls a Washington Post report that the Trump administration has not approved the transfer of Patriot interceptor missiles to Ukraine.',
+  None)))
+json.dump(c22, open(OUT + 'c22c.json', 'w'), ensure_ascii=False, indent=1)
+print('c22c', len(c22))

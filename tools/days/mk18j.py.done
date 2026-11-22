@@ -1,0 +1,44 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from extlib import add, setd, ext, apply
+
+# ---------------- hourly run 01:00 Oct 19 (ids 11857-11881): no new cards, extensions of Oct 18 cards ----------------
+# Articles dated Oct 19 00:xx (Berlin) are follow-ups of Oct 18 events; no new Oct 19 event covered by 2+ groups. See SKIPPED.md
+
+@ext('1018-kyiv-ballistic-evening', [11880])
+def _(c):
+    add(c, 'ua', 'После полуночи по киевскому времени РБК-Украина со ссылкой на Киевскую городскую военную администрацию сообщила, что в результате удара погиб человек, еще двое пострадавших получают медицинскую помощь.',
+        'Після опівночі за київським часом РБК-Україна з посиланням на Київську міську військову адміністрацію повідомила, що внаслідок удару загинула людина, ще двоє постраждалих отримують медичну допомогу.',
+        'After midnight Kyiv time RBC-Ukraine, citing the Kyiv City Military Administration, reported that one person was killed in the strike and two more injured people are receiving medical care.',
+        [(11880, 'Унаслідок ракетного удару по Києву увечері 18 жовтня загинула людина. Ще двоє постраждалих отримують медичну допомогу.')])
+    c['uncertainty_reason'] = 'Данные о попаданиях предварительные; о погибшем и двух пострадавших пока сообщает только РБК-Украина со ссылкой на КГВА, масштабы разрушений неизвестны.'
+    setd(c, 'Российские источники сообщают только о взрывах и тревоге, украинские и независимые — о баллистической атаке и попаданиях в медцентр и нежилое здание. Украинские СМИ по-разному указывают районы: «Украинская правда», РБК-Украина и Kyiv Independent относят медцентр к Деснянскому району, Суспильне — к Днепровскому. О погибшем и двух пострадавших сообщает РБК-Украина со ссылкой на КГВА; российские источники в выборке о жертвах не пишут.',
+         'Російські джерела повідомляють лише про вибухи й тривогу, українські та незалежні — про балістичну атаку і влучання в медцентр та нежитлову будівлю. Українські ЗМІ по-різному вказують райони: «Українська правда», РБК-Україна і Kyiv Independent відносять медцентр до Деснянського району, Суспільне — до Дніпровського. Про загиблу людину і двох постраждалих повідомляє РБК-Україна з посиланням на КМВА; російські джерела у вибірці про жертви не пишуть.',
+         'Russian sources report only explosions and the alert, Ukrainian and independent ones a ballistic missile attack and hits on a medical centre and a non-residential building. Ukrainian media name the districts differently: Ukrainska Pravda, RBC-Ukraine and the Kyiv Independent place the medical centre in Desnianskyi district, Suspilne in Dniprovskyi. RBC-Ukraine, citing the Kyiv City Military Administration, reports one person killed and two injured; Russian sources in the sample do not mention casualties.')
+
+@ext('1018-trump-truth-social-zelensky', [11858, 11863, 11865, 11871, 11877, 11881])
+def _(c):
+    add(c, 'ru', 'Позже Дмитриев опубликовал картинку с золотым унитазом, которую РИА связывает с коррупционным делом Миндича, и назвал нападки Зеленского на Трампа перед выборами «слишком очевидными».',
+        'Пізніше Дмитрієв опублікував картинку із золотим унітазом, яку РИА пов’язує з корупційною справою Міндіча, і назвав нападки Зеленського на Трампа перед виборами «занадто очевидними».',
+        'Dmitriev later posted a picture of a golden toilet, which RIA links to the Mindich corruption case, and called Zelensky\'s attacks on Trump before the election "too obvious".',
+        [(11858, 'опубликовал картинку с золотым унитазом'),
+         (11865, 'Постоянные нападки Зеленского на президента Трампа перед промежуточными выборами (в американский конгресс - ред.) слишком очевидны и приводят к обратному результату')])
+    add(c, 'ind', 'BBC напоминает, что Зеленский с начала вторжения неоднократно заявлял, что мира не хочет Путин, а Дмитриев назвал отказ от санкций «историческим моментом».',
+        'BBC нагадує, що Зеленський від початку вторгнення неодноразово заявляв, що миру не хоче Путін, а Дмитрієв назвав відмову від санкцій «історичним моментом».',
+        'The BBC recalls that Zelensky has repeatedly said since the invasion began that it is Putin who does not want peace, while Dmitriev called the sanctions waiver "an important and truly historic moment".',
+        [(11877, "Zelensky has pushed for an end to fighting, and has repeatedly said that Putin doesn't want peace"),
+         (11877, 'an important and truly historic moment')])
+
+@ext('1018-front-claims', [11870, 11878])
+def _(c):
+    add(c, 'ru', 'Комбат Степанян заявил ТАСС, что ВСУ пытаются «с флагами» подойти к Доброполью, а российские войска уничтожили несколько единиц техники с десантом.',
+        'Комбат Степанян заявив ТАСС, що ЗСУ намагаються «з прапорами» підійти до Добропілля, а російські війська знищили кілька одиниць техніки з десантом.',
+        'Battalion commander Stepanyan told TASS that Ukrainian forces are trying to approach Dobropillia "with flags", and that Russian troops destroyed several vehicles carrying troops.',
+        [(11870, 'ВСУ пытаются с флагами подойти к Доброполью')])
+    add(c, 'ind', 'Kyiv Independent пересказывает вечернее обращение Зеленского: с начала осени ВСУ освободили больше территории, чем захватила Россия, попытки штурма Доброполья отбиваются. Издание ссылается на ISW: российское командование делает «сильно преувеличенные» заявления о продвижении, не соответствующие ситуации на поле боя.',
+        'Kyiv Independent переказує вечірнє звернення Зеленського: від початку осені ЗСУ звільнили більше території, ніж захопила Росія, спроби штурму Добропілля відбиваються. Видання посилається на ISW: російське командування робить «сильно перебільшені» заяви про просування, що не відповідають ситуації на полі бою.',
+        'The Kyiv Independent relays Zelensky\'s evening address: since the start of autumn Ukrainian forces have liberated more territory than Russia has captured, and assaults on Dobropillia are being repelled. The outlet cites the ISW: Russian commanders make "greatly exaggerated claims" of advances that do not match battlefield realities.',
+        [(11878, 'Since the start of fall, our warriors have liberated more territory than the Russians have managed to capture.'),
+         (11878, 'greatly exaggerated claims of Russian frontline advances that do not correspond to battlefield realities')])
+
+apply(['c18b.json', 'c18d.json'])

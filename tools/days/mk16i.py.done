@@ -1,0 +1,76 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+card('1016-moldova-poland-airspace', [10920, 10956, 7251, 7276, 8171, 8202, 8631, 9624],
+ 'Дроны пять раз нарушили воздушное пространство Молдовы, в Дондюшанском районе упал и взорвался беспилотник; Польша трижды за сутки поднимала авиацию', 'Молдова, Польша', 'moldova-romania',
+ ['одна из групп не освещает'],
+ S('Интерфакс со ссылкой на Оперативное командование Польши сообщает, что польская и союзная авиация поднималась в воздух второй, а затем и третий раз за сутки из-за российских ударов по западу Украины; наземные системы ПВО приведены в высшую готовность.',
+   (10956, 'Авиация Польши и ее союзников по НАТО третий раз за текущие сутки была поднята в воздух на фоне воздушной тревоги на Украине')),
+ S('Минобороны Молдовы зафиксировало ночью пять нарушений воздушного пространства беспилотниками, залетавшими со стороны Одесской области на фоне российских атак на Украину; днем беспилотник упал и взорвался у села Скаяны Дондюшанского района, принадлежность устанавливается.',
+   (7251, 'перший «літальний об\'єкт» залетів у повітряний простір країни о 23:02 з боку українського прикордонного села Тимкове'),
+   (8202, 'безпілотник розбився та вибухнув поблизу села Скаяни, Дондюшанського району країни')),
+ S('Kyiv Independent пишет о четырех российских дронах, залетавших в Молдову, а Al Jazeera — что Польша подняла истребители, но нарушения ее воздушного пространства не зафиксировано.',
+   (9624, 'they had scrambled fighter jets during the attacks and no violation of the country’s airspace was recorded')),
+ 'Российские источники сообщают только о польских мерах и не упоминают Молдову; Суспильне говорит о пяти нарушениях, Kyiv Independent — о четырех дронах (один из них залетал дважды).',
+ 'low', '', False,
+ ['Дрони п’ять разів порушили повітряний простір Молдови, у Дондюшанському районі впав і вибухнув безпілотник; Польща тричі за добу піднімала авіацію', 'Молдова, Польща',
+  'Російські джерела повідомляють лише про польські заходи і не згадують Молдову; Суспільне говорить про п’ять порушень, Kyiv Independent — про чотири дрони (один із них залітав двічі).',
+  'Інтерфакс із посиланням на Оперативне командування Польщі повідомляє, що польська і союзна авіація піднімалася в повітря вдруге, а потім і втретє за добу через російські удари по заходу України; наземні системи ППО приведено у найвищу готовність.',
+  'Міноборони Молдови зафіксувало вночі п’ять порушень повітряного простору безпілотниками, що залітали з боку Одещини на тлі російських атак на Україну; вдень безпілотник упав і вибухнув біля села Скаяни Дондюшанського району, належність встановлюється.',
+  'Kyiv Independent пише про чотири російські дрони, що залітали в Молдову, а Al Jazeera — що Польща підняла винищувачі, але порушення її повітряного простору не зафіксовано.'],
+ ['Drones violate Moldovan airspace five times, a drone crashes and explodes in Donduseni district; Poland scrambles aircraft three times in a day', 'Moldova, Poland',
+  'Russian sources report only the Polish measures and do not mention Moldova; Suspilne speaks of five violations, Kyiv Independent of four drones (one of which entered twice).',
+  'Interfax, citing Poland\'s Operational Command, reports that Polish and allied aircraft were scrambled a second and then a third time in a day because of Russian strikes on western Ukraine, with ground-based air defences put on highest alert.',
+  'Moldova\'s Defence Ministry recorded five airspace violations overnight by drones entering from Odesa region amid Russian attacks on Ukraine; during the day a drone crashed and exploded near the village of Scaieni in Donduseni district, and its origin is being established.',
+  'Kyiv Independent writes about four Russian drones that entered Moldova, and Al Jazeera that Poland scrambled fighter jets but recorded no violation of its airspace.'])
+
+card('1016-nebo-u-radar-strike', [8895, 7256, 7270, 8862, 8634],
+ 'Генштаб ВСУ: поражена РЛС «Небо-У» в Краснодарском крае, две РЛС и станция РЭБ в Брянской области', 'Магри, Краснодарский край; Брянская область; Крым', 'krasnodar',
+ ['одна из групп не освещает', 'не проверено независимо'],
+ None,
+ S('Генштаб ВСУ сообщил, что в ночь на 16 октября у населенного пункта Магри Краснодарского края поражена дальнобойная РЛС 55Ж6У «Небо-У» ориентировочной стоимостью около 100 млн долларов, в районе возник пожар. Кроме того, по данным Генштаба, в Брянской области поражены две РЛС у Озерного и Трубчевска и станция РЭБ у Новозыбкова, а в оккупированном Крыму у Оленевки — две телекоммуникационные вышки. Подразделение ГУР «Артан» заявило о более чем 2300 пораженных целях в приграничье за несколько месяцев.',
+   (7256, 'Орієнтовна вартість станції — близько 100 мільйонів'),
+   (7270, 'у Брянській області РФ уражено дві радіолокаційні станції: у районах селища Озарьонне та міста Трубчевськ')),
+ S('Kyiv Independent пересказывает заявление Генштаба о поражении РЛС «Небо-У» у Магри.',
+   (8634, 'The Ukrainian military struck a Russian Nebo-U radar near the settlement of Magri, in Krasnodar Krai, on the night of Oct. 16, according to the Ukrainian General Staff.')),
+ 'Российские источники в выборке удар не комментируют; данные о поражении исходят только от украинского Генштаба.',
+ 'medium', 'Сведения о поражении исходят от одной стороны и независимо не подтверждены.', False,
+ ['Генштаб ЗСУ: уражено РЛС «Небо-У» в Краснодарському краї, дві РЛС і станцію РЕБ у Брянській області', 'Магри, Краснодарський край; Брянська область; Крим',
+  'Російські джерела у вибірці удар не коментують; дані про ураження походять лише від українського Генштабу.',
+  None,
+  'Генштаб ЗСУ повідомив, що в ніч на 16 жовтня біля населеного пункту Магри Краснодарського краю уражено далекобійну РЛС 55Ж6У «Небо-У» орієнтовною вартістю близько 100 млн доларів, у районі виникла пожежа. Крім того, за даними Генштабу, у Брянській області уражено дві РЛС біля Озерного і Трубчевська та станцію РЕБ біля Новозибкова, а в окупованому Криму біля Оленівки — дві телекомунікаційні вежі. Підрозділ ГУР «Артан» заявив про понад 2300 уражених цілей у прикордонні за кілька місяців.',
+  'Kyiv Independent переказує заяву Генштабу про ураження РЛС «Небо-У» біля Магри.'],
+ ['Ukrainian General Staff: Nebo-U radar hit in Krasnodar Krai, two radars and an EW station in Bryansk region', 'Magri, Krasnodar Krai; Bryansk region; Crimea',
+  'Russian sources in the sample do not comment on the strike; the claims come only from the Ukrainian General Staff.',
+  None,
+  'The Ukrainian General Staff said that on the night of 16 October a 55Zh6U Nebo-U long-range radar worth about 100 million dollars was hit near Magri in Krasnodar Krai, causing a fire. It also said two radars near Ozyorny and Trubchevsk and an electronic warfare station near Novozybkov were hit in Bryansk region, and two telecom towers near Olenivka in occupied Crimea. The military intelligence unit Artan claimed more than 2300 targets hit in the border area over several months.',
+  'Kyiv Independent relays the General Staff\'s statement about the strike on the Nebo-U radar near Magri.'])
+
+card('1016-kaliningrad-nato-rhetoric', [6156, 6165, 10919, 10917, 10913, 6125, 9451],
+ 'Захарова: любая агрессия против Калининграда вызовет «сокрушительный ответ»; главком НАТО в Европе: планов нападения нет, у альянса явное превосходство', 'Калининградская область, Литва, Эстония', 'russia-other',
+ ['одна из групп не освещает'],
+ S('Мария Захарова заявила, что любая вооруженная агрессия против Калининградской области приведет к «буквально сокрушительному ответу» и война будет «очень короткой». ТАСС приводит слова главкома НАТО в Европе Алексуса Гринкевича о том, что у альянса нет планов нападать на Калининград. Интерфакс сообщает, что Литва усилила военными охрану границы с Калининградской областью, а ЕС выделит Эстонии около 32 млн евро на наблюдение за границей с Россией; Родион Мирошник заявил, что Запад видит в странах Балтии «второй эшелон» прокси-войны.',
+   (6156, 'any act of armed aggression against the Kaliningrad Region will result in a literally devastating response using all means at Russia’s disposal, and the war will be very short'),
+   (6165, 'So Russia has nothing to worry about regarding Kaliningrad.'),
+   (10917, 'Литовских военнослужащих направили на усиление границы с Калининградской областью РФ')),
+ None,
+ S('DW приводит интервью Гринкевича Der Spiegel: военные возможности НАТО значительно превосходят российские, поэтому Россия не начнет масштабного нападения обычными вооружениями и прибегает к диверсиям.',
+   (9451, 'Военные возможности, которые мы задействовали бы в случае крупного конфликта, значительно превосходят возможности Москвы')),
+ 'ТАСС из интервью Гринкевича выделяет отсутствие планов нападения, DW — тезис о военном превосходстве НАТО и диверсиях как методе России.',
+ 'low', '', False,
+ ['Захарова: будь-яка агресія проти Калінінграда спричинить «нищівну відповідь»; головком НАТО в Європі: планів нападу немає, альянс має явну перевагу', 'Калінінградська область, Литва, Естонія',
+  'ТАСС з інтерв’ю Гринкевича виокремлює відсутність планів нападу, DW — тезу про військову перевагу НАТО і диверсії як метод Росії.',
+  'Марія Захарова заявила, що будь-яка збройна агресія проти Калінінградської області призведе до «буквально нищівної відповіді» і війна буде «дуже короткою». ТАСС наводить слова головнокомандувача НАТО в Європі Алексуса Гринкевича про те, що альянс не має планів нападати на Калінінград. Інтерфакс повідомляє, що Литва посилила військовими охорону кордону з Калінінградською областю, а ЄС виділить Естонії близько 32 млн євро на спостереження за кордоном із Росією; Родіон Мірошник заявив, що Захід бачить у країнах Балтії «другий ешелон» проксі-війни.',
+  None,
+  'DW наводить інтерв’ю Гринкевича Der Spiegel: військові можливості НАТО значно перевищують російські, тому Росія не почне масштабного нападу звичайними озброєннями і вдається до диверсій.'],
+ ['Zakharova: any aggression against Kaliningrad will meet a "devastating response"; NATO\'s top commander in Europe: no plans to attack, alliance has clear superiority', 'Kaliningrad region, Lithuania, Estonia',
+  'TASS highlights from Grynkewich\'s interview the absence of attack plans, DW the claim of NATO military superiority and sabotage as Russia\'s method.',
+  'Maria Zakharova said any armed aggression against Kaliningrad region would bring a "literally devastating response" and the war would be "very short". TASS quotes NATO\'s Supreme Allied Commander Europe Alexus Grynkewich as saying the alliance has no plans to attack Kaliningrad. Interfax reports that Lithuania has reinforced its border with Kaliningrad region with troops and that the EU will give Estonia about 32 million euros for surveillance of its border with Russia; Rodion Miroshnik said the West sees the Baltic states as a "second echelon" in a proxy war.',
+  None,
+  'DW cites Grynkewich\'s interview with Der Spiegel: NATO\'s military capabilities far exceed Russia\'s, so Russia will not launch a large-scale conventional attack and resorts to sabotage.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c16i.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

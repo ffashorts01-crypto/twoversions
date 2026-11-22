@@ -1,0 +1,96 @@
+# -*- coding: utf-8 -*-
+"""v2.1 UI strings (confidence badge, error report, corrections page, parametrised period); merged into ui.UI by `import ui2` at the end of ui.py."""
+REASON_TEXT = {   # withheld / withdrawn reason codes -> (ru, uk, en)
+ 'few_articles': ('меньше двух релевантных материалов', 'менше двох релевантних матеріалів', 'fewer than two relevant articles'),
+ 'few_sources': ('меньше двух разных источников', 'менше двох різних джерел', 'fewer than two distinct sources'),
+ 'relevance_low': ('фильтр релевантности подтвердил менее половины материалов', 'фільтр релевантності підтвердив менше половини матеріалів', 'the relevance filter confirmed fewer than half of the articles'),
+ 'quote_check': ('нет проверенной дословной цитаты у группы с пересказом', 'немає перевіреної дослівної цитати в групи з переказом', 'no verified verbatim quote for a group with a summary'),
+ 'numbers_ungrounded': ('несколько чисел из пересказа не найдены в источниках', 'кілька чисел із переказу не знайдено в джерелах', 'several numbers in the summary are not found in the sources'),
+ 'llm_output_invalid': ('ответ модели неполон или некорректен', 'відповідь моделі неповна або некоректна', 'the model output was incomplete or invalid'),
+ 'translation': ('не прошла проверка перевода', 'не пройшла перевірка перекладу', 'the translation check failed'),
+ 'model_uncertain': ('модель сообщила о высокой неуверенности', 'модель повідомила про високу невпевненість', 'the model reported high uncertainty'),
+ 'merged': ('событие объединено с другим', 'подію об’єднано з іншою', 'merged into another event'),
+ 'budget': ('достигнут лимит расходов на обработку', 'досягнуто ліміту витрат на обробку', 'the processing budget cap was reached'),
+ 'manual': ('ошибка подтверждена после сообщения читателя', 'помилку підтверджено після повідомлення читача', 'an error was confirmed after a reader report'),
+}
+KIND_TEXT = {'withdrawn': ('снята с публикации', 'знято з публікації', 'withdrawn'), 'corrected': ('исправлена', 'виправлена', 'corrected')}
+
+U2 = {
+'ru': dict(
+ conf_h='Подтверждённость', conf_note='Автоматическая оценка по формальным признакам (охват, число источников, расхождение чисел, проверки цитат и релевантности) — не оценка истинности.',
+ conf_more='Как это считается', f_conf='Подтверждённость', f_conf_all='Любая',
+ err_report='Сообщить об ошибке в этой карточке', err_subject='Ошибка в карточке', err_body='Страница',
+ nav_corr='Исправления', footer_corr='Журнал исправлений',
+ corr_title='Журнал исправлений', corr_h1='Журнал исправлений', corr_desc='Публичный журнал: какие карточки были сняты или исправлены и почему; сводка автоматических отказов в публикации.',
+ corr_intro='Здесь фиксируются все случаи, когда опубликованная карточка снималась или исправлялась: по сообщению читателя или автоматически (карточка перестала проходить проверки). Записи не удаляются.',
+ corr_empty='Записей пока нет: ни одна опубликованная карточка ещё не снималась и не исправлялась.',
+ corr_th=('Дата', 'Карточка', 'Что произошло', 'Причина', 'Как выявлено'), corr_auto='автоматически', corr_manual='по сообщению читателя',
+ corr_stats_h='Автоматические отказы в публикации', corr_stats_p='Сколько кандидатов в события последний автоматический запуск не опубликовал и по какой причине (одна карточка может иметь несколько причин). Эти карточки на сайт не попадают.',
+ corr_stats_line='Кандидатов в события: {n}; опубликовано: {pub}; не опубликовано: {wh}.', corr_report='Сообщить об ошибке',
+ stats='Событий: {n}. Материалов в базе: Россия — {ru}, Украина — {ua}, независимые — {ind}. Период: {period}.',
+ home_desc='{n} событий войны в Украине: что сообщают российские, украинские и независимые СМИ, цитаты в оригинале и где версии расходятся. Обновляется каждые 2 часа.',
+ dates_desc='Архив событий войны по датам, {period}: выберите день и посмотрите, как о событиях писали российские, украинские и независимые СМИ.',
+ footer_base='Данные собраны автоматически; последнее обновление: {collected} (Europe/Berlin).',
+ footer_disclaimer='Автоматическая сводка, может содержать ошибки: всё содержание создано языковой моделью без ручной проверки перед публикацией. Проверяйте по ссылкам на оригиналы. Сайт не определяет, какая из версий верна.',
+ howto='Карточка группирует материалы об одном событии: что сообщают российские источники (ТАСС, РИА Новости, Интерфакс, Минобороны РФ), украинские (Суспільне, «Українська правда», РБК-Україна) и независимые (BBC, DW, Meduza, «Медиазона», The Guardian, Al Jazeera, France 24, Euronews, The Moscow Times, Kyiv Independent). Пересказы автоматические (языковая модель), цитаты дословные, на языке оригинала, со ссылкой. Значок «Подтверждённость» показывает, насколько событие подтверждается разными источниками; это не оценка истинности. «Сообщений не найдено» означает отсутствие в собранных данных, а не во всех СМИ. Сайт не решает, какая версия верна.',
+ event_note='Автоматическая сводка, может содержать ошибки. Краткие пересказы составлены языковой моделью без ручной проверки; цитаты дословные (проверены кодом), на языке оригинала, со ссылкой. Блок «Где версии расходятся» только фиксирует различия в формулировках и числах и не утверждает, кто прав.',
+ event_note_tr='',
+ about_title='О проекте: методика, шкала подтверждённости, ошибки, исправления', about_h1='О проекте',
+ about_desc='Методика, шкала подтверждённости, прогноз ошибок, политика исправлений, нейтральность, анонимность проекта и список источников.',
+ auto_pub='Опубликовано автоматически',
+),
+'uk': dict(
+ conf_h='Підтвердженість', conf_note='Автоматична оцінка за формальними ознаками (охоплення, кількість джерел, розбіжність чисел, перевірки цитат і релевантності) — не оцінка істинності.',
+ conf_more='Як це рахується', f_conf='Підтвердженість', f_conf_all='Будь-яка',
+ err_report='Повідомити про помилку в цій картці', err_subject='Помилка в картці', err_body='Сторінка',
+ nav_corr='Виправлення', footer_corr='Журнал виправлень',
+ corr_title='Журнал виправлень', corr_h1='Журнал виправлень', corr_desc='Публічний журнал: які картки було знято або виправлено і чому; зведення автоматичних відмов у публікації.',
+ corr_intro='Тут фіксуються всі випадки, коли опубліковану картку було знято або виправлено: за повідомленням читача чи автоматично (картка перестала проходити перевірки). Записи не видаляються.',
+ corr_empty='Записів поки немає: жодну опубліковану картку ще не знімали й не виправляли.',
+ corr_th=('Дата', 'Картка', 'Що сталося', 'Причина', 'Як виявлено'), corr_auto='автоматично', corr_manual='за повідомленням читача',
+ corr_stats_h='Автоматичні відмови в публікації', corr_stats_p='Скільки кандидатів у події останній автоматичний запуск не опублікував і з якої причини (одна картка може мати кілька причин). Ці картки на сайт не потрапляють.',
+ corr_stats_line='Кандидатів у події: {n}; опубліковано: {pub}; не опубліковано: {wh}.', corr_report='Повідомити про помилку',
+ stats='Подій: {n}. Матеріалів у базі: Росія — {ru}, Україна — {ua}, незалежні — {ind}. Період: {period}.',
+ home_desc='{n} подій війни в Україні: що повідомляють російські, українські та незалежні медіа, цитати в оригіналі й де версії розходяться. Оновлюється щодві години.',
+ dates_desc='Архів подій війни за датами, {period}: оберіть день і подивіться, як про події писали російські, українські та незалежні медіа.',
+ footer_base='Дані зібрано автоматично; останнє оновлення: {collected} (Europe/Berlin).',
+ footer_disclaimer='Автоматичне зведення, може містити помилки: увесь вміст створено мовною моделлю без ручної перевірки перед публікацією. Перевіряйте за посиланнями на оригінали. Сайт не визначає, яка з версій правдива.',
+ howto='Картка групує матеріали про одну подію: що повідомляють російські джерела (ТАСС, РИА Новости, Інтерфакс, Міноборони РФ), українські (Суспільне, «Українська правда», РБК-Україна) та незалежні (BBC, DW, Meduza, «Медіазона», The Guardian, Al Jazeera, France 24, Euronews, The Moscow Times, Kyiv Independent). Перекази автоматичні (мовна модель), цитати дослівні, мовою оригіналу, з посиланням. Значок «Підтвердженість» показує, наскільки подію підтверджують різні джерела; це не оцінка істинності. «Повідомлень не знайдено» означає відсутність у зібраних даних, а не в усіх медіа. Сайт не вирішує, яка версія правдива.',
+ event_note='Автоматичне зведення, може містити помилки. Короткі перекази складено мовною моделлю без ручної перевірки; назви, перекази та блок «Де версії розходяться» українською — автоматичний переклад з російського оригіналу. Цитати дослівні (перевірені кодом), мовою оригіналу, з посиланням. Блок «Де версії розходяться» лише фіксує відмінності у формулюваннях і числах і не стверджує, хто правий.',
+ about_title='Про проєкт: методика, шкала підтвердженості, помилки, виправлення', about_h1='Про проєкт',
+ about_desc='Методика, шкала підтвердженості, прогноз помилок, політика виправлень, нейтральність, анонімність проєкту та перелік джерел.',
+ auto_pub='Опубліковано автоматично',
+),
+'en': dict(
+ conf_h='Confirmation', conf_note='Automatic assessment from formal features (coverage, number of sources, conflicting figures, quote and relevance checks) — not an assessment of truth.',
+ conf_more='How this is computed', f_conf='Confirmation', f_conf_all='Any',
+ err_report='Report an error in this card', err_subject='Error in a card', err_body='Page',
+ nav_corr='Corrections', footer_corr='Corrections log',
+ corr_title='Corrections log', corr_h1='Corrections log', corr_desc='Public log: which cards were withdrawn or corrected and why; a summary of automatic refusals to publish.',
+ corr_intro='This page records every case where a published card was withdrawn or corrected — after a reader report or automatically (a card stopped passing the checks). Entries are never deleted.',
+ corr_empty='No entries yet: no published card has been withdrawn or corrected so far.',
+ corr_th=('Date', 'Card', 'What happened', 'Reason', 'How found'), corr_auto='automatic', corr_manual='reader report',
+ corr_stats_h='Automatic refusals to publish', corr_stats_p='How many candidate events the latest automatic run did not publish, and why (one card can have several reasons). These cards do not appear on the site.',
+ corr_stats_line='Candidate events: {n}; published: {pub}; not published: {wh}.', corr_report='Report an error',
+ stats='Events: {n}. Articles in the database: Russia — {ru}, Ukraine — {ua}, independent — {ind}. Period: {period}.',
+ home_desc='{n} events of the war in Ukraine: what Russian, Ukrainian and independent media report, original-language quotes and where the versions diverge. Updated every 2 hours.',
+ dates_desc='Archive of war events by date, {period}: pick a day and see how Russian, Ukrainian and independent media reported the events.',
+ footer_base='Data is collected automatically; last update: {collected} (Europe/Berlin).',
+ footer_disclaimer='Automatic summary, may contain errors: all content is produced by a language model with no human review before publication. Check the links to the originals. The site does not decide which version is true.',
+ howto='Each card groups reports about one event: what Russian sources (TASS, RIA Novosti, Interfax, the Russian Defense Ministry), Ukrainian sources (Suspilne, Ukrainska Pravda, RBC-Ukraine) and independent sources (BBC, DW, Meduza, Mediazona, The Guardian, Al Jazeera, France 24, Euronews, The Moscow Times, Kyiv Independent) say. Summaries are automatic (language model); quotes are verbatim, in their original language, with a link. The “Confirmation” badge shows how far different sources support the event; it is not an assessment of truth. “No reports found” means absent from the collected data, not from all media. The site does not decide which version is true.',
+ event_note='Automatic summary, may contain errors. Short summaries are written by a language model with no human review; titles, summaries and the “Where the versions diverge” block in English are an automatic translation of the Russian originals. Quotes are verbatim (checked by code), in their original language, with a link. The “Where the versions diverge” block only records differences in wording and figures and does not say who is right.',
+ about_title='About: methodology, confirmation scale, errors, corrections', about_h1='About the project',
+ about_desc='Methodology, confirmation scale, error forecast, corrections policy, neutrality, anonymity of the project and the list of sources.',
+ auto_pub='Published automatically',
+),
+}
+
+SRC_NAME_ADD = {
+ 'ru': {'Медиазона': 'Медиазона', 'Euronews': 'Euronews', 'Meduza': 'Meduza', 'Meduza (EN)': 'Meduza (EN)', 'The Guardian': 'The Guardian', 'DW': 'DW', 'DW (RU)': 'DW (RU)', 'Al Jazeera': 'Al Jazeera', 'РБК-Україна': 'РБК-Украина', 'Интерфакс': 'Интерфакс', 'BBC News Русская служба': 'BBC News Русская служба'},
+ 'uk': {'Медиазона': 'Медіазона', 'Euronews': 'Euronews', 'Meduza': 'Meduza', 'Meduza (EN)': 'Meduza (EN)', 'The Guardian': 'The Guardian', 'DW': 'DW', 'DW (RU)': 'DW (RU)', 'Al Jazeera': 'Al Jazeera', 'РБК-Україна': 'РБК-Україна', 'Интерфакс': 'Інтерфакс', 'BBC News Русская служба': 'BBC News (рос. служба)'},
+ 'en': {'Медиазона': 'Mediazona', 'Euronews': 'Euronews', 'Meduza': 'Meduza', 'Meduza (EN)': 'Meduza (EN)', 'The Guardian': 'The Guardian', 'DW': 'DW', 'DW (RU)': 'DW (RU)', 'Al Jazeera': 'Al Jazeera', 'РБК-Україна': 'RBC-Ukraine', 'Интерфакс': 'Interfax', 'BBC News Русская служба': 'BBC News Russian'},
+}
+def install(ui):
+    for l in ui.LANGS:
+        ui.UI[l].update(U2[l]); ui.SRC_NAME[l].update(SRC_NAME_ADD[l])
+    ui.REASON_TEXT = REASON_TEXT; ui.KIND_TEXT = KIND_TEXT

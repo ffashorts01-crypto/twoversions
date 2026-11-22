@@ -1,0 +1,120 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import add, setd, ext, apply
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- hourly run 23:05 (ids 11744-11818): 3 new Oct 18 cards + extensions ----------------
+# Language duplicates not used: DWr 11810 (= 11809), RBC ru 11814 (= 11813), 11817 (= 11816), 11812 (= 11742, already in us-sanctions-wright-bessent)
+
+card('1018-kyiv-ballistic-evening', [11747, 11767, 11799, 11801, 11803, 11813, 11807],
+ 'Вечерний удар баллистическими ракетами по Киеву: попадания в здание медцентра и нежилое здание на Левом берегу', 'Киев', 'kyiv',
+ ['не проверено', 'расхождение: формулировки', 'одна из групп не освещает'],
+ S('РИА Новости и ТАСС сообщают только о взрывах в Киеве на фоне воздушной тревоги, объявленной в большинстве областей Украины; РИА ссылается на украинский телеканал «Общественное». О целях удара, попаданиях и пострадавших российские источники в выборке не пишут, Минобороны РФ удар не комментировало.',
+   (11747, 'Взрывы вновь прогремели в воскресенье в Киеве на фоне воздушной тревоги'),
+   (11767, 'В большинстве областей Украины объявили воздушную тревогу')),
+ S('Воздушные силы ВСУ в 22:57 по киевскому времени сообщили о первой баллистической ракете курсом на Киев, тревогу из-за баллистической угрозы объявили в 22:58, в городе были слышны мощные взрывы. Мэр Киева Виталий Кличко сообщил о попаданиях на Левом берегу: по предварительным данным, в здание медицинского центра и в нежилое здание, на места направляются экстренные службы. По версии «Украинской правды» и РБК-Украина, медцентр находится в Деснянском районе, а нежилое здание — в Днепровском; Суспильне излагает сообщение Кличко наоборот. РБК-Украина напоминает о 76 ударах по энергетике за неделю «энергетического перемирия».',
+   (11801, 'Повітряні сили ЗСУ о 22:57 повідомили про першу балістичну ракету курсом на Київ.'),
+   (11803, 'У Деснянському районі влучання, попередньо, в будівлю медичного центру. У Дніпровському – в нежитлову будівлю.'),
+   (11799, 'Міський голова Києва Віталій Кличко о 23:24 написав про влучання в нежитлову будівлю у Деснянському районі, а також, за попередньою інформацією, удар по будівлі медичного центру в Дніпровському районі столиці.'),
+   (11813, 'За попередніми даними, у Деснянському районі під удар потрапила будівля медичного центру, у Дніпровському - нежитлова будівля.')),
+ S('Kyiv Independent пишет, что взрывы раздались одновременно с сиренами: оповещения на телефоны пришли за несколько мгновений до взрывов, у одной из журналисток было около трех минут, что обычно при баллистической угрозе. По словам Кличко, поражен медцентр в Деснянском районе и еще одно здание в Днепровском; данных о масштабах разрушений и пострадавших пока нет. Издание отмечает, что удар произошел через несколько часов после слов Зеленского о возобновлении обмена разведданными с США о пусках российских ракет.',
+   (11807, 'The explosions were simultaneous with the blaring of air raid sirens, according to Kyiv Independent journalists on the ground.'),
+   (11807, 'A medical center in the Desnianskyi district was hit in the strike'),
+   (11807, 'The sudden ballistic missile strike came just hours after President Volodymyr Zelensky said the U.S. had resumed intelligence sharing with Ukraine about Russian missile launches.')),
+ 'Российские источники сообщают только о взрывах и тревоге, украинские и независимые — о баллистической атаке и попаданиях в медцентр и нежилое здание. Украинские СМИ по-разному указывают районы: «Украинская правда», РБК-Украина и Kyiv Independent относят медцентр к Деснянскому району, Суспильне — к Днепровскому. Данных о пострадавших на момент публикации нет.',
+ 'medium', 'Данные о попаданиях предварительные; сведения о пострадавших и масштабах разрушений пока отсутствуют.', False,
+ ['Вечірній удар балістичними ракетами по Києву: влучання в будівлю медцентру та нежитлову будівлю на Лівому березі', 'Київ',
+  'Російські джерела повідомляють лише про вибухи й тривогу, українські та незалежні — про балістичну атаку і влучання в медцентр та нежитлову будівлю. Українські ЗМІ по-різному вказують райони: «Українська правда», РБК-Україна і Kyiv Independent відносять медцентр до Деснянського району, Суспільне — до Дніпровського. Даних про постраждалих на момент публікації немає.',
+  'РИА Новости і ТАСС повідомляють лише про вибухи в Києві на тлі повітряної тривоги, оголошеної в більшості областей України; РИА посилається на український телеканал «Суспільне». Про цілі удару, влучання і постраждалих російські джерела у вибірці не пишуть, Міноборони РФ удар не коментувало.',
+  'Повітряні сили ЗСУ о 22:57 за київським часом повідомили про першу балістичну ракету курсом на Київ, тривогу через балістичну загрозу оголосили о 22:58, у місті було чути потужні вибухи. Мер Києва Віталій Кличко повідомив про влучання на Лівому березі: за попередніми даними, в будівлю медичного центру та в нежитлову будівлю, на місця прямують екстрені служби. За версією «Української правди» та РБК-Україна, медцентр розташований у Деснянському районі, а нежитлова будівля — у Дніпровському; Суспільне викладає повідомлення Кличка навпаки. РБК-Україна нагадує про 76 ударів по енергетиці за тиждень «енергетичного перемир’я».',
+  'Kyiv Independent пише, що вибухи пролунали одночасно із сиренами: сповіщення на телефони надійшли за кілька миттєвостей до вибухів, одна з журналісток мала близько трьох хвилин, що звично за балістичної загрози. За словами Кличка, уражено медцентр у Деснянському районі та ще одну будівлю в Дніпровському; даних про масштаби руйнувань і постраждалих поки немає. Видання зазначає, що удар стався за кілька годин після слів Зеленського про відновлення обміну розвідданими зі США про пуски російських ракет.'],
+ ['Evening ballistic missile strike on Kyiv: a medical centre building and a non-residential building hit on the Left Bank', 'Kyiv',
+  'Russian sources report only explosions and the alert, Ukrainian and independent ones a ballistic missile attack and hits on a medical centre and a non-residential building. Ukrainian media name the districts differently: Ukrainska Pravda, RBC-Ukraine and the Kyiv Independent place the medical centre in Desnianskyi district, Suspilne in Dniprovskyi. No information on casualties at the time of publication.',
+  'RIA Novosti and TASS report only explosions in Kyiv amid an air-raid alert declared in most regions of Ukraine; RIA cites the Ukrainian TV channel Suspilne. Russian sources in the sample do not write about the targets, hits or casualties, and the Russian Defence Ministry has not commented on the strike.',
+  'Ukraine\'s Air Force reported the first ballistic missile heading for Kyiv at 22:57 Kyiv time, the ballistic threat alert was declared at 22:58, and powerful explosions were heard in the city. Kyiv Mayor Vitali Klitschko reported hits on the Left Bank: according to preliminary data, a medical centre building and a non-residential building; emergency services are on their way. According to Ukrainska Pravda and RBC-Ukraine, the medical centre is in Desnianskyi district and the non-residential building in Dniprovskyi; Suspilne relays Klitschko\'s message the other way round. RBC-Ukraine recalls 76 strikes on energy infrastructure during the week of the "energy truce".',
+  'The Kyiv Independent writes that the explosions coincided with the sirens: phone alerts came moments before the blasts, and one of its reporters had about three minutes, which is usual for a ballistic threat. According to Klitschko, a medical centre in Desnianskyi district and another building in Dniprovskyi district were hit; there is no information yet on the extent of damage or casualties. The outlet notes that the strike came hours after Zelensky said intelligence sharing with the US on Russian missile launches had resumed.'])
+
+card('1018-trump-truth-social-zelensky', [11759, 11761, 11762, 11763, 11782, 11786, 11787, 11795, 11816, 11808],
+ 'Трамп в Truth Social: «большой прогресс» в переговорах, не хочет отталкивать Россию; Зеленский, по его словам, не хочет заканчивать войну и бьет по НПЗ', 'Вашингтон', 'ukraine-wide',
+ ['расхождение: формулировки', 'умолчание'],
+ S('РИА Новости и ТАСС передают тезисы поста Трампа в Truth Social: он ведет переговоры о мире между Россией и Украиной и не хочет делать ничего, что увело бы Россию из-за стола переговоров; «достигнут большой прогресс», включая переговоры об освобождении заложников. По словам Трампа, Зеленский целит в российские заводы по переработке дизтоплива, зная, что это вредит мировым рынкам, не хочет и, возможно, никогда не хотел завершения конфликта; два года назад он мог бы заключить более выгодную сделку, а Украина утратила значительную часть территории.',
+   (11759, 'Достигнут большой прогресс, и это включает текущие переговоры об освобождении заложников'),
+   (11795, 'I am in the process of negotiating peace in the war between Russia and Ukraine'),
+   (11763, 'ТРАМП ЗАЯВИЛ, ЧТО ЗЕЛЕНСКИЙ НЕ ХОЧЕТ И, ВОЗМОЖНО, НИКОГДА НЕ ХОТЕЛ ЗАВЕРШЕНИЯ КОНФЛИКТА НА УКРАИНЕ'),
+   (11786, 'мог бы заключить более выгодную сделку, чем сейчас')),
+ S('РБК-Украина пишет, что Трамп отложил санкции против России, чтобы не сорвать мирные переговоры, а затягивание войны связывает с Зеленским. Подписать санкции, по его словам, можно и позже; еще один довод — Россия почти не помогает Ирану. Трамп обвинил Зеленского в сознательных ударах по НПЗ, от которых страдает рынок дизтоплива в США, и написал, что тому «безразлично» и он не хочет заканчивать войну. Издание напоминает, что в пятницу Трамп заморозил закон о санкциях, а Россия за неделю «энергетического перемирия» 76 раз атаковала энергообъекты Украины.',
+   (11816, 'Моє рішення щодо Росії дуже просте. Я веду переговори про мир у війні між Росією та Україною і не хочу робити нічого, що нерозумно відштовхне Росію від столу переговорів'),
+   (11816, 'Зеленському байдуже, і, чесно кажучи, з усіма грошима, які йому дає Європа і які в минулому дав шахрай Джо Байден, він не хоче закінчувати цю війну і, ймовірно, ніколи не хотів')),
+ S('Kyiv Independent называет пост «разносом» Зеленского, в котором Трамп защищает свои решения по России — отказ от санкций, дизельную сделку и давление на Украину из-за ударов по НПЗ; по словам Трампа, Россия почти не помогает Ирану. Издание отмечает, что главная причина роста цен на дизель, судя по имеющимся данным, — война в Иране, и приводит слова Трампа о том, что страна Зеленского «в руинах», а мужское население «ранено и/или мертво».',
+   (11808, 'Russia is doing very little, if anything, to help the Islamic Republic of Iran'),
+   (11808, 'despite evidence that the war in Iran is the primary driver of the price surge'),
+   (11808, 'His country is in shambles, a large portion of his land is lost, his oceans and seas are gone, and his male population is low, wounded, and/or dead.')),
+ 'Содержание поста все группы передают одинаково. Российские агентства выносят в заголовки отдельные тезисы — «большой прогресс», нежелание Зеленского завершить конфликт, потерю территории — и не упоминают, что пост объясняет отказ от санкций и дизельную сделку; украинские и независимые СМИ подают его как защиту прокремлевских решений, Kyiv Independent оспаривает связь цен на дизель с ударами по НПЗ.',
+ 'low', '', False,
+ ['Трамп у Truth Social: «великий прогрес» у переговорах, не хоче відштовхувати Росію; Зеленський, за його словами, не хоче закінчувати війну і б’є по НПЗ', 'Вашингтон',
+  'Зміст допису всі групи передають однаково. Російські агентства виносять у заголовки окремі тези — «великий прогрес», небажання Зеленського завершити конфлікт, втрату території — і не згадують, що допис пояснює відмову від санкцій і дизельну угоду; українські та незалежні ЗМІ подають його як захист прокремлівських рішень, Kyiv Independent заперечує зв’язок цін на дизель з ударами по НПЗ.',
+  'РИА Новости і ТАСС передають тези допису Трампа в Truth Social: він веде переговори про мир між Росією та Україною і не хоче робити нічого, що вивело б Росію з-за столу переговорів; «досягнуто великого прогресу», зокрема в переговорах про звільнення заручників. За словами Трампа, Зеленський цілить у російські заводи з переробки дизпалива, знаючи, що це шкодить світовим ринкам, не хоче і, можливо, ніколи не хотів завершення конфлікту; два роки тому він міг би укласти вигіднішу угоду, а Україна втратила значну частину території.',
+  'РБК-Україна пише, що Трамп відклав санкції проти Росії, щоб не зірвати мирні переговори, а затягування війни пов’язує із Зеленським. Підписати санкції, за його словами, можна й пізніше; ще один аргумент — Росія майже не допомагає Ірану. Трамп звинуватив Зеленського у свідомих ударах по НПЗ, від яких страждає ринок дизпалива в США, і написав, що тому «байдуже» і він не хоче закінчувати війну. Видання нагадує, що в п’ятницю Трамп заморозив закон про санкції, а Росія за тиждень «енергетичного перемир’я» 76 разів атакувала енергооб’єкти України.',
+  'Kyiv Independent називає допис «рознесенням» Зеленського, в якому Трамп захищає свої рішення щодо Росії — відмову від санкцій, дизельну угоду і тиск на Україну через удари по НПЗ; за словами Трампа, Росія майже не допомагає Ірану. Видання зазначає, що головна причина зростання цін на дизель, судячи з наявних даних, — війна в Ірані, і наводить слова Трампа про те, що країна Зеленського «в руїнах», а чоловіче населення «поранене і/або мертве».'],
+ ['Trump on Truth Social: "great progress" in talks, does not want to drive Russia away; Zelensky, he says, does not want to end the war and strikes refineries', 'Washington',
+  'All groups convey the content of the post in the same way. Russian agencies headline individual points — "great progress", Zelensky\'s unwillingness to end the conflict, the loss of territory — without mentioning that the post explains the sanctions waiver and the diesel deal; Ukrainian and independent media present it as a defence of pro-Kremlin decisions, and the Kyiv Independent disputes the link between diesel prices and refinery strikes.',
+  'RIA Novosti and TASS relay the points of Trump\'s Truth Social post: he is negotiating peace between Russia and Ukraine and does not want to do anything that would drive Russia away from the negotiating table; "great progress is being made", including in hostage negotiations. According to Trump, Zelensky targets Russian diesel refineries knowing that this harms world markets, does not want and perhaps never wanted to end the conflict; two years ago he could have made a better deal, and Ukraine has lost a large part of its territory.',
+  'RBC-Ukraine writes that Trump postponed sanctions against Russia so as not to derail peace talks and blames Zelensky for prolonging the war. Sanctions, he says, can be signed later; another argument is that Russia is barely helping Iran. Trump accused Zelensky of deliberately striking refineries, which hurts the diesel market in the US, and wrote that he "doesn\'t care" and does not want to end the war. The outlet recalls that on Friday Trump froze the sanctions law and that Russia attacked Ukrainian energy facilities 76 times during the week of the "energy truce".',
+  'The Kyiv Independent calls the post a "scathing diatribe" against Zelensky in which Trump defends his decisions on Russia — the sanctions waiver, the diesel deal and the pressure on Ukraine over refinery strikes; according to Trump, Russia is doing very little to help Iran. The outlet notes that the evidence points to the war in Iran as the primary driver of the diesel price surge and quotes Trump saying that Zelensky\'s country is "in shambles" and its male population "wounded, and/or dead".'])
+
+card('1018-zelensky-bloomberg-capitulation', [11804, 11815, 11809],
+ 'Зеленский в интервью Bloomberg: шаги США выглядят как попытка склонить Украину к капитуляции, поставки ракет к Patriot задерживаются', 'Киев', 'ukraine-wide',
+ ['одна из групп не освещает'],
+ None,
+ S('Зеленский в интервью Bloomberg заявил, что были предприняты шаги, чтобы склонить Украину к капитуляции, хотя он не утверждает, что это цель партнеров. По его словам, США задерживают поставки ракет-перехватчиков для Patriot, оплаченных Украиной по программе PURL: одобрена лишь часть, и «это не технический вопрос»; сейчас Украина получает 12 ракет в месяц — примерно четверть объема при Байдене, и теперь их продают, а не передают бесплатно. Среди таких шагов он назвал и намеренное ограничение Starlink. Зеленский рассчитывает, что отношения с США улучшатся после промежуточных выборов 3 ноября, и на этой неделе, вероятно, снова встретится с Кушнером и Уиткоффом.',
+   (11804, 'Американська сторона схвалила постачання лише частини з них, а решти – ні. І це не технічне питання'),
+   (11804, 'наразі США постачають Україні лише 12 ракет-перехоплювачів для Patriot на місяць'),
+   (11815, 'Я вважаю, що були зроблені кроки, щоб переконати Україну капітулювати'),
+   (11815, 'Він також розповів, що на цьому тижні, найімовірніше, знову зустрінеться зі спецпосланцями Трампа Джаредом Кушнером і Стівом Віткоффом.')),
+ S('DW приводит слова Зеленского о «последнем предложении» США: Украина не бьет по производству дизтоплива в России, а США дают ракеты к Patriot, но в Вашингтоне, по его словам, просто требуют прекратить удары и грозят отключить от чего-то еще. Время перед выборами в Конгресс он назвал «опасными днями», а о Трампе сказал, что тот сейчас не может заставить Путина прекратить войну. DW напоминает, что Рубио и Трамп отрицали намеренное ограничение Starlink.',
+   (11809, 'Мое последнее предложение было: мы не будем наносить удары по производству дизельного топлива в России'),
+   (11809, 'В настоящее время Трамп не может заставить Путина прекратить войну')),
+ 'Российские источники в выборке интервью пока не освещают. Украинские СМИ и DW передают его одинаково; DW подробнее излагает предложение «дизель в обмен на Patriot», украинские издания — данные о поставках ракет по программе PURL. Американская сторона обвинения в намеренном ограничении Starlink отрицает.',
+ 'low', '', False,
+ ['Зеленський в інтерв’ю Bloomberg: кроки США виглядають як спроба схилити Україну до капітуляції, постачання ракет до Patriot затримуються', 'Київ',
+  'Російські джерела у вибірці інтерв’ю поки не висвітлюють. Українські ЗМІ та DW передають його однаково; DW докладніше викладає пропозицію «дизель в обмін на Patriot», українські видання — дані про постачання ракет за програмою PURL. Американська сторона звинувачення в навмисному обмеженні Starlink заперечує.',
+  None,
+  'Зеленський в інтерв’ю Bloomberg заявив, що були зроблені кроки, щоб схилити Україну до капітуляції, хоча він не стверджує, що це мета партнерів. За його словами, США затримують постачання ракет-перехоплювачів для Patriot, оплачених Україною за програмою PURL: схвалено лише частину, і «це не технічне питання»; зараз Україна отримує 12 ракет на місяць — приблизно чверть обсягу за Байдена, і тепер їх продають, а не передають безкоштовно. Серед таких кроків він назвав і навмисне обмеження Starlink. Зеленський розраховує, що відносини зі США покращаться після проміжних виборів 3 листопада, і цього тижня, ймовірно, знову зустрінеться з Кушнером і Віткоффом.',
+  'DW наводить слова Зеленського про «останню пропозицію» США: Україна не б’є по виробництву дизпалива в Росії, а США дають ракети до Patriot, але у Вашингтоні, за його словами, просто вимагають припинити удари й погрожують відключити від чогось іще. Час перед виборами до Конгресу він назвав «небезпечними днями», а про Трампа сказав, що той зараз не може змусити Путіна припинити війну. DW нагадує, що Рубіо і Трамп заперечували навмисне обмеження Starlink.'],
+ ['Zelensky to Bloomberg: US steps look like an attempt to push Ukraine into capitulation, deliveries of Patriot missiles are being delayed', 'Kyiv',
+  'Russian sources in the sample have not yet covered the interview. Ukrainian media and DW convey it in the same way; DW details the "diesel for Patriots" offer, Ukrainian outlets the data on missile deliveries under the PURL programme. The US side denies accusations of deliberately restricting Starlink.',
+  None,
+  'Zelensky told Bloomberg that steps had been taken to push Ukraine into capitulation, although he does not claim this is his partners\' goal. According to him, the US is delaying deliveries of Patriot interceptor missiles paid for by Ukraine under the PURL programme: only part has been approved, and "this is not a technical issue"; Ukraine now receives 12 missiles a month, about a quarter of the volume under Biden, and they are now sold rather than given for free. He also named the deliberate restriction of Starlink among such steps. Zelensky expects relations with the US to improve after the November 3 midterm elections and will probably meet Kushner and Witkoff again this week.',
+  'DW quotes Zelensky on his "last offer" to the US: Ukraine does not strike diesel production in Russia and the US provides Patriot missiles, but Washington, he says, simply demands that the strikes stop and threatens to cut Ukraine off from something else. He called the period before the congressional elections "dangerous days" and said that Trump currently cannot make Putin stop the war. DW recalls that Rubio and Trump denied deliberately restricting Starlink.'])
+
+json.dump(cards, open(OUT + 'c18d.json', 'w'), ensure_ascii=False, indent=1)
+print('new cards', len(cards))
+
+# ---------------- extensions of earlier Oct 18 cards ----------------
+@ext('1018-civilian-casualties-ukraine', [11798])
+def _(c):
+    add(c, 'ua', 'Поздно вечером российский дрон попал в дом на Салтовке в Харькове: по словам мэра Игоря Терехова, пострадали по меньшей мере два человека, в здании выбито около 30 окон.',
+        'Пізно ввечері російський дрон влучив у будинок на Салтівці в Харкові: за словами мера Ігоря Терехова, постраждали щонайменше двоє людей, у будівлі вилетіло близько 30 вікон.',
+        'Late in the evening a Russian drone hit a building in Saltivka, Kharkiv: according to Mayor Ihor Terekhov, at least two people were injured and about 30 windows were blown out.',
+        [(11798, 'Щонайменше двоє людей постраждали внаслідок влучання. У будівлі вилетіло близько 30 вікон')])
+
+@ext('1018-russian-side-casualties', [11749, 11760, 11778])
+def _(c):
+    add(c, 'ru', 'Власти ДНР: за сутки погиб один мирный житель (по заголовку РИА — при атаке дрона на грузовик); Чертков сообщил о новом ударе по энергетике после ремонта.',
+        'Влада ДНР: за добу загинув один мирний житель (за заголовком РИА — під час атаки дрона на вантажівку); Чертков повідомив про новий удар по енергетиці після ремонту.',
+        'DPR: one civilian killed in a day (a drone hit a truck, per RIA); Chertkov: new strike on energy after repairs.',
+        [(11749, 'Один мирный житель погиб в результате атак ВСУ в ДНР за прошедшие сутки'),
+         (11760, 'ВСУ нанесли новый удар по энергетической инфраструктуре в ДНР, заявил председатель правительства республики Андрей Чертков.'),
+         (11778, 'ВСУ вновь ударили по энергетике ДНР после проведенных ремонтных работ')])
+
+@ext('1018-zelensky-nbc-bessent-starlink', [11752])
+def _(c):
+    add(c, 'ru', 'Отдельной заметкой РИА Новости процитировало Бессента: Зеленский «представил ложную дилемму», будто победа Украины закончит конфликт, тогда как его нужно урегулировать путем переговоров.',
+        'Окремою заміткою РИА Новости процитувало Бессента: Зеленський «представив хибну дилему», ніби перемога України завершить конфлікт, тоді як його треба врегулювати шляхом переговорів.',
+        'In a separate item RIA Novosti quoted Bessent as saying Zelensky "presented a false dilemma" that a Ukrainian victory would end the conflict, whereas it must be settled through negotiations.',
+        [(11752, 'Зеленский сегодня утром представил ложную дилемму: если Украина победит, то конфликт закончится')])
+
+apply(['c18a.json', 'c18b.json', 'c18c.json'])

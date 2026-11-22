@@ -1,0 +1,30 @@
+import sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from extlib import add, setd, ext, apply
+
+# ---------------- extensions of earlier 2026-10-16 cards (Moscow Times backfill, collected 18:59) ----------------
+@ext('1016-drones-russia-moscow-airports', [11468, 11476])
+def _(c):
+    add(c, 'ind', 'The Moscow Times пишет, что в четырех московских аэропортах задержаны или отменены почти 160 рейсов, а неподтвержденные данные мониторинговых каналов указывают на удар по дата-центру «Яндекса» во Владимире, поврежденному ранее; со ссылкой на издание «Вёрстка» MT сообщает, что сбои Yandex Cloud нарушили работу арбитражных судов как минимум в девяти регионах.',
+        'The Moscow Times пише, що в чотирьох московських аеропортах затримано або скасовано майже 160 рейсів, а непідтверджені дані моніторингових каналів вказують на удар по дата-центру «Яндекса» у Владимирі, пошкодженому раніше; з посиланням на видання «Вьорстка» MT повідомляє, що збої Yandex Cloud порушили роботу арбітражних судів щонайменше в дев’яти регіонах.',
+        'The Moscow Times writes that nearly 160 flights were delayed or cancelled at Moscow\'s four airports, and unverified reports by monitoring channels point to a strike on a Yandex data centre in Vladimir that had been damaged before; citing the outlet Vyorstka, MT reports that Yandex Cloud outages disrupted arbitration courts in at least nine regions.',
+        [(11468, 'claimed it targeted a data center owned by tech giant Yandex in Vladimir, which was previously damaged in last weekend'),
+         (11476, 'Similar outages were recorded across at least nine Russian regions, Vyorstka reported.')])
+
+@ext('1016-trump-newsmax-zelensky', [11471])
+def _(c):
+    add(c, 'ind', 'The Moscow Times приводит слова Пескова о полном согласии с Трампом и напоминает, что Путин по-прежнему требует от Украины уступить всю Донецкую область как условие перемирия, что Киев отвергает.',
+        'The Moscow Times наводить слова Пєскова про повну згоду з Трампом і нагадує, що Путін досі вимагає від України поступитися всією Донецькою областю як умовою перемир’я, що Київ відкидає.',
+        'The Moscow Times quotes Peskov on full agreement with Trump and recalls that Putin still demands that Ukraine cede the whole of Donetsk region as a condition for a ceasefire, which Kyiv rejects.',
+        [(11471, 'we fully agree with President Trump'),
+         (11471, 'Putin continues to demand that Ukraine cede full control of the Donetsk region as a prerequisite for any ceasefire agreement')])
+
+@ext('1016-surgut-condensate-plant', [11474])
+def _(c):
+    add(c, 'ind', 'The Moscow Times со ссылкой на Supernova+ называет объект Сургутским заводом по стабилизации конденсата «Газпром переработки» — крупнейшим в России предприятием по переработке смеси нефти и газового конденсата проектной мощностью 12 млн тонн в год — и пишет, что это, по-видимому, первый удар по энергетике в крупнейшем нефтедобывающем регионе страны.',
+        'The Moscow Times із посиланням на Supernova+ називає об’єкт Сургутським заводом зі стабілізації конденсату «Газпром переробки» — найбільшим у Росії підприємством із переробки суміші нафти й газового конденсату проєктною потужністю 12 млн тонн на рік — і пише, що це, вочевидь, перший удар по енергетиці в найбільшому нафтовидобувному регіоні країни.',
+        'The Moscow Times, citing Supernova+, identifies the facility as Gazprom Pererabotka\'s Surgut Condensate Stabilization Plant, Russia\'s largest plant for processing a mix of crude oil and gas condensate with a design capacity of 12 million tonnes a year, and writes that this appears to be the first strike on energy infrastructure in the country\'s largest oil-producing region.',
+        [(11474, 'Residents identified the facility as the Surgut Condensate Stabilization Plant'),
+         (11474, 'with a design capacity of 12 million metric tons per year')])
+
+apply(['c16c.json', 'c16e.json'])

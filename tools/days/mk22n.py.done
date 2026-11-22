@@ -1,0 +1,109 @@
+import sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 08:03: extensions ----------------
+def rep(c, path, old, new):
+    d = c
+    for k in path[:-1]: d = d[k]
+    assert old in d[path[-1]], (c['key'], path, old[:40]); d[path[-1]] = d[path[-1]].replace(old, new)
+
+@ext('1021-kyiv-ballistic-evening-strike', [15938, 15972, 15967])
+def _(c):
+    c['title'] = 'Вечерний и ночной удары баллистическими ракетами по Киеву: один погибший и 22 раненых, поврежден Южный мост'
+    c['uk']['t'] = 'Вечірній і нічний удари балістичними ракетами по Києву: один загиблий і 22 поранених, пошкоджено Південний міст'
+    c['en']['t'] = 'Evening and night ballistic missile strikes on Kyiv: one killed and 22 injured, Southern Bridge damaged'
+    c['ua']['summary'] = ("РБК-Украина, «Украинская правда» и «Общественное» со ссылкой на Воздушные силы, КГВА и мэра Виталия Кличко пишут, что Россия атаковала Киев баллистическими ракетами. "
+        "Вечером в Днепровском районе были попадания в здание СТО и частный дом, повреждена АЗС, позже — объект транспортной инфраструктуры в Дарницком районе; пострадали шестеро. «Общественное» подает удар в одном заголовке с согласием Украины на трехстороннюю встречу команд. "
+        "Ночью Россия второй раз выпустила по Киеву баллистические ракеты. Утром 22 октября Кличко сообщил о 15 пострадавших за ночь, в том числе двух 15-летних подростках; поврежден Южный мост, зеленая линия метро работает двумя участками. "
+        "Затем, по данным РБК-Украина и «Общественного» со ссылкой на ГСЧС и полицию, удары пришлись на шесть районов столицы: в Днепровском районе погиб 48-летний мужчина, всего ранены 22 человека, в том числе четверо детей; в Печерском районе повреждены станция и автомобили скорой помощи и монастырь.")
+    c['uk']['ua'] = ("РБК-Україна, «Українська правда» і «Суспільне» з посиланням на Повітряні сили, КМВА та мера Віталія Кличка пишуть, що Росія атакувала Київ балістичними ракетами. "
+        "Увечері в Дніпровському районі були влучання в будівлю СТО та приватний будинок, пошкоджено АЗС, пізніше — об’єкт транспортної інфраструктури в Дарницькому районі; постраждали шестеро. «Суспільне» подає удар в одному заголовку зі згодою України на тристоронню зустріч команд. "
+        "Уночі Росія вдруге випустила по Києву балістичні ракети. Уранці 22 жовтня Кличко повідомив про 15 постраждалих за ніч, зокрема двох 15-річних підлітків; пошкоджено Південний міст, зелена лінія метро працює двома ділянками. "
+        "Потім, за даними РБК-Україна та «Суспільного» з посиланням на ДСНС і поліцію, удари припали на шість районів столиці: у Дніпровському районі загинув 48-річний чоловік, загалом поранено 22 людини, серед них четверо дітей; у Печерському районі пошкоджено станцію та автомобілі швидкої допомоги і монастир.")
+    c['en']['ua'] = ("RBC-Ukraine, Ukrainska Pravda and Suspilne, citing the Air Force, the Kyiv city military administration and Mayor Vitali Klitschko, write that Russia attacked Kyiv with ballistic missiles. "
+        "In the evening a car service building and a private house were hit in Dniprovskyi district and a petrol station was damaged, later a transport infrastructure facility in Darnytskyi district; six people were injured. Suspilne puts the strike in the same headline as Ukraine's consent to a trilateral meeting of the teams. "
+        "During the night Russia fired ballistic missiles at Kyiv a second time. On the morning of 22 October Klitschko reported 15 injured overnight, including two 15-year-olds; the Southern Bridge was damaged and the green metro line runs in two sections. "
+        "Then, according to RBC-Ukraine and Suspilne citing the emergency service and police, strikes hit six districts of the capital: a 48-year-old man was killed in Dniprovskyi district, 22 people were injured in total, including four children; in Pechersk district an ambulance station, ambulances and a monastery were damaged.")
+    c['ua']['quotes'] += [q(15938, 'Там загинув 48-річний чоловік, травмовані шестеро людей, серед них четверо дітей, наймолодшому — 5 років.'),
+                          q(15972, 'Щонайменше одна людина загинула та ще 22 цивільні особи дістали поранення.')]
+    add(c, 'ind', "«Медуза» со ссылкой на ГСЧС Украины пишет об одном погибшем и раненых в нескольких районах и подчеркивает, что удар был нанесен через несколько часов после визита Уиткоффа в Санкт-Петербург и его встречи с Путиным.",
+        "«Медуза» з посиланням на ДСНС України пише про одного загиблого й поранених у кількох районах і наголошує, що удар було завдано через кілька годин після візиту Віткоффа до Санкт-Петербурга та його зустрічі з Путіним.",
+        "Meduza, citing Ukraine's emergency service, reports one person killed and people injured in several districts and stresses that the strike came a few hours after Witkoff's visit to St Petersburg and his meeting with Putin.",
+        [(15967, 'Очередной удар 22 октября был нанесен через несколько часов после того, как в Санкт-Петербург приезжал спецпосланник президента США Стив Уиткофф и встречался с Владимиром Путиным.')])
+    rep(c, ['diverge'], 'О 15 пострадавших за ночь пишут только украинские источники; ТАСС сообщает лишь об ограничении движения по Южному мосту и повреждении инфраструктуры метро.',
+        'О пострадавших за ночь пишут только украинские источники и «Медуза»: сначала 15 по данным Кличко, затем один погибший и 22 раненых по данным ГСЧС; ТАСС сообщает лишь об ограничении движения по Южному мосту и повреждении инфраструктуры метро. «Медуза» связывает удар с переговорами Путина и Уиткоффа.')
+    rep(c, ['uk', 'd'], 'Про 15 постраждалих за ніч пишуть лише українські джерела; ТАСС повідомляє тільки про обмеження руху Південним мостом і пошкодження інфраструктури метро.',
+        'Про постраждалих за ніч пишуть лише українські джерела та «Медуза»: спершу 15 за даними Кличка, потім один загиблий і 22 поранених за даними ДСНС; ТАСС повідомляє тільки про обмеження руху Південним мостом і пошкодження інфраструктури метро. «Медуза» пов’язує удар із переговорами Путіна та Віткоффа.')
+    rep(c, ['en', 'd'], 'Only Ukrainian sources report the 15 injured overnight; TASS reports only the traffic restriction on the Southern Bridge and damage to metro infrastructure.',
+        'Only Ukrainian sources and Meduza report the overnight casualties: first 15 injured according to Klitschko, then one killed and 22 injured according to the emergency service; TASS reports only the traffic restriction on the Southern Bridge and damage to metro infrastructure. Meduza links the strike to the Putin–Witkoff talks.')
+    c['uncertainty_reason'] += ' Включают ли 22 раненых по данным ГСЧС пострадавших вечером, не уточняется.'
+
+@ext('1022-lipetsk-moscow-drone-attack', [15934, 15966, 15939, 15908, 15879, 15924, 15863, 15899, 15872, 15979, 15894])
+def _(c):
+    c['ru']['summary'] = ("ТАСС, РИА Новости и «Интерфакс» со ссылкой на губернатора Игоря Артамонова сообщают, что в ночь на 22 октября обломки беспилотника упали на многоквартирный дом в Липецке. "
+        "Сначала мэр сообщал, что пострадавших нет, затем губернатор написал о пострадавшем мужчине 2001 года рождения и поврежденных домах и поликлинике; на ее крыше нашли неразорвавшуюся боевую часть, а сообщения о десятках погибших Артамонов назвал ложными. "
+        "Число сбитых на подлете к Москве беспилотников, по данным Собянина, росло за ночь с 56 до 90 и 163; всего с вечера 21 октября в сторону Московского региона летели 630, в районе Вороново в Новой Москве пострадали два человека. "
+        "ТАСС называет эту попытку атаки на Москву одной из самых крупных с начала года. В Ярославской области около часа действовала ракетная опасность, в аэропортах вводили ограничения. "
+        "Губернаторы сообщают о 70 сбитых беспилотниках над Тульской областью, 44 — над Воронежской и 17 — над Калужской, повреждены дома и линии электроснабжения. Утром Минобороны сообщило о 808 беспилотниках, уничтоженных за ночь над рядом областей, Московским регионом, Крымом и Черным морем.")
+    c['uk']['ru'] = ("ТАСС, РИА Новости та «Інтерфакс» із посиланням на губернатора Ігоря Артамонова повідомляють, що в ніч на 22 жовтня уламки безпілотника впали на багатоквартирний будинок у Липецьку. "
+        "Спочатку мер повідомляв, що постраждалих немає, потім губернатор написав про постраждалого чоловіка 2001 року народження та пошкоджені будинки й поліклініку; на її даху знайшли бойову частину, що не вибухнула, а повідомлення про десятки загиблих Артамонов назвав неправдивими. "
+        "Кількість збитих на підльоті до Москви безпілотників, за даними Собяніна, зростала за ніч із 56 до 90 і 163; загалом із вечора 21 жовтня в бік Московського регіону летіли 630, у районі Вороново в Новій Москві постраждали двоє людей. "
+        "ТАСС називає цю спробу атаки на Москву однією з наймасштабніших від початку року. У Ярославській області близько години діяла ракетна небезпека, в аеропортах запроваджували обмеження. "
+        "Губернатори повідомляють про 70 збитих безпілотників над Тульською областю, 44 — над Воронезькою і 17 — над Калузькою, пошкоджено будинки та лінії електропостачання. Уранці Міноборони повідомило про 808 безпілотників, знищених за ніч над низкою областей, Московським регіоном, Кримом і Чорним морем.")
+    c['en']['ru'] = ("TASS, RIA Novosti and Interfax, citing Governor Igor Artamonov, report that on the night of 22 October drone debris fell on an apartment building in Lipetsk. "
+        "At first the mayor said no one was hurt; the governor then wrote about an injured man born in 2001 and damaged houses and a clinic; an unexploded warhead was found on the clinic's roof, and Artamonov called reports of dozens of dead false. "
+        "According to Sobyanin, the number of drones downed on their way to Moscow rose during the night from 56 to 90 and 163; in total 630 flew towards the Moscow region from the evening of 21 October, and two people were injured in the Voronovo area of New Moscow. "
+        "TASS calls this attempted attack on Moscow one of the largest since the start of the year. In Yaroslavl region a missile threat lasted about an hour, and airports imposed restrictions. "
+        "Governors report 70 drones downed over Tula region, 44 over Voronezh region and 17 over Kaluga region, with houses and power lines damaged. In the morning the Defence Ministry reported 808 drones destroyed overnight over a number of regions, the Moscow region, Crimea and the Black Sea.")
+    c['ru']['quotes'] += [q(15934, 'дежурными силами ПВО уничтожены 808 украинских беспилотных летательных аппаратов самолетного типа'),
+                          q(15879, 'Видим, что в социальных сетях распространяются ложные сообщения о десятках погибших и масштабных разрушениях.'),
+                          q(15863, 'Неразорвавшаяся боевая часть беспилотника обнаружена на крыше одной из поликлиник в Липецке')]
+    add(c, 'ind', "«Медуза» со ссылкой на Astra называет пострадавшим в Серпухове предприятие Минобороны «75 Арсенал»; украинский канал Exilenova+ утверждает, что по Подмосковью били и ракетами.",
+        "«Медуза» з посиланням на Astra називає постраждалим у Серпухові підприємство Міноборони «75 Арсенал»; український канал Exilenova+ стверджує, що по Підмосков’ю били й ракетами.",
+        "Meduza, citing Astra, names the Defence Ministry's \"75 Arsenal\" plant in Serpukhov as having been hit; the Ukrainian channel Exilenova+ claims that missiles as well as drones struck the Moscow region.",
+        [(15966, 'В подмосковном Серпухове, по данным Astra, под ударом оказалось предприятие Минобороны «75 Арсенал», производящее оружие и боеприпасы.')])
+    rep(c, ['diverge'], 'Об ударе по арсеналу в Серпухове пишут только The Kyiv Independent и РБК-Украина со ссылкой на мониторинговые каналы (РБК-Украина — как о предприятии по ремонту ПВО)',
+        'Об ударе по арсеналу в Серпухове пишут только The Kyiv Independent, РБК-Украина, «Общественное» и «Медуза» со ссылкой на мониторинговые каналы и Astra (РБК-Украина — как о предприятии по ремонту ПВО)')
+    rep(c, ['uk', 'd'], 'Про удар по арсеналу в Серпухові пишуть лише The Kyiv Independent і РБК-Україна з посиланням на моніторингові канали (РБК-Україна — як про підприємство з ремонту ППО)',
+        'Про удар по арсеналу в Серпухові пишуть лише The Kyiv Independent, РБК-Україна, «Суспільне» і «Медуза» з посиланням на моніторингові канали та Astra (РБК-Україна — як про підприємство з ремонту ППО)')
+    rep(c, ['en', 'd'], 'Only The Kyiv Independent and RBC-Ukraine report the strike on the Serpukhov arsenal, citing monitoring channels (RBC-Ukraine describes it as an air defence repair plant)',
+        'Only The Kyiv Independent, RBC-Ukraine, Suspilne and Meduza report the strike on the Serpukhov arsenal, citing monitoring channels and Astra (RBC-Ukraine describes it as an air defence repair plant)')
+
+@ext('1021-front-claims', [15958, 15952, 15963, 15976, 15861, 15888])
+def _(c):
+    add(c, 'ru', "Утром 22 октября РИА Новости и ТАСС со ссылкой на бойца группировки «Север» сообщают об уничтожении за сутки двух украинских станций РЭБ «Дамба» в Сумской области.",
+        "Уранці 22 жовтня РИА Новости і ТАСС із посиланням на бійця угруповання «Север» повідомляють про знищення за добу двох українських станцій РЕБ «Дамба» в Сумській області.",
+        "On the morning of 22 October RIA Novosti and TASS, citing a soldier of the North group, report that two Ukrainian Damba electronic warfare stations were destroyed in Sumy region over the past day.",
+        [(15861, 'Расчеты FPV-дронов группировки войск "Север" за сутки обнаружили и уничтожили две украинские станции радиоэлектронной борьбы "Дамба" в Сумской области')])
+    add(c, 'ua', "Утром 22 октября Генштаб, по данным «Украинской правды» и «Общественного», сообщил о 187 боестолкновениях за 21 октября, больше всего атак — на Покровском (21) и Гуляйпольском (11) направлениях; РБК-Украина называет заявленные потери России за сутки, 2250 человек, рекордными за всю войну.",
+        "Уранці 22 жовтня Генштаб, за даними «Української правди» і «Суспільного», повідомив про 187 боєзіткнень за 21 жовтня, найбільше атак — на Покровському (21) і Гуляйпільському (11) напрямках; РБК-Україна називає заявлені втрати Росії за добу, 2250 осіб, рекордними за всю війну.",
+        "On the morning of 22 October the General Staff, according to Ukrainska Pravda and Suspilne, reported 187 clashes on 21 October, with most attacks in the Pokrovsk (21) and Huliaipole (11) directions; RBC-Ukraine calls Russia's claimed losses for the day, 2250 people, a record for the whole war.",
+        [(15958, 'Протягом 21 жовтня на фронті відбулося 187 бойових зіткнень.'), (15976, 'Це абсолютний рекорд за весь період повномасштабної війни.')])
+
+@ext('1021-musk-starlink-wsj', [15968])
+def _(c):
+    add(c, 'ind', "Al Jazeera передает слова Рубио в Индии: решения о доступе Украины к Starlink принимают SpaceX и Маск, а не Белый дом; знала ли администрация о решении заранее, ему неизвестно, но это, по его словам, «не имеет значения».",
+        "Al Jazeera передає слова Рубіо в Індії: рішення про доступ України до Starlink ухвалюють SpaceX і Маск, а не Білий дім; чи знала адміністрація про рішення заздалегідь, йому невідомо, але це, за його словами, «не має значення».",
+        "Al Jazeera quotes Rubio in India: decisions on Ukraine's access to Starlink are made by SpaceX and Musk, not the White House; he did not know whether the administration knew about the decision beforehand, but said it was \"irrelevant\".",
+        [(15968, 'not the White House')])
+
+@ext('1021-poland-upa-year-dispute', [15030])
+def _(c):
+    add(c, 'ua', "РБК-Украина также сообщает, что глава МИД Польши Радослав Сикорский подписал ходатайство о внесении депутата Львовского облсовета Святослава Шереметы, автора идеи года Шухевича, в список нежелательных лиц.",
+        "РБК-Україна також повідомляє, що глава МЗС Польщі Радослав Сікорський підписав клопотання про внесення депутата Львівської облради Святослава Шеремети, автора ідеї року Шухевича, до списку небажаних осіб.",
+        "RBC-Ukraine also reports that Polish Foreign Minister Radoslaw Sikorski signed a request to put Lviv regional councillor Sviatoslav Sheremeta, the author of the idea of a Shukhevych year, on the list of undesirable persons.",
+        [(15030, 'Депутата Львівської обласної ради хочуть внести до списку небажаних осіб у Польщі.')])
+
+@ext('1021-hubbard-released', [15980])
+def _(c): pass
+
+@ext('1021-trump-closest-no-new-sanctions', [15864])
+def _(c): pass
+
+@ext('1016-pope-putin-oleshky', [14551, 14681])
+def _(c): pass
+
+@ext('1019-peskov-trilateral-meeting', [14345, 14786])
+def _(c): pass
+
+apply(['c16a.json', 'c19a.json', 'c21a.json', 'c22a.json'])

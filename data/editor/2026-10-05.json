@@ -1,0 +1,664 @@
+[
+ {
+  "key": "1005-kharkiv-kab",
+  "ids": [
+   7546,
+   7558,
+   8376,
+   9187,
+   8384,
+   9693,
+   9699,
+   9700
+  ],
+  "title": "Удар управляемыми авиабомбами по Слободскому району Харькова 5 октября",
+  "place": "Харьков, Слободской район",
+  "region": "kharkiv",
+  "tags": [
+   "расхождение: числа пострадавших",
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": null,
+   "quotes": []
+  },
+  "ua": {
+   "summary": "Українська правда со ссылкой на мэра Игоря Терехова и главу ОВА Олега Синегубова сообщает, что 5 октября российские войска ударили по Харькову как минимум тремя КАБами и ударным дроном. Число жертв в течение дня росло: сначала сообщалось о троих погибших и 39 пострадавших, вечером Синегубов назвал 6 погибших и 59 пострадавших, среди них трое детей; 30 раненых остаются в больницах.",
+   "quotes": [
+    {
+     "id": 7558,
+     "text": "Кількість постраждалих внаслідок російського обстрілу Харкова зросла до 59, 6 людей загинули."
+    },
+    {
+     "id": 7546,
+     "text": "5 жовтня російські війська атакували Харків щонайменше трьома КАБами та бойовим дроном, унаслідок ударів загинули троє людей, 39 отримують медичну допомогу."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent со ссылкой на Терехова пишет о не менее чем пяти погибших и 53 раненых, в том числе детях, после ударов как минимум тремя управляемыми авиабомбами по Слободскому району. По словам мэра, горят складские здания, повреждены жилые дома, под завалами могут оставаться люди. DW со ссылкой на Синегубова приводит те же промежуточные цифры — пять погибших и 53 пострадавших — и пишет об ударе тремя КАБами.",
+   "quotes": [
+    {
+     "id": 8376,
+     "text": "\"The enemy attacked Kharkiv with at least three glide bombs (KABs), with strikes recorded in the Slobidskyi district,\" Kharkiv Mayor Ihor Terekhov said in a post on Telegram ."
+    },
+    {
+     "id": 9187,
+     "text": "В результате погибли пять человек, пострадали еще 53"
+    }
+   ]
+  },
+  "diverge": "Обе группы описывают один и тот же удар со ссылкой на харьковские власти; различие в цифрах связано со временем публикации: от троих погибших и 39 пострадавших днем до 6 погибших и 59 пострадавших вечером (Kyiv Independent и DW в промежуточных публикациях — пять погибших и 53 раненых). Материалов российской группы об этом ударе в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Различие цифр объясняется обновлением данных в течение дня.",
+  "uk": {
+   "t": "Удар керованими авіабомбами по Слобідському району Харкова 5 жовтня",
+   "p": "Харків, Слобідський район",
+   "d": "Обидві групи описують той самий удар із посиланням на харківську владу; різниця в цифрах пов’язана з часом публікації: від трьох загиблих і 39 постраждалих удень до 6 загиблих і 59 постраждалих увечері (Kyiv Independent і DW у проміжних публікаціях — п’ятеро загиблих і 53 поранених). Матеріалів російської групи про цей удар у добірці немає.",
+   "ru": null,
+   "ua": "Українська правда з посиланням на мера Ігоря Терехова і голову ОВА Олега Синєгубова повідомляє, що 5 жовтня російські війська вдарили по Харкову щонайменше трьома КАБами та ударним дроном. Кількість жертв протягом дня зростала: спершу повідомляли про трьох загиблих і 39 постраждалих, увечері Синєгубов назвав 6 загиблих і 59 постраждалих, серед них троє дітей; 30 поранених залишаються в лікарнях.",
+   "ind": "Kyiv Independent із посиланням на Терехова пише про щонайменше п’ятьох загиблих і 53 поранених, зокрема дітей, після ударів щонайменше трьома керованими авіабомбами по Слобідському району. За словами мера, горять складські будівлі, пошкоджено житлові будинки, під завалами можуть залишатися люди. DW з посиланням на Синєгубова наводить ті самі проміжні цифри — п’ятеро загиблих і 53 постраждалі — і пише про удар трьома КАБами."
+  },
+  "en": {
+   "t": "Glide bomb strike on Kharkiv's Slobidskyi district on 5 October",
+   "p": "Kharkiv, Slobidskyi district",
+   "d": "Both groups describe the same strike citing Kharkiv officials; the difference in figures reflects the time of publication: from three killed and 39 injured during the day to 6 killed and 59 injured in the evening (Kyiv Independent and DW, in interim reports, gave five killed and 53 injured). There are no materials from the Russian group about this strike in the selection.",
+   "ru": null,
+   "ua": "Ukrainska Pravda, citing Mayor Ihor Terekhov and regional governor Oleh Syniehubov, reports that on 5 October Russian forces struck Kharkiv with at least three KAB glide bombs and an attack drone. The toll rose during the day: initially three dead and 39 injured were reported; in the evening Syniehubov gave 6 dead and 59 injured, including three children; 30 of the injured remain in hospital.",
+   "ind": "Kyiv Independent, citing Terekhov, reports at least five killed and 53 injured, including children, after strikes with at least three glide bombs on the Slobidskyi district. According to the mayor, warehouse buildings are on fire, residential buildings were damaged and people may be trapped under rubble. DW, citing Syniehubov, gives the same interim figures, five dead and 53 injured, and reports a strike with three guided bombs."
+  }
+ },
+ {
+  "key": "1005-kharkiv-banderol-night",
+  "ids": [
+   7518,
+   8361,
+   8365
+  ],
+  "title": "Удар «Бандеролями» по Индустриальному району Харькова вечером 4 октября",
+  "place": "Харьков, Индустриальный район",
+  "region": "kharkiv",
+  "tags": [
+   "расхождение: числа пострадавших",
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": null,
+   "quotes": []
+  },
+  "ua": {
+   "summary": "По данным Українська правда со ссылкой на Терехова и Синегубова, вечером 4 октября в Индустриальном районе Харькова было попадание трех «Бандеролей» возле жилых домов: погиб один человек, восемь ранены, у пяти многоэтажек выбиты окна и повреждены крыши.",
+   "quotes": [
+    {
+     "id": 7518,
+     "text": "Ввечері 4 жовтня в Індустріальному районі Харкова внаслідок російського удару \"Бандеролями\", зокрема по автівці, загинула людина, 8 дістали поранення."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent называет удар «двойным» (double-tap) и со ссылкой на мэра сообщает об одном погибшем и шести раненых; горели административное здание и автомобили, повреждены по меньшей мере 10 многоэтажных жилых домов.",
+   "quotes": [
+    {
+     "id": 8361,
+     "text": "One person was killed and six injured, as Russian forces carried out a double-tap strike using Banderol missiles in Kharkiv’s industrial district."
+    }
+   ]
+  },
+  "diverge": "Обе группы сообщают об одном погибшем, но расходятся в числе раненых (восемь у Українська правда, шесть у Kyiv Independent) и поврежденных домов (пять и не менее 10); вероятно, это данные разного времени. Только Kyiv Independent называет удар «двойным». Материалов российской группы в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Оба текста ссылаются на одни и те же местные власти.",
+  "uk": {
+   "t": "Удар «Бандеролями» по Індустріальному району Харкова ввечері 4 жовтня",
+   "p": "Харків, Індустріальний район",
+   "d": "Обидві групи повідомляють про одного загиблого, але розходяться в кількості поранених (вісім в Українській правді, шість у Kyiv Independent) і пошкоджених будинків (п’ять і щонайменше 10); імовірно, це дані різного часу. Лише Kyiv Independent називає удар «подвійним». Матеріалів російської групи в добірці немає.",
+   "ru": null,
+   "ua": "За даними Української правди з посиланням на Терехова і Синєгубова, ввечері 4 жовтня в Індустріальному районі Харкова було влучання трьох «Бандеролей» біля житлових будинків: загинула одна людина, вісім поранені, у п’яти багатоповерхівок вибито вікна та пошкоджено дахи.",
+   "ind": "Kyiv Independent називає удар «подвійним» (double-tap) і з посиланням на мера повідомляє про одного загиблого і шістьох поранених; горіли адміністративна будівля та автомобілі, пошкоджено щонайменше 10 багатоповерхових житлових будинків."
+  },
+  "en": {
+   "t": "Banderol strike on Kharkiv's Industrialnyi district on the evening of 4 October",
+   "p": "Kharkiv, Industrialnyi district",
+   "d": "Both groups report one person killed but differ on the number injured (eight in Ukrainska Pravda, six in Kyiv Independent) and damaged buildings (five and at least 10); these are probably figures from different times. Only Kyiv Independent calls it a double-tap strike. There are no materials from the Russian group in the selection.",
+   "ru": null,
+   "ua": "According to Ukrainska Pravda, citing Terekhov and Syniehubov, on the evening of 4 October three Banderols hit near residential buildings in Kharkiv's Industrialnyi district: one person was killed, eight were injured, and windows and roofs of five apartment blocks were damaged.",
+   "ind": "Kyiv Independent calls it a double-tap strike and, citing the mayor, reports one killed and six injured; an administrative building and cars were on fire and at least 10 multi-storey residential buildings were damaged."
+  }
+ },
+ {
+  "key": "1005-ship-romania",
+  "ids": [
+   6711,
+   7545,
+   7548,
+   8378,
+   5290,
+   10047,
+   9188,
+   9506,
+   9694
+  ],
+  "title": "Пожар и гибель членов экипажа на судне Royad Mammadov у берегов Румынии",
+  "place": "Черное море у побережья Румынии",
+  "region": "moldova-romania",
+  "tags": [
+   "расхождение: атрибуция",
+   "расхождение: числа погибших"
+  ],
+  "ru": {
+   "summary": "ТАСС со ссылкой на МИД Азербайджана сообщает, что 5 октября беспилотник атаковал судно Royad Mammadov у побережья Румынии; погиб капитан, гражданин Азербайджана Рустам Гасанов, еще один гражданин Азербайджана пропал без вести. Чей это был беспилотник, в сообщении не указано. Интерфакс со ссылкой на румынские СМИ называет судно «Рояд Мамедов» под флагом Сент-Китс и Невис и пишет, что пострадал капитан, а двое членов экипажа погибли; 11 моряков спасены.",
+   "quotes": [
+    {
+     "id": 5290,
+     "text": "An Azerbaijani citizen was killed and another went missing following a drone attack on the Royad Mammadov cargo vessel in the Black Sea off Romania’s coast on October 5, Azerbaijan’s Foreign Ministry said in a statement."
+    },
+    {
+     "id": 10047,
+     "text": "пострадал капитан и погибли два члена команды, сообщили румынские СМИ. Еще 11 моряков удалось спасти."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Суспільне со ссылкой на Reuters и МВД Румынии сообщает о пожаре на судне Royad Mammadov вне территориальных вод Румынии: двое погибли, 11 членов экипажа спасены, официальная причина не названа. Українська правда уточняет, что судно везло зерно из Украины в Италию и находилось примерно в 20 морских милях от побережья. По словам Зеленского, которого цитирует Українська правда, судно, принадлежавшее Турции и перевозившее кукурузу, атаковали два российских дрона, погиб капитан.",
+   "quotes": [
+    {
+     "id": 6711,
+     "text": "Згодом румунська влада уточнила, що двоє людей загинули, а 11 членів екіпажу вдалося врятувати. Причину пожежі офіційно поки не назвали."
+    },
+    {
+     "id": 7548,
+     "text": "Президент Володимир Зеленський повідомив, що два російські дрони вдарили по турецькому цивільному судну з кукурудзою в нейтральних водах, унаслідок чого загинув капітан, а долю ще однієї людини з'ясовують."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пишет, что после удара российского дрона грузовое судно загорелось у румынского побережья; погибли двое, не менее 11 человек ранены. Издание ссылается на Зеленского, по словам которого экипаж состоял из граждан Азербайджана и Индии, и на МВД Румынии, сообщившее о двух погибших. DW со ссылкой на МВД Румынии пишет о двух погибших и одном раненом и о том, что принадлежавшее турецкой компании судно затонуло.",
+   "quotes": [
+    {
+     "id": 8378,
+     "text": "Romania's interior ministry said that two people were killed in the attack."
+    },
+    {
+     "id": 9188,
+     "text": "The Turkish-owned civilian vessel subsequently sank."
+    }
+   ]
+  },
+  "diverge": "Румынские власти, по данным Суспільне, причину пожара официально не назвали; о российском ударе двумя дронами заявил Зеленский, и Kyiv Independent подает удар как факт, тогда как ТАСС со ссылкой на МИД Азербайджана пишет об атаке беспилотника, не называя его принадлежность. Kyiv Independent пишет о не менее 11 раненых, тогда как в украинских текстах 11 — это число спасенных членов экипажа. В тот же день Минобороны РФ сообщало о поражении сухогруза «южнее Одессы», но связь с этим инцидентом в материалах не установлена. Сведения о капитане расходятся: МИД Азербайджана (в изложении ТАСС) сообщает о его гибели, румынские СМИ (в изложении Интерфакса) — что он пострадал, а погибли двое членов экипажа.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Причина пожара официально не установлена; данные о раненых различаются.",
+  "uk": {
+   "t": "Пожежа і загибель членів екіпажу на судні Royad Mammadov біля берегів Румунії",
+   "p": "Чорне море біля узбережжя Румунії",
+   "d": "Румунська влада, за даними Суспільного, причину пожежі офіційно не назвала; про російський удар двома дронами заявив Зеленський, і Kyiv Independent подає удар як факт, тоді як ТАСС із посиланням на МЗС Азербайджану пише про атаку безпілотника, не називаючи його належності. Kyiv Independent пише про щонайменше 11 поранених, тоді як в українських текстах 11 — це кількість врятованих членів екіпажу. Того ж дня Міноборони РФ повідомляло про ураження суховантажу «південніше Одеси», але зв’язок із цим інцидентом у матеріалах не встановлено. Відомості про капітана різняться: МЗС Азербайджану (у викладі ТАСС) повідомляє про його загибель, румунські ЗМІ (у викладі Інтерфаксу) — що він постраждав, а загинули двоє членів екіпажу.",
+   "ru": "ТАСС із посиланням на МЗС Азербайджану повідомляє, що 5 жовтня безпілотник атакував судно Royad Mammadov біля узбережжя Румунії; загинув капітан, громадянин Азербайджану Рустам Гасанов, ще один громадянин Азербайджану зник безвісти. Чий це був безпілотник, у повідомленні не вказано. Інтерфакс із посиланням на румунські ЗМІ називає судно «Рояд Мамедов» під прапором Сент-Кітс і Невіс і пише, що постраждав капітан, а двоє членів екіпажу загинули; 11 моряків урятовано.",
+   "ua": "Суспільне з посиланням на Reuters і МВС Румунії повідомляє про пожежу на судні Royad Mammadov поза територіальними водами Румунії: двоє загинули, 11 членів екіпажу врятовано, офіційну причину не названо. Українська правда уточнює, що судно везло зерно з України до Італії і перебувало приблизно за 20 морських миль від узбережжя. За словами Зеленського, якого цитує Українська правда, судно, що належало Туреччині й перевозило кукурудзу, атакували два російські дрони, загинув капітан.",
+   "ind": "Kyiv Independent пише, що після удару російського дрона вантажне судно загорілося біля румунського узбережжя; загинули двоє, щонайменше 11 людей поранені. Видання посилається на Зеленського, за словами якого екіпаж складався з громадян Азербайджану та Індії, і на МВС Румунії, яке повідомило про двох загиблих. DW з посиланням на МВС Румунії пише про двох загиблих і одного пораненого та про те, що судно, яке належало турецькій компанії, затонуло."
+  },
+  "en": {
+   "t": "Fire and crew deaths on the ship Royad Mammadov off the coast of Romania",
+   "p": "Black Sea off the Romanian coast",
+   "d": "According to Suspilne, the Romanian authorities have not officially named the cause of the fire; the Russian strike with two drones was claimed by Zelensky, and Kyiv Independent presents it as fact, while TASS, citing Azerbaijan's Foreign Ministry, writes of a drone attack without saying whose drone it was. Kyiv Independent reports at least 11 injured, whereas in the Ukrainian texts 11 is the number of crew members rescued. On the same day the Russian Defense Ministry reported hitting a dry cargo ship \"south of Odesa\", but the materials do not establish a link to this incident. Accounts of the captain differ: Azerbaijan's Foreign Ministry (as reported by TASS) says he was killed, while Romanian media (as reported by Interfax) say he was injured and two crew members died.",
+   "ru": "TASS, citing Azerbaijan's Foreign Ministry, reports that on 5 October a drone attacked the ship Royad Mammadov off the Romanian coast; the captain, Azerbaijani citizen Rustam Gasanov, was killed and another Azerbaijani citizen went missing. The report does not say whose drone it was. Interfax, citing Romanian media, names the ship as the Royad Mammadov under the flag of Saint Kitts and Nevis and writes that the captain was injured and two crew members were killed; 11 sailors were rescued.",
+   "ua": "Suspilne, citing Reuters and Romania's interior ministry, reports a fire on the ship Royad Mammadov outside Romania's territorial waters: two people died and 11 crew members were rescued; the official cause has not been named. Ukrainska Pravda adds that the ship was carrying grain from Ukraine to Italy and was about 20 nautical miles off the coast. According to Zelensky, quoted by Ukrainska Pravda, the Turkish-owned ship carrying corn was hit by two Russian drones and the captain was killed.",
+   "ind": "Kyiv Independent writes that a cargo ship caught fire off the Romanian coast after a Russian drone strike; two people were killed and at least 11 injured. It cites Zelensky, who said the crew were citizens of Azerbaijan and India, and Romania's interior ministry, which reported two dead. DW, citing Romania's Interior Ministry, reports two dead and one injured and says the Turkish-owned vessel sank."
+  }
+ },
+ {
+  "key": "1005-moldova-border-projectile",
+  "ids": [
+   7537,
+   6717,
+   8366,
+   9181
+  ],
+  "title": "Снаряд попал в автобус на пункте пропуска Паланка на границе Украины и Молдовы",
+  "place": "Паланка – Маяки – Удобное",
+  "region": "moldova-romania",
+  "tags": [
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": null,
+   "quotes": []
+  },
+  "ua": {
+   "summary": "Українська правда и Суспільне со ссылкой на пограничную полицию Молдовы сообщают, что утром 5 октября, во время российской атаки на Одесскую область, снаряд на пункте пропуска «Паланка – Маяки – Удобное» рикошетом попал в автобус и диспетчерскую будку; молдавский пограничник легко ранен, работа пункта временно приостанавливалась и затем была возобновлена.",
+   "quotes": [
+    {
+     "id": 7537,
+     "text": "У пункті пропуску \"Паланка – Маяки – Удобне\" снаряд під час російської атаки на українську інфраструктуру рикошетом влучив в автобус і диспетчерську будку."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent со ссылкой на пограничную полицию Молдовы пишет, что инцидент произошел в 9:38 по местному времени, когда Россия атаковала украинскую инфраструктуру; пункт пропуска закрыли на время расследования.",
+   "quotes": [
+    {
+     "id": 8366,
+     "text": "The incident occured at 9:38 a.m. local time, as Russia carried out attacks against Ukrainian infrastructure, the border police said, according to Moldovan media NewsMaker and Zairul de Garda ."
+    }
+   ]
+  },
+  "diverge": "Украинская и независимая группы совпадают в описании: снаряд, рикошет, поврежденный автобус и будка, легко раненый молдавский пограничник; обе ссылаются на пограничную полицию Молдовы. Тип снаряда и кто его выпустил в материалах конкретно не установлено, кроме указания на российскую атаку. Материалов российской группы в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Совпадающие сведения с одним официальным источником.",
+  "uk": {
+   "t": "Снаряд влучив в автобус у пункті пропуску Паланка на кордоні України та Молдови",
+   "p": "Паланка – Маяки – Удобне",
+   "d": "Українська і незалежна групи збігаються в описі: снаряд, рикошет, пошкоджені автобус і будка, легко поранений молдовський прикордонник; обидві посилаються на прикордонну поліцію Молдови. Тип снаряда і хто його випустив, у матеріалах конкретно не встановлено, окрім вказівки на російську атаку. Матеріалів російської групи в добірці немає.",
+   "ru": null,
+   "ua": "Українська правда і Суспільне з посиланням на прикордонну поліцію Молдови повідомляють, що вранці 5 жовтня, під час російської атаки на Одещину, снаряд у пункті пропуску «Паланка – Маяки – Удобне» рикошетом влучив в автобус і диспетчерську будку; молдовський прикордонник легко поранений, роботу пункту тимчасово зупиняли, а потім відновили.",
+   "ind": "Kyiv Independent із посиланням на прикордонну поліцію Молдови пише, що інцидент стався о 9:38 за місцевим часом, коли Росія атакувала українську інфраструктуру; пункт пропуску закрили на час розслідування."
+  },
+  "en": {
+   "t": "Projectile hits bus at Palanca crossing on the Ukraine–Moldova border",
+   "p": "Palanca – Maiaky – Udobne",
+   "d": "The Ukrainian and independent groups agree in their description: a projectile, a ricochet, a damaged bus and booth, and a lightly injured Moldovan border guard; both cite Moldova's border police. The type of projectile and who fired it are not specifically established in the materials beyond the reference to a Russian attack. There are no materials from the Russian group in the selection.",
+   "ru": null,
+   "ua": "Ukrainska Pravda and Suspilne, citing Moldova's border police, report that on the morning of 5 October, during a Russian attack on Odesa region, a projectile ricocheted at the Palanca – Maiaky – Udobne crossing and hit a bus and a control booth; a Moldovan border guard was lightly injured, and the crossing was temporarily closed and later reopened.",
+   "ind": "Kyiv Independent, citing Moldova's border police, writes that the incident happened at 9:38 local time while Russia was attacking Ukrainian infrastructure; the crossing was closed for the investigation."
+  }
+ },
+ {
+  "key": "1005-night-strikes-energy-ports",
+  "ids": [
+   6368,
+   4214,
+   4216,
+   4215,
+   4217,
+   4218,
+   4235,
+   6688,
+   7527,
+   10021,
+   10064,
+   9175
+  ],
+  "title": "Ночная атака 4–5 октября: удары по энергетике и портам Харьковской и Одесской областей",
+  "place": "Харьковская и Одесская области",
+  "region": "odesa",
+  "tags": [
+   "расхождение: характер объектов"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ, по данным РИА Новости, заявило, что накануне вечером и ночью 5 октября беспилотниками поражены электроподстанция Кочеток в Харьковской области, портовый пункт Вилково, хранилища ГСМ в порту Черноморск и сухогруз «с военным имуществом», а также сухогруз «южнее Одессы»; позже ведомство сообщило о поражении судна в порту Южный. Все цели ведомство описывает как используемые в интересах ВСУ.",
+   "quotes": [
+    {
+     "id": 6368,
+     "text": "Вчера вечером и сегодня ночью в результате ударов поражены"
+    },
+    {
+     "id": 4215,
+     "text": "Армия России поразила в Одесской области портовый пункт Вилково, задействованный для переброски военных грузов, сообщило в понедельник министерство обороны РФ."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Воздушные силы ВСУ, по данным Суспільне и Українська правда, сообщили, что с вечера 4 октября Россия атаковала Украину 205 беспилотниками, 172 из них сбиты или подавлены; зафиксированы попадания на 13 локациях и падение обломков на трех.",
+   "quotes": [
+    {
+     "id": 7527,
+     "text": "Від вечора 4 жовтня російські окупанти атакували Україну 205 безпілотниками різних типів, 172 БпЛА вдалося знешкодити, але є і влучання."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW со ссылкой на главу Одесской ОВА Олега Кипера пишет о новом массированном ударе по Одесской области в ночь на 5 октября: пострадали промышленная и портовая инфраструктура, начались масштабные пожары, которые уже ликвидированы; пострадавших нет.",
+   "quotes": [
+    {
+     "id": 9175,
+     "text": "По сообщениям властей, пострадали промышленная и портовая инфраструктура. После российских ударов начались масштабные пожары, но они уже ликвидированы, пострадавших нет."
+    }
+   ]
+  },
+  "diverge": "Российская группа перечисляет конкретные цели и называет их военными или используемыми ВСУ; украинская группа приводит только общее число дронов (205, сбито 172) и попаданий (13 локаций), а DW со ссылкой на Кипера говорит о повреждении промышленной и портовой инфраструктуры Одесской области, не называя объектов. Подтверждения характера целей ни одна группа не приводит.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Тексты описывают одну ночь, но с разной детализацией.",
+  "uk": {
+   "t": "Нічна атака 4–5 жовтня: удари по енергетиці та портах Харківської й Одеської областей",
+   "p": "Харківська та Одеська області",
+   "d": "Російська група перелічує конкретні цілі й називає їх військовими або такими, що використовуються ЗСУ; українська група наводить лише загальну кількість дронів (205, збито 172) і влучань (13 локацій), а DW з посиланням на Кіпера говорить про пошкодження промислової та портової інфраструктури Одеської області, не називаючи об’єктів. Підтвердження характеру цілей жодна група не наводить.",
+   "ru": "Міноборони РФ, за даними РІА Новини, заявило, що напередодні ввечері та вночі 5 жовтня безпілотниками уражено електропідстанцію Кочеток у Харківській області, портовий пункт Вилкове, сховища ПММ у порту Чорноморськ і суховантаж «з військовим майном», а також суховантаж «південніше Одеси»; пізніше відомство повідомило про ураження судна в порту Південний. Усі цілі відомство описує як такі, що використовуються в інтересах ЗСУ.",
+   "ua": "Повітряні сили ЗСУ, за даними Суспільного та Української правди, повідомили, що з вечора 4 жовтня Росія атакувала Україну 205 безпілотниками, 172 з них збито або подавлено; зафіксовано влучання на 13 локаціях і падіння уламків на трьох.",
+   "ind": "DW з посиланням на голову Одеської ОВА Олега Кіпера пише про новий масований удар по Одеській області в ніч на 5 жовтня: постраждали промислова і портова інфраструктура, почалися масштабні пожежі, які вже ліквідовано; постраждалих немає."
+  },
+  "en": {
+   "t": "Overnight attack of 4–5 October: strikes on energy and ports in Kharkiv and Odesa regions",
+   "p": "Kharkiv and Odesa regions",
+   "d": "The Russian group lists specific targets and calls them military or used by the Ukrainian armed forces; the Ukrainian group gives only the total number of drones (205, 172 downed) and hits (13 locations), while DW, citing Kiper, speaks of damage to industrial and port infrastructure in Odesa region without naming sites. Neither group offers confirmation of the nature of the targets.",
+   "ru": "The Russian Defense Ministry, according to RIA Novosti, said that on the previous evening and overnight into 5 October drones hit the Kochetok electrical substation in Kharkiv region, the port facility of Vylkove, fuel storage at the port of Chornomorsk and a dry cargo ship \"with military equipment\", as well as a dry cargo ship \"south of Odesa\"; later the ministry reported hitting a vessel in the port of Pivdennyi. The ministry describes all the targets as used in the interests of the Ukrainian armed forces.",
+   "ua": "Ukraine's Air Force, according to Suspilne and Ukrainska Pravda, said that since the evening of 4 October Russia had attacked Ukraine with 205 drones, 172 of which were shot down or suppressed; hits were recorded at 13 locations and falling debris at three.",
+   "ind": "DW, citing Odesa governor Oleh Kiper, reports a new massive strike on Odesa region on the night of 5 October: industrial and port infrastructure was hit and large fires broke out, which have since been extinguished; no one was hurt."
+  }
+ },
+ {
+  "key": "1005-kyiv-evening-drone-debris",
+  "ids": [
+   4241,
+   7559,
+   8385,
+   9705
+  ],
+  "title": "Обломки беспилотника упали во двор жилого дома в Печерском районе Киева",
+  "place": "Киев, Печерский район",
+  "region": "kyiv",
+  "tags": [
+   "умолчание"
+  ],
+  "ru": {
+   "summary": "РИА Новости со ссылкой на «Общественное» сообщает о взрывах в Киеве вечером 5 октября и напоминает о заявлении Минобороны РФ об усилении ударов по объектам украинского ВПК; о последствиях в заметке не говорится.",
+   "quotes": [
+    {
+     "id": 4241,
+     "text": "В Киеве прогремели взрывы, передает телеканал \"Общественное\"."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Українська правда со ссылкой на КГВА и ГСЧС пишет, что вечером 5 октября обломки российского беспилотника упали на открытой территории жилого дома в Печерском районе; загорелись 2 легковых автомобиля, еще один поврежден. Воздушные силы сообщали о реактивном беспилотнике над городом.",
+   "quotes": [
+    {
+     "id": 7559,
+     "text": "У Києві ввечері 5 жовтня уламки російського безпілотника впали на відкритій території житлового будинку."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent со ссылкой на своего корреспондента и ГСЧС сообщает то же: обломки сбитого дрона упали во двор жилого дома в Печерском районе, две машины сгорели, третья повреждена.",
+   "quotes": [
+    {
+     "id": 8385,
+     "text": "Two cars were set ablaze in the courtyard of a residential building, and a third vehicle was damaged in the Russian attack, Ukraine's State Emergency Service also reported ."
+    }
+   ]
+  },
+  "diverge": "Украинская и независимая группы совпадают в деталях (Печерский район, две сгоревшие машины, одна поврежденная). Российская заметка сообщает только о взрывах и не упоминает ни последствий, ни того, что речь идет о российском беспилотнике.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Совпадающие описания.",
+  "uk": {
+   "t": "Уламки безпілотника впали у двір житлового будинку в Печерському районі Києва",
+   "p": "Київ, Печерський район",
+   "d": "Українська і незалежна групи збігаються в деталях (Печерський район, дві згорілі машини, одна пошкоджена). Російська замітка повідомляє лише про вибухи і не згадує ні наслідків, ні того, що йдеться про російський безпілотник.",
+   "ru": "РІА Новини з посиланням на «Суспільне» повідомляє про вибухи в Києві ввечері 5 жовтня і нагадує про заяву Міноборони РФ щодо посилення ударів по об’єктах українського ОПК; про наслідки в замітці не йдеться.",
+   "ua": "Українська правда з посиланням на КМВА і ДСНС пише, що ввечері 5 жовтня уламки російського безпілотника впали на відкритій території житлового будинку в Печерському районі; загорілися 2 легкові автомобілі, ще один пошкоджено. Повітряні сили повідомляли про реактивний безпілотник над містом.",
+   "ind": "Kyiv Independent із посиланням на свого кореспондента і ДСНС повідомляє те саме: уламки збитого дрона впали у двір житлового будинку в Печерському районі, дві машини згоріли, третю пошкоджено."
+  },
+  "en": {
+   "t": "Drone debris falls into the courtyard of a residential building in Kyiv's Pecherskyi district",
+   "p": "Kyiv, Pecherskyi district",
+   "d": "The Ukrainian and independent groups agree on the details (Pecherskyi district, two cars burned, one damaged). The Russian report mentions only explosions and refers neither to the consequences nor to the fact that a Russian drone was involved.",
+   "ru": "RIA Novosti, citing the broadcaster Suspilne, reports explosions in Kyiv on the evening of 5 October and recalls the Russian Defense Ministry's statement about intensifying strikes on Ukrainian defence-industry facilities; the report does not mention any consequences.",
+   "ua": "Ukrainska Pravda, citing the Kyiv city military administration and the State Emergency Service, writes that on the evening of 5 October debris of a Russian drone fell in the open area of a residential building in Pecherskyi district; 2 cars caught fire and another was damaged. The Air Force had reported a jet-powered drone over the city.",
+   "ind": "Kyiv Independent, citing its reporter and the State Emergency Service, reports the same: debris of a downed drone fell into the courtyard of a residential building in Pecherskyi district, two cars burned and a third was damaged."
+  }
+ },
+ {
+  "key": "1005-turrets-jet-drones",
+  "ids": [
+   6700,
+   7533,
+   8373,
+   9686,
+   9691,
+   9721,
+   9723,
+   9737
+  ],
+  "title": "Воздушные силы ВСУ сообщили о первых сбитых реактивных дронах с роботизированных турелей",
+  "place": "Украина",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна сторона освещает",
+   "не проверено"
+  ],
+  "ru": {
+   "summary": null,
+   "quotes": []
+  },
+  "ua": {
+   "summary": "Суспільне и Українська правда цитируют спикера Воздушных сил Юрия Игната: роботизированные турели с машинным зрением, которые устанавливают в том числе на мостах, уже сбили реактивные беспилотники, включая «Герань-5». По словам Игната, радиус действия таких систем остается относительно небольшим.",
+   "quotes": [
+    {
+     "id": 6700,
+     "text": "«Є вже збиття навіть реактивних БпЛА, навіть \"Герань-5\" з тих самих турелей», — сказав речник Повітряних сил."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent передает те же слова Игната и напоминает, что накануне Зеленский объявил об установке двенадцати таких турелей в районах активности реактивных дронов, в том числе вокруг Киева.",
+   "quotes": [
+    {
+     "id": 8373,
+     "text": "Automated machine gun turrets using artificial intelligence to aim have downed their first Russian jet-powered drones over Ukraine, Air Force spokesperson Yurii Ihnat said on Oct. 5."
+    }
+   ]
+  },
+  "diverge": "Все материалы опираются на одно заявление спикера Воздушных сил ВСУ; число сбитых дронов не называется, независимого подтверждения нет. Kyiv Independent (украинское издание) добавляет контекст о двенадцати установленных турелях. Материалов российской группы в подборке нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Одно заявление, переданное одинаково.",
+  "uk": {
+   "t": "Повітряні сили ЗСУ повідомили про перші збиті реактивні дрони з роботизованих турелей",
+   "p": "Україна",
+   "d": "Усі матеріали спираються на одну заяву речника Повітряних сил ЗСУ; кількість збитих дронів не називається, незалежного підтвердження немає. Kyiv Independent (українське видання) додає контекст про дванадцять встановлених турелей. Матеріалів російської групи в добірці немає.",
+   "ru": null,
+   "ua": "Суспільне і Українська правда цитують речника Повітряних сил Юрія Ігната: роботизовані турелі з машинним зором, які встановлюють зокрема на мостах, уже збили реактивні безпілотники, зокрема «Герань-5». За словами Ігната, радіус дії таких систем залишається відносно невеликим.",
+   "ind": "Kyiv Independent передає ті самі слова Ігната і нагадує, що напередодні Зеленський оголосив про встановлення дванадцяти таких турелей у районах активності реактивних дронів, зокрема навколо Києва."
+  },
+  "en": {
+   "t": "Ukraine's Air Force reports first jet-powered drones downed by robotic turrets",
+   "p": "Ukraine",
+   "d": "All the materials rely on a single statement by the Ukrainian Air Force spokesperson; the number of drones downed is not given and there is no independent confirmation. Kyiv Independent (a Ukrainian outlet) adds context about twelve installed turrets. There are no materials from the Russian group in the selection.",
+   "ru": null,
+   "ua": "Suspilne and Ukrainska Pravda quote Air Force spokesperson Yurii Ihnat: robotic turrets with machine vision, installed among other places on bridges, have already shot down jet-powered drones, including the Geran-5. According to Ihnat, the range of such systems remains relatively small.",
+   "ind": "Kyiv Independent relays the same remarks by Ihnat and recalls that the day before Zelensky announced the installation of twelve such turrets in areas of jet-drone activity, including around Kyiv."
+  }
+ },
+ {
+  "key": "1005-embassies-kyiv",
+  "ids": [
+   5208,
+   5221,
+   5187,
+   6723,
+   7556,
+   8386,
+   9703
+  ],
+  "title": "США и Польша о работе посольств в Киеве после предупреждений России",
+  "place": "Киев / Вашингтон",
+  "region": "kyiv",
+  "tags": [
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "ТАСС пишет, что госсекретарь США Марко Рубио «не исключил» приостановки работы посольства в Киеве, и приводит его слова о том, что США сами определят, безопасно ли там находиться. Песков, по данным ТАСС, заявил, что решения иностранных государств об эвакуации посольств не повлияют на работу российских военных. ТАСС также сообщает, что МИД Польши не намерен менять режим работы посольства, и напоминает, что 3 октября МИД РФ вновь предупредил иностранцев, включая дипломатов, о рисках пребывания на Украине.",
+   "quotes": [
+    {
+     "id": 5208,
+     "text": "US Secretary of State Marco Rubio did not rule out suspending operations of the US Embassy in Ukraine."
+    },
+    {
+     "id": 5187,
+     "text": "Decisions by foreign countries on whether to evacuate their embassies from Kiev will not affect this, Kremlin Spokesman Dmitry Peskov said at a briefing."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "Суспільне и Українська правда подают слова Рубио как ответ на угрозы России: Госдеп ежедневно оценивает безопасность миссий, и пока посольство в Киеве продолжает работать; по словам Рубио, россияне уже месяцами требуют от дипломатов покинуть Киев.",
+   "quotes": [
+    {
+     "id": 6723,
+     "text": "Рубіо наголосив, що росіяни «вже місяцями» вимагають від іноземних дипломатів виїхати з Києва."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "Kyiv Independent пишет, что Вашингтон пока не планирует выводить дипломатов из Киева, и приводит слова Рубио о том, что изменений в режиме работы «до сих пор» не было.",
+   "quotes": [
+    {
+     "id": 8386,
+     "text": "Washington does not currently plan to remove its diplomats from Kyiv as Russia continues attacks and warns foreign diplomats to leave, U.S. Secretary of State Marco Rubio told reporters on Oct. 5."
+    }
+   ]
+  },
+  "diverge": "Все группы цитируют одни и те же слова Рубио, но расставляют акценты по-разному: ТАСС выносит в заголовок возможную приостановку работы посольства, украинские издания и Kyiv Independent — то, что посольство продолжает работать. Только российская группа приводит заявления Пескова и МИД Польши.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Одна цитата, разные акценты.",
+  "uk": {
+   "t": "США і Польща про роботу посольств у Києві після попереджень Росії",
+   "p": "Київ / Вашингтон",
+   "d": "Усі групи цитують ті самі слова Рубіо, але розставляють акценти по-різному: ТАСС виносить у заголовок можливе призупинення роботи посольства, українські видання та Kyiv Independent — те, що посольство продовжує працювати. Лише російська група наводить заяви Пєскова і МЗС Польщі.",
+   "ru": "ТАСС пише, що держсекретар США Марко Рубіо «не виключив» призупинення роботи посольства в Києві, і наводить його слова про те, що США самі визначать, чи безпечно там перебувати. Пєсков, за даними ТАСС, заявив, що рішення іноземних держав про евакуацію посольств не вплинуть на роботу російських військових. ТАСС також повідомляє, що МЗС Польщі не має наміру змінювати режим роботи посольства, і нагадує, що 3 жовтня МЗС РФ знову попередило іноземців, зокрема дипломатів, про ризики перебування в Україні.",
+   "ua": "Суспільне і Українська правда подають слова Рубіо як відповідь на погрози Росії: Держдеп щодня оцінює безпеку місій, і поки що посольство в Києві продовжує працювати; за словами Рубіо, росіяни вже місяцями вимагають від дипломатів залишити Київ.",
+   "ind": "Kyiv Independent пише, що Вашингтон поки не планує виводити дипломатів із Києва, і наводить слова Рубіо про те, що змін у режимі роботи «досі» не було."
+  },
+  "en": {
+   "t": "US and Poland on the work of embassies in Kyiv after Russian warnings",
+   "p": "Kyiv / Washington",
+   "d": "All groups quote the same remarks by Rubio but place the emphasis differently: TASS headlines a possible suspension of the embassy's work, while the Ukrainian outlets and Kyiv Independent stress that the embassy keeps working. Only the Russian group cites statements by Peskov and the Polish foreign ministry.",
+   "ru": "TASS writes that US Secretary of State Marco Rubio \"did not rule out\" suspending the work of the embassy in Kyiv and quotes him as saying the US will decide for itself whether it is safe to be there. According to TASS, Peskov said that decisions by foreign states to evacuate embassies would not affect the work of the Russian military. TASS also reports that the Polish foreign ministry does not intend to change the embassy's operations and recalls that on 3 October the Russian foreign ministry again warned foreigners, including diplomats, of the risks of staying in Ukraine.",
+   "ua": "Suspilne and Ukrainska Pravda present Rubio's words as a response to Russian threats: the State Department assesses the security of missions every day, and for now the embassy in Kyiv keeps working; according to Rubio, the Russians have been demanding for months that diplomats leave Kyiv.",
+   "ind": "Kyiv Independent writes that Washington does not currently plan to withdraw diplomats from Kyiv and quotes Rubio as saying there has been no change in posture \"up to this point\"."
+  }
+ },
+ {
+  "key": "1005-samoilovka-claim",
+  "ids": [
+   6373,
+   5196,
+   10035,
+   10038
+  ],
+  "title": "Минобороны РФ заявило о взятии Самойловки в Запорожской области",
+  "place": "Самойловка",
+  "region": "zaporizhzhia",
+  "tags": [
+   "одна сторона освещает",
+   "расхождение: кто контролирует населённый пункт"
+  ],
+  "ru": {
+   "summary": "Минобороны РФ в Telegram и в изложении ТАСС заявило, что подразделения группировки «Восток» «освободили» населенный пункт Самойловка Запорожской области; в той же сводке ведомство оценивает потери ВСУ за сутки примерно в 1435 военных. Интерфакс приводит слова ведомства о том, что взятие Самойловки создает плацдарм для дальнейшего наступления в направлении Терновки.",
+   "quotes": [
+    {
+     "id": 6373,
+     "text": "Подразделения группировки войск «Восток» освободили населенный пункт Самойловка Запорожской области."
+    },
+    {
+     "id": 10038,
+     "text": "Взятие под контроль села Самойловка создает плацдарм для дальнейших наступательных действий в направлении населенного пункта Терновка в Запорожской области"
+    }
+   ]
+  },
+  "ua": {
+   "summary": null,
+   "quotes": []
+  },
+  "ind": {
+   "summary": null,
+   "quotes": []
+  },
+  "diverge": "Заявление о взятии Самойловки исходит только от Минобороны РФ; в подборке нет ни подтверждения, ни опровержения украинской стороны или независимых источников, поэтому контроль над населенным пунктом не установлен.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Короткое официальное заявление, переданное дословно.",
+  "uk": {
+   "t": "Міноборони РФ заявило про захоплення Самійлівки в Запорізькій області",
+   "p": "Самійлівка",
+   "d": "Заява про захоплення Самійлівки походить лише від Міноборони РФ; у добірці немає ні підтвердження, ні спростування української сторони чи незалежних джерел, тому контроль над населеним пунктом не встановлено.",
+   "ru": "Міноборони РФ у Telegram і у викладі ТАСС заявило, що підрозділи угруповання «Восток» «звільнили» населений пункт Самійлівка Запорізької області; у тому ж зведенні відомство оцінює втрати ЗСУ за добу приблизно в 1435 військових. Інтерфакс наводить слова відомства про те, що взяття Самійлівки створює плацдарм для подальшого наступу в напрямку Тернівки.",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Russian Defense Ministry claims capture of Samoilivka in Zaporizhzhia region",
+   "p": "Samoilivka",
+   "d": "The claim that Samoilivka has been taken comes only from the Russian Defense Ministry; the selection contains neither confirmation nor denial from the Ukrainian side or independent sources, so control of the settlement is not established.",
+   "ru": "The Russian Defense Ministry, on Telegram and as reported by TASS, said units of the East group of forces had \"liberated\" the settlement of Samoilivka in Zaporizhzhia region; in the same summary the ministry put Ukrainian losses over the past day at roughly 1435 troops. Interfax quotes the ministry as saying that taking Samoilivka creates a bridgehead for a further offensive towards Ternivka.",
+   "ua": null,
+   "ind": null
+  }
+ },
+ {
+  "key": "1005-znpp-attack-claims",
+  "ids": [
+   5163,
+   5177,
+   4243,
+   10028,
+   10029,
+   10067,
+   10027
+  ],
+  "title": "Росатом и МИД РФ заявили об атаке на лабораторный корпус Запорожской АЭС",
+  "place": "Запорожская АЭС, Энергодар",
+  "region": "zaporizhzhia",
+  "tags": [
+   "одна сторона освещает",
+   "не проверено"
+  ],
+  "ru": {
+   "summary": "Глава Росатома Алексей Лихачев, по данным ТАСС, заявил, что в ночь на 5 октября украинские военные атаковали два объекта ЗАЭС — лабораторный корпус в 200 метрах от четвертого и пятого энергоблоков и здание переработки радиоактивных отходов; угрозы ядерной безопасности, по его словам, нет. Руководство станции предупредило о потенциальной опасности таких ударов, а Мария Захарова призвала МАГАТЭ осудить «преступные действия киевского режима». Интерфакс также приводит слова Лихачева о том, что 4 октября при ударе дрона по грузовику с продуктами для персонала погиб водитель — сотрудник станции, а Запорожская ТЭС после повреждения трансформатора перешла на аварийные дизель-генераторы.",
+   "quotes": [
+    {
+     "id": 5163,
+     "text": "Two facilities at the Zaporozhye Nuclear Power Plant (ZNPP), the laboratory building and the radioactive waste processing facility, were attacked by the Ukrainian armed forces overnight, CEO of Russia’s Rosatom State Corporation Alexey Likhachev trold reporters."
+    },
+    {
+     "id": 4243,
+     "text": "ВСУ в ночь на понедельник атаковали лабораторный корпус ЗАЭС и здание по переработке радиоактивных отходов."
+    },
+    {
+     "id": 10029,
+     "text": "\"Газель\" с продуктами для персонала АЭС была атакована дроном. Водитель - сотрудник станции - погиб"
+    }
+   ]
+  },
+  "ua": {
+   "summary": null,
+   "quotes": []
+  },
+  "ind": {
+   "summary": null,
+   "quotes": []
+  },
+  "diverge": "Все материалы — российские официальные заявления (Росатом, администрация ЗАЭС, МИД РФ); украинской реакции, оценки МАГАТЭ или независимого подтверждения в подборке нет, поэтому авторство атаки не установлено.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Согласованные российские заявления.",
+  "uk": {
+   "t": "Росатом і МЗС РФ заявили про атаку на лабораторний корпус Запорізької АЕС",
+   "p": "Запорізька АЕС, Енергодар",
+   "d": "Усі матеріали — російські офіційні заяви (Росатом, адміністрація ЗАЕС, МЗС РФ); української реакції, оцінки МАГАТЕ чи незалежного підтвердження в добірці немає, тому авторство атаки не встановлено.",
+   "ru": "Голова Росатома Олексій Ліхачов, за даними ТАСС, заявив, що в ніч на 5 жовтня українські військові атакували два об’єкти ЗАЕС — лабораторний корпус за 200 метрів від четвертого і п’ятого енергоблоків і будівлю переробки радіоактивних відходів; загрози ядерній безпеці, за його словами, немає. Керівництво станції попередило про потенційну небезпеку таких ударів, а Марія Захарова закликала МАГАТЕ засудити «злочинні дії київського режиму». Інтерфакс також наводить слова Лихачова про те, що 4 жовтня під час удару дрона по вантажівці з продуктами для персоналу загинув водій — працівник станції, а Запорізька ТЕС після пошкодження трансформатора перейшла на аварійні дизель-генератори.",
+   "ua": null,
+   "ind": null
+  },
+  "en": {
+   "t": "Rosatom and Russian Foreign Ministry claim attack on Zaporizhzhia NPP laboratory building",
+   "p": "Zaporizhzhia NPP, Enerhodar",
+   "d": "All the materials are Russian official statements (Rosatom, the plant's administration, the Russian Foreign Ministry); the selection contains no Ukrainian response, IAEA assessment or independent confirmation, so responsibility for the attack is not established.",
+   "ru": "Rosatom head Alexei Likhachev, according to TASS, said that overnight into 5 October Ukrainian forces attacked two facilities at the Zaporizhzhia NPP — a laboratory building 200 metres from the fourth and fifth power units and a radioactive waste processing building; he said there was no threat to nuclear safety. The plant's management warned of the potential danger of such strikes, and Maria Zakharova called on the IAEA to condemn the \"criminal actions of the Kyiv regime\". Interfax also quotes Likhachev as saying that on 4 October a drone strike on a lorry carrying food for staff killed the driver, a plant employee, and that the Zaporizhzhia thermal power plant switched to emergency diesel generators after a transformer was damaged.",
+   "ua": null,
+   "ind": null
+  }
+ }
+]

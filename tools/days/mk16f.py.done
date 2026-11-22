@@ -1,0 +1,34 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+card('1016-eu-summit-70bn-ask', [11005, 11002, 4922, 4928, 4925, 4926, 4924, 10938, 6157, 4950, 8919, 7274, 8198, 8855, 7266, 8172, 8197, 8181, 7239, 9461, 9466, 8643, 8628, 9628, 9452, 8737, 9448, 8632, 8635, 8645],
+ 'Саммит ЕС: Зеленский просит не менее 70 млрд евро на оборону в 2027 году; Еврокомиссии поручено подготовить предложения, решения о деньгах нет', 'Брюссель', 'ukraine-wide',
+ ['расхождение: оценка ситуации'],
+ S('Урсула фон дер Ляйен заявила, что кредит ЕС в 90 млрд евро на 2026–2027 годы покрывает лишь две трети потребностей и в 2027 году остается дефицит в 70 млрд евро, а ЕС обеспечивает 80% внешней помощи Украине и ждет участия других партнеров. Антониу Кошта сообщил, что Еврокомиссии поручено подготовить предложения по покрытию дополнительных потребностей. Макрон назвал преждевременным называть суммы; РИА Новости приводит резкую критику запроса французскими оппозиционерами Флорианом Филиппо и Николя Дюпон-Эньяном, Туск — что ряд стран хочет сократить военные расходы.',
+   (11005, 'Мы всегда говорили, что это покрывает две трети необходимой бюджетной и оборонной поддержки.'),
+   (4928, 'Мы поручили Еврокомиссии подготовить предложения о том, как покрыть дополнительные финансовые потребности Украины в 2027 году'),
+   (4925, 'Украина выступила с запросом. Слишком рано озвучивать цифры')),
+ S('Зеленский заявил на Европейском совете, что война в следующем году обойдется в 155 млрд евро и от ЕС нужно как минимум 70 млрд евро дополнительно на оборону, оружие и устойчивость. Лидеры ЕС, по данным украинских СМИ, публично заверили, что санкции против России не будут ослаблены, премьер Нидерландов Роб Йеттен назвал Зеленского лидером, а Politico — что от Киева не требовали смягчить тон в отношении Трампа. Глава МИД Андрей Сибига заявил, что политических препятствий для открытия переговорных кластеров больше нет.',
+   (8198, 'Наступного року війна коштуватиме 155 мільярдів євро. І нам потрібно щонайменше 70 мільярдів євро додатково від вас – на оборону, на зброю та на нашу стійкість.'),
+   (8172, 'Керівники Євросоюзу перед засіданням Європейської ради публічно запевнили у тому, що санкції проти РФ у жодному разі не будуть послаблені')),
+ S('DW подводит итог: саммит не принес прорывных решений и денег на 2027 год, но дал политические сигналы неизменной поддержки. Kyiv Independent сообщает о критике канцлером Австрии Кристианом Штокером непрозрачности украинских финансов и о первой двусторонней встрече Зеленского с премьером Венгрии Петером Мадьяром.',
+   (9466, 'не принес прорывных решений для Украины , однако послал важные политические сигналы'),
+   (8632, 'So many numbers are swirling around that you have to put them in order')),
+ 'Российские источники называют обращение «требованием» и выдвигают на первый план критиков помощи Киеву; украинские и независимые — сигналы поддержки ЕС, хотя независимые отмечают отсутствие решения о деньгах и сомнения Австрии.',
+ 'low', '', False,
+ ['Саміт ЄС: Зеленський просить щонайменше 70 млрд євро на оборону у 2027 році; Єврокомісії доручено підготувати пропозиції, рішення про гроші немає', 'Брюссель',
+  'Російські джерела називають звернення «вимогою» і висувають на перший план критиків допомоги Києву; українські та незалежні — сигнали підтримки ЄС, хоча незалежні відзначають відсутність рішення про гроші та сумніви Австрії.',
+  'Урсула фон дер Ляєн заявила, що кредит ЄС у 90 млрд євро на 2026–2027 роки покриває лише дві третини потреб і у 2027 році залишається дефіцит у 70 млрд євро, а ЄС забезпечує 80% зовнішньої допомоги Україні і чекає на участь інших партнерів. Антоніу Кошта повідомив, що Єврокомісії доручено підготувати пропозиції щодо покриття додаткових потреб. Макрон назвав передчасним називати суми; РИА Новости наводить різку критику запиту французькими опозиціонерами Флоріаном Філіппо та Ніколя Дюпон-Еньяном, Туск — що низка країн хоче скоротити військові витрати.',
+  'Зеленський заявив на Європейській раді, що війна наступного року коштуватиме 155 млрд євро і від ЄС потрібно щонайменше 70 млрд євро додатково на оборону, зброю і стійкість. Лідери ЄС, за даними українських ЗМІ, публічно запевнили, що санкції проти Росії не буде послаблено, прем’єр Нідерландів Роб Єттен назвав Зеленського лідером, а Politico — що від Києва не вимагали пом’якшити тон щодо Трампа. Голова МЗС Андрій Сибіга заявив, що політичних перешкод для відкриття переговорних кластерів більше немає.',
+  'DW підсумовує: саміт не приніс проривних рішень і грошей на 2027 рік, але дав політичні сигнали незмінної підтримки. Kyiv Independent повідомляє про критику канцлером Австрії Крістіаном Штокером непрозорості українських фінансів і про першу двосторонню зустріч Зеленського з прем’єром Угорщини Петером Мадяром.'],
+ ['EU summit: Zelensky asks for at least 70 billion euros for defence in 2027; Commission tasked with proposals, no decision on money', 'Brussels',
+  'Russian sources call the appeal a "demand" and foreground critics of aid to Kyiv; Ukrainian and independent sources stress EU signals of support, though independent ones note the absence of a funding decision and Austria\'s doubts.',
+  'Ursula von der Leyen said the EU\'s 90 billion euro loan for 2026–2027 covers only two thirds of needs, leaving a 70 billion euro gap in 2027, and that the EU provides 80% of external aid to Ukraine and expects other partners to step in. Antonio Costa said the Commission had been tasked with preparing proposals to cover the additional needs. Macron called it premature to name figures; RIA Novosti quotes sharp criticism of the request by French opposition figures Florian Philippot and Nicolas Dupont-Aignan, and Tusk said some countries want to cut military spending.',
+  'Zelensky told the European Council that the war will cost 155 billion euros next year and that at least 70 billion euros more is needed from the EU for defence, weapons and resilience. EU leaders, according to Ukrainian media, publicly pledged that sanctions on Russia would not be eased, Dutch Prime Minister Rob Jetten called Zelensky a leader, and Politico reported that Kyiv had not been asked to soften its tone on Trump. Foreign Minister Andrii Sybiha said there were no longer any political obstacles to opening negotiating clusters.',
+  'DW sums up: the summit brought no breakthrough decisions and no money for 2027, but sent political signals of unchanged support. Kyiv Independent reports Austrian Chancellor Christian Stocker\'s criticism of the opacity of Ukraine\'s finances and Zelensky\'s first bilateral meeting with Hungarian Prime Minister Peter Magyar.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c16f.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

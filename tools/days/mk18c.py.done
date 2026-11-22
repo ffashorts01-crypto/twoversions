@@ -1,0 +1,316 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- new cards (data collected 18:06-18:10 Europe/Berlin) ----------------
+card('1018-zelensky-nbc-bessent-starlink', [11180, 11291, 11296, 11129, 11325, 11422, 11396, 11427, 11399, 11405, 11412, 11407],
+ 'Зеленский в интервью NBC: США три дня не передавали данные о баллистике, ограничения Starlink сохраняются; Бессент назвал его обвинения безответственными', 'Вашингтон, Киев', 'ukraine-wide',
+ ['расхождение: кто виноват', 'расхождение: формулировки'],
+ S('РИА Новости и ТАСС передают слова министра финансов США Скотта Бессента в программе Meet the Press: обвинения Зеленского в причастности администрации Трампа к замедлению Starlink он назвал «безрассудными», а слова о приостановке обмена разведданными — неправдивыми; по словам Бессента, Зеленский ошибается, говоря о победе Украины, а не об урегулировании путем переговоров. РИА со ссылкой на AP пишет, что советник Зеленского Сергей Бескрестнов ведет переговоры с Пентагоном и SpaceX о снятии ограничений.',
+   (11180, 'Я думаю, что обвинения Владимира Зеленского безрассудны'),
+   (11180, 'Ему нужно быть очень осторожным в таких высказываниях, ведь они неправдивы'),
+   (11129, 'в активных переговорах с Пентагоном, SpaceX и правительством США')),
+ S('Зеленский в интервью NBC заявил, что США три дня не передавали Украине данные о российских баллистических атаках, теперь обмен восстановлен. Ограничение Starlink и Starshield, по его словам, сохраняется — максимальная скорость 161 км/ч; сигнал поступил от правительства США, а технически ограничение ввела SpaceX. Он надеется на переговоры с США уже на следующей неделе, возможно в Брюсселе. Бессент в ответ назвал обвинения Зеленского «крайне безответственными» и призвал его быть осторожнее с заявлениями, «не соответствующими действительности».',
+   (11422, 'Ми не отримували дані про балістичні атаки протягом трьох діб'),
+   (11396, 'Максимальна швидкість – 161 км/год'),
+   (11399, 'І я вважаю вкрай безвідповідальним з боку президента Зеленського висувати такі звинувачення')),
+ S('DW и Meduza пересказывают интервью Зеленского NBC: американская сторона на три дня прерывала передачу данных о пусках баллистических ракет на фоне обострения отношений, ограничения связи для ВСУ сохраняются. DW напоминает, что официальный Вашингтон отвергает обвинения в намеренном ограничении скорости.',
+   (11407, 'Американская сторона на три дня прерывала передачу этих сообщений на фоне обострения отношений Зеленского с президентом США Дональдом Трампом.'),
+   (11412, 'Официальный Вашингтон отвергает обвинения в намеренном ограничении скорости.')),
+ 'Зеленский утверждает, что сигнал об ограничении Starlink исходил от правительства США; Бессент, Трамп и Рубио это отрицают. РИА Новости подает слова Бессента как обвинение во лжи и относит «неправдивость» к заявлениям о разведданных, тогда как украинские СМИ цитируют его оценку применительно к заявлениям о Starlink.',
+ 'low', '', False,
+ ['Зеленський в інтерв’ю NBC: США три дні не передавали даних про балістику, обмеження Starlink зберігаються; Бессент назвав його звинувачення безвідповідальними', 'Вашингтон, Київ',
+  'Зеленський стверджує, що сигнал про обмеження Starlink надійшов від уряду США; Бессент, Трамп і Рубіо це заперечують. РИА Новости подає слова Бессента як звинувачення у брехні й відносить «неправдивість» до заяв про розвіддані, тоді як українські ЗМІ цитують його оцінку стосовно заяв про Starlink.',
+  'РИА Новости і ТАСС передають слова міністра фінансів США Скотта Бессента в програмі Meet the Press: звинувачення Зеленського в причетності адміністрації Трампа до сповільнення Starlink він назвав «безрозсудними», а слова про призупинення обміну розвідданими — неправдивими; за словами Бессента, Зеленський помиляється, говорячи про перемогу України, а не про врегулювання шляхом переговорів. РИА з посиланням на AP пише, що радник Зеленського Сергій Бескрестнов веде переговори з Пентагоном і SpaceX про зняття обмежень.',
+  'Зеленський в інтерв’ю NBC заявив, що США три дні не передавали Україні даних про російські балістичні атаки, тепер обмін відновлено. Обмеження Starlink і Starshield, за його словами, зберігається — максимальна швидкість 161 км/год; сигнал надійшов від уряду США, а технічно обмеження запровадила SpaceX. Він сподівається на переговори зі США вже наступного тижня, можливо в Брюсселі. Бессент у відповідь назвав звинувачення Зеленського «вкрай безвідповідальними» і закликав його бути обережнішим із заявами, «що не відповідають дійсності».',
+  'DW і Meduza переказують інтерв’ю Зеленського NBC: американська сторона на три дні переривала передачу даних про пуски балістичних ракет на тлі загострення відносин, обмеження зв’язку для ЗСУ зберігаються. DW нагадує, що офіційний Вашингтон відкидає звинувачення в навмисному обмеженні швидкості.'],
+ ['Zelensky on NBC: US withheld ballistic missile data for three days, Starlink restrictions remain; Bessent calls his accusations irresponsible', 'Washington, Kyiv',
+  'Zelensky says the signal to restrict Starlink came from the US government; Bessent, Trump and Rubio deny it. RIA Novosti presents Bessent\'s words as an accusation of lying and applies the "untrue" remark to the statements on intelligence, whereas Ukrainian media quote his assessment as referring to the Starlink claims.',
+  'RIA Novosti and TASS relay remarks by US Treasury Secretary Scott Bessent on Meet the Press: he called Zelensky\'s accusations that the Trump administration was involved in slowing Starlink "reckless" and his words about a pause in intelligence sharing untrue; according to Bessent, Zelensky is wrong to speak of Ukraine\'s victory rather than a negotiated settlement. RIA, citing AP, writes that Zelensky\'s adviser Serhiy Beskrestnov is negotiating with the Pentagon and SpaceX to lift the restrictions.',
+  'Zelensky told NBC that the US did not pass Ukraine data on Russian ballistic missile attacks for three days and that the exchange has now been restored. The Starlink and Starshield restriction, he said, remains in place, with a maximum speed of 161 km/h; the signal came from the US government and SpaceX implemented the restriction technically. He hopes for talks with the US as early as next week, possibly in Brussels. Bessent responded by calling Zelensky\'s accusations "extremely irresponsible" and urged him to be careful with statements that are "not true".',
+  'DW and Meduza recount Zelensky\'s NBC interview: the American side interrupted the transfer of data on ballistic missile launches for three days amid worsening relations, and communication restrictions for Ukraine\'s forces remain. DW notes that official Washington rejects accusations of deliberately limiting the speed.'])
+
+card('1018-zelensky-witkoff-kushner-call', [11199, 11381, 11397, 11425, 11406, 11414],
+ 'Зеленский провел разговор с Уиткоффом и Кушнером: обсудили итоги встречи во Флориде и «следующие шаги в дипломатии»', 'Киев, Вашингтон', 'ukraine-wide',
+ ['расхождение: формулировки'],
+ S('РИА Новости со ссылкой на Telegram-канал Зеленского сообщает о его разговоре со Стивом Уиткоффом и Джаредом Кушнером: обсуждались результаты встречи украинской и американской команд во Флориде, команды готовят следующие шаги в дипломатии.',
+   (11199, 'Провел разговор с представителями президента Америки Стивом Уиткоффом и Джаредом Кушнером')),
+ S('Зеленский сообщил, что обсудил с посланниками Трампа итоги встречи во Флориде, команды «фактически постоянно» на связи; он поднял тему российских обстрелов и потребностей ПВО и подчеркнул, что многое зависит от позиции Америки. Какие именно шаги готовятся и когда, президент не уточнил.',
+   (11397, 'Постійно інформуємо партнерів про реальну ситуацію з російськими обстрілами, які не припиняються ні на хвилину, і питання ППО. Саме від позиції Америки тут багато чого залежить.'),
+   (11381, 'Водночас президент не уточнив, які саме наступні дипломатичні кроки готують сторони та коли вони можуть відбутися.')),
+ S('DW ставит разговор в контекст кризиса в отношениях Вашингтона и Киева с начала октября: критика ударов по НПЗ, «дизельная сделка» с Кремлем, временная приостановка обмена разведданными и замедление Starlink, которые в Вашингтоне отрицают.',
+   (11414, 'Кризис в отношениях между Вашингтоном и Киевом продолжается с начала октября 2026 года из-за разногласий Трампа и Зеленского относительно дальнейшей стратегии Белого дома в отношении России.')),
+ 'Фактических расхождений нет; российские источники передают только сам факт разговора, украинские и независимые СМИ — также слова Зеленского об обстрелах и ПВО и контекст кризиса в отношениях с США.',
+ 'low', '', False,
+ ['Зеленський провів розмову з Віткоффом і Кушнером: обговорили підсумки зустрічі у Флориді та «наступні кроки в дипломатії»', 'Київ, Вашингтон',
+  'Фактичних розбіжностей немає; російські джерела передають лише сам факт розмови, українські та незалежні ЗМІ — також слова Зеленського про обстріли й ППО та контекст кризи у відносинах зі США.',
+  'РИА Новости з посиланням на Telegram-канал Зеленського повідомляє про його розмову зі Стівом Віткоффом і Джаредом Кушнером: обговорювали результати зустрічі української та американської команд у Флориді, команди готують наступні кроки в дипломатії.',
+  'Зеленський повідомив, що обговорив із посланцями Трампа підсумки зустрічі у Флориді, команди «фактично постійно» на зв’язку; він порушив тему російських обстрілів і потреб ППО та наголосив, що багато залежить від позиції Америки. Які саме кроки готуються і коли, президент не уточнив.',
+  'DW розглядає розмову в контексті кризи у відносинах Вашингтона і Києва з початку жовтня: критика ударів по НПЗ, «дизельна угода» з Кремлем, тимчасове призупинення обміну розвідданими та сповільнення Starlink, які у Вашингтоні заперечують.'],
+ ['Zelensky holds call with Witkoff and Kushner: results of the Florida meeting and "next steps in diplomacy" discussed', 'Kyiv, Washington',
+  'There are no factual discrepancies; Russian sources report only the fact of the call, while Ukrainian and independent media also cite Zelensky\'s words on shelling and air defence and the context of the crisis in relations with the US.',
+  'RIA Novosti, citing Zelensky\'s Telegram channel, reports his conversation with Steve Witkoff and Jared Kushner: they discussed the results of the meeting of the Ukrainian and American teams in Florida, and the teams are preparing the next steps in diplomacy.',
+  'Zelensky said he discussed the results of the Florida meeting with Trump\'s envoys and that the teams are "practically constantly" in contact; he raised Russian shelling and air-defence needs and stressed that a lot depends on America\'s position. The president did not specify which steps are being prepared or when.',
+  'DW places the call in the context of the crisis in Washington–Kyiv relations since early October: criticism of strikes on refineries, the "diesel deal" with the Kremlin, the temporary pause in intelligence sharing and the Starlink slowdown, which Washington denies.'])
+
+card('1018-lavrov-manama-zelensky', [11437, 11177, 11181, 11183, 11184, 11171, 11167, 11434, 11272, 11288, 11284, 11287, 11285],
+ 'Лавров в Манаме: Зеленский не хочет переговоров, любая договоренность станет концом его режима; Москва поблагодарила страны Залива за позицию по Украине', 'Манама (Бахрейн)', 'ukraine-wide',
+ ['одна сторона освещает'],
+ S('Сергей Лавров на пресс-конференции по итогам стратегического диалога Россия — ССАГПЗ в Манаме заявил, что Зеленский не хочет переговоров и неоднократно их срывал, а любая договоренность будет означать конец его режима; европейцев он обвинил в поощрении ударов Украины по российской инфраструктуре ради спасения Зеленского, а протесты ЕС и Киева против дизельной сделки России и США назвал не связанными с энергетической безопасностью. Лавров поблагодарил страны Персидского залива за позицию по Украине и посредничество в обменах пленными и воссоединении детей с семьями.',
+   (11437, 'У нас только один вывод: не хочет Зеленский переговоров, он уже не раз их срывал'),
+   (11434, 'Мы поблагодарили наших коллег за их взвешенную, объективную позицию по украинским делам')),
+ None, None,
+ 'Заявления Лаврова передают только российские источники; украинские и независимые СМИ в выборке их не освещают и не комментируют.',
+ 'low', '', False,
+ ['Лавров у Манамі: Зеленський не хоче переговорів, будь-яка домовленість стане кінцем його режиму; Москва подякувала країнам Затоки за позицію щодо України', 'Манама (Бахрейн)',
+  'Заяви Лаврова передають лише російські джерела; українські та незалежні ЗМІ у вибірці їх не висвітлюють і не коментують.',
+  'Сергій Лавров на пресконференції за підсумками стратегічного діалогу Росія — РСАДПЗ у Манамі заявив, що Зеленський не хоче переговорів і неодноразово їх зривав, а будь-яка домовленість означатиме кінець його режиму; європейців він звинуватив у заохоченні ударів України по російській інфраструктурі заради порятунку Зеленського, а протести ЄС і Києва проти дизельної угоди Росії та США назвав не пов’язаними з енергетичною безпекою. Лавров подякував країнам Перської затоки за позицію щодо України та посередництво в обмінах полоненими й возз’єднанні дітей із родинами.',
+  None, None],
+ ['Lavrov in Manama: Zelensky does not want negotiations, any agreement would end his regime; Moscow thanks Gulf states for their position on Ukraine', 'Manama (Bahrain)',
+  'Lavrov\'s statements are reported only by Russian sources; Ukrainian and independent media in the sample neither cover nor comment on them.',
+  'At a press conference after the Russia–GCC strategic dialogue in Manama, Sergei Lavrov said Zelensky does not want negotiations and has repeatedly derailed them, and that any agreement would mean the end of his regime; he accused Europeans of encouraging Ukrainian strikes on Russian infrastructure to save Zelensky and said the EU and Kyiv protests against the Russia–US diesel deal had nothing to do with energy security. Lavrov thanked the Gulf states for their position on Ukraine and for mediation in prisoner exchanges and reuniting children with their families.',
+  None, None])
+
+card('1018-moldova-border-guards-returned', [11311, 11141, 11363, 11395],
+ 'Молдова вернула Украине пограничников, задержанных после погони за мужчиной на Днестре; спасенный украинец благодарит жителей молдавского села', 'Молдова, Винницкая область', 'moldova-romania',
+ ['расхождение: формулировки'],
+ S('ТАСС со ссылкой на «Молдова-1» сообщает, что Кишинев передал Киеву пограничников, задержанных при преследовании «уклониста»; у них было табельное оружие. РИА Новости приводит слова 49-летнего киевлянина Алексея Коваля, который благодарит жителей села Голосница за спасение от преследовавших его украинских пограничников и представителей ТЦК.',
+   (11141, 'Люди заступились за меня и, возможно, спасли мне жизнь')),
+ S('Госпогранслужба Украины сообщила, что по итогам рассмотрения ситуации и обмена информацией пограничники возвращены в Украину, служебное расследование их действий продолжается. По версии ГПСУ, лодку с пограничниками из-за обмеления Днестра и неисправности двигателя прибило к молдавскому берегу; нарушителя границы Молдова не вернула.',
+   (11363, 'За результатами розгляду ситуації, що мала місце 15 жовтня, та обміну інформацією між сторонами, українські прикордонники були повернуті на територію України'),
+   (11395, 'службове розслідування щодо дій українських прикордонників ще триває')),
+ None,
+ 'Российские источники делают акцент на истории мужчины, «спасенного» от пограничников и ТЦК, и называют его уклонистом; украинские — на обстоятельствах инцидента по версии ГПСУ (обмеление реки, неисправность двигателя) и возвращении пограничников.',
+ 'low', '', False,
+ ['Молдова повернула Україні прикордонників, затриманих після погоні за чоловіком на Дністрі; врятований українець дякує жителям молдовського села', 'Молдова, Вінницька область',
+  'Російські джерела роблять акцент на історії чоловіка, «врятованого» від прикордонників і ТЦК, і називають його ухилянтом; українські — на обставинах інциденту за версією ДПСУ (обміління річки, несправність двигуна) та поверненні прикордонників.',
+  'ТАСС із посиланням на «Молдова-1» повідомляє, що Кишинів передав Києву прикордонників, затриманих під час переслідування «ухилянта»; у них була табельна зброя. РИА Новости наводить слова 49-річного киянина Олексія Коваля, який дякує жителям села Голосниця за порятунок від українських прикордонників і представників ТЦК, що його переслідували.',
+  'Державна прикордонна служба України повідомила, що за підсумками розгляду ситуації та обміну інформацією прикордонників повернуто в Україну, службове розслідування їхніх дій триває. За версією ДПСУ, човен із прикордонниками через обміління Дністра і несправність двигуна прибило до молдовського берега; порушника кордону Молдова не повернула.',
+  None],
+ ['Moldova returns to Ukraine the border guards detained after a chase on the Dniester; the rescued Ukrainian thanks residents of a Moldovan village', 'Moldova, Vinnytsia region',
+  'Russian sources focus on the story of the man "rescued" from the border guards and the enlistment office and call him a draft dodger; Ukrainian sources focus on the circumstances of the incident as described by the State Border Guard Service (a shallow river, an engine failure) and the return of the border guards.',
+  'TASS, citing Moldova-1, reports that Chisinau handed over to Kyiv the border guards detained while pursuing a "draft dodger"; they were carrying service weapons. RIA Novosti quotes 49-year-old Kyiv resident Oleksiy Koval, who thanks residents of the village of Holosnytsia for saving him from the Ukrainian border guards and enlistment office staff who were chasing him.',
+  'Ukraine\'s State Border Guard Service said that after reviewing the situation and exchanging information the border guards were returned to Ukraine, and an internal investigation into their actions is continuing. According to the service, the boat carrying the border guards drifted to the Moldovan bank because the Dniester had become shallow and the engine failed; Moldova did not return the border violator.',
+  None])
+
+card('1018-us-sanctions-wright-bessent', [11118, 11123, 11142, 11157, 11231, 11233, 11243, 11248, 11436, 11209, 11230],
+ 'Райт и Бессент: основные санкции против России остаются в силе, исключение сделано только для дизеля, санкции по «закону Грэма» лишь приостановлены', 'Вашингтон', 'ukraine-wide',
+ ['одна сторона освещает'],
+ S('Министр энергетики США Крис Райт заявил CNN, что Трамп не отменил санкции по «закону Грэма», а лишь приостановил их исполнение; ограничения по российской нефти остаются «более жесткими, чем когда бы то ни было», а исключение сделано только для экспорта дизельного топлива, что, по его словам, выгодно американским потребителям. С Китаем, по словам Райта, ведутся контакты по применению закона. Министр финансов Скотт Бессент в эфире NBC заявил, что никто не занимал более жесткой позиции по санкциям против России, чем Трамп, а Европа дала России больше денег, чем Украине. ТАСС пишет, что Турция рассчитывает получить российский дизель в рамках сделки.',
+   (11142, 'Он просто приостановил их исполнение на данный момент'),
+   (11157, 'Главные санкции в отношении России остаются в силе'),
+   (11436, 'Никто не занимал более жесткую позицию в вопросе санкций против России, чем президент Дональд Трамп')),
+ None, None,
+ 'Заявления американских министров о санкциях в выборке передают только российские источники; украинские и независимые СМИ их не освещают.',
+ 'low', '', False,
+ ['Райт і Бессент: основні санкції проти Росії залишаються в силі, виняток зроблено лише для дизеля, санкції за «законом Грема» лише призупинено', 'Вашингтон',
+  'Заяви американських міністрів про санкції у вибірці передають лише російські джерела; українські та незалежні ЗМІ їх не висвітлюють.',
+  'Міністр енергетики США Кріс Райт заявив CNN, що Трамп не скасував санкції за «законом Грема», а лише призупинив їх виконання; обмеження щодо російської нафти залишаються «жорсткішими, ніж будь-коли», а виняток зроблено лише для експорту дизельного пального, що, за його словами, вигідно американським споживачам. З Китаєм, за словами Райта, ведуться контакти щодо застосування закону. Міністр фінансів Скотт Бессент в ефірі NBC заявив, що ніхто не займав жорсткішої позиції щодо санкцій проти Росії, ніж Трамп, а Європа дала Росії більше грошей, ніж Україні. ТАСС пише, що Туреччина розраховує отримати російський дизель у межах угоди.',
+  None, None],
+ ['Wright and Bessent: main sanctions on Russia remain in force, the only exemption is for diesel, and the "Graham law" sanctions are merely suspended', 'Washington',
+  'The US ministers\' statements on sanctions are reported in the sample only by Russian sources; Ukrainian and independent media do not cover them.',
+  'US Energy Secretary Chris Wright told CNN that Trump has not cancelled the "Graham law" sanctions but only suspended their enforcement; restrictions on Russian oil remain "tougher than ever", and the only exemption is for diesel exports, which he said benefits American consumers. According to Wright, there are contacts with China on applying the law. Treasury Secretary Scott Bessent said on NBC that no one has taken a tougher stance on sanctions against Russia than Trump and that Europe has given Russia more money than Ukraine. TASS writes that Turkey expects to receive Russian diesel under the deal.',
+  None, None])
+
+card('1018-sybiha-entry-ban-russians', [11419, 11152, 11221],
+ 'Сибига призвал закрыть границы ЕС для россиян; РИА собрало возмущенные отклики в соцсети X, Захарова ответила премьеру Латвии', 'Европейский союз', 'ukraine-wide',
+ ['расхождение: формулировки'],
+ S('РИА Новости приводит реакцию пользователей соцсети X на призыв главы МИД Украины Андрея Сибиги запретить россиянам въезд в ЕС «якобы для защиты Европы». ТАСС передает слова Марии Захаровой, которая посоветовала премьер-министру Латвии Андрису Кулбергсу, призвавшему ЕС перестать выдавать россиянам туристические визы, «включить телевизор» и посмотреть, кто на самом деле угрожает Европе.',
+   (11152, 'Пользователи соцсети X резко отреагировали на призыв главы МИД Украины Андрея Сибиги'),
+   (11221, 'Turn on the TV for Kulbergs')),
+ S('Андрей Сибига призвал Европу ввести реальные запреты на въезд россиян, в частности российских комбатантов и членов их семей, указав на национальные меры, которые уже действуют, например, в Эстонии.',
+   (11419, 'Щоб захистити Європу, закрийте європейські кордони для росіян уже зараз.')),
+ None,
+ 'Украинская сторона представляет запрет въезда как меру безопасности для Европы, российские источники — как нелепые требования, цитируя анонимных пользователей соцсети.',
+ 'low', '', False,
+ ['Сибіга закликав закрити кордони ЄС для росіян; РИА зібрало обурені відгуки в соцмережі X, Захарова відповіла прем’єрові Латвії', 'Європейський союз',
+  'Українська сторона подає заборону в’їзду як захід безпеки для Європи, російські джерела — як безглузді вимоги, цитуючи анонімних користувачів соцмережі.',
+  'РИА Новости наводить реакцію користувачів соцмережі X на заклик глави МЗС України Андрія Сибіги заборонити росіянам в’їзд до ЄС «нібито для захисту Європи». ТАСС передає слова Марії Захарової, яка порадила прем’єр-міністрові Латвії Андрісу Кулбергсу, що закликав ЄС припинити видавати росіянам туристичні візи, «увімкнути телевізор» і подивитися, хто насправді загрожує Європі.',
+  'Андрій Сибіга закликав Європу запровадити реальні заборони на в’їзд росіян, зокрема російських комбатантів і членів їхніх родин, вказавши на національні заходи, які вже діють, наприклад, в Естонії.',
+  None],
+ ['Sybiha urges closing EU borders to Russians; RIA collects indignant responses on X, Zakharova answers Latvia\'s prime minister', 'European Union',
+  'The Ukrainian side presents an entry ban as a security measure for Europe, while Russian sources present it as absurd demands, quoting anonymous social media users.',
+  'RIA Novosti cites reactions from users of the social network X to Ukrainian Foreign Minister Andrii Sybiha\'s call to bar Russians from entering the EU "supposedly to protect Europe". TASS relays the words of Maria Zakharova, who advised Latvian Prime Minister Andris Kulbergs, who had called on the EU to stop issuing tourist visas to Russians, to "turn on the TV" and see who really threatens Europe.',
+  'Andrii Sybiha called on Europe to introduce real entry bans on Russians, in particular Russian combatants and their family members, pointing to national measures already in force, for example in Estonia.',
+  None])
+
+card('1018-sumy-emergency-blackout', [11172, 11299, 11365],
+ 'Аварийное отключение света в Сумах и части Сумской области: остановлены троллейбусы, обесточен водоканал', 'Сумы, Сумская область', 'sumy',
+ ['одна из групп не освещает'],
+ S('РИА Новости со ссылкой на «Сумыоблэнерго» и Суспильне сообщает, что Сумы и область частично обесточены из-за аварии, в городе остановлено движение троллейбусов и обесточены объекты водоканала; ТАСС пишет о введении аварийных отключений.',
+   (11172, 'Город Сумы и Сумская область на северо-востоке Украины частично обесточены из-за аварии')),
+ S('Суспильне сообщает, что перебои со светом в Сумах начались около 17:10, после чего «Сумыоблэнерго» объявило об аварийном обесточивании части области; троллейбусы остановлены, объекты водоканала обесточены, при этом в области действуют графики почасовых отключений. Причина аварии не названа.',
+   (11365, 'повідомили про аварійне знеструмлення в частині Сумщини')),
+ None,
+ 'Фактических расхождений нет; причину аварии ни одна из сторон не называет, независимые источники событие не освещают.',
+ 'low', '', False,
+ ['Аварійне відключення світла в Сумах і частині Сумщини: зупинено тролейбуси, знеструмлено водоканал', 'Суми, Сумська область',
+  'Фактичних розбіжностей немає; причину аварії жодна зі сторін не називає, незалежні джерела подію не висвітлюють.',
+  'РИА Новости з посиланням на «Сумиобленерго» та Суспільне повідомляє, що Суми й область частково знеструмлені через аварію, у місті зупинено рух тролейбусів і знеструмлено об’єкти водоканалу; ТАСС пише про запровадження аварійних відключень.',
+  'Суспільне повідомляє, що перебої зі світлом у Сумах почалися близько 17:10, після чого «Сумиобленерго» оголосило про аварійне знеструмлення частини області; тролейбуси зупинено, об’єкти водоканалу знеструмлено, водночас в області діють графіки погодинних відключень. Причину аварії не названо.',
+  None],
+ ['Emergency power cut in Sumy and part of Sumy region: trolleybuses halted, water utility without power', 'Sumy, Sumy region',
+  'There are no factual discrepancies; neither side names the cause of the failure, and independent sources do not cover the event.',
+  'RIA Novosti, citing Sumyoblenergo and Suspilne, reports that Sumy and the region are partly without power because of a failure; trolleybus traffic in the city was halted and water utility facilities lost power; TASS writes that emergency outages were introduced.',
+  'Suspilne reports that power interruptions in Sumy began at about 17:10, after which Sumyoblenergo announced an emergency outage in part of the region; trolleybuses were halted and water utility facilities lost power, while hourly outage schedules are in force in the region. The cause of the failure has not been given.',
+  None])
+
+json.dump(cards, open(OUT + 'c18c.json', 'w'), ensure_ascii=False, indent=1)
+print('new cards', len(cards))
+
+# ---------------- extensions of earlier 2026-10-18 cards (c18a / c18b) ----------------
+def q(i, t): return {'id': i, 'text': t}
+def add(c, side, ru, uk, en, quotes=()):
+    if c[side] is None:
+        c[side] = {'summary': ru, 'quotes': [q(*x) for x in quotes]}; c['uk'][side] = uk; c['en'][side] = en
+    else:
+        c[side]['summary'] += ' ' + ru; c[side]['quotes'] += [q(*x) for x in quotes]
+        c['uk'][side] += ' ' + uk; c['en'][side] += ' ' + en
+EXT = {}
+def ext(key): 
+    def deco(f): EXT[key] = f; return f
+    return deco
+
+@ext('1018-rubio-starshield-intel')
+def _(c):
+    c['ids'] += [11409]
+    add(c, 'ind', 'DW приводит слова Рубио о том, что никто в Белом доме не давал указаний замедлять интернет, и отмечает, что данные об инициаторе ограничений Starshield противоречивы.',
+        'DW наводить слова Рубіо про те, що ніхто в Білому домі не давав вказівок сповільнювати інтернет, і зазначає, що дані про ініціатора обмежень Starshield суперечливі.',
+        'DW quotes Rubio as saying that no one in the White House gave instructions to slow down the internet and notes that information on who initiated the Starshield restrictions is contradictory.',
+        [(11409, 'Никто в Белом доме не давал указаний замедлять интернет или снижать скорость передачи данных')])
+
+@ext('1018-lithuania-drone-from-poland')
+def _(c):
+    c['ids'] += [11429, 11394, 11411]
+    c['title'] = 'В Литве упал дрон: Каунас предполагал залет из Польши, Варшава это не подтверждает; МИД Украины выразил сожаление, допустив увод дрона российской РЭБ'
+    c['uk']['t'] = 'У Литві впав дрон: Каунас припускав заліт із Польщі, Варшава цього не підтверджує; МЗС України висловило жаль, припустивши відведення дрона російським РЕБ'
+    c['en']['t'] = 'Drone crashes in Lithuania: Kaunas suggested it came from Poland, Warsaw does not confirm; Ukraine\'s foreign ministry expresses regret, citing possible Russian jamming'
+    c['tags'] = ['расхождение: атрибуция', 'расхождение: формулировки']
+    add(c, 'ru', '«Интерфакс» передает, что пресс-секретарь польского Минобороны Януш Сеймей заявил: данные польских радаров пересечение границы из Польши в Литву не подтверждают.',
+        '«Інтерфакс» передає, що речник польського Міноборони Януш Сеймей заявив: дані польських радарів перетин кордону з Польщі до Литви не підтверджують.',
+        'Interfax reports that Polish Defence Ministry spokesman Janusz Sejmej said Polish radar data do not confirm a border crossing from Poland into Lithuania.',
+        [(11429, 'На литовском направлении не подтверждается (по данным наших радиолокационных систем) пересечения границы из Польши в Литву')])
+    add(c, 'ua', 'Позже спикер МИД Украины Георгий Тихий выразил сожаление в связи с инцидентом и заявил, что он, вероятно, стал следствием российской РЭБ, менявшей курс беспилотников во время операции против военных целей в России; Украина извинилась и обещала передать Литве всю информацию.',
+        'Пізніше речник МЗС України Георгій Тихий висловив жаль у зв’язку з інцидентом і заявив, що він, імовірно, став наслідком російського РЕБ, яке змінювало курс безпілотників під час операції проти військових цілей у Росії; Україна перепросила й пообіцяла передати Литві всю інформацію.',
+        'Later Ukrainian Foreign Ministry spokesman Heorhii Tykhyi expressed regret over the incident and said it was probably the result of Russian electronic warfare that changed the course of drones during an operation against military targets in Russia; Ukraine apologised and promised to give Lithuania all the information.',
+        [(11394, 'Ми перепрошуємо за будь-які незручності, ризики та занепокоєння, які це могло спричинити')])
+    add(c, 'ind', 'DW пишет, что Украина принесла извинения; на перехват поднимались итальянские Eurofighter под командованием НАТО, обломки повредили движущийся автомобиль, никто не пострадал.',
+        'DW пише, що Україна перепросила; на перехоплення піднімалися італійські Eurofighter під командуванням НАТО, уламки пошкодили автомобіль, що рухався, ніхто не постраждав.',
+        'DW writes that Ukraine apologised; Italian Eurofighters under NATO command were scrambled, debris damaged a moving car, and no one was hurt.',
+        [(11411, 'Ukraine apologized Sunday after a suspected drone crashed in northern Lithuania')])
+    c['diverge'] = 'Литва предполагала залет дрона из Польши, Польша это не подтверждает; МИД Украины, извинившись, фактически допустил, что дрон был украинским и сбился с курса из-за российской РЭБ, — российские источники в выборке это заявление не освещают. РИА подает действия польских ВВС как реакцию «якобы» на активность России.'
+    c['uk']['d'] = 'Литва припускала заліт дрона з Польщі, Польща цього не підтверджує; МЗС України, перепросивши, фактично припустило, що дрон був українським і збився з курсу через російське РЕБ, — російські джерела у вибірці цю заяву не висвітлюють. РИА подає дії польських ВПС як реакцію «нібито» на активність Росії.'
+    c['en']['d'] = 'Lithuania suggested the drone came from Poland, which Poland does not confirm; Ukraine\'s foreign ministry, by apologising, effectively acknowledged the drone may have been Ukrainian and veered off course because of Russian jamming; Russian sources in the sample do not cover this statement. RIA presents the Polish air force\'s actions as a reaction "supposedly" to Russian activity.'
+    c['uncertainty'] = 'medium'
+
+@ext('1018-lithuania-starlink-arson')
+def _(c):
+    c['ids'] += [11404]
+    add(c, 'ind', 'Kyiv Independent пишет, что на месте нашли зажигательные жидкости и канистры, а Синкявичюс назвал инцидент частью гибридной войны России и сказал, что заказчик, вероятно, уже ясен — российская сторона.',
+        'Kyiv Independent пише, що на місці знайшли запалювальні рідини та каністри, а Сінкявічюс назвав інцидент частиною гібридної війни Росії й сказав, що замовник, імовірно, уже зрозумілий — російська сторона.',
+        'Kyiv Independent writes that incendiary liquids and containers were found at the scene, and Sinkevicius called the incident part of Russia\'s hybrid war, saying the client was probably already clear: the Russian side.',
+        [(11404, 'It is likely that it is already clear who commissioned it — the Russian side')])
+    c['diverge'] = 'Фактических расхождений нет; литовский премьер связывает попытку поджога с Россией, ТАСС эту оценку не приводит.'
+    c['uk']['d'] = 'Фактичних розбіжностей немає; литовський прем’єр пов’язує спробу підпалу з Росією, ТАСС цієї оцінки не наводить.'
+    c['en']['d'] = 'There are no factual discrepancies; the Lithuanian prime minister links the arson attempt to Russia, while TASS does not cite this assessment.'
+    c['tags'] = ['умолчание']
+
+@ext('1018-black-sea-ship-romania-drones')
+def _(c):
+    c['ids'] += [11321, 11433, 11149, 11251]
+    c['title'] = 'Минобороны РФ: у Одессы поражены два сухогруза — ночью и днем; Румыния уточнила, что сбитые над ее водами дроны были реактивными «Геранями»'
+    c['uk']['t'] = 'Міноборони РФ: біля Одеси уражено два суховантажі — вночі та вдень; Румунія уточнила, що збиті над її водами дрони були реактивними «Геранями»'
+    c['en']['t'] = 'Russian MoD: two cargo ships hit off Odesa, overnight and in the daytime; Romania says drones downed over its waters were jet-powered Gerans'
+    add(c, 'ru', 'Днем ведомство сообщило о поражении еще одного сухогруза в 50 км юго-западнее порта Одесса; по данным министерства, с 10 по 16 октября поражены 15 сухогрузов.',
+        'Удень відомство повідомило про ураження ще одного суховантажу за 50 км на південний захід від порту Одеса; за даними міністерства, з 10 по 16 жовтня уражено 15 суховантажів.',
+        'In the daytime the ministry reported hitting another cargo ship 50 km south-west of the port of Odesa; according to the ministry, 15 cargo ships were hit between October 10 and 16.',
+        [(11321, 'В результате удара в 50 км юго-западнее порта Одесса при переходе морем поражено морское судно типа «сухогруз»')])
+    c['diverge'] = 'Удары по двум сухогрузам у Одессы известны только со слов Минобороны РФ; Румыния описывает тип дронов, но не называет страну их принадлежности.'
+    c['uk']['d'] = 'Удари по двох суховантажах біля Одеси відомі лише зі слів Міноборони РФ; Румунія описує тип дронів, але не називає країну їхньої належності.'
+    c['en']['d'] = 'The strikes on the two cargo ships off Odesa are known only from the Russian MoD; Romania describes the type of drones but does not name the country they belong to.'
+
+@ext('1018-front-claims')
+def _(c):
+    c['ids'] += [11110, 11112, 11322, 11398, 11423, 11391]
+    c['title'] = 'Минобороны РФ — продвижение и бои за Доброполье; Зеленский: Доброполье и Константиновка под контролем Украины, до Запорожья 20 км, а не пять'
+    c['uk']['t'] = 'Міноборони РФ — просування та бої за Добропілля; Зеленський: Добропілля і Костянтинівка під контролем України, до Запоріжжя 20 км, а не п’ять'
+    c['en']['t'] = 'Russian MoD claims advances and fighting for Dobropillia; Zelensky: Dobropillia and Kostiantynivka under Ukrainian control, the front is 20 km from Zaporizhzhia, not five'
+    add(c, 'ru', 'РИА со ссылкой на российского офицера утверждает, что украинское командование при отступлении из Доброполья бросило разрозненные группы солдат без связи.',
+        'РИА з посиланням на російського офіцера стверджує, що українське командування під час відступу з Добропілля кинуло розрізнені групи солдатів без зв’язку.',
+        'RIA, citing a Russian officer, claims that the Ukrainian command abandoned scattered groups of soldiers without communications while retreating from Dobropillia.',
+        [(11110, 'Украинское командование бросило разрозненные группы своих солдат на произвол судьбы в Доброполье')])
+    add(c, 'ua', 'Вечером Зеленский после доклада главнокомандующего Михаила Драпатого заявил, что Доброполье, Константиновка, Алексеево-Дружковка, Орехов, Новопавловка, Новоандреевка и Великомихайловка под контролем Украины, попытки штурмов и инфильтрации в Доброполье отражаются, а российские войска уничтожают в 20 км от Запорожья, а не в пяти, как докладывают Путину.',
+        'Увечері Зеленський після доповіді головнокомандувача Михайла Драпатого заявив, що Добропілля, Костянтинівка, Олексієво-Дружківка, Оріхів, Новопавлівка, Новоандріївка та Великомихайлівка під контролем України, спроби штурмів та інфільтрації в Добропіллі відбиваються, а російські війська знищують за 20 км від Запоріжжя, а не за п’ять, як доповідають Путіну.',
+        'In the evening, after a report by Commander-in-Chief Mykhailo Drapatyi, Zelensky said Dobropillia, Kostiantynivka, Oleksiievo-Druzhkivka, Orikhiv, Novopavlivka, Novoandriivka and Velykomykhailivka are under Ukrainian control, assault and infiltration attempts in Dobropillia are being repelled, and Russian troops are being destroyed 20 km from Zaporizhzhia, not five as Putin is told.',
+        [(11398, 'Ситуація у Добропіллі: знищуємо там спроби росіян штурмувати нас, знищуємо інфільтрації.')])
+    c['diverge'] += ' Зеленский прямо опровергает доклад Герасимова о взятии Доброполья и о расстоянии до Запорожья.'
+    c['uk']['d'] += ' Зеленський прямо спростовує доповідь Герасимова про взяття Добропілля та про відстань до Запоріжжя.'
+    c['en']['d'] += ' Zelensky directly refutes Gerasimov\'s report on the capture of Dobropillia and on the distance to Zaporizhzhia.'
+
+@ext('1018-drones-moscow-mod-totals')
+def _(c):
+    c['ids'] += [11139, 11297, 11140, 11186, 11262, 11439, 11293]
+    add(c, 'ru', 'Посольство России в Белоруссии сообщило, что два чартерных рейса турецких авиакомпаний с более чем 400 пассажирами перенаправили в Минск из-за атак ВСУ на инфраструктуру российских аэропортов; пассажиров отправили в Россию автобусами и поездами.',
+        'Посольство Росії в Білорусі повідомило, що два чартерні рейси турецьких авіакомпаній із понад 400 пасажирами перенаправили до Мінська через атаки ЗСУ на інфраструктуру російських аеропортів; пасажирів відправили до Росії автобусами й поїздами.',
+        'The Russian embassy in Belarus said two charter flights of Turkish airlines with more than 400 passengers were diverted to Minsk because of Ukrainian attacks on Russian airport infrastructure; the passengers were sent on to Russia by bus and train.',
+        [(11140, 'в связи с атаками ВСУ на инфраструктуру российских аэропортов два чартерных рейса турецких авиалиний перенаправлены в Минск')])
+
+@ext('1018-st-petersburg-drone-attack')
+def _(c):
+    c['ids'] += [11136, 11220, 11393]
+    add(c, 'ru', 'После снятия ограничений Пулково обслужил более 110 рейсов.',
+        'Після зняття обмежень Пулково обслужив понад 110 рейсів.',
+        'After restrictions were lifted, Pulkovo handled more than 110 flights.')
+    add(c, 'ua', '«Украинская правда» со ссылкой на Meduza пишет о жалобах пользователей на сбои «ВКонтакте» после удара по дата-центру; сама компания заявляла, что сервисы работают в обычном режиме.',
+        '«Українська правда» з посиланням на «Медузу» пише про скарги користувачів на збої «ВКонтакте» після удару по дата-центру; сама компанія заявляла, що сервіси працюють у звичайному режимі.',
+        'Ukrainska Pravda, citing Meduza, reports user complaints about VKontakte outages after the strike on the data centre; the company itself said its services were working normally.',
+        [(11393, 'Користувачі російської соціальної мережі "ВКонтакте" поскаржилися на збої після української атаки на дата-центр VK у Санкт-Петербурзі.')])
+
+@ext('1018-strikes-west-ukraine-energy')
+def _(c):
+    c['ids'] += [11130, 11366, 11390]
+    add(c, 'ru', 'Днем РИА со ссылкой на Суспильне сообщило о взрыве у Здолбунова Ровенской области.',
+        'Удень РИА з посиланням на Суспільне повідомило про вибух біля Здолбунова Рівненської області.',
+        'In the daytime RIA, citing Suspilne, reported an explosion near Zdolbuniv in Rivne region.')
+    add(c, 'ua', 'Днем у Ровно в поле упал российский беспилотник с несдетонировавшей боевой частью, ее уничтожили контролируемым подрывом; на Кременетчине школьников из-за отсутствия электроснабжения после атак БПЛА отправили на вынужденные каникулы.',
+        'Удень біля Рівного в полі впав російський безпілотник із нездетонованою бойовою частиною, її знешкодили контрольованим підривом; на Кременеччині школярів через відсутність електропостачання після атак БпЛА відправили на вимушені канікули.',
+        'In the daytime a Russian drone with an unexploded warhead fell in a field near Rivne, and the warhead was destroyed by a controlled detonation; in the Kremenets area schoolchildren were sent on a forced holiday because of power cuts after drone attacks.',
+        [(11366, 'Вони встановили, що бойова частина не здетонувала.'), (11390, 'будуть на вимушених канікулах упродовж двох днів')])
+
+@ext('1018-civilian-casualties-ukraine')
+def _(c):
+    c['ids'] += [11392, 11389, 11347, 11348, 11346, 11358, 11408]
+    add(c, 'ua', 'На Харьковщине российские дроны атаковали автомобили, пострадали четыре человека; на Днепропетровщине обстреляны четыре района, ранена женщина; под Славянском дрон протаранил эвакуационную машину волонтера, которому затем, по его словам, написали российские военные; на Черниговщине дрон попал в крышу жилого дома.',
+        'На Харківщині російські дрони атакували автомобілі, постраждали четверо людей; на Дніпропетровщині обстріляно чотири райони, поранено жінку; під Слов’янськом дрон протаранив евакуаційне авто волонтера, якому потім, за його словами, написали російські військові; на Чернігівщині дрон влучив у дах житлового будинку.',
+        'In Kharkiv region Russian drones attacked cars, injuring four people; in Dnipropetrovsk region four districts were shelled and a woman was injured; near Sloviansk a drone rammed a volunteer\'s evacuation vehicle, after which, he says, Russian soldiers messaged him; in Chernihiv region a drone hit the roof of a residential building.',
+        [(11392, 'На Харківщині внаслідок російських атак у неділю постраждали четверо людей.')])
+    add(c, 'ind', 'The Guardian пишет о двух погибших и не менее 17 раненых в результате взаимных ударов по энергетике; в Запорожье, по данным местных властей, погибла женщина, ранена шестилетняя девочка.',
+        'The Guardian пише про двох загиблих і щонайменше 17 поранених унаслідок взаємних ударів по енергетиці; у Запоріжжі, за даними місцевої влади, загинула жінка, поранено шестирічну дівчинку.',
+        'The Guardian reports two dead and at least 17 injured in mutual strikes on energy infrastructure; in Zaporizhzhia, according to local officials, a woman was killed and a six-year-old girl injured.',
+        [(11408, 'local officials in the southern Ukrainian city of Zaporizhzhia said Russian strikes had killed a woman and wounded at least two other people, including a six-year-old girl')])
+
+@ext('1018-russian-side-casualties')
+def _(c):
+    c['ids'] += [11125, 11430, 11225, 11249]
+    add(c, 'ru', 'Днем Белгород вновь атаковали дроны, загорелся объект инфраструктуры, пострадавших, по предварительным данным, нет; ТАСС пишет, что отключения света на севере Донецка продлятся минимум до 23 октября, а в четырех районах города воду будут подавать по графику.',
+        'Удень Бєлгород знову атакували дрони, загорівся об’єкт інфраструктури, постраждалих, за попередніми даними, немає; ТАСС пише, що відключення світла на півночі Донецька триватимуть щонайменше до 23 жовтня, а в чотирьох районах міста воду подаватимуть за графіком.',
+        'In the daytime drones again attacked Belgorod and an infrastructure facility caught fire, with no casualties according to preliminary data; TASS writes that power cuts in northern Donetsk will last at least until October 23 and water will be supplied on a schedule in four districts of the city.',
+        [(11430, 'Белгород подвергся атаке БПЛА, произошло возгорание на объекте инфраструктуры')])
+
+import re
+NEW_IDS = {}
+src = open(__file__).read()
+for k, body in re.findall(r"@ext\('([^']+)'\)\ndef _\(c\):\n    c\['ids'\] \+= \[([0-9, ]+)\]", src):
+    NEW_IDS[k] = {int(x) for x in body.split(',')}
+assert len(NEW_IDS) == len(EXT), (len(NEW_IDS), len(EXT))
+n = 0
+for f in ('c18a.json', 'c18b.json'):
+    a = json.load(open(OUT + f))
+    for c in a:
+        if c['key'] in EXT and not (set(c['ids']) & NEW_IDS[c['key']]):
+            EXT[c['key']](c); n += 1
+    json.dump(a, open(OUT + f, 'w'), ensure_ascii=False, indent=1)
+print('extended', n, 'of', len(EXT))

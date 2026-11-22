@@ -1,0 +1,52 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+NB = '\u00a0'
+
+card('1016-front-claims', [6144, 10926, 10937, 6137, 6622, 6119, 6155, 6162, 10927, 6118, 6122, 8160, 8219, 8627, 8323],
+ 'Сводки сторон: Минобороны РФ — 12 населенных пунктов за неделю; Генштаб ВСУ — 208 боестолкновений за день', 'Харьковская, Донецкая, Запорожская области', 'ukraine-wide',
+ ['расхождение: оценка ситуации', 'не проверено независимо'],
+ S('Минобороны РФ сообщило, что с 10 по 16 октября войска заняли 12 населенных пунктов в Харьковской, Запорожской областях и ДНР, в том числе Варваровку и Николаевку Харьковской области, а группировка «Север» полностью взяла под контроль трассу Волчанск — Бударки. За неделю, по данным ведомства, нанесены массированный и семь групповых ударов по объектам ВПК и логистики.',
+   (6144, 'Russian troops liberated 12 communities in the Kharkov and Zaporozhye Regions and the Donetsk People’s Republic over the week of October 10-16'),
+   (10937, 'Под контроль группировки войск "Север" полностью перешла трасса Волчанск - Бударки')),
+ S('Генштаб ВСУ сообщил о 208 боестолкновениях с начала суток 16 октября, наибольшее число — на Покровском направлении, и о потерях российских войск за сутки в 1790 человек.',
+   (8219, 'Загалом від початку цієї доби відбулося 208 бойових зіткнень.'),
+   (8160, 'Минулої доби Сили оборони України вбили та поранили 1 790 російських окупантів')),
+ S('BBC побывала на участке украинской операции «Вивальди», которая, по данным Киева, освободила 277 кв. км в Донбассе и сорвала попытку российского окружения городов «пояса крепостей»; Kyiv Independent пересказывает данные Генштаба о потерях.',
+   (8323, 'a Ukrainian counter-offensive which they say has liberated 277 sq km (106 square miles) in the eastern Donbas region in recent months')),
+ 'Минобороны РФ сообщает о продвижении на севере Харьковщины и в Донбассе, украинская сторона — о контрнаступлении на Донбассе; данные о потерях и территориях с обеих сторон независимо не проверены.',
+ 'medium', 'Сводки сторон о продвижении и потерях не подтверждены независимо.', False,
+ ['Зведення сторін: Міноборони РФ — 12 населених пунктів за тиждень; Генштаб ЗСУ — 208 боєзіткнень за день', 'Харківська, Донецька, Запорізька області',
+  'Міноборони РФ повідомляє про просування на півночі Харківщини та на Донбасі, українська сторона — про контрнаступ на Донбасі; дані про втрати і території з обох боків незалежно не перевірені.',
+  'Міноборони РФ повідомило, що з 10 по 16 жовтня війська зайняли 12 населених пунктів у Харківській, Запорізькій областях і на Донеччині, зокрема Варварівку і Миколаївку на Харківщині, а угруповання «Північ» повністю взяло під контроль трасу Вовчанськ — Бударки. За тиждень, за даними відомства, завдано масованого і семи групових ударів по об’єктах ВПК і логістики.',
+  'Генштаб ЗСУ повідомив про 208 боєзіткнень від початку доби 16 жовтня, найбільше — на Покровському напрямку, і про втрати російських військ за добу в 1790 осіб.',
+  'BBC побувала на ділянці української операції «Вівальді», яка, за даними Києва, звільнила 277 кв. км на Донбасі і зірвала спробу російського оточення міст «поясу фортець»; Kyiv Independent переказує дані Генштабу про втрати.'],
+ ['Front reports: Russian MoD claims 12 settlements in a week; Ukrainian General Staff reports 208 clashes in a day', 'Kharkiv, Donetsk, Zaporizhzhia regions',
+  'The Russian Defence Ministry reports advances in northern Kharkiv region and Donbas, the Ukrainian side a counteroffensive in Donbas; neither side\'s figures on losses and territory are independently verified.',
+  'The Russian Defence Ministry said that from 10 to 16 October its troops took 12 settlements in Kharkiv and Zaporizhzhia regions and Donetsk region, including Varvarivka and Mykolaivka in Kharkiv region, and that the North group had taken full control of the Vovchansk–Budarky road. Over the week, it said, one massive and seven group strikes were carried out on defence-industry and logistics sites.',
+  'The Ukrainian General Staff reported 208 clashes since the start of 16 October, most of them on the Pokrovsk axis, and Russian losses of 1790 personnel over the past day.',
+  'The BBC visited a sector of Ukraine\'s Operation Vivaldi, which Kyiv says has liberated 277 sq km in Donbas and thwarted an attempted Russian encirclement of the "fortress belt" cities; Kyiv Independent relays the General Staff\'s loss figures.'])
+
+card('1016-russian-side-casualties', [10906, 10922, 10996, 10936, 6093, 6097],
+ 'Российские власти: пять пострадавших при атаке дрона на автобус в Шебекино, двое погибших в Луганской области, раненый в Ростовской области', 'Белгородская, Ростовская области; оккупированные Луганская и Донецкая области', 'russia-other',
+ ['одна из групп не освещает', 'единственный источник', 'не проверено независимо'],
+ S('Оперштаб Белгородской области сообщил, что беспилотник атаковал рейсовый автобус в Шебекино, число пострадавших выросло до пяти, у одной женщины незавершенная ампутация ноги; губернатор Александр Шуваев — о 55 атаках на регион за сутки. Глава ЛНР Леонид Пасечник сообщил о двух погибших мужчинах при атаке дрона на «Газель» у села Смоляниново, власти Ростовской области — о раненом в Аксайском районе, власти ДНР — о 22 обстрелах и одном раненом.',
+   (10922, 'У одной женщины диагностирована незавершенная ампутация ноги.'),
+   (10936, 'В Новоайдарском округе Луганской народной республики БПЛА атаковал "Газель" у села Смоляниново, погибли двое мужчин'),
+   (6097, 'A total of 22 shelling attacks by Ukrainian armed groups were registered over the past day')),
+ None, None,
+ 'Данные приводятся только российскими и назначенными Россией властями; украинская сторона и независимые источники их не комментируют.',
+ 'medium', 'Сведения исходят от одной стороны и не проверены независимо.', False,
+ ['Російська влада: п’ятеро постраждалих під час атаки дрона на автобус у Шебекіному, двоє загиблих на Луганщині, поранений у Ростовській області', 'Бєлгородська, Ростовська області; окуповані Луганщина і Донеччина',
+  'Дані наводять лише російська і призначена Росією влада; українська сторона і незалежні джерела їх не коментують.',
+  'Оперштаб Бєлгородської області повідомив, що безпілотник атакував рейсовий автобус у Шебекіному, кількість постраждалих зросла до п’яти, в однієї жінки незавершена ампутація ноги; губернатор Олександр Шуваєв — про 55 атак на регіон за добу. Ватажок окупаційної адміністрації Луганщини Леонід Пасічник повідомив про двох загиблих чоловіків під час атаки дрона на «Газель» біля села Смолянинове, влада Ростовської області — про пораненого в Аксайському районі, окупаційна влада Донеччини — про 22 обстріли й одного пораненого.',
+  None, None],
+ ['Russian authorities: five hurt in drone attack on a bus in Shebekino, two killed in Luhansk region, one wounded in Rostov region', 'Belgorod and Rostov regions; occupied Luhansk and Donetsk regions',
+  'The figures come only from Russian and Russian-installed authorities; the Ukrainian side and independent sources do not comment on them.',
+  'Belgorod region\'s emergency HQ said a drone attacked a passenger bus in Shebekino, the number injured rose to five, and one woman suffered a partial leg amputation; Governor Alexander Shuvayev reported 55 attacks on the region in a day. The Russian-installed head of Luhansk region Leonid Pasechnik reported two men killed when a drone hit a Gazelle van near Smolianynove, Rostov region authorities reported a man wounded in Aksai district, and the Russian-installed Donetsk authorities 22 shelling attacks and one wounded.',
+  None, None])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c16j.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

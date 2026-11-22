@@ -1,0 +1,59 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+card('1016-drones-russia-moscow-airports', [10894, 6615, 6117, 10885, 10874, 10893, 10869, 10888, 10884, 10887, 10890, 10891, 10896, 10897, 10914, 10910, 10892, 10905, 10908, 6643, 10999, 4915, 11014, 11015, 8847, 8953, 8152, 7234, 7272, 9447, 9465, 8682, 8622, 8692],
+ 'Минобороны РФ: за ночь сбиты 644 беспилотника; все четыре аэропорта Москвы закрыты на несколько часов, отменено или задержано более 200 рейсов', 'Москва, Владимир, Ростовская область, Ленинградская область', 'russia-other',
+ ['расхождение: оценка ущерба'],
+ S('Минобороны РФ сообщило, что с 20:00 15 октября до 8:00 16 октября над десятками регионов перехвачены 644 беспилотника; Сергей Собянин сообщил о 57 сбитых дронах, летевших на Москву, к утру пятницы. Губернатор Владимирской области заявил об отраженной попытке удара по тепловой инфраструктуре Владимира, в Ростовской области загорелись производственно-складские помещения и пострадал мирный житель.',
+   (10894, 'За минувшую ночь дежурные средства ПВО перехватили и уничтожили 644 беспилотника самолетного типа'),
+   (10893, 'В том числе во Владимире противник осуществил попытку нанести удар по тепловой инфраструктуре.'),
+   (6117, 'A civilian was injured in the Rostov Region, where falling drone debris also damaged production and storage facilities.')),
+ S('Украинские СМИ со ссылкой на Росавиацию, Flightradar24 и ASTRA пишут, что небо над большей частью европейской территории России опустело, ограничения ввели 22 аэропорта, все четыре аэропорта Москвы одновременно не работали более пяти часов; к ночи 17 октября три московских аэропорта снова закрылись. В Финском заливе из-за угрозы дронов ограничивали полеты и судоходство.',
+   (8152, 'повітряний простір над більшою частиною європейської території РФ залишається абсолютно порожнім'),
+   (7234, 'О 23:18 обмеження поширилися на Жуковський, о 23:42 — на всі чотири аеропорти Москви')),
+ S('DW и Meduza сообщают, что Домодедово не работало более 7 часов, задержано или отменено более 200 рейсов; Kyiv Independent со ссылкой на мониторинговые каналы пишет об атаке на дата-центр «Яндекса» во Владимирской области, а Meduza — о сбоях в работе арбитражных судов после ударов по дата-центрам «Яндекса».',
+   (9447, 'аэропорт Домодедово не работал более 7 часов'),
+   (8622, 'Russian technology giant Yandex\'s data center in Vladimir Oblast, around 500 kilometers (310 miles) from the Ukrainian border, was targeted in the overnight operation.'),
+   (8692, 'Dozens of court hearings in Russia were disrupted due to “technical malfunctions” after strikes by Ukraine’s armed forces on Yandex data centers')),
+ 'Российские официальные источники сообщают о сбитых дронах и «незначительных повреждениях», не называя пораженные объекты; независимые СМИ указывают на возможный удар по дата-центру «Яндекса» и масштабный паралич авиасообщения.',
+ 'low', '', False,
+ ['Міноборони РФ: за ніч збито 644 безпілотники; усі чотири аеропорти Москви закрито на кілька годин, скасовано або затримано понад 200 рейсів', 'Москва, Владимир, Ростовська область, Ленінградська область',
+  'Російські офіційні джерела повідомляють про збиті дрони і «незначні пошкодження», не називаючи уражених об’єктів; незалежні ЗМІ вказують на можливий удар по дата-центру «Яндекса» і масштабний параліч авіасполучення.',
+  'Міноборони РФ повідомило, що з 20:00 15 жовтня до 8:00 16 жовтня над десятками регіонів перехоплено 644 безпілотники; Сергій Собянін повідомив про 57 збитих дронів, що летіли на Москву, до ранку п’ятниці. Губернатор Владимирської області заявив про відбиту спробу удару по тепловій інфраструктурі Владимира, у Ростовській області загорілися виробничо-складські приміщення і постраждав цивільний.',
+  'Українські ЗМІ з посиланням на Росавіацію, Flightradar24 і ASTRA пишуть, що небо над більшою частиною європейської території Росії спорожніло, обмеження запровадили 22 аеропорти, усі чотири аеропорти Москви одночасно не працювали понад п’ять годин; до ночі 17 жовтня три московські аеропорти знову закрилися. У Фінській затоці через загрозу дронів обмежували польоти і судноплавство.',
+  'DW і Meduza повідомляють, що Домодєдово не працювало понад 7 годин, затримано або скасовано понад 200 рейсів; Kyiv Independent з посиланням на моніторингові канали пише про атаку на дата-центр «Яндекса» у Владимирській області, а Meduza — про збої в роботі арбітражних судів після ударів по дата-центрах «Яндекса».'],
+ ['Russian Defence Ministry: 644 drones downed overnight; all four Moscow airports shut for hours, more than 200 flights cancelled or delayed', 'Moscow, Vladimir, Rostov region, Leningrad region',
+  'Russian official sources report downed drones and "minor damage" without naming the facilities hit; independent media point to a possible strike on a Yandex data centre and large-scale disruption of air traffic.',
+  'The Russian Defence Ministry said that between 20:00 on 15 October and 8:00 on 16 October 644 drones were intercepted over dozens of regions; Sergei Sobyanin reported 57 drones heading for Moscow downed by Friday morning. The Vladimir region governor said an attempted strike on Vladimir\'s heating infrastructure had been repelled, and in Rostov region production and storage buildings caught fire and a civilian was injured.',
+  'Ukrainian media, citing Rosaviatsiya, Flightradar24 and ASTRA, write that the skies over most of European Russia emptied, 22 airports imposed restrictions and all four Moscow airports were simultaneously closed for more than five hours; by the night of 17 October three Moscow airports had closed again. Flights and shipping were restricted in the Gulf of Finland because of the drone threat.',
+  'DW and Meduza report that Domodedovo was closed for more than 7 hours and more than 200 flights were delayed or cancelled; Kyiv Independent, citing monitoring channels, writes about an attack on a Yandex data centre in Vladimir region, and Meduza about disruptions to arbitration courts after strikes on Yandex data centres.'])
+
+card('1016-surgut-condensate-plant', [10954, 11008, 4929, 8930, 7275, 8641, 8691, 8651],
+ 'Дроны атаковали промышленный объект в Сургутском районе ХМАО; по данным OSINT — завод «Газпрома» по стабилизации конденсата', 'Сургутский район, ХМАО', 'russia-other',
+ ['расхождение: характер цели'],
+ S('Губернатор ХМАО Руслан Кухарук сообщил о пожаре на промышленном объекте в Сургутском районе после атаки беспилотников, позже — что работники не пострадали и возгорание локализуется; полпред в УрФО Артем Жога подчеркнул, что объект гражданский.',
+   (10954, 'В результате атаки беспилотников на промышленный объект в Сургутском районе произошло возгорание.'),
+   (4929, 'Полпред президента в УрФО Артем Жога подчеркнул, что промобъект, атакованный беспилотниками, является гражданским.')),
+ S('РБК-Украина и Суспильне со ссылкой на Astra и Supernova+ пишут, что горит Сургутский завод по стабилизации конденсата имени Черномырдина, входящий в структуру «Газпрома».',
+   (8930, 'Осінтери виявили, що після атаки БпЛА горить завод "Газпрому" зі стабілізації конденсату імені Черномирдіна (ЗСК).')),
+ S('Kyiv Independent и Meduza отмечают, что губернатор не назвал предприятие, а ХМАО находится более чем в 2000 км от Украины.',
+   (8691, 'Khanty-Mansi Autonomous Okrug lies more than 2,000 kilometers (1,200 miles) from Ukraine.'),
+   (8641, 'Kukharuk did not identify the facility')),
+ 'Российские власти не называют предприятие и подчеркивают его гражданский характер; украинские и независимые источники со ссылкой на OSINT указывают на газоконденсатный завод «Газпрома».',
+ 'low', '', False,
+ ['Дрони атакували промисловий об’єкт у Сургутському районі ХМАО; за даними OSINT — завод «Газпрому» зі стабілізації конденсату', 'Сургутський район, ХМАО',
+  'Російська влада не називає підприємство і наголошує на його цивільному характері; українські та незалежні джерела з посиланням на OSINT вказують на газоконденсатний завод «Газпрому».',
+  'Губернатор ХМАО Руслан Кухарук повідомив про пожежу на промисловому об’єкті в Сургутському районі після атаки безпілотників, пізніше — що працівники не постраждали і займання локалізується; повпред в УрФО Артем Жога наголосив, що об’єкт цивільний.',
+  'РБК-Україна і Суспільне з посиланням на Astra і Supernova+ пишуть, що горить Сургутський завод зі стабілізації конденсату імені Черномирдіна, який входить до структури «Газпрому».',
+  'Kyiv Independent і Meduza зазначають, що губернатор не назвав підприємство, а ХМАО розташований більш ніж за 2000 км від України.'],
+ ['Drones attack an industrial facility in Surgut district of Khanty-Mansi region; OSINT points to a Gazprom condensate stabilisation plant', 'Surgut district, Khanty-Mansi region',
+  'Russian authorities do not name the facility and stress that it is civilian; Ukrainian and independent sources, citing OSINT, point to a Gazprom gas condensate plant.',
+  'Khanty-Mansi governor Ruslan Kukharuk reported a fire at an industrial facility in Surgut district after a drone attack and later said workers were unhurt and the fire was being contained; presidential envoy to the Urals Federal District Artyom Zhoga stressed that the facility is civilian.',
+  'RBC-Ukraine and Suspilne, citing Astra and Supernova+, write that the Chernomyrdin condensate stabilisation plant in Surgut, part of Gazprom, is on fire.',
+  'Kyiv Independent and Meduza note that the governor did not name the facility and that the Khanty-Mansi region lies more than 2000 km from Ukraine.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c16c.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

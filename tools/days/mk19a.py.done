@@ -1,0 +1,64 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import add, setd, ext, apply
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- hourly run 02:58 Oct 19 (ids 11916-11948): first Oct 19 card + extensions of Oct 18 cards ----------------
+# The overnight attack of Oct 19 is now covered by two groups (RIA/TASS + RBC-Ukraine). Airport restrictions in Tatarstan stay Russian-only (SKIPPED.md).
+
+card('1019-kyiv-ballistic-night', [11917, 11918, 11932, 11935, 11937, 11892, 11924, 11927, 11946, 11947],
+ 'Ночь на 19 октября: второй за ночь баллистический удар по Киеву, повреждена станция метро; российские агентства сообщают о взрывах в Луцке и Ровно', 'Киев, Луцк, Ровно', 'kyiv',
+ ['не проверено', 'одна из групп не освещает', 'умолчание'],
+ S('РИА Новости и ТАСС со ссылкой на онлайн-карту Минцифры Украины и телеканал «Общественное» сообщают о воздушной тревоге в Киеве и ряде областей и о взрывах в столице; РИА отмечает, что это уже вторая с вечера воскресенья серия взрывов в Киеве, и повторяет формулировку о том, что ВС России бьют по центрам принятия решений, предприятиям и складам. Также со ссылкой на «Общественное» РИА сообщает о взрывах в Луцке и Ровно, ТАСС — о взрыве на западе Украины и о взрывах в Ровно. О целях, попаданиях и пострадавших российские источники в выборке не пишут, сообщений Минобороны РФ об этой атаке нет.',
+   (11918, 'Это уже вторая с вечера воскресенья серия взрывов в украинской столице.'),
+   (11918, 'В ответ на атаки противника ВС России бьют по центрам принятия решений, предприятиям и складам, которые ВСУ задействуют совместно с натовскими специалистами.'),
+   (11932, 'В Киеве и 10 областях Украины объявили воздушную тревогу'),
+   (11892, 'В Луцке был слышен звук взрыва'),
+   (11924, 'В Ровно слышен звук взрыва... В Ровно прогремел еще один взрыв'),
+   (11937, 'The media outlet also reported explosions in the western city of Rovno.')),
+ S('РБК-Украина со ссылкой на Воздушные силы ВСУ и Киевскую городскую администрацию пишет, что в ночь на 19 октября российские войска второй раз за несколько часов атаковали Киев баллистическими ракетами; в городе прогремели взрывы, жителей призывают оставаться в укрытиях. По словам мэра Виталия Кличко, повреждена одна из станций метро на левом берегу: рядом из-за обломков разорвало ходовой и контактный рельсы. Какую станцию повредило, Кличко не уточнил, изменится ли движение метро, пока неизвестно. РБК-Украина напоминает, что при первой атаке поздно вечером 18 октября погиб один человек, и со ссылкой на CNN пишет, что у Украины снова закончились ракеты к Patriot.',
+   (11946, 'У ніч на 19 жовтня росіяни вдруге за кілька годин атакували Київ балістичними ракетами.'),
+   (11947, 'Унаслідок російської атаки в ніч на 19 жовтня пошкоджено одну зі станцій метро на лівому березі Києва.'),
+   (11947, 'Поруч зі станцією через уламки розірвало ходову та контактну рейки.'),
+   (11947, 'Яку саме станцію пошкоджено, Кличко не уточнив.'),
+   (11946, 'За даними CNN, у країні знову закінчилися ракети до Patriot.')),
+ None,
+ 'Российские и украинские источники совпадают в том, что ночью в Киеве прогремели взрывы и что это вторая атака на столицу за ночь. Российские агентства о целях и последствиях не пишут и повторяют формулировку об ударах по «центрам принятия решений», РБК-Украина сообщает о баллистических ракетах и повреждении станции метро. О взрывах в Луцке и Ровно в выборке пишут только российские агентства со ссылкой на «Общественное»; украинские источники выборки о западе страны пока не сообщают. Независимых сообщений об атаке в выборке нет.',
+ 'medium', 'Данные предварительные: атака продолжалась на момент публикации, сведений о пострадавших и масштабах разрушений нет, о взрывах в Луцке и Ровно известно только из пересказа российских агентств.', False,
+ ['Ніч на 19 жовтня: другий за ніч балістичний удар по Києву, пошкоджено станцію метро; російські агентства повідомляють про вибухи в Луцьку і Рівному', 'Київ, Луцьк, Рівне',
+  'Російські й українські джерела збігаються в тому, що вночі в Києві пролунали вибухи і що це друга атака на столицю за ніч. Російські агентства про цілі й наслідки не пишуть і повторюють формулювання про удари по «центрах ухвалення рішень», РБК-Україна повідомляє про балістичні ракети і пошкодження станції метро. Про вибухи в Луцьку і Рівному у вибірці пишуть лише російські агентства з посиланням на «Суспільне»; українські джерела вибірки про захід країни поки не повідомляють. Незалежних повідомлень про атаку у вибірці немає.',
+  'РИА Новости і ТАСС з посиланням на онлайн-карту Мінцифри України та телеканал «Суспільне» повідомляють про повітряну тривогу в Києві та низці областей і про вибухи в столиці; РИА зазначає, що це вже друга з вечора неділі серія вибухів у Києві, і повторює формулювання про те, що ЗС Росії б’ють по центрах ухвалення рішень, підприємствах і складах. Також з посиланням на «Суспільне» РИА повідомляє про вибухи в Луцьку і Рівному, ТАСС — про вибух на заході України та про вибухи в Рівному. Про цілі, влучання і постраждалих російські джерела у вибірці не пишуть, повідомлень Міноборони РФ про цю атаку немає.',
+  'РБК-Україна з посиланням на Повітряні сили ЗСУ та Київську міську державну адміністрацію пише, що в ніч на 19 жовтня російські війська вдруге за кілька годин атакували Київ балістичними ракетами; у місті пролунали вибухи, мешканців закликають залишатися в укриттях. За словами мера Віталія Кличка, пошкоджено одну зі станцій метро на лівому березі: поруч через уламки розірвало ходову та контактну рейки. Яку саме станцію пошкоджено, Кличко не уточнив, чи зміниться рух метро, поки невідомо. РБК-Україна нагадує, що під час першої атаки пізно ввечері 18 жовтня загинула одна людина, і з посиланням на CNN пише, що в Україні знову закінчилися ракети до Patriot.',
+  None],
+ ['Night of 19 October: second ballistic missile strike on Kyiv in one night, a metro station damaged; Russian agencies report explosions in Lutsk and Rivne', 'Kyiv, Lutsk, Rivne',
+  'Russian and Ukrainian sources agree that explosions were heard in Kyiv overnight and that this was the second attack on the capital that night. Russian agencies do not write about targets or consequences and repeat the line about strikes on "decision-making centres", while RBC-Ukraine reports ballistic missiles and damage to a metro station. Explosions in Lutsk and Rivne are reported in the sample only by Russian agencies citing Suspilne; Ukrainian sources in the sample do not yet report on the west of the country. There are no independent reports of the attack in the sample.',
+  'RIA Novosti and TASS, citing the online map of Ukraine\'s Digital Transformation Ministry and the TV channel Suspilne, report an air-raid alert in Kyiv and a number of regions and explosions in the capital; RIA notes that this is already the second series of explosions in Kyiv since Sunday evening and repeats the line that Russia\'s armed forces strike decision-making centres, enterprises and depots. Also citing Suspilne, RIA reports explosions in Lutsk and Rivne, and TASS an explosion in western Ukraine and explosions in Rivne. Russian sources in the sample do not write about targets, hits or casualties, and there is no Russian Defence Ministry statement on this attack.',
+  'RBC-Ukraine, citing Ukraine\'s Air Force and the Kyiv City Administration, writes that on the night of 19 October Russian forces attacked Kyiv with ballistic missiles for the second time in a few hours; explosions were heard in the city and residents are urged to stay in shelters. According to Mayor Vitali Klitschko, one of the metro stations on the Left Bank was damaged: debris tore the running and contact rails next to it. Klitschko did not specify which station was damaged, and it is not yet known whether metro service will change. RBC-Ukraine recalls that one person was killed in the first attack late on the evening of 18 October and, citing CNN, writes that Ukraine has again run out of Patriot missiles.',
+  None])
+
+# ---- extensions of Oct 18 cards (articles dated Oct 19 that continue Oct 18 events)
+
+@ext('1018-front-claims', [11928])
+def _(c):
+    add(c, 'ru', 'ТАСС со ссылкой на комбата Степаняна из группировки «Центр» также сообщил об уничтожении морпехами более 100 военных ВСУ в шахтах Доброполья.',
+        'ТАСС з посиланням на комбата Степаняна з угруповання «Центр» також повідомив про знищення морпіхами понад 100 військових ЗСУ в шахтах Добропілля.',
+        'TASS, citing battalion commander Stepanyan of the "Centre" group, also reported that marines had destroyed more than 100 Ukrainian servicemen in the mines of Dobropillia.',
+        [(11928, 'В группировке "Центр" сообщили об уничтожении более 100 ВСУ в шахтах Доброполья.')])
+
+@ext('1018-zelensky-bloomberg-capitulation', [11926])
+def _(c):
+    add(c, 'ru', 'Еще одной заметкой РИА со ссылкой на El Pais написало, что Трамп хочет «загнать в угол» Зеленского в соответствии со своим «искусством переговоров».',
+        'Ще однією заміткою РИА з посиланням на El Pais написало, що Трамп хоче «загнати в кут» Зеленського відповідно до свого «мистецтва переговорів».',
+        'In another item RIA, citing El Pais, wrote that Trump wants to "corner" Zelensky in line with his "art of the deal".',
+        [(11926, 'Президент США Дональд Трамп хочет загнать Владимира Зеленского в угол, пишет газета El Pais.')])
+
+@ext('1018-trump-truth-social-zelensky', [11945])
+def _(c):
+    pass   # DW 11945: same Truth Social quotes as Guardian 11909 / DWr; extra coverage id only (ind text already near the 1400 limit)
+
+apply(['c18b.json', 'c18d.json'])
+json.dump(cards, open(OUT + 'c19a.json', 'w'), ensure_ascii=False, indent=1)
+print('new cards', len(cards))

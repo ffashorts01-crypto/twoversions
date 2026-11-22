@@ -1,0 +1,257 @@
+import json, sys, sqlite3, re
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import add, setd, ext, apply, EXT, NEW, q
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- hourly run 11:00 Oct 19 (ids 12691-12871): no new cards, extensions only ----------------
+
+def rep(c, path, old, new):
+    o = c
+    for p in path[:-1]: o = o[p]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+@ext('1019-rubio-intel-sanctions-apec', [12692, 12710, 12725, 12766, 12774, 12778, 12812, 12788, 12850, 12870])
+def _(c):
+    # RIA 12710, TASSr 12766, 12774, 12778, 12812 (same Breitbart interview), TASS EN 12788 (= TASSr 12277), UP 12850 (= RBC 12307 software quote) - ids only
+    for path, old, new in [
+        (('ru', 'summary'), 'РИА Новости также приводит отказ Рубио обсуждать на пресс-конференции желание Киева расширить использование Starshield для атак за пределами Украины; систему, по его словам, контролирует Пентагон, и Киев продолжает обсуждать этот вопрос с ведомством.',
+         'Обсуждать на пресс-конференции использование Starshield Рубио, по данным РИА Новости, отказался: систему контролирует Пентагон.'),
+        (('uk', 'ru'), 'РИА Новости також наводить відмову Рубіо обговорювати на пресконференції бажання Києва розширити використання Starshield для атак за межами України; систему, за його словами, контролює Пентагон, і Київ продовжує обговорювати це питання з відомством.',
+         'Обговорювати на пресконференції використання Starshield Рубіо, за даними РИА Новости, відмовився: систему контролює Пентагон.'),
+        (('en', 'ru'), "RIA Novosti also reports Rubio's refusal to discuss at the press conference Kyiv's wish to expand the use of Starshield for attacks beyond Ukraine; the system, he said, is controlled by the Pentagon, and Kyiv is still discussing the issue with it.",
+         'According to RIA Novosti, Rubio declined to discuss the use of Starshield at the press conference: the system is controlled by the Pentagon.'),
+        (('ru', 'summary'), ', а Трамп «открыт для всего, что он может сделать»', ''),
+        (('uk', 'ru'), ', а Трамп «відкритий до всього, що він може зробити»', ''),
+        (('en', 'ru'), ', and Trump is "open to anything he can do"', '')]:
+        rep(c, path, old, new)
+    add(c, 'ru', 'В интервью Breitbart (пересказ РИА Новости и ТАСС) Рубио сказал, что санкции с российского дизеля сняты, потому что «это хорошо для Америки», а тема выборов на Украине возникла из-за «разочарования»: несмотря на просьбы США, Украина била по танкерам с нефтью американских компаний.',
+        'В інтерв’ю Breitbart (переказ РИА Новости і ТАСС) Рубіо сказав, що санкції з російського дизеля знято, бо «це добре для Америки», а тема виборів в Україні виникла через «розчарування»: попри прохання США, Україна била по танкерах з нафтою американських компаній.',
+        'In a Breitbart interview (relayed by RIA Novosti and TASS) Rubio said sanctions on Russian diesel were lifted because "it is good for America", and that the election topic in Ukraine arose from "frustration": despite US requests, Ukraine struck tankers carrying American companies\' oil.',
+        [(12692, 'а потому, что это хорошо для Америки и это важно для Америки'),
+         (12725, 'Я бы сказал, что прежде всего дело в разочаровании'),
+         (12725, 'Украина наносила удары по танкерам в Черном море'),
+         (12725, 'которые перевозили нефть американских компаний')])
+    add(c, 'ind', 'The Moscow Times со ссылкой на Reuters приводит слова Рубио о том, что США не видят «ничего хорошего» в этой войне, но видят «вполне реальный риск эскалации», и пишет, что он, по-видимому, подтвердил сообщения о переговорах о трехстороннем саммите США, России и Китая, на котором, по этим данным, не будет Украины.',
+        'The Moscow Times з посиланням на Reuters наводить слова Рубіо про те, що США не бачать «нічого доброго» в цій війні, але бачать «цілком реальний ризик ескалації», і пише, що він, вочевидь, підтвердив повідомлення про переговори щодо тристороннього саміту США, Росії та Китаю, на якому, за цими даними, не буде України.',
+        'The Moscow Times, citing Reuters, quotes Rubio as saying the US sees "nothing good" coming from this war but sees "the very real risk of escalation", and writes that he appeared to confirm reports of talks on a trilateral summit of the US, Russia and China which, according to those reports, would exclude Ukraine.',
+        [(12870, 'We see nothing good coming from this war'),
+         (12870, 'including the very real risk of escalation'),
+         (12870, 'Rubio on Monday also appeared to confirm reports that the United States, Russia and China are in talks to hold a trilateral summit of leaders'),
+         (12870, 'the floated summit would exclude Ukraine')])
+    c['diverge'] += ' Слова Рубио из интервью Breitbart о снятии санкций с дизеля и о «разочаровании» из-за ударов по танкерам в выборке передают только российские агентства.'
+    c['uk']['d'] += ' Слова Рубіо з інтерв’ю Breitbart про зняття санкцій з дизеля і про «розчарування» через удари по танкерах у вибірці передають лише російські агентства.'
+    c['en']['d'] += ' Rubio\'s remarks in the Breitbart interview on lifting sanctions on diesel and on "frustration" over the strikes on tankers are relayed in the sample only by Russian agencies.'
+
+@ext('1019-energy-strikes-west-centre', [12754, 12823, 12830, 12835, 12840, 12846, 12859, 12862])
+def _(c):
+    # SUS 12840 (Vinnytsiaoblenergo emergency outages), 12846 (Khmelnytskyi: 12 drones, windows in Shepetivka district) - ids only
+    add(c, 'ru', 'ТАСС также передает жалобу Зеленского, что партнеры вновь не предупредили Киев о пусках ракет; по его словам, повреждения получили инфраструктурные объекты и энергетика.',
+        'ТАСС також передає скаргу Зеленського, що партнери знову не попередили Київ про пуски ракет; за його словами, пошкоджень зазнали інфраструктурні об’єкти та енергетика.',
+        'TASS also relays Zelensky\'s complaint that partners again did not warn Kyiv of missile launches; according to him, infrastructure facilities and the energy sector were damaged.',
+        [(12754, 'Зеленский пожаловался, что партнеры вновь не предупредили Киев о пусках ракет'),
+         (12754, 'По его словам, повреждения получили инфраструктурные объекты и энергетика')])
+    c['ua'] = {'summary': 'Зеленский сообщил, что ночью и утром Россия атаковала энергообъекты в 11 областях, в том числе в Киевской: за одну ночь повреждено более 10 объектов, без света остались не менее 550 тысяч семей. «Укрэнерго» называет те же области; кроме энергетики, по словам премьера Сергея Корецкого, повреждены склады с медикаментами, железнодорожные станции и жилые дома. Минэнерго сообщает об обесточиваниях в пятнадцати областях. Глава Винницкой ОВА Наталья Заболотная написала, что «враг продолжает массированную атаку по энергетической инфраструктуре»; в Козятине поврежден объект критической инфраструктуры. На Житомирщине в Бердичевской громаде после попадания дрона возник пожар. На Волыни без света около 66 тысяч абонентов; на Ровенщине попадание в Острожской громаде, новые атаки усложняют восстановление. Обесточены часть Хмельниччины и Компанеевская громада на Кировоградщине. В Лозовой на Харьковщине почти сутки длится атака, повреждены учреждение здравоохранения и склад; в селе Зубра под Львовом повреждены шесть домов и шесть автомобилей.',
+        'quotes': [q(*x) for x in [
+            (12859, 'Лише за одну цю ніч пошкоджено понад 10 об\'єктів енергетичної інфраструктури'),
+            (12859, 'Щонайменше 550 тисяч сімей залишилися без світла.'),
+            (12862, 'Унаслідок атак є пошкодження та знеструмлення щонайменше в 11 областях країни.'),
+            (12862, 'склади з медикаментами;'),
+            (12830, 'енергетикам уже вдалося повернути світло частині споживачів'),
+            (12685, 'ворог продовжує масовану атаку по енергетичній інфраструктурі'),
+            (12835, 'Найближчим часом ситуація з електропостачанням залишатиметься нестабільною.'),
+            (12434, 'стало відомо 19 жовтня о 3:20. На місці виникла пожежа.'),
+            (12449, 'без електропостачання залишилися орієнтовно 66 тисяч абонентів'),
+            (12442, 'Маємо приліт. Працюють всі екстеренні служби на місці прильоту.'),
+            (12453, 'Нові атаки ускладнюють роботу енергетиків з відновлення'),
+            (12649, 'аварійно-відновлювальні роботи розпочнуться після завершення повітряної тривоги'),
+            (12454, 'Через пошкодження електромереж наразі відсутнє електропостачання.'),
+            (12685, 'майже добу триває масована ворожа атака'),
+            (12638, 'У Лозовій внаслідок ударів російських БпЛА пошкоджені заклад охорони здоров\'я та складська будівля'),
+            (12435, 'у селі Зубра Львівського району пошкоджені шість житлових будинків та шість автівок')]]}
+    c['uk']['ua'] = 'Зеленський повідомив, що вночі та вранці Росія атакувала енергооб’єкти в 11 областях, зокрема в Київській: лише за одну ніч пошкоджено понад 10 об’єктів, без світла залишилися щонайменше 550 тисяч родин. «Укренерго» називає ті самі області; крім енергетики, за словами прем’єра Сергія Корецького, пошкоджено склади з медикаментами, залізничні станції та житлові будинки. Міненерго повідомляє про знеструмлення в п’ятнадцяти областях. Начальниця Вінницької ОВА Наталя Заболотна написала, що «ворог продовжує масовану атаку по енергетичній інфраструктурі»; у Козятині пошкоджено об’єкт критичної інфраструктури. На Житомирщині в Бердичівській громаді після влучання дрона виникла пожежа. На Волині без світла близько 66 тисяч абонентів; на Рівненщині влучання в Острозькій громаді, нові атаки ускладнюють відновлення. Знеструмлено частину Хмельниччини та Компаніївську громаду на Кіровоградщині. У Лозовій на Харківщині майже добу триває атака, пошкоджено заклад охорони здоров’я і склад; у селі Зубра під Львовом пошкоджено шість будинків і шість автомобілів.'
+    c['en']['ua'] = 'Zelensky said that overnight and in the morning Russia attacked energy facilities in 11 regions, including the Kyiv region: more than 10 facilities were damaged in a single night and at least 550 thousand families were left without power. Ukrenergo names the same regions; besides energy, according to Prime Minister Serhii Koretskyi, medicine warehouses, railway stations and residential buildings were damaged. The Energy Ministry reports outages in fifteen regions. The head of the Vinnytsia regional administration Nataliia Zabolotna wrote that "the enemy continues its massive attack on energy infrastructure"; in Koziatyn a critical infrastructure facility was damaged. In the Zhytomyr region a drone hit caused a fire in the Berdychiv community. In Volyn about 66 thousand customers are without power; in the Rivne region there was a hit in the Ostroh community, and new attacks are complicating restoration. Part of the Khmelnytskyi region and the Kompaniivka community in the Kirovohrad region lost power. In Lozova in the Kharkiv region an attack has been going on for almost a day, damaging a healthcare facility and a warehouse; in the village of Zubra near Lviv six houses and six cars were damaged.'
+    setd(c, 'Российские агентства, ссылаясь на «Укрэнерго» и украинских чиновников, сообщают об отключениях света в десяти областях, о 66 тыс. обесточенных абонентов на Волыни и о повреждении за ночь более 10 энергообъектов, но пишут о «повреждении» инфраструктуры, не связывая его с ударами; лишь пересказывая жалобу Зеленского, ТАСС упоминает, что повреждения получила энергетика. Украинские источники описывают массированную атаку на энергетику в 11 областях, включая Киевскую, о которой российские агентства в выборке не пишут; о 550 тысячах семей без света и о поврежденных складах медикаментов, железнодорожных станциях и жилых домах российские источники не сообщают. Независимых сообщений в выборке нет.',
+        'Російські агентства, посилаючись на «Укренерго» та українських посадовців, повідомляють про відключення світла в десяти областях, про 66 тис. знеструмлених абонентів на Волині та про пошкодження за ніч понад 10 енергооб’єктів, але пишуть про «пошкодження» інфраструктури, не пов’язуючи його з ударами; лише переказуючи скаргу Зеленського, ТАСС згадує, що пошкоджень зазнала енергетика. Українські джерела описують масовану атаку на енергетику в 11 областях, зокрема Київській, про яку російські агентства у вибірці не пишуть; про 550 тисяч родин без світла та про пошкоджені склади медикаментів, залізничні станції та житлові будинки російські джерела не повідомляють. Незалежних повідомлень у вибірці немає.',
+        'Russian agencies, citing Ukrenergo and Ukrainian officials, report power outages in ten regions, 66 thousand customers without power in Volyn and more than 10 energy facilities damaged overnight, but speak of "damage" to infrastructure without linking it to strikes; only when relaying Zelensky\'s complaint does TASS mention that the energy sector was damaged. Ukrainian sources describe a massive attack on energy facilities in 11 regions, including the Kyiv region, which Russian agencies in the sample do not mention; Russian sources do not report the 550 thousand families without power or the damaged medicine warehouses, railway stations and residential buildings. There are no independent reports in the sample.')
+    c['title'] = 'Массированный удар по энергетике 19 октября: повреждено более 10 объектов в 11 областях, без света не менее 550 тыс. семей; на Волыни — 66 тыс. абонентов'
+    c['uk']['t'] = 'Масований удар по енергетиці 19 жовтня: пошкоджено понад 10 об’єктів в 11 областях, без світла щонайменше 550 тис. родин; на Волині — 66 тис. абонентів'
+    c['en']['t'] = 'Massive strike on energy on 19 October: over 10 facilities damaged in 11 regions, at least 550 thousand families without power; 66 thousand customers in Volyn'
+    c['place'] = 'Киевская, Винницкая, Житомирская, Волынская, Ровенская, Хмельницкая, Кировоградская, Харьковская, Львовская и другие области'
+    c['uk']['p'] = 'Київська, Вінницька, Житомирська, Волинська, Рівненська, Хмельницька, Кіровоградська, Харківська, Львівська та інші області'
+    c['en']['p'] = 'Kyiv, Vinnytsia, Zhytomyr, Volyn, Rivne, Khmelnytskyi, Kirovohrad, Kharkiv, Lviv and other regions'
+
+@ext('1019-mod-targets-kyiv-irpin', [12756, 12809, 12762])
+def _(c):
+    # TASS EN 12756 (MoD target list, = RIA / TASSr) - id only
+    add(c, 'ru', 'ТАСС также сообщило, что в Киевской области повреждено предприятие «Планета пластик», и вынесло в заголовок, что ночью ВСУ не смогли сбить ни одной баллистической ракеты.',
+        'ТАСС також повідомило, що в Київській області пошкоджено підприємство «Планета пластик», і винесло в заголовок, що вночі ЗСУ не змогли збити жодної балістичної ракети.',
+        'TASS also reported that the Planeta Plastik enterprise in the Kyiv region was damaged, and ran a headline saying Ukraine\'s forces failed to shoot down a single ballistic missile overnight.',
+        [(12809, 'В Киевской области повреждено предприятие "Планета пластик"'),
+         (12762, 'ВСУ не смогли сбить ночью ни одной баллистической ракеты')])
+
+@ext('1019-kyiv-ballistic-night', [12837, 12863])
+def _(c):
+    c['ua'] = {'summary': 'РБК-Украина со ссылкой на Воздушные силы и Киевскую городскую администрацию пишет, что в ночь на 19 октября российские войска второй раз за несколько часов атаковали Киев баллистическими ракетами. По словам мэра Виталия Кличко, повреждена одна из станций метро на левом берегу, рядом обломками разорвало рельсы; по данным КГГА, наземные станции «Черниговская» и «Лесная» на красной линии закрыты, повреждены станция, пути и кабельная сеть. «Общественное» пишет, что повторная атака была в 03:00: в Соломенском районе обломки попали в первый этаж 25-этажного жилого дома, трое раненых получили помощь на месте, в Днепровском районе — попадание на территорию нежилой застройки. При первой, вечерней атаке, по данным РБК-Украина, пострадало здание медцентра в Деснянском районе и погиб один человек. В утренней сводке «Общественное» добавляет взрывы в Луцке, Ровно, Кропивницком и Днепре. По данным ГСЧС, всего за ночь в Киеве погиб один человек и восемь пострадали. РБК-Украина пишет, что при повторной, по его данным утренней, атаке в Соломенском районе сильно поврежден ТРЦ Cosmo Multimall у станции «Шулявская», частично обрушились перекрытия; «Общественное» сообщает о повреждении ледовой арены на улице Шалетт.',
+        'quotes': [q(*x) for x in [
+            (11946, 'У ніч на 19 жовтня росіяни вдруге за кілька годин атакували Київ балістичними ракетами.'),
+            (11947, 'Унаслідок російської атаки в ніч на 19 жовтня пошкоджено одну зі станцій метро на лівому березі Києва.'),
+            (11947, 'Поруч зі станцією через уламки розірвало ходову та контактну рейки.'),
+            (11991, 'наземні станції метро "Чернігівська" і "Лісова" на червоній гілці тимчасово закрили на вхід і вихід'),
+            (11991, 'Через масований обстріл пошкоджено наземну станцію метро, колії та кабельну мережу.'),
+            (11991, 'постраждала будівля медичного центру в Деснянському районі, загинула одна людина'),
+            (12103, 'О 03:00 19 жовтня в столиці знову пролунали вибухи.'),
+            (12103, "у Солом'янському районі зафіксоване влучання уламків в перший поверх 25-поверхового житлового будинку. Внаслідок цього поранені троє людей, медики надали їм допомогу на місці."),
+            (12103, 'У Дніпровському районі столиці також зафіксували влучання на територію нежитлової забудови.'),
+            (12195, 'Вибухи також лунали в Луцьку, Рівному, Кропивницькому та Дніпрі.'),
+            (12464, 'Загалом, за даними ДСНС, внаслідок нічного удару загинула людина і ще вісім постраждали.'),
+            (12863, 'суттєвих пошкоджень зазнав торгово-розважальний центр Cosmo Multimall, розташований у Солом’янському районі неподалік станції метро "Шулявська"'),
+            (12863, 'частина перекриттів обвалилася'),
+            (12863, 'А зранку ворог повторно атакував Київ, влучання зафіксовані у Солом\'янському районі столиці.'),
+            (12837, 'Унаслідок атаки була пошкоджена льодова арена по вулиці Шалетт')]]}
+    c['uk']['ua'] = 'РБК-Україна з посиланням на Повітряні сили та Київську міську державну адміністрацію пише, що в ніч на 19 жовтня російські війська вдруге за кілька годин атакували Київ балістичними ракетами. За словами мера Віталія Кличка, пошкоджено одну зі станцій метро на лівому березі, поруч уламками розірвало рейки; за даними КМДА, наземні станції «Чернігівська» і «Лісова» на червоній гілці закрито, пошкоджено станцію, колії та кабельну мережу. «Суспільне» пише, що повторна атака була о 03:00: у Солом’янському районі уламки влучили в перший поверх 25-поверхового житлового будинку, троє поранених отримали допомогу на місці, у Дніпровському районі — влучання на територію нежитлової забудови. Під час першої, вечірньої атаки, за даними РБК-Україна, постраждала будівля медцентру в Деснянському районі та загинула одна людина. У ранковому огляді «Суспільне» додає вибухи в Луцьку, Рівному, Кропивницькому та Дніпрі. За даними ДСНС, загалом за ніч у Києві загинула одна людина і вісім постраждали. РБК-Україна пише, що під час повторної, за його даними ранкової, атаки в Солом’янському районі серйозно пошкоджено ТРЦ Cosmo Multimall біля станції «Шулявська», частково обвалилися перекриття; «Суспільне» повідомляє про пошкодження льодової арени на вулиці Шалетт.'
+    c['en']['ua'] = 'RBC-Ukraine, citing the Air Force and the Kyiv City Administration, writes that on the night of 19 October Russian forces attacked Kyiv with ballistic missiles for the second time in a few hours. According to Mayor Vitali Klitschko, a metro station on the Left Bank was damaged and debris tore the rails next to it; according to the city administration, the above-ground stations Chernihivska and Lisova on the red line were closed, with a station, tracks and the cable network damaged. Suspilne writes that the repeated attack came at 03:00: in the Solomianskyi district debris hit the first floor of a 25-storey residential building, three injured people were treated on the spot, and in the Dniprovskyi district non-residential buildings were hit. In the first, evening attack, RBC-Ukraine says, a medical centre building in the Desnianskyi district was hit and one person was killed. In its morning round-up Suspilne adds explosions in Lutsk, Rivne, Kropyvnytskyi and Dnipro. According to the State Emergency Service, one person was killed and eight injured in Kyiv overnight in total. RBC-Ukraine writes that in the repeated attack, which it dates to the morning, the Cosmo Multimall shopping centre near Shuliavska station in the Solomianskyi district was badly damaged, with ceilings partly collapsed; Suspilne reports damage to the ice arena on Chalet Street.'
+    for path, old, new in [
+        (('diverge',), 'о повреждениях метро и жилых домов российские источники не пишут', 'о повреждениях метро, жилых домов, ТРЦ и ледовой арены российские источники не пишут'),
+        (('uk', 'd'), 'про пошкодження метро і житлових будинків російські джерела не пишуть', 'про пошкодження метро, житлових будинків, ТРЦ і льодової арени російські джерела не пишуть'),
+        (('en', 'd'), 'Russian sources do not mention damage to the metro or residential buildings', 'Russian sources do not mention damage to the metro, residential buildings, a shopping centre or an ice arena')]:
+        rep(c, path, old, new)
+    c['uncertainty_reason'] += ' РБК-Украина относит повреждение ТРЦ Cosmo Multimall к «утренней» повторной атаке, не уточняя время.'
+
+@ext('1019-strikes-regions-rivne-dnipro', [12700, 12726, 12782, 12842])
+def _(c):
+    add(c, 'ru', 'Ближе к полудню РИА Новости со ссылкой на «24 канал» сообщило о новых взрывах в Ровно, а РИА и ТАСС — о новых взрывах в Днепропетровске (Днепре) на фоне воздушной тревоги.',
+        'Ближче до полудня РИА Новости з посиланням на «24 канал» повідомило про нові вибухи в Рівному, а РИА і ТАСС — про нові вибухи в Дніпропетровську (Дніпрі) на тлі повітряної тривоги.',
+        'Towards midday RIA Novosti, citing Channel 24, reported new explosions in Rivne, and RIA and TASS reported new explosions in Dnepropetrovsk (Dnipro) amid an air raid alert.',
+        [(12700, 'Взрывы снова прогремели в городе Ровно на западе Украины на фоне воздушной тревоги'),
+         (12726, 'Взрывы вновь прогремели в понедельник в Днепропетровске на фоне воздушной тревоги'),
+         (12782, 'В Днепропетровске произошел взрыв')])
+    add(c, 'ua', 'Позже полиция Ровенщины сообщила, что число пострадавших выросло до четырех: в больницу доставили трех женщин и мужчину, мужчину госпитализировали; всю ночь и утро регион атаковали реактивными беспилотниками, есть попадания по объектам гражданской инфраструктуры.',
+        'Пізніше поліція Рівненщини повідомила, що кількість постраждалих зросла до чотирьох: до лікарні доправили трьох жінок і чоловіка, чоловіка госпіталізували; усю ніч і ранок регіон атакували реактивними безпілотниками, є влучання по об’єктах цивільної інфраструктури.',
+        'Later the Rivne regional police said the number of injured had risen to four: three women and a man were taken to hospital and the man was admitted; the region was attacked with jet-powered drones all night and morning, with hits on civilian infrastructure.',
+        [(12842, 'трьох жінок та чоловіка доправили до лікарні'),
+         (12842, 'Упродовж усієї ночі та ранку ворог атакує регіон реактивними БпЛА.')])
+    for path, old, new in [
+        (('diverge',), 'и двое раненых на Ровенщине', 'и четверо пострадавших на Ровенщине'),
+        (('uk', 'd'), 'і двоє поранених на Рівненщині', 'і четверо постраждалих на Рівненщині'),
+        (('en', 'd'), 'and two injured in the Rivne region', 'and four injured in the Rivne region')]:
+        rep(c, path, old, new)
+
+@ext('1019-front-claims', [12820, 12730, 12731, 12732, 12733, 12734, 12735, 12736, 12737, 12802, 12803, 12804, 12805, 12869, 12773, 12829])
+def _(c):
+    # RIA 12731-12737, TASSr 12805 (MoD daily summary by group), RIA 12730, TASSr 12802, Interfax 12869 (Omelnyk), TASS EN 12773 ("North" artillery, = 12066) - ids only
+    for path, old, new in [
+        (('ru', 'summary'), ' Командир танкового взвода рассказал, что экипаж за сутки отбил налет почти 200 FPV-дронов. Минобороны РФ публикует видео ударов по пунктам управления БПЛА в Запорожской области и работы артиллерии в ДНР.', ''),
+        (('uk', 'ru'), ' Командир танкового взводу розповів, що екіпаж за добу відбив наліт майже 200 FPV-дронів. Міноборони РФ публікує відео ударів по пунктах керування БпЛА в Запорізькій області та роботи артилерії в ДНР.', ''),
+        (('en', 'ru'), ' A tank platoon commander said his crew fought off a raid of almost 200 FPV drones in a day. The Russian Defence Ministry publishes videos of strikes on drone control points in the Zaporizhzhia region and of artillery at work in the "DPR".', '')]:
+        rep(c, path, old, new)
+    c['ru']['quotes'] = [x for x in c['ru']['quotes'] if x['id'] not in (12058, 12101)]
+    c['ru']['summary'] = 'В сводке 19 октября Минобороны РФ заявило, что группировка «Восток» «освободила» населенный пункт Омельник в Запорожской области; потери ВСУ за сутки ведомство оценивает примерно в 1 235 военных, средства ПВО, по его данным, сбили 405 беспилотников. ' + c['ru']['summary']
+    c['uk']['ru'] = 'У зведенні 19 жовтня Міноборони РФ заявило, що угруповання «Восток» «звільнило» населений пункт Омельник у Запорізькій області; втрати ЗСУ за добу відомство оцінює приблизно в 1 235 військових, засоби ППО, за його даними, збили 405 безпілотників. ' + c['uk']['ru']
+    c['en']['ru'] = 'In its 19 October summary the Russian Defence Ministry said the "Vostok" group had "liberated" the settlement of Omelnyk in the Zaporizhzhia region; it puts Ukrainian losses over the day at about 1 235 troops and says air defences shot down 405 drones. ' + c['en']['ru']
+    c['ru']['quotes'] = [q(12820, 'Подразделения группировки войск «Восток» освободили населенный пункт Омельник Запорожской области'),
+                         q(12804, 'Потери ВСУ за сутки в зоне СВО составили порядка 1 235 военных'),
+                         q(12803, 'Российские средства ПВО сбили за сутки 405 беспилотников ВСУ')] + c['ru']['quotes']
+    add(c, 'ua', '8-й корпус ДШВ сообщил, что за половину октября Сумщина пережила почти 180 ударов управляемыми авиабомбами — с июля, по его данным, около 400 бомб в месяц; на Северо-Слобожанском направлении в плен попал российский офицер — заместитель командира роты по военно-политической работе.',
+        '8-й корпус ДШВ повідомив, що за половину жовтня Сумщина зазнала майже 180 ударів керованими авіабомбами — від липня, за його даними, близько 400 бомб на місяць; на Північно-Слобожанському напрямку в полон потрапив російський офіцер — заступник командира роти з воєнно-політичної роботи.',
+        'The 8th Air Assault Corps said the Sumy region had been hit by almost 180 guided aerial bombs in half of October — about 400 bombs a month since July, it says; in the Northern Slobozhanskyi direction a Russian officer, a deputy company commander for military-political work, was taken prisoner.',
+        [(12829, 'Після червня кількість не росте, від липня тримається на рівні приблизно 400 бомб на місяць'),
+         (12829, 'потрапив у полон російський офіцер — заступник командира роти з воєнно-політичної роботи')])
+    c['diverge'] += ' О заявленном Минобороны РФ взятии Омельника в Запорожской области украинские источники в выборке не пишут.'
+    c['uk']['d'] += ' Про заявлене Міноборони РФ взяття Омельника в Запорізькій області українські джерела у вибірці не пишуть.'
+    c['en']['d'] += ' Ukrainian sources in the sample do not mention the capture of Omelnyk in the Zaporizhzhia region claimed by the Russian Defence Ministry.'
+    c['title'] = 'Фронт 19 октября: Минобороны РФ — «освобожден» Омельник, Марочко — 12 населенных пунктов за неделю; Генштаб ВСУ — 204 боестолкновения за сутки'
+    c['uk']['t'] = 'Фронт 19 жовтня: Міноборони РФ — «звільнено» Омельник, Марочко — 12 населених пунктів за тиждень; Генштаб ЗСУ — 204 боєзіткнення за добу'
+    c['en']['t'] = 'Front, 19 October: Russian MoD claims Omelnyk "liberated", Marochko 12 settlements in a week; Ukraine\'s General Staff reports 204 clashes in a day'
+
+@ext('1019-dobropillia-control-disputed', [12819, 12795])
+def _(c):
+    add(c, 'ru', 'Минобороны РФ публикует рассказ командира батальона с позывным «Удав»: российские войска обошли город с севера и юга, выбили противника из промзоны и заблокировали пути отхода в лесополосах на западе. ТАСС (англ.) приводит также слова Пушилина о том, что предстоит проверить каждый подвал и укрытие — нет ли там противника и мирных жителей, которым нужна помощь.',
+        'Міноборони РФ публікує розповідь командира батальйону з позивним «Удав»: російські війська обійшли місто з півночі та півдня, вибили противника з промзони і заблокували шляхи відходу в лісосмугах на заході. ТАСС (англ.) наводить також слова Пушиліна про те, що належить перевірити кожен підвал і укриття — чи немає там противника і мирних жителів, яким потрібна допомога.',
+        'The Russian Defence Ministry publishes an account by a battalion commander with the call sign "Udav": Russian troops bypassed the town from the north and south, drove the enemy out of the industrial zone and blocked escape routes in the tree lines to the west. TASS (English) also quotes Pushilin as saying every basement and shelter has to be checked for the enemy and for civilians who need help.',
+        [(12819, 'Российские войска обошли населенный пункт с севера и юга, выбили противника из промзоны и заблокировали пути отхода в лесополосах на западе'),
+         (12795, 'inspect every basement, every possible shelter and check the presence of the enemy')])
+    c['diverge'] += ' Рассказ российского комбата об окружении города украинские источники в выборке не комментируют.'
+    c['uk']['d'] += ' Розповідь російського комбата про оточення міста українські джерела у вибірці не коментують.'
+    c['en']['d'] += ' Ukrainian sources in the sample do not comment on the Russian battalion commander\'s account of encircling the town.'
+
+@ext('1017-kherson-air-strikes', [12827])
+def _(c):
+    add(c, 'ua', '19 октября департамент здравоохранения Херсонской ОВА назвал имя погибшего работника «скорой» — экстренный медицинский техник Сергей Гончаров, работавший на «скорой» с 2014 года, сначала водителем; он погиб, помогая пострадавшим после авиаудара по жилому кварталу 17 октября.',
+        '19 жовтня департамент здоров’я Херсонської ОВА назвав ім’я загиблого працівника «швидкої» — екстрений медичний технік Сергій Гончаров, який працював на «швидкій» з 2014 року, спершу водієм; він загинув, допомагаючи постраждалим після авіаудару по житловому кварталу 17 жовтня.',
+        'On 19 October the health department of the Kherson regional administration named the ambulance worker who was killed as emergency medical technician Serhii Honcharov, who had worked for the ambulance service since 2014, first as a driver; he was killed while helping victims of the 17 October air strike on a residential quarter.',
+        [(12827, 'Розпочав працювати на «швидкій» водієм у серпні 2014 року'),
+         (12827, 'Сергій надавав допомогу постраждалим після авіаудару по житловому кварталу у Херсоні 17 жовтня')])
+
+@ext('1018-zelensky-nbc-bessent-starlink', [12826])
+def _(c):
+    add(c, 'ua', 'По пересказу «Общественного», Бессент заявил, что США «не на стороне России», а на вопрос, союзник ли Украина, ответил: «Я не госсекретарь и не президент».',
+        'За переказом «Суспільного», Бессент заявив, що США «не на боці Росії», а на запитання, чи є Україна союзником, відповів: «Я не держсекретар і не президент».',
+        'According to Suspilne, Bessent said the US is "not on Russia\'s side" and, asked whether Ukraine is an ally, replied: "I am not the Secretary of State and not the president".',
+        [(12826, 'Ми не на боці Росії'),
+         (12826, 'Я не держсекретар і не президент')])
+
+@ext('1017-starlink-planned-operation', [12857])
+def _(c):
+    add(c, 'ua', 'Позже РБК-Украина со ссылкой на источники в Силах обороны написало, что ограничение около 160 км/ч сохраняется, а в отдельных подразделениях связь пропадает уже на 60–80 км/ч; сильнее всего это бьет по дронам-перехватчикам против «Герань-4» и «Герань-5» и по ударам на среднюю глубину, но «мы ко всему адаптируемся»; переговоры о восстановлении полноценной работы Starshield продолжаются.',
+        'Пізніше РБК-Україна з посиланням на джерела в Силах оборони написало, що обмеження близько 160 км/год зберігається, а в окремих підрозділах зв’язок зникає вже на 60–80 км/год; найбільше це б’є по дронах-перехоплювачах проти «Герань-4» і «Герань-5» та по ударах на середню глибину, але «ми до всього адаптовуємось»; переговори щодо відновлення повноцінної роботи Starshield тривають.',
+        'RBC-Ukraine later wrote, citing sources in the Defence Forces, that the limit of about 160 km/h remains and in some units the connection drops already at 60–80 km/h; this hits interceptor drones against Geran-4 and Geran-5 and medium-range strikes hardest, but "we adapt to everything"; talks on restoring full Starshield operation are continuing.',
+        [(12857, 'ліміт приблизно у 160 км/год продовжує діяти'),
+         (12857, "в окремих підрозділах зв'язок починав зникати вже на швидкості 60-80 км/год"),
+         (12857, 'Однак ми до всього адаптовуємось'),
+         (12857, 'зараз тривають переговори щодо відновлення повноцінної роботи Starshield')])
+
+@ext('1016-pope-putin-oleshky', [12851, 12816, 12781])
+def _(c):
+    add(c, 'ru', 'Позже ТАСС сообщило, что жителей Алешкинского округа призвали не появляться на дорогах из-за атак ВСУ — глава округа Руслан Хоменко назвал эти удары «геноцидом мирного населения»; в округе, по данным агентства, сгорели здание сельхозпредприятия и магазин.',
+        'Пізніше ТАСС повідомило, що мешканців Олешківського округу закликали не з’являтися на дорогах через атаки ЗСУ — голова округу Руслан Хоменко назвав ці удари «геноцидом мирного населення»; в окрузі, за даними агентства, згоріли будівля сільгосппідприємства і магазин.',
+        'TASS later reported that residents of the Aleshki district were urged to stay off the roads because of Ukrainian attacks — district head Ruslan Khomenko called the strikes "genocide of the civilian population"; according to the agency, an agricultural enterprise building and a shop burned down in the district.',
+        [(12816, 'Жителей Алешкинского округа призвали не появляться на дорогах из-за атак ВСУ'),
+         (12816, 'Глава округа Руслан Хоменко назвал эти удары "геноцидом мирного населения"'),
+         (12781, 'В Алешкинском округе из-за ударов ВСУ сгорели здание сельхозпредприятия и магазин')])
+    add(c, 'ua', 'Позже омбудсмен Дмитрий Лубинец заявил, что Украина и Россия согласовывают последние детали режима тишины и эвакуации всех желающих из Алешек и еще шести населенных пунктов сразу на подконтрольную Украине территорию; там, по украинской оценке, остаются около 6 тысяч мирных жителей, в том числе до 200 детей, в самих Алешках — до 2 тысяч.',
+        'Пізніше омбудсман Дмитро Лубінець заявив, що Україна і Росія погоджують останні деталі режиму тиші та евакуації всіх охочих з Олешок і ще шести населених пунктів одразу на підконтрольну Україні територію; там, за українською оцінкою, залишаються близько 6 тисяч цивільних, зокрема до 200 дітей, у самих Олешках — до 2 тисяч.',
+        'Ombudsman Dmytro Lubinets later said Ukraine and Russia are agreeing the final details of a ceasefire and of an evacuation of everyone who wishes to leave Oleshky and six more settlements directly to Ukrainian-controlled territory; by the Ukrainian estimate, about 6 thousand civilians remain there, including up to 200 children, with up to 2 thousand in Oleshky itself.',
+        [(12851, 'Ми зараз виходимо на узгодження останніх деталей щодо забезпечення режиму тиші і забезпечення евакуації всіх бажаючих'),
+         (12851, 'там можуть залишатися близько 6 тисяч цивільних, зокрема, до 200 дітей')])
+    c['diverge'] += ' О согласовании эвакуации, о котором говорит Лубинец, российские источники в выборке не сообщают; ТАСС пишет об ударах ВСУ по Алешкинскому округу.'
+    c['uk']['d'] += ' Про погодження евакуації, про яке говорить Лубінець, російські джерела у вибірці не повідомляють; ТАСС пише про удари ЗСУ по Олешківському округу.'
+    c['en']['d'] += ' Russian sources in the sample do not report the evacuation arrangements Lubinets describes; TASS writes about Ukrainian strikes on the Aleshki district.'
+
+# ---- quote pre-check against the DB (extension quotes)
+db = sqlite3.connect('/workspace/compare-site-v2/data/articles.db')
+n = lambda s: re.sub(r'\s+', ' ', s or '')
+def chk(i, t):
+    r = db.execute('select text from articles where id=?', (i,)).fetchone()
+    if not r or n(t) not in n(r[0]): print('QUOTE BAD', i, t[:70])
+FILES = ['c16h.json', 'c17b.json', 'c17e.json', 'c18c.json', 'c19a.json', 'c19d.json', 'c19e.json', 'c19f.json', 'c19g.json']
+def lens(c):
+    return [len(c[s]['summary']) for s in ('ru', 'ua', 'ind') if c[s]] + [len(c[l][k]) for l in ('uk', 'en') for k in ('ru', 'ua', 'ind', 'd') if c[l][k]] + [len(c['diverge'])]
+if '--dry' in sys.argv:
+    import copy
+    for f in FILES:
+        for c in json.load(open(OUT + f)):
+            if c['key'] in EXT:
+                c = copy.deepcopy(c); EXT[c['key']](c)
+                for s in ('ru', 'ua', 'ind'):
+                    if c[s]:
+                        for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+                print('DRY', c['key'], max(lens(c)), len(c['title']), len(c['uk']['t']), len(c['en']['t']))
+    sys.exit()
+
+apply(FILES)
+touched = set(EXT)
+for f in FILES:
+    for c in json.load(open(OUT + f)):
+        if c['key'] not in touched: continue
+        for s in ('ru', 'ua', 'ind'):
+            if c[s]:
+                for qq in c[s]['quotes']: chk(qq['id'], qq['text'])
+        L = lens(c)
+        print(c['key'], max(L))
+        if max(L) > 1400: print('TOO LONG', f, c['key'], max(L))
+        if len(c['title']) > 160: print('TITLE LONG', c['key'], len(c['title']))
+# post-run patch (11:14): SUS 12834 (Zelensky statement, = RBC 12859) added as id only to 1019-energy-strikes-west-centre in out/c19f.json

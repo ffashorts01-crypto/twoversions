@@ -1,0 +1,41 @@
+import sys, glob, os
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 10:04: Oct 20 backlog extensions ----------------
+def noop(c): pass
+
+@ext('1020-zelensky-rubio-early-warning', [13507, 13528, 14103, 14941, 14063, 14400, 14938])
+def _(c):
+    add(c, 'ru', 'Вечером РИА Новости передало слова Зеленского в Осло: после разговора с Рубио связь Starlink, возможно, восстановится через 48 часов; позже — слова главы Пентагона Пита Хегсета, что США «ничего не отменяли» и не давали указаний по Starlink и Starshield.',
+        'Увечері РИА Новости передало слова Зеленського в Осло: після розмови з Рубіо зв’язок Starlink, можливо, відновиться за 48 годин; пізніше — слова голови Пентагону Піта Гегсета, що США «нічого не скасовували» і не давали вказівок щодо Starlink і Starshield.',
+        'In the evening RIA Novosti relayed Zelensky\'s words in Oslo that after his talk with Rubio the Starlink connection might be restored within 48 hours, and later Pentagon chief Pete Hegseth\'s words that the US "cancelled nothing" and gave no instructions on Starlink and Starshield.',
+        [(13507, 'И мы решили, что, возможно, через 48 часов у нас снова будет связь'),
+         (13528, 'Мы ничего не отменяли.')])
+    add(c, 'ua', '«Общественное» пишет, что в ближайшие 48 часов Зеленский может снова связаться с Рубио по Starlink; РБК-Украина — что Хегсет отрицает какие-либо ограничения: решения может принимать сама Starlink.',
+        '«Суспільне» пише, що найближчих 48 годин Зеленський може знову сконтактувати з Рубіо щодо Starlink; РБК-Україна — що Гегсет заперечує будь-які обмеження: рішення може ухвалювати сама Starlink.',
+        'Suspilne writes that Zelensky may contact Rubio again about Starlink within the next 48 hours; RBC-Ukraine that Hegseth denies any restrictions, saying Starlink itself can make such decisions.',
+        [(14103, 'протягом наступних 48 годин може сконтактувати з Марком Рубіо з цього питання'),
+         (14941, 'Ми нічого не обмежували.')])
+
+@ext('1020-trump-ukraine-must-want-deal', [13511, 13513, 14419, 14712, 13508, 13509, 13510, 13512, 13514, 13526, 13531, 13532, 13741, 14501, 14056])
+def _(c):
+    add(c, 'ru', 'РИА Новости добавляет его слова, что Зеленский мог заключить гораздо более выгодную сделку два года назад, а встреча Путина и Зеленского для урегулирования не обязательна.',
+        'РИА Новости додає його слова, що Зеленський міг укласти значно вигіднішу угоду два роки тому, а зустріч Путіна і Зеленського для врегулювання не обов’язкова.',
+        'RIA Novosti adds his words that Zelensky could have made a much better deal two years ago and that a Putin-Zelensky meeting is not necessary for a settlement.',
+        [(13511, 'Вероятно, он мог заключить гораздо более выгодную сделку, чем та, которую, возможно, может заключить сейчас'),
+         (13513, 'Им не обязательно быть в одной комнате.')])
+    add(c, 'ua', '«Украинская правда» выносит в заголовок слова Трампа, что Путину и Зеленскому не обязательно быть в одной комнате для соглашения.',
+        '«Українська правда» виносить у заголовок слова Трампа, що Путіну і Зеленському не обов’язково бути в одній кімнаті для угоди.',
+        'Ukrainska Pravda headlines Trump\'s words that Putin and Zelensky need not be in the same room for a deal.',
+        [(14419, 'Україна має сама прагнути укласти угоду')])
+    add(c, 'ind', 'DW (на русском) передает те же слова Трампа о необязательности встречи Путина и Зеленского и его слова об «огромной» ненависти между ними.',
+        'DW (російською) передає ті самі слова Трампа про необов’язковість зустрічі Путіна і Зеленського та його слова про «величезну» ненависть між ними.',
+        'DW (in Russian) relays the same words of Trump that a Putin-Zelensky meeting is not necessary and his words about the "huge" hatred between them.',
+        [(14712, 'Им трудно находиться в одной комнате.')])
+
+ext('1020-patriot-purl-delay', [15097, 14564, 14831, 14080, 14399, 14894, 14691])(noop)
+ext('1021-hubbard-released', [13516, 15169])(noop)
+ext('1021-kremlin-trilateral-summit-china', [14374, 14872, 14417, 14076, 14705])(noop)
+
+files = sorted(os.path.basename(p) for p in glob.glob('/workspace/compare-site-v2/tools/days/out/c*.json'))
+apply(files)

@@ -1,0 +1,1542 @@
+[
+ {
+  "key": "1020-patriot-purl-delay",
+  "ids": [
+   15099,
+   13735,
+   15138,
+   14835,
+   14897,
+   14689,
+   14701,
+   14584,
+   14604,
+   14749,
+   14081,
+   14578,
+   14080,
+   14399,
+   14564,
+   14691,
+   14831,
+   14894,
+   15097,
+   14670,
+   15319
+  ],
+  "title": "Зеленский обвинил Пентагон в задержке ракет Patriot, оплаченных союзниками; WP: Хегсет не одобряет передачу, Рубио отрицает политическое решение",
+  "place": "Вашингтон",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки",
+   "умолчание"
+  ],
+  "ru": {
+   "summary": "«Интерфакс» со ссылкой на The Washington Post сообщает, что американская администрация не одобрила передачу третьими странами Украине ракет-перехватчиков для ЗРК Patriot, «в которых та остро нуждается»: по данным источников газеты, глава Пентагона Пит Хегсет формально передачу не отклонил, но и не выполнил шагов для ее утверждения, при этом продолжая одобрять некоторые виды помощи Украине. ТАСС на английском передает тот же материал WP и напоминает о сообщении CNN, что у Украины закончились ракеты Patriot. Отдельно «Интерфакс» приводит слова главы МИД Польши Радослава Сикорского: Польша не может передавать Украине такие ракеты, их дефицит вырос после атак на Иран. Обвинения Зеленского и ответ Рубио в российских материалах выборки не приводятся.",
+   "quotes": [
+    {
+     "id": 15099,
+     "text": "Американская администрация не одобрила передачу третьими странами Украине ракет-перехватчиков для зенитных ракетных комплексов (ЗРК) Patriot"
+    },
+    {
+     "id": 15099,
+     "text": "Хегсет формально не отклонил передачу, но и не выполнил необходимые шаги для ее утверждения"
+    },
+    {
+     "id": 13735,
+     "text": "Last week, CNN reported that Ukraine had run out of Patriot missiles."
+    },
+    {
+     "id": 15138,
+     "text": "Польша не имеет возможности передавать Украине ракеты для зенитных ракетных комплексов Patriot"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина пересказывает тот же материал The Washington Post: часть ракет Patriot поступает Украине из других стран, и для их передачи нужно одобрение Хегсета, который официально передачу не отклонил, но не выполнил необходимых шагов; по данным источников, он продолжает одобрять часть американской помощи. Издание также приводит интервью Сикорского агентству PAP: у Польши нет запасов ракет для передачи, в НАТО есть страны, которые еще ими располагают, и Варшава может лишь присоединиться к призывам поделиться ракетами с Украиной.",
+   "quotes": [
+    {
+     "id": 14835,
+     "text": "Гегсет офіційно не відхилив передачу Patriot Україні, але не виконав необхідні кроки для затвердження"
+    },
+    {
+     "id": 14897,
+     "text": "У НАТО є країни, які ще мають такі засоби для передачі, але Польща до цієї групи не належить"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW передает слова Зеленского из онлайн-беседы с сенаторами США Ричардом Блументалем и Томом Тиллисом: Пентагон задерживает поставку ракет, уже оплаченных партнерами по программе PURL, один из пакетов ждет подписи Хегсета, а европейские партнеры ждут разрешения США передать перехватчики из своих запасов; по мнению Зеленского, принято политическое решение замедлить поддержку. По его словам, Украина готова на 30 дней прекратить удары по российским НПЗ, если получит перехватчики. На следующий день госсекретарь Марко Рубио, по данным Reuters в пересказе DW, допустил задержку, но заявил, что преднамеренного политического распоряжения навредить Украине не было. The Kyiv Independent приводит слова Рубио о том, что перехватчики сейчас нужны всем и у США есть собственные потребности, и слова украинского чиновника о контрактах, которые Хегсет не подписывает. The Kyiv Independent 21 октября пишет о встрече министра обороны Евгения Хмары и главнокомандующего Михаила Драпатого с делегацией Lockheed Martin, производителя перехватчиков PAC-3, на фоне острой нехватки ракет Patriot; по словам украинских чиновников и военных, Хегсет до сих пор не одобрил передачу значительной партии ракет.",
+   "quotes": [
+    {
+     "id": 14689,
+     "text": "Нам известно, что Пентагон, к сожалению, задерживает поставку ракет, которые наши партнеры уже оплатили в рамках программы PURL"
+    },
+    {
+     "id": 14689,
+     "text": "Все это указывает на то, что принято некое политическое решение замедлить оказание нам поддержки"
+    },
+    {
+     "id": 14701,
+     "text": "Украине преднамеренно ни в чем не отказывали"
+    },
+    {
+     "id": 14584,
+     "text": "We have our own needs, too."
+    },
+    {
+     "id": 14584,
+     "text": "Hegseth has the contracts for Patriot missiles on his desk."
+    },
+    {
+     "id": 14604,
+     "text": "U.S. Defense Secretary Pete Hegseth has yet to greenlight the transfer of a significant batch of Patriot missiles for Ukraine"
+    }
+   ]
+  },
+  "diverge": "Факт задержки все стороны описывают со ссылкой на The Washington Post или на слова политиков. Российские агентства передают материал WP и слова Сикорского, а «Интерфакс» добавляет, что Украина в ракетах «остро нуждается»; обвинение Зеленского в «политическом решении» и ответ Рубио в российских материалах выборки отсутствуют. Украинские источники в выборке пересказывают те же WP и Сикорского. Независимые издания в центр ставят обвинения Зеленского и отрицание Рубио, который признает возможную задержку, но объясняет ее высоким спросом на перехватчики и собственными нуждами США.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Сведения о позиции Хегсета известны от анонимных источников The Washington Post; официального комментария Пентагона в выборке нет.",
+  "uk": {
+   "t": "Зеленський звинуватив Пентагон у затримці ракет Patriot, оплачених союзниками; WP: Гегсет не схвалює передачу, Рубіо заперечує політичне рішення",
+   "p": "Вашингтон",
+   "d": "Факт затримки всі сторони описують із посиланням на The Washington Post або на слова політиків. Російські агентства передають матеріал WP і слова Сікорського, а «Интерфакс» додає, що Україна в ракетах «гостро потребує»; звинувачення Зеленського в «політичному рішенні» та відповідь Рубіо в російських матеріалах вибірки відсутні. Українські джерела у вибірці переказують ті самі WP і Сікорського. Незалежні видання в центр ставлять звинувачення Зеленського і заперечення Рубіо, який визнає можливу затримку, але пояснює її високим попитом на перехоплювачі та власними потребами США.",
+   "ru": "«Интерфакс» із посиланням на The Washington Post повідомляє, що американська адміністрація не схвалила передачу третіми країнами Україні ракет-перехоплювачів для ЗРК Patriot, «яких та гостро потребує»: за даними джерел газети, глава Пентагону Піт Гегсет формально передачу не відхилив, але й не виконав кроків для її затвердження, водночас продовжуючи схвалювати деякі види допомоги Україні. ТАСС англійською передає той самий матеріал WP і нагадує про повідомлення CNN, що в України закінчилися ракети Patriot. Окремо «Интерфакс» наводить слова глави МЗС Польщі Радослава Сікорського: Польща не може передавати Україні такі ракети, їхній дефіцит зріс після атак на Іран. Звинувачення Зеленського і відповідь Рубіо в російських матеріалах вибірки не наводяться.",
+   "ua": "РБК-Україна переказує той самий матеріал The Washington Post: частина ракет Patriot надходить Україні з інших країн, і для їх передачі потрібне схвалення Гегсета, який офіційно передачу не відхилив, але не виконав необхідних кроків; за даними джерел, він продовжує схвалювати частину американської допомоги. Видання також наводить інтерв’ю Сікорського агентству PAP: у Польщі немає запасів ракет для передачі, у НАТО є країни, які ще ними володіють, і Варшава може лише приєднатися до закликів поділитися ракетами з Україною.",
+   "ind": "DW передає слова Зеленського з онлайн-розмови із сенаторами США Річардом Блюменталем і Томом Тіллісом: Пентагон затримує постачання ракет, уже оплачених партнерами за програмою PURL, один із пакетів чекає підпису Гегсета, а європейські партнери чекають дозволу США передати перехоплювачі зі своїх запасів; на думку Зеленського, ухвалено політичне рішення сповільнити підтримку. За його словами, Україна готова на 30 днів припинити удари по російських НПЗ, якщо отримає перехоплювачі. Наступного дня держсекретар Марко Рубіо, за даними Reuters у переказі DW, припустив затримку, але заявив, що навмисного політичного розпорядження зашкодити Україні не було. The Kyiv Independent наводить слова Рубіо про те, що перехоплювачі зараз потрібні всім і США мають власні потреби, і слова українського посадовця про контракти, які Гегсет не підписує. The Kyiv Independent 21 жовтня пише про зустріч міністра оборони Євгена Хмари та головнокомандувача Михайла Драпатого з делегацією Lockheed Martin, виробника перехоплювачів PAC-3, на тлі гострої нестачі ракет Patriot; за словами українських посадовців і військових, Гегсет досі не схвалив передачу значної партії ракет."
+  },
+  "en": {
+   "t": "Zelensky accuses the Pentagon of delaying Patriot missiles paid for by allies; WP: Hegseth is not approving transfers, Rubio denies a political decision",
+   "p": "Washington",
+   "d": "All sides describe the delay with reference to The Washington Post or to politicians' statements. Russian agencies relay the WP report and Sikorski's words, with Interfax adding that Ukraine \"badly needs\" the missiles; Zelensky's accusation of a \"political decision\" and Rubio's reply are absent from the Russian reports in the sample. Ukrainian sources in the sample retell the same WP report and Sikorski. Independent outlets focus on Zelensky's accusations and the denial by Rubio, who acknowledges a possible delay but attributes it to high demand for interceptors and the US's own needs.",
+   "ru": "Interfax, citing The Washington Post, reports that the US administration has not approved transfers of Patriot interceptor missiles to Ukraine by third countries, \"which it badly needs\": according to the paper's sources, Pentagon chief Pete Hegseth has formally not rejected the transfer but has not taken the steps to approve it either, while continuing to approve some kinds of aid to Ukraine. TASS in English relays the same WP report and recalls CNN's report that Ukraine had run out of Patriot missiles. Separately, Interfax quotes Polish Foreign Minister Radoslaw Sikorski: Poland cannot transfer such missiles to Ukraine, as the shortage grew after the attacks on Iran. Zelensky's accusations and Rubio's reply are not given in the Russian reports in the sample.",
+   "ua": "RBC-Ukraine retells the same Washington Post report: some Patriot missiles reach Ukraine from other countries, and their transfer requires the approval of Hegseth, who has not officially rejected it but has not taken the necessary steps; according to the sources, he continues to approve part of US aid. The outlet also cites Sikorski's interview with the PAP agency: Poland has no missile stocks to hand over, there are NATO countries that still have them, and Warsaw can only join the calls to share missiles with Ukraine.",
+   "ind": "DW relays Zelensky's words from an online conversation with US senators Richard Blumenthal and Thom Tillis: the Pentagon is delaying the delivery of missiles already paid for by partners under the PURL programme, one package is awaiting Hegseth's signature, and European partners are waiting for US permission to hand over interceptors from their own stocks; in Zelensky's view, a political decision has been taken to slow down support. He said Ukraine is ready to halt strikes on Russian refineries for 30 days if it receives the interceptors. The next day Secretary of State Marco Rubio, according to Reuters as relayed by DW, allowed that there may have been a delay but said there was no deliberate political directive to harm Ukraine. The Kyiv Independent quotes Rubio saying that everyone wants interceptors now and the US has its own needs, and a Ukrainian official saying Hegseth is not signing the contracts. The Kyiv Independent reports on 21 October that Defence Minister Yevhen Khmara and Commander-in-Chief Mykhailo Drapatyi met a delegation from Lockheed Martin, the maker of PAC-3 interceptors, amid a severe shortage of Patriot missiles; according to Ukrainian officials and officers, Hegseth has still not approved the transfer of a significant batch of missiles."
+  }
+ },
+ {
+  "key": "1020-oslo-zelensky-witkoff-talks",
+  "ids": [
+   15117,
+   15155,
+   13758,
+   14102,
+   14934,
+   14581,
+   14710,
+   13506,
+   14933,
+   13737,
+   14060,
+   14075,
+   14077,
+   14087,
+   14092,
+   14101,
+   14365,
+   14388,
+   14392,
+   14393,
+   14394,
+   14405,
+   14406,
+   14413,
+   14414,
+   14416,
+   14567,
+   14590,
+   14692,
+   14711,
+   14766,
+   14845,
+   14852,
+   14868,
+   14917,
+   14937,
+   15095,
+   15102,
+   15132,
+   15164,
+   15320,
+   13493,
+   13494,
+   14887,
+   15125,
+   15310,
+   14931,
+   13539,
+   15172,
+   16799,
+   13774,
+   13784,
+   15195,
+   15249
+  ],
+  "title": "Зеленский и Уиткофф провели переговоры в Осло с участием Норвегии, Финляндии и европейцев; Уиткофф отправился к Путину с документом о гарантиях безопасности",
+  "place": "Осло",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки",
+   "умолчание"
+  ],
+  "ru": {
+   "summary": "«Интерфакс» со ссылкой на заявление правительства Норвегии сообщает, что спецпосланники США Стив Уиткофф и Джаред Кушнер примут участие во встречах Зеленского с премьером Норвегии Йонасом Гаром Стёре и президентом Финляндии Александром Стуббом в Осло, причем присутствия американцев запросила Украина; Кушнер участвует по видеосвязи. Затем агентство со ссылкой на Financial Times пишет, что Уиткофф после переговоров может отправиться к Путину, чтобы представить ему идеи, проработанные в Осло. ТАСС на английском выносит в заголовок эпизод пресс-конференции: Стубб, по версии агентства, не дал Зеленскому ответить на вопросы журналистов, словно «защищая» его, и увел со словами «мы вас не оставим, мы вас защитим». РИА Новости выносит в заголовок слова Стубба, что задача Европы — содействовать диалогу между США и Украиной, и ставит их в контекст напряженности между Трампом и Зеленским. На следующий день Дмитрий Песков сказал, что в Кремле посмотрят, внесут ли Норвегия и Финляндия конструктивный вклад: если Стубб лишь повторяет общеевропейскую позицию, вкладом это не будет. ТАСС на английском приводит слова Рубио о том, что переговоры в Осло прошли позитивно и «без сюрпризов».",
+   "quotes": [
+    {
+     "id": 15117,
+     "text": "Власти Норвегии сообщают, что Украина запросила присутствие Уиткоффа и Кушнера на встречах."
+    },
+    {
+     "id": 15155,
+     "text": "Американский чиновник заявил, что Уиткофф поедет в Москву после переговоров с целью представить идеи, проработанные в Осло, Путину"
+    },
+    {
+     "id": 13758,
+     "text": "did not give Vladimir Zelensky an opportunity to answer reporters"
+    },
+    {
+     "id": 13506,
+     "text": "Наша задача - содействовать диалогу между, очевидно, Соединенными Штатами и Украиной"
+    },
+    {
+     "id": 13774,
+     "text": "We will see to what extent Mr. Stubb can make a constructive contribution."
+    },
+    {
+     "id": 13784,
+     "text": "Nothing unexpected, nothing surprising"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "«Общественное» и РБК-Украина передают итоги переговоров со слов Зеленского на пресс-конференции со Стуббом и Стёре: обсуждались гарантии безопасности для Украины, в том числе НАТО и гарантии по образцу статьи 5, американская сторона заверила, что гарантии будут сильными. Различные варианты гарантий уже изложены в документе, который Уиткофф передаст россиянам, а ответ Киев рассчитывает услышать примерно через день. РБК-Украина уточняет, что встреча Уиткоффа с Путиным запланирована в Санкт-Петербурге, и приводит слова Стубба о том, что в Осло нашли идеи для мира, которые представят российской стороне. Позже РБК-Украина со ссылкой на The New York Times написало, что на закрытой встрече в Осло Уиткофф и Кушнер по поручению Трампа упрекнули Зеленского за ответы на критику американского президента; Зеленский, по данным источника газеты, возражал.",
+   "quotes": [
+    {
+     "id": 14102,
+     "text": "Існують різні види гарантій безпеки, які вже викладені на папері, у відповідному документі"
+    },
+    {
+     "id": 14102,
+     "text": "Стів передасть цей документ росіянам"
+    },
+    {
+     "id": 14934,
+     "text": "Я вдячний американцям, що вони сказали, що вони будуть сильними"
+    },
+    {
+     "id": 16799,
+     "text": "Спецпредставники Трампа не лише дорікнули Зеленському, а й заявили, що він, мовляв, розлютив главу Білого дому."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "The Kyiv Independent описывает встречу на фоне ухудшения отношений Киева и Вашингтона: Украина обвиняет США в том, что те используют военную помощь и доступ к технологиям, чтобы добиться прекращения ударов по российским НПЗ. По словам Стёре, Зеленский сам попросил Норвегию и Финляндию организовать встречу; в переговорах, по данным издания, участвовали также представители Еврокомиссии и НАТО, а Зеленский обещал обсудить усиление ПВО и совместное производство. DW сообщает, что после переговоров Уиткофф прилетит в Россию для встречи с Путиным, что подтвердили источник ТАСС, Стёре, Стубб, Axios и The New York Times, а Кушнер участвовал в переговорах дистанционно.",
+   "quotes": [
+    {
+     "id": 14581,
+     "text": "President Volodymyr Zelensky has asked Norway and Finland to organize a meeting as part of the ongoing diplomatic efforts, in a critical time for Ukraine"
+    },
+    {
+     "id": 14581,
+     "text": "We will also discuss strengthening our air defense and joint production"
+    },
+    {
+     "id": 14710,
+     "text": "прилетит в Россию для встречи с главой страны Владимиром Путиным"
+    }
+   ]
+  },
+  "diverge": "О самих переговорах все три группы сообщают сходно: Уиткофф встретился с Зеленским при участии Норвегии, Финляндии и европейцев, а затем направился к Путину. Украинские источники подробно передают слова Зеленского о гарантиях безопасности и документе для России; в российских материалах выборки содержание переговоров почти не раскрывается, зато ТАСС выносит в заголовок эпизод, когда Стубб «не дал» Зеленскому ответить журналистам. Независимые издания ставят встречу в контекст разлада между Киевом и Вашингтоном, о котором российские и украинские сообщения выборки пишут меньше.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Содержание документа о гарантиях безопасности известно только со слов Зеленского; американская сторона его не комментировала.",
+  "uk": {
+   "t": "Зеленський і Віткофф провели переговори в Осло за участі Норвегії, Фінляндії та європейців; Віткофф вирушив до Путіна з документом про гарантії безпеки",
+   "p": "Осло",
+   "d": "Про самі переговори всі три групи повідомляють схоже: Віткофф зустрівся із Зеленським за участі Норвегії, Фінляндії та європейців, а потім вирушив до Путіна. Українські джерела детально передають слова Зеленського про гарантії безпеки та документ для Росії; у російських матеріалах вибірки зміст переговорів майже не розкривається, натомість ТАСС виносить у заголовок епізод, коли Стубб «не дав» Зеленському відповісти журналістам. Незалежні видання ставлять зустріч у контекст розладу між Києвом і Вашингтоном, про який російські та українські повідомлення вибірки пишуть менше.",
+   "ru": "«Интерфакс» із посиланням на заяву уряду Норвегії повідомляє, що спецпосланці США Стів Віткофф і Джаред Кушнер візьмуть участь у зустрічах Зеленського з прем’єром Норвегії Йонасом Гаром Стере та президентом Фінляндії Александером Стуббом в Осло, причому присутності американців попросила Україна; Кушнер бере участь у режимі відеозв’язку. Потім агентство з посиланням на Financial Times пише, що Віткофф після переговорів може вирушити до Путіна, щоб представити йому ідеї, опрацьовані в Осло. ТАСС англійською виносить у заголовок епізод пресконференції: Стубб, за версією агентства, не дав Зеленському відповісти на запитання журналістів, ніби «захищаючи» його, і повів зі словами «ми вас не залишимо, ми вас захистимо». РИА Новости виносить у заголовок слова Стубба, що завдання Європи — сприяти діалогу між США та Україною, і ставить їх у контекст напруженості між Трампом і Зеленським. Наступного дня Дмитро Пєсков сказав, що в Кремлі подивляться, чи зроблять Норвегія і Фінляндія конструктивний внесок: якщо Стубб лише повторює загальноєвропейську позицію, внеском це не буде. ТАСС англійською наводить слова Рубіо про те, що переговори в Осло пройшли позитивно і «без сюрпризів».",
+   "ua": "«Суспільне» і РБК-Україна передають підсумки переговорів зі слів Зеленського на пресконференції зі Стуббом і Стере: обговорювали гарантії безпеки для України, зокрема НАТО і гарантії за зразком статті 5, американська сторона запевнила, що гарантії будуть сильними. Різні варіанти гарантій уже викладено в документі, який Віткофф передасть росіянам, а відповідь Київ розраховує почути приблизно за день. РБК-Україна уточнює, що зустріч Віткоффа з Путіним запланована в Санкт-Петербурзі, і наводить слова Стубба про те, що в Осло знайшли ідеї для миру, які представлять російській стороні. Пізніше РБК-Україна з посиланням на The New York Times написало, що на закритій зустрічі в Осло Віткофф і Кушнер за дорученням Трампа дорікнули Зеленському за відповіді на критику американського президента; Зеленський, за даними джерела газети, заперечував.",
+   "ind": "The Kyiv Independent описує зустріч на тлі погіршення відносин Києва і Вашингтона: Україна звинувачує США в тому, що ті використовують військову допомогу та доступ до технологій, щоб домогтися припинення ударів по російських НПЗ. За словами Стере, Зеленський сам попросив Норвегію і Фінляндію організувати зустріч; у переговорах, за даними видання, брали участь також представники Єврокомісії та НАТО, а Зеленський обіцяв обговорити посилення ППО і спільне виробництво. DW повідомляє, що після переговорів Віткофф прилетить до Росії для зустрічі з Путіним, що підтвердили джерело ТАСС, Стере, Стубб, Axios і The New York Times, а Кушнер брав участь у переговорах дистанційно."
+  },
+  "en": {
+   "t": "Zelensky and Witkoff hold talks in Oslo with Norway, Finland and Europeans; Witkoff heads to Putin with a document on security guarantees",
+   "p": "Oslo",
+   "d": "On the talks themselves all three groups report similarly: Witkoff met Zelensky with Norway, Finland and Europeans taking part and then headed to Putin. Ukrainian sources relay in detail Zelensky's words on security guarantees and the document for Russia; the Russian reports in the sample say little about the substance of the talks, while TASS headlines an episode in which Stubb \"did not let\" Zelensky answer journalists. Independent outlets place the meeting in the context of the rift between Kyiv and Washington, which the Russian and Ukrainian reports in the sample cover less.",
+   "ru": "Interfax, citing a Norwegian government statement, reports that US special envoys Steve Witkoff and Jared Kushner will take part in Zelensky's meetings with Norwegian Prime Minister Jonas Gahr Store and Finnish President Alexander Stubb in Oslo, adding that Ukraine requested the Americans' presence; Kushner is joining by video link. The agency then cites the Financial Times as saying that after the talks Witkoff may travel to Putin to present the ideas worked out in Oslo. TASS in English headlines an episode from the press conference: Stubb, in the agency's version, did not let Zelensky answer reporters' questions, as if \"protecting\" him, and led him away saying \"we won't leave you alone, we'll protect you\". RIA Novosti headlines Stubb's words that Europe's task is to facilitate dialogue between the US and Ukraine, and places them in the context of tension between Trump and Zelensky. The next day Dmitry Peskov said the Kremlin would see whether Norway and Finland made a constructive contribution: if Stubb merely repeated the common European position, it would not count as one. TASS in English quotes Rubio as saying the Oslo talks were positive, with \"nothing surprising\".",
+   "ua": "Suspilne and RBC-Ukraine relay the outcome of the talks in Zelensky's words at a press conference with Stubb and Store: security guarantees for Ukraine were discussed, including NATO and guarantees modelled on Article 5, and the American side gave assurances that the guarantees would be strong. Various options for guarantees are already set out in a document that Witkoff will hand to the Russians, and Kyiv expects to hear a response in about a day. RBC-Ukraine specifies that Witkoff's meeting with Putin is planned in St Petersburg and quotes Stubb as saying ideas for peace were found in Oslo and will be presented to the Russian side. Later RBC-Ukraine, citing The New York Times, wrote that at the closed meeting in Oslo Witkoff and Kushner, on Trump's instructions, reproached Zelensky for his responses to the US president's criticism; according to the paper's source, Zelensky pushed back.",
+   "ind": "The Kyiv Independent describes the meeting against the background of worsening relations between Kyiv and Washington: Ukraine accuses the US of using military aid and access to technology to get it to stop striking Russian refineries. According to Store, Zelensky himself asked Norway and Finland to organise the meeting; the outlet says representatives of the European Commission and NATO also took part, and Zelensky promised to discuss strengthening air defence and joint production. DW reports that after the talks Witkoff will fly to Russia to meet Putin, as confirmed by a TASS source, Store, Stubb, Axios and The New York Times, and that Kushner took part in the talks remotely."
+  }
+ },
+ {
+  "key": "1020-south-korea-embassy-staff",
+  "ids": [
+   15119,
+   13749,
+   14385,
+   14066,
+   14697,
+   14577,
+   13750,
+   14765,
+   14858,
+   15115
+  ],
+  "title": "Южная Корея отзывает часть сотрудников посольства из Украины из-за спора о переданных Сеулу северокорейских пленных",
+  "place": "Сеул",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки",
+   "умолчание"
+  ],
+  "ru": {
+   "summary": "«Интерфакс» со ссылкой на агентство «Ренхап» сообщает, что Южная Корея отзывает часть сотрудников посольства на Украине; представитель МИД Пак Ду Сун связал решение с дипломатическим кризисом из-за того, что Киев публично раскрыл информацию о передаче Сеулу северокорейских военнопленных, а также со сложностями в обеспечении безопасности персонала. ТАСС на английском приводит его слова о том, что украинская сторона и после отзыва посла не предприняла конструктивных шагов, а часть персонала выводится из-за угрозы авиаударов по всей Украине; необходимую связь по дипломатическим каналам будет поддерживать временный поверенный. Кто наносит авиаудары, в сообщениях не уточняется.",
+   "quotes": [
+    {
+     "id": 15119,
+     "text": "решение связано с дипломатическим кризисом из-за того, что Киев публично раскрыл информацию о передаче северокорейских военнопленных Сеулу"
+    },
+    {
+     "id": 13749,
+     "text": "Given that even after the recall of the ambassador, the Ukrainian side has taken no constructive measures"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "«Украинская правда» и «Общественное» со ссылкой на Yonhap пишут, что Сеул отзывает часть дипломатов, поскольку Украина, по мнению южнокорейского МИД, не сделала «позитивных шагов» для урегулирования спора об одностороннем раскрытии информации о перемещении северокорейских военнопленных, а также из-за постоянных угроз российских авиаударов. Обе редакции подчеркивают, что Южная Корея сохранит дипломатические контакты с Украиной во главе с временным поверенным, а консульский персонал останется в стране.",
+   "quotes": [
+    {
+     "id": 14385,
+     "text": "постійні загрози повітряних ударів ускладнюють забезпечення безпеки дипломатичного персоналу"
+    },
+    {
+     "id": 14066,
+     "text": "Південна Корея підтримуватиме необхідні дипломатичні комунікації з Україною, очолювані своїм повіреним у справах"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW пишет, что решение углубляет дипломатический конфликт вокруг передачи Сеулу двух северокорейских военнопленных: Зеленский раскрыл ее в выступлении в ООН, Южная Корея обвинила Украину в нарушении соглашения о неразглашении, а Киев отрицает, что такое соглашение было; в начале октября Сеул уже отозвал посла. The Kyiv Independent добавляет, что число отзываемых дипломатов не раскрывается, временный поверенный останется в Киеве, а решение Сеул также объяснил растущей угрозой российских авиаударов.",
+   "quotes": [
+    {
+     "id": 14697,
+     "text": "Южная Корея обвинила Украину в нарушении соглашения о неразглашении, но Киев отрицает, что стороны заключали такую договоренность"
+    },
+    {
+     "id": 14577,
+     "text": "He did not disclose how many diplomats will be leaving Ukraine."
+    },
+    {
+     "id": 14577,
+     "text": "Seoul also justified the decision by the growing threat of Russian air strikes"
+    }
+   ]
+  },
+  "diverge": "Все стороны передают решение со ссылкой на южнокорейский МИД. Российские агентства выдвигают на первый план вину Киева, раскрывшего информацию о пленных, и говорят об угрозе авиаударов «по всей Украине», не называя, кто их наносит; украинские и независимые источники прямо пишут о российских авиаударах. Только независимые издания сообщают, что Киев отрицает существование соглашения о неразглашении.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Південна Корея відкликає частину працівників посольства з України через суперечку щодо переданих Сеулу північнокорейських полонених",
+   "p": "Сеул",
+   "d": "Усі сторони передають рішення з посиланням на південнокорейське МЗС. Російські агентства висувають на перший план провину Києва, який розкрив інформацію про полонених, і говорять про загрозу авіаударів «по всій Україні», не називаючи, хто їх завдає; українські та незалежні джерела прямо пишуть про російські авіаудари. Лише незалежні видання повідомляють, що Київ заперечує існування угоди про нерозголошення.",
+   "ru": "«Интерфакс» із посиланням на агентство Yonhap повідомляє, що Південна Корея відкликає частину працівників посольства в Україні; речник МЗС Пак Ду Сун пов’язав рішення з дипломатичною кризою через те, що Київ публічно розкрив інформацію про передачу Сеулу північнокорейських військовополонених, а також зі складнощами в забезпеченні безпеки персоналу. ТАСС англійською наводить його слова про те, що українська сторона і після відкликання посла не вжила конструктивних кроків, а частину персоналу виводять через загрозу авіаударів по всій Україні; необхідний зв’язок дипломатичними каналами підтримуватиме тимчасовий повірений. Хто завдає авіаударів, у повідомленнях не уточнюється.",
+   "ua": "«Українська правда» і «Суспільне» з посиланням на Yonhap пишуть, що Сеул відкликає частину дипломатів, оскільки Україна, на думку південнокорейського МЗС, не зробила «позитивних кроків» для врегулювання суперечки щодо одностороннього розкриття інформації про переміщення північнокорейських військовополонених, а також через постійні загрози російських авіаударів. Обидві редакції наголошують, що Південна Корея збереже дипломатичні контакти з Україною на чолі з тимчасовим повіреним, а консульський персонал залишиться в країні.",
+   "ind": "DW пише, що рішення поглиблює дипломатичний конфлікт навколо передачі Сеулу двох північнокорейських військовополонених: Зеленський розкрив її у виступі в ООН, Південна Корея звинуватила Україну в порушенні угоди про нерозголошення, а Київ заперечує, що така угода була; на початку жовтня Сеул уже відкликав посла. The Kyiv Independent додає, що кількість відкликаних дипломатів не розкривається, тимчасовий повірений залишиться в Києві, а рішення Сеул також пояснив зростанням загрози російських авіаударів."
+  },
+  "en": {
+   "t": "South Korea withdraws some embassy staff from Ukraine over a dispute about North Korean prisoners handed to Seoul",
+   "p": "Seoul",
+   "d": "All sides report the decision citing the South Korean Foreign Ministry. Russian agencies put Kyiv's fault in disclosing the prisoner information first and speak of the threat of air strikes \"across Ukraine\" without saying who carries them out; Ukrainian and independent sources write explicitly about Russian air strikes. Only independent outlets report that Kyiv denies a non-disclosure agreement existed.",
+   "ru": "Interfax, citing the Yonhap agency, reports that South Korea is withdrawing some embassy staff from Ukraine; Foreign Ministry spokesman Park Doo-soon linked the decision to the diplomatic crisis caused by Kyiv publicly disclosing the transfer of North Korean prisoners of war to Seoul, as well as to difficulties in ensuring staff security. TASS in English quotes him as saying the Ukrainian side has taken no constructive steps even after the recall of the ambassador, and that some staff are being withdrawn because of the threat of air strikes across Ukraine; necessary communication through diplomatic channels will be maintained by the chargé d'affaires. Who carries out the air strikes is not specified in the reports.",
+   "ua": "Ukrainska Pravda and Suspilne, citing Yonhap, write that Seoul is withdrawing some diplomats because, in the South Korean Foreign Ministry's view, Ukraine has not taken \"positive steps\" to settle the dispute over its unilateral disclosure of the transfer of North Korean prisoners of war, and because of the constant threat of Russian air strikes. Both outlets stress that South Korea will maintain diplomatic contacts with Ukraine led by the chargé d'affaires and that consular staff will remain in the country.",
+   "ind": "DW writes that the decision deepens the diplomatic conflict over the transfer of two North Korean prisoners of war to Seoul: Zelensky disclosed it in a speech at the UN, South Korea accused Ukraine of breaching a non-disclosure agreement, and Kyiv denies such an agreement existed; in early October Seoul had already recalled its ambassador. The Kyiv Independent adds that the number of diplomats being withdrawn has not been disclosed, the chargé d'affaires will remain in Kyiv, and Seoul also justified the decision by the growing threat of Russian air strikes."
+  }
+ },
+ {
+  "key": "1020-tambov-oil-station-drone-attack",
+  "ids": [
+   15110,
+   14844,
+   14065,
+   14571,
+   15301,
+   14696
+  ],
+  "title": "Атака дронов на Тамбовскую область: губернатор сообщил о пожаре на предприятии, OSINT-каналы называют станцию «Никольское» нефтепровода «Дружба»",
+  "place": "Мичуринский округ, Тамбовская область",
+  "region": "russia-other",
+  "tags": [
+   "расхождение: характер объекта",
+   "не проверено",
+   "умолчание"
+  ],
+  "ru": {
+   "summary": "«Интерфакс» со ссылкой на губернатора Тамбовской области Евгения Первышова сообщает, что в Мичуринском округе после атаки беспилотников начался пожар на одном из предприятий; пострадавших нет, к тушению привлечены все необходимые силы. Ночью и утром над регионом, по данным властей, сбиты четыре беспилотника. Какое предприятие пострадало, в сообщении не уточняется.",
+   "quotes": [
+    {
+     "id": 15110,
+     "text": "В Мичуринском округе Тамбовской области на одном из предприятий после атаки БПЛА начался пожар"
+    },
+    {
+     "id": 15110,
+     "text": "Ночью и утром 20 октября над регионом были сбиты четыре беспилотника."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина и «Общественное» со ссылкой на OSINT- и местные телеграм-каналы пишут, что под удар попала линейная производственно-диспетчерская станция «Никольское» под Мичуринском — крупный узел нефтепроводной инфраструктуры, где, по словам очевидцев, загорелся резервуар с дизелем. РБК-Украина отмечает, что изначально было неясно, применялись дроны или ракеты, поскольку официальные источники объект не называли; «Общественное» добавляет, что губернатор подтвердил атаку и пожар, не назвав предприятие, и что станция является ключевым узлом нефтепровода «Дружба».",
+   "quotes": [
+    {
+     "id": 14844,
+     "text": "зазнала атаки в ніч проти 20 жовтня"
+    },
+    {
+     "id": 14065,
+     "text": "там загорівся резервуар із дизелем"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "The Kyiv Independent, The Moscow Times и DW передают слова губернатора о пожаре на неназванном предприятии без пострадавших и со ссылкой на OSINT-анализ издания ASTRA связывают пожар со станцией «Никольское» компании «Транснефть» — узлом нефтепровода «Дружба». The Kyiv Independent подчеркивает, что украинские власти атаку не подтверждали, а само издание пожар на станции независимо проверить не смогло. The Moscow Times ставит удар в контекст объявленной Трампом сделки с Кремлем об увеличении экспорта российского дизеля.",
+   "quotes": [
+    {
+     "id": 14571,
+     "text": "Ukrainian authorities did not yet confirm an attack."
+    },
+    {
+     "id": 15301,
+     "text": "a key transit node along the Druzhba oil pipeline"
+    },
+    {
+     "id": 14696,
+     "text": "Какое именно предприятие пострадало, он не уточняет."
+    }
+   ]
+  },
+  "diverge": "Российский источник передает только слова губернатора о пожаре на неназванном предприятии и о сбитых беспилотниках. Украинские и независимые издания со ссылкой на OSINT-каналы называют объект — станцию «Никольское» нефтепровода «Дружба»; официально это не подтверждено ни российскими, ни украинскими властями. Независимые издания прямо оговаривают, что не могут проверить сведения о пожаре на станции.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Объект удара установлен только по видео очевидцев и OSINT-анализу; официального подтверждения нет.",
+  "uk": {
+   "t": "Атака дронів на Тамбовську область: губернатор повідомив про пожежу на підприємстві, OSINT-канали називають станцію «Нікольське» нафтопроводу «Дружба»",
+   "p": "Мічурінський округ, Тамбовська область",
+   "d": "Російське джерело передає лише слова губернатора про пожежу на неназваному підприємстві та про збиті безпілотники. Українські та незалежні видання з посиланням на OSINT-канали називають об’єкт — станцію «Нікольське» нафтопроводу «Дружба»; офіційно це не підтверджено ні російською, ні українською владою. Незалежні видання прямо застерігають, що не можуть перевірити відомості про пожежу на станції.",
+   "ru": "«Интерфакс» із посиланням на губернатора Тамбовської області Євгена Первишова повідомляє, що в Мічурінському окрузі після атаки безпілотників почалася пожежа на одному з підприємств; постраждалих немає, до гасіння залучено всі необхідні сили. Уночі та вранці над регіоном, за даними влади, збито чотири безпілотники. Яке підприємство постраждало, у повідомленні не уточнюється.",
+   "ua": "РБК-Україна і «Суспільне» з посиланням на OSINT- та місцеві телеграм-канали пишуть, що під удар потрапила лінійна виробничо-диспетчерська станція «Нікольське» під Мічурінськом — великий вузол нафтопровідної інфраструктури, де, за словами очевидців, загорівся резервуар із дизелем. РБК-Україна зазначає, що спочатку було неясно, застосовували дрони чи ракети, оскільки офіційні джерела об’єкт не називали; «Суспільне» додає, що губернатор підтвердив атаку і пожежу, не назвавши підприємство, і що станція є ключовим вузлом нафтопроводу «Дружба».",
+   "ind": "The Kyiv Independent, The Moscow Times і DW передають слова губернатора про пожежу на неназваному підприємстві без постраждалих і з посиланням на OSINT-аналіз видання ASTRA пов’язують пожежу зі станцією «Нікольське» компанії «Транснафта» — вузлом нафтопроводу «Дружба». The Kyiv Independent наголошує, що українська влада атаку не підтверджувала, а саме видання пожежу на станції незалежно перевірити не змогло. The Moscow Times ставить удар у контекст оголошеної Трампом угоди з Кремлем про збільшення експорту російського дизеля."
+  },
+  "en": {
+   "t": "Drone attack on Tambov region: governor reports a fire at an enterprise, OSINT channels name the Nikolskoye station of the Druzhba oil pipeline",
+   "p": "Michurinsk district, Tambov region",
+   "d": "The Russian source relays only the governor's words about a fire at an unnamed enterprise and the drones shot down. Ukrainian and independent outlets, citing OSINT channels, name the facility as the Nikolskoye station of the Druzhba oil pipeline; this has not been officially confirmed by either Russian or Ukrainian authorities. Independent outlets explicitly say they cannot verify the reports of a fire at the station.",
+   "ru": "Interfax, citing Tambov regional governor Yevgeny Pervyshov, reports that a fire broke out at one of the enterprises in Michurinsk district after a drone attack; there were no casualties and all necessary forces were deployed to put it out. According to the authorities, four drones were shot down over the region overnight and in the morning. Which enterprise was hit is not specified.",
+   "ua": "RBC-Ukraine and Suspilne, citing OSINT and local Telegram channels, write that the Nikolskoye linear production and dispatch station near Michurinsk, a large node of oil pipeline infrastructure, was hit and that, according to eyewitnesses, a diesel tank caught fire. RBC-Ukraine notes that it was initially unclear whether drones or missiles were used, as official sources did not name the facility; Suspilne adds that the governor confirmed the attack and the fire without naming the enterprise, and that the station is a key node of the Druzhba pipeline.",
+   "ind": "The Kyiv Independent, The Moscow Times and DW relay the governor's words about a fire at an unnamed enterprise with no casualties and, citing an OSINT analysis by the outlet ASTRA, link the fire to Transneft's Nikolskoye station, a node of the Druzhba oil pipeline. The Kyiv Independent stresses that Ukrainian authorities had not confirmed an attack and that it could not independently verify a fire at the station. The Moscow Times places the strike in the context of the deal Trump announced with the Kremlin to increase Russian diesel exports."
+  }
+ },
+ {
+  "key": "1020-trump-ukraine-must-want-deal",
+  "ids": [
+   15133,
+   15168,
+   14105,
+   14940,
+   14706,
+   14772,
+   13508,
+   13509,
+   13510,
+   13511,
+   13512,
+   13513,
+   13514,
+   13526,
+   13531,
+   13532,
+   13741,
+   14056,
+   14419,
+   14501,
+   14712,
+   15171,
+   13757
+  ],
+  "title": "Трамп: Украина должна хотеть заключить сделку, иначе станет хуже; NYT пишет о его решимости навязать Зеленскому соглашение",
+  "place": "Вашингтон",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки",
+   "умолчание"
+  ],
+  "ru": {
+   "summary": "«Интерфакс» пересказывает The New York Times: Трамп настроен давить на Киев ради соглашения и говорил Зеленскому, что продолжать оборону еще не подконтрольных России территорий Донбасса «того не стоит»; это послание Уиткофф и Кушнер должны были передать Зеленскому в Осло. Вечером агентство привело слова самого Трампа журналистам: Украина должна хотеть заключить соглашение, США и Европа потратили на нее целое состояние, Европа от нее устала, а без сделки ситуация станет хуже; Россия, по его словам, располагает большими ресурсами, а Вашингтон много дал Киеву и ничего не получил взамен. РИА Новости добавляет его слова, что Зеленский мог заключить гораздо более выгодную сделку два года назад, а встреча Путина и Зеленского для урегулирования не обязательна.",
+   "quotes": [
+    {
+     "id": 15133,
+     "text": "Трамп говорил Зеленскому, что продолжение обороны территорий в Донбассе, которые еще не находятся под контролем России"
+    },
+    {
+     "id": 15168,
+     "text": "Украина должна хотеть заключить соглашение."
+    },
+    {
+     "id": 15168,
+     "text": "И Европа устала от нее."
+    },
+    {
+     "id": 13511,
+     "text": "Вероятно, он мог заключить гораздо более выгодную сделку, чем та, которую, возможно, может заключить сейчас"
+    },
+    {
+     "id": 13513,
+     "text": "Им не обязательно быть в одной комнате."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "«Общественное» и РБК-Украина приводят слова Трампа в Белом доме после встречи Зеленского с Уиткоффом: Россия — «большая машина», которая продвигается вперед и захватывает все больше земли, у Украины ограниченные людские ресурсы, поэтому пора заключать сделку, а иначе, по его мнению, последствия будут очень плохими. РБК-Украина подчеркивает, что США «продолжают склонять» Украину к соглашению с Россией, и приводит слова Трампа о том, что взамен колоссальной помощи США не получили ничего, кроме высоких цен на дизельное топливо. «Украинская правда» выносит в заголовок слова Трампа, что Путину и Зеленскому не обязательно быть в одной комнате для соглашения.",
+   "quotes": [
+    {
+     "id": 14105,
+     "text": "Росія — велика машина, яка сунеться уперед."
+    },
+    {
+     "id": 14105,
+     "text": "В України обмежені людські ресурси. Час укладати угоду"
+    },
+    {
+     "id": 14940,
+     "text": "Натомість ми не отримали нічого, окрім високих цін на дизельне пальне"
+    },
+    {
+     "id": 14419,
+     "text": "Україна має сама прагнути укласти угоду"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW выносит в заголовок вывод The New York Times о том, что Трамп хочет навязать Зеленскому мир на условиях России: по оценке газеты, пренебрежительное отношение Трампа к Зеленскому и его желание верить Путину не новость, новой является усилившаяся решимость навязать Зеленскому сделку. Издание описывает это как фон переговоров Зеленского с Уиткоффом и Кушнером в Осло. DW (на русском) передает те же слова Трампа о необязательности встречи Путина и Зеленского и его слова об «огромной» ненависти между ними.",
+   "quotes": [
+    {
+     "id": 14706,
+     "text": "новой является усилившаяся решимость Трампа навязать Зеленскому сделку"
+    },
+    {
+     "id": 14712,
+     "text": "Им трудно находиться в одной комнате."
+    }
+   ]
+  },
+  "diverge": "Заявления Трампа все три группы передают со ссылкой на его слова и на The New York Times. «Интерфакс» описывает публикацию NYT как готовность Трампа «надавить на Киев» и опускает его слова о высоких ценах на дизель; украинские источники выносят на первый план образ России как «большой машины» и слова об ограниченных людских ресурсах Украины. Независимый источник (DW) прямо называет предлагаемую сделку миром на условиях России.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Сведения о том, что именно Трамп говорил Зеленскому, известны из публикации NYT со ссылкой на неназванные источники.",
+  "uk": {
+   "t": "Трамп: Україна має хотіти укласти угоду, інакше стане гірше; NYT пише про його рішучість нав’язати Зеленському угоду",
+   "p": "Вашингтон",
+   "d": "Заяви Трампа всі три групи передають із посиланням на його слова та на The New York Times. «Интерфакс» описує публікацію NYT як готовність Трампа «натиснути на Київ» і опускає його слова про високі ціни на дизель; українські джерела висувають на перший план образ Росії як «великої машини» і слова про обмежені людські ресурси України. Незалежне джерело (DW) прямо називає пропоновану угоду миром на умовах Росії.",
+   "ru": "«Интерфакс» переказує The New York Times: Трамп налаштований тиснути на Київ заради угоди і казав Зеленському, що продовжувати оборону ще не підконтрольних Росії територій Донбасу «не варто»; це послання Віткофф і Кушнер мали передати Зеленському в Осло. Увечері агентство навело слова самого Трампа журналістам: Україна має хотіти укласти угоду, США і Європа витратили на неї цілий статок, Європа від неї втомилася, а без угоди ситуація погіршиться; Росія, за його словами, має більші ресурси, а Вашингтон багато дав Києву і нічого не отримав навзамін. РИА Новости додає його слова, що Зеленський міг укласти значно вигіднішу угоду два роки тому, а зустріч Путіна і Зеленського для врегулювання не обов’язкова.",
+   "ua": "«Суспільне» і РБК-Україна наводять слова Трампа в Білому домі після зустрічі Зеленського з Віткоффом: Росія — «велика машина», яка просувається вперед і захоплює дедалі більше землі, в України обмежені людські ресурси, тому час укладати угоду, а інакше, на його думку, наслідки будуть дуже поганими. РБК-Україна наголошує, що США «продовжують схиляти» Україну до угоди з Росією, і наводить слова Трампа про те, що навзамін колосальної допомоги США не отримали нічого, крім високих цін на дизельне пальне. «Українська правда» виносить у заголовок слова Трампа, що Путіну і Зеленському не обов’язково бути в одній кімнаті для угоди.",
+   "ind": "DW виносить у заголовок висновок The New York Times про те, що Трамп хоче нав’язати Зеленському мир на умовах Росії: за оцінкою газети, зневажливе ставлення Трампа до Зеленського і його бажання вірити Путіну не новина, новою є посилена рішучість нав’язати Зеленському угоду. Видання описує це як тло переговорів Зеленського з Віткоффом і Кушнером в Осло. DW (російською) передає ті самі слова Трампа про необов’язковість зустрічі Путіна і Зеленського та його слова про «величезну» ненависть між ними."
+  },
+  "en": {
+   "t": "Trump: Ukraine must want to make a deal or things will get worse; NYT writes of his determination to force a deal on Zelensky",
+   "p": "Washington",
+   "d": "All three groups relay Trump's statements citing his words and The New York Times. Interfax describes the NYT report as Trump's readiness to \"pressure Kyiv\" and omits his remark about high diesel prices; Ukrainian sources foreground the image of Russia as a \"big machine\" and the words about Ukraine's limited manpower. The independent source (DW) explicitly calls the proposed deal a peace on Russia's terms.",
+   "ru": "Interfax retells The New York Times: Trump is set on pressuring Kyiv for a deal and told Zelensky that continuing to defend the parts of Donbas not yet under Russian control \"is not worth it\"; Witkoff and Kushner were to deliver this message to Zelensky in Oslo. In the evening the agency quoted Trump himself telling reporters that Ukraine should want to make a deal, the US and Europe have spent a fortune on it, Europe is tired of it, and without a deal things will get worse; Russia, he said, has greater resources, and Washington has given Kyiv a lot and got nothing in return. RIA Novosti adds his words that Zelensky could have made a much better deal two years ago and that a Putin-Zelensky meeting is not necessary for a settlement.",
+   "ua": "Suspilne and RBC-Ukraine quote Trump at the White House after Zelensky's meeting with Witkoff: Russia is a \"big machine\" that keeps moving forward and seizing more and more land, Ukraine has limited manpower, so it is time to make a deal, and otherwise, in his view, the consequences will be very bad. RBC-Ukraine stresses that the US \"continues to push\" Ukraine towards a deal with Russia and quotes Trump saying that in return for colossal aid the US got nothing but high diesel prices. Ukrainska Pravda headlines Trump's words that Putin and Zelensky need not be in the same room for a deal.",
+   "ind": "DW headlines The New York Times' conclusion that Trump wants to force on Zelensky a peace on Russia's terms: in the paper's assessment, Trump's dismissive attitude to Zelensky and his wish to believe Putin are not news, but his increased determination to force a deal on Zelensky is. The outlet describes this as the backdrop to Zelensky's talks with Witkoff and Kushner in Oslo. DW (in Russian) relays the same words of Trump that a Putin-Zelensky meeting is not necessary and his words about the \"huge\" hatred between them."
+  }
+ },
+ {
+  "key": "1020-hungary-blocks-eu-clusters",
+  "ids": [
+   14100,
+   14576
+  ],
+  "title": "Венгрия заблокировала открытие двух последних переговорных кластеров о вступлении Украины и Молдовы в ЕС",
+  "place": "Брюссель",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает",
+   "умолчание"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "«Общественное» со ссылкой на анонимного чиновника ЕС сообщает, что Венгрия заблокировала открытие двух последних кластеров переговоров о вступлении Украины в ЕС — 4-го и 5-го, о «зеленой повестке» и о сельском хозяйстве: «одна страна-член» не дала зеленый свет на отправку писем с приглашением представить переговорную позицию. По данным издания, Польша хочет изменить общую позицию ЕС по 5-му кластеру о сельском хозяйстве.",
+   "quotes": [
+    {
+     "id": 14100,
+     "text": "Одна країна-член не змогла дати зелене світло на відправку звичних листів"
+    },
+    {
+     "id": 14100,
+     "text": "Польща хоче внести зміни до спільної переговорної позиції ЄС щодо кластера 5 про сільське господарство"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "The Kyiv Independent со ссылкой на трех дипломатов пишет, что Венгрия на встрече экспертов 27 стран ЕС заблокировала следующий шаг в процессе вступления Молдовы и Украины, хотя их прежние требования выполнены, и не объяснила свою позицию. Блокировка, по оценке издания, ожидается временной: венгерское правительство не хочет выглядеть в глазах оппозиции «мягким» по отношению к Украине; права венгерского меньшинства на образование причиной быть не могут, поскольку Киев уже принял закон об этом.",
+   "quotes": [
+    {
+     "id": 14576,
+     "text": "Hungary blocked the next step in the EU membership process for Moldova and Ukraine, even though their previous demands had been met"
+    },
+    {
+     "id": 14576,
+     "text": "the block is expected to be temporary"
+    }
+   ]
+  },
+  "diverge": "Российские источники в подборке о блокировке не сообщают. Украинский источник ссылается на анонимного чиновника ЕС и упоминает также позицию Польши по сельскохозяйственному кластеру; независимое издание пишет о Молдове, об отсутствии объяснений со стороны Будапешта и о внутриполитическом мотиве венгерского правительства.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Угорщина заблокувала відкриття двох останніх переговорних кластерів щодо вступу України та Молдови до ЄС",
+   "p": "Брюссель",
+   "d": "Російські джерела в добірці про блокування не повідомляють. Українське джерело посилається на анонімного посадовця ЄС і згадує також позицію Польщі щодо сільськогосподарського кластера; незалежне видання пише про Молдову, про відсутність пояснень з боку Будапешта і про внутрішньополітичний мотив угорського уряду.",
+   "ru": null,
+   "ua": "«Суспільне» з посиланням на анонімного посадовця ЄС повідомляє, що Угорщина заблокувала відкриття двох останніх кластерів переговорів про вступ України до ЄС — 4-го і 5-го, про «зелений порядок денний» і про сільське господарство: «одна країна-член» не дала зеленого світла на відправлення листів із запрошенням представити переговорну позицію. За даними видання, Польща хоче змінити спільну позицію ЄС щодо 5-го кластера про сільське господарство.",
+   "ind": "The Kyiv Independent з посиланням на трьох дипломатів пише, що Угорщина на зустрічі експертів 27 країн ЄС заблокувала наступний крок у процесі вступу Молдови та України, хоча їхні попередні вимоги виконано, і не пояснила своєї позиції. Блокування, за оцінкою видання, очікується тимчасовим: угорський уряд не хоче виглядати в очах опозиції «м’яким» щодо України; права угорської меншини на освіту причиною бути не можуть, оскільки Київ уже ухвалив закон про це."
+  },
+  "en": {
+   "t": "Hungary blocks the opening of the last two negotiating clusters on Ukraine's and Moldova's EU accession",
+   "p": "Brussels",
+   "d": "Russian sources in the selection do not report the block. The Ukrainian source cites an anonymous EU official and also mentions Poland's position on the agriculture cluster; the independent outlet writes about Moldova, the lack of any explanation from Budapest and the Hungarian government's domestic political motive.",
+   "ru": null,
+   "ua": "Suspilne, citing an anonymous EU official, reports that Hungary has blocked the opening of the last two clusters of Ukraine's EU accession talks, the 4th and 5th, on the \"green agenda\" and on agriculture: \"one member state\" did not give the green light to sending letters inviting the candidate to present its negotiating position. According to the outlet, Poland wants to change the EU's common position on the 5th cluster on agriculture.",
+   "ind": "The Kyiv Independent, citing three diplomats, writes that Hungary blocked the next step in the accession process of Moldova and Ukraine at a meeting of experts from the 27 EU countries, even though their previous demands had been met, and did not explain its position. The block is expected to be temporary, the outlet says: the Hungarian government does not want to look \"soft\" on Ukraine in the eyes of the opposition; education rights for the Hungarian minority cannot be the reason, as Kyiv has already passed a law on them."
+  }
+ },
+ {
+  "key": "1020-chabany-highway-drone-strike",
+  "ids": [
+   14383,
+   14854,
+   14695,
+   14055,
+   14387,
+   14572,
+   14860
+  ],
+  "title": "Удар дрона по трассе Киев — Одесса в Чабанах: трое погибших, четверо раненых",
+  "place": "Чабаны, Киевская область",
+  "region": "kyiv",
+  "tags": [
+   "одна из групп не освещает",
+   "умолчание"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "«Украинская правда» и РБК-Украина со ссылкой на главу Киевской ОВА Тимура Ткаченко и областную прокуратуру сообщают об ударе российского дрона утром 20 октября по автодороге Киев — Одесса в Фастовском районе: в поселке Чабаны, возле торгового центра, горели автомобили, трое человек погибли, еще четверо ранены, движение ограничено. Ткаченко назвал это очередным ударом по мирным людям, которые просто ехали на работу.",
+   "quotes": [
+    {
+     "id": 14383,
+     "text": "ще четверо дістали поранення внаслідок російського удару безпілотником"
+    },
+    {
+     "id": 14854,
+     "text": "Черговий удар ворога по мирних людях, які просто їхали на роботу"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW в обзоре ночной и утренней атаки пишет со ссылкой на Киевскую областную прокуратуру, что трое человек погибли при атаке беспилотника на поселок Чабаны у трассы Киев — Одесса, еще четверо ранены. Кроме того, в Обуховском районе той же области при ударе по производственно-складскому зданию погибли мужчина и две женщины, шестеро ранены.",
+   "quotes": [
+    {
+     "id": 14695,
+     "text": "еще три человека погибли в результате атаки вражеского беспилотника на поселок Чабаны"
+    },
+    {
+     "id": 14695,
+     "text": "погибли мужчина и две женщины, еще шесть человек были ранены"
+    }
+   ]
+  },
+  "diverge": "Российские источники в подборке удар по Чабанам не упоминают. Украинские и независимые издания совпадают в данных о погибших и раненых; DW добавляет сведения о других погибших в Обуховском районе в ту же ночь.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "",
+  "uk": {
+   "t": "Удар дрона по трасі Київ — Одеса в Чабанах: троє загиблих, четверо поранених",
+   "p": "Чабани, Київська область",
+   "d": "Російські джерела в добірці удар по Чабанах не згадують. Українські та незалежні видання збігаються в даних про загиблих і поранених; DW додає відомості про інших загиблих в Обухівському районі тієї ж ночі.",
+   "ru": null,
+   "ua": "«Українська правда» і РБК-Україна з посиланням на голову Київської ОВА Тимура Ткаченка та обласну прокуратуру повідомляють про удар російського дрона вранці 20 жовтня по автодорозі Київ — Одеса у Фастівському районі: у селищі Чабани, біля торговельного центру, горіли автомобілі, троє людей загинули, ще четверо поранені, рух обмежено. Ткаченко назвав це черговим ударом по мирних людях, які просто їхали на роботу.",
+   "ind": "DW в огляді нічної та ранкової атаки пише з посиланням на Київську обласну прокуратуру, що троє людей загинули під час атаки безпілотника на селище Чабани біля траси Київ — Одеса, ще четверо поранені. Крім того, в Обухівському районі тієї ж області під час удару по виробничо-складській будівлі загинули чоловік і дві жінки, шестеро поранені."
+  },
+  "en": {
+   "t": "Drone strike on the Kyiv–Odesa highway at Chabany: three killed, four injured",
+   "p": "Chabany, Kyiv region",
+   "d": "Russian sources in the selection do not mention the strike on Chabany. Ukrainian and independent outlets agree on the numbers of killed and injured; DW adds other deaths in Obukhiv district the same night.",
+   "ru": null,
+   "ua": "Ukrainska Pravda and RBC-Ukraine, citing Kyiv regional governor Tymur Tkachenko and the regional prosecutor's office, report a Russian drone strike on the morning of 20 October on the Kyiv–Odesa highway in Fastiv district: in the village of Chabany, near a shopping centre, cars were on fire, three people were killed and four more injured, and traffic was restricted. Tkachenko called it another strike on civilians who were simply driving to work.",
+   "ind": "DW, in its round-up of the overnight and morning attack, writes, citing the Kyiv regional prosecutor's office, that three people were killed when a drone attacked the village of Chabany near the Kyiv–Odesa highway and four more were injured. In addition, in Obukhiv district of the same region a man and two women were killed and six people injured when a production and warehouse building was hit."
+  }
+ },
+ {
+  "key": "1020-black-sea-ships-reni-nato",
+  "ids": [
+   15107,
+   13748,
+   13505,
+   15157,
+   14106,
+   14673,
+   14595,
+   14773,
+   14949
+  ],
+  "title": "Минобороны РФ заявило об ударах по судам в порту Рени и на пути в Одессу; НАТО усиливает присутствие в Черном море",
+  "place": "Рени — Одесса — Черное море",
+  "region": "odesa",
+  "tags": [
+   "расхождение: характер объектов",
+   "умолчание"
+  ],
+  "ru": {
+   "summary": "«Интерфакс» и ТАСС на английском со ссылкой на Минобороны России сообщают, что ночью беспилотниками поражены четыре морских судна с грузами военного и двойного назначения для ВСУ — три сухогруза в порту Рени, где поражены и объекты портовой инфраструктуры, и одно судно на пути в Одессу, — а также логистические объекты в Хмельницком и Ковеле. Днем РИА Новости и «Интерфакс» передали новое сообщение ведомства: на переходе морем поражен контейнеровоз, доставлявший в порт Одессы грузы для ВСУ.",
+   "quotes": [
+    {
+     "id": 15107,
+     "text": "В Одесской области в порту Рени поражены три морских судна типа \"сухогруз\""
+    },
+    {
+     "id": 13505,
+     "text": "поражено морское судно типа \"контейнеровоз\", доставлявшее в порт \"Одесса\" грузы, предназначенные для обеспечения ВСУ"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "«Общественное» со ссылкой на Reuters сообщает, что НАТО после заседания Североатлантического совета по безопасности в Черном море усилит присутствие в регионе и направит группы специалистов для криминалистического анализа взрывчатки с мест инцидентов; пресс-секретарь альянса Эллисон Харт говорит о дополнительных средствах наблюдения, разведки и экспертизы. Издание напоминает об атаке российских дронов на гражданское торговое судно с кукурузой в нейтральных водах, при которой погиб капитан. О заявленных Минобороны России ударах по судам в Рени материал не говорит.",
+   "quotes": [
+    {
+     "id": 14106,
+     "text": "країни-учасниці НАТО планують направити групи фахівців для проведення криміналістичного аналізу вибухових речовин"
+    },
+    {
+     "id": 14106,
+     "text": "два російські дрони атакували цивільне торговельне судно, яке перебувало у нейтральних водах і перевозило кукурудзу"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "The Guardian пишет, что НАТО направляет дополнительные силы в Черное море на фоне смертоносной эскалации российских атак на торговое судоходство: во вторник атакованы еще пять судов, о чем сообщили российские военные. Издание называет атакуемые суда вывозящими из украинских портов зерно и другие сельскохозяйственные грузы, пишет о растущем числе погибших моряков и о том, что лондонский страховой рынок отнес почти все Черное море к зоне высокого риска.",
+   "quotes": [
+    {
+     "id": 14673,
+     "text": "as five more vessels were attacked on Tuesday"
+    },
+    {
+     "id": 14673,
+     "text": "Russia’s targeting of vessels taking grain and other agricultural cargoes from Ukraine’s ports"
+    }
+   ]
+  },
+  "diverge": "Российские источники описывают пораженные суда как перевозившие военные грузы и грузы двойного назначения для ВСУ; The Guardian называет те же атаки ударами по торговому судоходству, вывозящему зерно, и пишет о гибели гражданских моряков. Украинский источник в подборке пишет о реакции НАТО и прошлых атаках на гражданские суда, но не о заявленных ударах в Рени. Характер грузов независимо не подтвержден.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Характер грузов на пораженных судах известен только из заявлений Минобороны России; независимого подтверждения нет.",
+  "uk": {
+   "t": "Міноборони РФ заявило про удари по суднах у порту Рені та на шляху до Одеси; НАТО посилює присутність у Чорному морі",
+   "p": "Рені — Одеса — Чорне море",
+   "d": "Російські джерела описують уражені судна як такі, що перевозили військові вантажі та вантажі подвійного призначення для ЗСУ; The Guardian називає ті самі атаки ударами по торговельному судноплавству, яке вивозить зерно, і пише про загибель цивільних моряків. Українське джерело в добірці пише про реакцію НАТО і минулі атаки на цивільні судна, але не про заявлені удари в Рені. Характер вантажів незалежно не підтверджено.",
+   "ru": "«Интерфакс» і ТАСС англійською з посиланням на Міноборони Росії повідомляють, що вночі безпілотниками уражено чотири морські судна з вантажами військового і подвійного призначення для ЗСУ — три суховантажі в порту Рені, де уражено й об’єкти портової інфраструктури, і одне судно на шляху до Одеси, — а також логістичні об’єкти в Хмельницькому і Ковелі. Удень РИА Новости і «Интерфакс» передали нове повідомлення відомства: на переході морем уражено контейнеровоз, який доставляв до порту Одеси вантажі для ЗСУ.",
+   "ua": "«Суспільне» з посиланням на Reuters повідомляє, що НАТО після засідання Північноатлантичної ради щодо безпеки в Чорному морі посилить присутність у регіоні і направить групи фахівців для криміналістичного аналізу вибухівки з місць інцидентів; речниця альянсу Еллісон Харт говорить про додаткові засоби спостереження, розвідки та експертизи. Видання нагадує про атаку російських дронів на цивільне торговельне судно з кукурудзою в нейтральних водах, під час якої загинув капітан. Про заявлені Міноборони Росії удари по суднах у Рені матеріал не говорить.",
+   "ind": "The Guardian пише, що НАТО направляє додаткові сили в Чорне море на тлі смертоносної ескалації російських атак на торговельне судноплавство: у вівторок атаковано ще п’ять суден, про що повідомили російські військові. Видання називає атаковані судна такими, що вивозять з українських портів зерно та інші сільськогосподарські вантажі, пише про зростання кількості загиблих моряків і про те, що лондонський страховий ринок відніс майже все Чорне море до зони високого ризику."
+  },
+  "en": {
+   "t": "Russian MoD claims strikes on ships in Reni port and en route to Odesa; NATO steps up its Black Sea presence",
+   "p": "Reni — Odesa — Black Sea",
+   "d": "Russian sources describe the ships hit as carrying military and dual-use cargo for the Ukrainian army; The Guardian calls the same attacks strikes on merchant shipping carrying grain and writes about civilian seafarers killed. The Ukrainian source in the selection covers NATO's response and earlier attacks on civilian ships but not the claimed strikes in Reni. The nature of the cargo has not been independently confirmed.",
+   "ru": "Interfax and TASS in English, citing the Russian Defence Ministry, report that overnight drones hit four ships carrying military and dual-use cargo for the Ukrainian army, three bulk carriers in the port of Reni, where port infrastructure was also hit, and one ship en route to Odesa, as well as logistics facilities in Khmelnytskyi and Kovel. In the afternoon RIA Novosti and Interfax relayed a new ministry statement: a container ship delivering cargo for the Ukrainian army to the port of Odesa was hit at sea.",
+   "ua": "Suspilne, citing Reuters, reports that after a meeting of the North Atlantic Council on Black Sea security NATO will step up its presence in the region and send teams of specialists for forensic analysis of explosives from incident sites; alliance spokeswoman Allison Hart speaks of additional surveillance, reconnaissance and forensic assets. The outlet recalls an attack by Russian drones on a civilian merchant ship carrying corn in neutral waters, in which the captain was killed. The report says nothing about the strikes on ships in Reni claimed by the Russian Defence Ministry.",
+   "ind": "The Guardian writes that NATO is sending additional assets to the Black Sea amid a deadly escalation of Russian attacks on merchant shipping: five more vessels were attacked on Tuesday, as reported by Russia's military. The outlet describes the targeted ships as taking grain and other agricultural cargo from Ukraine's ports, writes about the rising death toll among seafarers and notes that the London insurance market has designated almost the entire Black Sea a high-risk zone."
+  }
+ },
+ {
+  "key": "1020-zelensky-rubio-early-warning",
+  "ids": [
+   14859,
+   14386,
+   15136,
+   14570,
+   14492,
+   14674,
+   14593,
+   14500,
+   13507,
+   13528,
+   14063,
+   14103,
+   14400,
+   14938,
+   14941,
+   14935
+  ],
+  "title": "Зеленский и Рубио обсудили перехватчики, раннее предупреждение о баллистике и Starlink; Рубио отрицает отказ Украине, Зеленский — «теперь работает»",
+  "place": "Киев, Вашингтон, Осло",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: подтверждение",
+   "умолчание"
+  ],
+  "ru": {
+   "summary": "«Интерфакс» передает слова госсекретаря США Марко Рубио журналистам в Индии: Вашингтон не отклонял запросы Украины о поставках зенитных ракет, не вводил ограничений на работу Starlink и не прекращал снабжать Киев разведданными; утверждения украинской стороны об обратном он назвал инсинуациями. О словах Зеленского, что предупреждения снова поступают, российские агентства в выборке не сообщают. Вечером РИА Новости передало слова Зеленского в Осло: после разговора с Рубио связь Starlink, возможно, восстановится через 48 часов; позже — слова главы Пентагона Пита Хегсета, что США «ничего не отменяли» и не давали указаний по Starlink и Starshield.",
+   "quotes": [
+    {
+     "id": 15136,
+     "text": "Мы не принимали решений об отказе от запросов Украины"
+    },
+    {
+     "id": 15136,
+     "text": "Утверждения украинской стороны об обратном госсекретарь США назвал не соответствующими действительности инсинуациями."
+    },
+    {
+     "id": 13507,
+     "text": "И мы решили, что, возможно, через 48 часов у нас снова будет связь"
+    },
+    {
+     "id": 13528,
+     "text": "Мы ничего не отменяли."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина и «Украинская правда» передают пост Зеленского о «предметном» разговоре с Рубио: обсуждали перехватчики против баллистики, раннее предупреждение о российских баллистических атаках и ситуацию со Starlink/Starshield, которую нужно восстановить; Зеленский поблагодарил за готовность помочь, стороны договорились вскоре снова связаться. «Общественное» пишет, что в ближайшие 48 часов Зеленский может снова связаться с Рубио по Starlink; РБК-Украина — что Хегсет отрицает какие-либо ограничения: решения может принимать сама Starlink.",
+   "quotes": [
+    {
+     "id": 14859,
+     "text": "Друге раннє попередження про російські атаки балістикою, що є життєво важливим."
+    },
+    {
+     "id": 14386,
+     "text": "Зеленський та Рубіо домовились, що невдовзі знову сконтактують щодо цих питань."
+    },
+    {
+     "id": 14103,
+     "text": "протягом наступних 48 годин може сконтактувати з Марком Рубіо з цього питання"
+    },
+    {
+     "id": 14941,
+     "text": "Ми нічого не обмежували."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "The Kyiv Independent пишет, что Украина в последние дни сталкивалась со сбоями в системе раннего предупреждения, зависящей от разведданных США: американские чиновники объясняли их плохой погодой, Рубио — программным сбоем. Би-би-си приводит слова Рубио, назвавшего «скандальными» обвинения, что украинцы гибнут из-за удержания разведданных, и слова советника Сергея Бескрестнова: предупреждения то приходят, то нет. После переговоров в Осло Зеленский, по данным The Guardian, The Kyiv Independent и Би-би-си, сказал, что предупреждения о баллистических ракетах снова поступают и «теперь это работает».",
+   "quotes": [
+    {
+     "id": 14570,
+     "text": "American officials have attributed previous outages to \"bad weather conditions,\" while Rubio has cited a software malfunction."
+    },
+    {
+     "id": 14492,
+     "text": "US Secretary of State Marco Rubio earlier rejected as \"scandalous\" accusations that Ukrainians were dying because the US was withholding intelligence from Kyiv."
+    },
+    {
+     "id": 14492,
+     "text": "Sometimes we receive this information before the attack, another time we [do] not."
+    },
+    {
+     "id": 14674,
+     "text": "He said Ukraine was again receiving advance warnings of ballistic missile attacks, which were seemingly suspended last week by the White House."
+    },
+    {
+     "id": 14593,
+     "text": "Therefore, this morning began with positive signals from the American side"
+    }
+   ]
+  },
+  "diverge": "Российские источники передают опровержения Рубио и Хегсета (украинские утверждения — инсинуации) и слова Зеленского о возможном восстановлении Starlink, но не его слова о возобновлении предупреждений. Украинские издания передают темы разговора со слов Зеленского и отрицание Хегсета, но не приводят отрицание Рубио о разведданных. Независимые издания ставят рядом обе версии: Рубио отрицает удержание разведданных, а Зеленский после Осло говорит, что предупреждения снова поступают, что The Guardian трактует как возобновление передачи данных, по всей видимости приостановленной Белым домом.",
+  "figures": [],
+  "contradiction": true,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Был ли перерыв в передаче разведданных намеренным, не подтверждено: США отрицают, Киев говорит о пропущенных предупреждениях, американские чиновники ссылаются на погоду и программный сбой.",
+  "uk": {
+   "t": "Зеленський і Рубіо обговорили перехоплювачі, раннє попередження про балістику та Starlink; Рубіо заперечує відмову Україні, Зеленський — «тепер працює»",
+   "p": "Київ, Вашингтон, Осло",
+   "d": "Російські джерела передають спростування Рубіо та Гегсета (українські твердження — інсинуації) і слова Зеленського про можливе відновлення Starlink, але не його слова про відновлення попереджень. Українські видання передають теми розмови зі слів Зеленського та заперечення Гегсета, але не наводять заперечення Рубіо щодо розвідданих. Незалежні видання ставлять поруч обидві версії: Рубіо заперечує утримання розвідданих, а Зеленський після Осло каже, що попередження знову надходять, що The Guardian трактує як відновлення передачі даних, яку, вочевидь, призупинив Білий дім.",
+   "ru": "«Інтерфакс» передає слова держсекретаря США Марко Рубіо журналістам в Індії: Вашингтон не відхиляв запитів України про постачання зенітних ракет, не запроваджував обмежень на роботу Starlink і не припиняв постачати Києву розвіддані; твердження української сторони про протилежне він назвав інсинуаціями. Про слова Зеленського, що попередження знову надходять, російські агентства в добірці не повідомляють. Увечері РИА Новости передало слова Зеленського в Осло: після розмови з Рубіо зв’язок Starlink, можливо, відновиться за 48 годин; пізніше — слова голови Пентагону Піта Гегсета, що США «нічого не скасовували» і не давали вказівок щодо Starlink і Starshield.",
+   "ua": "РБК-Україна та «Українська правда» передають допис Зеленського про «предметну» розмову з Рубіо: обговорювали перехоплювачі проти балістики, раннє попередження про російські балістичні атаки та ситуацію зі Starlink/Starshield, яку треба відновити; Зеленський подякував за готовність допомогти, сторони домовилися невдовзі знову сконтактувати. «Суспільне» пише, що найближчих 48 годин Зеленський може знову сконтактувати з Рубіо щодо Starlink; РБК-Україна — що Гегсет заперечує будь-які обмеження: рішення може ухвалювати сама Starlink.",
+   "ind": "The Kyiv Independent пише, що Україна останніми днями стикалася зі збоями в системі раннього попередження, яка залежить від розвідданих США: американські посадовці пояснювали їх поганою погодою, Рубіо — програмним збоєм. Бі-бі-сі наводить слова Рубіо, який назвав «скандальними» звинувачення, що українці гинуть через утримання розвідданих, і слова радника Сергія Бескрестнова: попередження то надходять, то ні. Після переговорів в Осло Зеленський, за даними The Guardian, The Kyiv Independent і Бі-бі-сі, сказав, що попередження про балістичні ракети знову надходять і «тепер це працює»."
+  },
+  "en": {
+   "t": "Zelensky and Rubio discuss interceptors, early warning of ballistic missiles and Starlink; Rubio denies refusing Ukraine, Zelensky says \"now it works\"",
+   "p": "Kyiv, Washington, Oslo",
+   "d": "Russian sources relay the denials by Rubio and Hegseth (Ukrainian claims are insinuations) and Zelensky's words on a possible Starlink restoration, but not his words that warnings resumed. Ukrainian outlets relay the topics of the call from Zelensky's words and Hegseth's denial, but not Rubio's denial on intelligence. Independent outlets put both versions side by side: Rubio denies withholding intelligence, while Zelensky says after Oslo that warnings are coming in again, which The Guardian reads as a resumption of data sharing apparently suspended by the White House.",
+   "ru": "Interfax relays US Secretary of State Marco Rubio's words to reporters in India: Washington has not rejected Ukraine's requests for air defence missiles, has not restricted Starlink and has not stopped supplying Kyiv with intelligence; he called Ukrainian claims to the contrary insinuations. Russian agencies in the selection do not report Zelensky's words that warnings are coming in again. In the evening RIA Novosti relayed Zelensky's words in Oslo that after his talk with Rubio the Starlink connection might be restored within 48 hours, and later Pentagon chief Pete Hegseth's words that the US \"cancelled nothing\" and gave no instructions on Starlink and Starshield.",
+   "ua": "RBC-Ukraine and Ukrainska Pravda relay Zelensky's post on a \"substantive\" conversation with Rubio: they discussed interceptors against ballistic missiles, early warning of Russian ballistic attacks and the Starlink/Starshield situation, which needs to be restored; Zelensky thanked him for his readiness to help, and the two agreed to be in touch again soon. Suspilne writes that Zelensky may contact Rubio again about Starlink within the next 48 hours; RBC-Ukraine that Hegseth denies any restrictions, saying Starlink itself can make such decisions.",
+   "ind": "The Kyiv Independent writes that Ukraine has recently had disruptions to its early warning system, which relies on US intelligence: US officials blamed bad weather, Rubio a software malfunction. The BBC quotes Rubio calling \"scandalous\" the accusations that Ukrainians are dying because intelligence is withheld, and adviser Serhii Beskrestnov saying warnings sometimes come and sometimes do not. After the Oslo talks Zelensky, according to The Guardian, The Kyiv Independent and the BBC, said ballistic missile warnings are coming in again and \"now it works\"."
+  }
+ },
+ {
+  "key": "1020-kyiv-strazhesko-institute-drone",
+  "ids": [
+   14918,
+   14708,
+   14582,
+   14395,
+   14999
+  ],
+  "title": "Дрон попал в операционную Института кардиологии Стражеско в Киеве: ранен пациент; в городе 12 пострадавших",
+  "place": "Киев",
+  "region": "kyiv",
+  "tags": [
+   "одна из групп не освещает",
+   "расхождение: числа пострадавших"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "РБК-Украина со ссылкой на премьер-министра Сергея Корецкого сообщает, что российский удар 20 октября пришелся на операционную Института кардиологии имени Стражеско в Киеве — по словам Корецкого, по этой больнице бьют уже второй раз; погибших нет, один пациент ранен, ему оказана помощь.",
+   "quotes": [
+    {
+     "id": 14918,
+     "text": "Цього разу - по операційній Інституту Стражеска Національної академії медичних наук у Києві"
+    },
+    {
+     "id": 14918,
+     "text": "На щастя, обійшлося без загиблих. Один пацієнт дістав поранення"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW передает те же слова Корецкого и Кличко о попадании дрона в верхний этаж института и частично поврежденной крыше и приводит сводку ГСЧС об ударах по другим регионам в тот день. The Kyiv Independent пишет, что российские дроны несколько раз атаковали Киев днем 20 октября, повредив больницу в Соломенском районе и еще одно медучреждение в Голосеевском; число пострадавших росло по мере поступления данных — от двух у Кличко до пяти у КГВА и 12 по данным полиции и ГСЧС.",
+   "quotes": [
+    {
+     "id": 14708,
+     "text": "Это уже второй раз."
+    },
+    {
+     "id": 14708,
+     "text": "повреждена операционная Института кардиологии имени Николая Стражеско, один пациент получил ранение"
+    },
+    {
+     "id": 14582,
+     "text": "Ukraine's National Police later reported that a total of 12 people were injured in the city, according to the State Emergency Service (DSNS)."
+    }
+   ]
+  },
+  "diverge": "Удар по институту описывают только украинские и независимые издания, ссылаясь на премьер-министра Корецкого; российские источники в выборке его не упоминают. Украинский источник и DW говорят об одном раненом пациенте института, The Kyiv Independent приводит общее число пострадавших в городе, которое менялось в течение дня.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Сведения о попадании дал премьер-министр Украины, фото опубликованы; разные числа пострадавших относятся к разным масштабам — институт и весь город.",
+  "uk": {
+   "t": "Дрон влучив в операційну Інституту кардіології Стражеска в Києві: поранено пацієнта; у місті 12 постраждалих",
+   "p": "Київ",
+   "d": "Удар по інституту описують лише українські та незалежні видання, посилаючись на прем’єр-міністра Корецького; російські джерела в добірці його не згадують. Українське джерело і DW говорять про одного пораненого пацієнта інституту, The Kyiv Independent наводить загальну кількість постраждалих у місті, яка змінювалася протягом дня.",
+   "ru": null,
+   "ua": "РБК-Україна з посиланням на прем’єр-міністра Сергія Корецького повідомляє, що російський удар 20 жовтня припав на операційну Інституту кардіології імені Стражеска в Києві — за словами Корецького, по цій лікарні б’ють уже вдруге; загиблих немає, один пацієнт поранений, йому надано допомогу.",
+   "ind": "DW передає ті самі слова Корецького та Кличка про влучання дрона у верхній поверх інституту й частково пошкоджений дах і наводить зведення ДСНС про удари по інших регіонах того дня. The Kyiv Independent пише, що російські дрони кілька разів атакували Київ удень 20 жовтня, пошкодивши лікарню в Солом’янському районі та ще один медзаклад у Голосіївському; кількість постраждалих зростала в міру надходження даних — від двох у Кличка до п’яти в КМВА і 12 за даними поліції та ДСНС."
+  },
+  "en": {
+   "t": "Drone hits the operating theatre of the Strazhesko Institute of Cardiology in Kyiv: a patient injured; 12 injured across the city",
+   "p": "Kyiv",
+   "d": "Only Ukrainian and independent outlets describe the strike on the institute, citing Prime Minister Koretskyi; Russian sources in the selection do not mention it. The Ukrainian source and DW speak of one injured patient at the institute, while The Kyiv Independent gives the total number of injured in the city, which changed during the day.",
+   "ru": null,
+   "ua": "RBC-Ukraine, citing Prime Minister Serhii Koretskyi, reports that a Russian strike on 20 October hit the operating theatre of the Strazhesko Institute of Cardiology in Kyiv — according to Koretskyi, the hospital has been hit for the second time; no one was killed, one patient was injured and received help.",
+   "ind": "DW relays the same words of Koretskyi and Klitschko about a drone hitting the institute's upper floor and partly damaging the roof, and gives the State Emergency Service round-up of strikes on other regions that day. The Kyiv Independent writes that Russian drones attacked Kyiv several times during the day on 20 October, damaging a hospital in Solomianskyi district and another medical facility in Holosiivskyi; the number of injured rose as data came in — from two per Klitschko to five per the city military administration and 12 per the police and emergency service."
+  }
+ },
+ {
+  "key": "1020-rubio-india-russian-oil",
+  "ids": [
+   15113,
+   15135,
+   14704,
+   14768
+  ],
+  "title": "Визит Рубио в Индию: в МИД РФ надеются, что он не скажется на энергосотрудничестве; независимые СМИ — российская нефть остается рычагом давления США",
+  "place": "Мумбаи, Джамнагар",
+  "region": "ukraine-wide",
+  "tags": [
+   "одна из групп не освещает",
+   "расхождение: формулировки"
+  ],
+  "ru": {
+   "summary": "«Интерфакс» приводит слова замглавы МИД России Андрея Руденко: Москва не собирается комментировать визит госсекретаря США Марко Рубио в Индию, поскольку Индия проводит суверенную политику, и надеется, что он не повлияет на энергетическое сотрудничество двух стран. Позже агентство передало слова Рубио журналистам в Индии: США расстраивает отсутствие прогресса на переговорах по Украине, контакты нужны с обеими сторонами, а риск эскалации и распространения конфликта сохраняется.",
+   "quotes": [
+    {
+     "id": 15113,
+     "text": "Индия - независимая страна и проводит свою суверенную внешнюю политику, поэтому мы никоим образом не собираемся комментировать визит Рубио в Индию."
+    },
+    {
+     "id": 15135,
+     "text": "Нас расстраивает отсутствие прогресса на переговорах"
+    }
+   ]
+  },
+  "ua": null,
+  "ind": {
+   "summary": "DW пишет, что визит Рубио, начавшийся в Мумбаи и продолжающийся посещением нефтезавода Reliance в Джамнагаре, проходит на фоне затянувшихся торговых переговоров и неопределенности с возможными штрафными мерами США за закупки Индией российской нефти; Reliance активно закупает российскую нефть сорта Urals. Al Jazeera называет компанию центральной для усилий Вашингтона наказать покупателей российских энергоносителей и одновременно сдержать цены на топливо на фоне войны с Ираном.",
+   "quotes": [
+    {
+     "id": 14704,
+     "text": "Кроме того, предприятие активно закупает российскую нефть сорта Urals, играя тем самым значимую роль в энергетических отношениях Индии с Россией."
+    },
+    {
+     "id": 14768,
+     "text": "The conglomerate is central to Washington’s efforts to punish Russian energy buyers"
+    }
+   ]
+  },
+  "diverge": "Российский источник подает визит через заверения МИД, что Индия сама определяет политику, и через слова Рубио о разочаровании отсутствием прогресса по Украине. Независимые издания описывают визит как часть давления США на покупателей российской нефти и напоминают о возможных штрафных мерах. Украинские издания в выборке визит не освещают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Сообщения основаны на публичных заявлениях и общедоступных сведениях о визите; расхождение касается акцентов.",
+  "uk": {
+   "t": "Візит Рубіо до Індії: у МЗС РФ сподіваються, що він не вплине на енергоспівпрацю; незалежні ЗМІ — російська нафта залишається важелем тиску США",
+   "p": "Мумбаї, Джамнагар",
+   "d": "Російське джерело подає візит через запевнення МЗС, що Індія сама визначає політику, і через слова Рубіо про розчарування відсутністю прогресу щодо України. Незалежні видання описують візит як частину тиску США на покупців російської нафти й нагадують про можливі штрафні заходи. Українські видання в добірці візит не висвітлюють.",
+   "ru": "«Інтерфакс» наводить слова заступника голови МЗС Росії Андрія Руденка: Москва не збирається коментувати візит держсекретаря США Марко Рубіо до Індії, оскільки Індія проводить суверенну політику, і сподівається, що він не вплине на енергетичну співпрацю двох країн. Пізніше агентство передало слова Рубіо журналістам в Індії: США засмучує відсутність прогресу на переговорах щодо України, контакти потрібні з обома сторонами, а ризик ескалації та поширення конфлікту зберігається.",
+   "ua": null,
+   "ind": "DW пише, що візит Рубіо, який почався в Мумбаї й продовжується відвідуванням нафтопереробного заводу Reliance у Джамнагарі, відбувається на тлі затяжних торговельних переговорів і невизначеності з можливими штрафними заходами США за закупівлі Індією російської нафти; Reliance активно закуповує російську нафту сорту Urals. Al Jazeera називає компанію центральною для зусиль Вашингтона покарати покупців російських енергоносіїв і водночас стримати ціни на пальне на тлі війни з Іраном."
+  },
+  "en": {
+   "t": "Rubio's visit to India: Russia's Foreign Ministry hopes it will not affect energy cooperation; independent media say Russian oil remains a US lever of pressure",
+   "p": "Mumbai, Jamnagar",
+   "d": "The Russian source frames the visit through Foreign Ministry assurances that India sets its own policy and through Rubio's words of frustration at the lack of progress on Ukraine. Independent outlets describe the visit as part of US pressure on buyers of Russian oil and recall possible punitive measures. Ukrainian outlets in the selection do not cover the visit.",
+   "ru": "Interfax quotes Russian Deputy Foreign Minister Andrei Rudenko: Moscow does not intend to comment on US Secretary of State Marco Rubio's visit to India, since India pursues a sovereign policy, and hopes it will not affect the two countries' energy cooperation. Later the agency relayed Rubio's words to reporters in India: the US is frustrated by the lack of progress in talks on Ukraine, contacts with both sides are needed, and the risk of escalation and of the conflict spreading remains.",
+   "ua": null,
+   "ind": "DW writes that Rubio's visit, which began in Mumbai and continues with a visit to the Reliance refinery in Jamnagar, comes amid protracted trade talks and uncertainty over possible US punitive measures for India's purchases of Russian oil; Reliance actively buys Russian Urals crude. Al Jazeera calls the company central to Washington's efforts to punish buyers of Russian energy while also containing fuel prices amid the war on Iran."
+  }
+ },
+ {
+  "key": "1020-hur-sumy-operation-29-captured",
+  "ids": [
+   14408,
+   14585
+  ],
+  "title": "ГУР: в ходе семинедельной операции на Сумщине взяты в плен 29 российских военных, 108 убиты; данные не проверены",
+  "place": "Сумская область",
+  "region": "sumy",
+  "tags": [
+   "одна из групп не освещает",
+   "не проверено"
+  ],
+  "ru": null,
+  "ua": {
+   "summary": "«Украинская правда» передает заявление Департамента активных действий ГУР Минобороны Украины: подразделение GROUP 10 в ходе рейда на Сумщине взяло в плен 29 российских военных, еще 108 убиты и 157 ранены; всего поражено более 1100 целей. Операция длилась около семи недель в два этапа, в ней участвовали 40 спецназовцев, от российских войск очищено более 600 га леса.",
+   "quotes": [
+    {
+     "id": 14408,
+     "text": "Підрозділ GROUP 10 Департаменту активних дій ГУР МО взяв в полон 29 окупантів під час рейду на Сумщині."
+    },
+    {
+     "id": 14408,
+     "text": "Операція тривала близько 7 тижнів та проходила в два етапи."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "The Kyiv Independent пересказывает те же данные ГУР — 108 убитых, 29 пленных, более 1100 пораженных целей за семь недель — и добавляет, что ГУР не уточнило точное место и время операции, а само издание не смогло независимо проверить эти утверждения.",
+   "quotes": [
+    {
+     "id": 14585,
+     "text": "HUR did not specify the exact location of the operation or when it took place."
+    },
+    {
+     "id": 14585,
+     "text": "The Kyiv Independent could not independently verify these claims."
+    }
+   ]
+  },
+  "diverge": "Обе версии основаны на одном заявлении ГУР. Украинский источник передает его без оговорок, The Kyiv Independent подчеркивает, что место и время операции не названы, а данные не проверены. Российские источники в выборке об операции не сообщают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Единственный источник — заявление ГУР; место и сроки операции не названы, независимой проверки нет.",
+  "uk": {
+   "t": "ГУР: під час семитижневої операції на Сумщині взято в полон 29 російських військових, 108 убито; дані не перевірені",
+   "p": "Сумська область",
+   "d": "Обидві версії ґрунтуються на одній заяві ГУР. Українське джерело передає її без застережень, The Kyiv Independent наголошує, що місце й час операції не названо, а дані не перевірені. Російські джерела в добірці про операцію не повідомляють.",
+   "ru": null,
+   "ua": "«Українська правда» передає заяву Департаменту активних дій ГУР Міноборони України: підрозділ GROUP 10 під час рейду на Сумщині взяв у полон 29 російських військових, ще 108 убито і 157 поранено; загалом уражено понад 1100 цілей. Операція тривала близько семи тижнів у два етапи, у ній брали участь 40 спецпризначенців, від російських військ зачищено понад 600 га лісу.",
+   "ind": "The Kyiv Independent переказує ті самі дані ГУР — 108 убитих, 29 полонених, понад 1100 уражених цілей за сім тижнів — і додає, що ГУР не уточнило точне місце й час операції, а саме видання не змогло незалежно перевірити ці твердження."
+  },
+  "en": {
+   "t": "HUR: 29 Russian soldiers captured and 108 killed in a seven-week operation in Sumy region; claims unverified",
+   "p": "Sumy region",
+   "d": "Both versions rest on a single HUR statement. The Ukrainian source relays it without caveats, while The Kyiv Independent stresses that the place and time of the operation were not given and the figures are unverified. Russian sources in the selection do not report the operation.",
+   "ru": null,
+   "ua": "Ukrainska Pravda relays a statement by the Active Operations Department of Ukraine's military intelligence (HUR): the GROUP 10 unit captured 29 Russian soldiers during a raid in Sumy region, while 108 were killed and 157 wounded; in total more than 1100 targets were hit. The operation lasted about seven weeks in two stages, 40 special forces took part, and more than 600 hectares of forest were cleared of Russian troops.",
+   "ind": "The Kyiv Independent retells the same HUR figures, 108 killed, 29 captured and more than 1100 targets hit over seven weeks, and adds that HUR did not specify the exact place and time of the operation and that the outlet itself could not independently verify the claims."
+  }
+ },
+ {
+  "key": "1020-odesa-tcc-stones",
+  "ids": [
+   13530,
+   14449,
+   14994
+  ],
+  "title": "В Одессе группа людей забросала камнями здание ТЦК, куда доставили мужчину, разыскиваемого за уклонение от мобилизации; двое задержаны",
+  "place": "Одесса, Пересыпский район",
+  "region": "odesa",
+  "tags": [
+   "расхождение: формулировки",
+   "умолчание",
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": "РИА Новости со ссылкой на Telegram-канал украинского агентства УНИАН сообщает, что цыгане в Одессе забросали здание военкомата камнями из-за задержания их барона; на видео около десяти человек бросают камни в сторону здания, рядом стоит полицейская машина. Агентство вписывает эпизод в рассказ о нехватке личного состава ВСУ и «силовой мобилизации»: мужчины призывного возраста, по его словам, «всеми силами отбиваются от призыва».",
+   "quotes": [
+    {
+     "id": 13530,
+     "text": "Цыгане в Одессе забросали здание военкомата камнями из-за задержания их барона, передает украинское агентство УНИАН"
+    },
+    {
+     "id": 13530,
+     "text": "Киевский режим в последнее время столкнулся с нехваткой личного состава в ВСУ"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "«Украинская правда» и РБК-Украина со ссылкой на полицию Одесской области пишут, что в Пересыпский районный ТЦК доставили мужчину, который находился в розыске за уклонение от мобилизации; в его поддержку к ТЦК пришла группа людей и начала бросать камни во двор и здание. Двоих самых активных участников задержали, открыто уголовное производство о хулиганстве. РБК-Украина добавляет со ссылкой на ТЦК, что мужчину выявили 20 октября во время оповещения, он прошел военно-врачебную комиссию и мобилизован, а действия собравшихся в центре назвали провокацией.",
+   "quotes": [
+    {
+     "id": 14449,
+     "text": "На його підтримку до воріт районного територіального центру комплектування прибула група людей, які почали жбурляти каміння у двір та будівлю ТЦК"
+    },
+    {
+     "id": 14994,
+     "text": "Двох найактивніших учасників затримали та доставили до відділу поліції."
+    },
+    {
+     "id": 14994,
+     "text": "У ТЦК їхні дії назвали спробою провокації та перешкоджання роботі установи."
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Обе стороны описывают один эпизод, но по-разному. РИА Новости со ссылкой на УНИАН называет участников цыганами, а задержанного — их бароном и подает случай как пример протестов против принудительной мобилизации; украинские источники со ссылкой на полицию и ТЦК не упоминают ни национальность, ни «барона», говорят о разыскиваемом уклонисте, задержании двоих и деле о хулиганстве. Независимые источники в выборке об эпизоде не сообщают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Подробности о личности задержанного и участниках известны только из пересказов; независимой проверки нет.",
+  "uk": {
+   "t": "В Одесі група людей закидала камінням будівлю ТЦК, куди доставили чоловіка, якого розшукували за ухилення від мобілізації; двох затримано",
+   "p": "Одеса, Пересипський район",
+   "d": "Обидві сторони описують один епізод, але по-різному. РИА Новости з посиланням на УНІАН називає учасників ромами, а затриманого — їхнім бароном і подає випадок як приклад протестів проти примусової мобілізації; українські джерела з посиланням на поліцію і ТЦК не згадують ні національності, ні «барона», говорять про розшукуваного ухилянта, затримання двох і справу про хуліганство. Незалежні джерела в добірці про епізод не повідомляють.",
+   "ru": "РИА Новости з посиланням на Telegram-канал українського агентства УНІАН повідомляє, що роми в Одесі закидали будівлю військкомату камінням через затримання їхнього барона; на відео близько десяти людей кидають каміння в бік будівлі, поруч стоїть поліцейська машина. Агентство вписує епізод у розповідь про брак особового складу ЗСУ і «силову мобілізацію»: чоловіки призовного віку, за його словами, «всіма силами відбиваються від призову».",
+   "ua": "«Українська правда» і РБК-Україна з посиланням на поліцію Одеської області пишуть, що до Пересипського районного ТЦК доставили чоловіка, який перебував у розшуку за ухилення від мобілізації; на його підтримку до ТЦК прийшла група людей і почала кидати каміння у двір та будівлю. Двох найактивніших учасників затримали, відкрито кримінальне провадження про хуліганство. РБК-Україна додає з посиланням на ТЦК, що чоловіка виявили 20 жовтня під час оповіщення, він пройшов військово-лікарську комісію і мобілізований, а дії тих, хто зібрався, у центрі назвали провокацією.",
+   "ind": null
+  },
+  "en": {
+   "t": "In Odesa a group of people threw stones at a recruitment centre building where a man wanted for draft evasion had been brought; two detained",
+   "p": "Odesa, Peresypskyi district",
+   "d": "Both sides describe the same incident, but differently. RIA Novosti, citing UNIAN, calls the participants Roma and the detained man their \"baron\" and presents the case as an example of protests against forced mobilisation; Ukrainian sources, citing the police and the recruitment centre, mention neither ethnicity nor a \"baron\" and speak of a wanted draft evader, two detentions and a hooliganism case. Independent sources in the selection do not report the incident.",
+   "ru": "RIA Novosti, citing the Telegram channel of the Ukrainian agency UNIAN, reports that Roma in Odesa threw stones at a military enlistment office building over the detention of their \"baron\"; a video shows about ten people throwing stones towards the building, with a police car nearby. The agency places the episode in a story about the Ukrainian army's manpower shortage and \"forced mobilisation\": men of draft age, it says, \"fight off the draft with all their might\".",
+   "ua": "Ukrainska Pravda and RBC-Ukraine, citing the Odesa regional police, write that a man wanted for evading mobilisation was brought to the Peresypskyi district recruitment centre; a group of people came to the centre in his support and began throwing stones into the yard and at the building. The two most active participants were detained and a criminal case for hooliganism was opened. RBC-Ukraine adds, citing the recruitment centre, that the man was found on 20 October during a notification round, passed a military medical board and was mobilised, and the centre called the actions of those gathered a provocation.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1020-picierno-hunger-strike-oleshky",
+  "ids": [
+   14942,
+   14440,
+   15036,
+   14746,
+   13844,
+   15878,
+   16586
+  ],
+  "title": "Алешки: вице-председатель Европарламента Пичерно объявила голодовку; Арахамия обещает «хорошую новость», Россия обвиняет Киев в блокаде",
+  "place": "Алешки (Олешки), Херсонская область",
+  "region": "kherson",
+  "tags": [
+   "расхождение: кто виноват",
+   "умолчание"
+  ],
+  "ru": {
+   "summary": "ТАСС со ссылкой на посла по особым поручениям МИД Родиона Мирошника пишет о гуманитарном канале связи по Алешкам между уполномоченным по правам человека Яной Лантратовой и командой первой леди США Мелании Трамп: по его словам, канал поможет распространять «правдивую информацию» против западных обвинений в адрес России; при этом блокада должна быть снята, желающие — получить возможность уехать, а помощь — дойти до жителей. Позже РИА Новости приводит слова главы парламента Крыма Владимира Константинова: Крым готов принять жителей Алешек, их блокаду он называет «очередным военным преступлением киевского режима», а безопасно вывести людей, по его словам, мешают атаки ВСУ и дистанционное минирование дорог.",
+   "quotes": [
+    {
+     "id": 13844,
+     "text": "The blockade must be lifted. Those who wish to leave should be able to do so."
+    },
+    {
+     "id": 15878,
+     "text": "Блокаду Алешек оцениваю как очередное военное преступление киевского режима."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина и «Украинская правда» со ссылкой на пост в X пишут, что вице-председатель Европарламента Пина Пичерно объявила голодовку, чтобы привлечь внимание к гуманитарной катастрофе в оккупированных Олешках, и призвала требовать немедленного гуманитарного перемирия, допуска еды и лекарств и безопасной эвакуации желающих; акцией она поддерживает усилия Папы Льва XIV. Член украинской переговорной делегации Давид Арахамия сказал РБК-Украина, что ситуацию в Олешках обсуждали на переговорах с Уиткоффом в Осло и что на следующей неделе должна появиться хорошая новость; подробностей он не раскрыл. Омбудсмен Дмитрий Лубинец сказал РБК-Украина, что люди в Олешках «фактически умирают», а Украина «практически на финишной прямой» в вопросе эвакуации тысяч мирных жителей, в том числе детей; переговоры с Россией идут ежедневно.",
+   "quotes": [
+    {
+     "id": 14440,
+     "text": "Ця боротьба не може бути лише моєю."
+    },
+    {
+     "id": 15036,
+     "text": "Є дуже важка ситуація в Олешках."
+    },
+    {
+     "id": 16586,
+     "text": "люди фактично вмирають"
+    },
+    {
+     "id": 16586,
+     "text": "зараз ми практично на фінішній прямій"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "DW в интервью с Пичерно в Страсбурге приводит ее слова: люди, пытающиеся выбраться из города, гибнут от беспилотников или на минах, а оставшиеся голодают; заявлений мало, не хватило даже слов Папы, поэтому она прибегает к ненасильственному протесту.",
+   "quotes": [
+    {
+     "id": 14746,
+     "text": "Если они пытаются выйти, они погибают от беспилотников или на минах, а если остаются в городе - голодают"
+    },
+    {
+     "id": 14746,
+     "text": "Слов недостаточно. Не хватило даже слов папы римского."
+    }
+   ]
+  },
+  "diverge": "Украинские и независимые источники пишут о голодовке Пичерно и ставят в центр блокаду оккупированного города; российские источники в подборке голодовку не упоминают, говорят о канале связи с командой Мелании Трамп и о готовности Крыма принять жителей и возлагают ответственность за блокаду на Киев. Причины, по которым жители не могут выехать, описаны по-разному: Пичерно в интервью DW говорит о беспилотниках и минах, не называя сторону, Константинов — об атаках ВСУ и минировании дорог.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Обстоятельства блокады и обещанная Арахамией «хорошая новость» не раскрыты; независимых данных о положении в городе в подборке мало.",
+  "uk": {
+   "t": "Олешки: віцепрезидентка Європарламенту Пічерно оголосила голодування; Арахамія обіцяє «гарну новину», Росія звинувачує Київ у блокаді",
+   "p": "Олешки, Херсонська область",
+   "d": "Українські й незалежні джерела пишуть про голодування Пічерно і ставлять у центр блокаду окупованого міста; російські джерела в добірці голодування не згадують, говорять про канал зв’язку з командою Меланії Трамп і про готовність Криму прийняти мешканців та покладають відповідальність за блокаду на Київ. Причини, через які мешканці не можуть виїхати, описано по-різному: Пічерно в інтерв’ю DW говорить про безпілотники й міни, не називаючи сторону, Константинов — про атаки ЗСУ та мінування доріг.",
+   "ru": "ТАСС із посиланням на посла з особливих доручень МЗС Родіона Мірошника пише про гуманітарний канал зв’язку щодо Олешок між уповноваженою з прав людини Яною Лантратовою та командою першої леді США Меланії Трамп: за його словами, канал допоможе поширювати «правдиву інформацію» проти західних звинувачень на адресу Росії; водночас блокаду треба зняти, охочі мають отримати змогу виїхати, а допомога — дійти до мешканців. Пізніше РИА Новости наводить слова голови парламенту Криму Володимира Константинова: Крим готовий прийняти мешканців Олешок, їхню блокаду він називає «черговим воєнним злочином київського режиму», а безпечно вивезти людей, за його словами, заважають атаки ЗСУ та дистанційне мінування доріг.",
+   "ua": "РБК-Україна та «Українська правда» з посиланням на допис у X пишуть, що віцепрезидентка Європарламенту Піна Пічерно оголосила голодування, щоб привернути увагу до гуманітарної катастрофи в окупованих Олешках, і закликала вимагати негайного гуманітарного перемир’я, допуску їжі та ліків і безпечної евакуації охочих; акцією вона підтримує зусилля Папи Лева XIV. Член української переговорної делегації Давид Арахамія сказав РБК-Україна, що ситуацію в Олешках обговорювали на переговорах із Віткоффом в Осло і що наступного тижня має з’явитися гарна новина; подробиць він не розкрив. Омбудсман Дмитро Лубінець сказав РБК-Україна, що люди в Олешках «фактично вмирають», а Україна «практично на фінішній прямій» у питанні евакуації тисяч цивільних, зокрема дітей; перемовини з Росією тривають щодня.",
+   "ind": "DW в інтерв’ю з Пічерно у Страсбурзі наводить її слова: люди, які намагаються вибратися з міста, гинуть від безпілотників або на мінах, а ті, хто лишається, голодують; заяв замало, не вистачило навіть слів Папи, тому вона вдається до ненасильницького протесту."
+  },
+  "en": {
+   "t": "Oleshky: European Parliament Vice-President Picierno goes on hunger strike; Arakhamia promises \"good news\", Russia blames Kyiv for the blockade",
+   "p": "Oleshky, Kherson region",
+   "d": "Ukrainian and independent sources report Picierno's hunger strike and focus on the blockade of the occupied town; Russian sources in the selection do not mention the hunger strike, speak of a communication channel with Melania Trump's team and of Crimea's readiness to take in residents, and blame Kyiv for the blockade. The reasons residents cannot leave are described differently: Picierno, in her DW interview, speaks of drones and mines without naming a side, while Konstantinov speaks of Ukrainian attacks and the mining of roads.",
+   "ru": "TASS, citing Foreign Ministry ambassador-at-large Rodion Miroshnik, writes about a humanitarian communication channel on Oleshky between human rights commissioner Yana Lantratova and the team of US First Lady Melania Trump: in his words, the channel will help spread \"truthful information\" against Western accusations against Russia; at the same time the blockade must be lifted, those who wish to leave must be able to do so and aid must reach residents. Later RIA Novosti quotes the speaker of the Crimean parliament Vladimir Konstantinov: Crimea is ready to take in Oleshky residents, he calls their blockade \"another war crime of the Kyiv regime\", and says Ukrainian attacks and remote mining of roads prevent people from being evacuated safely.",
+   "ua": "RBC-Ukraine and Ukrainska Pravda, citing a post on X, write that European Parliament Vice-President Pina Picierno has gone on hunger strike to draw attention to the humanitarian catastrophe in occupied Oleshky and called for demanding an immediate humanitarian ceasefire, access for food and medicine and safe evacuation of those who wish to leave; with her action she supports the efforts of Pope Leo XIV. Davyd Arakhamia, a member of the Ukrainian negotiating delegation, told RBC-Ukraine that the situation in Oleshky was discussed at the talks with Witkoff in Oslo and that good news should come next week; he gave no details. Ombudsman Dmytro Lubinets told RBC-Ukraine that people in Oleshky are \"effectively dying\" and that Ukraine is \"practically on the home stretch\" in arranging the evacuation of thousands of civilians, including children; talks with Russia are held daily.",
+   "ind": "DW, interviewing Picierno in Strasbourg, quotes her: people who try to leave the town die from drones or on mines, and those who stay are starving; statements are not enough, even the Pope's words were not enough, so she is resorting to non-violent protest."
+  }
+ },
+ {
+  "key": "1020-vance-ukraine-not-nato",
+  "ids": [
+   13736,
+   15094,
+   14057,
+   14370,
+   14382,
+   14833,
+   14876
+  ],
+  "title": "Вэнс: Украина не должна быть в НАТО, формального союза с ней нет, удары по российской энергетике надо прекратить",
+  "place": "США",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: формулировки",
+   "умолчание",
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": "«Интерфакс» передает слова вице-президента США Джей Ди Вэнса в интервью порталу 2Way: у США нет официальных альянсов с Украиной, она не в НАТО и, по его мнению, не должна там быть; у Вашингтона и Киева «несколько разные интересы», Украина должна перестать бомбить российскую энергетику, поскольку это поднимает стоимость дизеля для американцев. ТАСС на английском пишет, что Вэнс не стал называть Украину союзником Вашингтона, и напоминает, что Трамп не раз резко критиковал Зеленского за удары по российским НПЗ, которые, по его словам, вредят мировому рынку дизеля, в том числе в США.",
+   "quotes": [
+    {
+     "id": 15094,
+     "text": "Я не думаю, что они должны быть в НАТО"
+    },
+    {
+     "id": 15094,
+     "text": "Я думаю, Украина должна перестать бомбить российскую энергетику"
+    },
+    {
+     "id": 13736,
+     "text": "Vance also stopped short of calling Ukraine an ally of Washington and said it should stop striking Russian oil refineries."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "«Украинская правда», «Общественное» и РБК-Украина приводят ту же цитату Вэнса из интервью 2WAY Tonight полнее: формального союзнического соглашения с Украиной нет, вступать в НАТО ей, по его мнению, не следует, но это «очень достойная восхищения, прекрасная страна» с множеством замечательных людей, и по ряду вопросов страны будут сотрудничать. «Украинская правда» добавляет, что Украина, по словам Вэнса, «в определенном смысле» партнер США, но интересы иногда расходятся — в частности, из-за ударов по российским дизельным объектам. «Общественное» напоминает о договоренности Трампа и Путина о поставках российского дизеля и временной лицензии Минфина США. В отдельном материале РБК-Украина пишет, что Украина не исключает другого формата безопасности вместо НАТО, но настаивает на юридически обязывающих гарантиях.",
+   "quotes": [
+    {
+     "id": 14057,
+     "text": "Я не думаю, що вона повинна вступати до НАТО. Я вважаю, що це країна, дуже гідна захоплення, прекрасна країна з безліччю чудових людей."
+    },
+    {
+     "id": 14382,
+     "text": "у певному сенсі вони, безперечно, є партнерами"
+    },
+    {
+     "id": 14876,
+     "text": "Україна не виключає іншого формату безпеки замість НАТО, однак наполягає на юридично зобов'язувальних гарантіях, які справді працюватимуть."
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Слова Вэнса о НАТО и ударах по энергетике обе группы передают одинаково. Российские агентства опускают его похвалу Украине как «прекрасной стране» и слова о продолжении сотрудничества и выносят на первый план требование прекратить удары и рост цен на дизель для американцев; украинские издания приводят цитату целиком и добавляют контекст сделки Трампа и Путина по дизелю и позицию Киева о гарантиях безопасности. Независимые источники в подборке интервью не освещают.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "low",
+  "uncertainty_reason": "Цитаты из интервью совпадают у обеих групп; спор только об акцентах.",
+  "uk": {
+   "t": "Венс: Україна не повинна бути в НАТО, формального союзу з нею немає, удари по російській енергетиці слід припинити",
+   "p": "США",
+   "d": "Слова Венса про НАТО та удари по енергетиці обидві групи передають однаково. Російські агентства опускають його похвалу Україні як «прекрасній країні» та слова про продовження співпраці й виносять на перший план вимогу припинити удари та зростання цін на дизель для американців; українські видання наводять цитату повністю й додають контекст угоди Трампа і Путіна щодо дизеля та позицію Києва щодо гарантій безпеки. Незалежні джерела в добірці інтерв’ю не висвітлюють.",
+   "ru": "«Інтерфакс» передає слова віцепрезидента США Джей Ді Венса в інтерв’ю порталу 2Way: у США немає офіційних альянсів з Україною, вона не в НАТО і, на його думку, не повинна там бути; у Вашингтона і Києва «дещо різні інтереси», Україна має припинити бомбити російську енергетику, бо це підвищує вартість дизеля для американців. ТАСС англійською пише, що Венс не став називати Україну союзником Вашингтона, і нагадує, що Трамп не раз різко критикував Зеленського за удари по російських НПЗ, які, за його словами, шкодять світовому ринку дизеля, зокрема в США.",
+   "ua": "«Українська правда», «Суспільне» і РБК-Україна наводять ту саму цитату Венса з інтерв’ю 2WAY Tonight повніше: формальної союзницької угоди з Україною немає, вступати до НАТО їй, на його думку, не слід, але це «дуже гідна захоплення, прекрасна країна» з безліччю чудових людей, і в низці питань країни співпрацюватимуть. «Українська правда» додає, що Україна, за словами Венса, «у певному сенсі» партнер США, але інтереси часом розходяться — зокрема через удари по російських дизельних об’єктах. «Суспільне» нагадує про домовленість Трампа і Путіна щодо постачання російського дизеля та тимчасову ліцензію Мінфіну США. В окремому матеріалі РБК-Україна пише, що Україна не виключає іншого формату безпеки замість НАТО, але наполягає на юридично зобов’язувальних гарантіях.",
+   "ind": null
+  },
+  "en": {
+   "t": "Vance: Ukraine should not be in NATO, there is no formal alliance with it, and strikes on Russian energy should stop",
+   "p": "US",
+   "d": "Both groups convey Vance's words on NATO and energy strikes the same way. Russian agencies omit his praise of Ukraine as a \"beautiful country\" and his words about continued cooperation, foregrounding the demand to stop the strikes and the rising diesel costs for Americans; Ukrainian outlets quote him in full and add the context of the Trump-Putin diesel deal and Kyiv's position on security guarantees. Independent sources in the selection do not cover the interview.",
+   "ru": "Interfax relays US Vice President JD Vance's words in an interview with the 2Way portal: the US has no official alliances with Ukraine, it is not in NATO and, in his view, should not be; Washington and Kyiv have \"somewhat different interests\", and Ukraine should stop bombing Russian energy because it raises the cost of diesel for Americans. TASS in English writes that Vance stopped short of calling Ukraine an ally of Washington and recalls that Trump has repeatedly criticised Zelensky over strikes on Russian refineries, which he says harm the global diesel market, including in the US.",
+   "ua": "Ukrainska Pravda, Suspilne and RBC-Ukraine give the same Vance quote from the 2WAY Tonight interview more fully: there is no formal alliance agreement with Ukraine and in his view it should not join NATO, but it is \"a very admirable, beautiful country\" with many wonderful people, and the two countries will cooperate on some issues. Ukrainska Pravda adds that, according to Vance, Ukraine is \"in a certain sense\" a US partner, but interests sometimes diverge, notably over strikes on Russian diesel facilities. Suspilne recalls the Trump-Putin arrangement on Russian diesel supplies and the US Treasury's temporary licence. In a separate piece RBC-Ukraine writes that Ukraine does not rule out a security format other than NATO but insists on legally binding guarantees.",
+   "ind": null
+  }
+ },
+ {
+  "key": "1020-front-claims-timoshevka",
+  "ids": [
+   13981,
+   13495,
+   15131,
+   15124,
+   14061,
+   14378,
+   14371,
+   14421,
+   14569,
+   13756
+  ],
+  "title": "Минобороны РФ заявило о взятии Тимошевки в Запорожской области; Генштаб ВСУ — 206 боестолкновений за сутки",
+  "place": "Запорожская область — линия фронта",
+  "region": "zaporizhzhia",
+  "tags": [
+   "расхождение: кто контролирует населённые пункты",
+   "не проверено",
+   "российская сторона заявляет, украинская не комментирует"
+  ],
+  "ru": {
+   "summary": "Минобороны России заявило, что подразделения группировки «Восток» «освободили» Тимошевку в Запорожской области. РИА Новости и «Интерфакс» со ссылкой на ведомство добавляют, что при этом под контроль взят крупный район обороны площадью около 6 квадратных километров, потери ВСУ составили до роты, 8 боевых бронированных машин, 11 автомобилей и 17 наземных роботизированных комплексов, а взятие села создало условия для продвижения на запад. В общей сводке «Интерфакс» передает, что российские группировки за сутки улучшили положение на ряде направлений, а потери ВСУ составили, в частности, до 215 военнослужащих на направлении «Южной» группировки, до 340 — «Центра», до 220 — «Запада» и до 235 — «Севера».",
+   "quotes": [
+    {
+     "id": 13981,
+     "text": "освободили населенный пункт Тимошевка Запорожской области"
+    },
+    {
+     "id": 13495,
+     "text": "Потери ВСУ составили до роты живой силы, 8 боевых бронированных машин, 11 автомобилей и 17 наземных роботизированных комплексов"
+    },
+    {
+     "id": 15131,
+     "text": "создало условия для дальнейшего продвижения подразделений группировки \"Восток\" в западном направлении"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "«Украинская правда» и «Общественное» со ссылкой на Генштаб ВСУ пишут о 206 боестолкновениях за 19 октября: больше всего атак отбито на Южно-Слобожанском (26) и Покровском (21) направлениях; потери России за сутки Генштаб оценивает в 1560 человек. Вечерняя сводка, по данным «Украинской правды», — 229 боестолкновений с начала 20 октября, больше всего на Константиновском (33) и Покровском (26) направлениях. Тимошевка в сводках не упоминается.",
+   "quotes": [
+    {
+     "id": 14378,
+     "text": "Протягом 19 жовтня на фронті зафіксували 206 бойових зіткнень."
+    },
+    {
+     "id": 14421,
+     "text": "Загалом від початку цієї доби відбулося 229 бойових зіткнень."
+    }
+   ]
+  },
+  "ind": {
+   "summary": "The Kyiv Independent передает данные Генштаба ВСУ о потерях России за сутки (1560 человек) и с начала вторжения, отмечая, что о собственных потерях Генштаб не сообщает, ссылаясь на оперативную секретность, а CSIS оценивает соотношение потерь примерно как 2,5:1 или 2:1 не в пользу России. Заявление Минобороны России о Тимошевке независимые издания в подборке не проверяли.",
+   "quotes": [
+    {
+     "id": 14569,
+     "text": "Ukraine's General Staff has not revealed its own losses during the full-scale invasion, citing operational secrecy."
+    }
+   ]
+  },
+  "diverge": "Российская сторона заявляет о взятии Тимошевки и называет потери ВСУ по каждому направлению; украинские сводки село не называют и приводят число боестолкновений и потери России. Обе стороны сообщают только о потерях противника. Независимой проверки заявлений ни одной из сторон нет.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Заявление о взятии села исходит только от Минобороны России, украинская сторона его не комментирует, независимых данных нет.",
+  "uk": {
+   "t": "Міноборони РФ заявило про взяття Тимошівки в Запорізькій області; Генштаб ЗСУ — 206 боєзіткнень за добу",
+   "p": "Запорізька область — лінія фронту",
+   "d": "Російська сторона заявляє про взяття Тимошівки й називає втрати ЗСУ за кожним напрямком; українські зведення село не називають і наводять кількість боєзіткнень і втрати Росії. Обидві сторони повідомляють лише про втрати супротивника. Незалежної перевірки заяв жодної зі сторін немає.",
+   "ru": "Міноборони Росії заявило, що підрозділи угруповання «Восток» «звільнили» Тимошівку в Запорізькій області. РИА Новости та «Інтерфакс» з посиланням на відомство додають, що при цьому під контроль узято великий район оборони площею близько 6 квадратних кілометрів, втрати ЗСУ становили до роти, 8 бойових броньованих машин, 11 автомобілів і 17 наземних роботизованих комплексів, а взяття села створило умови для просування на захід. У загальному зведенні «Інтерфакс» передає, що російські угруповання за добу поліпшили становище на низці напрямків, а втрати ЗСУ становили, зокрема, до 215 військових на напрямку «Південного» угруповання, до 340 — «Центру», до 220 — «Заходу» і до 235 — «Півночі».",
+   "ua": "«Українська правда» і «Суспільне» з посиланням на Генштаб ЗСУ пишуть про 206 боєзіткнень за 19 жовтня: найбільше атак відбито на Південно-Слобожанському (26) і Покровському (21) напрямках; втрати Росії за добу Генштаб оцінює в 1560 осіб. Вечірнє зведення, за даними «Української правди», — 229 боєзіткнень від початку 20 жовтня, найбільше на Костянтинівському (33) і Покровському (26) напрямках. Тимошівка у зведеннях не згадується.",
+   "ind": "The Kyiv Independent передає дані Генштабу ЗСУ про втрати Росії за добу (1560 осіб) і від початку вторгнення, зазначаючи, що про власні втрати Генштаб не повідомляє, посилаючись на оперативну таємницю, а CSIS оцінює співвідношення втрат приблизно як 2,5:1 або 2:1 не на користь Росії. Заяву Міноборони Росії про Тимошівку незалежні видання в добірці не перевіряли."
+  },
+  "en": {
+   "t": "Russian Defence Ministry claims capture of Tymoshivka in Zaporizhzhia region; Ukraine's General Staff reports 206 clashes in a day",
+   "p": "Zaporizhzhia region, front line",
+   "d": "The Russian side claims the capture of Tymoshivka and gives Ukrainian losses for each direction; Ukrainian reports do not name the village and give the number of clashes and Russian losses. Both sides report only the enemy's losses. There is no independent verification of either side's claims.",
+   "ru": "Russia's Defence Ministry said units of the Vostok group \"liberated\" Tymoshivka (Timoshevka) in Zaporizhzhia region. RIA Novosti and Interfax, citing the ministry, add that a large defensive area of about 6 square kilometres was taken, Ukrainian losses amounted to up to a company, 8 armoured combat vehicles, 11 vehicles and 17 unmanned ground systems, and that taking the village created conditions for an advance westwards. In the general summary Interfax reports that Russian groups improved their positions in several directions over the day, with Ukrainian losses of up to 215 servicemen in the Southern group's direction, up to 340 for Centre, up to 220 for West and up to 235 for North.",
+   "ua": "Ukrainska Pravda and Suspilne, citing Ukraine's General Staff, report 206 clashes on 19 October, with most attacks repelled in the South Slobozhanskyi (26) and Pokrovsk (21) directions; the General Staff puts Russian losses for the day at 1560 people. The evening report, according to Ukrainska Pravda, gave 229 clashes since the start of 20 October, most of them in the Kostiantynivka (33) and Pokrovsk (26) directions. Tymoshivka is not mentioned in the reports.",
+   "ind": "The Kyiv Independent relays the General Staff's figures on Russian losses for the day (1560 people) and since the start of the invasion, noting that the General Staff does not disclose Ukraine's own losses, citing operational secrecy, and that CSIS estimates the casualty ratio at roughly 2.5:1 or 2:1 against Russia. Independent outlets in the selection have not verified the Russian Defence Ministry's claim about Tymoshivka."
+  }
+ },
+ {
+  "key": "1020-night-drones-energy-logistics",
+  "ids": [
+   13974,
+   13478,
+   14847,
+   14376,
+   14059,
+   14848,
+   14377,
+   14864,
+   14889,
+   14067,
+   14573
+  ],
+  "title": "Ночная атака 165 дронов: Минобороны РФ — логистические центры в Хмельницком и Ковеле; Украина — удары по энергетике, отключения в двенадцати областях",
+  "place": "Украина — Хмельницкий, Ковель, Тернопольская, Одесская и Житомирская области",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: характер объектов",
+   "умолчание"
+  ],
+  "ru": {
+   "summary": "Минобороны России сообщило, что ночью беспилотниками поражены объекты логистической и портовой инфраструктуры Украины: логистический центр «Гранд импорт» в Хмельницком, где, по версии ведомства, хранились грузы военного и двойного назначения для ВСУ, и транспортно-логистический центр в Ковеле Волынской области; отдельно ведомство заявило об ударах по судам в порту Рени и на пути в Одессу. РИА Новости выносит в заголовок удар по логистическому центру в Ковеле. Об ударах по энергетике и отключениях света в этих материалах не говорится.",
+   "quotes": [
+    {
+     "id": 13974,
+     "text": "логистический центр «Гранд импорт» в г. Хмельницком, используемый для хранения грузов военного и двойного назначения, предназначенных для обеспечения ВСУ"
+    },
+    {
+     "id": 13478,
+     "text": "транспортно-логистический центр (ООО \"Виндор Транс Сервис\") в населенном пункте Ковель"
+    }
+   ]
+  },
+  "ua": {
+   "summary": "РБК-Украина, «Украинская правда» и «Общественное» со ссылкой на Воздушные силы пишут, что с 18:00 Россия выпустила 165 ударных дронов, из них 105 реактивных; к 08:00 сбиты или подавлены 115, еще 20 оставались в воздухе, попадания зафиксированы на 30 локациях. По данным глав областей, на Тернопольщине повреждены три энергообъекта в Кременецком районе, на Одесщине — объекты энергетики ДТЭК, без света остаются около 32,7 тысячи семей; на Житомирщине, по словам главы ОВА Виталия Бунечко, россияне целились в энергетическую и железнодорожную инфраструктуру, возникли пожары, закрылся гипермаркет ОЛДИ. Минэнерго и «Укрэнерго» сообщили об отключениях в двенадцати областях. Об ударе по логистическому центру в Хмельницком украинские источники в подборке не пишут; о Ковеле РБК-Украина в другом материале упоминает как об ударе по ТРЦ, где разрушены складские здания.",
+   "quotes": [
+    {
+     "id": 14376,
+     "text": "Росія атакувала Україну 165 безпілотниками, зокрема 105 реактивними"
+    },
+    {
+     "id": 14848,
+     "text": "Пошкодження енергетичних об'єктів зафіксували у Кременецькому районі."
+    },
+    {
+     "id": 14864,
+     "text": "цілили в енергетичну та залізничну інфраструктуру"
+    }
+   ]
+  },
+  "ind": {
+   "summary": "The Kyiv Independent со ссылкой на «Укрэнерго» пишет об отключениях света в двенадцати областях, от Кировоградской и Житомирской до Львовской, Одесской, Ровенской, Тернопольской и Хмельницкой; первый замминистра энергетики Артем Некрасов говорит, что Россия «систематически и целенаправленно» атакует энергетику, а издание связывает это с приближением пятой зимы войны. Заявления Минобороны России о логистических центрах независимые издания в подборке не проверяли.",
+   "quotes": [
+    {
+     "id": 14573,
+     "text": "There are new power outages in the Kirovohrad, Zhytomyr, Lviv, Odesa, Rivne, Ternopil, Khmelnytskyi, Zaporizhia, Donetsk, Kharkiv, Sumy and Chernihiv oblasts in the morning"
+    }
+   ]
+  },
+  "diverge": "Российская сторона называет целями логистические центры с военными грузами и не упоминает энергетику; украинские и независимые источники пишут об ударах по энергетике и железной дороге и об отключениях в двенадцати областях, но не упоминают Хмельницкий, а Ковель упоминается лишь как удар по ТРЦ со складскими зданиями. Характер объектов, названных Минобороны, независимо не подтвержден.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Назначение логистических центров известно только из заявления Минобороны России; украинские источники их не упоминают.",
+  "uk": {
+   "t": "Нічна атака 165 дронів: Міноборони РФ — логістичні центри в Хмельницькому і Ковелі; Україна — удари по енергетиці, відключення у дванадцяти областях",
+   "p": "Україна — Хмельницький, Ковель, Тернопільська, Одеська і Житомирська області",
+   "d": "Російська сторона називає цілями логістичні центри з військовими вантажами й не згадує енергетику; українські та незалежні джерела пишуть про удари по енергетиці й залізниці та про відключення у дванадцяти областях, але не згадують Хмельницький, а Ковель згадується лише як удар по ТРЦ зі складськими будівлями. Характер об’єктів, названих Міноборони, незалежно не підтверджено.",
+   "ru": "Міноборони Росії повідомило, що вночі безпілотниками уражено об’єкти логістичної та портової інфраструктури України: логістичний центр «Гранд імпорт» у Хмельницькому, де, за версією відомства, зберігалися вантажі військового та подвійного призначення для ЗСУ, і транспортно-логістичний центр у Ковелі Волинської області; окремо відомство заявило про удари по суднах у порту Рені та на шляху до Одеси. РИА Новости виносить у заголовок удар по логістичному центру в Ковелі. Про удари по енергетиці та відключення світла в цих матеріалах не йдеться.",
+   "ua": "РБК-Україна, «Українська правда» і «Суспільне» з посиланням на Повітряні сили пишуть, що з 18:00 Росія випустила 165 ударних дронів, із них 105 реактивних; до 08:00 збито або подавлено 115, ще 20 залишалися в повітрі, влучання зафіксовано на 30 локаціях. За даними очільників областей, на Тернопільщині пошкоджено три енергооб’єкти в Кременецькому районі, на Одещині — об’єкти енергетики ДТЕК, без світла залишаються близько 32,7 тисячі родин; на Житомирщині, за словами голови ОВА Віталія Бунечка, росіяни цілили в енергетичну та залізничну інфраструктуру, виникли пожежі, зачинився гіпермаркет ОЛДІ. Міненерго та «Укренерго» повідомили про відключення у дванадцяти областях. Про удар по логістичному центру в Хмельницькому українські джерела в добірці не пишуть; про Ковель РБК-Україна в іншому матеріалі згадує як про удар по ТРЦ, де зруйновано складські будівлі.",
+   "ind": "The Kyiv Independent з посиланням на «Укренерго» пише про відключення світла у дванадцяти областях, від Кіровоградської та Житомирської до Львівської, Одеської, Рівненської, Тернопільської і Хмельницької; перший заступник міністра енергетики Артем Некрасов каже, що Росія «систематично і цілеспрямовано» атакує енергетику, а видання пов’язує це з наближенням п’ятої зими війни. Заяв Міноборони Росії про логістичні центри незалежні видання в добірці не перевіряли."
+  },
+  "en": {
+   "t": "Overnight attack by 165 drones: Russian MoD cites logistics centres in Khmelnytskyi and Kovel; Ukraine reports energy strikes and outages in twelve regions",
+   "p": "Ukraine: Khmelnytskyi, Kovel, Ternopil, Odesa and Zhytomyr regions",
+   "d": "The Russian side names logistics centres holding military cargo as the targets and does not mention energy; Ukrainian and independent sources report strikes on energy and railways and outages in twelve regions but do not mention Khmelnytskyi, while Kovel is mentioned only as a strike on a shopping centre with warehouse buildings. The nature of the sites named by the Defence Ministry has not been independently confirmed.",
+   "ru": "Russia's Defence Ministry said drones struck Ukrainian logistics and port infrastructure overnight: the Grand Import logistics centre in Khmelnytskyi, which according to the ministry stored military and dual-use cargo for the Ukrainian armed forces, and a transport and logistics centre in Kovel, Volyn region; separately, the ministry claimed strikes on ships in the port of Reni and en route to Odesa. RIA Novosti headlines the strike on the Kovel logistics centre. These reports say nothing about strikes on energy or power cuts.",
+   "ua": "RBC-Ukraine, Ukrainska Pravda and Suspilne, citing the Air Force, write that from 18:00 Russia launched 165 attack drones, 105 of them jet-powered; by 08:00, 115 had been shot down or suppressed, another 20 were still in the air, and hits were recorded at 30 locations. According to regional heads, three energy facilities were damaged in Kremenets district of Ternopil region and DTEK energy sites in Odesa region, leaving about 32.7 thousand families without power; in Zhytomyr region, according to governor Vitalii Bunechko, Russia targeted energy and railway infrastructure, fires broke out and an OLDI hypermarket closed. The Energy Ministry and Ukrenergo reported outages in twelve regions. Ukrainian sources in the selection do not mention the strike on the Khmelnytskyi logistics centre; RBC-Ukraine mentions Kovel in another piece as a strike on a shopping centre where warehouse buildings were destroyed.",
+   "ind": "The Kyiv Independent, citing Ukrenergo, reports power outages in twelve oblasts, from Kirovohrad and Zhytomyr to Lviv, Odesa, Rivne, Ternopil and Khmelnytskyi; First Deputy Energy Minister Artem Nekrasov says Russia \"systematically and purposefully\" attacks the energy sector, and the outlet links this to the approach of the war's fifth winter. Independent outlets in the selection have not verified the Russian Defence Ministry's claims about the logistics centres."
+  }
+ },
+ {
+  "key": "1020-dubno-epicentr-strike",
+  "ids": [
+   13987,
+   15158,
+   14397,
+   14893,
+   14229,
+   14293
+  ],
+  "title": "Удар по Ровенщине днем 20 октября: Минобороны РФ — логистический центр «Эпицентр-К» в Дубно; украинские власти — торговый центр, трое раненых",
+  "place": "Ровенская область — Дубно",
+  "region": "ukraine-wide",
+  "tags": [
+   "расхождение: характер объектов",
+   "не проверено",
+   "одна из групп не освещает"
+  ],
+  "ru": {
+   "summary": "Минобороны России сообщило, что днем беспилотником поражен логистический центр «Эпицентр-К» в Дубно Ровенской области, на территории которого, по версии ведомства, расположен складской комплекс, используемый в интересах ВСУ; «Интерфакс» передает это сообщение под заголовком об ударе по логистическому комплексу. В том же сообщении ведомство заявило о поражении на переходе морем контейнеровоза с грузами для ВСУ. О пострадавших в этих материалах не говорится.",
+   "quotes": [
+    {
+     "id": 13987,
+     "text": "на территории которого расположен складской комплекс, используемый в интересах ВСУ"
+    },
+    {
+     "id": 15158,
+     "text": "Российские военные сообщили, что во вторник днем ударом БПЛА поразили объект логистики в Ровненской области."
+    }
+   ]
+  },
+  "ua": {
+   "summary": "«Украинская правда» и РБК-Украина со ссылкой на главу Ровенской ОВА Александра Коваля сообщают об атаке на торговый центр в области: по предварительным данным, ранены три человека, двое госпитализированы, возник пожар, и жителей соседних домов призвали закрыть окна. РБК-Украина пишет об ударе реактивным дроном по торговому центру в Ровно, а также напоминает, что Россия ударила по ТРЦ в Ковеле, где разрушены складские здания, и по гипермаркету ОЛДИ в Житомире. Название объекта и город украинские материалы в подборке называют по-разному, «Эпицентр» и Дубно не упоминаются.",
+   "quotes": [
+    {
+     "id": 14397,
+     "text": "За попередньою інформацією, троє людей поранені, з них двох – госпіталізували."
+    },
+    {
+     "id": 14893,
+     "text": "РФ вгатила реактивним дроном по торговому центру у Рівному."
+    }
+   ]
+  },
+  "ind": null,
+  "diverge": "Минобороны России называет пораженный объект логистическим центром со складами для ВСУ и не сообщает о пострадавших; украинские власти говорят о торговом центре, трех раненых и пожаре. Место различается: Минобороны называет Дубно, РБК-Украина — Ровно, «Украинская правда» — Ровенскую область. Независимые источники в подборке удар не освещают, назначение объекта не подтверждено.",
+  "figures": [],
+  "contradiction": false,
+  "uncertainty": "medium",
+  "uncertainty_reason": "Использование объекта в интересах ВСУ известно только из заявления Минобороны России; украинские источники описывают торговый центр, независимой проверки нет.",
+  "uk": {
+   "t": "Удар по Рівненщині вдень 20 жовтня: Міноборони РФ — логістичний центр «Епіцентр-К» у Дубні; українська влада — торговельний центр, троє поранених",
+   "p": "Рівненська область — Дубно",
+   "d": "Міноборони Росії називає уражений об’єкт логістичним центром зі складами для ЗСУ й не повідомляє про постраждалих; українська влада говорить про торговельний центр, трьох поранених і пожежу. Місце різниться: Міноборони називає Дубно, РБК-Україна — Рівне, «Українська правда» — Рівненщину. Незалежні джерела в добірці удар не висвітлюють, призначення об’єкта не підтверджено.",
+   "ru": "Міноборони Росії повідомило, що вдень безпілотником уражено логістичний центр «Епіцентр-К» у Дубні Рівненської області, на території якого, за версією відомства, розташований складський комплекс, що використовується в інтересах ЗСУ; «Інтерфакс» передає це повідомлення під заголовком про удар по логістичному комплексу. У тому самому повідомленні відомство заявило про ураження на переході морем контейнеровоза з вантажами для ЗСУ. Про постраждалих у цих матеріалах не йдеться.",
+   "ua": "«Українська правда» і РБК-Україна з посиланням на голову Рівненської ОВА Олександра Коваля повідомляють про атаку на торговельний центр в області: за попередніми даними, поранено трьох людей, двох госпіталізовано, виникла пожежа, і мешканців сусідніх будинків закликали зачинити вікна. РБК-Україна пише про удар реактивним дроном по торговому центру в Рівному, а також нагадує, що Росія вдарила по ТРЦ у Ковелі, де зруйновано складські будівлі, і по гіпермаркету ОЛДІ в Житомирі. Назву об’єкта та місто українські матеріали в добірці називають по-різному, «Епіцентр» і Дубно не згадуються.",
+   "ind": null
+  },
+  "en": {
+   "t": "Strike on Rivne region on 20 October: Russian MoD cites the Epicentr-K logistics centre in Dubno; Ukrainian authorities report a shopping centre and three injured",
+   "p": "Rivne region, Dubno",
+   "d": "Russia's Defence Ministry calls the site a logistics centre with warehouses for the Ukrainian army and reports no casualties; Ukrainian authorities speak of a shopping centre, three injured and a fire. The location differs: the MoD names Dubno, RBC-Ukraine Rivne city, Ukrainska Pravda the Rivne region. Independent sources in the selection do not cover the strike, and the use of the site has not been confirmed.",
+   "ru": "Russia's Defence Ministry said a drone hit the Epicentr-K logistics centre in Dubno, Rivne region, during the day; according to the ministry, a warehouse complex used for the Ukrainian armed forces is located there. Interfax relays the statement under a headline about a strike on a logistics complex. In the same statement the ministry claimed a hit on a container ship carrying cargo for the Ukrainian army at sea. These reports say nothing about casualties.",
+   "ua": "Ukrainska Pravda and RBC-Ukraine, citing Rivne regional governor Oleksandr Koval, report an attack on a shopping centre in the region: according to preliminary data three people were injured, two of them hospitalised, a fire broke out and residents of nearby buildings were urged to close their windows. RBC-Ukraine writes of a jet drone striking a shopping centre in Rivne and recalls that Russia hit a shopping centre in Kovel, where warehouse buildings were destroyed, and an OLDI hypermarket in Zhytomyr. The Ukrainian reports in the selection name the site and town differently and do not mention Epicentr or Dubno.",
+   "ind": null
+  }
+ }
+]

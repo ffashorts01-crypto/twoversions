@@ -1,0 +1,82 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import add, setd, ext, apply
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- hourly run 06:02 Oct 19 (ids 12043-12122): 1 new Oct 19 card + extensions ----------------
+# Oct 19 drones over Russia (Voronezh 18, Rostov; Izhevsk/Perm/Tambov airports) and Oct 19 front claims stay Russian-only (SKIPPED.md).
+
+def rep(c, path, old, new):
+    o = c
+    for p in path[:-1]: o = o[p]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+card('1019-kyiv-cruise-missiles-morning', [12052, 12055, 12118],
+ 'Утро 19 октября: новые взрывы в Киеве, РБК-Украина сообщает об атаке крылатых ракет; последствия уточняются', 'Киев', 'kyiv',
+ ['не проверено', 'расхождение: формулировки', 'одна из групп не освещает'],
+ S('Утром 19 октября РИА Новости со ссылкой на онлайн-карту Минцифры Украины сообщило, что в Киеве снова объявлена воздушная тревога, сигнал звучит также в Киевской и ряде других областей. Затем агентство со ссылкой на телеканал «Общественное» сообщило, что в Киеве во второй раз после полуночи прогремели взрывы. О типе оружия, целях и последствиях РИА не пишет.',
+   (12052, 'Воздушная тревога снова объявлена в Киеве'),
+   (12052, 'Сигнал тревоги звучит также в Киевской и ряде других областей Украины'),
+   (12055, 'Взрывы прогремели во второй раз после полуночи в Киеве на фоне воздушной тревоги')),
+ S('РБК-Украина со ссылкой на Воздушные силы ВСУ и Киевскую городскую военную администрацию пишет, что утром 19 октября в Киеве прогремели взрывы во время атаки крылатых ракет. Воздушные силы предупреждали о ракетах, двигавшихся с севера Киевской области в направлении столицы; в городе объявлен красный уровень опасности, жителей призывают оставаться в укрытиях до отбоя тревоги. Информация о последствиях уточняется. Издание напоминает о двух баллистических атаках на Киев этой ночью и пишет, что Украине все сложнее защищаться от ракет: по словам Зеленского, США сейчас поставляют лишь 12 ракет к Patriot в месяц.',
+   (12118, 'Вранці 19 жовтня в Києві пролунали вибухи під час атаки крилатих ракет.'),
+   (12118, 'Повітряні сили попереджали про крилаті ракети, що рухаються з півночі Київщини в напрямку столиці.'),
+   (12118, 'Інформація про наслідки уточнюється.'),
+   (12118, 'президент Володимир Зеленський розповів, що США зараз постачають лише 12 таких ракет на місяць')),
+ None,
+ 'Обе стороны сообщают о новых взрывах в Киеве утром 19 октября на фоне воздушной тревоги. РБК-Украина со ссылкой на Воздушные силы называет атаку ударом крылатых ракет, РИА Новости тип оружия не указывает и пересказывает украинские источники. О последствиях на момент публикации не сообщает ни одна из сторон; независимых сообщений в выборке нет.',
+ 'medium', 'Данные предварительные: сообщения опубликованы во время атаки, сведений о последствиях и пострадавших нет, независимых сообщений нет.', False,
+ ['Ранок 19 жовтня: нові вибухи в Києві, РБК-Україна повідомляє про атаку крилатих ракет; наслідки уточнюються', 'Київ',
+  'Обидві сторони повідомляють про нові вибухи в Києві вранці 19 жовтня на тлі повітряної тривоги. РБК-Україна з посиланням на Повітряні сили називає атаку ударом крилатих ракет, РИА Новости тип зброї не вказує і переказує українські джерела. Про наслідки на момент публікації не повідомляє жодна зі сторін; незалежних повідомлень у вибірці немає.',
+  'Вранці 19 жовтня РИА Новости з посиланням на онлайн-карту Мінцифри України повідомило, що в Києві знову оголошено повітряну тривогу, сигнал лунає також у Київській та низці інших областей. Потім агентство з посиланням на телеканал «Суспільне» повідомило, що в Києві вдруге після опівночі пролунали вибухи. Про тип зброї, цілі й наслідки РИА не пише.',
+  'РБК-Україна з посиланням на Повітряні сили ЗСУ та Київську міську військову адміністрацію пише, що вранці 19 жовтня в Києві пролунали вибухи під час атаки крилатих ракет. Повітряні сили попереджали про ракети, що рухалися з півночі Київщини в напрямку столиці; у місті оголошено червоний рівень небезпеки, мешканців закликають залишатися в укриттях до відбою тривоги. Інформація про наслідки уточнюється. Видання нагадує про дві балістичні атаки на Київ цієї ночі і пише, що Україні дедалі складніше захищатися від ракет: за словами Зеленського, США зараз постачають лише 12 ракет до Patriot на місяць.',
+  None],
+ ['Morning of 19 October: new explosions in Kyiv, RBC-Ukraine reports a cruise missile attack; consequences being clarified', 'Kyiv',
+  'Both sides report new explosions in Kyiv on the morning of 19 October amid an air-raid alert. RBC-Ukraine, citing the Air Force, calls it a cruise missile strike, while RIA Novosti does not name the type of weapon and retells Ukrainian sources. At the time of publication neither side reports on the consequences; there are no independent reports in the sample.',
+  'On the morning of 19 October RIA Novosti, citing the online map of Ukraine\'s Digital Transformation Ministry, reported that an air-raid alert had again been declared in Kyiv, with sirens also sounding in the Kyiv region and a number of other regions. The agency then reported, citing the TV channel Suspilne, that explosions had been heard in Kyiv for the second time since midnight. RIA does not write about the type of weapon, targets or consequences.',
+  'RBC-Ukraine, citing Ukraine\'s Air Force and the Kyiv City Military Administration, writes that on the morning of 19 October explosions were heard in Kyiv during a cruise missile attack. The Air Force had warned of missiles moving from the north of the Kyiv region towards the capital; a red danger level was declared in the city and residents are urged to stay in shelters until the all-clear. Information on the consequences is being clarified. The outlet recalls the two ballistic missile attacks on Kyiv that night and writes that it is increasingly hard for Ukraine to defend against missiles: according to Zelensky, the US is currently supplying only 12 Patriot missiles a month.',
+  None])
+
+# ---- extensions
+
+@ext('1019-kyiv-ballistic-night', [12103])
+def _(c):
+    c['ua']['summary'] = 'РБК-Украина со ссылкой на Воздушные силы ВСУ и Киевскую городскую администрацию пишет, что в ночь на 19 октября российские войска второй раз за несколько часов атаковали Киев баллистическими ракетами. По словам мэра Виталия Кличко, повреждена одна из станций метро на левом берегу, рядом обломками разорвало ходовой и контактный рельсы; позже РБК-Украина со ссылкой на КГГА уточнила, что наземные станции «Черниговская» и «Лесная» на красной линии временно закрыты: повреждены наземная станция, пути и кабельная сеть, поезда ходят от «Академгородка» до «Дарницы». «Общественное» пишет, что повторная атака была в 03:00: в Соломенском районе обломки попали в первый этаж 25-этажного жилого дома, трое раненых получили помощь на месте, в Днепровском районе зафиксировано попадание на территорию нежилой застройки; на автобусные маршруты добавлены машины. При первой, вечерней атаке, по данным РБК-Украина, пострадало здание медцентра в Деснянском районе и погиб один человек; со ссылкой на CNN издание пишет, что у Украины снова закончились ракеты к Patriot.'
+    c['uk']['ua'] = 'РБК-Україна з посиланням на Повітряні сили ЗСУ та Київську міську державну адміністрацію пише, що в ніч на 19 жовтня російські війська вдруге за кілька годин атакували Київ балістичними ракетами. За словами мера Віталія Кличка, пошкоджено одну зі станцій метро на лівому березі, поруч уламками розірвало ходову та контактну рейки; пізніше РБК-Україна з посиланням на КМДА уточнила, що наземні станції «Чернігівська» і «Лісова» на червоній гілці тимчасово закрито: пошкоджено наземну станцію, колії та кабельну мережу, поїзди курсують від «Академмістечка» до «Дарниці». «Суспільне» пише, що повторна атака була о 03:00: у Солом’янському районі уламки влучили в перший поверх 25-поверхового житлового будинку, троє поранених отримали допомогу на місці, у Дніпровському районі зафіксовано влучання на територію нежитлової забудови; на автобусні маршрути додано машини. Під час першої, вечірньої атаки, за даними РБК-Україна, постраждала будівля медцентру в Деснянському районі та загинула одна людина; з посиланням на CNN видання пише, що в Україні знову закінчилися ракети до Patriot.'
+    c['en']['ua'] = 'RBC-Ukraine, citing Ukraine\'s Air Force and the Kyiv City Administration, writes that on the night of 19 October Russian forces attacked Kyiv with ballistic missiles for the second time in a few hours. According to Mayor Vitali Klitschko, a metro station on the Left Bank was damaged and debris tore the running and contact rails next to it; RBC-Ukraine later specified, citing the city administration, that the above-ground stations Chernihivska and Lisova on the red line were temporarily closed: a station, tracks and the cable network were damaged, and trains run from Akademmistechko to Darnytsia. Suspilne writes that the repeated attack came at 03:00: in the Solomianskyi district debris hit the first floor of a 25-storey residential building, three injured people were treated on the spot, and a hit on non-residential buildings was recorded in the Dniprovskyi district; extra buses were added. In the first, evening attack, RBC-Ukraine says, a medical centre building in the Desnianskyi district was hit and one person was killed; citing CNN, the outlet writes that Ukraine has again run out of Patriot missiles.'
+    c['ua']['quotes'] += [{'id': 12103, 'text': 'О 03:00 19 жовтня в столиці знову пролунали вибухи.'},
+                          {'id': 12103, 'text': "у Солом'янському районі зафіксоване влучання уламків в перший поверх 25-поверхового житлового будинку. Внаслідок цього поранені троє людей, медики надали їм допомогу на місці."},
+                          {'id': 12103, 'text': 'У Дніпровському районі столиці також зафіксували влучання на територію нежитлової забудови.'}]
+    for path, old, new in [
+        (('diverge',), 'но описывает вечернюю и ночную атаки как один ночной удар, поэтому отдельных данных о пострадавших при второй атаке нет.',
+         'но описывает вечернюю и ночную атаки как один ночной удар; по данным «Общественного», трое раненых и попадание обломков в 25-этажный дом в Соломенском районе относятся ко второй, ночной атаке.'),
+        (('uk', 'd'), 'але описує вечірню і нічну атаки як один нічний удар, тож окремих даних про постраждалих під час другої атаки немає.',
+         'але описує вечірню і нічну атаки як один нічний удар; за даними «Суспільного», троє поранених і влучання уламків у 25-поверховий будинок у Солом’янському районі стосуються другої, нічної атаки.'),
+        (('en', 'd'), 'but describes the evening and night attacks as a single overnight strike, so there are no separate casualty figures for the second attack.',
+         'but describes the evening and night attacks as a single overnight strike; according to Suspilne, the three injured and the debris hitting a 25-storey building in the Solomianskyi district relate to the second, night attack.')]:
+        rep(c, path, old, new)
+    c['uncertainty_reason'] = 'Данные предварительные: о пострадавших при второй атаке известно только из «Общественного», Al Jazeera не разделяет последствия вечерней и ночной атак, о взрывах в Луцке, Ровно и Днепре известно только из пересказа российских агентств.'
+
+@ext('1018-zelensky-bloomberg-capitulation', [12109])
+def _(c):
+    add(c, 'ind', 'Kyiv Independent со ссылкой на Bloomberg пишет, что, по словам Зеленского, США задерживают поставку ракет к Patriot, уже оплаченных по программе PURL: Вашингтон одобрил лишь часть, «и это не технический вопрос». Сейчас США, по его словам, поставляют лишь 12 таких ракет в месяц — примерно четверть от объема при Джо Байдене, и Украина теперь должна их покупать. Правительство США эти цифры публично не подтвердило.',
+        'Kyiv Independent з посиланням на Bloomberg пише, що, за словами Зеленського, США затримують постачання ракет до Patriot, уже оплачених за програмою PURL: Вашингтон схвалив лише частину, «і це не технічне питання». Зараз США, за його словами, постачають лише 12 таких ракет на місяць — приблизно чверть від обсягу за Джо Байдена, і Україна тепер мусить їх купувати. Уряд США ці цифри публічно не підтвердив.',
+        'Kyiv Independent, citing Bloomberg, writes that according to Zelensky the US is delaying the delivery of Patriot missiles already paid for under the PURL initiative: Washington approved only some of them, "and this is not a technical issue". The US is now supplying only 12 such missiles a month, he says, roughly a quarter of the number under Joe Biden, and Ukraine now has to buy them. The US government has not publicly confirmed these figures.',
+        [(12109, 'The American side approved the delivery of only some of them, but not the rest. And this is not a technical issue'),
+         (12109, 'the U.S. is currently supplying just 12 Patriot interceptor missiles per month, approximately one-quarter of the number provided under former President Joe Biden'),
+         (12109, 'The U.S. government has not publicly confirmed Zelensky')])
+    c['diverge'] += ' Kyiv Independent также приводит данные о задержке оплаченных ракет по PURL; правительство США их публично не подтвердило.'
+    c['uk']['d'] += ' Kyiv Independent також наводить дані про затримку оплачених ракет за PURL; уряд США їх публічно не підтвердив.'
+    c['en']['d'] += ' Kyiv Independent also reports the delay of paid-for missiles under PURL; the US government has not publicly confirmed it.'
+
+@ext('1018-trump-truth-social-zelensky', [12110, 12112])
+def _(c):
+    pass   # DW 12110 and Al Jazeera 12112: same Truth Social quotes ("a very simple one", bargaining table) already quoted from Guardian 11909; extra coverage ids only (ind en 1316 chars); DW 12111 is a duplicate of 12110 (SKIPPED.md)
+
+apply(['c18d.json', 'c19a.json'])
+json.dump(cards, open(OUT + 'c19c.json', 'w'), ensure_ascii=False, indent=1)
+print('new cards', len(cards))

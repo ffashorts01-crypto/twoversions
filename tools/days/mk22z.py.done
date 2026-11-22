@@ -1,0 +1,23 @@
+import sys, glob, os
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, add, setd, apply, q
+# ---------------- hourly run 22 Oct 11:04: Oct 21 backlog extensions ----------------
+def noop(c): pass
+
+@ext('1021-trump-g20-peace-deal-atlantic', [13579, 13918, 14468])
+def _(c):
+    add(c, 'ru', 'РИА Новости и ТАСС по той же статье пишут о трех событиях, которых боятся в Киеве: выборы в США через две недели, возможные переговоры Путина, Трампа и Си Цзиньпина на полях саммита АТЭС в середине ноября, где украинский вопрос могут обсудить без Киева, и встреча G20 в Майами.',
+        'РИА Новости і ТАСС за тією самою статтею пишуть про три події, яких бояться в Києві: вибори в США за два тижні, можливі переговори Путіна, Трампа і Сі Цзіньпіна на полях саміту АТЕС у середині листопада, де українське питання можуть обговорити без Києва, і зустріч G20 у Маямі.',
+        'RIA Novosti and TASS, drawing on the same article, write about three events Kyiv fears: the US elections in two weeks, possible Putin-Trump-Xi talks on the sidelines of the APEC summit in mid-November, where the Ukrainian question could be discussed without Kyiv, and the G20 meeting in Miami.',
+        [(13579, 'там украинский вопрос могут обсудить, не предоставив Киеву место за столом переговоров')])
+    add(c, 'ua', '«Украинская правда» пишет, что Трамп может усилить давление на Украину, чтобы добиться договоренностей до конца 2026 года, и называет те же вехи: промежуточные выборы, возможные переговоры с Путиным и Си в ноябре и саммит G20 в декабре.',
+        '«Українська правда» пише, що Трамп може посилити тиск на Україну, щоб домогтися домовленостей до кінця 2026 року, і називає ті самі віхи: проміжні вибори, можливі переговори з Путіним і Сі в листопаді та саміт G20 у грудні.',
+        'Ukrainska Pravda writes that Trump may step up pressure on Ukraine to reach agreements by the end of 2026, and names the same milestones: the midterm elections, possible talks with Putin and Xi in November and the G20 summit in December.',
+        [(14468, 'Трамп може посилити тиск на Україну')])
+
+ext('1021-putin-witkoff-trilateral-talks', [13752, 14950, 14945, 15176, 15275, 13841, 14981, 15022, 14460])(noop)
+ext('1021-witkoff-kushner-technical-talks', [13845])(noop)
+ext('1020-trump-ukraine-must-want-deal', [13757])(noop)
+
+files = sorted(os.path.basename(p) for p in glob.glob('/workspace/compare-site-v2/tools/days/out/c*.json'))
+apply(files)

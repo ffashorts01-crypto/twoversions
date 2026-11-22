@@ -1,0 +1,56 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+card('1017-drones-moscow-airports', [11017, 11020, 11022, 11024, 11043, 11065, 11067, 11068, 6656, 11029, 11047, 4965, 4961, 6210, 5001, 5013, 4956, 4958, 4962, 11031, 11032, 11035, 11037, 11038, 6666, 4986, 6224, 11064, 8222, 9009, 9024, 9478, 8708, 8719, 8654],
+ 'Собянин: за неделю к Москве летели 2730 дронов; аэропорты столицы вторую ночь подряд закрыты, задержано или отменено более 350 рейсов', 'Москва и регионы России', 'russia-other',
+ ['одна из групп не освещает'],
+ S('Минобороны РФ сообщило о 610 беспилотниках, перехваченных за ночь, и 654 — за сутки. Сергей Собянин сообщил о 144 сбитых на подлете к Москве дронах за ночь и 195 — за субботу, а также о том, что с 10 по 17 октября в сторону Московского региона летели 2730 беспилотников, из них 534 сбиты на подлете к столице.',
+   (11029, 'перехвачены и уничтожены 610 украинских беспилотных летательных аппаратов самолетного типа'),
+   (11043, 'В период с 08:30 10 октября до 08:30 17 октября в сторону Московского региона летело 2730 БПЛА.')),
+ S('Украинские СМИ пересказывают данные Собянина, отмечая, что мэр традиционно не сообщает о последствиях, и приводят слова главы РСПП Александра Шохина о том, что Россия не может обеспечить полноценную ПВО всех крупных промышленных объектов.',
+   (8222, 'Традиційно мер Москви не повідомив про наслідки'),
+   (9024, 'Росія не може забезпечити повноцінний протиповітряний захист усіх великих промислових об\'єктів через їхні значні розміри.')),
+ S('Meduza и DW сообщают, что все четыре аэропорта Москвы вторую ночь подряд прекращали работу, задержано или отменено более 350 рейсов, а вечером сбои сохранялись; Kyiv Independent — что ограничения над Москвой действуют шестую ночь подряд.',
+   (8708, 'Всего, следует из данных онлайн-табло, задержаны или отменены более 350 рейсов, больше всего — в Шереметьево.'),
+   (8654, 'Flights over the city of Moscow were restricted for the sixth night in a row on Oct. 16-17')),
+ 'Российские официальные источники сообщают только о числе сбитых дронов; независимые СМИ — о масштабных сбоях авиасообщения, украинские — об отсутствии данных о последствиях.',
+ 'low', '', False,
+ ['Собянін: за тиждень на Москву летіли 2730 дронів; аеропорти столиці другу ніч поспіль закриті, затримано або скасовано понад 350 рейсів', 'Москва і регіони Росії',
+  'Російські офіційні джерела повідомляють лише про кількість збитих дронів; незалежні ЗМІ — про масштабні збої авіасполучення, українські — про відсутність даних про наслідки.',
+  'Міноборони РФ повідомило про 610 безпілотників, перехоплених за ніч, і 654 — за добу. Сергій Собянін повідомив про 144 збиті на підльоті до Москви дрони за ніч і 195 — за суботу, а також про те, що з 10 по 17 жовтня в бік Московського регіону летіли 2730 безпілотників, з них 534 збито на підльоті до столиці.',
+  'Українські ЗМІ переказують дані Собяніна, зазначаючи, що мер традиційно не повідомляє про наслідки, і наводять слова голови РСПП Олександра Шохіна про те, що Росія не може забезпечити повноцінну ППО всіх великих промислових об’єктів.',
+  'Meduza і DW повідомляють, що всі чотири аеропорти Москви другу ніч поспіль припиняли роботу, затримано або скасовано понад 350 рейсів, а ввечері збої зберігалися; Kyiv Independent — що обмеження над Москвою діють шосту ніч поспіль.'],
+ ['Sobyanin: 2730 drones flew towards Moscow in a week; capital\'s airports shut for a second night, more than 350 flights delayed or cancelled', 'Moscow and Russian regions',
+  'Russian official sources report only the number of drones downed; independent media report large-scale air travel disruption, Ukrainian media note the absence of information about consequences.',
+  'The Russian Defence Ministry reported 610 drones intercepted overnight and 654 over the day. Sergei Sobyanin reported 144 drones downed on approach to Moscow overnight and 195 over Saturday, and said that between 10 and 17 October 2730 drones flew towards the Moscow region, 534 of them downed on approach to the capital.',
+  'Ukrainian media relay Sobyanin\'s figures, noting that the mayor traditionally does not report consequences, and quote Russian Union of Industrialists head Alexander Shokhin as saying Russia cannot provide full air defence for all large industrial sites.',
+  'Meduza and DW report that all four Moscow airports halted operations for a second night running, more than 350 flights were delayed or cancelled and disruption continued into the evening; Kyiv Independent says restrictions over Moscow were in place for the sixth night in a row.'])
+
+card('1017-roboavia-unecha-ryazan', [11025, 8995, 7313, 8990, 8668, 8662],
+ 'Генштаб ВСУ: поражены завод дронов «Робоавиа» в Ростовской области и железнодорожный мост через Унечу; Reuters: на Рязанском НПЗ остановлена установка', 'Ростовская, Брянская, Рязанская области', 'russia-other',
+ ['расхождение: характер объекта', 'не проверено'],
+ S('Губернатор Ростовской области Юрий Слюсарь сообщил, что ночью над Каменском-Шахтинским, Новошахтинском и рядом районов уничтожено более 20 беспилотников, загорелась автомастерская; о поражении предприятий российские источники не сообщают.',
+   (11025, 'в результате атаки загорелась автомастерская')),
+ S('Генштаб ВСУ заявил, что 16 октября поражено производственно-складское здание компании «Робоавиа», выпускающей дроны для российской армии, у поселка Ленина Ростовской области, а также железнодорожный мост через реку Унеча в России и склады и пункт управления БПЛА в Донецкой области.',
+   (8995, 'Українські військові 16 жовтня уразили виробничо-складську будівлю "Робоавіа" в Ростовській області.'),
+   (8990, 'уразили залізничний міст через річку Унеча в Росії')),
+ S('Kyiv Independent пересказывает данные Генштаба о «Робоавиа» и со ссылкой на Reuters сообщает, что после атаки 15 октября Рязанский НПЗ остановил одну из основных установок первичной переработки — ЭЛОУ-АВТ-6.',
+   (8662, 'Russia\'s Ryazan oil refinery suspended operations at one of its main crude distillation units, CDU-6, following a drone attack on Oct. 15')),
+ 'Российские власти говорят о сбитых дронах и пожаре в автомастерской, украинский Генштаб — о поражении оборонного предприятия; независимого подтверждения ущерба «Робоавиа» нет.',
+ 'medium', 'Данные о поражении «Робоавиа» и моста исходят от украинского Генштаба и независимо не подтверждены.', False,
+ ['Генштаб ЗСУ: уражено завод дронів «Робоавіа» в Ростовській області та залізничний міст через Унечу; Reuters: на Рязанському НПЗ зупинено установку', 'Ростовська, Брянська, Рязанська області',
+  'Російська влада говорить про збиті дрони і пожежу в автомайстерні, український Генштаб — про ураження оборонного підприємства; незалежного підтвердження шкоди «Робоавіа» немає.',
+  'Губернатор Ростовської області Юрій Слюсар повідомив, що вночі над Каменськом-Шахтинським, Новошахтинськом і низкою районів знищено понад 20 безпілотників, загорілася автомайстерня; про ураження підприємств російські джерела не повідомляють.',
+  'Генштаб ЗСУ заявив, що 16 жовтня уражено виробничо-складську будівлю компанії «Робоавіа», яка виготовляє дрони для російської армії, біля селища Леніна Ростовської області, а також залізничний міст через річку Унеча в Росії та склади і пункт управління БпЛА на Донеччині.',
+  'Kyiv Independent переказує дані Генштабу про «Робоавіа» і з посиланням на Reuters повідомляє, що після атаки 15 жовтня Рязанський НПЗ зупинив одну з основних установок первинної переробки — ЕЛОУ-АВТ-6.'],
+ ['Ukrainian General Staff: Roboavia drone plant in Rostov region and a railway bridge over the Unecha hit; Reuters: unit halted at Ryazan refinery', 'Rostov, Bryansk, Ryazan regions',
+  'Russian authorities speak of downed drones and a fire at a car workshop, the Ukrainian General Staff of a hit on a defence plant; there is no independent confirmation of damage to Roboavia.',
+  'Rostov region governor Yury Slyusar said more than 20 drones were destroyed overnight over Kamensk-Shakhtinsky, Novoshakhtinsk and several districts and a car workshop caught fire; Russian sources do not report any enterprises being hit.',
+  'The Ukrainian General Staff said that on 16 October it hit a production and storage building of Roboavia, which makes drones for the Russian army, near the settlement of Lenina in Rostov region, as well as a railway bridge over the Unecha river in Russia and depots and a drone control post in Donetsk region.',
+  'Kyiv Independent relays the General Staff\'s Roboavia claim and, citing Reuters, reports that after the 15 October attack the Ryazan refinery halted one of its main crude distillation units, CDU-6.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c17c.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

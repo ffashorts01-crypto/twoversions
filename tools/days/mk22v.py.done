@@ -1,0 +1,17 @@
+import sys, glob, os
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from extlib import ext, apply
+# ---------------- hourly run 22 Oct 10:04: Oct 20 backlog, id-only extensions (titles/texts checked) ----------------
+def noop(c): pass
+ext('1020-oslo-zelensky-witkoff-talks', [14060, 14075, 14077, 14087, 14092, 14101, 14365, 14388, 14392, 14393, 14394, 14405, 14406, 14413, 14567, 14590, 14692, 14711, 14766, 14845, 14852, 14868, 14917, 15095, 15102, 15132, 15164, 13737, 15320, 14937, 14414, 14416])(noop)
+ext('1021-putin-witkoff-trilateral-talks', [13493, 13494, 14887, 15125, 15310, 14931, 13539, 15172])(noop)
+ext('1020-south-korea-embassy-staff', [14765, 14858, 13750, 15115])(noop)
+ext('1019-nova-vodolaha-park-strike', [14885])(noop)
+ext('1020-chabany-highway-drone-strike', [14055, 14572, 14387, 14860])(noop)
+ext('1020-kyiv-strazhesko-institute-drone', [14395])(noop)
+ext('1021-musk-starlink-wsj', [14366])(noop)
+ext('1020-zelensky-rubio-early-warning', [14935])(noop)
+ext('1020-patriot-purl-delay', [14670, 15319])(noop)
+ext('1020-trump-ukraine-must-want-deal', [15171])(noop)
+files = sorted(os.path.basename(p) for p in glob.glob('/workspace/compare-site-v2/tools/days/out/c*.json'))
+apply(files)

@@ -1,0 +1,22 @@
+import json
+# post-patch (no new ids): zelensky-rubio card wording after the RIA/Hegseth extension
+P = '/workspace/compare-site-v2/tools/days/out/c20a.json'
+a = json.load(open(P))
+c = [c for c in a if c['key'] == '1020-zelensky-rubio-early-warning'][0]
+def rep(d, k, old, new):
+    if old in d[k]: d[k] = d[k].replace(old, new)
+    else: assert new in d[k], (k, old[:40])
+rep(c['ru'], 'summary', 'О разговоре Зеленского с Рубио и о последующих словах Зеленского, что предупреждения снова поступают, агентство в выборке не сообщает.',
+    'О словах Зеленского, что предупреждения снова поступают, российские агентства в выборке не сообщают.')
+rep(c['uk'], 'ru', 'Про розмову Зеленського з Рубіо та про подальші слова Зеленського, що попередження знову надходять, агентство в добірці не повідомляє.',
+    'Про слова Зеленського, що попередження знову надходять, російські агентства в добірці не повідомляють.')
+rep(c['en'], 'ru', "The agency in the selection does not report Zelensky's call with Rubio or Zelensky's later words that warnings are coming in again.",
+    "Russian agencies in the selection do not report Zelensky's words that warnings are coming in again.")
+rep(c, 'diverge', 'Российский источник передает только опровержение Рубио: США ничего не прекращали, а украинские утверждения — инсинуации. Украинские издания передают перечень тем разговора со слов Зеленского, но не приводят отрицание Рубио.',
+    'Российские источники передают опровержения Рубио и Хегсета (украинские утверждения — инсинуации) и слова Зеленского о возможном восстановлении Starlink, но не его слова о возобновлении предупреждений. Украинские издания передают темы разговора со слов Зеленского и отрицание Хегсета, но не приводят отрицание Рубио о разведданных.')
+rep(c['uk'], 'd', 'Російське джерело передає лише спростування Рубіо: США нічого не припиняли, а українські твердження — інсинуації. Українські видання передають перелік тем розмови зі слів Зеленського, але не наводять заперечення Рубіо.',
+    'Російські джерела передають спростування Рубіо та Гегсета (українські твердження — інсинуації) і слова Зеленського про можливе відновлення Starlink, але не його слова про відновлення попереджень. Українські видання передають теми розмови зі слів Зеленського та заперечення Гегсета, але не наводять заперечення Рубіо щодо розвідданих.')
+rep(c['en'], 'd', "The Russian source relays only Rubio's denial: the US stopped nothing, and Ukrainian claims are insinuations. Ukrainian outlets relay the list of topics from Zelensky's words but do not quote Rubio's denial.",
+    "Russian sources relay the denials by Rubio and Hegseth (Ukrainian claims are insinuations) and Zelensky's words on a possible Starlink restoration, but not his words that warnings resumed. Ukrainian outlets relay the topics of the call from Zelensky's words and Hegseth's denial, but not Rubio's denial on intelligence.")
+json.dump(a, open(P, 'w'), ensure_ascii=False, indent=1)
+print('patched', len(c['ru']['summary']), len(c['diverge']), len(c['uk']['d']), len(c['en']['d']))

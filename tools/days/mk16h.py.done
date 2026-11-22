@@ -1,0 +1,55 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+card('1016-pope-putin-oleshky', [6170, 6172, 6129, 8934, 7283, 8207, 9464, 8649, 8698],
+ 'Папа Лев XIV в разговоре с Путиным призвал к прекращению огня в оккупированных Алешках; Кремль возложил ответственность на Киев', 'Алешки (Олешки), Херсонская область', 'kherson',
+ ['расхождение: ответственность'],
+ S('Кремль сообщил, что в ответ на озабоченность понтифика судьбой мирных жителей Алешек Путин дал «исчерпывающие разъяснения» об ответственности «киевского режима» за гуманитарную ситуацию и поддержал намерение Ватикана помочь с безопасностью жителей и снабжением; стороны договорились о сотрудничестве. Херсонский региональный омбудсмен Сергей Георгиев заявил ТАСС, что украинские операторы дронов «тренируются» на мирных жителях города.',
+   (6170, 'a comprehensive explanation was provided regarding the Kiev regime’s responsibility for the difficult humanitarian situation there'),
+   (6170, 'The sides agreed to cooperate on this matter.')),
+ S('Украинские СМИ со ссылкой на Святой престол пишут, что Папа, находящийся в больнице после операции, выразил глубокую обеспокоенность гуманитарной ситуацией в оккупированных Олешках и призвал к прекращению огня для доставки продовольствия и лекарств; город долгое время остается заблокированным.',
+   (7283, 'Святий Отець підтвердив зобов\'язання Святого Престолу сприяти діалогу та миру')),
+ S('Kyiv Independent пишет, что в прифронтовом городе в условиях острой нехватки еды и лекарств остаются около 2000 жителей, а Папа призвал к локальному перемирию для доставки помощи и безопасной эвакуации; Meduza и DW приводят и версию Кремля.',
+   (8649, 'where around 2,000 residents remain trapped amid severe shortages of food and medicine')),
+ 'Ватикан говорит о призыве к прекращению огня ради помощи и эвакуации, Кремль — о «разъяснениях» по поводу ответственности Киева и называет Алешки «российским городом»; украинская сторона указывает, что город оккупирован и блокирован Россией.',
+ 'low', '', False,
+ ['Папа Лев XIV у розмові з Путіним закликав до припинення вогню в окупованих Олешках; Кремль поклав відповідальність на Київ', 'Олешки, Херсонщина',
+  'Ватикан говорить про заклик до припинення вогню заради допомоги та евакуації, Кремль — про «роз’яснення» щодо відповідальності Києва і називає Олешки «російським містом»; українська сторона вказує, що місто окуповане і заблоковане Росією.',
+  'Кремль повідомив, що у відповідь на занепокоєння понтифіка долею мирних жителів Олешок Путін дав «вичерпні роз’яснення» щодо відповідальності «київського режиму» за гуманітарну ситуацію і підтримав намір Ватикану допомогти з безпекою жителів і постачанням; сторони домовилися про співпрацю. Херсонський «регіональний омбудсмен» Сергій Георгієв заявив ТАСС, що українські оператори дронів «тренуються» на мирних жителях міста.',
+  'Українські ЗМІ з посиланням на Святий Престол пишуть, що Папа, який перебуває в лікарні після операції, висловив глибоке занепокоєння гуманітарною ситуацією в окупованих Олешках і закликав до припинення вогню для доставки продовольства та ліків; місто тривалий час залишається заблокованим.',
+  'Kyiv Independent пише, що в прифронтовому місті за гострої нестачі їжі та ліків залишаються близько 2000 жителів, а Папа закликав до локального перемир’я для доставки допомоги і безпечної евакуації; Meduza і DW наводять і версію Кремля.'],
+ ['Pope Leo XIV urges Putin to agree a ceasefire in occupied Oleshky; Kremlin blames Kyiv', 'Oleshky, Kherson region',
+  'The Vatican speaks of a call for a ceasefire for aid and evacuation, the Kremlin of "explanations" about Kyiv\'s responsibility and calls Oleshky a "Russian city"; the Ukrainian side points out that the town is occupied and blockaded by Russia.',
+  'The Kremlin said that in response to the pontiff\'s concern for civilians in Oleshky, Putin gave "comprehensive explanations" of the "Kyiv regime\'s" responsibility for the humanitarian situation and backed the Vatican\'s intention to help ensure residents\' safety and supplies; the sides agreed to cooperate. The Russian-installed Kherson ombudsman Sergei Georgiev told TASS that Ukrainian drone operators "practise" on the town\'s civilians.',
+  'Ukrainian media, citing the Holy See, write that the Pope, in hospital after surgery, expressed deep concern over the humanitarian situation in occupied Oleshky and called for a ceasefire to deliver food and medicine; the town has long been blockaded.',
+  'Kyiv Independent writes that around 2000 residents remain in the front-line town amid severe shortages of food and medicine and that the Pope called for a local truce for aid deliveries and safe evacuation; Meduza and DW also give the Kremlin\'s version.'])
+
+card('1016-black-sea-ships-bulgaria-nato', [10889, 10928, 8180, 8851, 9456, 9463, 8652],
+ 'Минобороны РФ: за неделю поражены 15 сухогрузов; Болгария просит у НАТО авиацию и ПВО, послы НАТО соберутся из-за атак на суда у Румынии', 'Черное море, Болгария, Румыния', 'moldova-romania',
+ ['расхождение: характер цели'],
+ S('Минобороны РФ заявило, что ночью поражен сухогруз, доставлявший в Одессу военные грузы, а за неделю — 15 сухогрузов, задействованных в поставках западного вооружения, техники и горючего для ВСУ, и ряд объектов портовой инфраструктуры.',
+   (10928, 'В течение недели поражены 15 сухогрузов, задействованных в поставках западного вооружения, военной техники, горючего и имущества для нужд ВСУ')),
+ S('Министр обороны Болгарии Димитр Стоянов сообщил, что страна попросила у НАТО боевую авиацию, ракетные комплексы и системы противодействия дронам. Со ссылкой на France24 РБК-Украина пишет, что послы НАТО соберутся из-за пожаров на танкерах у побережья Румынии; с Wine Trader спасены пятеро, семеро считаются пропавшими.',
+   (8180, 'Ми попросили як авіацію, так і ракетні комплекси, системи протидії дронам та патрульну авіацію.'),
+   (8851, 'П\'ятьох членів екіпажу вдалося врятувати, ще семеро вважаються зниклими безвісти.')),
+ S('DW сообщает, что Болгария обратилась к ЕС и НАТО за помощью в расследовании атак на два судна, одно из которых затонуло, и что, по словам премьера Румена Радева, неясно, откуда прилетели дроны; Индия призвала Россию и Украину обеспечить безопасность судоходства. Kyiv Independent пишет, что инциденты проверяют на прочность промосковскую линию Радева.',
+   (9456, 'По словам премьер-министра Румена Радева , пока неясно, откуда прилетели беспилотники - из России или Украины.'),
+   (9463, 'Индия призвала Россию и Украину обеспечить безопасность коммерческого судоходства в Черном море')),
+ 'Минобороны РФ называет пораженные суда военными перевозчиками; украинские источники связывают атаки у Румынии с Россией, а Болгария и Румыния публично не называют виновника.',
+ 'medium', 'Принадлежность дронов, атаковавших суда у берегов Болгарии и Румынии, официально не установлена.', False,
+ ['Міноборони РФ: за тиждень уражено 15 суховантажів; Болгарія просить у НАТО авіацію і ППО, посли НАТО зберуться через атаки на судна біля Румунії', 'Чорне море, Болгарія, Румунія',
+  'Міноборони РФ називає уражені судна військовими перевізниками; українські джерела пов’язують атаки біля Румунії з Росією, а Болгарія і Румунія публічно не називають винного.',
+  'Міноборони РФ заявило, що вночі уражено суховантаж, який доставляв в Одесу військові вантажі, а за тиждень — 15 суховантажів, задіяних у постачанні західного озброєння, техніки і пального для ЗСУ, та низку об’єктів портової інфраструктури.',
+  'Міністр оборони Болгарії Димитар Стоянов повідомив, що країна попросила в НАТО бойову авіацію, ракетні комплекси і системи протидії дронам. З посиланням на France24 РБК-Україна пише, що посли НАТО зберуться через пожежі на танкерах біля узбережжя Румунії; з Wine Trader врятовано п’ятьох, семеро вважаються зниклими.',
+  'DW повідомляє, що Болгарія звернулася до ЄС і НАТО по допомогу в розслідуванні атак на два судна, одне з яких затонуло, і що, за словами прем’єра Румена Радева, незрозуміло, звідки прилетіли дрони; Індія закликала Росію та Україну забезпечити безпеку судноплавства. Kyiv Independent пише, що інциденти випробовують на міцність промосковську лінію Радева.'],
+ ['Russian Defence Ministry: 15 cargo ships hit in a week; Bulgaria asks NATO for aircraft and air defence, NATO envoys to meet over attacks on ships off Romania', 'Black Sea, Bulgaria, Romania',
+  'The Russian Defence Ministry calls the ships it hit military carriers; Ukrainian sources link the attacks off Romania to Russia, while Bulgaria and Romania do not publicly name a culprit.',
+  'The Russian Defence Ministry said a cargo ship carrying military cargo to Odesa was hit overnight, and that over the week 15 cargo ships involved in delivering Western weapons, equipment and fuel to the Ukrainian army had been hit, along with several port facilities.',
+  'Bulgarian Defence Minister Dimitar Stoyanov said the country had asked NATO for combat aircraft, missile systems and counter-drone systems. Citing France24, RBC-Ukraine writes that NATO ambassadors will meet over fires on tankers off the Romanian coast; five crew of the Wine Trader were rescued and seven are missing.',
+  'DW reports that Bulgaria asked the EU and NATO for help investigating attacks on two ships, one of which sank, and that according to Prime Minister Rumen Radev it is unclear where the drones came from; India urged Russia and Ukraine to ensure the safety of shipping. Kyiv Independent writes that the incidents are testing Radev\'s Moscow-friendly line.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c16h.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

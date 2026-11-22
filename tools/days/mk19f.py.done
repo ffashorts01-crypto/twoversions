@@ -1,0 +1,165 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import add, setd, ext, apply
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- hourly run 07:57 Oct 19 (ids 12207-12311): 2 new Oct 19 cards + extensions ----------------
+# Oct 19 drones over Russia (MoD 149 drones, Chelyabinsk, Gelendzhik) stay Russian-only (SKIPPED.md).
+
+def rep(c, path, old, new):
+    o = c
+    for p in path[:-1]: o = o[p]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+card('1019-rubio-intel-sanctions-apec', [12140, 12144, 12216, 12217, 12223, 12248, 12254, 12264, 12267, 12271, 12277, 12307, 12308],
+ 'Рубио: паузы в передаче разведданных Украине не было, санкции отложены на 60 дней ради переговоров; встреча Трампа, Путина и Си обсуждается', 'Узбекистан, Вашингтон', 'ukraine-wide',
+ ['расхождение: формулировки', 'умолчание', 'одна из групп не освещает'],
+ S('РИА Новости, ТАСС и «Интерфакс» передают слова госсекретаря США Марко Рубио, сказанные журналистам в Узбекистане утром 19 октября. Трамп, по его словам, приостановил новые санкции против России на 60 дней, чтобы посмотреть, могут ли переговоры с Украиной и Россией привести к чему-то позитивному; США продолжат делать все возможное для завершения войны, а Трамп «открыт для всего, что он может сделать». На вопрос, готова ли Москва к переговорам, Рубио ответил, что это дипломатия, а «не уголовное дело». Встреча Трампа с Путиным и Си Цзиньпином на саммите АТЭС, по его словам, обсуждается, но решено ли что-то окончательно, он не знает. На заявления Зеленского о приостановке обмена разведданными Рубио ответил, что «паузы не было», и сказал, что не собирается комментировать все, что тот говорит в интервью; Зеленскому, по его словам, нужно сосредоточиться на урегулировании. ТАСС выносит в заголовок, что Рубио объяснил проблемы ПВО Украины сбоем программного обеспечения.',
+   (12217, 'Он решил приостановить действие санкций на 60 дней, потому что хочет посмотреть, есть ли возможность, могут ли переговоры, которые сейчас ведутся как с Украиной, так и с Россией, привести к чему-то позитивному'),
+   (12308, 'Мы делаем все, что можем, и продолжим делать все, что можем, чтобы помочь способствовать завершению этой войны'),
+   (12308, 'Это не уголовное дело. Это дипломатия. И в дипломатии нужно продолжать попытки'),
+   (12216, 'Думаю, что есть разговоры о встрече. Я не знаю, было ли что-то решено окончательно'),
+   (12223, 'Я не собираюсь продолжать комментировать и отвечать на все, что он говорит в интервью прессе'),
+   (12267, 'Владимир Зеленский должен акцентировать внимание прежде всего на поисках путей к урегулированию конфликта'),
+   (12277, 'Рубио объяснил проблемы ПВО Украины сбоем программного обеспечения')),
+ S('РБК-Украина со ссылкой на корреспондента «Радио Свобода» в Вашингтоне Алекса Рауфоглу приводит ответ Рубио на вопрос, почему Украина не получила предупреждения о баллистических ракетах по Киеву: что произошло прошлой ночью, он точно не знает, а несколько ночей назад возникла программная проблема с системой раннего предупреждения Украины, которую изучает Европейское командование ВС США (EUCOM). Рубио подчеркнул, что США не прекращали передавать Украине разведданные, удивился, откуда Зеленский берет такую информацию и зачем рассказывает о ней прессе, и сказал, что тому следует сосредоточиться на прекращении войны. Издание напоминает о данных The Washington Post: американская разведка предупреждала посольство Украины, что обмен данными остановят, если удары по российским НПЗ продолжатся.',
+   (12307, 'Кілька ночей тому виникла програмна проблема'),
+   (12307, 'Європейське командування ЗС США (EUCOM) вивчає це питання.'),
+   (12307, 'Жодного призупинення не було.'),
+   (12307, 'Саме на цьому йому слід зосередитися.'),
+   (12307, 'американська розвідка попередила посольство України, що обмін даними зупинять')),
+ None,
+ 'Слова Рубио российские и украинские источники передают близко, но с разными акцентами. Российские агентства выносят в заголовки отказ от «паузы» в разведданных, призыв к Зеленскому сосредоточиться на урегулировании, объяснение приостановки санкций и обсуждение встречи на АТЭС. ТАСС в заголовке пишет, что Рубио объяснил проблемы ПВО Украины сбоем программного обеспечения; по записи, на которую ссылается РБК-Украина, Рубио говорил о программной проблеме с системой раннего предупреждения несколько ночей назад и сказал, что не знает, что произошло прошлой ночью. О проверке EUCOM и данных The Washington Post российские источники не пишут, а РБК-Украина не пересказывает слова о санкциях и АТЭС. Независимых сообщений в выборке нет.',
+ 'low', '', False,
+ ['Рубіо: паузи в передачі розвідданих Україні не було, санкції відкладено на 60 днів заради переговорів; зустріч Трампа, Путіна і Сі обговорюється', 'Узбекистан, Вашингтон',
+  'Слова Рубіо російські й українські джерела передають близько, але з різними акцентами. Російські агентства виносять у заголовки заперечення «паузи» в розвідданих, заклик до Зеленського зосередитися на врегулюванні, пояснення призупинення санкцій та обговорення зустрічі на АТЕС. ТАСС у заголовку пише, що Рубіо пояснив проблеми ППО України збоєм програмного забезпечення; за записом, на який посилається РБК-Україна, Рубіо говорив про програмну проблему із системою раннього попередження кілька ночей тому і сказав, що не знає, що сталося минулої ночі. Про перевірку EUCOM і дані The Washington Post російські джерела не пишуть, а РБК-Україна не переказує слова про санкції та АТЕС. Незалежних повідомлень у вибірці немає.',
+  'РИА Новости, ТАСС та «Інтерфакс» передають слова держсекретаря США Марко Рубіо, сказані журналістам в Узбекистані вранці 19 жовтня. Трамп, за його словами, призупинив нові санкції проти Росії на 60 днів, щоб подивитися, чи можуть переговори з Україною та Росією привести до чогось позитивного; США й далі робитимуть усе можливе для завершення війни, а Трамп «відкритий до всього, що він може зробити». На запитання, чи готова Москва до переговорів, Рубіо відповів, що це дипломатія, а «не кримінальна справа». Зустріч Трампа з Путіним і Сі Цзіньпіном на саміті АТЕС, за його словами, обговорюється, але чи вирішено щось остаточно, він не знає. На заяви Зеленського про призупинення обміну розвідданими Рубіо відповів, що «паузи не було», і сказав, що не збирається коментувати все, що той говорить в інтерв’ю; Зеленському, за його словами, треба зосередитися на врегулюванні. ТАСС виносить у заголовок, що Рубіо пояснив проблеми ППО України збоєм програмного забезпечення.',
+  'РБК-Україна з посиланням на кореспондента «Радіо Свобода» у Вашингтоні Алекса Рауфоглу наводить відповідь Рубіо на запитання, чому Україна не отримала попередження про балістичні ракети по Києву: що сталося минулої ночі, він точно не знає, а кілька ночей тому виникла програмна проблема із системою раннього попередження України, яку вивчає Європейське командування ЗС США (EUCOM). Рубіо наголосив, що США не припиняли передавати Україні розвіддані, здивувався, звідки Зеленський бере таку інформацію і навіщо розповідає про неї пресі, і сказав, що тому слід зосередитися на припиненні війни. Видання нагадує дані The Washington Post: американська розвідка попереджала посольство України, що обмін даними зупинять, якщо удари по російських НПЗ триватимуть.',
+  None],
+ ['Rubio: there was no pause in intelligence sharing with Ukraine, sanctions put off for 60 days for the sake of talks; a Trump–Putin–Xi meeting is under discussion', 'Uzbekistan, Washington',
+  'Russian and Ukrainian sources relay Rubio\'s words closely but with different emphases. Russian agencies headline his denial of a "pause" in intelligence sharing, his call on Zelensky to focus on a settlement, his explanation of the sanctions suspension and the discussion of an APEC meeting. A TASS headline says Rubio blamed Ukraine\'s air defence problems on a software glitch; according to the recording cited by RBC-Ukraine, Rubio spoke of a software problem with the early warning system a few nights ago and said he did not know what happened last night. Russian sources do not mention the EUCOM review or the Washington Post report, while RBC-Ukraine does not relay his remarks on sanctions and APEC. There are no independent reports in the sample.',
+  'RIA Novosti, TASS and Interfax relay remarks US Secretary of State Marco Rubio made to journalists in Uzbekistan on the morning of 19 October. According to him, Trump suspended new sanctions against Russia for 60 days to see whether the talks with Ukraine and Russia can lead to something positive; the US will keep doing everything it can to end the war, and Trump is "open to anything he can do". Asked whether Moscow is open to talks, Rubio replied that this is diplomacy, "not a criminal case". A meeting of Trump with Putin and Xi Jinping at the APEC summit is under discussion, he said, but he does not know whether anything has been finalised. Responding to Zelensky\'s claims that intelligence sharing had been suspended, Rubio said "there was no pause" and that he would not comment on everything Zelensky says in interviews; Zelensky, he said, should focus on a settlement. A TASS headline says Rubio blamed Ukraine\'s air defence problems on a software glitch.',
+  'RBC-Ukraine, citing Radio Liberty\'s Washington correspondent Alex Raufoglu, quotes Rubio\'s answer to the question of why Ukraine received no warning of the ballistic missiles fired at Kyiv: he does not know exactly what happened last night, while a few nights ago there was a software problem with Ukraine\'s early warning system, which US European Command (EUCOM) is looking into. Rubio stressed that the US had not stopped sharing intelligence with Ukraine, wondered where Zelensky gets such information and why he tells the press about it, and said Zelensky should focus on ending the war. The outlet recalls the Washington Post report that US intelligence had warned Ukraine\'s embassy that the sharing would be stopped if strikes on Russian refineries continued.',
+  None])
+
+card('1019-front-claims', [12043, 12049, 12058, 12059, 12061, 12062, 12066, 12069, 12084, 12101, 12146, 12169, 12184, 12240, 12242, 12250, 12281, 12294, 12296],
+ 'Фронт 19 октября: Марочко — за неделю 12 населенных пунктов и около 100 кв. км на севере; Генштаб ВСУ — атаки на Гуляйпольском направлении', 'Сумская, Харьковская, Запорожская области', 'ukraine-wide',
+ ['не проверено', 'российская сторона заявляет, украинская не комментирует', 'одна из групп не освещает'],
+ S('ТАСС со ссылкой на военного эксперта Андрея Марочко пишет, что за неделю российские войска «освободили» около 100 кв. км в Сумской и Харьковской областях, лучший результат показала группировка «Север»; всего, по его словам, под контроль российских сил перешли 12 населенных пунктов, а ВСУ за неделю потеряли 9 тыс. военных. Боец группировки «Север» с позывным «Мех» рассказал РИА Новости и ТАСС, что с начала октября в Харьковской области уничтожено более 40 пунктов управления БПЛА ВСУ, а группировка завершила ликвидацию окруженного противника на северо-востоке области; другие бойцы называют более 30 уничтоженных наземных роботов с начала октября, а также более 50 военных, 22 автомобиля и более 200 беспилотников за ночь. Источник в российских силовых структурах сообщил РИА об уничтожении ракетным ударом стоянки техники южнее Харькова: до взвода личного состава и более 10 единиц техники. Командир танкового взвода рассказал, что экипаж за сутки отбил налет почти 200 FPV-дронов. Минобороны РФ публикует видео ударов по пунктам управления БПЛА в Запорожской области и работы артиллерии в ДНР.',
+   (12240, 'Марочко: ВС РФ на неделе освободили около 100 кв. км Сумской и Харьковской областей'),
+   (12242, 'За прошедшую неделю под контроль российских сил перешли 12 населенных пунктов'),
+   (12184, 'Марочко: Киев за неделю потерял в боях 9 тыс. солдат и наемников'),
+   (12043, 'Подразделения группировки войск "Север" завершили ликвидацию окруженного противника в северо-восточной части Харьковской области'),
+   (12049, 'уничтожили более 30 роботизированных комплексов ВСУ на харьковском направлении'),
+   (12059, 'Южнее Харькова точным ракетным ударом уничтожена стоянка с военной техникой ВСУ'),
+   (12058, 'За сутки сбили почти 200 дронов противника.'),
+   (12066, 'Группировка "Север" за ночь уничтожила более 50 боевиков ВСУ'),
+   (12101, 'Операторы ударных беспилотников группировки «Восток» уничтожили вражеские пункты управления БПЛА в Запорожской области')),
+ S('По данным утренней сводки Генштаба ВСУ, которую приводит «Общественное», российские войска девять раз атаковали позиции ВСУ на Гуляйпольском направлении в сторону шести населенных пунктов и один раз штурмовали в районе Плавней на Ореховском направлении. Генштаб также сообщает, что за сутки российская армия потеряла 2100 военных, а всего с начала полномасштабного вторжения — около 1 567 160; за сутки, по его данным, уничтожены 4 боевые бронированные машины, 24 артиллерийские системы и 1636 беспилотников. О ситуации в Сумской и Харьковской областях украинские источники в выборке 19 октября не сообщают.',
+   (12296, 'Про це повідомили в ранковому зведенні Генерального штабу ЗСУ.'),
+   (12296, 'На Оріхівському відтинку фронту війська РФ здійснили один штурм у районі Плавнів.'),
+   (12294, 'За минулу добу російська армія втратила 2100 військовослужбовців.')),
+ None,
+ 'Стороны пишут о разных участках фронта: российские источники — о продвижении и потерях ВСУ в Сумской и Харьковской областях, Генштаб ВСУ — об атаках на Гуляйпольском и Ореховском направлениях в Запорожской области. Заявления о 12 населенных пунктах и около 100 кв. км за неделю и о завершении ликвидации окруженных подразделений ВСУ на северо-востоке Харьковской области украинские источники в выборке не комментируют. Потери каждая сторона приводит только для противника (Марочко — 9 тыс. за неделю, Генштаб ВСУ — 2100 за сутки); независимо эти данные не проверяются, независимых сообщений в выборке нет.',
+ 'medium', 'Заявления о продвижении и потерях противника не проверены независимо; данные сторон относятся к разным участкам фронта.', False,
+ ['Фронт 19 жовтня: Марочко — за тиждень 12 населених пунктів і близько 100 кв. км на півночі; Генштаб ЗСУ — атаки на Гуляйпільському напрямку', 'Сумська, Харківська, Запорізька області',
+  'Сторони пишуть про різні ділянки фронту: російські джерела — про просування і втрати ЗСУ в Сумській та Харківській областях, Генштаб ЗСУ — про атаки на Гуляйпільському та Оріхівському напрямках у Запорізькій області. Заяви про 12 населених пунктів і близько 100 кв. км за тиждень та про завершення ліквідації оточених підрозділів ЗСУ на північному сході Харківської області українські джерела у вибірці не коментують. Втрати кожна сторона наводить лише для противника (Марочко — 9 тис. за тиждень, Генштаб ЗСУ — 2100 за добу); незалежно ці дані не перевіряються, незалежних повідомлень у вибірці немає.',
+  'ТАСС з посиланням на військового експерта Андрія Марочка пише, що за тиждень російські війська «звільнили» близько 100 кв. км у Сумській та Харківській областях, найкращий результат показало угруповання «Север»; загалом, за його словами, під контроль російських сил перейшли 12 населених пунктів, а ЗСУ за тиждень втратили 9 тис. військових. Боєць угруповання «Север» з позивним «Мех» розповів РИА Новости і ТАСС, що з початку жовтня в Харківській області знищено понад 40 пунктів керування БпЛА ЗСУ, а угруповання завершило ліквідацію оточеного противника на північному сході області; інші бійці називають понад 30 знищених наземних роботів з початку жовтня, а також понад 50 військових, 22 автомобілі й понад 200 безпілотників за ніч. Джерело в російських силових структурах повідомило РИА про знищення ракетним ударом стоянки техніки південніше Харкова: до взводу особового складу і понад 10 одиниць техніки. Командир танкового взводу розповів, що екіпаж за добу відбив наліт майже 200 FPV-дронів. Міноборони РФ публікує відео ударів по пунктах керування БпЛА в Запорізькій області та роботи артилерії в ДНР.',
+  'За даними ранкового зведення Генштабу ЗСУ, яке наводить «Суспільне», російські війська дев’ять разів атакували позиції ЗСУ на Гуляйпільському напрямку в бік шести населених пунктів і один раз штурмували в районі Плавнів на Оріхівському напрямку. Генштаб також повідомляє, що за добу російська армія втратила 2100 військових, а загалом від початку повномасштабного вторгнення — близько 1 567 160; за добу, за його даними, знищено 4 бойові броньовані машини, 24 артилерійські системи і 1636 безпілотників. Про ситуацію в Сумській та Харківській областях українські джерела у вибірці 19 жовтня не повідомляють.',
+  None],
+ ['Front, 19 October: Marochko claims 12 settlements and about 100 sq km in the north in a week; Ukraine\'s General Staff reports attacks in the Huliaipole direction', 'Sumy, Kharkiv, Zaporizhzhia regions',
+  'The two sides write about different sectors of the front: Russian sources about advances and Ukrainian losses in the Sumy and Kharkiv regions, Ukraine\'s General Staff about attacks in the Huliaipole and Orikhiv directions in the Zaporizhzhia region. Ukrainian sources in the sample do not comment on the claims of 12 settlements and about 100 sq km in a week or of the encircled Ukrainian units in the north-east of the Kharkiv region having been eliminated. Each side gives losses only for the enemy (Marochko: 9 thousand in a week; Ukraine\'s General Staff: 2100 in a day); these figures are not independently verified, and there are no independent reports in the sample.',
+  'TASS, citing military expert Andrei Marochko, writes that in a week Russian forces "liberated" about 100 sq km in the Sumy and Kharkiv regions, with the "Sever" group achieving the best result; in total, he says, 12 settlements came under the control of Russian forces, and Ukraine\'s forces lost 9 thousand troops in the week. A soldier of the "Sever" group with the call sign "Mekh" told RIA Novosti and TASS that since the start of October more than 40 Ukrainian drone control points have been destroyed in the Kharkiv region and that the group has finished eliminating the encircled enemy in the north-east of the region; other soldiers cite more than 30 ground robots destroyed since the start of October and more than 50 troops, 22 vehicles and more than 200 drones overnight. A source in the Russian security agencies told RIA that a missile strike destroyed a vehicle park south of Kharkiv: up to a platoon of personnel and more than 10 pieces of equipment. A tank platoon commander said his crew fought off a raid of almost 200 FPV drones in a day. The Russian Defence Ministry publishes videos of strikes on drone control points in the Zaporizhzhia region and of artillery at work in the "DPR".',
+  'According to the General Staff\'s morning report cited by Suspilne, Russian troops attacked Ukrainian positions nine times in the Huliaipole direction towards six settlements and assaulted once near Plavni in the Orikhiv direction. The General Staff also reports that the Russian army lost 2100 troops in a day and about 1 567 160 since the start of the full-scale invasion; in a day, according to it, 4 armoured fighting vehicles, 24 artillery systems and 1636 drones were destroyed. Ukrainian sources in the sample on 19 October do not report on the situation in the Sumy and Kharkiv regions.',
+  None])
+
+# ---- extensions
+
+@ext('1019-kyiv-ballistic-night', [12225, 12261, 12279, 12309])
+def _(c):
+    rep(c, ('ru', 'summary'), 'О целях, попаданиях и пострадавших российские источники в выборке не пишут, сообщений Минобороны РФ об этой атаке нет.', 'О попаданиях и пострадавших российские источники в выборке не пишут.')
+    rep(c, ('uk', 'ru'), 'Про цілі, влучання і постраждалих російські джерела у вибірці не пишуть, повідомлень Міноборони РФ про цю атаку немає.', 'Про влучання і постраждалих російські джерела у вибірці не пишуть.')
+    rep(c, ('en', 'ru'), 'Russian sources in the sample do not write about targets, hits or casualties, and there is no Russian Defence Ministry statement on this attack.', 'Russian sources in the sample do not write about hits or casualties.')
+    add(c, 'ru', 'Утром Минобороны РФ заявило о ночном массированном ударе высокоточным оружием наземного базирования и ударными беспилотниками большой дальности: по его данным, поражены предприятия военной промышленности, объекты хранения крылатых ракет и БПЛА и центр обработки данных в Киеве и Киевской области; заявление передают РИА Новости, ТАСС и «Интерфакс».',
+        'Уранці Міноборони РФ заявило про нічний масований удар високоточною зброєю наземного базування та ударними безпілотниками великої дальності: за його даними, уражено підприємства військової промисловості, об’єкти зберігання крилатих ракет і БпЛА та центр обробки даних у Києві та Київській області; заяву передають РИА Новости, ТАСС та «Інтерфакс».',
+        'In the morning the Russian Defence Ministry claimed a massive overnight strike with ground-based precision weapons and long-range attack drones: according to it, military-industrial plants, cruise missile and drone storage sites and a data centre in Kyiv and the Kyiv region were hit; RIA Novosti, TASS and Interfax relay the statement.',
+        [(12279, 'В результате удара поражены предприятия военной промышленности, объекты хранения крылатых ракет, беспилотных летательных аппаратов и центр обработки данных в городе Киеве и Киевской области'),
+         (12309, 'Вооруженные силы России ночью нанесли массированный удар высокоточным оружием наземного базирования и беспилотниками по целям в Киеве и Киевской области')])
+    for path, old, new in [
+        (('title',), 'российские агентства сообщают о взрывах в Луцке, Ровно и Днепре', 'Минобороны РФ — удар по ВПК, взрывы в Луцке, Ровно и Днепре'),
+        (('uk', 't'), 'російські агентства повідомляють про вибухи в Луцьку, Рівному і Дніпрі', 'Міноборони РФ — удар по ВПК, вибухи в Луцьку, Рівному і Дніпрі'),
+        (('en', 't'), 'Russian agencies report explosions in Lutsk, Rivne and Dnipro', 'Russian MoD claims hits on defence industry; explosions in Lutsk, Rivne and Dnipro'),
+        (('diverge',), 'Российские агентства о целях и последствиях не пишут и повторяют формулировку об ударах по «центрам принятия решений», РБК-Украина сообщает',
+         'Минобороны РФ заявляет о поражении предприятий военной промышленности, складов крылатых ракет и БПЛА и центра обработки данных, о повреждениях метро и жилых домов российские источники не пишут; РБК-Украина сообщает'),
+        (('uk', 'd'), 'Російські агентства про цілі й наслідки не пишуть і повторюють формулювання про удари по «центрах ухвалення рішень», РБК-Україна повідомляє',
+         'Міноборони РФ заявляє про ураження підприємств військової промисловості, складів крилатих ракет і БпЛА та центру обробки даних, про пошкодження метро і житлових будинків російські джерела не пишуть; РБК-Україна повідомляє'),
+        (('en', 'd'), 'Russian agencies do not write about targets or consequences and repeat the line about strikes on "decision-making centres", while RBC-Ukraine reports',
+         'The Russian Defence Ministry claims hits on military-industrial plants, cruise missile and drone depots and a data centre, and Russian sources do not mention damage to the metro or residential buildings, while RBC-Ukraine reports')]:
+        rep(c, path, old, new)
+    c['uncertainty_reason'] += ' Заявление Минобороны РФ о поражении военных объектов независимо не подтверждено.'
+
+@ext('1019-kyiv-cruise-missiles-morning', [12293])
+def _(c):
+    add(c, 'ua', '«Общественное» утром 19 октября со ссылкой на руководство Ирпеня (Киевская область) сообщило о прямом попадании в частном секторе и пожаре на одном из предприятий, есть раненые; время удара не уточняется.',
+        '«Суспільне» вранці 19 жовтня з посиланням на керівництво Ірпеня (Київська область) повідомило про пряме влучання в приватному секторі та пожежу на одному з підприємств, є поранені; час удару не уточнюється.',
+        'On the morning of 19 October Suspilne, citing Irpin officials (Kyiv region), reported a direct hit on private houses and a fire at an enterprise, with people injured; the time of the strike is not given.',
+        [(12293, 'зафіксовано пряме влучання у приватному секторі'),
+         (12293, 'в місті є поранені, їм надають необхідну медичну допомогу.'),
+         (12293, 'на території одного з підприємств громади виникла пожежа')])
+    c['place'] = 'Киев, Ирпень'; c['uk']['p'] = 'Київ, Ірпінь'; c['en']['p'] = 'Kyiv, Irpin'
+    for path, old, new in [
+        (('diverge',), 'О последствиях на момент публикации не сообщает ни одна из сторон;',
+         'О последствиях в самом Киеве на момент публикации не сообщает ни одна из сторон; «Общественное» сообщает о попадании и раненых в Ирпене, не уточняя время удара, российские источники об этом не пишут;'),
+        (('uk', 'd'), 'Про наслідки на момент публікації не повідомляє жодна зі сторін;',
+         'Про наслідки в самому Києві на момент публікації не повідомляє жодна зі сторін; «Суспільне» повідомляє про влучання і поранених в Ірпені, не уточнюючи час удару, російські джерела про це не пишуть;'),
+        (('en', 'd'), 'At the time of publication neither side reports on the consequences;',
+         'At the time of publication neither side reports on the consequences in Kyiv itself; Suspilne reports a hit and injured people in Irpin without giving the time of the strike, and Russian sources do not mention it;'),
+        (('diverge',), 'российские источники в выборке об этом не пишут.', 'российские источники пишут об этом лишь в связи с заявлениями Рубио.'),
+        (('uk', 'd'), 'російські джерела у вибірці про це не пишуть.', 'російські джерела пишуть про це лише у зв’язку із заявами Рубіо.'),
+        (('en', 'd'), 'Russian sources in the sample do not mention this.', 'Russian sources mention this only in connection with Rubio\'s remarks.'),
+        (('uncertainty_reason',), 'сведений о последствиях и пострадавших нет,', 'сведений о последствиях в Киеве нет, время удара по Ирпеню и число раненых не уточняются,')]:
+        rep(c, path, old, new)
+
+@ext('1019-strikes-regions-rivne-dnipro', [12221, 12232, 12257, 12286])
+def _(c):
+    add(c, 'ru', 'Позже РИА Новости со ссылкой на «Общественное» также сообщило о взрыве в Ровно, а РИА и ТАСС — о взрыве в Днепропетровске (Днепре) на фоне воздушной тревоги.',
+        'Пізніше РИА Новости з посиланням на «Суспільне» також повідомило про вибух у Рівному, а РИА і ТАСС — про вибух у Дніпрі на тлі повітряної тривоги.',
+        'Later RIA Novosti, citing Suspilne, also reported an explosion in Rivne, and RIA and TASS an explosion in Dnipro (which they call Dnepropetrovsk) amid an air-raid alert.',
+        [(12221, 'В Ровно прозвучал звук взрыва'),
+         (12232, 'Взрыв прогремел в Днепропетровске на Украине на фоне воздушной тревоги'),
+         (12257, 'В Днепропетровске произошел взрыв. Подробности не приводятся')])
+    rep(c, ('en', 'ua'), 'Suspilne, citing the head of the Rivne regional military administration Oleksandr Koval,', 'Suspilne, citing Rivne regional administration head Oleksandr Koval,')
+    rep(c, ('en', 'ua'), 'according to the head of the Dnipropetrovsk regional military administration Oleksandr Hanzha and regional council chairman Mykola Lukashuk,', 'according to regional administration head Oleksandr Hanzha and regional council chairman Mykola Lukashuk,')
+    add(c, 'ua', 'Позже Ганжа уточнил, что 84-летняя женщина госпитализирована в состоянии средней тяжести; на Никопольщине под ударом были райцентр, Покровская и Марганецкая громады, повреждено предприятие, в Зайцевской громаде Синельниковского района возник пожар.',
+        'Пізніше Ганжа уточнив, що 84-річну жінку госпіталізовано в стані середньої тяжкості; на Нікопольщині під ударом були райцентр, Покровська та Марганецька громади, пошкоджено підприємство, у Зайцівській громаді Синельниківського району сталася пожежа.',
+        'Hanzha later said the 84-year-old woman was hospitalised in moderate condition; in the Nikopol district the district centre and the Pokrovske and Marhanets communities came under fire and an enterprise was damaged, and a fire broke out in the Zaitseve community of the Synelnykove district.',
+        [(12286, 'У стані середньої тяжкості госпіталізована 84-річна жінка.'),
+         (12286, 'На Нікопольщині під ударом були райцентр, Покровська та Марганецька громади. Пошкоджене підприємство.'),
+         (12286, 'У Зайцівській громаді Синельниківського району сталася пожежа.')])
+    for path, old, new in [
+        (('diverge',), 'Российские источники сообщают лишь о взрыве в Ровно и о том', 'Российские источники сообщают лишь о взрывах в Ровно и Днепре и о том'),
+        (('uk', 'd'), 'лише про вибух у Рівному і про те', 'лише про вибухи в Рівному і Дніпрі та про те'),
+        (('en', 'd'), 'report only an explosion in Rivne and that', 'report only explosions in Rivne and Dnipro and that'),
+        (('diverge',), 'атаки на энергетику Николаевщины.', 'атаки на энергетику Николаевщины и удары по Никопольщине.'),
+        (('uk', 'd'), 'атаки на енергетику Миколаївщини.', 'атаки на енергетику Миколаївщини та удари по Нікопольщині.'),
+        (('en', 'd'), 'attacks on energy facilities in the Mykolaiv region.', 'attacks on energy facilities in the Mykolaiv region and strikes on the Nikopol district.')]:
+        rep(c, path, old, new)
+
+@ext('1018-trump-truth-social-zelensky', [12241, 12306])
+def _(c):
+    # Meduza 12306 retells the same Truth Social post (no new facts); TASS EN 12241 = Bruesewitz on X (same as RIA 11997); ids only
+    pass
+
+apply(['c18d.json', 'c19a.json', 'c19c.json', 'c19d.json'])
+json.dump(cards, open(OUT + 'c19e.json', 'w'), ensure_ascii=False, indent=1)
+print('new cards', len(cards))
+# length check on all touched / new cards
+for f in ['c18d.json', 'c19a.json', 'c19c.json', 'c19d.json', 'c19e.json']:
+    for c in json.load(open(OUT + f)):
+        L = [len(c[s]['summary']) for s in ('ru', 'ua', 'ind') if c[s]] + [len(c[l][k]) for l in ('uk', 'en') for k in ('ru', 'ua', 'ind', 'd') if c[l][k]] + [len(c['diverge'])]
+        if max(L) > 1400: print('TOO LONG', f, c['key'], max(L))
+        if len(c['title']) > 160: print('TITLE LONG', c['key'], len(c['title']))

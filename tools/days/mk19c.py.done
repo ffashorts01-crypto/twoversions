@@ -1,0 +1,112 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+from extlib import add, setd, ext, apply
+OUT = '/workspace/compare-site-v2/tools/days/out/'
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+# ---------------- hourly run 05:01 Oct 19 (ids 11993-12042): 1 new Oct 19 card + extensions ----------------
+# Oct 19 front reports (MoD / TASS group summaries) and Samara airport restrictions lifted stay Russian-only (SKIPPED.md).
+
+def rep(c, path, old, new):
+    o = c
+    for p in path[:-1]: o = o[p]
+    assert old in o[path[-1]], (c['key'], path, old[:40])
+    o[path[-1]] = o[path[-1]].replace(old, new)
+
+card('1019-peskov-trilateral-meeting', [11920, 11983, 12032, 12042, 12041],
+ 'Песков в интервью WSJ: Россия, США и Китай допускают трехстороннюю встречу лидеров; РБК-Украина пишет о саммите без Зеленского', 'Москва', 'ukraine-wide',
+ ['расхождение: формулировки', 'умолчание', 'одна из групп не освещает'],
+ S('Пресс-секретарь Кремля Дмитрий Песков в интервью The Wall Street Journal заявил, что четкого понимания относительно самой встречи Путина, Трампа и Си Цзиньпина и ее повестки пока нет, «хотя все три стороны признают гипотетическую возможность такой встречи» (РИА Новости, ТАСС, «Интерфакс»). РИА напоминает слова помощника президента Юрия Ушакова о том, что инициировать встречу должен Пекин, если Трамп подтвердит участие в саммите АТЭС, который пройдет в Шэньчжэне 18–19 ноября; «Интерфакс» — что практическая проработка встречи еще не начиналась. ТАСС (англ.) приводит слова Путина на Валдае: возможность встречи во многом зависит от принимающей стороны. Об Украине и войне российские сообщения в выборке не упоминают.',
+   (12042, 'Пока нет четкого понимания относительно самой встречи или ее потенциальной повестки, хотя все три стороны признают гипотетическую возможность такой встречи'),
+   (11983, 'Песков: Россия, США и Китай допускают возможность трехсторонней встречи'),
+   (11920, 'инициировать встречу трех лидеров должен Пекин, если Трамп подтвердит свое участие в саммите АТЭС'),
+   (11920, 'Саммит АТЭС пройдет в китайском Шэньчжэне 18-19 ноября.'),
+   (12042, 'практическая проработка трехсторонней встречи президентов РФ Владимира Путина, США Дональда Трампа и председателя КНР Си Цзиньпина еще не начиналась'),
+   (12032, 'largely depended on the host party')),
+ S('РБК-Украина со ссылкой на интервью Пескова WSJ пишет, что Россия предлагает провести в ноябре трехсторонний саммит с США и Китаем, чтобы договориться о завершении войны на выгодных для Москвы условиях, а президента Украины Владимира Зеленского на встречу звать не планируют. Издание приводит ту же цитату Пескова, называет Путина «российским диктатором» и пишет, что Трамп демонстративно избегает давления на Москву: он заморозил закон о санкциях против России и перекладывает ответственность за затягивание войны на Зеленского. Зеленский, по данным издания, считает, что шаги Вашингтона выглядят как попытка склонить Украину к капитуляции.',
+   (12041, 'Росія пропонує провести в листопаді тристоронній саміт із США і Китаєм, щоб домовитися про завершення війни на вигідних для Москви умовах.'),
+   (12041, 'Президента України Володимира Зеленського на зустріч кликати не планують.'),
+   (12041, 'Тим часом Трамп демонстративно уникає тиску на Москву.'),
+   (12041, 'кроки Вашингтона виглядають як спроба схилити Україну до капітуляції')),
+ None,
+ 'Обе стороны одинаково цитируют Пескова: повестки встречи пока нет, но все три стороны допускают ее возможность. Российские агентства подают новость как обсуждение встречи на полях саммита АТЭС и не упоминают Украину, а РБК-Украина — как попытку Москвы договориться о завершении войны на своих условиях без участия Зеленского; в приведенной цитате Пескова о войне и об Украине не говорится. Независимых сообщений в выборке нет.',
+ 'medium', 'Утверждение РБК-Украина о цели саммита и о том, что Зеленского не позовут, в выборке не подкреплено цитатой; сам Песков говорит, что повестки пока нет.', False,
+ ['Пєсков в інтерв’ю WSJ: Росія, США і Китай допускають тристоронню зустріч лідерів; РБК-Україна пише про саміт без Зеленського', 'Москва',
+  'Обидві сторони однаково цитують Пєскова: порядку денного зустрічі поки немає, але всі три сторони допускають її можливість. Російські агентства подають новину як обговорення зустрічі на полях саміту АТЕС і не згадують Україну, а РБК-Україна — як спробу Москви домовитися про завершення війни на своїх умовах без участі Зеленського; у наведеній цитаті Пєскова про війну та Україну не йдеться. Незалежних повідомлень у вибірці немає.',
+  'Речник Кремля Дмитро Пєсков в інтерв’ю The Wall Street Journal заявив, що чіткого розуміння щодо самої зустрічі Путіна, Трампа і Сі Цзіньпіна та її порядку денного поки немає, «хоча всі три сторони визнають гіпотетичну можливість такої зустрічі» (РИА Новости, ТАСС, «Интерфакс»). РИА нагадує слова помічника президента Юрія Ушакова про те, що ініціювати зустріч має Пекін, якщо Трамп підтвердить участь у саміті АТЕС, який відбудеться в Шеньчжені 18–19 листопада; «Интерфакс» — що практичне опрацювання зустрічі ще не починалося. ТАСС (англ.) наводить слова Путіна на Валдаї: можливість зустрічі значною мірою залежить від сторони, що приймає. Про Україну та війну російські повідомлення у вибірці не згадують.',
+  'РБК-Україна з посиланням на інтерв’ю Пєскова WSJ пише, що Росія пропонує провести в листопаді тристоронній саміт із США і Китаєм, щоб домовитися про завершення війни на вигідних для Москви умовах, а президента України Володимира Зеленського на зустріч кликати не планують. Видання наводить ту саму цитату Пєскова, називає Путіна «російським диктатором» і пише, що Трамп демонстративно уникає тиску на Москву: він заморозив закон про санкції проти Росії і перекладає відповідальність за затягування війни на Зеленського. Зеленський, за даними видання, вважає, що кроки Вашингтона виглядають як спроба схилити Україну до капітуляції.',
+  None],
+ ["Peskov to the WSJ: Russia, the US and China allow for a trilateral leaders' meeting; RBC-Ukraine writes of a summit without Zelensky", 'Moscow',
+  'Both sides quote Peskov in the same way: there is no agenda for the meeting yet, but all three parties acknowledge it is possible. Russian agencies present the news as a discussion of a meeting on the sidelines of the APEC summit and do not mention Ukraine, while RBC-Ukraine presents it as a Moscow attempt to agree on ending the war on its own terms without Zelensky; the quoted Peskov statement says nothing about the war or Ukraine. There are no independent reports in the sample.',
+  'Kremlin spokesman Dmitry Peskov told The Wall Street Journal that there is no clear understanding yet of the meeting of Putin, Trump and Xi Jinping itself or its agenda, "although all three parties acknowledge the hypothetical possibility of such a meeting" (RIA Novosti, TASS, Interfax). RIA recalls presidential aide Yuri Ushakov\'s words that Beijing should initiate the meeting if Trump confirms his participation in the APEC summit, to be held in Shenzhen on 18–19 November; Interfax adds that practical preparation of the meeting has not yet begun. TASS (English) quotes Putin at Valdai: the possibility of the meeting largely depends on the host party. Russian reports in the sample do not mention Ukraine or the war.',
+  'RBC-Ukraine, citing Peskov\'s interview with the WSJ, writes that Russia proposes holding a trilateral summit with the US and China in November to agree on ending the war on terms favourable to Moscow, and that there are no plans to invite Ukrainian President Volodymyr Zelensky. The outlet quotes the same Peskov statement, calls Putin a "Russian dictator" and writes that Trump is pointedly avoiding pressure on Moscow: he has frozen the Russia sanctions bill and is shifting responsibility for prolonging the war onto Zelensky. Zelensky, according to the outlet, believes Washington\'s steps look like an attempt to push Ukraine towards capitulation.',
+  None])
+
+# ---- extensions
+
+@ext('1019-kyiv-ballistic-night', [11998, 12029, 12040])
+def _(c):
+    add(c, 'ru', 'Под утро РИА Новости со ссылкой на «Общественное» и ТАСС сообщили о взрывах в Днепропетровске (Днепре) на фоне воздушной тревоги.',
+        'Під ранок РИА Новости з посиланням на «Суспільне» і ТАСС повідомили про вибухи в Дніпрі на тлі повітряної тривоги.',
+        'Towards morning RIA Novosti, citing Suspilne, and TASS reported explosions in Dnipro (which they call Dnepropetrovsk) amid an air-raid alert.',
+        [(11998, 'В Днепропетровске прозвучали взрывы'),
+         (12029, 'В Днепропетровске произошел взрыв. В городе действует воздушная тревога')])
+    add(c, 'ind', 'Al Jazeera в материале о массированной атаке дронов на Россию со ссылкой на Telegram Кличко пишет, что российский удар по Киеву ночью убил женщину, задел станцию метро и повредил 25-этажный жилой дом, а также нежилые здания и медучреждение; ранены еще три человека. Вечернюю и ночную атаки издание при этом не разделяет: гибель женщины и медцентр, по данным РБК-Украина, относятся к первой, вечерней атаке.',
+        'Al Jazeera у матеріалі про масовану атаку дронів на Росію з посиланням на Telegram Кличка пише, що російський удар по Києву вночі вбив жінку, зачепив станцію метро і пошкодив 25-поверховий житловий будинок, а також нежитлові будівлі та медичний заклад; поранено ще трьох людей. Вечірню і нічну атаки видання при цьому не розділяє: загибель жінки і медцентр, за даними РБК-Україна, стосуються першої, вечірньої атаки.',
+        'Al Jazeera, in a report on the massive drone attack on Russia and citing Klitschko\'s Telegram, writes that a Russian strike on Kyiv overnight killed a woman, hit a metro station and damaged a 25-storey residential building, as well as non-residential buildings and a medical facility; three other people were injured. The outlet does not separate the evening and night attacks: according to RBC-Ukraine, the woman\'s death and the medical centre relate to the first, evening attack.',
+        [(12040, 'while also hitting a subway station and damaging a 25-storey residential'),
+         (12040, 'Mayor Vitali Klitschko said on Telegram on Monday'),
+         (12040, 'The attack, which also hit non-residential buildings and a medical facility')])
+    for path, old, new in [
+        (('title',), 'о взрывах в Луцке и Ровно', 'о взрывах в Луцке, Ровно и Днепре'),
+        (('uk', 't'), 'про вибухи в Луцьку і Рівному', 'про вибухи в Луцьку, Рівному і Дніпрі'),
+        (('en', 't'), 'explosions in Lutsk and Rivne', 'explosions in Lutsk, Rivne and Dnipro'),
+        (('place',), 'Киев, Луцк, Ровно', 'Киев, Луцк, Ровно, Днепр'),
+        (('uk', 'p'), 'Київ, Луцьк, Рівне', 'Київ, Луцьк, Рівне, Дніпро'),
+        (('en', 'p'), 'Kyiv, Lutsk, Rivne', 'Kyiv, Lutsk, Rivne, Dnipro'),
+        (('diverge',), 'О взрывах в Луцке и Ровно', 'О взрывах в Луцке, Ровно и Днепре'),
+        (('uk', 'd'), 'Про вибухи в Луцьку і Рівному', 'Про вибухи в Луцьку, Рівному і Дніпрі'),
+        (('en', 'd'), 'Explosions in Lutsk and Rivne', 'Explosions in Lutsk, Rivne and Dnipro'),
+        (('diverge',), 'Независимых сообщений об атаке в выборке нет.',
+         'Al Jazeera подтверждает попадание в станцию метро и добавляет поврежденный 25-этажный жилой дом, но описывает вечернюю и ночную атаки как один ночной удар, поэтому отдельных данных о пострадавших при второй атаке нет.'),
+        (('uk', 'd'), 'Незалежних повідомлень про атаку у вибірці немає.',
+         'Al Jazeera підтверджує влучання в станцію метро і додає пошкоджений 25-поверховий житловий будинок, але описує вечірню і нічну атаки як один нічний удар, тож окремих даних про постраждалих під час другої атаки немає.'),
+        (('en', 'd'), 'There are no independent reports of the attack in the sample.',
+         'Al Jazeera confirms the hit on a metro station and adds a damaged 25-storey residential building, but describes the evening and night attacks as a single overnight strike, so there are no separate casualty figures for the second attack.')]:
+        rep(c, path, old, new)
+    c['tags'] = ['не проверено', 'расхождение: формулировки', 'умолчание']
+    c['uncertainty_reason'] = 'Данные предварительные: Al Jazeera не разделяет последствия вечерней и ночной атак, отдельных сведений о пострадавших при второй атаке нет, о взрывах в Луцке, Ровно и Днепре известно только из пересказа российских агентств.'
+
+@ext('1018-trump-truth-social-zelensky', [11962, 11997])
+def _(c):
+    add(c, 'ru', 'Советник Трампа Алекс Брусевиц написал в X, по данным РИА: «Президент Трамп прав».',
+        'Радник Трампа Алекс Брусевіц написав у X, за даними РИА: «Президент Трамп має рацію».',
+        'Trump adviser Alex Bruesewitz wrote on X, according to RIA: "President Trump is right."',
+        [(11997, 'Президент Трамп прав. Зеленский не проявил никакой искренней заинтересованности в прекращении этой войны.')])
+
+@ext('1018-front-claims', [12011, 12013, 12021])
+def _(c):
+    pass   # TASSr 12011, 12013, 12021: headline-level interviews of Russian officers on Dobropillia (scouts speaking Ukrainian, residents with "help us out" posters, "Bastion" tunnels); extra coverage ids only (ru/en near 1400)
+
+@ext('1017-front-claims-gerasimov-disputed', [11995, 12017])
+def _(c):
+    add(c, 'ru', '19 октября РИА Новости со ссылкой на Минобороны РФ сообщило, что при взятии Великомихайловки группировка «Восток» уничтожила 37 боевых бронированных машин, 42 наземных роботизированных комплекса и свыше 110 тяжелых гексакоптеров «Баба-яга»; ТАСС пишет о захваченных под Великомихайловкой «инкубаторах» для дронов ВСУ.',
+        '19 жовтня РИА Новости з посиланням на Міноборони РФ повідомило, що під час захоплення Великомихайлівки угруповання «Восток» знищило 37 бойових броньованих машин, 42 наземні роботизовані комплекси і понад 110 важких гексакоптерів «Баба-яга»; ТАСС пише про захоплені під Великомихайлівкою «інкубатори» для дронів ЗСУ.',
+        'On 19 October RIA Novosti, citing Russia\'s Defence Ministry, reported that while taking Velykomykhailivka the "Vostok" group destroyed 37 armoured combat vehicles, 42 unmanned ground vehicles and over 110 heavy "Baba Yaga" hexacopters; TASS writes about drone "incubators" of the Ukrainian army captured near Velykomykhailivka.',
+        [(11995, '37 боевых бронированных машин, 29 автомобилей, 21 единица мототехники, 42 наземных роботизированных комплекса и свыше 110 тяжелых гексакоптеров типа "Баба-яга"'),
+         (12017, 'Штурмовики "Востока" захватили "инкубаторы" для дронов ВСУ под Великомихайловкой')])
+
+@ext('1014-nord-stream-trial-opens', [12008])
+def _(c):
+    add(c, 'ru', '19 октября итальянский адвокат Кузнецова Никола Канестрини заявил РИА Новости, что его подзащитный содержится в следственном изоляторе Гамбурга в условиях фактической изоляции, отличающихся от гарантированных Германией итальянским судьям, и что он сообщил об этом министерству юстиции Италии; следующее заседание назначено на 27 октября.',
+        '19 жовтня італійський адвокат Кузнєцова Нікола Канестріні заявив РИА Новости, що його підзахисного тримають у слідчому ізоляторі Гамбурга в умовах фактичної ізоляції, які відрізняються від гарантованих Німеччиною італійським суддям, і що він повідомив про це міністерство юстиції Італії; наступне засідання призначено на 27 жовтня.',
+        'On 19 October Kuznetsov\'s Italian lawyer Nicola Canestrini told RIA Novosti that his client is being held in a Hamburg pre-trial detention centre in de facto isolation, unlike the conditions Germany guaranteed to Italian judges, and that he has informed the Italian Justice Ministry; the next hearing is set for 27 October.',
+        [(12008, 'Он содержится в следственном изоляторе Гамбурга в условиях фактической изоляции, которые существенно отличаются от тех, соблюдение которых Германия гарантировала итальянским судьям перед его передачей'),
+         (12008, 'Я уже сообщил об этой проблеме министерству юстиции Италии'),
+         (12008, 'Следующее заседание назначено на 27 октября')])
+
+apply(['c14b.json', 'c17d.json', 'c18b.json', 'c18d.json', 'c19a.json'])
+json.dump(cards, open(OUT + 'c19b.json', 'w'), ensure_ascii=False, indent=1)
+print('new cards', len(cards))

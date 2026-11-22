@@ -1,0 +1,56 @@
+import sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from extlib import add, setd, ext, apply
+
+# ---------------- hourly run 21:03 (ids 11653-11704): extensions of earlier cards (Oct 17 Kherson, Oct 18); no new events with 2+ groups ----------------
+@ext('1018-moldova-border-guards-returned', [11666])
+def _(c):
+    add(c, 'ru', 'Вечером РИА Новости со ссылкой на Teleradio-Moldova и источники в Пограничной полиции сообщило, что прокуратура Молдовы не стала применять к пограничникам меры пресечения, но будет вызывать участников инцидента на допросы; оружие и моторную лодку изъяли по уголовному делу. В Погранполиции опровергли сообщения Telegram-каналов о том, что задержанные были сотрудниками военкомата.',
+        'Увечері РИА Новости з посиланням на Teleradio-Moldova та джерела в Прикордонній поліції повідомило, що прокуратура Молдови не стала застосовувати до прикордонників запобіжні заходи, але викликатиме учасників інциденту на допити; зброю та моторний човен вилучили в межах кримінальної справи. У Прикордонній поліції спростували повідомлення Telegram-каналів про те, що затримані були працівниками військкомату.',
+        'In the evening RIA Novosti, citing Teleradio-Moldova and sources in the Border Police, reported that Moldovan prosecutors did not impose preventive measures on the border guards but will summon those involved for questioning; the weapons and the motorboat were seized as part of the criminal case. The Border Police denied reports on Telegram channels that the detainees were military enlistment office staff.',
+        [(11666, 'обнаруженное оружие и моторную лодку молдавские правоохранители изъяли в рамках расследования уголовного дела'),
+         (11666, 'уточнив, что речь идет о штатном пограничном патруле')])
+    setd(c, c['diverge'] + ' При этом РИА Новости со ссылкой на Погранполицию Молдовы уточняет, что задержанные были штатным пограничным патрулем, а не сотрудниками военкомата.',
+         c['uk']['d'] + ' Водночас РИА Новости з посиланням на Прикордонну поліцію Молдови уточнює, що затримані були штатним прикордонним патрулем, а не працівниками військкомату.',
+         c['en']['d'] + ' At the same time RIA Novosti, citing the Moldovan Border Police, specifies that the detainees were a regular border patrol, not enlistment office staff.')
+
+@ext('1018-zelensky-nbc-bessent-starlink', [11692, 11697])
+def _(c):
+    add(c, 'ua', 'Суспильне и «Украинская правда» приводят его слова о выборах: если они пройдут во время войны, он будет баллотироваться, потому что должен защищать страну до конца войны; для подготовки выборов он просит минимум 60 дней прекращения огня, а утверждения, что он не хочет выборов, назвал неправдой.',
+        'Суспільне та «Українська правда» наводять його слова про вибори: якщо вони відбудуться під час війни, він балотуватиметься, бо має захищати країну до кінця війни; для підготовки виборів він просить щонайменше 60 днів припинення вогню, а твердження, що він не хоче виборів, назвав неправдою.',
+        'Suspilne and Ukrainska Pravda quote his words on elections: if they are held during the war he will run, because he must defend the country until the end of the war; to prepare elections he asks for at least 60 days of ceasefire, and called claims that he does not want elections untrue.',
+        [(11692, 'Тому що я повинен захищати свою країну від самого початку і до кінця цієї війни'),
+         (11697, 'Дайте нам щонайменше 60 днів припинення вогню, без жодних інших переговорів, просто 60 днів')])
+
+@ext('1018-russian-side-casualties', [11704])
+def _(c):
+    add(c, 'ru', '«Интерфакс» привел подробности оперштаба: в Новой Таволжанке мужчина получил осколочные ранения ног при детонации дрона, там же поврежден коммерческий объект.',
+        '«Інтерфакс» навів подробиці оперштабу: у Новій Таволжанці чоловік дістав осколкові поранення ніг під час детонації дрона, там же пошкоджено комерційний об’єкт.',
+        'Interfax gave details from the operational headquarters: in Novaya Tavolzhanka a man suffered shrapnel wounds to his legs when a drone detonated, and a commercial facility there was damaged.',
+        [(11704, 'В селе Новая Таволжанка Шебекинского округа в результате детонации дрона пострадал мужчина'),
+         (11704, 'В селе в результате атаки дрона поврежден коммерческий объект')])
+
+@ext('1018-drones-moscow-mod-totals', [11661, 11676, 11678])
+def _(c):
+    add(c, 'ru', 'Позже Росавиация ввела временные ограничения на прием и выпуск самолетов в аэропорту Тамбова (РИА Новости, ТАСС); ТАСС сообщило, что Шереметьево планомерно возвращается к штатному расписанию.',
+        'Пізніше Росавіація запровадила тимчасові обмеження на прийом і випуск літаків в аеропорту Тамбова (РИА Новости, ТАСС); ТАСС повідомило, що Шереметьєво планомірно повертається до штатного розкладу.',
+        'Later Rosaviatsia imposed temporary restrictions on arrivals and departures at Tambov airport (RIA Novosti, TASS); TASS reported that Sheremetyevo is gradually returning to its normal schedule.',
+        [(11661, 'Введены временные ограничения на прием и выпуск воздушных судов'),
+         (11678, 'Шереметьево планомерно возвращается к штатному расписанию')])
+
+@ext('1018-strikes-west-ukraine-energy', [11687, 11688, 11689])
+def _(c):
+    add(c, 'ua', 'Суспильне сообщает о графиках и на Черкасщине, Полтавщине и Харьковщине.',
+        'Суспільне повідомляє про графіки й на Черкащині, Полтавщині та Харківщині.',
+        'Suspilne reports schedules in Cherkasy, Poltava and Kharkiv regions too.',
+        [(11687, 'Як повідомили в Укренерго, причина — пошкодження енергооб\'єктів ударами РФ.')])
+
+@ext('1017-kherson-air-strikes', [11698])
+def _(c):
+    add(c, 'ua', '18 октября глава Херсонской ОВА Александр Прокудин сообщил, что в больнице умер 58-летний мужчина, тяжело раненный при авиаударах по Корабельному району; всего в результате этой атаки погибли двое, 35 человек ранены.',
+        '18 жовтня голова Херсонської ОВА Олександр Прокудін повідомив, що в лікарні помер 58-річний чоловік, тяжко поранений під час авіаударів по Корабельному району; загалом унаслідок цієї атаки загинули двоє, 35 людей поранені.',
+        'On 18 October the head of the Kherson regional administration, Oleksandr Prokudin, said that a 58-year-old man seriously injured in the air strikes on the Korabelnyi district had died in hospital; in total two people were killed and 35 injured in this attack.',
+        [(11698, 'Медики до останнього боролися за життя 58-річного чоловіка, однак травми виявилися смертельними'),
+         (11698, 'загалом унаслідок цієї терористичної російської атаки на житлові будинки загинули двоє людей, ще 35 осіб дістали поранення')])
+
+apply(['c17b.json', 'c18a.json', 'c18b.json', 'c18c.json'])

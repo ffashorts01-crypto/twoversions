@@ -1,0 +1,58 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+card('1016-starlink-who-ordered', [6111, 8852, 8153, 8945, 7288, 8948, 8216, 8893, 9444, 8625, 8326, 9468, 8650, 8321, 8693, 8695],
+ 'Reuters: приказ замедлить Starshield для Украины пришел из Белого дома; Трамп отрицает причастность, Telegraph называет инициатором Маска', 'Вашингтон', 'ukraine-wide',
+ ['расхождение: факты', 'не проверено независимо'],
+ S('ТАСС пересказывает Reuters: ограничение услуг Starshield для украинских военных было введено по указанию Белого дома, Пентагон получил сообщение о необходимости замедлить сервис.',
+   (6111, 'The order to limit a satellite system used by Ukraine for battlefield communications and drone operations came from inside the White House')),
+ S('Украинские СМИ со ссылкой на Reuters пишут, что руководство Пентагона получило указание из Белого дома, но не уточняется, кто принял решение. Трамп заявил журналистам: «Я этого не делал», назвал сообщения, вероятно, фейковыми и сказал, что Маск тоже не причастен. The Telegraph со ссылкой на четыре источника пишет, что идею ограничения Трампу предложил Маск, а Трамп согласился. По данным WSJ, республиканские сенаторы предлагали Зеленскому на 100 дней прекратить удары по российской энергетике в обмен на расширение покрытия Starlink.',
+   (8153, 'Вони не уточнили, хто саме ухвалив це рішення або відповідав за виконання наказу.'),
+   (7288, 'Я цього не робив. Я навіть не думаю що він був сповільнений.'),
+   (8948, 'Чотири поінформовані джерела видання розповіли, що Маск звернувся до Трампа з пропозицією запровадити обмеження швидкості в системі')),
+ S('BBC, DW и Kyiv Independent приводят слова Трампа «это был не я» и данные Reuters и Telegraph; BBC сообщает, что двухпартийная группа сенаторов потребовала от генерального инспектора Пентагона срочного расследования. Meduza со ссылкой на WSJ пишет, что конгрессмены предлагали расширить зону покрытия Starlink на 300 км вглубь России в обмен на прекращение ударов по НПЗ.',
+   (8326, 'It wasn\'t me and I don\'t think it was [Starlink owner] Elon [Musk]'),
+   (8321, 'A bipartisan group of US senators has signed a letter demanding an urgent investigation into disruptions to SpaceX\'s Starlink internet network in Ukraine.'),
+   (8693, 'the U.S. would extend the Starlink coverage zone 300 kilometers (186 miles) into Russian territory in exchange for Ukraine halting the strikes')),
+ 'Reuters указывает на Белый дом, Telegraph — на инициативу Маска с согласия Трампа, сам Трамп отрицает и свою причастность, и причастность Маска и сомневается, что замедление вообще было. Российские источники ограничиваются пересказом Reuters.',
+ 'medium', 'Сведения анонимных источников противоречат заявлению Трампа; кто отдал приказ, официально не установлено.', True,
+ ['Reuters: наказ сповільнити Starshield для України надійшов із Білого дому; Трамп заперечує причетність, Telegraph називає ініціатором Маска', 'Вашингтон',
+  'Reuters вказує на Білий дім, Telegraph — на ініціативу Маска за згоди Трампа, сам Трамп заперечує і свою причетність, і причетність Маска та сумнівається, що сповільнення взагалі було. Російські джерела обмежуються переказом Reuters.',
+  'ТАСС переказує Reuters: обмеження послуг Starshield для українських військових запровадили за вказівкою Білого дому, Пентагон отримав повідомлення про необхідність сповільнити сервіс.',
+  'Українські ЗМІ з посиланням на Reuters пишуть, що керівництво Пентагону отримало вказівку з Білого дому, але не уточнюється, хто ухвалив рішення. Трамп заявив журналістам: «Я цього не робив», назвав повідомлення, ймовірно, фейковими і сказав, що Маск теж не причетний. The Telegraph з посиланням на чотири джерела пише, що ідею обмеження Трампу запропонував Маск, а Трамп погодився. За даними WSJ, республіканські сенатори пропонували Зеленському на 100 днів припинити удари по російській енергетиці в обмін на розширення покриття Starlink.',
+  'BBC, DW і Kyiv Independent наводять слова Трампа «це був не я» і дані Reuters та Telegraph; BBC повідомляє, що двопартійна група сенаторів вимагала від генерального інспектора Пентагону термінового розслідування. Meduza з посиланням на WSJ пише, що конгресмени пропонували розширити зону покриття Starlink на 300 км углиб Росії в обмін на припинення ударів по НПЗ.'],
+ ['Reuters: order to slow Starshield for Ukraine came from the White House; Trump denies involvement, Telegraph names Musk as the instigator', 'Washington',
+  'Reuters points to the White House, the Telegraph to an initiative by Musk with Trump\'s consent, while Trump denies both his own and Musk\'s involvement and doubts that any slowdown happened. Russian sources limit themselves to relaying Reuters.',
+  'TASS relays Reuters: restrictions on Starshield services for the Ukrainian military were imposed on White House instructions, and the Pentagon received a message that the service had to be slowed.',
+  'Ukrainian media, citing Reuters, write that Pentagon leadership received the instruction from the White House, without it being specified who took the decision. Trump told reporters "I didn\'t do it", called the reports probably fake news and said Musk was not involved either. The Telegraph, citing four sources, writes that Musk proposed the restriction to Trump and Trump agreed. According to the WSJ, Republican senators had proposed that Zelensky halt strikes on Russian energy for 100 days in exchange for expanded Starlink coverage.',
+  'The BBC, DW and Kyiv Independent quote Trump\'s "it wasn\'t me" and the Reuters and Telegraph reports; the BBC says a bipartisan group of senators demanded an urgent investigation by the Pentagon inspector general. Meduza, citing the WSJ, writes that congressmen offered to extend Starlink coverage 300 km into Russia in exchange for an end to refinery strikes.'])
+
+card('1016-starlink-zelensky-kallas', [10946, 7253, 7261, 8195, 8911, 9455],
+ 'Зеленский: из-за замедления Starlink Украина не могла сбивать реактивные «шахеды»; Каллас: Европа пока не может заменить Starlink', 'Брюссель', 'ukraine-wide',
+ ['одна из групп не освещает'],
+ S('Интерфакс приводит слова Каи Каллас перед вторым днем саммита ЕС: Украине действительно нужен Starlink, но Европа в ближайшем будущем не сможет заменить эту технологию, поэтому ЕС обсуждает обороноспособность союза.',
+   (10946, 'Украина действительно нуждается в Starlink. Но, к сожалению, в ближайшем будущем Европа не сможет заменить эту технологию')),
+ S('Зеленский на пресс-конференции в Брюсселе заявил, что Украина не использует Starlink для ударов вглубь России, а снижение скорости не позволило сбивать реактивные «шахеды», бить по военным целям на оккупированных территориях и доставлять военным воду и еду; по его словам, США увеличили скорость, но полноценная работа не восстановлена. Украина не обсуждает замену Starlink, но работает, в частности с Францией, над дополнительными возможностями. Суспильне также приводит слова Каллас о том, что в краткосрочной перспективе Европа не может заменить Starlink.',
+   (7261, 'Ми не використовуємо Starlink для атаки або відповіді на території РФ.'),
+   (8195, 'зниження швидкості Starlink не дозволило Україні бити по військових цілях на окупованих територіях'),
+   (7253, 'Що стосується Starlink, то в короткостроковій перспективі Європа не може замінити цю можливість.')),
+ S('DW приводит обзор немецкой прессы: комментаторы возмущены влиянием Маска и призывают ЕС покончить с технологической зависимостью от США.',
+   (9455, 'Комментаторы единодушно возмущаются могуществом Маска, сетуют по поводу критической технологической зависимости Украины и Евросоюза от Соединенных Штатов')),
+ 'Расхождений в фактах нет: российские источники ограничиваются заявлением Каллас и не приводят слов Зеленского о последствиях ограничений.',
+ 'low', '', False,
+ ['Зеленський: через сповільнення Starlink Україна не могла збивати реактивні «шахеди»; Каллас: Європа поки не може замінити Starlink', 'Брюссель',
+  'Розбіжностей у фактах немає: російські джерела обмежуються заявою Каллас і не наводять слів Зеленського про наслідки обмежень.',
+  'Інтерфакс наводить слова Каї Каллас перед другим днем саміту ЄС: Україні справді потрібен Starlink, але Європа найближчим часом не зможе замінити цю технологію, тому ЄС обговорює обороноздатність союзу.',
+  'Зеленський на пресконференції в Брюсселі заявив, що Україна не використовує Starlink для ударів углиб Росії, а зниження швидкості не дозволило збивати реактивні «шахеди», бити по військових цілях на окупованих територіях і доставляти військовим воду та їжу; за його словами, США збільшили швидкість, але повноцінну роботу не відновлено. Україна не обговорює заміну Starlink, але працює, зокрема з Францією, над додатковими можливостями. Суспільне також наводить слова Каллас про те, що в короткостроковій перспективі Європа не може замінити Starlink.',
+  'DW наводить огляд німецької преси: коментатори обурені впливом Маска і закликають ЄС покінчити з технологічною залежністю від США.'],
+ ['Zelensky: Starlink slowdown left Ukraine unable to shoot down jet-powered Shaheds; Kallas: Europe cannot replace Starlink for now', 'Brussels',
+  'There are no factual discrepancies: Russian sources limit themselves to Kallas\'s statement and do not quote Zelensky on the consequences of the restrictions.',
+  'Interfax quotes Kaja Kallas before the second day of the EU summit: Ukraine really needs Starlink, but Europe will not be able to replace the technology in the near future, which is why the EU is discussing the bloc\'s defence readiness.',
+  'At a press conference in Brussels Zelensky said Ukraine does not use Starlink for deep strikes into Russia, and that the speed cut left it unable to shoot down jet-powered Shaheds, strike military targets in occupied territories or deliver water and food to troops; he said the US had increased the speed but full service had not been restored. Ukraine is not discussing replacing Starlink but is working, including with France, on additional capabilities. Suspilne also quotes Kallas as saying that in the short term Europe cannot replace Starlink.',
+  'DW reviews the German press: commentators are outraged at Musk\'s power and urge the EU to end its technological dependence on the US.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c16d.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))

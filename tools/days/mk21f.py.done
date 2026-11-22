@@ -1,0 +1,143 @@
+import json, sys
+sys.path.insert(0, "/workspace/compare-site-v2/tools/days")
+from lib import S, C
+from extlib import ext, apply, add, setd
+OUT = "/workspace/compare-site-v2/tools/days/out/"
+cards = []
+card = lambda *a: cards.append(C(*a))
+# ---------------- backlog run 22 Oct 01:57 ----------------
+card('1021-musk-starlink-wsj', [15178, 13838, 13834, 13905, 13638, 14439, 14429, 14117, 14946, 14966, 14139, 15016, 14713, 14715, 14616],
+ 'WSJ: ограничить военный Starlink для Украины распорядился Илон Маск; Трамп и Хегсет отрицают свою причастность',
+ 'США — Украина', 'ukraine-wide',
+ ['расхождение: кто виноват', 'расхождение: формулировки'],
+ S("«Интерфакс» пересказывает The Wall Street Journal: замедление Starlink на Украине произошло по распоряжению Илона Маска, который обсуждал решение с Трампом. ТАСС в англоязычной ленте приводит слова журналиста Fox News Питера Дуси: Маск, вероятно, ограничил связь, потому что ВСУ использовали ее для наступательных операций, что, по мнению Маска, незаконно; там же — данные NYT о потере дронов минимум на 1 млн долларов. ТАСС и РИА Новости передают слова Трампа, что он не знает, кто это сделал, и не был к этому причастен.",
+   (15178, 'Недавнее замедление работы спутниковой системы Starlink, которую использует Украина, произошло по распоряжению генерального директора компании SpaceX Илона Маска'),
+   (13838, 'Elon Musk believes that these commercial products are being used essentially for offensive military operations, which is against the law'),
+   (13834, 'The Ukrainian army lost dozens of drones worth at least $1 million due to restrictions on the Starshield military-grade satellite system in Ukraine'),
+   (13638, 'Я не знаю, кто сделал это. Я не был вовлечен')),
+ S("«Украинская правда» и РБК-Украина со ссылкой на WSJ пишут, что Маск лично распорядился снизить скорость военной версии Starlink, из-за чего часть ударных дронов и дронов-перехватчиков стала практически непригодной. РБК-Украина приводит слова республиканца Брайана Фицпатрика, что такое распоряжение, вероятно, нарушает закон и требует расследования, и требование Еврокомиссии к SpaceX срочно восстановить связь. «Общественное» передает слова Хегсета, что США ничего не ограничивали, а Starlink может принимать такие решения сам.",
+   (14439, 'Ілон Маск розпорядився знизити швидкість роботи військової версії Starlink для України'),
+   (14966, 'це, ймовірно, є порушенням закону'),
+   (15016, 'SpaceX має терміново повністю відновити послуги для України'),
+   (14117, 'Ми нічого не обмежували.')),
+ S("DW пересказывает WSJ: часть американских чиновников считает, что Маск действовал в одностороннем порядке, но, по словам источника, он до ограничения советовался с высокопоставленными представителями администрации, включая Трампа. «Медуза» добавляет, что решение вызвало «панику в Киеве», а представители SpaceX связались с Белым домом, чтобы согласовать заявление о том, что компания и администрация действовали согласованно.",
+   (14713, 'Маск проконсультировался с несколькими высокопоставленными представителями администрации, в том числе с Трампом, прежде чем ввести новое ограничение скорости'),
+   (14616, 'SpaceX representatives contacted their White House counterparts to agree on a statement saying the company and the Trump administration had coordinated their actions')),
+ "Все группы пересказывают WSJ одинаково. ТАСС дополнительно дает слово журналисту Fox News, по версии которого Маск ограничил связь, потому что ее использование для наступательных операций незаконно; украинские источники, наоборот, приводят мнение конгрессмена, что незаконным может быть само ограничение. Российские агентства передают отрицание Трампа, «Общественное» — отрицание Хегсета; о консультациях Маска с Трампом до ограничения подробнее пишут DW и «Медуза».",
+ 'medium', 'Сведения WSJ основаны на анонимных источниках; Трамп и Пентагон свою причастность отрицают.', False,
+ ('WSJ: обмежити військовий Starlink для України розпорядився Ілон Маск; Трамп і Гегсет заперечують свою причетність',
+  'США — Україна',
+  'Усі групи переказують WSJ однаково. ТАСС додатково дає слово журналістові Fox News, за версією якого Маск обмежив зв’язок, бо його використання для наступальних операцій незаконне; українські джерела, навпаки, наводять думку конгресмена, що незаконним може бути саме обмеження. Російські агентства передають заперечення Трампа, «Суспільне» — заперечення Гегсета; про консультації Маска з Трампом до обмеження докладніше пишуть DW і «Медуза».',
+  '«Інтерфакс» переказує The Wall Street Journal: уповільнення Starlink в Україні сталося за розпорядженням Ілона Маска, який обговорював рішення з Трампом. ТАСС в англомовній стрічці наводить слова журналіста Fox News Пітера Дусі: Маск, імовірно, обмежив зв’язок, бо ЗСУ використовували його для наступальних операцій, що, на думку Маска, незаконно; там само — дані NYT про втрату дронів щонайменше на 1 млн доларів. ТАСС і РИА Новости передають слова Трампа, що він не знає, хто це зробив, і не був до цього причетний.',
+  '«Українська правда» і РБК-Україна з посиланням на WSJ пишуть, що Маск особисто розпорядився знизити швидкість військової версії Starlink, через що частина ударних дронів і дронів-перехоплювачів стала практично непридатною. РБК-Україна наводить слова республіканця Браяна Фіцпатріка, що таке розпорядження, ймовірно, порушує закон і потребує розслідування, і вимогу Єврокомісії до SpaceX терміново відновити зв’язок. «Суспільне» передає слова Гегсета, що США нічого не обмежували, а Starlink може ухвалювати такі рішення самостійно.',
+  'DW переказує WSJ: частина американських посадовців вважає, що Маск діяв одноосібно, але, за словами джерела, він до обмеження радився з високопосадовцями адміністрації, зокрема з Трампом. «Медуза» додає, що рішення спричинило «паніку в Києві», а представники SpaceX зв’язалися з Білим домом, щоб узгодити заяву про те, що компанія й адміністрація діяли узгоджено.'),
+ ('WSJ: Elon Musk ordered the military Starlink for Ukraine to be restricted; Trump and Hegseth deny involvement',
+  'USA — Ukraine',
+  'All groups relay the WSJ report in the same way. TASS additionally gives the floor to a Fox News journalist who says Musk restricted the service because its use for offensive operations is illegal; Ukrainian sources, conversely, quote a congressman who says the restriction itself may be illegal. Russian agencies carry Trump\'s denial, Suspilne Hegseth\'s; DW and Meduza write in more detail about Musk consulting Trump before the restriction.',
+  'Interfax relays The Wall Street Journal: the recent slowdown of Starlink in Ukraine was ordered by Elon Musk, who discussed the decision with Trump. TASS, in its English-language feed, quotes Fox News journalist Peter Doocy: Musk probably restricted the service because the Ukrainian military used it for offensive operations, which Musk considers illegal; the same feed carries NYT figures on at least $1 million worth of drones lost. TASS and RIA Novosti carry Trump\'s words that he does not know who did it and was not involved.',
+  'Ukrainska Pravda and RBC-Ukraine, citing the WSJ, write that Musk personally ordered the speed of the military version of Starlink to be lowered, leaving some strike and interceptor drones practically unusable. RBC-Ukraine quotes Republican Brian Fitzpatrick saying such an order probably breaks the law and must be investigated, and the European Commission\'s demand that SpaceX urgently restore the service. Suspilne carries Hegseth\'s words that the US restricted nothing and that Starlink can make such decisions on its own.',
+  'DW relays the WSJ: some US officials believe Musk acted unilaterally, but according to a source he consulted senior administration officials, including Trump, before the restriction. Meduza adds that the decision caused "panic in Kyiv" and that SpaceX representatives contacted the White House to agree on a statement saying the company and the administration had acted in coordination.'))
+
+card('1021-nabu-searches-nbu-pyshnyi', [13586, 13888, 14119, 14971, 15011, 14295, 14600, 14619, 14626, 14724],
+ 'НАБУ и САП провели обыски в Нацбанке Украины и у его главы Андрея Пышного',
+ 'Киев', 'ukraine-wide',
+ ['расхождение: формулировки'],
+ S("РИА Новости пишет, что Андрей Пышный подтвердил обыски и заявил о продолжении работы; агентство упоминает сообщение Delo.ua о его отставке и последовавшее опровержение НБУ. ТАСС со ссылкой на издание «Страна» сообщает, что обыскали и служебный автомобиль главы Нацбанка, а депутаты Рады писали об обысках в его кабинете.",
+   (13586, 'Пышный также подтвердил факт проведения у него обысков, но заявил, что они не касаются его работы в НБУ и связаны с третьими лицами, которых он не назвал.'),
+   (13888, 'антикоррупционные органы обыскали служебное авто главы Нацбанка Украины')),
+ S("«Общественное» и РБК-Украина со ссылкой на НАБУ, Нацбанк и депутатов Ярослава Железняка и Алексея Гончаренко сообщают об обысках в здании НБУ, в кабинете Пышного и по месту жительства одного из сотрудников; никого не задержали, подозрений не объявили, НБУ работает в штатном режиме. РБК-Украина передает опровержение НБУ слухов об отставке. Вечером Пышный заявил, что дело не касается ни деятельности банка, ни его служебной деятельности.",
+   (14119, 'Жодна особа не затримувалася, про підозру не повідомляли.'),
+   (14295, 'не стосується ані діяльності Національного банку України, ані моєї службової діяльності на посаді його голови')),
+ S("The Kyiv Independent, DW и «Медуза» приводят то же заявление НАБУ и подтверждение НБУ. The Kyiv Independent подчеркивает, что неясно, по какому делу проверяют Пышного, и напоминает о критике НБУ из-за залога за экс-министра Германа Галущенко через Sense Bank; «Медуза» ставит обыски в ряд коррупционных скандалов последнего года.",
+   (14600, 'It is not clear in what case Pyshnyi is being investigated.'),
+   (14724, 'Ни один человек не задержан, о подозрении никому не сообщали.'),
+   (14619, 'С конца прошлого года в Украине продолжаются несколько коррупционных скандалов.')),
+ "Факты обысков и заявления НАБУ и НБУ все группы передают одинаково. Российские агентства опираются также на слухи об отставке (Delo.ua) и на издание «Страна» об обыске служебного автомобиля. Независимые источники связывают обыски с прежними скандалами (Sense Bank, «Энергоатом»), украинские источники приводят оценку самого Пышного, что дело его не касается.",
+ 'medium', 'Суть уголовного производства не раскрыта.', False,
+ ('НАБУ і САП провели обшуки в Нацбанку України та в його голови Андрія Пишного',
+  'Київ',
+  'Факти обшуків і заяви НАБУ та НБУ всі групи передають однаково. Російські агентства спираються також на чутки про відставку (Delo.ua) і на видання «Страна» про обшук службового автомобіля. Незалежні джерела пов’язують обшуки з попередніми скандалами (Sense Bank, «Енергоатом»), українські джерела наводять оцінку самого Пишного, що справа його не стосується.',
+  'РИА Новости пише, що Андрій Пишний підтвердив обшуки й заявив, що продовжує роботу; агентство згадує повідомлення Delo.ua про його відставку і подальше спростування НБУ. ТАСС з посиланням на видання «Страна» повідомляє, що обшукали й службовий автомобіль голови Нацбанку, а депутати Ради писали про обшуки в його кабінеті.',
+  '«Суспільне» і РБК-Україна з посиланням на НАБУ, Нацбанк і депутатів Ярослава Железняка та Олексія Гончаренка повідомляють про обшуки в будівлі НБУ, у кабінеті Пишного і за місцем проживання одного зі співробітників; нікого не затримано, підозр не оголошено, НБУ працює в штатному режимі. РБК-Україна передає спростування НБУ чуток про відставку. Увечері Пишний заявив, що справа не стосується ні діяльності банку, ні його службової діяльності.',
+  'The Kyiv Independent, DW і «Медуза» наводять ту саму заяву НАБУ та підтвердження НБУ. The Kyiv Independent наголошує, що незрозуміло, у якій справі перевіряють Пишного, і нагадує про критику НБУ через заставу за ексміністра Германа Галущенка через Sense Bank; «Медуза» ставить обшуки в ряд корупційних скандалів останнього року.'),
+ ('NABU and SAP search the National Bank of Ukraine and its governor Andriy Pyshnyi',
+  'Kyiv',
+  'All groups convey the searches and the NABU and NBU statements in the same way. Russian agencies also rely on resignation rumours (Delo.ua) and on the outlet Strana about the search of the official car. Independent sources link the searches to earlier scandals (Sense Bank, Energoatom); Ukrainian sources quote Pyshnyi himself saying the case does not concern him.',
+  'RIA Novosti writes that Andriy Pyshnyi confirmed the searches and said he continues to work; the agency mentions a Delo.ua report of his resignation and the NBU\'s subsequent denial. TASS, citing the outlet Strana, reports that the governor\'s official car was also searched, while Rada deputies wrote about searches of his office.',
+  'Suspilne and RBC-Ukraine, citing NABU, the National Bank and MPs Yaroslav Zhelezniak and Oleksiy Honcharenko, report searches in the NBU building, in Pyshnyi\'s office and at the home of one employee; no one was detained or charged, and the NBU is working as usual. RBC-Ukraine carries the NBU\'s denial of resignation rumours. In the evening Pyshnyi said the case concerns neither the bank\'s work nor his own official activity.',
+  'The Kyiv Independent, DW and Meduza carry the same NABU statement and the NBU\'s confirmation. The Kyiv Independent stresses that it is unclear in what case Pyshnyi is being investigated and recalls criticism of the NBU over bail for ex-minister Herman Halushchenko paid through Sense Bank; Meduza places the searches in a series of corruption scandals over the past year.'))
+
+card('1021-eu-70bn-financing-gap', [13603, 13763, 13858, 15182, 14432, 14463, 14972],
+ 'ЕС ищет, как покрыть дефицит финансирования Украины в 70 млрд евро на 2027 год',
+ 'Брюссель', 'ukraine-wide',
+ ['расхождение: формулировки', 'одна из групп не освещает'],
+ S("«Интерфакс» и ТАСС со ссылкой на Politico пишут, что ЕС на саммитах с Канадой 29–30 октября и Великобританией 20 ноября попросит увеличить помощь, чтобы покрыть дефицит в 70 млрд евро. РИА Новости со ссылкой на Reuters сообщает, что лидеры ЕС обсудят это на внеочередном саммите 26–27 ноября, и пишет, что «финансовые аппетиты Киева» превышают 45 млрд евро, заложенные ЕС. ТАСС называет эти деньги нужными «на продолжение боевых действий» и напоминает позицию Москвы, что вооружение Киева лишь затягивает конфликт.",
+   (15182, 'шаг, который предпримет ЕС, не будет критикой Великобритании или Канады'),
+   (13603, 'однако финансовые аппетиты Киева значительно превышают эту сумму'),
+   (13858, 'Украине на продолжение боевых действий в 2027 году потребуется не меньше €70 млрд'),
+   (13763, 'Moscow has repeatedly stated that arming the Kiev regime only prolongs the conflict in Ukraine.')),
+ S("«Украинская правда» и РБК-Украина со ссылкой на Politico приводят те же даты саммитов и сумму. «Украинская правда» уточняет, что кредит ЕС в 90 млрд евро на 2026–2027 годы покрывает около двух третей потребностей, а помощь других стран поступает медленно, тогда как расходы Украины растут из-за усиления российских ударов; РБК-Украина приводит слова фон дер Ляйен, что ЕС обеспечивает 80% внешней помощи. По данным «Европейской правды», спецзаседание Евросовета 26–27 ноября посвятят бюджету ЕС и финансированию Украины.",
+   (14432, 'розрахункові витрати України зростають через посилення російських ударів'),
+   (14972, 'ЄС разом із державами-членами забезпечує 80% зовнішньої допомоги Україні'),
+   (14463, 'Лідери ЄС 26-27 листопада зберуться на спеціальне засідання')),
+ None,
+ "Цифры и даты в обеих группах совпадают. Российские агентства описывают нужды Украины как «финансовые аппетиты» и деньги «на продолжение боевых действий», украинские объясняют рост расходов усилением российских ударов. Независимые источники в подборке эту тему не освещают.",
+ 'low', None, False,
+ ('ЄС шукає, як покрити дефіцит фінансування України у 70 млрд євро на 2027 рік',
+  'Брюссель',
+  'Цифри й дати в обох групах збігаються. Російські агентства описують потреби України як «фінансові апетити» і гроші «на продовження бойових дій», українські пояснюють зростання витрат посиленням російських ударів. Незалежні джерела в добірці цю тему не висвітлюють.',
+  '«Інтерфакс» і ТАСС з посиланням на Politico пишуть, що ЄС на самітах із Канадою 29–30 жовтня та Великою Британією 20 листопада попросить збільшити допомогу, щоб покрити дефіцит у 70 млрд євро. РИА Новости з посиланням на Reuters повідомляє, що лідери ЄС обговорять це на позачерговому саміті 26–27 листопада, і пише, що «фінансові апетити Києва» перевищують 45 млрд євро, закладені ЄС. ТАСС називає ці гроші потрібними «на продовження бойових дій» і нагадує позицію Москви, що озброєння Києва лише затягує конфлікт.',
+  '«Українська правда» і РБК-Україна з посиланням на Politico наводять ті самі дати самітів і суму. «Українська правда» уточнює, що кредит ЄС у 90 млрд євро на 2026–2027 роки покриває близько двох третин потреб, а допомога інших країн надходить повільно, тоді як витрати України зростають через посилення російських ударів; РБК-Україна наводить слова фон дер Ляєн, що ЄС забезпечує 80% зовнішньої допомоги. За даними «Європейської правди», спецзасідання Євроради 26–27 листопада присвятять бюджету ЄС і фінансуванню України.',
+  None),
+ ('The EU looks for ways to cover Ukraine\'s €70 billion funding gap for 2027',
+  'Brussels',
+  'The figures and dates match in both groups. Russian agencies describe Ukraine\'s needs as "financial appetites" and money "for continuing hostilities"; Ukrainian outlets attribute the rising costs to intensified Russian strikes. Independent sources in the selection do not cover the topic.',
+  'Interfax and TASS, citing Politico, write that at summits with Canada on 29–30 October and the UK on 20 November the EU will ask for more aid to cover a €70 billion gap. RIA Novosti, citing Reuters, reports that EU leaders will discuss it at an extraordinary summit on 26–27 November and writes that "Kyiv\'s financial appetites" exceed the €45 billion the EU has set aside. TASS calls the money needed "for continuing hostilities" and recalls Moscow\'s position that arming Kyiv only prolongs the conflict.',
+  'Ukrainska Pravda and RBC-Ukraine, citing Politico, give the same summit dates and amount. Ukrainska Pravda adds that the EU\'s €90 billion loan for 2026–2027 covers about two thirds of the needs and aid from other countries is arriving slowly, while Ukraine\'s costs are rising because of intensified Russian strikes; RBC-Ukraine quotes von der Leyen saying the EU provides 80% of external aid. According to Yevropeiska Pravda, a special European Council meeting on 26–27 November will be devoted to the EU budget and Ukraine\'s financing.',
+  None))
+
+card('1021-trump-g20-peace-deal-atlantic', [13836, 15035, 14645, 14649],
+ 'The Atlantic: Трамп хочет подписания мирного соглашения России и Украины на саммите G20 в декабре',
+ 'США', 'ukraine-wide',
+ ['умолчание'],
+ S("ТАСС в англоязычной ленте пересказывает The Atlantic: Трамп хотел бы, чтобы соглашение было заключено на саммите G20 в Майами в середине декабря, и представляет себя между Путиным и Зеленским при подписании, «даже если ему придется силой принудить Украину». Агентство добавляет, что Трамп 19 октября сказал, что переговоры от Украины должен вести кто-то другой, и приводит слова Пескова о важности «легитимного представителя власти».",
+   (13836, 'even if he has to strong-arm Ukraine to do it'),
+   (13836, 'it is important for us to make sure there is a legitimate representative of the authorities')),
+ S("РБК-Украина со ссылкой на The Atlantic пишет, что Трамп хочет лично стоять между Зеленским и «российским диктатором» Путиным при подписании и рассматривает жесткое давление на Киев; издание приводит слова источника из окружения Трампа, что тот «в ярости» на Украину и хочет ухода Зеленского, а войну в окружении президента видят помехой для экономических сделок с Россией.",
+   (15035, 'Він розлючений на Україну і хоче, щоб Зеленський пішов')),
+ S("«Медуза» на русском и английском пересказывает The Atlantic: Трамп хочет подписания соглашения на саммите G20 в Майами 14–15 декабря и не исключает принуждения Украины к сделке; по словам источника, он «в ярости на Украину и хочет, чтобы Зеленский ушел». Издание напоминает, что Путин официально приглашен на саммит, но Москва его участие не подтвердила.",
+   (14645, 'Трамп не исключает принуждения Украины к сделке силой'),
+   (14649, 'furious at Ukraine, and he wants Zelensky gone')),
+ "Сроки и место подписания все группы передают одинаково. Слова источника о том, что Трамп «в ярости» на Украину и хочет ухода Зеленского, приводят РБК-Украина и «Медуза», ТАСС их не цитирует, но связывает материал с призывом Трампа сменить переговорщика от Украины и с тезисом Пескова о «легитимном представителе».",
+ 'medium', 'Данные The Atlantic основаны на анонимных источниках.', False,
+ ('The Atlantic: Трамп хоче підписання мирної угоди Росії та України на саміті G20 у грудні',
+  'США',
+  'Терміни й місце підписання всі групи передають однаково. Слова джерела про те, що Трамп «розлючений» на Україну і хоче відходу Зеленського, наводять РБК-Україна і «Медуза»; ТАСС їх не цитує, але пов’язує матеріал із закликом Трампа змінити переговірника від України і з тезою Пєскова про «легітимного представника».',
+  'ТАСС в англомовній стрічці переказує The Atlantic: Трамп хотів би, щоб угоду укладили на саміті G20 у Маямі в середині грудня, і уявляє себе між Путіним і Зеленським під час підписання, «навіть якщо йому доведеться силою змусити Україну». Агентство додає, що Трамп 19 жовтня сказав, що переговори від України має вести хтось інший, і наводить слова Пєскова про важливість «легітимного представника влади».',
+  'РБК-Україна з посиланням на The Atlantic пише, що Трамп хоче особисто стояти між Зеленським і «російським диктатором» Путіним під час підписання і розглядає жорсткий тиск на Київ; видання наводить слова джерела з оточення Трампа, що той «розлючений» на Україну і хоче відходу Зеленського, а війну в оточенні президента вважають перешкодою для економічних угод із Росією.',
+  '«Медуза» російською та англійською переказує The Atlantic: Трамп хоче підписання угоди на саміті G20 у Маямі 14–15 грудня і не виключає примусу України до угоди; за словами джерела, він «розлючений на Україну і хоче, щоб Зеленський пішов». Видання нагадує, що Путіна офіційно запрошено на саміт, але Москва його участі не підтвердила.'),
+ ('The Atlantic: Trump wants a Russia–Ukraine peace deal signed at the G20 summit in December',
+  'USA',
+  'All groups convey the timing and venue of the signing in the same way. The source\'s words that Trump is "furious" at Ukraine and wants Zelensky gone are quoted by RBC-Ukraine and Meduza; TASS does not quote them but links the story to Trump\'s call for someone else to negotiate for Ukraine and to Peskov\'s point about a "legitimate representative".',
+  'TASS, in its English-language feed, relays The Atlantic: Trump would like the deal concluded at the G20 summit in Miami in mid-December and pictures himself between Putin and Zelensky at the signing, "even if he has to strong-arm Ukraine to do it". The agency adds that on 19 October Trump said someone else should negotiate for Ukraine, and quotes Peskov on the importance of a "legitimate representative of the authorities".',
+  'RBC-Ukraine, citing The Atlantic, writes that Trump wants to stand personally between Zelensky and "Russian dictator" Putin at the signing and is considering hard pressure on Kyiv; it quotes a source close to Trump saying he is "furious" at Ukraine and wants Zelensky gone, and that the president\'s circle sees the war as an obstacle to economic deals with Russia.',
+  'Meduza, in Russian and English, relays The Atlantic: Trump wants the deal signed at the G20 summit in Miami on 14–15 December and does not rule out forcing Ukraine into it; according to a source, he is "furious at Ukraine, and he wants Zelensky gone". The outlet notes that Putin has been formally invited to the summit, but Moscow has not confirmed his attendance.'))
+
+json.dump(cards, open(OUT + 'c21f.json', 'w'), ensure_ascii=False, indent=1)
+print('c21f', len(cards))
+
+# ---- extension: second ballistic wave on Kyiv in the night to 22 Oct ----
+@ext('1021-kyiv-ballistic-evening-strike', [15430, 15403, 15379])
+def _(c):
+    add(c, 'ru', 'Ночью ТАСС и РИА Новости со ссылкой на «Общественное» снова сообщили о взрывах в Киеве на фоне воздушной тревоги.',
+        'Уночі ТАСС і РИА Новости з посиланням на «Суспільне» знову повідомили про вибухи в Києві на тлі повітряної тривоги.',
+        'During the night TASS and RIA Novosti, citing Suspilne, again reported explosions in Kyiv amid an air-raid alert.',
+        [(15403, 'В Киеве произошли взрывы. В городе действует воздушная тревога'), (15379, 'Взрывы прогремели в Киеве на фоне воздушной тревоги')])
+    add(c, 'ua', 'Позже РБК-Украина со ссылкой на Воздушные силы и КГВА сообщила, что Россия второй раз за ночь выпустила по Киеву баллистические ракеты; о последствиях данных пока нет.',
+        'Пізніше РБК-Україна з посиланням на Повітряні сили і КМВА повідомила, що Росія вдруге за ніч випустила по Києву балістичні ракети; даних про наслідки поки немає.',
+        'Later RBC-Ukraine, citing the Air Force and the Kyiv city military administration, reported that Russia launched ballistic missiles at Kyiv for the second time that night; there is no information on the consequences yet.',
+        [(15430, 'Росія вдруге за ніч випустила по Києву балістичні ракети')])
+    c['diverge'] += ' О второй волне ночью российские агентства снова пишут только о взрывах, РБК-Украина — о баллистических ракетах.'
+    c['uk']['d'] += ' Про другу хвилю вночі російські агентства знову пишуть лише про вибухи, РБК-Україна — про балістичні ракети.'
+    c['en']['d'] += ' On the second wave during the night, Russian agencies again report only explosions, RBC-Ukraine ballistic missiles.'
+apply(['c21b.json'])

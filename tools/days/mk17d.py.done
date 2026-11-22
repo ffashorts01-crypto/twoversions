@@ -1,0 +1,58 @@
+import json, sys
+sys.path.insert(0, '/workspace/compare-site-v2/tools/days')
+from lib import S, C
+cards = []
+card = lambda *a: cards.append(C(*a))
+
+card('1017-graham-sanctions-waiver', [5005, 6191, 8989, 8243, 8955, 7296, 8223, 8656, 8664, 8743, 9481, 8658, 9636],
+ 'Трамп отказался применять санкции по «закону Грэма»; Зеленский назвал это «санкционным блэкаутом», в Конгрессе внесен законопроект против дизельной сделки', 'Вашингтон, Киев', 'ukraine-wide',
+ ['расхождение: формулировки'],
+ S('РИА Новости со ссылкой на Axios приводит слова представителя Белого дома Тейлор Роджерс: применение санкционных положений сейчас помешает усилиям США по заключению мирного соглашения, но президент оставляет за собой право воспользоваться полномочиями. По данным агентства, Трамп отказался от тарифа до 500% на прямой импорт из России и до 100% на товары крупнейших покупателей российских энергоносителей. ТАСС цитирует Трампа: «эта война должна прекратиться».',
+   (5005, 'Применение санкционных положений сейчас будет препятствовать текущим усилиям США по заключению прочного и всеобъемлющего мирного соглашения'),
+   (6191, 'That\'s a war that has to stop.')),
+ S('Зеленский назвал решение «санкционным блэкаутом»: в момент масштабного удара по энергетике в США решили полностью проигнорировать закон, хотя, по его мнению, тот еще может давить на Россию. Демократ Грегори Микс внес в Палату представителей двухпартийный законопроект, который должен заблокировать сделку о закупке российского дизеля и запретить DFC инвестировать в российскую энергетику.',
+   (8243, 'Водночас він вважає, що цей закон все ще може чинити тиск на РФ.'),
+   (7296, 'Він має заблокувати домовленість Трампа з Путіним про закупівлю та імпорт російського дизелю.')),
+ S('Kyiv Independent и Guardian приводят слова Зеленского о том, что Путин «чувствует радость» от такой поддержки, а решение — это «награда» Кремлю; NGO Urgewald, по данным Kyiv Independent, насчитала 134 судна, задействованных в торговле российским газом с 2022 года.',
+   (8664, 'On the contrary, he feels joy that he has such support'),
+   (8658, 'The NGO Urgewald has identified what it says are all the 134 vessels involved in Russian gas trade since 2022')),
+ 'Белый дом и российские источники представляют отказ от санкций как шаг к миру; Киев и независимые источники — как ослабление давления на Россию в момент усиления ударов.',
+ 'low', '', False,
+ ['Трамп відмовився застосовувати санкції за «законом Грема»; Зеленський назвав це «санкційним блекаутом», у Конгресі внесено законопроєкт проти дизельної угоди', 'Вашингтон, Київ',
+  'Білий дім і російські джерела подають відмову від санкцій як крок до миру; Київ і незалежні джерела — як послаблення тиску на Росію в момент посилення ударів.',
+  'РИА Новости з посиланням на Axios наводить слова представниці Білого дому Тейлор Роджерс: застосування санкційних положень зараз завадить зусиллям США щодо укладення мирної угоди, але президент залишає за собою право скористатися повноваженнями. За даними агентства, Трамп відмовився від тарифу до 500% на прямий імпорт із Росії і до 100% на товари найбільших покупців російських енергоносіїв. ТАСС цитує Трампа: «ця війна має припинитися».',
+  'Зеленський назвав рішення «санкційним блекаутом»: у момент масштабного удару по енергетиці в США вирішили повністю проігнорувати закон, хоча, на його думку, той ще може тиснути на Росію. Демократ Грегорі Мікс вніс до Палати представників двопартійний законопроєкт, який має заблокувати угоду про закупівлю російського дизеля і заборонити DFC інвестувати в російську енергетику.',
+  'Kyiv Independent і Guardian наводять слова Зеленського про те, що Путін «відчуває радість» від такої підтримки, а рішення — це «нагорода» Кремлю; NGO Urgewald, за даними Kyiv Independent, нарахувала 134 судна, задіяні в торгівлі російським газом із 2022 року.'],
+ ['Trump declines to apply "Graham law" sanctions; Zelensky calls it a "sanctions blackout", bill to block the diesel deal introduced in Congress', 'Washington, Kyiv',
+  'The White House and Russian sources present dropping the sanctions as a step towards peace; Kyiv and independent sources as easing pressure on Russia just as its strikes intensify.',
+  'RIA Novosti, citing Axios, quotes White House spokeswoman Taylor Rogers as saying that applying the sanctions provisions now would hinder US efforts to reach a peace agreement, but that the president reserves the right to use his powers. According to the agency, Trump dropped tariffs of up to 500% on direct imports from Russia and up to 100% on goods from the largest buyers of Russian energy. TASS quotes Trump: "that\'s a war that has to stop".',
+  'Zelensky called the decision a "sanctions blackout": at the moment of a massive strike on energy, the US decided to ignore the law entirely, though he believes it can still put pressure on Russia. Democrat Gregory Meeks introduced a bipartisan bill in the House to block the deal on buying Russian diesel and to bar the DFC from investing in Russian energy.',
+  'Kyiv Independent and the Guardian quote Zelensky as saying Putin "feels joy" at such support and that the decision is a "reward" to the Kremlin; the NGO Urgewald, according to Kyiv Independent, has counted 134 vessels involved in the Russian gas trade since 2022.'])
+
+card('1017-front-claims-gerasimov-disputed', [11049, 11055, 11048, 4964, 4981, 6214, 5010, 4968, 6661, 4953, 4954, 8986, 7309, 8245, 9022, 8975, 7303, 8232, 8265, 8229, 8739, 8657],
+ 'Минобороны РФ: восемь населенных пунктов, включая Доброполье; Генштаб ВСУ и ISW опровергают доклад Герасимова', 'Донецкая, Харьковская, Днепропетровская, Запорожская области', 'donetsk',
+ ['расхождение: кто контролирует населённые пункты', 'не проверено'],
+ S('Минобороны РФ сообщило о взятии восьми населенных пунктов, в том числе Доброполья, Паламаревки и Ковалевки Харьковской области, Великомихайловки и Малокатериновки, и о завершении ликвидации окруженного противника на северо-востоке Харьковской области. Глава ДНР Денис Пушилин заявил, что взятие Доброполья приближает полное «освобождение» Донбасса.',
+   (11049, 'Российская армия установила контроль над восемью населенными пунктами в зоне спецоперации, в том числе над городом Доброполье'),
+   (4964, 'завершили ликвидацию окруженного противника в северо-восточной части Харьковской области')),
+ S('Представитель Генштаба ВСУ Андрей Ковалев назвал доклад Герасимова «откровенной ложью, манипуляциями и преувеличениями»: заявления о 92 населенных пунктах с 1 сентября, взятии Константиновки и Доброполья и подходе к Запорожью на 5 км не соответствуют действительности, а с начала осени ВСУ освободили больше территории, чем потеряли. РБК-Украина пишет, что доклад высмеяли и российские военблогеры, а со ссылкой на ISW — что реальные успехи в 45 раз меньше заявленных. Генштаб сообщил о 238 боестолкновениях за сутки.',
+   (8245, 'Черговим прикладом стала доповідь начальника Генерального штабу збройних сил РФ Валерія Герасимова, побудована на відвертій брехні, маніпуляціях та перебільшеннях.'),
+   (8986, 'Насправді завдяки активним діям Сили оборони України від початку осені звільнили більше територій, ніж вдалося захопити ворогу.'),
+   (8975, 'Однак реальні успіхи окупантів у 45 разів менші.')),
+ S('Guardian пересказывает заявления Путина о создании «зоны безопасности», которая не будет предметом переговоров; Kyiv Independent — данные Генштаба ВСУ о потерях российских войск.',
+   (8739, 'Russia is establishing a “security zone” inside Ukraine along the border and it will be non-negotiable in any ⁠future talks with Kyiv')),
+ 'Российское командование заявляет о взятии Доброполья и других населенных пунктов, украинский Генштаб называет эти заявления ложью, а ISW оценивает реальные продвижения как многократно меньшие; независимой проверки контроля над Добропольем нет.',
+ 'medium', 'Стороны прямо противоречат друг другу в вопросе контроля над Добропольем и масштабах продвижения.', True,
+ ['Міноборони РФ: вісім населених пунктів, зокрема Добропілля; Генштаб ЗСУ та ISW спростовують доповідь Герасимова', 'Донеччина, Харківщина, Дніпропетровщина, Запоріжжя',
+  'Російське командування заявляє про взяття Добропілля та інших населених пунктів, український Генштаб називає ці заяви брехнею, а ISW оцінює реальне просування як у рази менше; незалежної перевірки контролю над Добропіллям немає.',
+  'Міноборони РФ повідомило про взяття восьми населених пунктів, зокрема Добропілля, Паламарівки і Ковалівки на Харківщині, Великомихайлівки та Малокатеринівки, і про завершення ліквідації оточеного противника на північному сході Харківщини. Очільник окупаційної адміністрації Донеччини Денис Пушилін заявив, що взяття Добропілля наближає повне «звільнення» Донбасу.',
+  'Речник Генштабу ЗСУ Андрій Ковальов назвав доповідь Герасимова «відвертою брехнею, маніпуляціями та перебільшеннями»: заяви про 92 населені пункти з 1 вересня, взяття Костянтинівки і Добропілля та підхід до Запоріжжя на 5 км не відповідають дійсності, а від початку осені ЗСУ звільнили більше території, ніж втратили. РБК-Україна пише, що доповідь висміяли й російські воєнблогери, а з посиланням на ISW — що реальні успіхи в 45 разів менші за заявлені. Генштаб повідомив про 238 боєзіткнень за добу.',
+  'Guardian переказує заяви Путіна про створення «зони безпеки», яка не буде предметом переговорів; Kyiv Independent — дані Генштабу ЗСУ про втрати російських військ.'],
+ ['Russian MoD: eight settlements including Dobropillia; Ukrainian General Staff and ISW dispute Gerasimov\'s report', 'Donetsk, Kharkiv, Dnipropetrovsk, Zaporizhzhia regions',
+  'The Russian command claims the capture of Dobropillia and other settlements, the Ukrainian General Staff calls these claims lies, and ISW assesses actual advances as many times smaller; there is no independent verification of who controls Dobropillia.',
+  'The Russian Defence Ministry reported the capture of eight settlements, including Dobropillia, Palamarivka and Kovalivka in Kharkiv region, Velykomykhailivka and Malokaterynivka, and said it had completed the elimination of encircled forces in north-eastern Kharkiv region. The Russian-installed head of Donetsk region Denis Pushilin said the capture of Dobropillia brings the full "liberation" of Donbas closer.',
+  'Ukrainian General Staff spokesman Andrii Kovalov called Gerasimov\'s report "outright lies, manipulation and exaggeration": the claims of 92 settlements since 1 September, of capturing Kostiantynivka and Dobropillia and of reaching within 5 km of Zaporizhzhia are untrue, and since the start of autumn Ukrainian forces have liberated more territory than they lost. RBC-Ukraine writes that Russian military bloggers also mocked the report and, citing ISW, that actual gains are 45 times smaller than claimed. The General Staff reported 238 clashes over the day.',
+  'The Guardian relays Putin\'s statements about creating a "security zone" that will not be subject to negotiation; Kyiv Independent relays the Ukrainian General Staff\'s figures on Russian losses.'])
+
+json.dump(cards, open('/workspace/compare-site-v2/tools/days/out/c17d.json','w'), ensure_ascii=False, indent=1)
+print(len(cards))
