@@ -20,7 +20,7 @@ import os, sys, re, json, html, shutil, sqlite3, hashlib, datetime as dt, urllib
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, 'src'))
 from cards import CARDS
-import ui, events, about, topics, geo
+import ui, events, about, topics, geo, methodology
 import tr_uk, tr_en
 sys.path.insert(0, HERE)
 from pipeline import confidence as conf_mod
@@ -343,6 +343,7 @@ def path(lang, key):
     k = key[0]
     if k == 'home': return '/%s/' % lang
     if k == 'about': return '/%s/about/' % lang
+    if k == 'methodology': return '/%s/%s/' % (lang, methodology.SLUG[lang])
     if k == 'corrections': return '/%s/corrections/' % lang
     if k == 'days': return '/%s/%s/' % (lang, DAY_SLUG[lang])
     if k == 'day': return '/%s/%s/%s/' % (lang, DAY_SLUG[lang], key[1])
@@ -416,7 +417,7 @@ OG_IMG = absu('/assets/og.png')
 THEME_LABEL = {'ru': ('Тема оформления', 'Светлая / тёмная тема'), 'uk': ('Тема оформлення', 'Світла / темна тема'), 'en': ('Colour theme', 'Switch light / dark theme')}
 FILTER_RESET = {'ru': 'Сбросить', 'uk': 'Скинути', 'en': 'Reset'}
 # pre-paint theme (avoids a flash); the manual choice lives in localStorage['theme'] = light | dark
-THEME_INIT = '<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>'
+THEME_INIT = '<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>'
 GLYPH = {'ru': '■', 'ua': '●', 'ind': '◆'}      # distinct shapes: colour is never the only cue
 
 def head(lang, key, title, desc, og_type='website', ld=(), robots='index,follow,max-image-preview:large', alt_keys=True):
@@ -464,7 +465,7 @@ def header(lang, key):
                   for k, lab in ((('home',), 'nav_events'), (('days',), 'nav_day'), (('topics',), 'nav_topics'), (('map',), 'nav_map'), (('regions',), 'nav_regions'), (('dates',), 'nav_dates'), (('about',), 'nav_about')))
     langs = ''.join('<a href="%s" hreflang="%s" lang="%s" title="%s"%s>%s</a>' % (path(l, key), l, l, e(ui.LANG_NAME[l]), ' aria-current="true"' if l == lang else '', ui.LANG_SHORT[l]) for l in LANGS)
     tl = THEME_LABEL[lang]
-    theme = ('<button type="button" class="theme" id="theme-toggle" hidden aria-pressed="false" aria-label="%s" title="%s">'
+    theme = ('<button type="button" class="theme" id="theme-toggle" aria-pressed="false" aria-label="%s" title="%s">'
              '<svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>'
              '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>') % (e(tl[0]), e(tl[1]))
     return ('<a class="skip" href="#main">%s</a>\n<header class="top"><div class="in"><a class="brand" href="%s">%s</a>'
@@ -473,8 +474,8 @@ def header(lang, key):
 
 def footer(lang, key):
     U = ui.UI[lang]
-    return ('<footer class="f"><div class="in"><p>%s</p><p>%s</p><p class="fl"><a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s" rel="nofollow">%s</a> · <a href="/sitemap.xml">sitemap.xml</a> · <a href="%s">RSS</a> · <a href="https://t.me/twoversions_war" rel="noopener">Telegram</a></p><p class="fl">%s<a href="%s">%s</a></p><p class="sup-f"><a class="sup-btn" href="%s?from=footer">%s</a></p></div></footer>') % (
-        e(U['footer_disclaimer']), e(U['footer_base'].format(collected=collected_text(lang))), path(lang, ('about',)), e(U['nav_about']), path(lang, ('corrections',)), e(U['footer_corr']),
+    return ('<footer class="f"><div class="in"><p>%s</p><p>%s</p><p class="fl"><a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s">%s</a> · <a href="%s" rel="nofollow">%s</a> · <a href="/sitemap.xml">sitemap.xml</a> · <a href="%s">RSS</a> · <a href="https://t.me/twoversions_war" rel="noopener">Telegram</a></p><p class="fl">%s<a href="%s">%s</a></p><p class="sup-f"><a class="sup-btn" href="%s?from=footer">%s</a></p></div></footer>') % (
+        e(U['footer_disclaimer']), e(U['footer_base'].format(collected=collected_text(lang))), path(lang, ('about',)), e(U['nav_about']), path(lang, ('methodology',)), e(methodology.M[lang]['nav']), path(lang, ('corrections',)), e(U['footer_corr']),
         path(lang, ('regions',)), e(U['nav_regions']), path(lang, ('topics',)), e(TOPIC_UI[lang]['nav_topics']), path(lang, ('map',)), e(MAP_UI[lang]['nav_map']), path(lang, ('divergence',)), e(DIV_UI[lang]['nav']), e(mailto(lang, key)), e(U['corr_report']), rss_path(lang), (('<a href="%s">%s</a> · ' % (path(lang, ('weeks',)), e(WEEK_UI[lang]['h1']))) if WEEKS else ''), path(lang, ('glossary',)), e(GLOSS_UI[lang]['h1']), path(lang, ('support',)), e(SUPPORT_UI[lang]['btn']))
 
 def crumbs(lang, items):
@@ -629,6 +630,15 @@ def build_events_json(lang):
     write(rel, data)
     return rel
 
+def filters_ssr(lang):
+    """Static skeleton of the home filter bar (same elements, order and size as filter.js builds; the selects hold only their
+    'all' option, filter.js appends the rest). Hidden without JS; shown from the first paint with JS (html.js), so it never shifts the list."""
+    U = ui.UI[lang]
+    def fg(i, label, all_):
+        return '<div class="fg"><label for="%s">%s: </label><select id="%s"><option value="">%s</option></select></div>' % (i, e(label), i, e(all_))
+    return (fg('f-cov', U['f_cov'], U['f_all']) + fg('f-reg', U['f_region_l'], U['f_region']) + fg('f-dat', U['f_date_l'], U['f_date']) + fg('f-cnf', U['f_conf'], U['f_conf_all']) +
+            '<input type="search" id="f-q" placeholder="%s" aria-label="%s"><button type="button" id="f-rs" hidden>%s</button>' % (e(U['f_search']), e(U['f_search']), e(FILTER_RESET[lang])))
+
 def build_home(lang):
     U = ui.UI[lang]; key = ('home',)
     HOME = home_events()
@@ -639,9 +649,10 @@ def build_home(lang):
                    total=len(EV), src=evj, more=HOME_MORE[lang][0])
     body = ('<section class="hero" aria-labelledby="top-h"><div><h1 id="top-h">%s</h1>\n<p class="lede">%s</p>\n<p class="meta stats">%s</p></div>\n'
             '<section class="box" aria-labelledby="howto"><h2 id="howto">%s</h2><p>%s</p></section></section>\n'
-            '<section aria-labelledby="evs"><div class="sect-h"><h2 id="evs">%s</h2></div>\n<div class="filters" id="filters" hidden data-ui="%s"></div>\n<ul class="evlist" id="events">\n%s\n</ul>\n<p class="more" id="more"><a href="%s">%s →</a></p></section>\n%s') % (
+            '<section aria-labelledby="evs"><div class="sect-h"><h2 id="evs">%s</h2></div>\n<div class="filters" id="filters" hidden data-ui="%s">%s</div>\n<p class="fcount" id="fcount" aria-live="polite" hidden></p>\n<ul class="evlist" id="events">\n%s\n</ul>\n<p class="more" id="more">%s<a href="%s">%s →</a></p></section>\n%s') % (
         e(U['home_h1']), e(U['site_tagline']), e(U['stats'].format(n=len(EV), period=period_text(lang), **CNT)), e(U['howto_h']), e(U['howto']), e(U['list_h']),
-        e(json.dumps(ui_json, ensure_ascii=False)), '\n'.join(event_li(lang, x, True) for x in HOME), path(lang, ('dates',)), e('%s (%d)' % (HOME_MORE[lang][1], len(EV))),
+        e(json.dumps(ui_json, ensure_ascii=False)), filters_ssr(lang), '\n'.join(event_li(lang, x, True) for x in HOME),
+        ('<button type="button" class="showall" id="showall">%s</button>' % e('%s (%d)' % (HOME_MORE[lang][0], len(EV) - len(HOME)))) if len(EV) > len(HOME) else '', path(lang, ('dates',)), e('%s (%d)' % (HOME_MORE[lang][1], len(EV))),
         ('<section aria-labelledby="hub-h"><h2 id="hub-h"><a href="%s">%s</a></h2>%s</section>' % (path(lang, ('topics',)), e(TOPIC_UI[lang]['home_h']), topic_pills(lang))) if HUBS else '')
     site = {'@context': 'https://schema.org', '@type': 'WebSite', '@id': absu('/') + '#website', 'url': absu(path(lang, key)), 'name': U['site_name'],
             'description': U['site_tagline'], 'inLanguage': lang,
@@ -910,7 +921,7 @@ def build_map(lang):
     n_on = len(used)
     cfg = dict(leaflet='/assets/leaflet/leaflet.js', css='/assets/leaflet/leaflet.css', data=rel, count=M['count'], more=M['more'], shown=M['shown'])
     cr_html, cr_ld = crumbs(lang, [(M['h1'], key)])
-    btns = ''.join('<button type="button" data-days="%s" aria-pressed="%s" hidden>%s</button>' % (d, 'true' if d == '0' else 'false', e(lab)) for d, lab in M['periods'])
+    btns = ''.join('<button type="button" data-days="%s" aria-pressed="%s">%s</button>' % (d, 'true' if d == '0' else 'false', e(lab)) for d, lab in M['periods'])
     lst = ''.join('<li><strong>%s</strong> <small class="meta">(%d)</small>: %s</li>' % (e(_pt_name(lang, p)), len(p['evs']), ' · '.join(
         '<a href="%s">%s</a>' % (path(lang, ('event', x['slug'])), e(content(lang, x)['t'])) for x in p['evs'][:3])) for p in MAP_POINTS)
     body = ('%s\n<h1>%s</h1>\n<p class="lede">%s</p>\n<div class="mapf">%s <span class="meta" id="map-n">%s</span></div>\n'
@@ -919,7 +930,7 @@ def build_map(lang):
         cr_html, e(M['h1']), e(M['lede']), btns, e(M['shown'].format(n=n_on)), e(json.dumps(cfg, ensure_ascii=False)), e(M['h1']), e(M['loading']), e(M['noscript']),
         e(M['list_h']), lst, e(M['nomap'].format(n=len(EV) - n_on)))
     page(lang, key, M['title'], trunc(M['desc'].format(n=n_on, p=len(MAP_POINTS)), DESC_LIMIT), body, ld=[cr_ld],
-         extra_head='<link rel="preconnect" href="https://server.arcgisonline.com" crossorigin>', scripts='<script src="%s" defer></script>\n' % JS_MAP)
+         extra_head='<link rel="preconnect" href="https://server.arcgisonline.com">', scripts='<script src="%s" defer></script>\n' % JS_MAP)
 
 DIV_SLUG = {'ru': 'rashozhdeniya', 'uk': 'rozbizhnosti', 'en': 'divergence'}
 DIV_UI = {
@@ -1150,8 +1161,58 @@ def build_about(lang):
             elif b[0] == 'blocked': out.append(blocked_html())
             elif b[0] == 'contact': out.append(contact_html())
         out.append('</section>'); body_secs.append('\n'.join(out))
-    body = '%s\n<h1>%s</h1>\n<p class="lede">%s</p>\n<nav class="toc" aria-label="%s"><ol>%s</ol></nav>\n%s' % (cr_html, e(U['about_h1']), e(Ab['intro']), e(Ab['toc']), ''.join(toc), '\n'.join(body_secs))
+    mlink = '<p class="more"><a href="%s">%s →</a></p>' % (path(lang, ('methodology',)), e(METH_SHORT[lang]))
+    body = '%s\n<h1>%s</h1>\n<p class="lede">%s</p>\n%s\n<nav class="toc" aria-label="%s"><ol>%s</ol></nav>\n%s' % (cr_html, e(U['about_h1']), e(Ab['intro']), mlink, e(Ab['toc']), ''.join(toc), '\n'.join(body_secs))
     page(lang, key, U['about_title'] + ' — ' + U['site_name'], U['about_desc'], body, ld=[cr_ld, {'@context': 'https://schema.org', '@type': 'AboutPage', 'name': U['about_h1'], 'url': absu(path(lang, key)), 'inLanguage': lang}])
+
+METH_SHORT = {'ru': 'Коротко и по шагам: методология', 'uk': 'Коротко й по кроках: методологія', 'en': 'Step by step: methodology'}
+def _pipeline_default(name, default):
+    """Default of a NAME = float(os.environ.get('ENV', 'N')) constant in pipeline/cards.py (keeps the page in sync with the code)."""
+    try:
+        m = re.search(r"^%s = float\(os\.environ\.get\('(\w+)', '([\d.]+)'\)\)" % name, open(os.path.join(HERE, 'pipeline', 'cards.py'), encoding='utf-8').read(), re.M)
+        if m: return os.environ.get(m.group(1), m.group(2))
+    except OSError: pass
+    return default
+def _run_every_hours():
+    """Hours between scheduled runs, from the cron line of .github/workflows/update.yml ('M H/step * * *' or 'M a-b/step * * *')."""
+    try:
+        m = re.search(r"cron:\s*'[\d]+ [\d*]+(?:-\d+)?/(\d+) ", open(os.path.join(HERE, '.github', 'workflows', 'update.yml'), encoding='utf-8').read())
+        if m: return m.group(1)
+    except OSError: pass
+    return '2'
+def _num(v): return ('%g' % float(v))
+def build_methodology(lang):
+    U = ui.UI[lang]; Mt = methodology.M[lang]; key = ('methodology',); li = LANGS.index(lang)
+    cr_html, cr_ld = crumbs(lang, [(U['about_h1'], ('about',)), (Mt['nav'], key)])
+    srcs = [r for r in about.SOURCES_TABLE if r[5] in ('ok', 'mid')]
+    fill = dict(hold=_num(_pipeline_default('HOLD_HOURS', 6)), refresh=_num(_pipeline_default('ROUNDUP_REFRESH_HOURS', 6)), every=_run_every_hours(), nsrc=len(srcs), email=CONTACT)
+    def sources_html():
+        out = []
+        for g in ('ru', 'ua', 'ind'):
+            names = [r[2][li] for r in srcs if r[0] == g]
+            out.append('<li><strong>%s</strong> (%d): %s</li>' % (e(U['grp'][g]), len(names), e(', '.join(names))))
+        more = {'ru': 'Таблица источников со способом доступа и числом материалов', 'uk': 'Таблиця джерел зі способом доступу та кількістю матеріалів', 'en': 'Source table with access method and article counts'}[lang]
+        return '<ul>%s</ul><p><a href="%s#sources">%s →</a></p>' % (''.join(out), path(lang, ('about',)), e(more))
+    def links_html():
+        L = {'ru': (('about', 'conf', 'Шкала подтверждённости'), ('about', 'errors', 'Чего ожидать: прогноз ошибок'), ('about', 'neutrality', 'Нейтральность'), ('corrections', '', 'Журнал исправлений'), ('glossary', '', 'Словарь формулировок')),
+             'uk': (('about', 'conf', 'Шкала підтвердженості'), ('about', 'errors', 'Чого очікувати: прогноз помилок'), ('about', 'neutrality', 'Нейтральність'), ('corrections', '', 'Журнал виправлень'), ('glossary', '', 'Словник формулювань')),
+             'en': (('about', 'conf', 'Confirmation scale'), ('about', 'errors', 'What to expect: error forecast'), ('about', 'neutrality', 'Neutrality'), ('corrections', '', 'Corrections log'), ('glossary', '', 'Glossary of wording'))}[lang]
+        items = ['<li><a href="%s%s">%s</a></li>' % (path(lang, (k,)), ('#' + a) if a else '', e(t)) for k, a, t in L]
+        items.append('<li><a href="%s" rel="nofollow">%s</a> (<code>%s</code>)</li>' % (e(mailto(lang, key)), e(U['corr_report']), e(CONTACT)))
+        return '<ul>%s</ul>' % ''.join(items)
+    toc, secs = [], []
+    for sid, h, blocks in Mt['sections']:
+        toc.append('<li><a href="#%s">%s</a></li>' % (sid, e(re.sub(r'^\d+\.\s*', '', h))))   # <ol> numbers the TOC itself
+        out = ['<section id="%s" aria-labelledby="h-%s"><h2 id="h-%s">%s</h2>' % (sid, sid, sid, e(h))]
+        for b in blocks:
+            if b[0] == 'p': out.append('<p>%s</p>' % e(b[1].format(**fill)))
+            elif b[0] == 'sources': out.append(sources_html())
+            elif b[0] == 'links': out.append(links_html())
+        out.append('</section>'); secs.append('\n'.join(out))
+    body = '%s\n<h1>%s</h1>\n<p class="lede">%s</p>\n<nav class="toc" aria-label="%s"><ol>%s</ol></nav>\n%s' % (cr_html, e(Mt['h1']), e(Mt['lede']), e(Mt['toc']), ''.join(toc), '\n'.join(secs))
+    ld = {'@context': 'https://schema.org', '@type': 'WebPage', 'name': Mt['h1'], 'description': Mt['desc'], 'url': absu(path(lang, key)), 'inLanguage': lang,
+          'isPartOf': {'@id': absu('/') + '#website'}, 'dateModified': MODIFIED}
+    page(lang, key, Mt['title'], trunc(Mt['desc'], DESC_LIMIT), body, ld=[cr_ld, ld])
 
 def build_corrections(lang):
     U = ui.UI[lang]; key = ('corrections',); li = LANGS.index(lang)
@@ -1680,7 +1741,7 @@ def main():
     if os.path.isdir(sd):
         for f in os.listdir(sd): shutil.copy2(os.path.join(sd, f), os.path.join(OUT, f))
     for lang in LANGS:
-        build_home(lang); build_about(lang); build_corrections(lang); build_support(lang); build_search(lang); build_glossary(lang);
+        build_home(lang); build_about(lang); build_methodology(lang); build_corrections(lang); build_support(lang); build_search(lang); build_glossary(lang);
         if WEEKS:
             build_weeks(lang)
             for wk in WEEKS: build_week(lang, wk)

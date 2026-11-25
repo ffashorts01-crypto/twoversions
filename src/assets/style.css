@@ -268,3 +268,7 @@ aside.sup h2{margin:0 0 6px;font-size:1.05rem}
 .oneside-note strong{color:var(--fg);font-style:normal}
 /* related events (card pages) */
 .similar{margin-top:28px}
+/* CLS: JS-enhanced controls are server-rendered at their final size; html.js is set by an inline script before first paint */
+.js #filters[hidden]{display:flex!important}.js #fcount[hidden]{display:block!important}
+.fcount{min-height:calc(.88rem*1.6)}
+:root:not(.js) .theme,:root:not(.js) #showall,:root:not(.js) .mapf button{display:none}

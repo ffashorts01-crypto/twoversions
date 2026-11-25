@@ -11,19 +11,24 @@
   var STEP=30, ssr=[].slice.call(list.querySelectorAll('li.ev')), rows=null, total=U.total||ssr.length, loading=null;
   var limit=ssr.length, matches=null, shown=0, rendered=null;   // rendered: the rows currently in the DOM (null = server-rendered list)
   function el(t,a,c){var n=document.createElement(t);for(var k in a)n.setAttribute(k,a[k]);if(c)n.textContent=c;return n}
-  function sel(id,label,all,opts){var l=el('label',{'for':id},label+': ');var s=el('select',{id:id});s.appendChild(el('option',{value:''},all));
-    opts.forEach(function(o){s.appendChild(el('option',{value:o[0]},o[1]))});var g=el('div',{'class':'fg'});g.appendChild(l);g.appendChild(s);box.appendChild(g);return s}
+  /* The filter bar, the counter line and the "show more" button are server-rendered at their final size (CLS 0) and only
+     filled in here; the old create-everything path is kept as a fallback for pages without that markup. */
+  function sel(id,label,all,opts){var s=document.getElementById(id);
+    if(!s){var l=el('label',{'for':id},label+': ');s=el('select',{id:id});s.appendChild(el('option',{value:''},all));var g=el('div',{'class':'fg'});g.appendChild(l);g.appendChild(s);box.appendChild(g)}
+    var f=document.createDocumentFragment();opts.forEach(function(o){f.appendChild(el('option',{value:o[0]},o[1]))});s.appendChild(f);return s}
   var cov=sel('f-cov',U.cov,U.all,[['3',U.three],['2',U.two],['1',U.one]]);
   var reg=sel('f-reg',U.regionL,U.allRegions,U.regions);
   var dat=sel('f-dat',U.dateL,U.allDates,U.dates);
   var cnf=sel('f-cnf',U.confL,U.allConf,U.confs);
-  var q=el('input',{type:'search',id:'f-q',placeholder:U.search,'aria-label':U.search});box.appendChild(q);
-  var rs=el('button',{type:'button'},U.reset||'×');rs.hidden=true;box.appendChild(rs);
+  var q=document.getElementById('f-q');if(!q){q=el('input',{type:'search',id:'f-q',placeholder:U.search,'aria-label':U.search});box.appendChild(q)}
+  var rs=document.getElementById('f-rs');if(!rs){rs=el('button',{type:'button'},U.reset||'×');box.appendChild(rs)}rs.hidden=true;
   rs.addEventListener('click',function(){cov.value=reg.value=dat.value=cnf.value=q.value='';limit=Math.max(STEP,ssr.length);update();q.focus()});
-  var cnt=el('p',{'class':'fcount','aria-live':'polite'});box.parentNode.insertBefore(cnt,list);
+  var cnt=document.getElementById('fcount');if(!cnt){cnt=el('p',{'class':'fcount','aria-live':'polite'});box.parentNode.insertBefore(cnt,list)}cnt.hidden=false;
   var none=el('p',{'class':'none'},U.none);none.hidden=true;list.parentNode.insertBefore(none,list.nextSibling);
   var more=document.getElementById('more'), btn=null;
-  if(more&&U.src){btn=el('button',{type:'button','class':'showall'});more.insertBefore(btn,more.firstChild);
+  if(more&&U.src){btn=document.getElementById('showall');if(!btn){btn=el('button',{type:'button','class':'showall'});more.insertBefore(btn,more.firstChild)}
+    /* prefetch the full index when the button comes near the screen, so a click appends at once (a late append would move the footer = layout shift) */
+    if('IntersectionObserver' in window&&!(navigator.connection&&navigator.connection.saveData)){var pio=new IntersectionObserver(function(es){if(es[0].isIntersecting){pio.disconnect();load().catch(function(){})}},{rootMargin:'600px 0px'});pio.observe(more)}
     btn.addEventListener('pointerdown',function(){load()},{passive:true});
     btn.addEventListener('click',function(){btn.disabled=true;limit=shown+STEP;
       load().then(function(){btn.disabled=false;requestAnimationFrame(function(){update(true)})})})}
