@@ -11,6 +11,7 @@ permissions: {contents: write}
 env:
   TZ: Europe/Berlin
   BASE_URL: https://twoversions.com
+  CONTACT_EMAIL: twoversions@proton.me
   CF_PROJECT: twoversions-site
   WRANGLER: npx --yes wrangler@3
   LLM_PROVIDER: qwen

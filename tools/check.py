@@ -79,8 +79,8 @@ def run(out, base):
         p = P(); p.feed(open(fp, encoding='utf-8').read()); p.close(); parsed[rel] = p
         for x in p.errors: errors.append('%s: HTML: %s' % (rel, x))
         for i in p.dup_ids: errors.append('%s: duplicate id %s' % (rel, i))
-    # --- content rules: anonymity (only the placeholder/CONTACT address may appear), event pages carry the badge, error link and automatic-summary note
-    allowed_mail = {os.environ.get('CONTACT_EMAIL', 'feedback@example.com').lower()}
+    # --- content rules: anonymity (only the CONTACT address may appear), event pages carry the badge, error link and automatic-summary note
+    allowed_mail = {os.environ.get('CONTACT_EMAIL', 'twoversions@proton.me').lower()}
     import urllib.parse as _up
     for fp in files:
         rel = '/' + os.path.relpath(fp, out); raw = open(fp, encoding='utf-8').read()

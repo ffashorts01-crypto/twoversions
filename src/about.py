@@ -42,7 +42,7 @@ ABOUT['ru'] = dict(
  ]),
  ('corrections', 'Политика исправлений', [
   ('ul', [
-   'Как сообщить об ошибке: ссылка «Сообщить об ошибке» на каждой карточке и в подвале сайта (письмо по электронной почте; в письмо подставляется адрес страницы). Адрес сейчас — заглушка, пока не настроен.',
+   'Как сообщить об ошибке: ссылка «Сообщить об ошибке» на каждой карточке и в подвале сайта (письмо по электронной почте; в письмо подставляется адрес страницы).',
    'Что происходит с сообщением: карточку перепроверяют (повторно запускают проверки по сохранённым текстам); если ошибка подтверждается, карточка снимается с публикации, а при необходимости пересоздаётся. Сроков ответа проект не обещает.',
    'Журнал исправлений: все снятия и исправления фиксируются на публичной странице «Исправления» — дата, карточка, что произошло и почему. Автоматические снятия (карточка перестала проходить проверки) записываются туда же и помечены как автоматические.',
    'Исправление не стирает историю: запись остаётся в журнале и после того, как карточка снята или заменена.'
@@ -57,7 +57,7 @@ ABOUT['ru'] = dict(
   ]),
  ]),
  ('anon', 'Анонимность проекта', [
-  ('p', 'Проект анонимен: на сайте и в коде нет имён и личных контактов авторов. Единственный контакт — адрес для обратной связи (сейчас заглушка). Сайт не использует счётчики и cookies; в браузере локально запоминаются только выбранные язык и тема оформления.'),
+  ('p', 'Проект анонимен: на сайте и в коде нет имён и личных контактов авторов. Единственный контакт — адрес для обратной связи. Сайт не использует счётчики и cookies; в браузере локально запоминаются только выбранные язык и тема оформления.'),
  ]),
  ('sources', 'Источники и их ограничения', [
   ('p', 'Список ниже — все источники, которые использует конвейер, с описанием принадлежности и способа доступа. Число материалов — количество сохранённых статей в базе (включая не относящиеся к событиям).'),
@@ -112,7 +112,7 @@ ABOUT['uk'] = dict(
  ]),
  ('corrections', 'Політика виправлень', [
   ('ul', [
-   'Як повідомити про помилку: посилання «Повідомити про помилку» на кожній картці та в підвалі сайту (лист електронною поштою; у лист підставляється адреса сторінки). Адреса зараз — заглушка, поки не налаштована.',
+   'Як повідомити про помилку: посилання «Повідомити про помилку» на кожній картці та в підвалі сайту (лист електронною поштою; у лист підставляється адреса сторінки).',
    'Що відбувається зі повідомленням: картку перевіряють повторно (знову запускають перевірки за збереженими текстами); якщо помилку підтверджено, картку знімають з публікації, а за потреби створюють заново. Строків відповіді проєкт не обіцяє.',
    'Журнал виправлень: усі зняття й виправлення фіксуються на публічній сторінці «Виправлення» — дата, картка, що сталося і чому. Автоматичні зняття (картка перестала проходити перевірки) записуються туди ж і позначені як автоматичні.',
    'Виправлення не стирає історію: запис лишається в журналі й після того, як картку знято або замінено.'
@@ -127,7 +127,7 @@ ABOUT['uk'] = dict(
   ]),
  ]),
  ('anon', 'Анонімність проєкту', [
-  ('p', 'Проєкт анонімний: на сайті й у коді немає імен та особистих контактів авторів. Єдиний контакт — адреса для зворотного зв’язку (зараз заглушка). Сайт не використовує лічильники й cookies; у браузері локально запам’ятовуються лише обрані мова й тема оформлення.'),
+  ('p', 'Проєкт анонімний: на сайті й у коді немає імен та особистих контактів авторів. Єдиний контакт — адреса для зворотного зв’язку. Сайт не використовує лічильники й cookies; у браузері локально запам’ятовуються лише обрані мова й тема оформлення.'),
  ]),
  ('sources', 'Джерела та їхні обмеження', [
   ('p', 'Перелік нижче — усі джерела, які використовує конвеєр, з описом належності та способу доступу. Кількість матеріалів — кількість збережених статей у базі (включно з тими, що не стосуються подій).'),
@@ -182,7 +182,7 @@ ABOUT['en'] = dict(
  ]),
  ('corrections', 'Corrections policy', [
   ('ul', [
-   'How to report an error: the “Report an error” link on every card and in the site footer (an e-mail; the page address is filled in). The address is currently a placeholder and not configured.',
+   'How to report an error: the “Report an error” link on every card and in the site footer (an e-mail; the page address is filled in).',
    'What happens to a report: the card is re-checked (the checks are run again on the stored texts); if the error is confirmed the card is withdrawn and, if needed, rebuilt. The project does not promise response times.',
    'Corrections log: all withdrawals and corrections are recorded on the public “Corrections” page — date, card, what happened and why. Automatic withdrawals (a card stopped passing the checks) are recorded there too and marked as automatic.',
    'A correction does not erase history: the entry stays in the log after a card is withdrawn or replaced.'
@@ -197,7 +197,7 @@ ABOUT['en'] = dict(
   ]),
  ]),
  ('anon', 'Anonymity of the project', [
-  ('p', 'The project is anonymous: there are no names or personal contacts of the authors on the site or in the code. The only contact is a feedback address (currently a placeholder). The site uses no analytics counters or cookies; the browser stores only your chosen language and colour theme locally.'),
+  ('p', 'The project is anonymous: there are no names or personal contacts of the authors on the site or in the code. The only contact is a feedback address. The site uses no analytics counters or cookies; the browser stores only your chosen language and colour theme locally.'),
  ]),
  ('sources', 'Sources and their limitations', [
   ('p', 'The list below contains every source the pipeline uses, with its affiliation and access method. The article count is the number of stored articles in the database (including those unrelated to any event).'),

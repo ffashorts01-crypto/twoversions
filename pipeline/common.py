@@ -66,7 +66,7 @@ CFG = dict(
     CLUSTER_UNTIL=os.environ.get('CLUSTER_UNTIL', ''),     # test/backfill only: upper bound for clustering
     EXTEND_LUNA_ONLY=os.environ.get('EXTEND_LUNA_ONLY', '1') == '1',
     CLUSTER_MAX=_i('CLUSTER_MAX', 400),             # max candidate articles per run (backlog drains over several runs)
-    CONTACT_EMAIL=os.environ.get('CONTACT_EMAIL', 'feedback@example.com'),
+    CONTACT_EMAIL=os.environ.get('CONTACT_EMAIL', 'twoversions@proton.me'),
 )
 
 DBLOCK = threading.RLock()   # serialises access to the shared sqlite connection between worker threads

@@ -11,7 +11,7 @@ Config (environment variables or flags):
   BASE_URL        public origin used in canonicals / hreflang / sitemap / OG tags.
                   Default: newest *.trycloudflare.com URL found in tunnel.log, else http://localhost:8089
                   >>> CHANGE TO THE REAL DOMAIN BEFORE GOING LIVE <<<
-  CONTACT_EMAIL   address for the feedback mailto link (placeholder by default)
+  CONTACT_EMAIL   address for the feedback mailto link (default twoversions@proton.me)
   ANALYTICS       '' (default, tracking OFF) | plausible | umami      (+ ANALYTICS_DOMAIN / ANALYTICS_SRC / ANALYTICS_ID)
   PUBLISHED       datePublished for JSON-LD (default 2026-09-30, the data collection date)
 """
@@ -42,7 +42,7 @@ def detect_base():
     return DEFAULT_BASE
 
 BASE = detect_base()
-CONTACT = os.environ.get('CONTACT_EMAIL', 'feedback@example.com')   # placeholder
+CONTACT = os.environ.get('CONTACT_EMAIL', 'twoversions@proton.me')
 ANALYTICS = os.environ.get('ANALYTICS', '').strip().lower()
 PUBLISHED = os.environ.get('PUBLISHED', '2026-09-30')   # datePublished of the 24 hand-written cards; auto cards use their own first-publication date
 MODIFIED = dt.date.today().isoformat()
@@ -1134,8 +1134,8 @@ def build_about(lang):
     def blocked_html():
         return '<ul>%s</ul>' % ''.join('<li><b>%s</b> — %s</li>' % (e(n[li]), e(w[li])) for n, w in about.BLOCKED)
     def contact_html():
-        txt = {'ru': 'Адрес для обратной связи ещё не настроен: сейчас в ссылках указан пример. Сообщить об ошибке или предложить источник:', 'uk': 'Адресу для зворотного зв’язку ще не налаштовано: зараз у посиланнях вказано приклад. Повідомити про помилку або запропонувати джерело:',
-               'en': 'The feedback address is not configured yet: an example address is currently used in the links. To report an error or suggest a source:'}[lang]
+        txt = {'ru': 'Сообщить об ошибке или предложить источник:', 'uk': 'Повідомити про помилку або запропонувати джерело:',
+               'en': 'To report an error or suggest a source:'}[lang]
         lk = {'ru': 'написать по электронной почте', 'uk': 'написати електронною поштою', 'en': 'write by e-mail'}[lang]
         return '<p>%s <a href="%s" rel="nofollow">%s</a> (<code>%s</code>). <a href="%s">%s</a>.</p><p>%s %s</p>' % (e(txt), e(mailto(lang, key)), e(lk), e(CONTACT), path(lang, ('corrections',)), e(U['corr_title']), e(TG_UI[lang]['about']), tg_link())
     toc, body_secs = [], []
