@@ -600,6 +600,15 @@ def event_li(lang, ev, with_filter_data=False, h='h3'):
         attrs, h, path(lang, ('event', ev['slug'])), e(T['t']), h, ev['start'].isoformat(), e(fmt_range(lang, ev['start'], ev['end'])), e(T['p']),
         path(lang, ('region', ev['region'])), e(region_name(lang, ev['region'])), e(first_sentence(T['d'])), cov_badges(lang, ev) + conf_badge(lang, ev) + div_badge(lang, ev) + oneside_badge(lang, ev) + roundup_badge(lang, ev) + upd_marker(lang, ev))
 
+BRAND = 'Two Versions'
+def org_ld(lang, ctx=False):
+    """The one publisher entity (same @id on every page and language): visible localized site name + brand / other-language names."""
+    U = ui.UI[lang]
+    o = {'@type': 'Organization', '@id': absu('/') + '#org', 'name': U['site_name'],
+         'alternateName': [BRAND] + [ui.UI[l]['site_name'] for l in LANGS if l != lang], 'url': absu('/'),
+         'logo': {'@type': 'ImageObject', 'url': LOGO_IMG, 'width': 512, 'height': 512}, 'email': CONTACT, 'sameAs': [TG_URL]}
+    return dict({'@context': 'https://schema.org'}, **o) if ctx else o
+
 def itemlist_ld(lang, evs, name, key):
     return {'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': name, 'url': absu(path(lang, key)), 'inLanguage': lang,
             'mainEntity': {'@type': 'ItemList', 'numberOfItems': len(evs), 'itemListElement': [
@@ -655,10 +664,10 @@ def build_home(lang):
         ('<button type="button" class="showall" id="showall">%s</button>' % e('%s (%d)' % (HOME_MORE[lang][0], len(EV) - len(HOME)))) if len(EV) > len(HOME) else '', path(lang, ('dates',)), e('%s (%d)' % (HOME_MORE[lang][1], len(EV))),
         ('<section aria-labelledby="hub-h"><h2 id="hub-h"><a href="%s">%s</a></h2>%s</section>' % (path(lang, ('topics',)), e(TOPIC_UI[lang]['home_h']), topic_pills(lang))) if HUBS else '')
     site = {'@context': 'https://schema.org', '@type': 'WebSite', '@id': absu('/') + '#website', 'url': absu(path(lang, key)), 'name': U['site_name'],
-            'description': U['site_tagline'], 'inLanguage': lang,
+            'description': U['site_tagline'], 'inLanguage': lang, 'alternateName': BRAND, 'publisher': {'@id': absu('/') + '#org'},
             'potentialAction': {'@type': 'SearchAction', 'target': {'@type': 'EntryPoint', 'urlTemplate': absu(path(lang, ('search',))) + '?q={search_term_string}'}, 'query-input': 'required name=search_term_string'}}
     page(lang, key, U['home_title'] + ' — ' + U['site_name'] if False else U['home_title'], U['home_desc'].format(n=len(EV), period=period_text(lang)), body,
-         ld=[site, itemlist_ld(lang, HOME, U['home_title'], key)], scripts='<script src="%s" defer></script>\n' % JS_FILTER)
+         ld=[site, org_ld(lang, True), itemlist_ld(lang, HOME, U['home_title'], key)], scripts='<script src="%s" defer></script>\n' % JS_FILTER)
 
 def side_html(lang, ev, key, g):
     U = ui.UI[lang]; c = ev['card']; side = c[key]; T = content(lang, ev)
@@ -735,18 +744,16 @@ def build_event(lang, ev):
             if a['url'] not in [z['url'] for z in cites]:
                 cites.append({'@type': 'NewsArticle', 'url': a['url'], 'headline': trunc(a['title'].replace('\n', ' '), 110), 'inLanguage': a['lang'],
                               'publisher': {'@type': 'Organization', 'name': a['source']}})
-    org = {'@type': 'Organization', '@id': absu('/') + '#org-' + lang, 'name': U['site_name'], 'url': absu(path(lang, ('home',))),
-           'logo': {'@type': 'ImageObject', 'url': LOGO_IMG, 'width': 512, 'height': 512}}
+    org = org_ld(lang)
     pub_ts, mod_ts = event_times(ev)
     art = {'@context': 'https://schema.org', '@type': 'NewsArticle', '@id': absu(path(lang, key)) + '#article', 'headline': trunc(T['t'], 110), 'description': desc,
            'inLanguage': lang, 'url': absu(path(lang, key)), 'mainEntityOfPage': {'@type': 'WebPage', '@id': absu(path(lang, key))},
            'datePublished': pub_ts, 'dateModified': mod_ts, 'image': [og_image(lang, ev)],
-           'additionalProperty': [{'@type': 'PropertyValue', 'name': U['conf_h'], 'propertyID': 'confirmationLevel', 'value': conf_mod.LABELS[ev['conf']['label']][lang],
-                                   'description': conf_mod.EXPLAIN[ev['conf']['label']][lang]},
-                                  {'@type': 'PropertyValue', 'name': 'sourcesCount', 'value': ev['conf']['features']['n_sources']}],
+           # confidence label + its rule, as schema.org Article.backstory (why/how the text was made); additionalProperty is not valid on NewsArticle
+           'backstory': '%s: %s. %s' % (U['conf_h'], conf_mod.LABELS[ev['conf']['label']][lang], conf_mod.EXPLAIN[ev['conf']['label']][lang]),
            'creditText': U['auto_pub'], 'author': org, 'publisher': org, 'isAccessibleForFree': True,
            'articleSection': rname, 'keywords': ', '.join(tag_text(lang, t) for t in c['tags']), 'contentLocation': {'@type': 'Place', 'name': T['p']},
-           'temporalCoverage': '%s/%s' % (ev['start'].isoformat(), ev['end'].isoformat()), 'citation': cites}
+           'temporalCoverage': '%s/%s' % (ev['start'].isoformat(), ev['end'].isoformat()), 'citation': cites, 'isBasedOn': [z['url'] for z in cites]}
     CUR_PUB[0] = pub_ts; CUR_MOD[0] = mod_ts; CUR_OG[0] = (art['image'][0], T['t'])
     if lang == 'ru': OG_RU[ev['slug']] = art['image'][0]
     page(lang, key, title, desc, body, og_type='article', ld=[art, cr_ld], scripts='<script src="%s" defer></script>\n' % JS_SUPPORT)
@@ -1057,7 +1064,12 @@ def similar_events(ev, n=SIM_N):
     out = [r[4] for r in scored if r[1] >= 2][:n]
     if len(out) < SIM_MIN:                       # weaker matches (one shared headline word + same place word) only to reach the minimum
         out += [r[4] for r in scored if r[1] < 2][:SIM_MIN - len(out)]
-    return out if len(out) >= SIM_MIN else []
+    if len(out) < SIM_MIN:                       # still short: fill with the nearest-in-time cards of the same region (never empty on a card page)
+        have = set(id(x) for x in out)
+        pool = [x for x in LISTING if x is not ev and id(x) not in have and x['region'] == ev['region']]
+        pool.sort(key=lambda x: (abs((x['start'] - ev['start']).days), -x['start'].toordinal(), str(x['id'])))
+        out += pool[:SIM_MIN - len(out)]
+    return out
 REGION_PAGE = 30          # region pages are paginated: /lang/region/k/, /lang/region/k/page/2/, ...
 REL_ALL = {'ru': 'Все события региона «{r}» ({n})', 'uk': 'Усі події регіону «{r}» ({n})', 'en': 'All events in “{r}” ({n})'}
 PAGE_WORD = {'ru': ('страница %d', 'Страницы'), 'uk': ('сторінка %d', 'Сторінки'), 'en': ('page %d', 'Pages')}
@@ -1605,7 +1617,7 @@ def build_week(lang, wk):
         cr_html, e(W_['week'].format(r=rng)), e(wk_title(T['t'])), e(T['lede']), '\n'.join(secs), ('<p>%s</p>\n' % e(T['outro'])) if T.get('outro') else '', e(W_['cards_h']),
         '\n'.join(event_li(lang, x, False, 'h3') for x in allev), e(W_['about']), e(ui.UI[lang]['pn_nav']), pn)
     art = {'@context': 'https://schema.org', '@type': 'Article', 'headline': trunc(wk_title(T['t']), 110), 'inLanguage': lang, 'url': absu(path(lang, key)),
-           'datePublished': r['generated'], 'dateModified': r['generated'], 'image': [OG_IMG], 'author': {'@type': 'Organization', 'name': ui.UI[lang]['site_name']},
+           'datePublished': r['generated'], 'dateModified': r['generated'], 'image': [OG_IMG], 'author': org_ld(lang), 'publisher': org_ld(lang),
            'temporalCoverage': '%s/%s' % (a.isoformat(), b.isoformat())}
     page(lang, key, trunc(W_['title'].format(r=rng, t=wk_title(T['t'])), 110), trunc(T['lede'], 158), body, og_type='article', ld=[cr_ld, art])
 def build_weeks(lang):

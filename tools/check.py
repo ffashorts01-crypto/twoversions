@@ -89,7 +89,7 @@ def run(out, base):
         if re.match(r'^/(ru|uk|en)/\d{4}-\d\d-\d\d-', rel):
             if 'class="conf c-' not in raw: errors.append('%s: event page without confidence badge' % rel)
             if 'mailto:' not in raw or 'ID%3A' not in raw and 'ID:' not in _up.unquote(raw): errors.append('%s: event page without error-report link' % rel)
-            if '"additionalProperty"' not in raw: errors.append('%s: JSON-LD without confidence property' % rel)
+            if '"backstory"' not in raw: errors.append('%s: JSON-LD without confidence property (NewsArticle.backstory)' % rel)
             if 'class="auto"' not in raw: errors.append('%s: no automatic-summary marker' % rel)
     nlinks = 0; ext = set(); bad = []
     titles, descs = collections.defaultdict(list), collections.defaultdict(list)
